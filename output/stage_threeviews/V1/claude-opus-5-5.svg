@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="780" viewBox="0 0 1800 780">
+<rect width="1800" height="780" fill="white"/>
+<style>text{font-family:Arial,sans-serif;fill:#203442;font-size:19px}</style>
+<polyline points="300.000,234.100 353.200,234.100 433.000,234.100 509.000,234.100 509.000,302.500 433.000,302.500 353.200,302.500 300.000,302.500 300.000,234.100" fill="#d5e4ed" stroke="#183345" stroke-width="1.7"/>
+<polyline points="300.000,234.100 246.800,234.100 167.000,234.100 91.000,234.100 91.000,302.500 167.000,302.500 246.800,302.500 300.000,302.500 300.000,234.100" fill="#d5e4ed" stroke="#183345" stroke-width="1.7"/>
+<polyline points="300.000,234.100 353.200,234.100 433.000,234.100 509.000,234.100 509.000,302.500 433.000,302.500 353.200,302.500 300.000,302.500 300.000,234.100" fill="#d5e4ed" stroke="#183345" stroke-width="1.7"/>
+<polyline points="300.000,234.100 246.800,234.100 167.000,234.100 91.000,234.100 91.000,302.500 167.000,302.500 246.800,302.500 300.000,302.500 300.000,234.100" fill="#d5e4ed" stroke="#183345" stroke-width="1.7"/>
+<polyline points="300.000,405.100 309.500,405.100 309.500,446.900 300.000,446.900 300.000,405.100" fill="#efdbbd" stroke="#183345" stroke-width="1.7"/>
+<polyline points="300.000,405.100 290.500,405.100 290.500,446.900 300.000,446.900 300.000,405.100" fill="#efdbbd" stroke="#183345" stroke-width="1.7"/>
+<polyline points="309.500,405.100 383.600,405.100 383.600,465.900 309.500,465.900 309.500,405.100" fill="#efdbbd" stroke="#183345" stroke-width="1.7"/>
+<polyline points="290.500,405.100 216.400,405.100 216.400,465.900 290.500,465.900 290.500,405.100" fill="#efdbbd" stroke="#183345" stroke-width="1.7"/>
+<path d="M293.0,258.1146201117318h14 M300.0,251.11462011173182v14" stroke="#b52436" stroke-width="2.5"/>
+<text x="60" y="135" style="font-size:23px">PLAN</text>
+<text x="60" y="570" style="font-size:17px">y (m) / x aft (m)</text>
+<path d="M60,605h76 m-76,-5v10 m76,-10v10" fill="none" stroke="#203442" stroke-width="2"/>
+<text x="145" y="611" style="font-size:17px">2 m</text>
+<polyline points="784.100,385.560 784.100,385.560 784.100,384.167 784.100,382.840 852.500,382.840 852.500,384.167 852.500,385.560 852.500,385.560 784.100,385.560" fill="#d5e4ed" stroke="#183345" stroke-width="1.7"/>
+<polyline points="784.100,385.560 784.100,385.560 784.100,384.167 784.100,382.840 852.500,382.840 852.500,384.167 852.500,385.560 852.500,385.560 784.100,385.560" fill="#d5e4ed" stroke="#183345" stroke-width="1.7"/>
+<polyline points="784.100,317.160 784.100,317.160 784.100,315.767 784.100,314.440 852.500,314.440 852.500,315.767 852.500,317.160 852.500,317.160 784.100,317.160" fill="#d5e4ed" stroke="#183345" stroke-width="1.7"/>
+<polyline points="784.100,317.160 784.100,317.160 784.100,315.767 784.100,314.440 852.500,314.440 852.500,315.767 852.500,317.160 852.500,317.160 784.100,317.160" fill="#d5e4ed" stroke="#183345" stroke-width="1.7"/>
+<polyline points="955.100,362.760 955.100,362.760 996.900,362.760 996.900,362.760 955.100,362.760" fill="#efdbbd" stroke="#183345" stroke-width="1.7"/>
+<polyline points="955.100,362.760 955.100,362.760 996.900,362.760 996.900,362.760 955.100,362.760" fill="#efdbbd" stroke="#183345" stroke-width="1.7"/>
+<polyline points="955.100,362.760 955.100,362.760 1015.900,362.760 1015.900,362.760 955.100,362.760" fill="#efdbbd" stroke="#183345" stroke-width="1.7"/>
+<polyline points="955.100,362.760 955.100,362.760 1015.900,362.760 1015.900,362.760 955.100,362.760" fill="#efdbbd" stroke="#183345" stroke-width="1.7"/>
+<path d="M801.1146201117318,367.813218903743h14 M808.1146201117318,360.813218903743v14" stroke="#b52436" stroke-width="2.5"/>
+<text x="660" y="135" style="font-size:23px">SIDE</text>
+<text x="660" y="570" style="font-size:17px">x aft (m) / z (m)</text>
+<path d="M660,605h76 m-76,-5v10 m76,-10v10" fill="none" stroke="#203442" stroke-width="2"/>
+<text x="745" y="611" style="font-size:17px">2 m</text>
+<polyline points="1500.000,385.560 1553.200,385.560 1633.000,384.167 1709.000,382.840 1709.000,382.840 1633.000,384.167 1553.200,385.560 1500.000,385.560 1500.000,385.560" fill="#d5e4ed" stroke="#183345" stroke-width="1.7"/>
+<polyline points="1500.000,385.560 1446.800,385.560 1367.000,384.167 1291.000,382.840 1291.000,382.840 1367.000,384.167 1446.800,385.560 1500.000,385.560 1500.000,385.560" fill="#d5e4ed" stroke="#183345" stroke-width="1.7"/>
+<polyline points="1500.000,317.160 1553.200,317.160 1633.000,315.767 1709.000,314.440 1709.000,314.440 1633.000,315.767 1553.200,317.160 1500.000,317.160 1500.000,317.160" fill="#d5e4ed" stroke="#183345" stroke-width="1.7"/>
+<polyline points="1500.000,317.160 1446.800,317.160 1367.000,315.767 1291.000,314.440 1291.000,314.440 1367.000,315.767 1446.800,317.160 1500.000,317.160 1500.000,317.160" fill="#d5e4ed" stroke="#183345" stroke-width="1.7"/>
+<polyline points="1500.000,362.760 1509.500,362.760 1509.500,362.760 1500.000,362.760 1500.000,362.760" fill="#efdbbd" stroke="#183345" stroke-width="1.7"/>
+<polyline points="1500.000,362.760 1490.500,362.760 1490.500,362.760 1500.000,362.760 1500.000,362.760" fill="#efdbbd" stroke="#183345" stroke-width="1.7"/>
+<polyline points="1509.500,362.760 1583.600,362.760 1583.600,362.760 1509.500,362.760 1509.500,362.760" fill="#efdbbd" stroke="#183345" stroke-width="1.7"/>
+<polyline points="1490.500,362.760 1416.400,362.760 1416.400,362.760 1490.500,362.760 1490.500,362.760" fill="#efdbbd" stroke="#183345" stroke-width="1.7"/>
+<path d="M1493.0,367.813218903743h14 M1500.0,360.813218903743v14" stroke="#b52436" stroke-width="2.5"/>
+<text x="1260" y="135" style="font-size:23px">FRONT</text>
+<text x="1260" y="570" style="font-size:17px">y (m) / z (m)</text>
+<path d="M1260,605h76 m-76,-5v10 m76,-10v10" fill="none" stroke="#203442" stroke-width="2"/>
+<text x="1345" y="611" style="font-size:17px">2 m</text>
+<text x="60" y="60" style="font-size:29px">Opus  |  V1  |  reference geometry / neutral controls</text>
+<text x="60" y="665" style="font-size:19px">Blue: wing  |  Ochre: tail  |  Dashed green: propeller disc  |  Red +: CG</text>
+<text x="60" y="698" style="font-size:17px">Coordinate reconstruction; not a construction drawing. Identical metric scale in all views; x aft, y right, z up.</text>
+<text x="60" y="729" style="font-size:17px">Archived evaluator lifting surfaces only; airframe, fins and propulsion not reconstructed.</text>
+</svg>

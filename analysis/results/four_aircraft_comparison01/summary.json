@@ -1,0 +1,292 @@
+{
+  "scope": "Four-aircraft comparison with explicit historical-reference boundaries.\n\nPostprocess existing audited Wright runs, never pretend a moment reference is\nthe measured historical CG. No new aerodynamic solver run or fitted geometry.\n",
+  "inputs": [
+    {
+      "path": "paper/baselines/wright_nominal_v1.json",
+      "sha256": "57e7aad92b90f65933eddc97654fbd3f329e2bbfddc249edfe4ec3e681e7ce55"
+    },
+    {
+      "path": "analysis/results/wright_family_comparison_v1.json",
+      "sha256": "7b5c73722442011c3fa3fdfaead074ab22c9b050d64e06eacec5bf273fbe3264"
+    },
+    {
+      "path": "analysis/results/wright_reconstruction_audit_v1.json",
+      "sha256": "fbe1c74144312818d36960e0f15f52edd5455dfdaf65ca309bde55d475376f56"
+    },
+    {
+      "path": "analysis/results/wright_reconstruction_family02/definition.json",
+      "sha256": "a5af0278114ba0355068a23c72228a3c25f71a93a4e54e3d4e9070b7dc64672c"
+    },
+    {
+      "path": "analysis/results/v2_trim_solve01/compact_report.json",
+      "sha256": "7e41d5ad4ece49ff55d77a963e982c4628fb8ff39125ac4d2d49f7c9d2ea6108"
+    },
+    {
+      "path": "analysis/results/received_v2_audit01/summary.json",
+      "sha256": "6a1e72b21438a494231a0828759f63aab48ae4fbea8d0440624cecce2c21b23f"
+    },
+    {
+      "path": "analysis/results/wright_props_off_digitized_v1.json",
+      "sha256": "8bdb2a50c4a75794f4116bde5df381b4f20ad5911dac064ba7977333b0865eae"
+    }
+  ],
+  "wright": {
+    "identity": "1903 Flyer I-inspired researcher reconstruction; not matched historical aircraft or tunnel replica",
+    "scenario": {
+      "mass_kg": 340.1942775,
+      "speed_m_s": 12,
+      "density_kg_m3": 1.225,
+      "reference": {
+        "S_m2": 47.3805504,
+        "c_m": 1.9812,
+        "b_m": 12.2936,
+        "x_aft_m": 0.59436,
+        "y_m": 0,
+        "z_up_m": 0.59436
+      },
+      "historical_CG_m": null,
+      "weight_N": 3336.1662114453748,
+      "CL_required_without_vertical_thrust": 0.7983236457972497,
+      "historical_statistical_area_m2": 48.12377472,
+      "note": "518 ft2 nominal statistics and 510 ft2 solver normalization are distinct; no silent substitution"
+    },
+    "fine_proxy_results": [
+      {
+        "canard_proxy": "flat",
+        "source_cases": [
+          "flat_i+0_a0",
+          "flat_i+0_a4"
+        ],
+        "slope": {
+          "alpha_interval_deg": [
+            0,
+            4
+          ],
+          "CL_secant_per_deg": 0.0617125,
+          "Cm_secant_per_deg": 0.013582499999999999,
+          "CL_secant_per_rad": 3.535865793201093,
+          "Cm_secant_per_rad": 0.7782199252364406,
+          "negative_Cm_over_CL_slope_percent": -22.0093173992303,
+          "interpretation": "reference-point secant descriptor, NOT historical CG static margin"
+        },
+        "loads": [
+          {
+            "alpha_deg": 0,
+            "q_Pa": 88.2,
+            "weight_N": 3336.1662114453748,
+            "lift_N": 2369.849003982835,
+            "lift_minus_weight_N_no_vertical_thrust": -966.31720746254,
+            "induced_drag_N_only": 104.19119773228454,
+            "induced_drag_power_W_only": 1250.2943727874144,
+            "aerodynamic_moment_about_reference_Nm": -364.871596031782
+          },
+          {
+            "alpha_deg": 4,
+            "q_Pa": 88.2,
+            "weight_N": 3336.1662114453748,
+            "lift_N": 3401.426401985203,
+            "lift_minus_weight_N_no_vertical_thrust": 65.26019053982827,
+            "induced_drag_N_only": 217.31743955883223,
+            "induced_drag_power_W_only": 2607.809274705987,
+            "aerodynamic_moment_about_reference_Nm": 84.94628035593564
+          }
+        ]
+      },
+      {
+        "canard_proxy": "eiffel10_raw",
+        "source_cases": [
+          "eiffel10_raw_i+0_a0",
+          "eiffel10_raw_i+0_a4"
+        ],
+        "slope": {
+          "alpha_interval_deg": [
+            0,
+            4
+          ],
+          "CL_secant_per_deg": 0.061645000000000005,
+          "Cm_secant_per_deg": 0.013560000000000001,
+          "CL_secant_per_rad": 3.53199832808396,
+          "Cm_secant_per_rad": 0.7769307701973964,
+          "negative_Cm_over_CL_slope_percent": -21.99691783599643,
+          "interpretation": "reference-point secant descriptor, NOT historical CG static margin"
+        },
+        "loads": [
+          {
+            "alpha_deg": 0,
+            "q_Pa": 88.2,
+            "weight_N": 3336.1662114453748,
+            "lift_N": 2418.910047744422,
+            "lift_minus_weight_N_no_vertical_thrust": -917.2561637009526,
+            "induced_drag_N_only": 111.25490150317131,
+            "induced_drag_power_W_only": 1335.0588180380557,
+            "aerodynamic_moment_about_reference_Nm": -22.02310972190924
+          },
+          {
+            "alpha_deg": 4,
+            "q_Pa": 88.2,
+            "weight_N": 3336.1662114453748,
+            "lift_N": 3449.3591253195646,
+            "lift_minus_weight_N_no_vertical_thrust": 113.1929138741898,
+            "induced_drag_N_only": 229.09376164743128,
+            "induced_drag_power_W_only": 2749.1251397691753,
+            "aerodynamic_moment_about_reference_Nm": 427.04962385566864
+          }
+        ]
+      }
+    ],
+    "published_graph_descriptor": {
+      "dCL_dalpha_per_deg": 0.06674523712114289,
+      "dCm_dalpha_per_deg": 0.016035476288945992,
+      "dCm_dCL": 0.24077545719643206
+    },
+    "full_powered_trim": "NOT established",
+    "historical_flight": "Documented independently; not inferred from this reconstruction"
+  },
+  "AI_V2_latest": [
+    {
+      "model": "gpt-6-astra",
+      "mesh": [
+        14,
+        72
+      ],
+      "alpha_deg": -0.10310981565022685,
+      "elevator_TE_down_deg": -0.32972296303039506,
+      "balance": {
+        "L_N": 3138.5065950000007,
+        "W_N": 3138.1279999999997,
+        "D_N": 245.51848655,
+        "T_N": 245.5188841162823,
+        "Tvertical_N": -0.4418369630483665,
+        "Maero_Nm": -36.762862500000004,
+        "Mthrust_Nm": 36.82783261744234,
+        "Rz_N": -0.06324196304740326,
+        "Rx_N": 0.0,
+        "My_Nm": 0.0649701174423356,
+        "normalized": [
+          -2.0152767206246293e-05,
+          8.281385264378714e-06
+        ],
+        "useful_power_W": 4419.3327579
+      },
+      "slope": {
+        "CLalpha_per_deg": 0.0729200000000001,
+        "Cmalpha_per_deg": -0.0142,
+        "effective_margin_percent": 19.47339550191989
+      },
+      "components": [
+        {
+          "surface": "main",
+          "lift_N": 1722.1689450000003,
+          "pitch_moment_Nm": -692.5408875000002
+        },
+        {
+          "surface": "main (YDUP)",
+          "lift_N": 1722.1689450000003,
+          "pitch_moment_Nm": -692.5408875000002
+        },
+        {
+          "surface": "tail",
+          "lift_N": -152.88588000000004,
+          "pitch_moment_Nm": 674.0850375
+        },
+        {
+          "surface": "tail (YDUP)",
+          "lift_N": -152.88588000000004,
+          "pitch_moment_Nm": 674.0850375
+        }
+      ],
+      "surface_sum_closure_within_print_precision": true
+    },
+    {
+      "model": "claude-opus-5-5",
+      "mesh": [
+        12,
+        50
+      ],
+      "alpha_deg": 6.346800885280449,
+      "elevator_TE_down_deg": -3.168432862473998,
+      "balance": {
+        "L_N": 3481.05555,
+        "W_N": 3530.394,
+        "D_N": 443.3512190625,
+        "T_N": 446.08528036389754,
+        "Tvertical_N": 49.3130197121636,
+        "Maero_Nm": 195.8800725,
+        "Mthrust_Nm": -195.8797639851238,
+        "Rz_N": -0.025430287836115895,
+        "Rx_N": 0.0,
+        "My_Nm": 0.0003085148762238532,
+        "normalized": [
+          -7.203243557550771e-06,
+          4.854901562196634e-08
+        ],
+        "useful_power_W": 6650.2682859375
+      },
+      "slope": {
+        "CLalpha_per_deg": 0.06444000000000005,
+        "Cmalpha_per_deg": -0.0049999999999999975,
+        "effective_margin_percent": 7.7591558038485315
+      },
+      "components": [
+        {
+          "surface": "LW",
+          "lift_N": 831.98233125,
+          "pitch_moment_Nm": 9.426375
+        },
+        {
+          "surface": "LW (YDUP)",
+          "lift_N": 831.98233125,
+          "pitch_moment_Nm": 9.426375
+        },
+        {
+          "surface": "UW",
+          "lift_N": 947.40305625,
+          "pitch_moment_Nm": -93.886695
+        },
+        {
+          "surface": "UW (YDUP)",
+          "lift_N": 947.40305625,
+          "pitch_moment_Nm": -93.886695
+        },
+        {
+          "surface": "tail_inner",
+          "lift_N": -2.4613312499999997,
+          "pitch_moment_Nm": 10.55754
+        },
+        {
+          "surface": "tail_inner (YDUP)",
+          "lift_N": -2.4613312499999997,
+          "pitch_moment_Nm": 10.55754
+        },
+        {
+          "surface": "tail_outer",
+          "lift_N": -36.39628125,
+          "pitch_moment_Nm": 171.7485525
+        },
+        {
+          "surface": "tail_outer (YDUP)",
+          "lift_N": -36.39628125,
+          "pitch_moment_Nm": 171.7485525
+        }
+      ],
+      "surface_sum_closure_within_print_precision": true
+    }
+  ],
+  "fable": {
+    "mass_kg": 295.0,
+    "cg_native_m": [
+      1.5608813559322032,
+      0.0,
+      0.7538813559322033
+    ],
+    "trim": "not evaluated through unresolved geometry"
+  },
+  "comparison_limits": [
+    "Wright secants span 0 to 4 deg; AI local derivatives span +/-0.25 deg around separate trim points.",
+    "Wright Cm is about a stipulated moment reference, not verified flight-specific CG.",
+    "Induced-only drag/power omits viscosity, structure, pilot and propulsion effects.",
+    "No structural strength, full dynamic eigenvalues, lateral-directional stability or occupied-flight clearance.",
+    "The historical 1903 machine flew; the three AI designs have not demonstrated flight.",
+    "No quantitative superiority ranking is justified."
+  ]
+}

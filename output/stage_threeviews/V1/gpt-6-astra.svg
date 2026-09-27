@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="780" viewBox="0 0 1800 780">
+<rect width="1800" height="780" fill="white"/>
+<style>text{font-family:Arial,sans-serif;fill:#203442;font-size:19px}</style>
+<polyline points="300.000,253.100 528.000,253.100 528.000,329.100 300.000,329.100 300.000,253.100" fill="#d5e4ed" stroke="#183345" stroke-width="1.7"/>
+<polyline points="300.000,253.100 72.000,253.100 72.000,329.100 300.000,329.100 300.000,253.100" fill="#d5e4ed" stroke="#183345" stroke-width="1.7"/>
+<polyline points="300.000,386.100 490.000,386.100 490.000,446.900 300.000,446.900 300.000,386.100" fill="#d5e4ed" stroke="#183345" stroke-width="1.7"/>
+<polyline points="300.000,386.100 110.000,386.100 110.000,446.900 300.000,446.900 300.000,386.100" fill="#d5e4ed" stroke="#183345" stroke-width="1.7"/>
+<path d="M293.0,315.5766060606061h14 M300.0,308.5766060606061v14" stroke="#b52436" stroke-width="2.5"/>
+<text x="60" y="135" style="font-size:23px">PLAN</text>
+<text x="60" y="570" style="font-size:17px">y (m) / x aft (m)</text>
+<path d="M60,605h76 m-76,-5v10 m76,-10v10" fill="none" stroke="#203442" stroke-width="2"/>
+<text x="145" y="611" style="font-size:17px">2 m</text>
+<polyline points="803.100,345.459 803.100,345.459 879.100,345.459 879.100,345.459 803.100,345.459" fill="#d5e4ed" stroke="#183345" stroke-width="1.7"/>
+<polyline points="803.100,345.459 803.100,345.459 879.100,345.459 879.100,345.459 803.100,345.459" fill="#d5e4ed" stroke="#183345" stroke-width="1.7"/>
+<polyline points="936.100,324.559 936.100,324.559 996.900,324.559 996.900,324.559 936.100,324.559" fill="#d5e4ed" stroke="#183345" stroke-width="1.7"/>
+<polyline points="936.100,324.559 936.100,324.559 996.900,324.559 996.900,324.559 936.100,324.559" fill="#d5e4ed" stroke="#183345" stroke-width="1.7"/>
+<path d="M858.5766060606061,375.4407696969697h14 M865.5766060606061,368.4407696969697v14" stroke="#b52436" stroke-width="2.5"/>
+<text x="660" y="135" style="font-size:23px">SIDE</text>
+<text x="660" y="570" style="font-size:17px">x aft (m) / z (m)</text>
+<path d="M660,605h76 m-76,-5v10 m76,-10v10" fill="none" stroke="#203442" stroke-width="2"/>
+<text x="745" y="611" style="font-size:17px">2 m</text>
+<polyline points="1500.000,345.459 1728.000,345.459 1728.000,345.459 1500.000,345.459 1500.000,345.459" fill="#d5e4ed" stroke="#183345" stroke-width="1.7"/>
+<polyline points="1500.000,345.459 1272.000,345.459 1272.000,345.459 1500.000,345.459 1500.000,345.459" fill="#d5e4ed" stroke="#183345" stroke-width="1.7"/>
+<polyline points="1500.000,324.559 1690.000,324.559 1690.000,324.559 1500.000,324.559 1500.000,324.559" fill="#d5e4ed" stroke="#183345" stroke-width="1.7"/>
+<polyline points="1500.000,324.559 1310.000,324.559 1310.000,324.559 1500.000,324.559 1500.000,324.559" fill="#d5e4ed" stroke="#183345" stroke-width="1.7"/>
+<path d="M1493.0,375.4407696969697h14 M1500.0,368.4407696969697v14" stroke="#b52436" stroke-width="2.5"/>
+<text x="1260" y="135" style="font-size:23px">FRONT</text>
+<text x="1260" y="570" style="font-size:17px">y (m) / z (m)</text>
+<path d="M1260,605h76 m-76,-5v10 m76,-10v10" fill="none" stroke="#203442" stroke-width="2"/>
+<text x="1345" y="611" style="font-size:17px">2 m</text>
+<text x="60" y="60" style="font-size:29px">Astra  |  V1  |  reference geometry / neutral controls</text>
+<text x="60" y="665" style="font-size:19px">Blue: wing  |  Ochre: tail  |  Dashed green: propeller disc  |  Red +: CG</text>
+<text x="60" y="698" style="font-size:17px">Coordinate reconstruction; not a construction drawing. Identical metric scale in all views; x aft, y right, z up.</text>
+<text x="60" y="729" style="font-size:17px">Archived evaluator lifting surfaces only; airframe, fins and propulsion not reconstructed.</text>
+</svg>

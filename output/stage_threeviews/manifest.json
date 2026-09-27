@@ -1,0 +1,147 @@
+[
+  {
+    "model": "gpt-6-astra",
+    "stage": "V1",
+    "figure": "output/stage_threeviews/V1/gpt-6-astra.svg",
+    "sources": [
+      {
+        "path": "analysis/results/avl_fixed_control_slope04/astra_c12_s80/aircraft.avl",
+        "sha256": "e2a6f82563598428050b8bfcb3c42a09f47683577265ae3e9670def76794dfb7"
+      }
+    ],
+    "omissions": [
+      "Archived evaluator lifting surfaces only; airframe, fins and propulsion not reconstructed."
+    ],
+    "control_display": "neutral/reference, not the deformed trim state",
+    "units": "m",
+    "frame": "x aft, y right, z up"
+  },
+  {
+    "model": "claude-fable-5-1",
+    "stage": "V1",
+    "figure": "output/stage_threeviews/V1/claude-fable-5-1.svg",
+    "sources": [
+      {
+        "path": "analysis/results/avl_control_grid01/fable/aircraft.avl",
+        "sha256": "f15d441969c58ffb5797279743f3b15d81647ac178734f1c6804f02eb0ee67f2"
+      }
+    ],
+    "omissions": [
+      "Archived evaluator lifting surfaces only; airframe, fins and propulsion not reconstructed."
+    ],
+    "control_display": "neutral/reference, not the deformed trim state",
+    "units": "m",
+    "frame": "x aft, y right, z up"
+  },
+  {
+    "model": "claude-opus-5-5",
+    "stage": "V1",
+    "figure": "output/stage_threeviews/V1/claude-opus-5-5.svg",
+    "sources": [
+      {
+        "path": "analysis/results/avl_fixed_control_slope06/opus_c12_s80/aircraft.avl",
+        "sha256": "262940078d8d7f8a3c0b95e5042c4c5aec8024df365c55464feeb009fa388406"
+      }
+    ],
+    "omissions": [
+      "Archived evaluator lifting surfaces only; airframe, fins and propulsion not reconstructed."
+    ],
+    "control_display": "neutral/reference, not the deformed trim state",
+    "units": "m",
+    "frame": "x aft, y right, z up"
+  },
+  {
+    "model": "gpt-6-astra",
+    "stage": "V2",
+    "figure": "output/stage_threeviews/V2/gpt-6-astra.svg",
+    "sources": [
+      {
+        "path": "analysis/results/received_v2_audit01/gpt-6-astra.design.json",
+        "sha256": "2f471b244429d4b353624436f67eef929a1f64bfe5a327f2b895740134648dc5"
+      },
+      {
+        "path": "analysis/results/received_v2_audit01/summary.json",
+        "sha256": "6a1e72b21438a494231a0828759f63aab48ae4fbea8d0440624cecce2c21b23f"
+      },
+      {
+        "path": "analysis/results/v2_trim_solve01/gpt-6-astra/c14_s72_verify/aircraft.avl",
+        "sha256": "227c59a45e6d328c189ad588385b9a5bb1e1b859a03407caae1ca23f2edc2f59"
+      }
+    ],
+    "omissions": [
+      "Declared frame, main-wing braces and gear shown; remaining joints, ribs, pilot and engine solids omitted."
+    ],
+    "control_display": "neutral/reference, not the deformed trim state",
+    "units": "m",
+    "frame": "x aft, y right, z up"
+  },
+  {
+    "model": "claude-fable-5-1",
+    "stage": "V2",
+    "figure": "output/stage_threeviews/V2/claude-fable-5-1.svg",
+    "sources": [
+      {
+        "path": "analysis/results/received_v2_audit01/claude-fable-5-1.design.json",
+        "sha256": "c9e1e6a4186b57fc5da647cf9359d29c2ee3068ffb2bcb937e0db8e2236b87c6"
+      },
+      {
+        "path": "analysis/results/received_v2_audit01/summary.json",
+        "sha256": "6a1e72b21438a494231a0828759f63aab48ae4fbea8d0440624cecce2c21b23f"
+      }
+    ],
+    "omissions": [
+      "Fable: rectangular station envelopes; rounded wing tips are NOT reconstructed.",
+      "Only explicit node chains drawn; ambiguous connectivity, drive conflicts and mass envelopes remain unresolved."
+    ],
+    "control_display": "neutral/reference, not the deformed trim state",
+    "units": "m",
+    "frame": "x aft, y right, z up"
+  },
+  {
+    "model": "claude-opus-5-5",
+    "stage": "V2",
+    "figure": "output/stage_threeviews/V2/claude-opus-5-5.svg",
+    "sources": [
+      {
+        "path": "analysis/results/received_v2_audit01/claude-opus-5-5.design.json",
+        "sha256": "61db1382c7a55deff408c08e6f1c61b5ddbe163a0a5cbfa2f9567d602641cbf4"
+      },
+      {
+        "path": "analysis/results/received_v2_audit01/summary.json",
+        "sha256": "6a1e72b21438a494231a0828759f63aab48ae4fbea8d0440624cecce2c21b23f"
+      },
+      {
+        "path": "analysis/results/v2_trim_opus_capacity_recovery01/claude-opus-5-5/c12_s50_verify/aircraft.avl",
+        "sha256": "ee3b6822b87dfa09e1940619704e5578d23680eea5827f265af3980f5858430c"
+      }
+    ],
+    "omissions": [
+      "Only explicit node chains drawn; unspecified cross-bracing, landing gear, pilot and nacelle solids omitted."
+    ],
+    "control_display": "neutral/reference, not the deformed trim state",
+    "units": "m",
+    "frame": "x aft, y right, z up"
+  },
+  {
+    "model": "wright-flyer-1903",
+    "stage": "Wright",
+    "figure": "output/stage_threeviews/Wright/wright-flyer-1903.svg",
+    "sources": [
+      {
+        "path": "analysis/results/wright_reconstruction_family03/flat_i+0_a0/wing.avl",
+        "sha256": "8f824e937e1225bf817425da60f06b4a6d9a63e522334ad59343cdc7dd3f3d33"
+      },
+      {
+        "path": "analysis/results/wright_reconstruction_family02/definition.json",
+        "sha256": "a5af0278114ba0355068a23c72228a3c25f71a93a4e54e3d4e9070b7dc64672c"
+      }
+    ],
+    "omissions": [
+      "Independent lifting-surface reconstruction from Christman/Kelley planform and side-view landmarks; not the historical aircraft.",
+      "Rudders, propellers, airframe, tip droop and fabric shape omitted. Red + is the moment reference, NOT a verified historical CG."
+    ],
+    "control_display": "neutral/reference, not the deformed trim state",
+    "units": "m",
+    "frame": "x aft, y right, z up"
+  }
+]
