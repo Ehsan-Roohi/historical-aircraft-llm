@@ -153,13 +153,17 @@ Opus & Biplane, single pusher, aft controls & 358 kg leaf ledger and defined 38 
 \end{table}
 
 \begin{table}[H]\centering\footnotesize
-\caption{Availability of flight-dynamics derivatives for the latest V2 proposals. Available angle slopes are local fixed-control attached-flow calculations, not installed-aircraft measurements. Missing derivatives must not be assigned zero.}\label{tab:derivativegate}
+\caption{Flight-dynamics derivative screen at the frozen V2 trim states. Angular slopes in the first row are per degree; all reported rate derivatives use the nondimensional rates defined in the main article. Coarse/fine variation is numerical sensitivity, not validation. The geometry omits body/fin and installed propulsion; missing derivatives are not zero.}\label{tab:derivativegate}
 \begin{tabularx}{\linewidth}{lXXX}\toprule
 Quantity & Astra V2 & Fable V2 & Opus V2\\\midrule
 $C_{L_\alpha},C_{m_\alpha}$ & 0.07292, $-0.01420$ per degree & No independent retrim & 0.06444, $-0.00500$ per degree\\
-$C_{m_q},C_{L_q}$ & Rate run failed before output & Geometry gate open & Rate run failed before output\\
+$C_{m_q}$ coarse/fine & $-4.6856/-4.7059$ & Not evaluated & $-6.6103/-6.6458$\\
+$C_{L_q}$ coarse/fine & $6.2869/6.3022$ & Not evaluated & $5.5957/5.6109$\\
+$C_{l_p}$ fine & $-0.3834$ & Not evaluated & $-0.3746$\\
+$C_{n_r}$ fine, partial geometry & $-0.0076$ & Not evaluated & $-0.0124$\\
+$C_{n_\beta}$ fine, partial geometry & approximately 0 & Not evaluated & $-0.00084$\\
 $C_{m_{\dot\alpha}},C_{L_{\dot\alpha}}$ & Downwash-delay model absent & Downwash-delay model absent & Downwash-delay model absent\\
-Lateral/directional and control derivatives & Body/fin and full control model absent & Geometry gate open & Body/fin and full control model absent\\
+Installed directional/control derivatives & Body/fin and full control model absent & Geometry gate open & Body/fin and full control model absent\\
 Full inertia and dynamic eigenmodes & Intrinsic component inertia absent & Intrinsic component inertia absent & Intrinsic component inertia absent\\\bottomrule
 \end{tabularx}
 \end{table}
