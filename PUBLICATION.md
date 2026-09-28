@@ -1,6 +1,18 @@
 # Public research snapshot
 
-## 28 September 2026 V3 power gate and V10 correction returns
+## 28 September 2026 post-billing Astra V10 return
+
+After the earlier quota failure, a minimal Astra request using the same Unity
+credential completed. The frozen V10 Astra prompt was then submitted once as
+Unity job `65012338` in an isolated directory. Its raw request, response,
+outcome, Slurm log and source-hashed manifest are directly browsable.
+`analysis/results/v10_astra_postbilling_audit01.json` passes all provenance
+and selected arithmetic checks. The model returned an analytical correction
+patch with no adopted physical component changes; installed propulsion,
+powered/glide trim, dynamics and flight remain unvalidated. This new record
+does not alter the older failed attempts or the fixed `research_evidence.zip`.
+
+## 28 September 2026 V3 power gate and first V10 correction returns
 
 The source-hashed power screen and its tests are published as
 `paper/v3_power_necessity_gate01.md` and

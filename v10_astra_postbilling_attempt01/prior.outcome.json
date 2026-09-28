@@ -1,0 +1,8 @@
+{
+  "status": "error_or_uncertain",
+  "error_type": "RuntimeError",
+  "diagnostic_redacted": "gpt-6-astra: HTTP 429 (credit_balance_exhausted, insufficient_quota)",
+  "automatic_retry": false,
+  "finished_utc": "2026-09-28T22:50:45.523294+00:00",
+  "engineering_validation": "not_evaluated"
+}

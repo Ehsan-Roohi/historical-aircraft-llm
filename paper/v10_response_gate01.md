@@ -1,5 +1,10 @@
 # V10 targeted geometry/power feedback: first return gate
 
+**Historical status of this first-return gate.** A later, separately archived
+post-billing Astra V10 response completed as Unity job `65012338`. See
+`paper/v10_astra_postbilling_gate01.md`; the earlier failed attempts below
+remain unaltered and were not spliced into that response.
+
 Author: Ehsan Roohi. Date: 28 September 2026. This is a modern,
 researcher-assisted correction round, **not** a fresh historical-cutoff
 trial, independent aircraft design, installed propulsion test or flight

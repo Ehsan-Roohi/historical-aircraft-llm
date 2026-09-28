@@ -1,0 +1,19 @@
+{
+  "stage": "v10_astra_postbilling_attempt01",
+  "status": "COMPLETED_AUDITED",
+  "slurm_job_id": "65012338",
+  "model": "gpt-6-astra",
+  "remote_attempt_directory": "/work/pi_roohie_umass_edu/wright1900-benchmark/wright1900/v10_astra_postbilling_attempt01",
+  "maximum_output_tokens": 20000,
+  "maximum_calls": 1,
+  "manifest_sha256": "51df326c50e53e03bf828c0544a8d70e9a8fa558bf8afd3cfda3ecb96bdb2897",
+  "remote_dry_run": "passed all five source hashes before sbatch",
+  "billing_probe": "same Unity credential; HTTP 200; gpt-6-astra completed with 5 output tokens",
+  "prior_outcome": "job 65011846 failed HTTP 429 credit_balance_exhausted; unchanged in archive",
+  "final_sacct": "COMPLETED 0:0; elapsed 00:01:46",
+  "response_sha256": "4bf91701328a2c9a86e39ddb479f2b6d9abfec0f7ba3bc5872a9559eab872387",
+  "outcome_sha256": "26f725f3a5c8ee9a6fac71dae1decc89220c4486580bf304bacb7c6bd67f3d16",
+  "audit": "analysis/results/v10_astra_postbilling_audit01.json; all provenance and selected arithmetic checks pass",
+  "automatic_retry": false,
+  "engineering_validation": "not established; model correction patch has no adopted physical component changes"
+}

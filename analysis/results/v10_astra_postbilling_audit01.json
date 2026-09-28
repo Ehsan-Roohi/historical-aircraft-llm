@@ -1,0 +1,48 @@
+{
+  "stage": "v10_astra_postbilling_attempt01",
+  "slurm_job_id": "65012338",
+  "response_sha256": "4bf91701328a2c9a86e39ddb479f2b6d9abfec0f7ba3bc5872a9559eab872387",
+  "outcome_sha256": "26f725f3a5c8ee9a6fac71dae1decc89220c4486580bf304bacb7c6bd67f3d16",
+  "provenance": {
+    "manifest_matches_request": true,
+    "prompt_matches_manifest_and_request": true,
+    "instructions_matches_manifest_and_request": true,
+    "parent_matches_manifest_request_patch": true,
+    "prior_quota_outcome_matches": true,
+    "probe_receipt_matches": true,
+    "response_matches_outcome": true,
+    "transport_completed": true,
+    "model_matches": true
+  },
+  "all_provenance_pass": true,
+  "selected_arithmetic": {
+    "high_drag_required_engine_W": 17913.875598086124,
+    "model_high_drag_requirement_matches": true,
+    "model_high_drag_margin_matches": true,
+    "target_supported_drag_matches": true,
+    "rigid_prop_swept_radius_m": 1.200588136602152,
+    "model_swept_radius_matches": true,
+    "model_level_rigid_gap_matches": true,
+    "loading_xcg_matches": {
+      "N": true,
+      "A": true,
+      "F": true,
+      "N_HALF_SYMMETRIC": true,
+      "N_ONE_TANK_FULL": true
+    },
+    "one_tank_lateral_cg_magnitude_matches": true
+  },
+  "selected_arithmetic_pass": true,
+  "scope": {
+    "physical_component_changes": [],
+    "drawing_status": "Analytical coordinates remain usable, but a complete mechanically consistent installation drawing is UNKNOWN.",
+    "powered_trim": "UNKNOWN",
+    "glide_trim": "UNKNOWN",
+    "installed_derivatives": "UNKNOWN",
+    "flight_verdict": "NOT_VALIDATED",
+    "fin_elevator_surface_bound_independently_checked": false,
+    "loaded_clearance_independently_checked": false,
+    "installed_power_independently_checked": false
+  },
+  "independent_flight_validation": false
+}

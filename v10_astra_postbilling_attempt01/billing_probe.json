@@ -1,0 +1,11 @@
+{
+  "probe": "accepted",
+  "http_status": 200,
+  "model": "gpt-6-astra",
+  "status": "completed",
+  "output_tokens": 5,
+  "prompt": "Reply with OK.",
+  "maximum_output_tokens": 64,
+  "response_text_archived": false,
+  "credential_value_archived": false
+}
