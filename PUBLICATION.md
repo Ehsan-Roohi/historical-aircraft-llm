@@ -1,5 +1,18 @@
 # Public research snapshot
 
+## 28 September 2026 V3 geometry/loading gate 01
+
+The directly browsable `paper/v3_geometry_loading_gate01.md`,
+`analysis/audit_v3_geometry_loading.py`, its tests and JSON result record a
+limited independent arithmetic/conditional-geometry check of all three
+V3 model replies. Fable's 65/85 kg pilot CG-percent claims fail recomputation
+from its ledger, while Opus's reported 13-degree fin/ground gap is contingent
+on an aft-skid contact pivot. Necessary whole-aircraft vertical-force
+coefficients are requirements, not achieved lift or trim. All three designs
+remain on HOLD before independent V3 trim. No flight-capability claim is made.
+The `research_evidence.zip` is the prior fixed r5 snapshot; the new gate
+files are available individually and not misrepresented as inside that ZIP.
+
 ## 28 September 2026 integrated-feedback return
 
 Fixed tag `aircraft-sr-2026-09-28-r5` adds complete V3 model responses, separately retained 20,000-token Fable/Opus truncations, the 48,000-token retries, a hash-and-mass-arithmetic audit, and Overleaf release07 with Supplementary Table S11. The archive includes all five raw V9 response records with prompts, request metadata, outcomes and checksums. The three V3 mass ledgers close arithmetically; Fable's model-supplied nominal force and moment sums also close. No installed propulsion, full trim, unsteady derivatives, dynamic modes, structure or flightworthiness has been validated. V3 three-view drawings remain pending independent coordinate and clearance checks. The paper continues to identify Opus as strongest only among initial V1 proposals on its restricted screen, and Astra as strongest only in the conditional V2 longitudinal comparison.

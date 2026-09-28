@@ -1,0 +1,174 @@
+{
+  "scope": "V3 model-response geometry/loading arithmetic; no aerodynamic or flight validation",
+  "source_sha256": {
+    "astra": "1fe79cf004bc2f3943d330fff4afd4f69acb4f354c36c65ef119cc0808993f40",
+    "fable": "236f33562cbc093729beb70ca3501dcc4453cc4ead75eec56cc169d0adff1f93",
+    "opus": "51e34fbee9444e30c743b0312ff7802ba1d1ae2bf8b965c3d3b481a8444b5b9c"
+  },
+  "astra": {
+    "main_area_m2_recomputed": 30.0,
+    "tail_area_m2_recomputed": 6.0,
+    "nominal_prop_ground_gap_m_recomputed": 0.4,
+    "wheel_ground_gaps_m_recomputed": [
+      0.0,
+      0.0
+    ],
+    "light_empty_fwd_seat": {
+      "mass_kg": 310.0,
+      "cg_m": [
+        -0.240149,
+        0.0,
+        0.234652
+      ]
+    },
+    "heavy_full_aft_seat": {
+      "mass_kg": 348.0,
+      "cg_m": [
+        -0.084041,
+        0.0,
+        0.209029
+      ]
+    },
+    "limits": "Rigid nominal clearances only; loaded gear deflection and swept controls untested",
+    "necessary_level_force_coefficient_nominal": {
+      "15": 0.789869,
+      "18": 0.54852,
+      "21": 0.402994
+    }
+  },
+  "fable": {
+    "biplane_projected_area_m2_recomputed": 42.55,
+    "prop_ground_gap_m_recomputed": 0.4,
+    "prop_disc_to_disc_gap_m_recomputed": 0.9,
+    "prop_disc_to_body_side_gap_m_recomputed": 0.05,
+    "prop_disc_to_wing_TE_axial_gap_m_recomputed": 0.2,
+    "loading_states": {
+      "75kg_forward_full": {
+        "mass_kg": 309.5,
+        "cg_m": [
+          1.520307,
+          0.0,
+          0.76567
+        ],
+        "cg_percent_lower_deck_chord": 30.827
+      },
+      "75kg_aft_full": {
+        "mass_kg": 309.5,
+        "cg_m": [
+          1.593005,
+          0.0,
+          0.76567
+        ],
+        "cg_percent_lower_deck_chord": 34.757
+      },
+      "75kg_mid_empty": {
+        "mass_kg": 293.5,
+        "cg_m": [
+          1.555656,
+          0.0,
+          0.75017
+        ],
+        "cg_percent_lower_deck_chord": 32.738
+      },
+      "65kg_aft_full": {
+        "mass_kg": 299.5,
+        "cg_m": [
+          1.629499,
+          0.0,
+          0.766194
+        ],
+        "cg_percent_lower_deck_chord": 36.73
+      },
+      "65kg_aft_empty": {
+        "mass_kg": 283.5,
+        "cg_m": [
+          1.632575,
+          0.0,
+          0.750176
+        ],
+        "cg_percent_lower_deck_chord": 36.896
+      },
+      "85kg_forward_full": {
+        "mass_kg": 319.5,
+        "cg_m": [
+          1.478983,
+          0.0,
+          0.76518
+        ],
+        "cg_percent_lower_deck_chord": 28.594
+      },
+      "85kg_forward_empty": {
+        "mass_kg": 303.5,
+        "cg_m": [
+          1.473921,
+          0.0,
+          0.750165
+        ],
+        "cg_percent_lower_deck_chord": 28.32
+      }
+    },
+    "reported_65kg_aft_percent_chord": "35.4 %c [C]",
+    "reported_85kg_forward_percent_chord": "30.2 %c [C]",
+    "wheel_z_coordinates_m": [
+      -0.75,
+      -0.75,
+      -0.75
+    ],
+    "wheel_coordinate_issue": "All three wheel z coordinates equal the ground plane; if these are wheel centres, any positive wheel radius penetrates ground. Their point semantics and radii are unspecified.",
+    "limits": "Prop gaps are rigid nominal values without blade thickness, flex, outrigger deflection or tolerance",
+    "necessary_level_force_coefficient_nominal": {
+      "12": 0.808748,
+      "13": 0.689111,
+      "16": 0.454921
+    },
+    "extreme_cg_claims_match_recomputed": false
+  },
+  "opus": {
+    "biplane_projected_area_m2_from_prose": 39.6,
+    "nominal_prop_ground_gap_m_from_prose": 0.6,
+    "prop_disc_to_lower_wing_TE_plane_m_from_prose": 0.3,
+    "loading_states": {
+      "70kg_empty": {
+        "mass_kg": 349.3,
+        "cg_m": [
+          0.626891,
+          0.0,
+          0.455228
+        ]
+      },
+      "90kg_full": {
+        "mass_kg": 381.3,
+        "cg_m": [
+          0.542809,
+          0.0,
+          0.451642
+        ]
+      },
+      "90kg_empty": {
+        "mass_kg": 369.3,
+        "cg_m": [
+          0.5442,
+          0.0,
+          0.446821
+        ]
+      }
+    },
+    "ventral_13deg_reported_m": 0.221,
+    "ventral_13deg_gap_m_if_pivot_at_aft_skid_x1p6": 0.220721,
+    "ventral_13deg_gap_m_if_pivot_at_wheel_x0p45": -0.037972,
+    "rotation_pivot_status": "UNKNOWN; 0.221 m claim is consistent with aft skid x=1.6, but a wheel pivot x=0.45 gives ground penetration. Contact transition and loaded deflection unresolved.",
+    "limits": "No solid 3D geometry, skid-contact path, blade sweep, or loaded deflection is supplied",
+    "necessary_level_force_coefficient_nominal": {
+      "13": 0.864372,
+      "15": 0.649239,
+      "18": 0.450861
+    }
+  },
+  "blocking_unknowns": [
+    "Astra: installed surfaces and actuator swept volumes under load; gear and prop deflection",
+    "Fable: reconcile light/heavy pilot CG percentages; define wheel centres/radii and measure 0.04-0.05 m critical gaps with tolerance",
+    "Opus: resolve active ground-contact pivot versus pitch angle and skid-brace/ventral-fin clearance",
+    "All: installed aerodynamic coefficients, drag, propeller map, thrust line effects, stall and validated controls needed before independent trim"
+  ],
+  "necessary_force_coefficient_definition": "C_Z,eq = mg/(0.5 rho V^2 Sref), rho=1.225 kg/m3, g=9.80665 m/s2. This is the required total vertical force normalized by wing reference area for steady level flight; wing/tail split, incidence, stall, trim and power remain unknown."
+}
