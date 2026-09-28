@@ -5,7 +5,16 @@
   "array_indices": [0, 1, 2],
   "models": ["gpt-6-astra", "claude-fable-5-1", "claude-opus-5-5"],
   "initial_queue_state": "PENDING (MaxCpuPerAccount)",
-  "model_transport_status": "not yet run at initial observation",
+  "partition_change_utc_date": "2026-09-28",
+  "partition_change": "Existing array 65007436 moved from cpu to cpu-preempt via scontrol update; no duplicate array submitted.",
+  "verified_utc": "2026-09-28T20:52:39Z",
+  "verified_queue_state": "All array tasks ended: Astra COMPLETED exit 0; Fable and Opus FAILED exit 2 because their responses hit max_tokens.",
+  "model_transport_status": "Astra complete response received; Fable and Opus partial responses received and require continuation or repair before engineering validation.",
+  "response_outcomes": {
+    "gpt-6-astra": {"status": "completed", "response_sha256": "1fe79cf004bc2f3943d330fff4afd4f69acb4f354c36c65ef119cc0808993f40"},
+    "claude-fable-5-1": {"status": "incomplete", "stop_reason": "max_tokens", "response_sha256": "52072aa6388be97bb713c14584c54bd74ad40ab7c86d28ca8435f1804b608a11"},
+    "claude-opus-5-5": {"status": "incomplete", "stop_reason": "max_tokens", "response_sha256": "f98f7591a5a1f6f48c916c9df600e4b4fee6d8c3b06b7f803af32e1a85cb7021"}
+  },
   "engineering_validation": "not established",
   "input_zip": "output/delivery/dynamic_revision_v9_attempt01.zip",
   "input_zip_sha256": "b636676c80e92335e9148d36ef8d91b770dedae026078ce27ebdf15f8824231c",

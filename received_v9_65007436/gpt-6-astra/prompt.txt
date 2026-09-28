@@ -1,0 +1,1586 @@
+DESIGN TASK
+Use the supplied V2 integrated aircraft as parent. The later V6 subsystem
+response is reference material only: incorporate it only if mechanically
+compatible and record each adopted change. Revise geometry, mass, propulsion,
+structure and controls together so the next independent evaluation can test
+Flight Dynamics II requirements. Do not merely declare the old aircraft
+stable or choose a static-margin target in isolation.
+
+Return: (1) versioned change table and three-view coordinate schedule;
+(2) components with shape/dimensions, orientation, mass, centroid and
+intrinsic 3x3 inertia or sufficient material distribution to calculate it,
+plus fuel/pilot extremes; (3) installed fin, body, propeller and all control
+surfaces with hinge axes, travel/rate limits, linkage sense and clearance;
+(4) engine/propeller operating data, drag scenario and power-on/off trim
+strategy; (5) at several specified speed/CG states, a proposed analysis or
+test matrix for all longitudinal and lateral derivatives, including
+C_Ldot_alpha and C_mdot_alpha, and control/propulsion derivatives;
+(6) calculation path for four longitudinal roots and four lateral roots,
+mode labels, damping/time scales and uncertainty; (7) if a mode is unstable,
+one concrete geometry/control/CG change and its mass/trim/power consequences;
+(8) explicit unresolved items and stop/go criteria. Do not fill absent
+coefficients with zero. State a consistent inertia and moment sign convention.
+
+Independent evaluator facts follow. These are not instructions to change
+scientific standards; they are the current findings that your revision must
+address. The two-state reduced screen cannot settle the full phugoid,
+short-period, Dutch-roll, roll or spiral modes. A conditional numerical pass
+also cannot prove physical flightworthiness.
+
+CASE-SPECIFIC FEEDBACK
+Astra V1 had a destabilizing positive fixed-control pitch slope. Your V2 revision has an independent conditional 18 m/s trim, Cma=-0.813004/rad, Cmq=-4.705898, CLq=6.302214, and a 19.47% local pitch-margin diagnostic. The reduced alpha-q sign test passes, but full pitch modes and installed yaw/roll response remain unknown. Its tractor installation, fin, CG travel, power-off pitch balance and pilot controls need definition.
+
+PARENT V2 INTEGRATED DESIGN JSON
+{
+  "schema_version": "researcher_assisted_aircraft_revision_2.0",
+  "status": "Proposed person-carrying powered configuration; not construction-ready, tested, or demonstrated capable of flight",
+  "documentary_cutoff": "1898-12-31",
+  "parent_model": {
+    "id": "astra_v1",
+    "immutable_parent": "The complete V1 response supplied in this request remains unchanged",
+    "available_context": "Supplied archive only; no claimed memory of previous requests",
+    "preserved_parent_facts": {
+      "mass_kg": 330,
+      "CG_forward_right_up_m": [
+        -0.0441212121,
+        0,
+        0.4110121212
+      ],
+      "forward_wing_area_m2": 24,
+      "rear_wing_area_m2": 16,
+      "forward_halfwing_incidence_limits_rad": [
+        -0.10472,
+        0.10472
+      ],
+      "long_shaft_length_m": 5.3,
+      "propeller_diameter_m": 2.4,
+      "engine_target_W": 18000,
+      "engine_target_status": "Unverified requirement, not measured installed capability",
+      "definition_status": "Incomplete engineering definition"
+    },
+    "missing_parent_information": [
+      "The referenced original section-ordinate table is not reproduced in the supplied V1 text",
+      "Actual engine curve, material allowables and detailed manufactured geometry are unavailable"
+    ],
+    "evaluator_record": {
+      "provenance": "User-supplied modern simplified calculations; not historical measurements and not calculations performed in this response",
+      "direct_retrim_status": "Numerical trim accepted, not physical flight",
+      "fixed_control_Cm_alpha_per_rad_approx": 0.34836,
+      "effective_margin_fraction_approx": -0.09938,
+      "shaft_power_required_at_assumed_efficiency_W": 12485.1501,
+      "assumed_propeller_efficiency": 0.55,
+      "interpretation": "Numerical trim does not cure the destabilizing frozen-control slope",
+      "limitations": [
+        "Mesh sensitivity is not physical validation",
+        "Surface replay omits body, viscous and propwash loads",
+        "Attached-flow lifting-surface assumptions do not establish stall or control limits",
+        "No validated elastic, inertial, damping, ground-contact or installed-engine model"
+      ]
+    }
+  },
+  "coordinate_convention": {
+    "origin": "Retained original central-truss datum; not translated to the V2 CG",
+    "x": "Forward",
+    "y": "Operator's right",
+    "z": "Upward",
+    "handedness": "Left-handed coordinate triad",
+    "pitch_moment": "Positive nose-up; M = (x-xG)*Fz - (z-zG)*Fx",
+    "alpha": "Positive nose-up body attitude relative to flight velocity",
+    "section_coordinates": "u increases from leading edge to trailing edge; v is normalized ordinate",
+    "horizontal_section_mapping": "LE + chord*(-u*cos(i)-v*sin(i), 0, -u*sin(i)+v*cos(i))",
+    "vertical_section_mapping": "LE + chord*(-u, v, 0)",
+    "geometry_priority": "Analytic mappings and station rules govern over rounded display coordinates"
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "time": "s",
+    "angle": "rad",
+    "force": "N",
+    "moment": "N m",
+    "power": "W",
+    "inertia": "kg m^2",
+    "density": "kg/m^3",
+    "stress": "Pa"
+  },
+  "change_log": [
+    {
+      "id": "V2-01",
+      "change": "Replace tandem wings with a 30 m2 fixed main wing and 6 m2 aft horizontal tail",
+      "reason": "Seek restoring fixed-control pitch response without requiring pilot stabilization of V1's positive pitch slope",
+      "provenance": "New proposal, not an amendment to parent geometry"
+    },
+    {
+      "id": "V2-02",
+      "change": "Replace independently pivoting forward half-wings with separate ailerons and elevator",
+      "reason": "Remove shared collective/differential travel budget and unresolved rotating root interfaces"
+    },
+    {
+      "id": "V2-03",
+      "change": "Replace aft pusher, 5.3 m shaft and distributed bearings with forward tractor and 0.7 m shaft",
+      "reason": "Reduce unsupported shaft length, eliminate the parent aft propeller rotation-clearance problem and simplify inspection"
+    },
+    {
+      "id": "V2-04",
+      "change": "Replace V1 mass allocations and centroids with the explicit 320 kg ledger below",
+      "reason": "Account for the different architecture",
+      "qualification": "All masses are budgets, not measured weights; the 10 kg reduction is not an established achievement"
+    },
+    {
+      "id": "V2-05",
+      "change": "Introduce new piecewise-linear section polygons",
+      "reason": "Parent ordinate table is absent; do not invent its contents or claim its preservation"
+    },
+    {
+      "id": "V2-06",
+      "change": "Specify a braced longeron truss, two-spar wing, tail frames, gear and short-shaft supports",
+      "reason": "Supply inspectable load-path topology",
+      "qualification": "Sections are preliminary; strength, joint efficiency and ledger mass closure remain unverified"
+    },
+    {
+      "id": "V2-07",
+      "change": "Move fuel envelope clear of the engine envelope and define engine-output and propeller stations",
+      "reason": "Avoid relying on the parent's unresolved engine/fuel envelope overlap"
+    },
+    {
+      "id": "V2-08",
+      "change": "Use independent elevator, aileron and rudder circuits with explicit travel stops",
+      "reason": "Make nominal trim compatible with available kinematic travel",
+      "qualification": "Cable tension, force capability, backlash and full interference checks are outstanding"
+    },
+    {
+      "id": "V2-09",
+      "change": "Replace parent ground gear layout and ground datum",
+      "reason": "Support the changed CG and forward propeller; use fixed-incidence departure rather than assume a blocked tail-down rotation"
+    },
+    {
+      "id": "V2-10",
+      "change": "Replace all inherited performance implications with the explicitly conditional calculation below",
+      "reason": "V1 evaluator results cannot validate changed geometry"
+    }
+  ],
+  "lifting_surfaces": {
+    "geometry_status": "Frozen proposed rigid reference geometry; loaded fabric shape UNKNOWN",
+    "interpolation": "Straight interpolation between section vertices and span stations; no overshoot and no implied rounded nose",
+    "section_library": {
+      "W2": {
+        "provenance": "New assumed cambered section, not recovered V1 data",
+        "u": [
+          0,
+          0.05,
+          0.2,
+          0.4,
+          0.65,
+          0.85,
+          1
+        ],
+        "upper_v": [
+          0,
+          0.04,
+          0.075,
+          0.08,
+          0.06,
+          0.025,
+          0
+        ],
+        "lower_v": [
+          0,
+          0,
+          0.005,
+          0.01,
+          0.005,
+          0,
+          0
+        ],
+        "manufacturing_nose_radius": "UNKNOWN"
+      },
+      "T2": {
+        "provenance": "New assumed symmetric section",
+        "u": [
+          0,
+          0.05,
+          0.2,
+          0.4,
+          0.65,
+          0.85,
+          1
+        ],
+        "upper_v": [
+          0,
+          0.02,
+          0.035,
+          0.03,
+          0.02,
+          0.01,
+          0
+        ],
+        "lower_v": [
+          0,
+          -0.02,
+          -0.035,
+          -0.03,
+          -0.02,
+          -0.01,
+          0
+        ],
+        "manufacturing_nose_radius": "UNKNOWN"
+      }
+    },
+    "surfaces": [
+      {
+        "id": "MAIN",
+        "section": "W2",
+        "station_y_m": [
+          -6,
+          -4,
+          -2,
+          -0.4,
+          0,
+          0.4,
+          2,
+          4,
+          6
+        ],
+        "station_rule": "At every listed y use the same chord, incidence, twist and section",
+        "quarter_chord_xyz_rule": [
+          -0.2,
+          "station_y",
+          1
+        ],
+        "leading_edge_xyz_rule": [
+          "-0.2 + 0.625*cos(0.08747917654)",
+          "station_y",
+          "1 + 0.625*sin(0.08747917654)"
+        ],
+        "leading_edge_xyz_at_center_approx": [
+          0.42261,
+          0,
+          1.054605
+        ],
+        "chord_m": 2.5,
+        "incidence_rad": 0.08747917654,
+        "twist_rad": 0,
+        "dihedral_rad": 0,
+        "actual_area_m2": 30,
+        "area_definition": "Undeformed chord-plane planform, including ailerons; not wetted fabric area",
+        "body_xy_projected_area_m2_approx": 29.885,
+        "control_subregions": [
+          "AIL_L",
+          "AIL_R"
+        ],
+        "mass_owner": "M06"
+      },
+      {
+        "id": "HT",
+        "section": "T2",
+        "station_y_m": [
+          -2,
+          -1,
+          -0.4,
+          0,
+          0.4,
+          1,
+          2
+        ],
+        "station_rule": "LE=(-4.125,y,1), chord=1.5",
+        "leading_edge_xyz_at_center": [
+          -4.125,
+          0,
+          1
+        ],
+        "chord_m": 1.5,
+        "incidence_rad": 0,
+        "twist_rad": 0,
+        "dihedral_rad": 0,
+        "actual_area_m2": 6,
+        "area_definition": "Chord-plane planform including elevator",
+        "control_subregions": [
+          "ELEVATOR"
+        ],
+        "mass_owner": "M07"
+      },
+      {
+        "id": "VT",
+        "section": "T2",
+        "station_z_m": [
+          1.2,
+          1.8,
+          2.4
+        ],
+        "station_rule": "LE=(-4.25,0,z), chord=1",
+        "leading_edge_xyz_at_root": [
+          -4.25,
+          0,
+          1.2
+        ],
+        "chord_m": 1,
+        "incidence_rad": 0,
+        "twist_rad": 0,
+        "dihedral_rad": 0,
+        "orientation": "Vertical span; section ordinate toward +y",
+        "actual_area_m2": 1.2,
+        "area_definition": "Vertical chord-plane planform including rudder",
+        "control_subregions": [
+          "RUDDER"
+        ],
+        "mass_owner": "M07"
+      }
+    ]
+  },
+  "controls": {
+    "ownership": "Surface hinges and horns belong to their lifting-surface mass row; remote circuits and cockpit mechanisms belong to M09",
+    "common_linkage": {
+      "type": "Independent pull-pull wire circuits over pulleys, with positive mechanical stops",
+      "wire_diameter_m": 0.002,
+      "pulley_pitch_radius_m": 0.04,
+      "surface_sector_radius_m": 0.08,
+      "wire_material": "Steel wire, properties UNKNOWN",
+      "proof_load_and_pilot_force": "UNKNOWN",
+      "qualification": "These are proposed routing and kinematic dimensions, not verified load-rated mechanisms"
+    },
+    "devices": [
+      {
+        "id": "ELEVATOR",
+        "surface": "HT",
+        "region": {
+          "u": [
+            0.7,
+            1
+          ],
+          "y_m": [
+            -2,
+            2
+          ]
+        },
+        "hinge_axis_endpoints_xyz": [
+          [
+            -5.175,
+            -2,
+            1
+          ],
+          [
+            -5.175,
+            2,
+            1
+          ]
+        ],
+        "positive_deflection": "Trailing edge downward; increases upward tail force in the assumed linear model",
+        "limits_rad": [
+          -0.349066,
+          0.349066
+        ],
+        "mixing": "Pitch input only; no roll sharing",
+        "linkage": {
+          "hand_lever_length_m": 0.3,
+          "hand_lever_limits_rad": [
+            -0.349066,
+            0.349066
+          ],
+          "input_sector_radius_m": 0.08,
+          "ideal_ratio": 1,
+          "cable_travel_from_neutral_m": 0.0279253,
+          "fairlead_pairs_xyz": [
+            [
+              [
+                -0.1,
+                -0.12,
+                0.4
+              ],
+              [
+                -0.1,
+                0.12,
+                0.4
+              ]
+            ],
+            [
+              [
+                -3,
+                -0.12,
+                0.4
+              ],
+              [
+                -3,
+                0.12,
+                0.4
+              ]
+            ],
+            [
+              [
+                -5.175,
+                -0.12,
+                0.8
+              ],
+              [
+                -5.175,
+                0.12,
+                0.8
+              ]
+            ]
+          ],
+          "terminal_connection": "Separate tangencies onto two central elevator sectors; final pulley orientation requires detailing"
+        },
+        "motion_envelope": {
+          "definition": "Rotate aft-section points about the stated hinge; positive angle maps aft displacement toward -z",
+          "conservative_box_xyz_m": [
+            [
+              -5.65,
+              -2.01,
+              0.79
+            ],
+            [
+              -5.1,
+              2.01,
+              1.21
+            ]
+          ],
+          "clearance_status": "Requires detailed hinge-gap and fin-root check"
+        }
+      },
+      {
+        "id": "AIL_L",
+        "surface": "MAIN",
+        "region": {
+          "u": [
+            0.75,
+            1
+          ],
+          "y_m": [
+            -6,
+            -3
+          ]
+        },
+        "hinge_axis": "MAIN section mapping at u=0.75,v=0 from y=-6 to -3",
+        "positive_deflection": "Trailing edge down",
+        "limits_rad": [
+          -0.261799,
+          0.261799
+        ],
+        "mixing": "delta_L=roll_command",
+        "linkage": "Independent aileron circuit coupled mechanically to AIL_R in opposition",
+        "motion_envelope": "Exact rigid rotation of aft section around its hinge, plus 0.01 m assembly clearance"
+      },
+      {
+        "id": "AIL_R",
+        "surface": "MAIN",
+        "region": {
+          "u": [
+            0.75,
+            1
+          ],
+          "y_m": [
+            3,
+            6
+          ]
+        },
+        "hinge_axis": "MAIN section mapping at u=0.75,v=0 from y=3 to 6",
+        "positive_deflection": "Trailing edge down",
+        "limits_rad": [
+          -0.261799,
+          0.261799
+        ],
+        "mixing": "delta_R=-roll_command",
+        "linkage": {
+          "input": "Separate lateral hand lever with 0.08 m sector and equal opposing output",
+          "ideal_cable_travel_from_neutral_m": 0.0209439,
+          "route": "Cockpit cross-shaft at (-0.6,0,0.4); paired guides at y=+-0.4 then along MAIN aft spar at y=+-2 and +-4.5; terminal sectors at y=+-4.5",
+          "route_offsets": "Two strands separated by 0.04 m vertically; keep all guides forward of the aileron hinge"
+        },
+        "motion_envelope": "Exact rigid rotation of aft section around its hinge, plus 0.01 m assembly clearance"
+      },
+      {
+        "id": "RUDDER",
+        "surface": "VT",
+        "region": {
+          "u": [
+            0.7,
+            1
+          ],
+          "z_m": [
+            1.2,
+            2.4
+          ]
+        },
+        "hinge_axis_endpoints_xyz": [
+          [
+            -4.95,
+            0,
+            1.2
+          ],
+          [
+            -4.95,
+            0,
+            2.4
+          ]
+        ],
+        "positive_deflection": "Trailing edge toward +y",
+        "limits_rad": [
+          -0.349066,
+          0.349066
+        ],
+        "mixing": "Pedal input only",
+        "linkage": {
+          "pedal_sector_radius_m": 0.08,
+          "ideal_ratio": 1,
+          "cable_travel_from_neutral_m": 0.0279253,
+          "fairlead_pairs_xyz": [
+            [
+              [
+                0,
+                -0.22,
+                0.2
+              ],
+              [
+                0,
+                0.22,
+                0.2
+              ]
+            ],
+            [
+              [
+                -3,
+                -0.22,
+                0.5
+              ],
+              [
+                -3,
+                0.22,
+                0.5
+              ]
+            ],
+            [
+              [
+                -4.95,
+                -0.22,
+                1.2
+              ],
+              [
+                -4.95,
+                0.22,
+                1.2
+              ]
+            ]
+          ]
+        },
+        "motion_envelope": {
+          "conservative_box_xyz_m": [
+            [
+              -5.27,
+              -0.13,
+              1.19
+            ],
+            [
+              -4.9,
+              0.13,
+              2.41
+            ]
+          ],
+          "clearance_status": "Nominal separation from horizontal-tail moving skin is small; verify before release"
+        }
+      }
+    ],
+    "overall_interference_status": "Not demonstrated; exact hardware, fairlead orientation and elastic cable motion remain unresolved",
+    "trim_travel_status": "Calculated elevator trim is far inside geometric stops; this does not establish available control force or stall recovery"
+  },
+  "mass_items": {
+    "basis": "New assumed V2 mass budgets; every row counted once",
+    "bounding_geometry_convention": "Boxes are envelopes, not solid occupancy; geometric overlap is permitted at attachments and does not imply double-counted mass",
+    "items": [
+      {
+        "id": "M01",
+        "name": "Operator",
+        "mass_kg": 75,
+        "centroid_xyz_m": [
+          0.2,
+          0,
+          0
+        ],
+        "bounding_box_xyz_m": [
+          [
+            -0.25,
+            -0.3,
+            -0.55
+          ],
+          [
+            0.65,
+            0.3,
+            0.55
+          ]
+        ],
+        "overlap_inclusion": "Independent mass; seat excluded and assigned to M08",
+        "intrinsic_inertia": "UNKNOWN"
+      },
+      {
+        "id": "M02",
+        "name": "Engine, cooling, exhaust and engine mounts",
+        "mass_kg": 72,
+        "centroid_xyz_m": [
+          1,
+          0,
+          0
+        ],
+        "bounding_box_xyz_m": [
+          [
+            0.4,
+            -0.35,
+            -0.4
+          ],
+          [
+            1.8,
+            0.35,
+            0.4
+          ]
+        ],
+        "overlap_inclusion": "Independent; includes mount brackets but not truss members or M05 shaft",
+        "intrinsic_inertia": "UNKNOWN"
+      },
+      {
+        "id": "M03",
+        "name": "Fuel, oil, vessels and local plumbing",
+        "mass_kg": 12,
+        "centroid_xyz_m": [
+          0.8,
+          0,
+          0
+        ],
+        "bounding_geometry": "Two equal envelope boxes: x=[0.55,1.05], z=[-0.2,0.2], y=[-0.75,-0.45] and [0.45,0.75]",
+        "overlap_inclusion": "Independent; split between consumables and empty installation UNKNOWN",
+        "intrinsic_inertia": "UNKNOWN"
+      },
+      {
+        "id": "M04",
+        "name": "Propeller and hub",
+        "mass_kg": 6,
+        "centroid_xyz_m": [
+          2.5,
+          0,
+          0
+        ],
+        "bounding_geometry": "Swept cylinder x=[2.34,2.66], radius=1.2 about y=z=0",
+        "overlap_inclusion": "Independent; shaft excluded",
+        "intrinsic_inertia": "UNKNOWN"
+      },
+      {
+        "id": "M05",
+        "name": "Short shaft, coupling, bearings and guard",
+        "mass_kg": 4,
+        "centroid_xyz_m": [
+          1.9,
+          0,
+          0
+        ],
+        "bounding_geometry": "Envelope x=[1.65,2.5], radial extent 0.1 about y=z=0; local support brackets included",
+        "overlap_inclusion": "Independent; support truss members assigned to M08",
+        "intrinsic_inertia": "UNKNOWN"
+      },
+      {
+        "id": "M06",
+        "name": "Main wing, ailerons and wing bracing",
+        "mass_kg": 60,
+        "centroid_xyz_m": [
+          -0.5,
+          0,
+          1
+        ],
+        "bounding_box_xyz_m": [
+          [
+            -2.2,
+            -6.05,
+            -0.45
+          ],
+          [
+            0.5,
+            6.05,
+            2.35
+          ]
+        ],
+        "overlap_inclusion": "Independent; includes spars, ribs, covering, local joints, kingposts, bracing wires, hinges and horns",
+        "intrinsic_inertia": "UNKNOWN"
+      },
+      {
+        "id": "M07",
+        "name": "Horizontal and vertical tails with elevator and rudder",
+        "mass_kg": 12,
+        "centroid_xyz_m": [
+          -4.5,
+          0,
+          1
+        ],
+        "bounding_box_xyz_m": [
+          [
+            -5.7,
+            -2.05,
+            0.6
+          ],
+          [
+            -4.1,
+            2.05,
+            2.45
+          ]
+        ],
+        "overlap_inclusion": "Independent; includes local tail bracing, hinges and horns",
+        "intrinsic_inertia": "UNKNOWN"
+      },
+      {
+        "id": "M08",
+        "name": "Central truss, seat and fixed structural supports",
+        "mass_kg": 30,
+        "centroid_xyz_m": [
+          -1,
+          0,
+          0
+        ],
+        "bounding_box_xyz_m": [
+          [
+            -5.3,
+            -0.45,
+            -0.65
+          ],
+          [
+            2.35,
+            0.45,
+            1.05
+          ]
+        ],
+        "overlap_inclusion": "Independent; includes structural support tubes but excludes installation brackets already owned by M02 or M05",
+        "intrinsic_inertia": "UNKNOWN"
+      },
+      {
+        "id": "M09",
+        "name": "Cockpit controls and remote transmission",
+        "mass_kg": 8,
+        "centroid_xyz_m": [
+          -0.5,
+          0,
+          0
+        ],
+        "bounding_box_xyz_m": [
+          [
+            -5.2,
+            -4.6,
+            -0.3
+          ],
+          [
+            0.3,
+            4.6,
+            1.25
+          ]
+        ],
+        "overlap_inclusion": "Independent; local surface hinges and horns excluded",
+        "intrinsic_inertia": "UNKNOWN"
+      },
+      {
+        "id": "M10",
+        "name": "Wheels, axles, gear braces and rear skid",
+        "mass_kg": 24,
+        "centroid_xyz_m": [
+          0.2,
+          0,
+          -1
+        ],
+        "bounding_box_xyz_m": [
+          [
+            -4.85,
+            -1.3,
+            -1.6
+          ],
+          [
+            0.65,
+            1.3,
+            -0.3
+          ]
+        ],
+        "overlap_inclusion": "Independent; includes all landing-contact hardware",
+        "intrinsic_inertia": "UNKNOWN"
+      },
+      {
+        "id": "M11",
+        "name": "Restraints and instruments",
+        "mass_kg": 5,
+        "centroid_xyz_m": [
+          0,
+          0,
+          0
+        ],
+        "bounding_box_xyz_m": [
+          [
+            -0.35,
+            -0.35,
+            -0.4
+          ],
+          [
+            0.35,
+            0.35,
+            0.6
+          ]
+        ],
+        "overlap_inclusion": "Independent; seat structure excluded",
+        "intrinsic_inertia": "UNKNOWN"
+      },
+      {
+        "id": "M12",
+        "name": "Allocated secondary installation hardware",
+        "mass_kg": 12,
+        "centroid_xyz_m": [
+          -0.5,
+          0,
+          0
+        ],
+        "bounding_box_xyz_m": [
+          [
+            -5,
+            -0.8,
+            -0.4
+          ],
+          [
+            1.8,
+            0.8,
+            1
+          ]
+        ],
+        "overlap_inclusion": "Independent distributed allowance for otherwise unowned fairleads, access fittings and secondary brackets; not ballast and not duplicated primary joints",
+        "intrinsic_inertia": "UNKNOWN"
+      }
+    ],
+    "calculation": {
+      "mass_sum_kg": 320,
+      "first_moment_xyz_kg_m": [
+        0,
+        0,
+        48
+      ],
+      "CG_xyz_m": [
+        0,
+        0,
+        0.15
+      ],
+      "g_m_s2": 9.80665,
+      "weight_N": 3138.128,
+      "unallocated_mass_reserve_kg": 0,
+      "actual_build_mass": "UNKNOWN",
+      "fuel_burn_CG_range": "UNKNOWN"
+    }
+  },
+  "propulsion": {
+    "arrangement": "Forward tractor, single propeller, direct short shaft",
+    "engine": {
+      "mass_owner": "M02",
+      "mass_kg": 72,
+      "technology": "Proposed combustion engine installation; no particular period engine has been evidenced",
+      "output_interface_xyz_m": [
+        1.8,
+        0,
+        0
+      ],
+      "measured_power_or_torque_curve": "UNKNOWN",
+      "target_power_W": 18000,
+      "target_provenance": "Inherited unverified requirement, not adopted as available power",
+      "required_continuous_engine_power_at_estimated_cruise_W": 13779.9,
+      "requirement_assumptions": "Propeller efficiency 0.55 and mechanical transmission efficiency 0.95",
+      "cooling_fuel_consumption_and_endurance": "UNKNOWN"
+    },
+    "drive": {
+      "mass_owner": "M05",
+      "assembly_mass_kg": 4,
+      "axis": "y=0,z=0",
+      "shaft_endpoints_xyz_m": [
+        [
+          1.8,
+          0,
+          0
+        ],
+        [
+          2.5,
+          0,
+          0
+        ]
+      ],
+      "shaft_length_m": 0.7,
+      "shaft_cross_section": {
+        "type": "Hollow circular steel tube",
+        "outside_diameter_m": 0.03,
+        "inside_diameter_m": 0.02
+      },
+      "bearing_centers_xyz_m": [
+        [
+          1.8,
+          0,
+          0
+        ],
+        [
+          2.35,
+          0,
+          0
+        ]
+      ],
+      "bearing_span_m": 0.55,
+      "propeller_overhang_m": 0.15,
+      "coupling": "Flexible coupling envelope x=[1.65,1.8], radius=0.06; internal construction UNKNOWN",
+      "guard": "Stationary guard x=[1.8,2.25], inner radius=0.05, outer radius=0.055",
+      "proposed_operating_angular_speed_rad_s": 94.24778,
+      "proposed_maximum_angular_speed_rad_s": 104.71976,
+      "required_propeller_shaft_torque_Nm_approx": 138.899,
+      "critical_speed_and_torsional_analysis": "UNKNOWN",
+      "qualification": "Operating and maximum speeds are proposed test limits, not certified safe speeds"
+    },
+    "propeller": {
+      "mass_owner": "M04",
+      "mass_kg": 6,
+      "hub_xyz_m": [
+        2.5,
+        0,
+        0
+      ],
+      "diameter_m": 2.4,
+      "blade_count": 2,
+      "rotation": "At reference phase a blade points +y and advances toward +z; blade handedness shall produce +x thrust",
+      "radial_stations_m": [
+        0.15,
+        0.45,
+        0.8,
+        1.2
+      ],
+      "chord_m": [
+        0.16,
+        0.24,
+        0.2,
+        0.08
+      ],
+      "blade_angle_from_disc_plane_rad": [
+        0.9,
+        0.65,
+        0.48,
+        0.35
+      ],
+      "section_u": [
+        0,
+        0.1,
+        0.3,
+        0.6,
+        1
+      ],
+      "section_upper_v": [
+        0,
+        0.045,
+        0.06,
+        0.035,
+        0
+      ],
+      "section_lower_v": [
+        0,
+        -0.045,
+        -0.06,
+        -0.035,
+        0
+      ],
+      "geometry_rule": "Straight interpolation; chord centered on the radial reference line; opposed identical blades; no sweep or rake",
+      "hub_envelope": "Cylinder about x, radius 0.15, length 0.12",
+      "root_attachment": "Clamped metal hub plates and bolts; bolt schedule and strength UNKNOWN",
+      "material": "Proposed laminated timber; species, adhesive durability and allowables UNKNOWN",
+      "efficiency": {
+        "value": 0.55,
+        "status": "Assumption only; not calculated from these blade stations"
+      }
+    },
+    "thrust_estimate": {
+      "V_m_s": 18,
+      "thrust_N": 400,
+      "useful_power_W": 7200,
+      "propeller_shaft_power_W": 13090.9091,
+      "method": "T=eta_prop*Pshaft/V at the selected forward speed",
+      "static_thrust": "UNKNOWN",
+      "qualification": "A required operating point, not a demonstrated engine-propeller intersection"
+    }
+  },
+  "structural_members": {
+    "status": "Deterministic preliminary topology; no strength or mass certification",
+    "material_evidence": {
+      "wood": "Timber construction is period-compatible in general; supplied packet establishes no species, grade, density, moisture condition or allowable",
+      "steel": "Steel tubes, fittings and wires are proposals; supplied packet provides no relevant certified properties",
+      "fabric": "Tensioned fabric covering proposed; strength, permeability and loaded shape UNKNOWN",
+      "allowable_stresses_Pa": "UNKNOWN",
+      "joint_efficiency": "UNKNOWN",
+      "numerical_material_capability_assumed_for_flight": "None"
+    },
+    "node_sets": [
+      {
+        "id": "TRUSS",
+        "rule": "N(i,j,k)=(X[i],Y[j],Z[k])",
+        "X_m": [
+          -5,
+          -3,
+          -1,
+          1.5
+        ],
+        "Y_m": [
+          -0.4,
+          0.4
+        ],
+        "Z_m": [
+          -0.4,
+          0.6
+        ]
+      },
+      {
+        "id": "MAIN_SPAR",
+        "rule": "W(s,y)=MAIN section mapping at u=s,v=0",
+        "s": [
+          0.25,
+          0.7
+        ],
+        "y_m": [
+          -6,
+          -4,
+          -2,
+          -0.4,
+          0,
+          0.4,
+          2,
+          4,
+          6
+        ]
+      },
+      {
+        "id": "MAIN_BRACE",
+        "rule": "For each main spar chord coordinate, define kingpost K at y=0,z=2.3 and belly node B at y=0,z=-0.4, with x equal to the corresponding spar x"
+      },
+      {
+        "id": "TAIL_FRAME",
+        "rule": "HT spars at u=0.25 and 0.7, y=-2,-1,-0.4,0,0.4,1,2; VT spars at u=0.25 and 0.7, z=1.2,1.8,2.4"
+      },
+      {
+        "id": "GEAR",
+        "points_xyz_m": {
+          "WL": [
+            0.3,
+            -1.2,
+            -1.3
+          ],
+          "WR": [
+            0.3,
+            1.2,
+            -1.3
+          ],
+          "SKID_ROOT": [
+            -4.5,
+            0,
+            -0.4
+          ],
+          "SKID_CONTACT": [
+            -4.8,
+            0,
+            -1.6
+          ]
+        }
+      },
+      {
+        "id": "DRIVE_SUPPORT",
+        "points_xyz_m": {
+          "B1": [
+            1.8,
+            0,
+            0
+          ],
+          "B2": [
+            2.35,
+            0,
+            0
+          ]
+        }
+      }
+    ],
+    "member_families": [
+      {
+        "id": "S_LONGERONS",
+        "connectivity": "N(i,j,k) to N(i+1,j,k), all adjacent i and all j,k",
+        "cross_section": "Solid wood square 0.035 by 0.035",
+        "mass_owner": "M08"
+      },
+      {
+        "id": "S_FRAMES",
+        "connectivity": "At every i connect the four N nodes as the rectangular perimeter",
+        "cross_section": "Solid wood square 0.03 by 0.03",
+        "mass_owner": "M08"
+      },
+      {
+        "id": "S_TRUSS_WIRES",
+        "connectivity": "Cross both diagonals on every side, top and bottom panel between adjacent truss stations; cross each transverse frame",
+        "cross_section": "Steel wire diameter 0.0025, tension only",
+        "mass_owner": "M08"
+      },
+      {
+        "id": "S_WING_SPARS",
+        "connectivity": "Connect consecutive y nodes separately on each MAIN spar",
+        "cross_section": "Solid rectangular wood, vertical depth 0.08, fore-aft width 0.035",
+        "mass_owner": "M06"
+      },
+      {
+        "id": "S_WING_RIBS",
+        "connectivity": "Section-shaped rib at every y multiple of 0.5 from -6 to 6; connect both spars, leading edge and control hinge or trailing edge",
+        "cross_section": "Upper and lower wood cap strips 0.012 by 0.006, web strips 0.01 by 0.006",
+        "mass_owner": "M06"
+      },
+      {
+        "id": "S_WING_DRAG",
+        "connectivity": "Crossed diagonals between front and rear spars in every bay of the listed MAIN_SPAR station grid",
+        "cross_section": "Steel wire diameter 0.002",
+        "mass_owner": "M06"
+      },
+      {
+        "id": "S_WING_EXTERNAL",
+        "connectivity": "For each spar connect K and B to its y=+-2,+-4,+-6 nodes; connect K vertically to B; connect root nodes y=+-0.4 to nearest upper truss node and the diagonally opposite lower truss node",
+        "cross_section": "Bracing wire diameter 0.003; kingpost and root struts wood square 0.035",
+        "mass_owner": "M06"
+      },
+      {
+        "id": "S_TAIL",
+        "connectivity": "Connect successive HT and VT spar nodes; ribs join spar pairs and section edges at each listed station; crossed drag wires in each spar bay",
+        "cross_section": "Wood spars 0.04 deep by 0.02 wide; ribs 0.01 by 0.006; wires diameter 0.002",
+        "mass_owner": "M07"
+      },
+      {
+        "id": "S_TAIL_MOUNTS",
+        "connectivity": "HT root spar nodes at y=+-0.4 to both upper aft-truss nodes; HT y=+-2 front-spar nodes to lower aft-truss nodes; VT root spar nodes to HT central frame; VT top front-spar node to HT y=+-1 front-spar nodes",
+        "cross_section": "Wood struts 0.025 square and steel bracing wire diameter 0.002",
+        "mass_owner": "M07"
+      },
+      {
+        "id": "S_ENGINE_DRIVE_SUPPORT",
+        "connectivity": "Each B1 and B2 connects to all four truss nodes at x=1.5; engine mounts join the same forward frame",
+        "cross_section": "Steel tube outside diameter 0.02, wall 0.0015",
+        "mass_owner": "M08"
+      },
+      {
+        "id": "S_GEAR",
+        "connectivity": "WL and WR each connect to the lower truss nodes at x=-1 and x=1.5 on their own side; connect WL to WR by axle; SKID_ROOT attaches by a crossbeam to aft lower longerons and connects to SKID_CONTACT",
+        "cross_section": "Gear tubes outside diameter 0.025, wall 0.002; axle outside diameter 0.03, wall 0.003; wood skid 0.06 wide by 0.025 thick",
+        "mass_owner": "M10"
+      }
+    ],
+    "joints": {
+      "wood_to_wood": "Steel strap and through-bolt joints; proposed M6 bolts with large washers, fitted spacers and anti-crush sleeves",
+      "wire_ends": "Eyes, clevises and adjustable tensioners; fitting dimensions and proof strength UNKNOWN",
+      "spar_splices": "Located only at listed braced nodes; opposed fishplates and through-bolts proposed",
+      "engine_and_bearings": "Bolted saddles attached to triangulated supports",
+      "inspection": "No joint is assigned a certified capacity"
+    },
+    "load_path": "Covering to ribs to two spars to external bracing and root struts to central truss; tail and propulsion loads enter separate aft and forward frames; gear loads enter lower longerons",
+    "mass_reconciliation": "Member volumes and actual material densities have not been reconciled to ledger budgets; any excess requires a new ledger and retrim",
+    "buckling_flutter_and_fatigue": "UNKNOWN"
+  },
+  "claimed_flight_state": {
+    "claim_scope": "Conditional estimated straight-level equilibrium in a hand-calculated rigid model; not a prediction of successful flight",
+    "rho_kg_m3": 1.225,
+    "V_m_s": 18,
+    "dynamic_pressure_Pa": 198.45,
+    "alpha_rad": 0,
+    "beta_rad": 0,
+    "CG_xyz_m": [
+      0,
+      0,
+      0.15
+    ],
+    "controls_rad": {
+      "ELEVATOR": -0.00815537,
+      "AIL_L": 0,
+      "AIL_R": 0,
+      "RUDDER": 0
+    },
+    "individual_surface_forces": [
+      {
+        "surface": "MAIN",
+        "application_xyz_m": [
+          -0.2,
+          0,
+          1
+        ],
+        "force_xyz_N": [
+          -250,
+          0,
+          3354.2269767
+        ],
+        "CL_on_own_area": 0.5634042121,
+        "intrinsic_pitch_moment_Nm": -595.35
+      },
+      {
+        "surface": "HT",
+        "application_xyz_m": [
+          -4.5,
+          0,
+          1
+        ],
+        "force_xyz_N": [
+          -25,
+          0,
+          -216.0989767
+        ],
+        "CL_on_own_area": -0.1814915401,
+        "intrinsic_pitch_moment_Nm": 0
+      },
+      {
+        "surface": "VT",
+        "application_xyz_m": [
+          -4.5,
+          0,
+          1.8
+        ],
+        "force_xyz_N": [
+          0,
+          0,
+          0
+        ],
+        "qualification": "Its drag is included in aggregate other drag; lateral force set to zero at symmetric state"
+      }
+    ],
+    "thrust": {
+      "force_xyz_N": [
+        400,
+        0,
+        0
+      ],
+      "line": "y=0,z=0",
+      "propeller_torque_roll_moment": "Not balanced in this longitudinal calculation"
+    },
+    "drag": {
+      "main_N": 250,
+      "horizontal_tail_N": 25,
+      "other_N": 125,
+      "total_N": 400,
+      "other_drag_application_xyz_m": [
+        0,
+        0,
+        0.15
+      ],
+      "provenance": "Assumed totals, not measured or independently predicted",
+      "important_qualification": "The chosen application height of other drag is an explicit uncertain moment assumption"
+    },
+    "moment_terms_Nm": {
+      "main_lift": -670.8453953,
+      "tail_lift": 972.4453953,
+      "main_intrinsic": -595.35,
+      "main_drag": 212.5,
+      "tail_drag": 21.25,
+      "other_drag": 0,
+      "thrust": 60,
+      "weight_about_CG": 0,
+      "sum": 0
+    },
+    "residuals": {
+      "horizontal_force_N": 0,
+      "vertical_force_N": 0,
+      "pitch_moment_Nm": 0,
+      "rounding_tolerance_N_or_Nm": 0.001,
+      "roll_and_yaw_equilibrium": "UNKNOWN; propeller reaction torque and asymmetric installation effects omitted",
+      "interpretation": "Algebraic closure of selected assumptions, not a validation residual"
+    },
+    "method": {
+      "type": "Two-surface linear lift and point-force longitudinal equilibrium",
+      "main_lift_slope_per_rad": 4.6,
+      "main_zero_lift_angle_rad": -0.035,
+      "main_Cm_quarter_chord": -0.04,
+      "tail_lift_slope_per_rad": 3.8,
+      "tail_dynamic_pressure_ratio": 1,
+      "tail_downwash_rad": 0.0428677118,
+      "downwash_rule": "epsilon=0.35*(alpha+main_incidence-main_zero_lift_angle)",
+      "elevator_effectiveness": 0.6,
+      "equations": [
+        "CLw=4.6*(alpha+iw+0.035)",
+        "CLt=3.8*(alpha-epsilon+0.6*delta_e)",
+        "Lw+Lt=W",
+        "T=Dw+Dt+Dother",
+        "M=-0.2*Lw-4.5*Lt-595.35+0.85*(Dw+Dt)+0.15*T"
+      ],
+      "coefficient_provenance": "Modern simplified assumptions, not extracted from period evidence or computed from the frozen section polygons",
+      "solution_sequence": "Select V and assumed drags; solve force and moment equations for surface lifts; select main incidence and elevator angle to realize those lifts within the assumed linear model",
+      "omitted_physics": [
+        "Stall and viscous separation",
+        "Actual tail wake and tractor propwash",
+        "Body pitching moment and its slope",
+        "Aeroelastic twist and fabric sag",
+        "Hinge moments and cable compliance",
+        "Propeller torque, swirl and gyroscopic effects",
+        "A complete lateral-directional force and moment balance"
+      ]
+    }
+  },
+  "stability": {
+    "target": "Restoring fixed-control local longitudinal response in addition to simultaneous longitudinal trim",
+    "not_equivalent_to": "Pilot-stabilizable flight, dynamic stability, stall recovery or safety",
+    "reference_point_xyz_m": [
+      0,
+      0,
+      0.15
+    ],
+    "reference_area_m2": 30,
+    "reference_chord_m": 2.5,
+    "reference_span_m": 12,
+    "fixed_controls": "All surface angles and incidence fixed at the estimated trim; V and body-axis thrust magnitude fixed",
+    "fixed_control_derivatives": {
+      "dCL_dalpha_per_rad": 5.093999,
+      "dLmain_dalpha_N_per_rad": 27386.1,
+      "dLtail_dalpha_N_per_rad": 2941.029,
+      "downwash_gradient": 0.35,
+      "body_normal_force_only_dM_dalpha_Nm_per_rad": -18711.8505,
+      "including_force_rotation_but_frozen_drag_dM_dalpha_Nm_per_rad": -15881.9417,
+      "including_force_rotation_but_frozen_drag_dCm_dalpha_per_rad_approx": -1.067065,
+      "effective_slope_margin_fraction_chord_approx": 0.209475,
+      "effective_slope_neutral_x_forward_m_approx": -0.52369,
+      "elevator_dM_ddelta_Nm_per_rad_approx": -12216.582
+    },
+    "method": {
+      "type": "Analytic derivative of the same assumed local lift model",
+      "force_rotation": "For alpha perturbations use Fx=-D*cos(alpha)+L*sin(alpha), Fz=L*cos(alpha)+D*sin(alpha)",
+      "frozen_drag_moment_derivative": "Sum[x*dL/dalpha+(z-zG)*L-x*D] at alpha=0, plus constant intrinsic and thrust moments",
+      "neutral_point_qualification": "Reported x is an effective constant-height slope diagnostic, not a universally applicable aerodynamic neutral point",
+      "drag_derivative": "Set to zero for the reported estimate; actual drag derivatives must be added",
+      "body_and_propwash_derivatives": "UNKNOWN"
+    },
+    "restoring_tendency_assessment": "Negative local slope in this assumed model; not independently validated and not transferred from V1 evaluator results",
+    "damping_inertia_limitations": {
+      "Cm_q": "UNKNOWN",
+      "Cm_alpha_dot": "UNKNOWN",
+      "complete_inertia_tensor": "UNKNOWN",
+      "modal_eigenvalues": "Not computed",
+      "control_free_stability": "UNKNOWN",
+      "phugoid_and_short_period": "UNKNOWN",
+      "lateral_directional_stability": "UNKNOWN",
+      "qualification": "Point-mass parallel-axis terms alone would omit intrinsic component inertias and cannot establish dynamics"
+    }
+  },
+  "launch_and_landing": {
+    "gear_geometry": {
+      "main_wheel_centers_xyz_m": [
+        [
+          0.3,
+          -1.2,
+          -1.3
+        ],
+        [
+          0.3,
+          1.2,
+          -1.3
+        ]
+      ],
+      "wheel_radius_m": 0.3,
+      "wheel_width_m": 0.12,
+      "rear_skid_contact_xyz_m": [
+        -4.8,
+        0,
+        -1.6
+      ],
+      "ground_plane": "z=-1.6",
+      "CG_projection_inside_support_triangle": true
+    },
+    "propeller_clearance": {
+      "level_rigid_clearance_m": 0.4,
+      "conservative_pitch_formula_about_main_axle": "g(theta)=0.3+2.2*sin(theta)+0.1*cos(theta)-0.16*abs(sin(theta))",
+      "theta_sign": "Positive nose-up",
+      "rigid_clearance_at_minus_0_08_rad_m_approx": 0.211,
+      "test_attitude_limit_rad": [
+        -0.08,
+        0.08
+      ],
+      "combined_pitch_roll_terrain_elastic_clearance": "UNKNOWN",
+      "qualification": "Attitude limit is a proposed test envelope, not a proven operating allowance"
+    },
+    "departure": "Propose wheeled fixed-incidence ground run; no assumed nose-up rotation while the rigid rear skid remains loaded",
+    "rear_skid_constraint": "As in V1, a rear skid touching level ground blocks tail-down rotation about a fixed main axle; departure must unload contacts rather than penetrate the ground",
+    "takeoff_distance_m": "UNKNOWN",
+    "ground_acceleration": "UNKNOWN because static thrust, rolling resistance and engine curve are unknown",
+    "stall_speed_m_s": "UNKNOWN because CLmax is unknown",
+    "landing": "Propose shallow wheeled arrival with skid contact after main-wheel contact; sink-rate capacity and contact sequence require testing",
+    "ground_braking_and_directional_control": "UNKNOWN",
+    "person_carrying_authorization": "None; no occupied launch proposed before the test gates"
+  },
+  "remaining_unknowns": [
+    "A period-evidenced installed engine meeting the required power, mass, cooling and endurance conditions",
+    "Actual blade performance, static thrust and engine-propeller operating intersection",
+    "Actual component masses, centroids and complete inertia tensor",
+    "Reconciliation of proposed structural sections and joints with the mass ledger",
+    "Timber grade, steel properties, wire strength, fabric strength, joint efficiency and allowable loads",
+    "Detailed engine mounts, coupling internals, bearing fits and shaft vibration",
+    "Propeller retention, blade strength, balance and safe overspeed",
+    "Actual section lift, drag, pitching moment, CLmax and Reynolds-number behavior",
+    "Downwash, tail dynamic pressure, propwash, body moments and drag force locations",
+    "Full six-component trim including propeller reaction torque",
+    "Hinge moments, available pilot force, backlash and cable stretch",
+    "Exact control hardware clearances, especially elevator-to-fin-root clearance",
+    "Elastic deformation, divergence, flutter, fatigue and gust response",
+    "Loaded ground clearances, gear compliance, wheel strength and landing energy absorption",
+    "Fuel-system empty mass, usable fuel, slosh, fire protection and CG change",
+    "Dynamic longitudinal and lateral-directional stability",
+    "Safe operating envelope and any demonstrated flight capability"
+  ],
+  "proposed_tests": [
+    {
+      "order": 1,
+      "test": "Independent geometry, ledger and member-volume audit",
+      "gate": "Resolve ownership, interferences, structural mass and loaded CG before generating an assembled drawing"
+    },
+    {
+      "order": 2,
+      "test": "Period-source investigation and engine procurement feasibility review",
+      "gate": "Identify an evidenced powerplant or explicitly reject the present powered configuration"
+    },
+    {
+      "order": 3,
+      "test": "Material coupons, wire-end tests, joint tests and representative spar/truss loading",
+      "gate": "Establish properties and failure modes before assigning structural allowables"
+    },
+    {
+      "order": 4,
+      "test": "Guarded engine dynamometer, cooling and endurance measurements",
+      "gate": "Measure installed power and torque versus speed; do not use the 18 kW target as data"
+    },
+    {
+      "order": 5,
+      "test": "Guarded shaft vibration, bearing-temperature and propeller thrust/torque tests",
+      "gate": "Establish speed limits, efficiency, thrust and retention margins without an occupant"
+    },
+    {
+      "order": 6,
+      "test": "Section and complete-configuration force and moment measurements across angle and control travel",
+      "gate": "Find trim and a restoring frozen-control slope together; include body, propwash and stall approach"
+    },
+    {
+      "order": 7,
+      "test": "Loaded full-travel control and clearance tests",
+      "gate": "Measure pilot forces, cable compliance, stop behavior and skin/hardware interference"
+    },
+    {
+      "order": 8,
+      "test": "Complete-airframe proof loading and restrained ground-contact tests",
+      "gate": "Verify deformation, gear capacity and propeller clearances under representative loads"
+    },
+    {
+      "order": 9,
+      "test": "Unoccupied, restrained ground runs followed only conditionally by unoccupied low-energy trials",
+      "gate": "Require adequate power, controllability, structural evidence and recovery provisions before considering occupied operation"
+    }
+  ],
+  "suspected_modern_recall": {
+    "disclosure": "Modern training may influence architecture and analysis even though documentary evidence is restricted to the supplied period packet",
+    "likely_influences": [
+      "Conventional main-wing and aft-tail architecture",
+      "Separate aileron, elevator and rudder controls",
+      "Quarter-chord aerodynamic-center approximation",
+      "Linear lift slopes and downwash-gradient modeling",
+      "Static-margin and neutral-point diagnostics",
+      "Force-axis transformations and damping-derivative terminology",
+      "Hollow-shaft and triangulated structural design conventions",
+      "Modern staged test and safety-gate practices"
+    ],
+    "historical_attribution": "None of these specific numerical methods or mechanisms is attributed to the supplied period authors without further evidence",
+    "performed_experiments": "None",
+    "claimed_successful_flight": false
+  }
+}
+
+LATER V6 SUBSYSTEM RESPONSE (NOT INTEGRATED)
+{
+  "response": "{\n  \"model\": \"Astra V5c propeller\",\n  \"stage\": \"v6_propeller_geometry_repair\",\n  \"parent_response_sha256\": null,\n  \"disposition\": \"NO_CHANGE\",\n  \"baseline_preserved\": {\n    \"preserve_separately\": [\n      \"Initial design\",\n      \"V2\",\n      \"V3 and V3c candidate\",\n      \"V4\",\n      \"V5 and V5c audited geometry\"\n    ],\n    \"policy\": \"No baseline is overwritten or retroactively relabeled. V6 is an assembly clarification and bounded diagnostic test plan, not a new contour.\",\n    \"inherited_parameters\": {\n      \"propeller_count\": 1,\n      \"blade_count\": 2,\n      \"diameter_m\": 2.4,\n      \"rpm\": 900,\n      \"advance_speed_m_per_s\": 18\n    },\n    \"other_parameters\": \"Inherited pitch/twist, mass, hub location and intended thrust direction are not changed. Missing baseline values are not reconstructed.\",\n    \"separate_redesigns\": []\n  },\n  \"geometry_revision\": {\n    \"new_sections\": [],\n    \"retained_section_id\": \"V5_S1\",\n    \"reason\": \"The audit reproduced the intended section geometry. Both contour resolutions bracket the no-induction geometric incidence at every station. The three unsuccessful or rejected Astra cases justify numerical uncertainty and sensitivity checks, not an unsupported geometry change.\",\n    \"audit_interpretation\": {\n      \"astra_passed_cases\": 123,\n      \"astra_total_cases\": 126,\n      \"exceptions\": [\n        \"r=0.45 m, 161 nodes, alpha=6 degrees: zero stored polar rows.\",\n        \"r=1.20 m, 241 nodes, alpha=14 degrees: zero stored polar rows.\",\n        \"r=1.20 m, 161 nodes, alpha=14 degrees: stored row rejected for warning/drag mismatch.\"\n      ],\n      \"limitation\": \"These are XFOIL numerical-screen outcomes. Neither successful rows nor failures establish physical propeller performance or impossibility.\"\n    },\n    \"retained_section_definition\": {\n      \"domain\": \"0 <= X <= 1\",\n      \"chord_datum\": \"X=x/c, from leading-edge endpoint X=0 to trailing-edge endpoint X=1; Y=y/c normal to the zero-camber chord line.\",\n      \"A\": \"27/(35*sqrt(21))\",\n      \"upper\": \"Y=A*sqrt(X*(1-X))*(1-20*X/27)\",\n      \"lower\": \"Y=-A*sqrt(X*(1-X))*(1-20*X/27)\",\n      \"complete_closed_parameterization\": {\n        \"domain\": \"0 <= theta <= 2*pi, with periodic endpoint handling\",\n        \"X\": \"(1-cos(theta))/2\",\n        \"Y\": \"(A/2)*sin(theta)*(1-20*X/27)\"\n      },\n      \"dimensionless_metrics\": {\n        \"chord_length_over_c\": 1,\n        \"leading_edge_radius_over_c\": \"243/17150\",\n        \"trailing_edge_thickness_over_c\": 0,\n        \"trailing_edge_radius_over_c\": \"1/1050\",\n        \"actual_maximum_thickness_over_c\": 0.12,\n        \"maximum_thickness_location_over_c\": 0.3\n      },\n      \"dimensional_metrics_at_r_0_65_m\": {\n        \"chord_m\": 0.217142857,\n        \"leading_edge_radius_m\": 0.00307671803,\n        \"trailing_edge_thickness_m\": 0,\n        \"trailing_edge_radius_m\": 0.000206802721,\n        \"actual_maximum_thickness_m\": 0.02605714284,\n        \"maximum_thickness_location_from_LE_m\": 0.0651428571\n      },\n      \"note\": \"The trailing endpoint has zero thickness but finite radius; it is not a sharp cusp.\"\n    }\n  },\n  \"radial_station_table\": [\n    {\n      \"r_m\": 0.15,\n      \"chord_m\": null,\n      \"section_id\": \"V5_S1\",\n      \"beta_deg\": 59.501661\n    },\n    {\n      \"r_m\": 0.3,\n      \"chord_m\": null,\n      \"section_id\": \"V5_S1\",\n      \"beta_deg\": 40.031114\n    },\n    {\n      \"r_m\": 0.45,\n      \"chord_m\": null,\n      \"section_id\": \"V5_S1\",\n      \"beta_deg\": 30.048789\n    },\n    {\n      \"r_m\": 0.65,\n      \"chord_m\": 0.217142857,\n      \"section_id\": \"V5_S1\",\n      \"beta_deg\": 22.9288\n    },\n    {\n      \"r_m\": 0.8,\n      \"chord_m\": null,\n      \"section_id\": \"V5_S1\",\n      \"beta_deg\": 19.728747\n    },\n    {\n      \"r_m\": 1,\n      \"chord_m\": null,\n      \"section_id\": \"V5_S1\",\n      \"beta_deg\": 16.876523\n    },\n    {\n      \"r_m\": 1.2,\n      \"chord_m\": null,\n      \"section_id\": \"V5_S1\",\n      \"beta_deg\": 14.940381\n    }\n  ],\n  \"assembly_frame\": {\n    \"classification\": \"Coordinate clarification only; no physical relocation or rotation-direction redesign.\",\n    \"body_frame\": \"V2: x forward, y right, z up; left-handed.\",\n    \"V5_frame\": \"Right-handed: x5 forward along shaft, y5 right at zero azimuth, z5 down.\",\n    \"explicit_plus_z_shaft_frame\": \"For reconciliation, define a right-handed +z-shaft frame C: xC right, yC down, zC forward. This is compatible with a +z shaft but is not confirmation of undocumented V4 transverse-axis signs.\",\n    \"C_to_V5\": {\n      \"equation\": \"p5=Q*pC\",\n      \"Q\": [[0, 0, 1], [1, 0, 0], [0, 1, 0]],\n      \"determinant\": 1\n    },\n    \"V5_to_body\": {\n      \"equation\": \"p_body=hub_body+M*p5\",\n      \"M\": [[1, 0, 0], [0, 1, 0], [0, 0, -1]]\n    },\n    \"C_to_body\": {\n      \"equation\": \"p_body=hub_body+B*pC, B=M*Q\",\n      \"B\": [[0, 0, 1], [1, 0, 0], [0, -1, 0]],\n      \"determinant\": -1,\n      \"note\": \"The determinant reflects different coordinate handedness, not physical mirroring. A proper rotation alone cannot map a right-handed basis to this left-handed body basis.\"\n    },\n    \"numerical_position_rotation_check\": {\n      \"point_description\": \"Section datum point at r=0.65 m, with zero axial offset.\",\n      \"initial_C_m\": [0.65, 0, 0],\n      \"initial_V5_m\": [0, 0.65, 0],\n      \"initial_body_offset_m\": [0, 0.65, 0],\n      \"rotation\": \"Positive right-hand 90-degree rotation about +zC, equivalently +x5.\",\n      \"rotated_C_m\": [0, 0.65, 0],\n      \"rotated_V5_m\": [0, 0, 0.65],\n      \"rotated_body_offset_m\": [0, 0, -0.65],\n      \"body_rotation_matrix\": [[1, 0, 0], [0, 0, 1], [0, -1, 0]],\n      \"check\": \"Both local conventions move the same datum point from body-right to body-down.\"\n    },\n    \"release_condition\": \"Confirm V4 signed transverse axes, hub position, section stacking datum, beta sign and reference direction, blade handedness and actual rotation sense against the parent assembly. The check does not select an operating rotation or thrust direction.\"\n  },\n  \"manufacturing\": {\n    \"change\": \"None.\",\n    \"retained_method\": \"Period-type laminated wooden blank, woodworking adhesive, hand shaping against analytic station templates, and sealing finish.\",\n    \"inspection\": \"Measure finished chord, twist, maximum thickness, nose radius and rounded-tail geometry. Preserve the intended finished contour rather than silently thickening its tail.\",\n    \"limitations\": \"No material strength, adhesive durability, tolerance capability, balance or attachment adequacy is established. Any required contour thickening, reinforcement, covering or mass change must be logged as a separate redesign.\"\n  },\n  \"test_plan\": {\n    \"scope\": \"Bounded geometry, assembly and numerical-sensitivity checks only.\",\n    \"provenance\": {\n      \"parent_model_response_job\": 64962376,\n      \"radial_array_job\": 64965852,\n      \"frozen_solver_sha256\": \"000b0468d9a7f4fce42d6fac24bd14147d7d326c8a9035909c8e9f98d180f50e\",\n      \"array_cases\": 288,\n      \"numerical_screen_rows\": 269,\n      \"zero_row_VISCAL_failures\": 18,\n      \"rejected_rows\": 1\n    },\n    \"steps\": [\n      {\n        \"id\": 1,\n        \"action\": \"Retrieve the immutable parent response and audited geometry inputs. Verify their hashes, all seven chords, spanwise interpolation, stacking datum, hub/tip details and original assembly transforms before generating fabrication geometry.\"\n      },\n      {\n        \"id\": 2,\n        \"action\": \"Repeat the six combinations at r=0.45 m/alpha=6 degrees and r=1.20 m/alpha=12 and 14 degrees, each with 161 and 241 nodes, using the original frozen solver and settings.\"\n      },\n      {\n        \"id\": 3,\n        \"action\": \"Repeat those six combinations once with a predeclared doubled iteration ceiling and once with documented ascending-angle continuation rather than independent initialization, changing only one setting at a time.\",\n        \"maximum_additional_solver_cases_for_steps_2_and_3\": 18\n      },\n      {\n        \"id\": 4,\n        \"action\": \"For the seven station-specific no-induction geometric incidences, compare the existing two-resolution brackets and accepted section coefficients. Report bracket width and cross-resolution spread; do not interpolate through a rejected row or extrapolate beyond accepted brackets.\"\n      },\n      {\n        \"id\": 5,\n        \"action\": \"Apply both assembly transforms to identical section datum points and verify the numerical quarter-turn check. Resolve any signed-axis disagreement before import.\"\n      }\n    ],\n    \"acceptance_and_stop\": \"Use the original warning and drag-consistency rules without relaxing them to obtain passes. Archive inputs, paneling, initialization, transition settings, residual histories and all rejected/empty outputs. Stop after the bounded reruns; unresolved cases remain numerical uncertainty rather than grounds for automatic redesign.\",\n    \"excluded_claims\": \"No thrust, torque, efficiency, engine matching, structural adequacy, aircraft stability or flight conclusion.\"\n  },\n  \"assumptions\": [\n    \"This is a modern researcher-assisted iteration using period-type geometry and manufacturing concepts.\",\n    \"The audit summary is supplied evidence of numerical screening, not a substitute for raw case records.\",\n    \"No-induction incidence is a geometric diagnostic, not the operating incidence of a validated propeller.\",\n    \"The 400 N thrust target and 18 kW engine target remain unverified targets, not measured capability.\"\n  ],\n  \"unresolved\": [\n    \"The parent response SHA-256 was not supplied. The frozen solver hash is not a response hash.\",\n    \"Six station chords are absent from the supplied continuity record. Null values explicitly mark missing inherited data; the requested fully numeric station table cannot be completed without inventing geometry.\",\n    \"Original V4 signed transverse axes and complete V2 installation transform remain necessary to confirm the proposed coordinate reconciliation.\",\n    \"Spanwise interpolation, stacking datum, beta convention, hub and tip closure, mass, attachments and operating rotation sense remain unconfirmed.\",\n    \"Measured engine torque-versus-rpm data are missing, including sustainable operation, test conditions and uncertainty; the 18 kW target supplies no such curve.\",\n    \"Drive ratio, engine-to-propeller rotation mapping, measured load- and speed-dependent transmission losses or efficiency, slip, allowable drive loads, and bearing/shaft/attachment details remain missing.\",\n    \"Rounded-tail sensitivity, manufactured contour fidelity and structural safety remain unvalidated.\",\n    \"The complete aircraft, engine, drive and propeller performance remain unvalidated.\"\n  ],\n  \"status\": \"UNVALIDATED\"\n}",
+  "status": "completed",
+  "stop_reason": null,
+  "model_returned": "gpt-6-astra",
+  "response_id": "resp_0ce14c7e9fd3bf61016ab9735ee39c87d2bb03765876984624",
+  "usage": {
+    "input_tokens": 3570,
+    "input_tokens_details": {
+      "cache_write_tokens": 3567,
+      "cached_tokens": 0
+    },
+    "output_tokens": 2839,
+    "output_tokens_details": {
+      "reasoning_tokens": 73
+    },
+    "total_tokens": 6409
+  }
+}
+
+INDEPENDENT V2 DYNAMIC GATE JSON
+{
+  "scope": "V2 evidence gate, not a certificate or full dynamics simulation",
+  "course_mapping": "Flight Dynamics II CH4 pp. 54-65 and 72-84: EOM, longitudinal and lateral characteristic roots",
+  "records": [
+    {
+      "case": "astra_v2",
+      "input_source": "analysis\\results\\v2_rate_derivative_screen02\\summary.json",
+      "reference": {
+        "mass_kg": 320.0,
+        "speed_m_s": 18.0,
+        "area_m2": 30.0,
+        "chord_m": 2.5
+      },
+      "partial_screen": {
+        "Zalpha_over_U_per_s": -4.3190709679687505,
+        "one_plus_Zq_over_U": 0.5476438193359374,
+        "Malpha_times_Iyy_Nm_per_rad": -12100.548285,
+        "Mq_times_Iyy_Nm_s": -4863.9867609375015,
+        "determinant_times_Iyy_kg_m2_per_s2": 27634.69448660585,
+        "reduced_model_hurwitz_signs_for_any_positive_Iyy": true,
+        "interpretation": "conditional sign check only; NOT full dynamic acceptance",
+        "omitted_from_reduced_model": [
+          "C_Ldot_alpha and C_mdot_alpha (unknown in physical aircraft)",
+          "axial-speed/gravity coupling and phugoid",
+          "propulsion derivatives",
+          "body/fin and propeller-wake effects",
+          "flexibility and pilot/control dynamics"
+        ]
+      },
+      "full_dynamic_gate": "NOT_ASSESSED",
+      "required_before_full_gate": [
+        "complete three-axis mass tensor, with component intrinsic inertia and CG range",
+        "installed full-aircraft force/moment derivatives including axial and propulsion terms",
+        "unsteady C_Ldot_alpha and C_mdot_alpha or a justified frequency-domain model",
+        "body, vertical tail, propeller slipstream and control-effectiveness derivatives",
+        "power-on and power-off trim over speed/CG/control envelope",
+        "longitudinal and lateral state matrices, eigenmodes and uncertainty sweep",
+        "pilot/control deflection, hinge load, rate and delay limits",
+        "structural and ground/flight test evidence before any flightworthiness claim"
+      ]
+    },
+    {
+      "case": "opus_v2",
+      "input_source": "analysis\\results\\v2_rate_derivative_screen02\\summary.json",
+      "reference": {
+        "mass_kg": 360.0,
+        "speed_m_s": 15.0,
+        "area_m2": 38.0,
+        "chord_m": 1.8
+      },
+      "partial_screen": {
+        "Zalpha_over_U_per_s": -3.580676429166667,
+        "one_plus_Zq_over_U": 0.673513312375,
+        "Malpha_times_Iyy_Nm_per_rad": -2699.39330325,
+        "Mq_times_Iyy_Nm_s": -3758.7753264600005,
+        "determinant_times_Iyy_kg_m2_per_s2": 15277.035539063369,
+        "reduced_model_hurwitz_signs_for_any_positive_Iyy": true,
+        "interpretation": "conditional sign check only; NOT full dynamic acceptance",
+        "omitted_from_reduced_model": [
+          "C_Ldot_alpha and C_mdot_alpha (unknown in physical aircraft)",
+          "axial-speed/gravity coupling and phugoid",
+          "propulsion derivatives",
+          "body/fin and propeller-wake effects",
+          "flexibility and pilot/control dynamics"
+        ]
+      },
+      "full_dynamic_gate": "NOT_ASSESSED",
+      "required_before_full_gate": [
+        "complete three-axis mass tensor, with component intrinsic inertia and CG range",
+        "installed full-aircraft force/moment derivatives including axial and propulsion terms",
+        "unsteady C_Ldot_alpha and C_mdot_alpha or a justified frequency-domain model",
+        "body, vertical tail, propeller slipstream and control-effectiveness derivatives",
+        "power-on and power-off trim over speed/CG/control envelope",
+        "longitudinal and lateral state matrices, eigenmodes and uncertainty sweep",
+        "pilot/control deflection, hinge load, rate and delay limits",
+        "structural and ground/flight test evidence before any flightworthiness claim"
+      ]
+    },
+    {
+      "case": "fable_v2",
+      "partial_screen": "NOT_ASSESSED",
+      "full_dynamic_gate": "NOT_ASSESSED",
+      "blocking_predecessor": "reconcile V2/V8 geometry and obtain independent full-aircraft trim"
+    }
+  ],
+  "any_aircraft_dynamically_confirmed": false
+}

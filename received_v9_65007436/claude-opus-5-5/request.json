@@ -1,0 +1,14 @@
+{
+  "stage": "v9_integrated_dynamics",
+  "model_requested": "claude-opus-5-5",
+  "prompt_sha256": "a76cb06535eb88b6527e70fa8789aecaed261eabd9af38d8b38f11231d060187",
+  "instructions_sha256": "5789209bc9ad1616c1498cefc0ceddad13608161ce82a76f1d9706c9811bec8a",
+  "manifest_sha256": "74797cd74cc3817b1bf94b71259932984b8e1712760a352b52f8b47125cb32ba",
+  "maximum_calls": 1,
+  "timeout_seconds": 5400,
+  "parent_v2_sha256": "61db1382c7a55deff408c08e6f1c61b5ddbe163a0a5cbfa2f9567d602641cbf4",
+  "later_subsystem_sha256": "375680c87121f5fc9c260563ad56da4d4fd562e4521f2d3d1627d40795e2e7d3",
+  "transport_sha256": "df2a2a49dd6f41d60df38822364b25e1f91824d8b8e2369b3e7dd509746973c3",
+  "started_utc": "2026-09-28T20:39:38.495026+00:00",
+  "slurm_job_id": "65007436"
+}

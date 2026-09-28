@@ -1,7 +1,7 @@
 # Data and code availability for the aircraft-LLM study
 
-Author: Ehsan Roohi. Public research snapshot: `aircraft-sr-2026-09-28-r4` in
-[`Ehsan-Roohi/historical-aircraft-llm`](https://github.com/Ehsan-Roohi/historical-aircraft-llm/tree/aircraft-sr-2026-09-28-r4).
+Author: Ehsan Roohi. Public research snapshot: `aircraft-sr-2026-09-28-r5` in
+[`Ehsan-Roohi/historical-aircraft-llm`](https://github.com/Ehsan-Roohi/historical-aircraft-llm/tree/aircraft-sr-2026-09-28-r5).
 The exact included paths, byte counts and SHA-256 digests are recorded in
 `MANIFEST.json`; `research_evidence.zip` is the consolidated downloadable
 snapshot. The Git tag identifies a fixed repository commit. No DOI is claimed.
@@ -15,10 +15,10 @@ snapshot. The Git tag identifies a fixed repository commit. No DOI is claimed.
 | Clarification prompts and V1 returns | `analysis/prompts_v1/`, `analysis/raw_v1/`, `analysis/results/` | Complete recovered attempts and separate truncation/failure records where retained. |
 | Revision prompts and V2 returns | `analysis/prompts_v2/`, `analysis/prompts_v2_retrim/`, `received_v2_64942345/prompts/`, `received_v2_64942345/responses/`, `analysis/results/received_v2_audit01/` | Model-authored revisions, not automatically verified designs. |
 | Later model feedback exchanges | `received_v5_64962376/responses/`, `design_revision_v6_attempt01/responses/`, `unity_jobs/`, `analysis/results/` | Archived subsystem/revision attempts; do not silently treat them as a new integrated flightworthy aircraft. |
-| Integrated dynamic redesign feedback | `analysis/prompts_v9_integrated_dynamics/`, `dynamic_revision_v9_attempt01/responses/` when available | Versioned, case-specific modern feedback. Its presence records a model proposal, not independent acceptance of a new aircraft. |
+| Integrated dynamic redesign feedback | `analysis/prompts_v9_integrated_dynamics/`, `received_v9_65007436/`, `received_v9_retry_65009709/`, `unity_jobs/`, `analysis/results/v9_integrated_response_audit.json` | Three complete V3 returns with the original token-truncated Fable/Opus attempts retained separately. The audit verifies response/prompt hashes and mass arithmetic, not flight dynamics or flightworthiness. |
 | Geometry and figure source/output | `output/stage_threeviews/`, `output/figures_v2/`, `output/overleaf/scientific_reports_aircraft_2026_09_28_release03/figures/`, `analysis/` | Original and evaluator drawings have distinct provenance. Figure 7 uses the archived numerical results; Fable's values are model claims. |
-| Numerical inputs and outputs | `analysis/results/`, `output/overleaf/scientific_reports_aircraft_2026_09_28_release06/audit_data/` | Includes accepted and failed cases, mesh checks, residuals, both failed and completed rate-derivative runs, and the reduced dynamic gate. |
-| Analysis and manuscript source | `analysis/`, `paper/`, `output/overleaf/scientific_reports_aircraft_2026_09_28_release06/` | Human-auditable code, TeX, supplement, references, and selected source records; the full-mode assembler is not run on incomplete V2 data. |
+| Numerical inputs and outputs | `analysis/results/`, `output/overleaf/scientific_reports_aircraft_2026_09_28_release07/audit_data/` | Includes accepted and failed cases, mesh checks, residuals, both failed and completed rate-derivative runs, the reduced dynamic gate, and the limited V3 mass/force arithmetic audit. |
+| Analysis and manuscript source | `analysis/`, `paper/`, `output/overleaf/scientific_reports_aircraft_2026_09_28_release07/` | Human-auditable code, TeX, supplement, references, and selected source records; the full-mode assembler is not run on incomplete V2/V3 data. |
 
 ## Scientific Reports policy mapping
 
@@ -65,6 +65,14 @@ archived raw outputs from evaluator reconstructions and unvalidated claims.
   `analysis/results/v1_v2_pitch_gate_comparison01.json`. V1 uses one panel
   mesh only and is a qualified numerical comparison, not independent
   whole-aircraft dynamic validation.
+- The integrated V3 calls and separate high-token retries are recorded in
+  `received_v9_65007436/` and `received_v9_retry_65009709/`. The final
+  Fable and Opus responses ended normally; their earlier 20,000-token
+  attempts did not. The three mass ledgers close arithmetically, and Fable's
+  stated nominal lift and moment sums close only for its assumed forces.
+  No V3 model supplies independently verified trim, installed unsteady
+  derivatives or full dynamic modes. Source and interpretation are detailed
+  in `paper/v9_integrated_response_gate.md`.
 - No wind-tunnel, structure-load, engine-propeller-map or crewed-flight data
   were generated. The archive does not certify construction or flight safety.
 - A Git tag is a fixed source identifier, but a DOI-backed repository deposit

@@ -1,0 +1,17 @@
+{
+  "stage": "v9_integrated_dynamics_retry",
+  "model_requested": "claude-opus-5-5",
+  "prompt_sha256": "a76cb06535eb88b6527e70fa8789aecaed261eabd9af38d8b38f11231d060187",
+  "instructions_sha256": "c441fc61382a18f57375e303e0fa2d16776f89bb4091db9a30dc757aa26d3f3d",
+  "manifest_sha256": "efec1a9781b99796d7f35b1e6c4a05e1a928e6cd7f71208ba62b49de2c7ca226",
+  "prior_response_sha256": "f98f7591a5a1f6f48c916c9df600e4b4fee6d8c3b06b7f803af32e1a85cb7021",
+  "prior_response_id": "msg_011CfWUzB8vPcQwRzfRGRw5z",
+  "maximum_output_tokens": 48000,
+  "maximum_calls": 1,
+  "reasoning_effort": "low",
+  "timeout_seconds": 5400,
+  "retry_type": "independent_full_prompt",
+  "transport_sha256": "df2a2a49dd6f41d60df38822364b25e1f91824d8b8e2369b3e7dd509746973c3",
+  "started_utc": "2026-09-28T21:02:22.962192+00:00",
+  "slurm_job_id": "65009709"
+}

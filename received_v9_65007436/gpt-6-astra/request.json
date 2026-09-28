@@ -1,0 +1,14 @@
+{
+  "stage": "v9_integrated_dynamics",
+  "model_requested": "gpt-6-astra",
+  "prompt_sha256": "4bacd04a3cfa6fe978c7153ecdedc3d533db63a48dca91c90b9bd17bb0d72c29",
+  "instructions_sha256": "5789209bc9ad1616c1498cefc0ceddad13608161ce82a76f1d9706c9811bec8a",
+  "manifest_sha256": "74797cd74cc3817b1bf94b71259932984b8e1712760a352b52f8b47125cb32ba",
+  "maximum_calls": 1,
+  "timeout_seconds": 5400,
+  "parent_v2_sha256": "2f471b244429d4b353624436f67eef929a1f64bfe5a327f2b895740134648dc5",
+  "later_subsystem_sha256": "5326f6e90ecc864b7e93fe8990d28c6436c3bcc570186b4e1e4dffcc58b2138b",
+  "transport_sha256": "df2a2a49dd6f41d60df38822364b25e1f91824d8b8e2369b3e7dd509746973c3",
+  "started_utc": "2026-09-28T20:39:38.727270+00:00",
+  "slurm_job_id": "65007816"
+}

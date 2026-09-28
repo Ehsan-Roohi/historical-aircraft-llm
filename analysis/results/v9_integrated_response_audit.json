@@ -1,0 +1,128 @@
+{
+  "stage": "v9_integrated_dynamics",
+  "audit_scope": [
+    "provenance hashes",
+    "response completion",
+    "mass and CG arithmetic",
+    "Fable's reported nominal force and pitch-moment arithmetic"
+  ],
+  "excluded_from_audit": [
+    "aerodynamic coefficients",
+    "installed propulsion",
+    "structural strength",
+    "complete six-degree-of-freedom trim",
+    "measured derivatives",
+    "dynamic modal stability",
+    "flightworthiness"
+  ],
+  "cases": {
+    "astra": {
+      "model": "gpt-6-astra",
+      "response_sha256": "1fe79cf004bc2f3943d330fff4afd4f69acb4f354c36c65ef119cc0808993f40",
+      "response_hash_matches_outcome": true,
+      "prompt_hash_matches_request": true,
+      "instructions_hash_matches_request": true,
+      "model_id_matches_request": true,
+      "response_complete": true,
+      "stop_reason": null,
+      "ledger_rows": 16,
+      "calculated_mass_kg": 333.0,
+      "calculated_first_moments_kg_m": [
+        -50.24616,
+        0.0,
+        72.74212
+      ],
+      "calculated_cg_m": [
+        -0.150889,
+        0.0,
+        0.218445
+      ],
+      "reported_mass_kg": 333,
+      "reported_cg_m": [
+        -0.150889,
+        0,
+        0.218444
+      ],
+      "mass_arithmetic_pass": true,
+      "trim_evidence": "UNKNOWN",
+      "modal_evidence": {
+        "longitudinal": "UNKNOWN",
+        "lateral": "UNKNOWN"
+      },
+      "engineering_verdict": "NOT_VALIDATED"
+    },
+    "fable": {
+      "model": "claude-fable-5-1",
+      "response_sha256": "236f33562cbc093729beb70ca3501dcc4453cc4ead75eec56cc169d0adff1f93",
+      "response_hash_matches_outcome": true,
+      "prompt_hash_matches_request": true,
+      "instructions_hash_matches_request": true,
+      "model_id_matches_request": true,
+      "response_complete": true,
+      "stop_reason": "end_turn",
+      "ledger_rows": 23,
+      "calculated_mass_kg": 309.5,
+      "calculated_first_moments_kg_m": [
+        481.785,
+        0.0,
+        236.975
+      ],
+      "calculated_cg_m": [
+        1.556656,
+        0.0,
+        0.76567
+      ],
+      "reported_mass_kg": 309.5,
+      "reported_cg_m": [
+        1.557,
+        0,
+        0.766
+      ],
+      "mass_arithmetic_pass": true,
+      "trim_evidence": "conditional estimator, not validated trim",
+      "modal_evidence": "no mode is declared stable or unstable; the reduced two-state screen cannot settle these modes; a numerical pass would still not prove flightworthiness",
+      "engineering_verdict": "NOT_VALIDATED",
+      "conditional_trim_arithmetic": {
+        "vertical_force_residual_N": 0.0,
+        "weight_vs_ledger_residual_N": -0.195,
+        "pitch_moment_residual_Nm": 0.0,
+        "reported_aft_static_margin_estimate": 0.05,
+        "arithmetic_pass": true,
+        "caveat": "Algebra of assumed loads only; forces, thrust, and derivatives are not measured or independently predicted."
+      }
+    },
+    "opus": {
+      "model": "claude-opus-5-5",
+      "response_sha256": "51e34fbee9444e30c743b0312ff7802ba1d1ae2bf8b965c3d3b481a8444b5b9c",
+      "response_hash_matches_outcome": true,
+      "prompt_hash_matches_request": true,
+      "instructions_hash_matches_request": true,
+      "model_id_matches_request": true,
+      "response_complete": true,
+      "stop_reason": "end_turn",
+      "ledger_rows": 27,
+      "calculated_mass_kg": 361.3,
+      "calculated_first_moments_kg_m": [
+        224.973,
+        0.0,
+        166.211
+      ],
+      "calculated_cg_m": [
+        0.622676,
+        0.0,
+        0.460036
+      ],
+      "reported_mass_kg": 361.3,
+      "reported_cg_m": [
+        0.6227,
+        0,
+        0.4601
+      ],
+      "mass_arithmetic_pass": true,
+      "trim_evidence": "to be solved by evaluator per state",
+      "modal_evidence": "NOT_ASSESSED",
+      "engineering_verdict": "NOT_VALIDATED"
+    }
+  },
+  "all_provenance_and_ledger_checks_pass": true
+}

@@ -7,14 +7,14 @@ from pathlib import Path
 import hashlib,json,re,zipfile
 
 ROOT=Path(__file__).resolve().parents[1]
-OUT=ROOT/'output/github_stage_release07'
+OUT=ROOT/'output/github_stage_release08'
 TEXT={'.py','.cjs','.json','.md','.txt','.avl','.dat','.csv','.yaml','.yml','.tex','.sbatch'}
 
 def select():
     files=set()
     for p in (ROOT/'analysis').iterdir():
         if p.is_file() and p.suffix in TEXT:files.add(p)
-    for folder in ['analysis/results','analysis/prompts_v0','analysis/prompts_v1','analysis/prompts_v2','analysis/prompts_v2_retrim','analysis/prompts_v9_integrated_dynamics','analysis/raw_v1','paper','received_v2_64942345','received_v5_64962376/responses','design_revision_v6_attempt01/responses','dynamic_revision_v9_attempt01/responses','unity_jobs','output/stage_threeviews','output/figures_v2','output/overleaf/scientific_reports_aircraft_2026_09_28_release06','received_2026-09-24/astra_fable_opus_designs']:
+    for folder in ['analysis/results','analysis/prompts_v0','analysis/prompts_v1','analysis/prompts_v2','analysis/prompts_v2_retrim','analysis/prompts_v9_integrated_dynamics','analysis/raw_v1','paper','received_v2_64942345','received_v5_64962376/responses','design_revision_v6_attempt01/responses','received_v9_65007436','received_v9_retry_65009709','unity_jobs','output/stage_threeviews','output/figures_v2','output/overleaf/scientific_reports_aircraft_2026_09_28_release07','received_2026-09-24/astra_fable_opus_designs']:
         for p in (ROOT/folder).rglob('*'):
             if p.is_file() and p.suffix.lower() in TEXT|{'.svg','.png','.jpg','.jpeg'} and '__pycache__' not in p.parts and 'references' not in p.parts:
                 files.add(p)

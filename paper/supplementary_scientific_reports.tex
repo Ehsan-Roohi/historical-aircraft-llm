@@ -193,4 +193,27 @@ Reduced two-state sign check & Yes & Yes & Yes & Yes\\
 Full dynamic acceptance & Not assessed & Not assessed & Not assessed & Not assessed\\\bottomrule
 \end{tabular}
 \end{table}
+\paragraph{Post-analysis integrated V3 returns.}
+The case-specific V3 prompts requested a new complete-aircraft proposal and a
+flight-dynamics evidence plan, not an assurance of flight. Astra completed on
+the first bounded call. Fable and Opus were cut off at the caller's 20,000-token
+output limit; the incomplete responses were retained, and independent
+full-prompt retries at a 48,000-token limit returned complete texts. The
+structured mass ledgers below were re-summed from their individual entries
+with $M=\sum_i m_i$ and $\mathbf{x}_{CG}=\sum_i m_i\mathbf{x}_i/M$.
+The native longitudinal axes differ, so $x_{CG}$ values must not be compared
+without frame transformation. The returned masses and coordinates are
+model assumptions, not measurements. All request and response hashes and the
+arithmetic auditor are in the public archive. No V3 numerical result below
+replaces the independently computed V1/V2 results in the main analysis.
+
+\begin{table}[H]\centering\footnotesize
+\caption{Completed V3 model returns and limited independent arithmetic gate. CG coordinates are in each model's native frame, in metres. ``Force/moment closure'' means arithmetic consistency of the model's stated loads only; it is not an independently predicted aerodynamic trim. No candidate has an independently established installed derivative set, complete longitudinal/lateral roots, or flight acceptance.}\label{tab:v3returns}
+\begin{tabularx}{\linewidth}{lXXX}\toprule
+Return & Recomputed mass and CG & Nominal force/moment evidence & Full dynamic verdict\\\midrule
+Astra V3-I & 333.0 kg; $(-0.150889,0,0.218445)$ & Actual powered/glide trim unknown & Roots unknown; not assessed\\
+Fable V3 & 309.5 kg; $(1.556656,0,0.765670)$ & $3245-209-3036=0$ N; $-1329+436-14+907=0$ N m, using assumed loads & Reduced estimates only; not assessed\\
+Opus V3 & 361.3 kg; $(0.622676,0,0.460036)$ & Trim left to evaluator by model & Lateral roots unknown; not assessed\\\bottomrule
+\end{tabularx}
+\end{table}
 \end{document}

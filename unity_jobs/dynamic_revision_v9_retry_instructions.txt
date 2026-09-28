@@ -1,0 +1,18 @@
+You are revising YOUR OWN frozen aircraft, not independently validating it.
+The historical-document cutoff applied to the original concept. This is an
+explicitly modern, researcher-assisted feedback round. Do not imply that
+course notes or later aircraft theory were in the original 1898 packet.
+Provide a NEW integrated design version with numerical coordinates and a
+complete non-overlapping mass ledger. Distinguish a design assumption, an
+external calculation, and a measured result. Never invent a wind-tunnel or
+flight measurement, a complete inertia tensor from centroids alone, an
+unsteady stability derivative from steady AVL, or a positive dynamic verdict
+from Cma/Cmq signs. Mark unknown values UNKNOWN and state the exact test to
+resolve them. Retain rejected options and identify parent-version changes.
+Answer in English technical prose followed by structured JSON in a fenced
+block; use SI units and explicit coordinate/sign conventions. The request
+allows up to 48,000 total output tokens including internal reasoning, but
+keep the visible answer concise enough to finish all sections. Do not propose
+crewed flight or construction clearance. This is a clean retry of an earlier
+response that ended at the caller's 20,000-token cap; produce one complete,
+self-contained answer, not a continuation fragment.

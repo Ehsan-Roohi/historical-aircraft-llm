@@ -1,6 +1,6 @@
 # Versioned design and evaluation register
 
-Author: Ehsan Roohi. Updated 27 September 2026.
+Author: Ehsan Roohi. Updated 28 September 2026.
 
 This is a research archive, not an approved aircraft design. No flight or superiority over the Wright Flyer has been demonstrated.
 
@@ -12,7 +12,7 @@ This is a research archive, not an approved aircraft design. No flight or superi
 | V2: independent trim | Same V2 reference geometry; no new geometry version | `paper/v2_trim_assessment.md`, `analysis/results/v2_trim_solve01/`, `analysis/results/v2_trim_opus_capacity_recovery01/` | Evaluator-selected alpha, elevator and thrust; not a new LLM response |
 | V2: dynamic sign screen | Same frozen V2 geometry | `analysis/results/v2_rate_derivative_screen02/`, `analysis/results/v2_dynamic_gate01.json` | Astra/Opus pass a deliberately reduced two-state sign test; no full-aircraft modes or dynamic flight acceptance |
 | V1 versus V2 pitch comparison | Both frozen versions, no new geometry | `analysis/results/v1_rate_derivative_screen01/`, `analysis/results/v1_v2_pitch_gate_comparison01.json` | Astra V1 static slope fails but its reduced two-state sign check passes; no full-aircraft dynamic verdict |
-| V9: integrated dynamics feedback | New geometry not yet evaluated | `analysis/prompts_v9_integrated_dynamics/`, Unity array 65007436 | Three bounded requests for integrated mass, inertia, controls, propulsion and mode analysis; model replies are proposals only |
+| V9: integrated dynamics feedback / model V3 returns | New coordinates and change lists proposed; three-view drawings not yet independently generated or geometry-gated | `analysis/prompts_v9_integrated_dynamics/`, Unity arrays 65007436 and 65009709, `received_v9_65007436/`, `received_v9_retry_65009709/`, `analysis/results/v9_integrated_response_audit.json` | All three complete responses archived; ledger arithmetic closes, Fable's conditional nominal force/moment sums close, but no installed trim or full dynamic modes validated |
 | Wright Flyer I (1903): historical comparator | `output/stage_threeviews/Wright/`; independent partial lifting-surface reconstruction | `paper/four_aircraft_comparison.md`, `analysis/results/four_aircraft_comparison01/` | Historical flight documented; model CG/complete trim unresolved; reference-point slopes only |
 
 ## Drawing convention
@@ -32,7 +32,7 @@ Fable's V2 drawing is a station-envelope visualization, not solver-ready geometr
 
 ## Next scientific gate
 
-Reconcile Fable geometry before retrimming it. For Astra and Opus, replace incomplete/assumed drag and propulsive efficiency with defensible bounds, then test how CG, thrust-line and drag-location uncertainty change trim and restoring slopes. Dynamic stability and structural adequacy require additional data. A later, separately identified V9 integrated-dynamics feedback request was submitted as Unity array 65007436; it does not retroactively validate the V2 paper results.
+Reconcile all V3 geometry and mass/loading extremes before aerodynamic analysis; Fable's tail/drivetrain clearances need special attention. For Astra and Opus, replace incomplete/assumed drag and propulsive efficiency with defensible bounds, then test how CG, thrust-line and drag-location uncertainty change trim and restoring slopes. For Fable, independently recompute the claimed conditional balance rather than treating its exact arithmetic as a physical prediction. Dynamic modes and structural adequacy require additional installed-aircraft data. The V9 feedback responses and their token-limit retries are documented in `paper/v9_integrated_response_gate.md`; they do not retroactively validate the V2 paper results.
 
 ## Public archive boundary
 

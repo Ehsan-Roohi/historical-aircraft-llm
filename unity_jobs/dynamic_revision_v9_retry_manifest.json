@@ -1,0 +1,18 @@
+{
+  "stage": "v9_integrated_dynamics_retry",
+  "source_stage": "v9_integrated_dynamics",
+  "maximum_output_tokens": 48000,
+  "reason": "The original Claude responses ended at the caller's 20000-token cap; independent full-prompt retries use a larger cap and separate immutable outputs.",
+  "records": [
+    {
+      "model": "claude-fable-5-1",
+      "prompt_sha256": "31cd521e16848fcef17ad74a7c274b8174f0d892e663c0fcc16be05bc424749c",
+      "prior_response_sha256": "52072aa6388be97bb713c14584c54bd74ad40ab7c86d28ca8435f1804b608a11"
+    },
+    {
+      "model": "claude-opus-5-5",
+      "prompt_sha256": "a76cb06535eb88b6527e70fa8789aecaed261eabd9af38d8b38f11231d060187",
+      "prior_response_sha256": "f98f7591a5a1f6f48c916c9df600e4b4fee6d8c3b06b7f803af32e1a85cb7021"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "stage": "v9_integrated_dynamics_retry",
+  "submitted_utc_date": "2026-09-28",
+  "verified_utc": "2026-09-28T21:24:20Z",
+  "slurm_array_job_id": "65009709",
+  "array_indices": [0, 1],
+  "models": ["claude-fable-5-1", "claude-opus-5-5"],
+  "partition": "cpu-preempt",
+  "verified_queue_state": "Both tasks COMPLETED with exit code 0 and model stop_reason end_turn.",
+  "response_outcomes": {
+    "claude-fable-5-1": {"status": "completed", "response_sha256": "236f33562cbc093729beb70ca3501dcc4453cc4ead75eec56cc169d0adff1f93"},
+    "claude-opus-5-5": {"status": "completed", "response_sha256": "51e34fbee9444e30c743b0312ff7802ba1d1ae2bf8b965c3d3b481a8444b5b9c"}
+  },
+  "maximum_output_tokens": 48000,
+  "reasoning_effort": "low",
+  "retry_type": "independent_full_prompt",
+  "prior_array_job_id": "65007436",
+  "prior_stop_reason": "max_tokens at the caller's 20000-token limit",
+  "retry_manifest_sha256": "efec1a9781b99796d7f35b1e6c4a05e1a928e6cd7f71208ba62b49de2c7ca226",
+  "retry_instructions_sha256": "c441fc61382a18f57375e303e0fa2d16776f89bb4091db9a30dc757aa26d3f3d",
+  "remote_project": "/work/pi_roohie_umass_edu/wright1900-benchmark/wright1900",
+  "remote_attempt_directory": "dynamic_revision_v9_attempt02",
+  "engineering_validation": "not established; limited independent provenance, ledger, and Fable conditional arithmetic checks are recorded in analysis/results/v9_integrated_response_audit.json",
+  "note": "The completed Astra response was not rerun. Each Claude retry is a separate attempt; the original incomplete outputs remain archived. Complete model text is not evidence of a flight-stable aircraft."
+}

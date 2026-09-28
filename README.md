@@ -22,6 +22,8 @@ The [V1/V2 pitch comparison](analysis/results/v1_v2_pitch_gate_comparison01.json
 
 Independent simplified longitudinal trim was found for Astra and Opus V2. This does **not** demonstrate real flight, complete stability, structural adequacy, engine capability, or superiority over the Wright Flyer. Fable V2 remains geometrically unresolved. See the [trim assessment](paper/v2_trim_assessment.md) and [stage register](paper/stage_registry.md).
 
+The later integrated V3 feedback produced complete model-authored responses for all three systems. Astra finished on the first call; Fable and Opus needed separately archived high-token retries after their initial responses were cut off. [Independent provenance and mass-bookkeeping checks](paper/v9_integrated_response_gate.md) close the three declared mass ledgers and Fable's *assumed* nominal force/moment sums. None has a verified installed trim, full dynamic modes, or flight clearance. The V3 coordinate schedules are not yet independently geometry-gated three-view drawings; the V2 sheets below remain the latest rendered versions.
+
 ## Three-view sheets
 
 These are coordinate-based engineering schematics, not photorealistic illustrations or construction drawings. Unspecified parts are omitted and disclosed. V1 shows evaluator lifting surfaces; V2 adds declared structural chains, fins and propeller discs. Reference geometry is shown at neutral controls; numerical trim settings are recorded separately.
@@ -41,7 +43,7 @@ These are coordinate-based engineering schematics, not photorealistic illustrati
 
 ## Evidence and reproducibility
 
-[Download the complete selected research evidence](research_evidence.zip) and verify its individual files against [MANIFEST.json](MANIFEST.json). Extract at the repository root to restore the recorded paths. The archive includes original V0 drawings, recovered prompts, V1/V2 responses, local analysis code, numerical inputs/outputs, rejected/failed attempts and dated methodological notes. Key current code and reports are also directly browsable. The archived original responses remain unchanged. Earlier notes may be superseded; consult the stage register for current status.
+[Download the complete selected research evidence](research_evidence.zip) and verify its individual files against [MANIFEST.json](MANIFEST.json). Extract at the repository root to restore the recorded paths. The archive includes original V0 drawings, recovered prompts, V1/V2/V3 responses (including the token-truncated attempts and completed retries), local analysis code, numerical inputs/outputs, rejected/failed attempts and dated methodological notes. Key current code and reports are also directly browsable. The archived original responses remain unchanged. Earlier notes may be superseded; consult the stage register for current status.
 
 Python 3 with NumPy is required for the current calculations and vector drawings. To reproduce the drawings after extracting the evidence:
 
@@ -50,6 +52,7 @@ python analysis/draw_stage_threeviews.py
 python -m unittest discover -s analysis -p test_stage_threeviews.py
 python analysis/v2_trim_report.py
 python analysis/wright_fourway_assessment.py
+python analysis/audit_v9_integrated_responses.py
 ```
 
 The optional Node preview renderer uses Sharp; its current local dependency path is host-specific and must be adapted on another machine. SVGs remain portable vector masters. AVL 3.52 is not redistributed; obtain it separately and set the executable path in the analysis code. Numerical run scripts use exclusive output-directory creation to protect archived runs: choose new output paths rather than overwriting results. Cross-platform solver reproduction is not yet verified.

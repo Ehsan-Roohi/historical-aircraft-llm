@@ -1,0 +1,14 @@
+{
+  "stage": "v9_integrated_dynamics",
+  "model_requested": "claude-fable-5-1",
+  "prompt_sha256": "31cd521e16848fcef17ad74a7c274b8174f0d892e663c0fcc16be05bc424749c",
+  "instructions_sha256": "5789209bc9ad1616c1498cefc0ceddad13608161ce82a76f1d9706c9811bec8a",
+  "manifest_sha256": "74797cd74cc3817b1bf94b71259932984b8e1712760a352b52f8b47125cb32ba",
+  "maximum_calls": 1,
+  "timeout_seconds": 5400,
+  "parent_v2_sha256": "c9e1e6a4186b57fc5da647cf9359d29c2ee3068ffb2bcb937e0db8e2236b87c6",
+  "later_subsystem_sha256": "e0376f6ee668c13aaa1cc5ba6f0f1ff30308c4318bf56101cf94f6fc5c1b2e67",
+  "transport_sha256": "df2a2a49dd6f41d60df38822364b25e1f91824d8b8e2369b3e7dd509746973c3",
+  "started_utc": "2026-09-28T20:39:38.496930+00:00",
+  "slurm_job_id": "65007817"
+}

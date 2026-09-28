@@ -1,5 +1,11 @@
 # Public research snapshot
 
+## 28 September 2026 integrated-feedback return
+
+Fixed tag `aircraft-sr-2026-09-28-r5` adds complete V3 model responses, separately retained 20,000-token Fable/Opus truncations, the 48,000-token retries, a hash-and-mass-arithmetic audit, and Overleaf release07 with Supplementary Table S11. The archive includes all five raw V9 response records with prompts, request metadata, outcomes and checksums. The three V3 mass ledgers close arithmetically; Fable's model-supplied nominal force and moment sums also close. No installed propulsion, full trim, unsteady derivatives, dynamic modes, structure or flightworthiness has been validated. V3 three-view drawings remain pending independent coordinate and clearance checks. The paper continues to identify Opus as strongest only among initial V1 proposals on its restricted screen, and Astra as strongest only in the conditional V2 longitudinal comparison.
+
+The reviewed `research_evidence.zip` contains 2,852 selected paths and excludes third-party PDFs, course scans, credentials and solver binaries. `MANIFEST.json` provides per-file SHA-256 hashes. The Overleaf ZIP is `scientific_reports_aircraft_overleaf_release07.zip`; static package checks passed, but local TeX compilation and visual proof were unavailable at publication time. No DOI, journal acceptance, aircraft construction or flight approval is claimed.
+
 ## 28 September 2026 tagged revision
 
 The updated fixed tag `aircraft-sr-2026-09-28-r4` adds the reduced dynamics sign audit, its explicitly limited manuscript discussion, a strict but not-yet-applied full-mode matrix assembler, case-specific integrated-redesign prompts, and Overleaf release06. The reviewed `research_evidence.zip` contains 2,815 selected paths and is accompanied by a per-file SHA-256 manifest and a ZIP checksum. Included are all locally recovered prompts and model outputs in the listed project directories, plus later archived feedback attempts, code, figure data, accepted calculations and failed runs. It excludes copyrighted course/book PDFs, credentials and external solver binaries. No DOI, physical flight demonstration or journal acceptance is claimed.
