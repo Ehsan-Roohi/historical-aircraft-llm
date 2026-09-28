@@ -134,7 +134,7 @@
     {
       "path": "analysis/build_github_stage_release.py",
       "bytes": 2337,
-      "sha256": "178b4305cad629bad25b6f4cd676ed70ac2de10791928763744253685311715a"
+      "sha256": "6f7a90f47a9ed0f4dabdb7f5dc1a8f055dd609ff87d5c18ea092bc804cffe557"
     },
     {
       "path": "analysis/build_local_review_bundle.py",
@@ -167,6 +167,11 @@
       "sha256": "5193e63b7818441c034bc5c8ef95d72b0b61067a228f33384f40ca5af777382f"
     },
     {
+      "path": "analysis/build_scientific_reports_package_release06.py",
+      "bytes": 2395,
+      "sha256": "16602223a0510c5cdf8b6b4c1b444e90c9a56e3fba0dad0a5cac671a36d028f1"
+    },
+    {
       "path": "analysis/check_fable_v8_geometry.py",
       "bytes": 3991,
       "sha256": "53861d3ddb61a7478fdd26832ae7f276d96e3f98530000feb2f30dd1bd40d430"
@@ -190,6 +195,11 @@
       "path": "analysis/check_sr_release05.py",
       "bytes": 1750,
       "sha256": "9e34ecaea65d46edcf8ce4798b9713e925c9347a8a9c945d507d825ee93919e3"
+    },
+    {
+      "path": "analysis/check_sr_release06.py",
+      "bytes": 1603,
+      "sha256": "bbfb30b0433f9ddeddfacfc382bc29a3fa222c936a1a720188ab725e254b5f73"
     },
     {
       "path": "analysis/check_v3a_geometry_mass.py",
@@ -230,6 +240,11 @@
       "path": "analysis/compare_control_probes.py",
       "bytes": 1518,
       "sha256": "70bab3ee6cb9554d09757efbf5be1a59ad4a978e1016f77d00a3a5ab235d688e"
+    },
+    {
+      "path": "analysis/compare_v1_v2_pitch_gate.py",
+      "bytes": 2942,
+      "sha256": "c444d71872a4b6faaf820181789761b8ee48f1da4385d6840c14f1605537f15c"
     },
     {
       "path": "analysis/compare_wright_family.py",
@@ -9417,6 +9432,76 @@
       "sha256": "d6b1ef5ac85de7a72a418237bd3d7bca26a72ca6438f5bc8414a678ff0d4bfda"
     },
     {
+      "path": "analysis/results/v1_rate_derivative_screen01/astra_v1/aircraft.avl",
+      "bytes": 598,
+      "sha256": "e2a6f82563598428050b8bfcb3c42a09f47683577265ae3e9670def76794dfb7"
+    },
+    {
+      "path": "analysis/results/v1_rate_derivative_screen01/astra_v1/commands.txt",
+      "bytes": 97,
+      "sha256": "114b0482e69b9b2595a0c20dcd0148b3ee6ceada9d7ce6a0cd98f095f4f0a67d"
+    },
+    {
+      "path": "analysis/results/v1_rate_derivative_screen01/astra_v1/section.dat",
+      "bytes": 208,
+      "sha256": "2c3bdd529d84574736ae6e77133d34a2cb2777e3d7cb6b2db1270b85d074f074"
+    },
+    {
+      "path": "analysis/results/v1_rate_derivative_screen01/astra_v1/stability.txt",
+      "bytes": 2655,
+      "sha256": "d04d727aa19bbbfab5a5cade5d8412d682c0fc4a465fd3da05842b08937c065c"
+    },
+    {
+      "path": "analysis/results/v1_rate_derivative_screen01/astra_v1/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "analysis/results/v1_rate_derivative_screen01/astra_v1/stdout.txt",
+      "bytes": 11470,
+      "sha256": "0c3245062f92372c209ecdd0d442bf6f0017c199e2ff80e82d89e01d04d218b2"
+    },
+    {
+      "path": "analysis/results/v1_rate_derivative_screen01/opus_v1/aircraft.avl",
+      "bytes": 1242,
+      "sha256": "262940078d8d7f8a3c0b95e5042c4c5aec8024df365c55464feeb009fa388406"
+    },
+    {
+      "path": "analysis/results/v1_rate_derivative_screen01/opus_v1/commands.txt",
+      "bytes": 98,
+      "sha256": "5f2c7cba94ba064a0db92711d22ec5ef4f26c55e4c7968f3bca7c1f6c66cfadb"
+    },
+    {
+      "path": "analysis/results/v1_rate_derivative_screen01/opus_v1/section.dat",
+      "bytes": 207,
+      "sha256": "876e7d3b98c282bc0f9ce64f17136fe59c9c3cbc28ce1679c604da03a912fce3"
+    },
+    {
+      "path": "analysis/results/v1_rate_derivative_screen01/opus_v1/stability.txt",
+      "bytes": 2722,
+      "sha256": "ae282b3c888afe0c63ce3374e0760c2dfb9ee95065fb7b6bc15adec146c2d07b"
+    },
+    {
+      "path": "analysis/results/v1_rate_derivative_screen01/opus_v1/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "analysis/results/v1_rate_derivative_screen01/opus_v1/stdout.txt",
+      "bytes": 11946,
+      "sha256": "1985db526c148fc8c75a600f3049a5ce9320af0e9778bd8aed608104bcd1da5e"
+    },
+    {
+      "path": "analysis/results/v1_rate_derivative_screen01/summary.json",
+      "bytes": 1145,
+      "sha256": "7e6176f438bafb11b37b0e05f02273adaa7c1e8072c87d858d540fe9c23756e9"
+    },
+    {
+      "path": "analysis/results/v1_v2_pitch_gate_comparison01.json",
+      "bytes": 5644,
+      "sha256": "e61eec55e99652d592b979d7e691a1cba999659a517535f44e6343527e9c6c28"
+    },
+    {
       "path": "analysis/results/v2_dynamic_gate01.json",
       "bytes": 4159,
       "sha256": "680a7168a42e30eee19a8ef2c54106f58be3ed66fc06acba4ffd6eb4c3094adc"
@@ -12017,6 +12102,11 @@
       "sha256": "93e06cd4873a18ac77e6eb458ea6b025c937af8a303537f1c486c0e065ffa473"
     },
     {
+      "path": "analysis/run_v1_rate_derivative_screen.py",
+      "bytes": 1034,
+      "sha256": "5eab9f9f3b6fb0bab417725ebf6847dd354b85c8412e268ee6e6ffb4cf9b5910"
+    },
+    {
       "path": "analysis/run_v3b_propulsion_check.py",
       "bytes": 860,
       "sha256": "27edd86e2d0bed9efc741e7385afd917914a597d3f8bfb1bc99fb9fe0d286b55"
@@ -12060,6 +12150,11 @@
       "path": "analysis/test_coefficient_normalization.py",
       "bytes": 787,
       "sha256": "2178b333e4145e22c2b669877f2594ff7786de988e093a1ff3ea02e631b3188e"
+    },
+    {
+      "path": "analysis/test_compare_v1_v2_pitch_gate.py",
+      "bytes": 976,
+      "sha256": "5bfe2a4484d9f60de2254779ceb0b1ed1584f8461e51baa37c5d113b90b1c1aa"
     },
     {
       "path": "analysis/test_complete_article.py",
@@ -12507,144 +12602,154 @@
       "sha256": "5276a7ee5cbc1303dcdeeee6957fc3de7532b2aebe95b892905c92a955cc531c"
     },
     {
-      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release05/audit_data/flight_dynamics_gate_v2.py",
+      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release06/audit_data/flight_dynamics_gate_v2.py",
       "bytes": 5388,
       "sha256": "c7737a43936e9a8046d91ceb39441a8dfe975cfff13b32e2b74f372940990a37"
     },
     {
-      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release05/audit_data/v1_common_condition.json",
+      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release06/audit_data/v1_common_condition.json",
       "bytes": 10096,
       "sha256": "ef55be161a6ac4d3c2bb81cc51e00d32a2f4f339d6fc53b6b3c3ac9279957709"
     },
     {
-      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release05/audit_data/v1_direct_retrim.json",
+      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release06/audit_data/v1_direct_retrim.json",
       "bytes": 38214,
       "sha256": "0b2c759a979f8b444e00c69507bda20688892ae789ea19e9cc23a9aa3ee5cf6f"
     },
     {
-      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release05/audit_data/v2_dynamic_gate.json",
+      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release06/audit_data/v1_rate_derivatives.json",
+      "bytes": 1145,
+      "sha256": "7e6176f438bafb11b37b0e05f02273adaa7c1e8072c87d858d540fe9c23756e9"
+    },
+    {
+      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release06/audit_data/v1_v2_pitch_gate_comparison.json",
+      "bytes": 5644,
+      "sha256": "e61eec55e99652d592b979d7e691a1cba999659a517535f44e6343527e9c6c28"
+    },
+    {
+      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release06/audit_data/v2_dynamic_gate.json",
       "bytes": 4159,
       "sha256": "680a7168a42e30eee19a8ef2c54106f58be3ed66fc06acba4ffd6eb4c3094adc"
     },
     {
-      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release05/audit_data/v2_longitudinal_retrim.json",
+      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release06/audit_data/v2_longitudinal_retrim.json",
       "bytes": 6762,
       "sha256": "7e41d5ad4ece49ff55d77a963e982c4628fb8ff39125ac4d2d49f7c9d2ea6108"
     },
     {
-      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release05/audit_data/v2_rate_derivatives_coarse.json",
+      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release06/audit_data/v2_rate_derivatives_coarse.json",
       "bytes": 1159,
       "sha256": "05817d0ed86c2e91fffb5e858ad1efbb4c9b57c20b19f87da822266b7ed78dfe"
     },
     {
-      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release05/audit_data/v2_rate_derivatives_fine.json",
+      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release06/audit_data/v2_rate_derivatives_fine.json",
       "bytes": 1161,
       "sha256": "30a821cf8343c157960c72d656a66c6358db1fa5e305d7450e687c9f0cb34f98"
     },
     {
-      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release05/audit_data/v2_subsystem_scenarios.json",
+      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release06/audit_data/v2_subsystem_scenarios.json",
       "bytes": 17285,
       "sha256": "72e472a8eee8317e2f3244520e4d15dd3bad1b80a6c3ac66e66a43ec057d1f03"
     },
     {
-      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release05/audit_data/wright_fourway_screen.json",
+      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release06/audit_data/wright_fourway_screen.json",
       "bytes": 10071,
       "sha256": "e44ac8d1d496a0919c1667682f1c55d78a9573c79cf82e4d4d0918f490797330"
     },
     {
-      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release05/audit_data/wright_reference_statistic.json",
+      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release06/audit_data/wright_reference_statistic.json",
       "bytes": 602,
       "sha256": "5cddb827f3f2fab4ab9aa20f61da119d0d444ad3f65a81c249e54a01d4c0c624"
     },
     {
-      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release05/DATA_AVAILABILITY.md",
-      "bytes": 6364,
-      "sha256": "4040ba159cd3793712d7c14c049150230bdc2aa269962cafe53de9259d875f05"
+      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release06/DATA_AVAILABILITY.md",
+      "bytes": 6672,
+      "sha256": "33ab2ed392f98139306a5f4c2236d34461fe5eaf229061ce08e3f7b65affa5fb"
     },
     {
-      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release05/figures/astra_oblique_v0.png",
+      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release06/figures/astra_oblique_v0.png",
       "bytes": 994578,
       "sha256": "6405d3efa3341b9f6ca2b2590f1aaad124e3917f7e23fa9b4f693fbeecb65ca6"
     },
     {
-      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release05/figures/astra_v2_threeview.png",
+      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release06/figures/astra_v2_threeview.png",
       "bytes": 192151,
       "sha256": "dc38cc5b04c2b4fe26b3041972a30b7fe130c42e097bb5ff220c330740ed5f1d"
     },
     {
-      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release05/figures/configuration_comparison_v3.png",
+      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release06/figures/configuration_comparison_v3.png",
       "bytes": 89547,
       "sha256": "3f6a0bacc93280927fa81e02be08ca9d47c90f4ebb9f51feab4cd94c916ae159"
     },
     {
-      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release05/figures/fable_oblique_v0.png",
+      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release06/figures/fable_oblique_v0.png",
       "bytes": 680274,
       "sha256": "460cc2b1ecc1ac64825a610f8540077f515d95665a5f102d0bfa9ab7ec9fbf5a"
     },
     {
-      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release05/figures/fable_v2_threeview.png",
+      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release06/figures/fable_v2_threeview.png",
       "bytes": 156613,
       "sha256": "074ac93bba63cdab7dcc15444319f4363d0986e07f23393f8ed34a203a1a3273"
     },
     {
-      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release05/figures/fixed_control_response_v1.png",
+      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release06/figures/fixed_control_response_v1.png",
       "bytes": 57768,
       "sha256": "cb5f703f969e6407209b6a8a840a6638e5e6e9a56e3085cd17da38dc4db34cad"
     },
     {
-      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release05/figures/force_moment_balance.png",
+      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release06/figures/force_moment_balance.png",
       "bytes": 100749,
       "sha256": "7f7aa2374669a1914b29919cd60afa5363beec80ef46f98d1c2fde25b1a7276d"
     },
     {
-      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release05/figures/opus_oblique_v0.png",
+      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release06/figures/opus_oblique_v0.png",
       "bytes": 767449,
       "sha256": "b83a45bde9a75d19100555754b7f4b2d709e5e55921adc241af76a934fa47b58"
     },
     {
-      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release05/figures/opus_v2_threeview.png",
+      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release06/figures/opus_v2_threeview.png",
       "bytes": 150093,
       "sha256": "1eecb8c3b8fd55e148de9a5306fa5d2a0cb006677dfb9e3815f98374a49e1297"
     },
     {
-      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release05/figures/v2_force_moment_comparison.png",
+      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release06/figures/v2_force_moment_comparison.png",
       "bytes": 326838,
       "sha256": "5276a7ee5cbc1303dcdeeee6957fc3de7532b2aebe95b892905c92a955cc531c"
     },
     {
-      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release05/figures/wright_first_flight_1903_loc.jpg",
+      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release06/figures/wright_first_flight_1903_loc.jpg",
       "bytes": 357610,
       "sha256": "888e3af5b133e657b786de93622c04388ec4da008dc9645b5a1f5f22420a7c90"
     },
     {
-      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release05/figures/wright_response_v1.png",
+      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release06/figures/wright_response_v1.png",
       "bytes": 76095,
       "sha256": "06eb7bc4d5efa22afb0a5884f88e6f5828761012682d47235527de85aaff89b9"
     },
     {
-      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release05/figures/wright_threeview_reconstruction.png",
+      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release06/figures/wright_threeview_reconstruction.png",
       "bytes": 166525,
       "sha256": "2f8a7f9daed8ebb6573a675525bad5428fe7781ee948529e586facd431337040"
     },
     {
-      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release05/main.tex",
-      "bytes": 90780,
-      "sha256": "76f8187329ed671833ebdfb51fa96703e5a209bffb5e1ca51405d7e6bcac703c"
+      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release06/main.tex",
+      "bytes": 92194,
+      "sha256": "bc44a893b70215ba6765d6f7a117213b040fa4640c7540449bc04f339f859ece"
     },
     {
-      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release05/README.md",
-      "bytes": 735,
-      "sha256": "bb361807ec3ca0c469173009d9382d0a6b2c750bd07c4b1835321f66c5c3038a"
+      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release06/README.md",
+      "bytes": 608,
+      "sha256": "92c90b48b45a7a678c27f530a1ae89dd1c7e74c40106e5a63d914dcfd71e9147"
     },
     {
-      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release05/references_scientific_reports.tex",
+      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release06/references_scientific_reports.tex",
       "bytes": 10567,
       "sha256": "c867bf4c3f9de83fd1dbe4720a8f59c59853bb95c1082f2925588bc442e8fee8"
     },
     {
-      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release05/supplementary.tex",
-      "bytes": 11453,
-      "sha256": "7febc64ee91660ef417db618fae18fd1889f0a22f306cc6a5a1eb2ff872a3bd4"
+      "path": "output/overleaf/scientific_reports_aircraft_2026_09_28_release06/supplementary.tex",
+      "bytes": 12704,
+      "sha256": "330ff8ff626ced3e8af4d0800ac4b81f9ca208bef62e761a11c517b8540924c9"
     },
     {
       "path": "output/stage_threeviews/manifest.json",
@@ -12728,8 +12833,8 @@
     },
     {
       "path": "paper/article_scientific_reports.tex",
-      "bytes": 90780,
-      "sha256": "76f8187329ed671833ebdfb51fa96703e5a209bffb5e1ca51405d7e6bcac703c"
+      "bytes": 92194,
+      "sha256": "bc44a893b70215ba6765d6f7a117213b040fa4640c7540449bc04f339f859ece"
     },
     {
       "path": "paper/article_v4.tex",
@@ -12798,8 +12903,8 @@
     },
     {
       "path": "paper/DATA_AVAILABILITY.md",
-      "bytes": 6364,
-      "sha256": "4040ba159cd3793712d7c14c049150230bdc2aa269962cafe53de9259d875f05"
+      "bytes": 6672,
+      "sha256": "33ab2ed392f98139306a5f4c2236d34461fe5eaf229061ce08e3f7b65affa5fb"
     },
     {
       "path": "paper/DELIVERY_v4.md",
@@ -12823,8 +12928,8 @@
     },
     {
       "path": "paper/dynamic_design_next_loop.md",
-      "bytes": 5987,
-      "sha256": "d9fa677033d7f3dcf26381b240ca0b6d6148ce2edf97c086c86fa0d91877dc1f"
+      "bytes": 6622,
+      "sha256": "e4ca7b49950231c48e1795469f17b8b30a16df32236d8d4bebabf8d4b03dd623"
     },
     {
       "path": "paper/engineering_decision_v1.md",
@@ -13133,13 +13238,13 @@
     },
     {
       "path": "paper/stage_registry.md",
-      "bytes": 4961,
-      "sha256": "7d72ad47662a019fa088a5d1aec81ab1f523849153742b0421207918cad0b954"
+      "bytes": 5248,
+      "sha256": "766d068f2566abbe4763bc5330a07257a0a6df5fc55602c01c5186650ca1afee"
     },
     {
       "path": "paper/supplementary_scientific_reports.tex",
-      "bytes": 11453,
-      "sha256": "7febc64ee91660ef417db618fae18fd1889f0a22f306cc6a5a1eb2ff872a3bd4"
+      "bytes": 12704,
+      "sha256": "330ff8ff626ced3e8af4d0800ac4b81f9ca208bef62e761a11c517b8540924c9"
     },
     {
       "path": "paper/technical_assessment_v1.md",

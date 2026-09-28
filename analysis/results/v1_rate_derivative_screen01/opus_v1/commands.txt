@@ -1,0 +1,9 @@
+load aircraft.avl
+oper
+a a 4.000000000000
+d1 d1 -1.908677869327
+x
+st
+stability.txt
+
+quit

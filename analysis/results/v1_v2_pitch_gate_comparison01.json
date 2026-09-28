@@ -1,0 +1,135 @@
+{
+  "scope": "V1 versus V2 lifting-surface sign screens; unmatched speeds and architectures",
+  "critical_distinction": "Positive Cma can coexist with a stable sign test in the omission-based two-state model; neither determines full-aircraft modes.",
+  "records": [
+    {
+      "model": "astra",
+      "version": "V1",
+      "case": {
+        "mass_kg": 330,
+        "speed_m_s": 15.461067054608966,
+        "area_m2": 40.0,
+        "chord_m": 2.0
+      },
+      "derivative_source": "analysis/results/retrim_v2_attempt01/astra/04_independent_verification",
+      "Cma_per_rad": 0.348325,
+      "Cmq": -5.786483,
+      "static_pitch_restoring_in_lifting_model": false,
+      "conditional_reduced_pitch_hurwitz": true,
+      "dynamic_flight_acceptance": "NOT_ASSESSED",
+      "partial_screen": {
+        "Zalpha_over_U_per_s": -4.023620839642562,
+        "one_plus_Zq_over_U": 0.6467543969696969,
+        "Malpha_times_Iyy_Nm_per_rad": 4079.99521002013,
+        "Mq_times_Iyy_Nm_s": -4383.794881994388,
+        "determinant_times_Iyy_kg_m2_per_s2": 14999.973602215201,
+        "reduced_model_hurwitz_signs_for_any_positive_Iyy": true,
+        "interpretation": "conditional sign check only; NOT full dynamic acceptance",
+        "omitted_from_reduced_model": [
+          "C_Ldot_alpha and C_mdot_alpha (unknown in physical aircraft)",
+          "axial-speed/gravity coupling and phugoid",
+          "propulsion derivatives",
+          "body/fin and propeller-wake effects",
+          "flexibility and pilot/control dynamics"
+        ]
+      }
+    },
+    {
+      "model": "astra",
+      "version": "V2",
+      "case": {
+        "mass_kg": 320.0,
+        "speed_m_s": 18.0,
+        "area_m2": 30.0,
+        "chord_m": 2.5
+      },
+      "derivative_source": "analysis/results/v2_trim_solve01/gpt-6-astra/c14_s72_verify",
+      "Cma_per_rad": -0.813004,
+      "Cmq": -4.705898,
+      "static_pitch_restoring_in_lifting_model": true,
+      "conditional_reduced_pitch_hurwitz": true,
+      "dynamic_flight_acceptance": "NOT_ASSESSED",
+      "partial_screen": {
+        "Zalpha_over_U_per_s": -4.3190709679687505,
+        "one_plus_Zq_over_U": 0.5476438193359374,
+        "Malpha_times_Iyy_Nm_per_rad": -12100.548285,
+        "Mq_times_Iyy_Nm_s": -4863.9867609375015,
+        "determinant_times_Iyy_kg_m2_per_s2": 27634.69448660585,
+        "reduced_model_hurwitz_signs_for_any_positive_Iyy": true,
+        "interpretation": "conditional sign check only; NOT full dynamic acceptance",
+        "omitted_from_reduced_model": [
+          "C_Ldot_alpha and C_mdot_alpha (unknown in physical aircraft)",
+          "axial-speed/gravity coupling and phugoid",
+          "propulsion derivatives",
+          "body/fin and propeller-wake effects",
+          "flexibility and pilot/control dynamics"
+        ]
+      }
+    },
+    {
+      "model": "opus",
+      "version": "V1",
+      "case": {
+        "mass_kg": 358.0,
+        "speed_m_s": 16.859448789704185,
+        "area_m2": 38.0,
+        "chord_m": 1.8
+      },
+      "derivative_source": "analysis/results/retrim_v2_attempt01/opus/04_independent_verification",
+      "Cma_per_rad": -0.192065,
+      "Cmq": -6.590877,
+      "static_pitch_restoring_in_lifting_model": true,
+      "conditional_reduced_pitch_hurwitz": true,
+      "dynamic_flight_acceptance": "NOT_ASSESSED",
+      "partial_screen": {
+        "Zalpha_over_U_per_s": -4.1090144807956674,
+        "one_plus_Zq_over_U": 0.6698759428351955,
+        "Malpha_times_Iyy_Nm_per_rad": -2287.1632719946997,
+        "Mq_times_Iyy_Nm_s": -4189.7806099728,
+        "determinant_times_Iyy_kg_m2_per_s2": 18747.98485098062,
+        "reduced_model_hurwitz_signs_for_any_positive_Iyy": true,
+        "interpretation": "conditional sign check only; NOT full dynamic acceptance",
+        "omitted_from_reduced_model": [
+          "C_Ldot_alpha and C_mdot_alpha (unknown in physical aircraft)",
+          "axial-speed/gravity coupling and phugoid",
+          "propulsion derivatives",
+          "body/fin and propeller-wake effects",
+          "flexibility and pilot/control dynamics"
+        ]
+      }
+    },
+    {
+      "model": "opus",
+      "version": "V2",
+      "case": {
+        "mass_kg": 360.0,
+        "speed_m_s": 15.0,
+        "area_m2": 38.0,
+        "chord_m": 1.8
+      },
+      "derivative_source": "analysis/results/v2_trim_opus_capacity_recovery01/claude-opus-5-5/c12_s50_verify",
+      "Cma_per_rad": -0.286366,
+      "Cmq": -6.645848,
+      "static_pitch_restoring_in_lifting_model": true,
+      "conditional_reduced_pitch_hurwitz": true,
+      "dynamic_flight_acceptance": "NOT_ASSESSED",
+      "partial_screen": {
+        "Zalpha_over_U_per_s": -3.580676429166667,
+        "one_plus_Zq_over_U": 0.673513312375,
+        "Malpha_times_Iyy_Nm_per_rad": -2699.39330325,
+        "Mq_times_Iyy_Nm_s": -3758.7753264600005,
+        "determinant_times_Iyy_kg_m2_per_s2": 15277.035539063369,
+        "reduced_model_hurwitz_signs_for_any_positive_Iyy": true,
+        "interpretation": "conditional sign check only; NOT full dynamic acceptance",
+        "omitted_from_reduced_model": [
+          "C_Ldot_alpha and C_mdot_alpha (unknown in physical aircraft)",
+          "axial-speed/gravity coupling and phugoid",
+          "propulsion derivatives",
+          "body/fin and propeller-wake effects",
+          "flexibility and pilot/control dynamics"
+        ]
+      }
+    }
+  ],
+  "fable": "V1 geometric control collision and V2 unresolved integrated geometry prevent a credible independent trim/dynamic comparison"
+}

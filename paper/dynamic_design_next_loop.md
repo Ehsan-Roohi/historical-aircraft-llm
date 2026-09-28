@@ -15,6 +15,17 @@ the copyrighted scans to the public research archive.
 | Opus V2 | Independent 15 m/s conditional trim, same method | $C_{m_\alpha}=-0.2864$ per rad, $C_{m_q}=-6.6458$, reduced sign test conditional pass | Same missing whole-aircraft evidence |
 | Fable V2 | Model claims and partial later subsystem outputs | No admissible independent full-aircraft trim or dynamic screen | All dynamic modes |
 
+A separate later check of the initial V1 trims found Astra
+$C_{m_\alpha}=+0.3483$ per rad and $C_{m_q}=-5.7865$, while Opus has
+$-0.1921$ and $-6.5909$, respectively. Thus Astra V1 has the wrong local
+static pitch-slope sign, but the deliberately reduced two-state Hurwitz
+sign test still passes there; a negative $C_{m_q}$ can offset that slope
+in the simplified algebra. This does not establish full dynamic stability.
+Fable V1 cannot be screened at its mechanically conflicting trim. The
+versioned comparison is in
+`analysis/results/v1_v2_pitch_gate_comparison01.json`; its V1 AVL rate
+run is single-mesh, not a convergence study.
+
 The sign screen is precisely `analysis/flight_dynamics_gate_v2.py` and its
 machine-readable result is `analysis/results/v2_dynamic_gate01.json`. The
 calculation intentionally has no eigenvalue or damping-ratio output. Complete

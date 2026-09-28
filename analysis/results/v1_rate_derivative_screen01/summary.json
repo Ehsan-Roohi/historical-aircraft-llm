@@ -1,0 +1,42 @@
+[
+  {
+    "case": "astra_v1",
+    "source": "analysis/results/retrim_v2_attempt01/astra/04_independent_verification",
+    "alpha_deg": 4.0,
+    "control_deg": 0.04232728061,
+    "derivatives": {
+      "CLa": 3.505302,
+      "Cma": 0.348325,
+      "Cmq": -5.786483,
+      "CLq": 4.758002,
+      "Clp": -0.313338,
+      "Cnr": -0.007465,
+      "Cnb": 0.0,
+      "Clb": 0.0,
+      "Cnp": -0.020665,
+      "Clr": 0.119912,
+      "Cyb": null
+    },
+    "scope": "AVL attached-flow lifting surfaces; not measured or installed-aircraft derivatives"
+  },
+  {
+    "case": "opus_v1",
+    "source": "analysis/results/retrim_v2_attempt01/opus/04_independent_verification",
+    "alpha_deg": 4.0,
+    "control_deg": -1.908677869327,
+    "derivatives": {
+      "CLa": 3.74876,
+      "Cma": -0.192065,
+      "Cmq": -6.590877,
+      "CLq": 5.641934,
+      "Clp": -0.380739,
+      "Cnr": -0.00807,
+      "Cnb": -0.000696,
+      "Clb": -0.009925,
+      "Cnp": -0.02555,
+      "Clr": 0.137587,
+      "Cyb": null
+    },
+    "scope": "AVL attached-flow lifting surfaces; not measured or installed-aircraft derivatives"
+  }
+]
