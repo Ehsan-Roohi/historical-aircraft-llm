@@ -43,10 +43,15 @@ when the pivot lies at ground height `z_p = -0.90 m`. At 13°, pivoting on
 the aft end of the stated flat skid (`x_p = 1.60 m`) yields **0.220721 m**,
 reproducing the model's claim. Pivoting at the nominal wheel station
 (`x_p = 0.45 m`) yields **-0.037972 m**, a geometric ground intersection.
-The actual ground-contact sequence and elastic/gear deflection have not
-been specified, so neither value can be selected as the installed clearance.
-The reported 0.221 m is **conditional on the aft-skid pivot**, not a
-validated universal clearance.
+The same aft-skid-pivot model places the tail-skid tip (x = 5.50, z = 0)
+at **-0.000376 m** relative to ground at 13°; its first rigid contact is
+at **12.994617°**. Thus the published ventral gap is internally consistent
+with a tail-skid-limited rotation near 13°, not automatically a collision.
+Conversely, wheel-pivot-only rotation cannot persist to that attitude
+without ground intersection; load must transfer to the aft skid or the
+gear must deform. The actual ground-contact sequence, structural/gear
+deflection and available rotation have not been measured, so the reported
+0.221 m remains **conditional**, not a validated installed clearance.
 
 ## Independent loading-case calculations
 

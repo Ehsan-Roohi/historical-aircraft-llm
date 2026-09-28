@@ -172,7 +172,11 @@ def main():
             ventral_x, ventral_z, 1.6, ground, ground, pitch_deg),
         "ventral_13deg_gap_m_if_pivot_at_wheel_x0p45": pitch_clearance(
             ventral_x, ventral_z, 0.45, ground, ground, pitch_deg),
-        "rotation_pivot_status": "UNKNOWN; 0.221 m claim is consistent with aft skid x=1.6, but a wheel pivot x=0.45 gives ground penetration. Contact transition and loaded deflection unresolved.",
+        "tail_skid_tip_gap_m_if_aft_skid_pivot_at_13deg": pitch_clearance(
+            5.5, 0, 1.6, ground, ground, pitch_deg),
+        "tail_skid_first_contact_deg_if_aft_skid_pivot": round(
+            math.degrees(math.atan2(0.9, 5.5 - 1.6)), 6),
+        "rotation_pivot_status": "Aft-skid x=1.6 rigid contact reproduces the 0.221 m claim and brings tail-skid tip x=5.5,z=0 to ground at ~12.995 deg. Wheel-pivot-only rotation would intersect ground, so contact must transfer or the structure/gear deform. Actual loaded contact path remains unresolved.",
         "limits": "No solid 3D geometry, skid-contact path, blade sweep, or loaded deflection is supplied",
     }
     result["opus"]["necessary_level_force_coefficient_nominal"] = {

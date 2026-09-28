@@ -26,6 +26,8 @@ class V3GeometryLoadingTests(unittest.TestCase):
         wheel = pitch_clearance(5.6, 0.25, 0.45, -0.9, -0.9, 13)
         self.assertAlmostEqual(aft_skid, 0.220721, places=6)
         self.assertLess(wheel, 0)
+        self.assertAlmostEqual(pitch_clearance(5.5, 0, 1.6, -0.9, -0.9, 13),
+                               -0.000376, places=6)
 
     def test_pitch_zero_is_nominal_height(self):
         self.assertAlmostEqual(pitch_clearance(5.6, 0.25, 0.45, -0.9,
