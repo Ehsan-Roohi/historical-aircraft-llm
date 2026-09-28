@@ -1,0 +1,87 @@
+{
+  "scope": "V2 evidence gate, not a certificate or full dynamics simulation",
+  "course_mapping": "Flight Dynamics II CH4 pp. 54-65 and 72-84: EOM, longitudinal and lateral characteristic roots",
+  "records": [
+    {
+      "case": "astra_v2",
+      "input_source": "analysis\\results\\v2_rate_derivative_screen02\\summary.json",
+      "reference": {
+        "mass_kg": 320.0,
+        "speed_m_s": 18.0,
+        "area_m2": 30.0,
+        "chord_m": 2.5
+      },
+      "partial_screen": {
+        "Zalpha_over_U_per_s": -4.3190709679687505,
+        "one_plus_Zq_over_U": 0.5476438193359374,
+        "Malpha_times_Iyy_Nm_per_rad": -12100.548285,
+        "Mq_times_Iyy_Nm_s": -4863.9867609375015,
+        "determinant_times_Iyy_kg_m2_per_s2": 27634.69448660585,
+        "reduced_model_hurwitz_signs_for_any_positive_Iyy": true,
+        "interpretation": "conditional sign check only; NOT full dynamic acceptance",
+        "omitted_from_reduced_model": [
+          "C_Ldot_alpha and C_mdot_alpha (unknown in physical aircraft)",
+          "axial-speed/gravity coupling and phugoid",
+          "propulsion derivatives",
+          "body/fin and propeller-wake effects",
+          "flexibility and pilot/control dynamics"
+        ]
+      },
+      "full_dynamic_gate": "NOT_ASSESSED",
+      "required_before_full_gate": [
+        "complete three-axis mass tensor, with component intrinsic inertia and CG range",
+        "installed full-aircraft force/moment derivatives including axial and propulsion terms",
+        "unsteady C_Ldot_alpha and C_mdot_alpha or a justified frequency-domain model",
+        "body, vertical tail, propeller slipstream and control-effectiveness derivatives",
+        "power-on and power-off trim over speed/CG/control envelope",
+        "longitudinal and lateral state matrices, eigenmodes and uncertainty sweep",
+        "pilot/control deflection, hinge load, rate and delay limits",
+        "structural and ground/flight test evidence before any flightworthiness claim"
+      ]
+    },
+    {
+      "case": "opus_v2",
+      "input_source": "analysis\\results\\v2_rate_derivative_screen02\\summary.json",
+      "reference": {
+        "mass_kg": 360.0,
+        "speed_m_s": 15.0,
+        "area_m2": 38.0,
+        "chord_m": 1.8
+      },
+      "partial_screen": {
+        "Zalpha_over_U_per_s": -3.580676429166667,
+        "one_plus_Zq_over_U": 0.673513312375,
+        "Malpha_times_Iyy_Nm_per_rad": -2699.39330325,
+        "Mq_times_Iyy_Nm_s": -3758.7753264600005,
+        "determinant_times_Iyy_kg_m2_per_s2": 15277.035539063369,
+        "reduced_model_hurwitz_signs_for_any_positive_Iyy": true,
+        "interpretation": "conditional sign check only; NOT full dynamic acceptance",
+        "omitted_from_reduced_model": [
+          "C_Ldot_alpha and C_mdot_alpha (unknown in physical aircraft)",
+          "axial-speed/gravity coupling and phugoid",
+          "propulsion derivatives",
+          "body/fin and propeller-wake effects",
+          "flexibility and pilot/control dynamics"
+        ]
+      },
+      "full_dynamic_gate": "NOT_ASSESSED",
+      "required_before_full_gate": [
+        "complete three-axis mass tensor, with component intrinsic inertia and CG range",
+        "installed full-aircraft force/moment derivatives including axial and propulsion terms",
+        "unsteady C_Ldot_alpha and C_mdot_alpha or a justified frequency-domain model",
+        "body, vertical tail, propeller slipstream and control-effectiveness derivatives",
+        "power-on and power-off trim over speed/CG/control envelope",
+        "longitudinal and lateral state matrices, eigenmodes and uncertainty sweep",
+        "pilot/control deflection, hinge load, rate and delay limits",
+        "structural and ground/flight test evidence before any flightworthiness claim"
+      ]
+    },
+    {
+      "case": "fable_v2",
+      "partial_screen": "NOT_ASSESSED",
+      "full_dynamic_gate": "NOT_ASSESSED",
+      "blocking_predecessor": "reconcile V2/V8 geometry and obtain independent full-aircraft trim"
+    }
+  ],
+  "any_aircraft_dynamically_confirmed": false
+}

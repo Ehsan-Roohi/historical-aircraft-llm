@@ -167,4 +167,17 @@ Installed directional/control derivatives & Body/fin and full control model abse
 Full inertia and dynamic eigenmodes & Intrinsic component inertia absent & Intrinsic component inertia absent & Intrinsic component inertia absent\\\bottomrule
 \end{tabularx}
 \end{table}
+
+\begin{table}[H]\centering\footnotesize
+\caption{Explicitly reduced $\alpha$--pitch-rate sign screen for the independently trimmed V2 lifting-surface models. $U$ is trim speed; $Z_\alpha$, $Z_q$, $M_\alpha$, $M_q$ and the two-state matrix $A_{\alpha q}$ are defined in the main-text reduced-system equation. Products with $I_{yy}$ permit the sign check without assigning the unknown complete pitch inertia. A negative trace and positive determinant hold for any finite $I_{yy}>0$ in this \emph{omission-based} two-state matrix only. This is not a computed aircraft eigenmode, full dynamic-stability result, or flight clearance.}\label{tab:reduceddynamic}
+\begin{tabular}{lrr}\toprule
+Diagnostic & Astra V2 & Opus V2\\\midrule
+$Z_\alpha/U$, s$^{-1}$ & $-4.3191$ & $-3.5807$\\
+$1+Z_q/U$, dimensionless & $0.5476$ & $0.6735$\\
+$I_{yy}M_\alpha$, N m rad$^{-1}$ & $-12100.5$ & $-2699.4$\\
+$I_{yy}M_q$, N m s & $-4864.0$ & $-3758.8$\\
+$I_{yy}\det(A_{\alpha q})$, kg m$^2$ s$^{-2}$ & $27634.7$ & $15277.0$\\
+Full longitudinal/lateral eigenmodes & Not assessed & Not assessed\\\bottomrule
+\end{tabular}
+\end{table}
 \end{document}

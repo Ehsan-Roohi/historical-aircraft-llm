@@ -1,0 +1,37 @@
+{
+  "stage": "v9_integrated_dynamics",
+  "date": "2026-09-28",
+  "maximum_output_tokens": 20000,
+  "instructions_sha256": "5789209bc9ad1616c1498cefc0ceddad13608161ce82a76f1d9706c9811bec8a",
+  "gate_sha256": "680a7168a42e30eee19a8ef2c54106f58be3ed66fc06acba4ffd6eb4c3094adc",
+  "records": [
+    {
+      "model_requested": "gpt-6-astra",
+      "parent_case": "astra_v2",
+      "prompt_file": "gpt-6-astra.prompt.txt",
+      "prompt_sha256": "4bacd04a3cfa6fe978c7153ecdedc3d533db63a48dca91c90b9bd17bb0d72c29",
+      "parent_v2_sha256": "2f471b244429d4b353624436f67eef929a1f64bfe5a327f2b895740134648dc5",
+      "later_subsystem_sha256": "5326f6e90ecc864b7e93fe8990d28c6436c3bcc570186b4e1e4dffcc58b2138b",
+      "sent": false
+    },
+    {
+      "model_requested": "claude-fable-5-1",
+      "parent_case": "fable_v2",
+      "prompt_file": "claude-fable-5-1.prompt.txt",
+      "prompt_sha256": "31cd521e16848fcef17ad74a7c274b8174f0d892e663c0fcc16be05bc424749c",
+      "parent_v2_sha256": "c9e1e6a4186b57fc5da647cf9359d29c2ee3068ffb2bcb937e0db8e2236b87c6",
+      "later_subsystem_sha256": "e0376f6ee668c13aaa1cc5ba6f0f1ff30308c4318bf56101cf94f6fc5c1b2e67",
+      "sent": false
+    },
+    {
+      "model_requested": "claude-opus-5-5",
+      "parent_case": "opus_v2",
+      "prompt_file": "claude-opus-5-5.prompt.txt",
+      "prompt_sha256": "a76cb06535eb88b6527e70fa8789aecaed261eabd9af38d8b38f11231d060187",
+      "parent_v2_sha256": "61db1382c7a55deff408c08e6f1c61b5ddbe163a0a5cbfa2f9567d602641cbf4",
+      "later_subsystem_sha256": "375680c87121f5fc9c260563ad56da4d4fd562e4521f2d3d1627d40795e2e7d3",
+      "sent": false
+    }
+  ],
+  "status": "frozen_not_sent"
+}

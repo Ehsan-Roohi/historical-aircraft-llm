@@ -10,6 +10,8 @@ This is a research archive, not an approved aircraft design. No flight or superi
 | V1: clarification | `output/stage_threeviews/V1/`: three evaluator lifting-surface sheets | `analysis/raw_v1/`, `analysis/prompts_v1/`, archived results | These sheets omit airframe and propulsion; not complete aircraft drawings |
 | V2: model revision | `output/stage_threeviews/V2/`: three coordinate-based sheets | `received_v2_64942345/`, `analysis/results/received_v2_audit01/` | Astra and Opus evaluated conditionally; Fable geometry unresolved |
 | V2: independent trim | Same V2 reference geometry; no new geometry version | `paper/v2_trim_assessment.md`, `analysis/results/v2_trim_solve01/`, `analysis/results/v2_trim_opus_capacity_recovery01/` | Evaluator-selected alpha, elevator and thrust; not a new LLM response |
+| V2: dynamic sign screen | Same frozen V2 geometry | `analysis/results/v2_rate_derivative_screen02/`, `analysis/results/v2_dynamic_gate01.json` | Astra/Opus pass a deliberately reduced two-state sign test; no full-aircraft modes or dynamic flight acceptance |
+| V9: integrated dynamics feedback | New geometry not yet evaluated | `analysis/prompts_v9_integrated_dynamics/`, Unity array 65007436 | Three bounded requests for integrated mass, inertia, controls, propulsion and mode analysis; model replies are proposals only |
 | Wright Flyer I (1903): historical comparator | `output/stage_threeviews/Wright/`; independent partial lifting-surface reconstruction | `paper/four_aircraft_comparison.md`, `analysis/results/four_aircraft_comparison01/` | Historical flight documented; model CG/complete trim unresolved; reference-point slopes only |
 
 ## Drawing convention
@@ -29,7 +31,7 @@ Fable's V2 drawing is a station-envelope visualization, not solver-ready geometr
 
 ## Next scientific gate
 
-Reconcile Fable geometry before retrimming it. For Astra and Opus, replace incomplete/assumed drag and propulsive efficiency with defensible bounds, then test how CG, thrust-line and drag-location uncertainty change trim and restoring slopes. Dynamic stability and structural adequacy require additional data. No new model request has been sent by this publishing step.
+Reconcile Fable geometry before retrimming it. For Astra and Opus, replace incomplete/assumed drag and propulsive efficiency with defensible bounds, then test how CG, thrust-line and drag-location uncertainty change trim and restoring slopes. Dynamic stability and structural adequacy require additional data. A later, separately identified V9 integrated-dynamics feedback request was submitted as Unity array 65007436; it does not retroactively validate the V2 paper results.
 
 ## Public archive boundary
 

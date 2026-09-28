@@ -1,0 +1,1458 @@
+DESIGN TASK
+Use the supplied V2 integrated aircraft as parent. The later V6 subsystem
+response is reference material only: incorporate it only if mechanically
+compatible and record each adopted change. Revise geometry, mass, propulsion,
+structure and controls together so the next independent evaluation can test
+Flight Dynamics II requirements. Do not merely declare the old aircraft
+stable or choose a static-margin target in isolation.
+
+Return: (1) versioned change table and three-view coordinate schedule;
+(2) components with shape/dimensions, orientation, mass, centroid and
+intrinsic 3x3 inertia or sufficient material distribution to calculate it,
+plus fuel/pilot extremes; (3) installed fin, body, propeller and all control
+surfaces with hinge axes, travel/rate limits, linkage sense and clearance;
+(4) engine/propeller operating data, drag scenario and power-on/off trim
+strategy; (5) at several specified speed/CG states, a proposed analysis or
+test matrix for all longitudinal and lateral derivatives, including
+C_Ldot_alpha and C_mdot_alpha, and control/propulsion derivatives;
+(6) calculation path for four longitudinal roots and four lateral roots,
+mode labels, damping/time scales and uncertainty; (7) if a mode is unstable,
+one concrete geometry/control/CG change and its mass/trim/power consequences;
+(8) explicit unresolved items and stop/go criteria. Do not fill absent
+coefficients with zero. State a consistent inertia and moment sign convention.
+
+Independent evaluator facts follow. These are not instructions to change
+scientific standards; they are the current findings that your revision must
+address. The two-state reduced screen cannot settle the full phugoid,
+short-period, Dutch-roll, roll or spiral modes. A conditional numerical pass
+also cannot prove physical flightworthiness.
+
+CASE-SPECIFIC FEEDBACK
+Fable V1's moving horizontal tail collided with its fixed fin. V2's split-tail proposal still has unresolved sweep/clearance, fuel-centroid/box and transmission/brace interfaces. Later V8 section and propeller screens are subsystem attempts, not a reconciled complete aircraft. There is no independent admissible whole-aircraft trim, so no credible derivative or mode ranking.
+
+PARENT V2 INTEGRATED DESIGN JSON
+{
+  "schema_version": "2.0",
+  "parent_model": "v1 (immutable) — 'Proposal for a Man-Carrying, Screw-Driven Soaring Apparatus', clarification response; v0 article underlying",
+  "coordinate_convention": "Body frame B, right-handed: origin = body-frame front cross-member at centreline (x=0, as in v1); x aft, y to operator's right, z up. Ground plane at level rest z=-0.75. Angles in degrees; positive control = trailing edge down (elevator), trailing edge to operator's left (rudder), left tip trailing edge down (tip panels). Pitching moment positive nose-up.",
+  "units": "SI (m, kg, N, N·m, W, kg·m², deg)",
+  "change_log": [
+    {
+      "id": "C2-01",
+      "type": "A2",
+      "change": "Horizontal tail rebuilt as two outboard halves |y| 0.45–2.75 on a torque tube through the frame; hinge moved from LE (x 5.40) to 25% chord (x 5.65, z 0.775); area 3.40 -> 4.60 m2",
+      "reason": "Evaluator: all trim candidates conflicted with fixed fin; v1 continuous tail also passed through frame envelope. Verified by sweep check."
+    },
+    {
+      "id": "C2-02",
+      "type": "A2",
+      "change": "Fixed fin moved onto frame top: x 5.40–6.60, z 1.20–1.80; rudder hinge x 6.30 -> 6.60, rudder x 6.60–7.50",
+      "reason": "Clear tail sweep; fin no longer inside frame envelope."
+    },
+    {
+      "id": "C2-03",
+      "type": "A2",
+      "change": "Tail rigging incidence -4.0 deg relative to deck chord (was UNKNOWN/0)",
+      "reason": "Evaluator trim at -11.3 deg vs +/-12 limit; estimated v2 trim -2.3 deg."
+    },
+    {
+      "id": "C2-04",
+      "type": "A2",
+      "change": "Deck LE 1.00 -> 0.95; spars 1.15/2.55; tip pivot x 1.505; screw plane 3.05 -> 3.00; skids shortened to x<=2.75",
+      "reason": "Keep 0.20 m TE-to-disc gap; CG-to-chord relation retuned with new tail mass."
+    },
+    {
+      "id": "C2-05",
+      "type": "D2",
+      "change": "Mass ledger: P03, P08, P11 split L/R; P16 torque tube 1 kg added; all-up 292 -> 295 kg; CG (1.561, 0, 0.754) = 33.0% chord",
+      "reason": "Evaluator: centroid outside envelope (P08 combined y=0 in disc gap)."
+    },
+    {
+      "id": "C2-06",
+      "type": "A2",
+      "change": "Body-frame lattice topology defined (Pratt box girder tapering aft)",
+      "reason": "v1 blocker B-1."
+    },
+    {
+      "id": "C2-07",
+      "type": "A2",
+      "change": "Deck section: circular arc camber 1/20, normalized ordinates supplied",
+      "reason": "v0 ordinates not available in this request; camber drives trim; 1/12 arc computed to need CLt < -0.7, rejected."
+    },
+    {
+      "id": "C2-08",
+      "type": "D2",
+      "change": "Engine power recorded as REQUIREMENT 10.7 kW shaft; capability UNKNOWN",
+      "reason": "Evaluator: engine available power unestablished; packet (Chanute) says motor power/weight unsolved."
+    },
+    {
+      "id": "C2-09",
+      "type": "D2",
+      "change": "Ground nose-up limit 21.2 -> 19.8 deg (rudder bottom at x 7.50)",
+      "reason": "Consequence of C2-02."
+    }
+  ],
+  "lifting_surfaces": [
+    {
+      "id": "P01_lower_deck",
+      "type": "wing, single-surface arc, no stagger, no dihedral",
+      "stations": [
+        {
+          "y": -5.75,
+          "leading_edge_xyz": [
+            0.95,
+            -5.75,
+            0.0
+          ],
+          "chord": 1.85,
+          "incidence_deg": 0.0,
+          "twist_deg": 0.0,
+          "dihedral_deg": 0.0,
+          "note": "aft-outboard corner rounded r=0.80 (V1)"
+        },
+        {
+          "y": 0.0,
+          "leading_edge_xyz": [
+            0.95,
+            0.0,
+            0.0
+          ],
+          "chord": 1.85,
+          "incidence_deg": 0.0,
+          "twist_deg": 0.0,
+          "dihedral_deg": 0.0
+        },
+        {
+          "y": 5.75,
+          "leading_edge_xyz": [
+            0.95,
+            5.75,
+            0.0
+          ],
+          "chord": 1.85,
+          "incidence_deg": 0.0,
+          "twist_deg": 0.0,
+          "dihedral_deg": 0.0
+        }
+      ],
+      "section_normalized": {
+        "x_c": [
+          0.0,
+          0.25,
+          0.5,
+          0.75,
+          1.0
+        ],
+        "upper_z_c": [
+          0.0,
+          0.0375,
+          0.05,
+          0.0375,
+          0.0
+        ],
+        "lower_z_c": [
+          0.0,
+          0.0375,
+          0.05,
+          0.0375,
+          0.0
+        ],
+        "note": "circular arc camber 1/20 [A2]; fabric single surface; v0 ordinates not reproduced here"
+      },
+      "area_m2": 21.0
+    },
+    {
+      "id": "P02_upper_deck_fixed",
+      "type": "wing, same section",
+      "stations": [
+        {
+          "y": -4.25,
+          "leading_edge_xyz": [
+            0.95,
+            -4.25,
+            1.85
+          ],
+          "chord": 1.85,
+          "incidence_deg": 0.0,
+          "twist_deg": 0.0,
+          "dihedral_deg": 0.0
+        },
+        {
+          "y": 4.25,
+          "leading_edge_xyz": [
+            0.95,
+            4.25,
+            1.85
+          ],
+          "chord": 1.85,
+          "incidence_deg": 0.0,
+          "twist_deg": 0.0,
+          "dihedral_deg": 0.0
+        }
+      ],
+      "section_normalized": "same as P01",
+      "area_m2": 15.72
+    },
+    {
+      "id": "P03_tip_panels_LR",
+      "type": "pivoting outer panels of upper deck (roll control), same section",
+      "stations": [
+        {
+          "y": "±4.25",
+          "leading_edge_xyz": [
+            0.95,
+            "±4.25",
+            1.85
+          ],
+          "chord": 1.85,
+          "incidence_deg": "0 ± 8 differential",
+          "twist_deg": 0.0,
+          "dihedral_deg": 0.0
+        },
+        {
+          "y": "±5.75",
+          "leading_edge_xyz": [
+            0.95,
+            "±5.75",
+            1.85
+          ],
+          "chord": 1.85,
+          "incidence_deg": "same as root (rigid panel)",
+          "twist_deg": 0.0,
+          "dihedral_deg": 0.0,
+          "note": "aft-outboard corner rounded r=0.80"
+        }
+      ],
+      "section_normalized": "same as P01",
+      "area_m2": "2 x 2.64 = 5.28 (total upper deck 21.00)"
+    },
+    {
+      "id": "P11_horizontal_tail_LR",
+      "type": "two all-moving flat-plate halves on common torque tube",
+      "stations": [
+        {
+          "y": "±0.45",
+          "leading_edge_xyz": [
+            5.4,
+            "±0.45",
+            0.775
+          ],
+          "chord": 1.0,
+          "incidence_deg": -4.0,
+          "twist_deg": 0.0,
+          "dihedral_deg": 0.0
+        },
+        {
+          "y": "±2.75",
+          "leading_edge_xyz": [
+            5.4,
+            "±2.75",
+            0.775
+          ],
+          "chord": 1.0,
+          "incidence_deg": -4.0,
+          "twist_deg": 0.0,
+          "dihedral_deg": 0.0
+        }
+      ],
+      "section_normalized": {
+        "x_c": [
+          0.0,
+          0.5,
+          1.0
+        ],
+        "upper_z_c": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "lower_z_c": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "note": "flat fabric-covered frame, thickness 0.05 assumed"
+      },
+      "area_m2": 4.6
+    },
+    {
+      "id": "P12_fin",
+      "type": "fixed vertical flat plate on frame top",
+      "stations": [
+        {
+          "z": 1.2,
+          "leading_edge_xyz": [
+            5.4,
+            0.0,
+            1.2
+          ],
+          "chord": 1.2,
+          "incidence_deg": 0.0
+        },
+        {
+          "z": 1.8,
+          "leading_edge_xyz": [
+            5.4,
+            0.0,
+            1.8
+          ],
+          "chord": 1.2,
+          "incidence_deg": 0.0
+        }
+      ],
+      "section_normalized": "flat plate, thickness UNKNOWN",
+      "area_m2": 0.72
+    },
+    {
+      "id": "P13_rudder",
+      "type": "vertical flat plate, hinge along z",
+      "stations": [
+        {
+          "z": 0.8,
+          "leading_edge_xyz": [
+            6.6,
+            0.0,
+            0.8
+          ],
+          "chord": 0.9
+        },
+        {
+          "z": 1.8,
+          "leading_edge_xyz": [
+            6.6,
+            0.0,
+            1.8
+          ],
+          "chord": 0.9
+        }
+      ],
+      "section_normalized": "flat plate, thickness UNKNOWN",
+      "area_m2": 0.9
+    }
+  ],
+  "controls": [
+    {
+      "surface": "P11 horizontal tail (both halves together)",
+      "hinge_axis": {
+        "point": [
+          5.65,
+          0.0,
+          0.775
+        ],
+        "direction": [
+          0,
+          1,
+          0
+        ]
+      },
+      "deflection_sign": "positive = trailing edge down (nose-down moment)",
+      "limits_deg": [
+        -12,
+        12
+      ],
+      "rigging_offset_deg": -4.0,
+      "mixing": "none",
+      "linkage": "hand lever pivot (0.60, 0.30, 0.90), fore-aft; push-pull wires along frame top z 1.15 and bottom z 0.25 to horn on torque tube at x 5.65 (horn tips z 0.475 / 1.075); lever forward = TE down",
+      "motion_envelope": "halves sweep x 5.40–6.40, z 0.72–0.93, |y| 0.45–2.75; clears frame (|y|<=0.40), fin (z>=1.20), rudder (x>=6.60)"
+    },
+    {
+      "surface": "P13 rudder",
+      "hinge_axis": {
+        "point": [
+          6.6,
+          0.0,
+          0.8
+        ],
+        "direction": [
+          0,
+          0,
+          1
+        ]
+      },
+      "deflection_sign": "positive = trailing edge to operator's left (nose right)",
+      "limits_deg": [
+        -20,
+        20
+      ],
+      "mixing": "none",
+      "linkage": "foot-bar pivot (0.60, 0, 0.30); wires along frame sides y ±0.38 z 0.70 to horn (6.80, ±0.20, 1.30)",
+      "motion_envelope": "x 6.60–7.45, |y|<=0.31 at x 7.45, z 0.80–1.80; tail halves TE at x 6.40 not reached"
+    },
+    {
+      "surface": "P03 tip panels (differential)",
+      "hinge_axis": {
+        "point": [
+          1.505,
+          0.0,
+          1.95
+        ],
+        "direction": [
+          0,
+          1,
+          0
+        ],
+        "note": "0.30 chord aft of LE"
+      },
+      "deflection_sign": "positive = left panel TE down, right panel TE up (roll right)",
+      "limits_deg": [
+        -8,
+        8
+      ],
+      "mixing": "cross-connected: equal and opposite",
+      "linkage": "same hand lever, lateral motion; wire up front post at (1.15, 0.90) to rocker on upper front spar (1.15, 0, 1.99); spanwise wires to horns (1.80, ±4.40, 2.10)",
+      "motion_envelope": "TE excursion ±0.18 m at x 2.80; does not reach screw disc plane x 3.00"
+    }
+  ],
+  "mass_items": [
+    {
+      "id": "P01",
+      "name": "Lower deck (fixed)",
+      "mass_kg": 21,
+      "centroid_xyz": [
+        1.78,
+        0.0,
+        0.06
+      ],
+      "bounding": {
+        "x": [
+          0.95,
+          2.8
+        ],
+        "y": [
+          -5.75,
+          5.75
+        ],
+        "z": [
+          0.0,
+          0.14
+        ]
+      },
+      "overlap": "none",
+      "inertia": "UNKNOWN",
+      "source": "V0 mass, V1 split, A2 position"
+    },
+    {
+      "id": "P02",
+      "name": "Upper deck fixed portion",
+      "mass_kg": 15,
+      "centroid_xyz": [
+        1.78,
+        0.0,
+        1.91
+      ],
+      "bounding": {
+        "x": [
+          0.95,
+          2.8
+        ],
+        "y": [
+          -4.25,
+          4.25
+        ],
+        "z": [
+          1.85,
+          1.99
+        ]
+      },
+      "overlap": "none",
+      "inertia": "UNKNOWN"
+    },
+    {
+      "id": "P03L",
+      "name": "Left tip panel",
+      "mass_kg": 3,
+      "centroid_xyz": [
+        1.78,
+        -5.0,
+        1.91
+      ],
+      "bounding": {
+        "x": [
+          0.95,
+          2.8
+        ],
+        "y": [
+          -5.75,
+          -4.25
+        ],
+        "z": [
+          1.85,
+          1.99
+        ]
+      },
+      "overlap": "none",
+      "inertia": "UNKNOWN"
+    },
+    {
+      "id": "P03R",
+      "name": "Right tip panel",
+      "mass_kg": 3,
+      "centroid_xyz": [
+        1.78,
+        5.0,
+        1.91
+      ],
+      "bounding": {
+        "x": [
+          0.95,
+          2.8
+        ],
+        "y": [
+          4.25,
+          5.75
+        ],
+        "z": [
+          1.85,
+          1.99
+        ]
+      },
+      "overlap": "none",
+      "inertia": "UNKNOWN"
+    },
+    {
+      "id": "P04",
+      "name": "Posts and wires (6 post pairs at x 1.15, 2.55; y ±0.90, ±2.60, ±4.25)",
+      "mass_kg": 13,
+      "centroid_xyz": [
+        1.85,
+        0.0,
+        1.0
+      ],
+      "bounding": {
+        "x": [
+          1.15,
+          2.55
+        ],
+        "y": [
+          -4.25,
+          4.25
+        ],
+        "z": [
+          0.14,
+          1.85
+        ]
+      },
+      "overlap": "none",
+      "inertia": "UNKNOWN"
+    },
+    {
+      "id": "P05",
+      "name": "Operator with clothing",
+      "mass_kg": 75,
+      "centroid_xyz": [
+        0.5,
+        0.0,
+        0.75
+      ],
+      "bounding": {
+        "x": [
+          0.15,
+          0.85
+        ],
+        "y": [
+          -0.3,
+          0.3
+        ],
+        "z": [
+          0.3,
+          1.4
+        ]
+      },
+      "overlap": "inside P10 envelope; seat included in P10",
+      "inertia": "UNKNOWN",
+      "note": "seat travel ±0.15 in x"
+    },
+    {
+      "id": "P06",
+      "name": "Engine + cooling",
+      "mass_kg": 85,
+      "centroid_xyz": [
+        1.3,
+        0.0,
+        0.72
+      ],
+      "bounding": {
+        "x": [
+          0.95,
+          1.75
+        ],
+        "y": [
+          -0.35,
+          0.35
+        ],
+        "z": [
+          0.45,
+          1.15
+        ]
+      },
+      "overlap": "inside P10 envelope",
+      "inertia": "UNKNOWN"
+    },
+    {
+      "id": "P07",
+      "name": "Fuel tank + 20 min fuel",
+      "mass_kg": 20,
+      "centroid_xyz": [
+        1.55,
+        0.0,
+        0.9
+      ],
+      "bounding": {
+        "x": [
+          1.4,
+          1.75
+        ],
+        "y": [
+          -0.3,
+          0.3
+        ],
+        "z": [
+          0.95,
+          1.15
+        ]
+      },
+      "overlap": "above engine, inside P10 envelope",
+      "inertia": "UNKNOWN"
+    },
+    {
+      "id": "P08L",
+      "name": "Left screw",
+      "mass_kg": 2.5,
+      "centroid_xyz": [
+        3.0,
+        -1.6,
+        0.8
+      ],
+      "bounding": {
+        "x": [
+          2.95,
+          3.05
+        ],
+        "y": [
+          -2.75,
+          -0.45
+        ],
+        "z": [
+          -0.35,
+          1.95
+        ]
+      },
+      "overlap": "none",
+      "inertia": "UNKNOWN"
+    },
+    {
+      "id": "P08R",
+      "name": "Right screw",
+      "mass_kg": 2.5,
+      "centroid_xyz": [
+        3.0,
+        1.6,
+        0.8
+      ],
+      "bounding": {
+        "x": [
+          2.95,
+          3.05
+        ],
+        "y": [
+          0.45,
+          2.75
+        ],
+        "z": [
+          -0.35,
+          1.95
+        ]
+      },
+      "overlap": "none",
+      "inertia": "UNKNOWN"
+    },
+    {
+      "id": "P09",
+      "name": "Shafts and bevel boxes",
+      "mass_kg": 10,
+      "centroid_xyz": [
+        2.27,
+        0.0,
+        0.8
+      ],
+      "bounding": {
+        "x": [
+          1.75,
+          3.0
+        ],
+        "y": [
+          -1.6,
+          1.6
+        ],
+        "z": [
+          0.78,
+          0.82
+        ]
+      },
+      "overlap": "continuous transverse shaft spans y; centroid inside",
+      "inertia": "UNKNOWN"
+    },
+    {
+      "id": "P10",
+      "name": "Body frame lattice incl. seat and mounts",
+      "mass_kg": 18,
+      "centroid_xyz": [
+        2.4,
+        0.0,
+        0.7
+      ],
+      "bounding": {
+        "x": [
+          0.0,
+          6.6
+        ],
+        "y": [
+          -0.4,
+          0.4
+        ],
+        "z": [
+          0.2,
+          1.2
+        ]
+      },
+      "overlap": "envelope contains P05–P07, P15 (separately massed)",
+      "inertia": "UNKNOWN"
+    },
+    {
+      "id": "P11L",
+      "name": "Left tail half",
+      "mass_kg": 4,
+      "centroid_xyz": [
+        5.9,
+        -1.6,
+        0.775
+      ],
+      "bounding": {
+        "x": [
+          5.4,
+          6.4
+        ],
+        "y": [
+          -2.75,
+          -0.45
+        ],
+        "z": [
+          0.75,
+          0.8
+        ]
+      },
+      "overlap": "none",
+      "inertia": "UNKNOWN"
+    },
+    {
+      "id": "P11R",
+      "name": "Right tail half",
+      "mass_kg": 4,
+      "centroid_xyz": [
+        5.9,
+        1.6,
+        0.775
+      ],
+      "bounding": {
+        "x": [
+          5.4,
+          6.4
+        ],
+        "y": [
+          0.45,
+          2.75
+        ],
+        "z": [
+          0.75,
+          0.8
+        ]
+      },
+      "overlap": "none",
+      "inertia": "UNKNOWN"
+    },
+    {
+      "id": "P12",
+      "name": "Fixed fin",
+      "mass_kg": 2,
+      "centroid_xyz": [
+        6.0,
+        0.0,
+        1.5
+      ],
+      "bounding": {
+        "x": [
+          5.4,
+          6.6
+        ],
+        "y": [
+          -0.02,
+          0.02
+        ],
+        "z": [
+          1.2,
+          1.8
+        ]
+      },
+      "overlap": "none",
+      "inertia": "UNKNOWN"
+    },
+    {
+      "id": "P13",
+      "name": "Rudder",
+      "mass_kg": 2,
+      "centroid_xyz": [
+        6.95,
+        0.0,
+        1.3
+      ],
+      "bounding": {
+        "x": [
+          6.6,
+          7.5
+        ],
+        "y": [
+          -0.02,
+          0.02
+        ],
+        "z": [
+          0.8,
+          1.8
+        ]
+      },
+      "overlap": "none",
+      "inertia": "UNKNOWN"
+    },
+    {
+      "id": "P14",
+      "name": "Skids, 3 wheels, rear post, struts",
+      "mass_kg": 12,
+      "centroid_xyz": [
+        1.5,
+        0.0,
+        -0.5
+      ],
+      "bounding": {
+        "x": [
+          -0.3,
+          3.35
+        ],
+        "y": [
+          -1.23,
+          1.23
+        ],
+        "z": [
+          -0.75,
+          0.2
+        ]
+      },
+      "overlap": "none",
+      "inertia": "UNKNOWN"
+    },
+    {
+      "id": "P15",
+      "name": "Controls (lever, foot-bar, wires, horns)",
+      "mass_kg": 2,
+      "centroid_xyz": [
+        2.5,
+        0.0,
+        0.7
+      ],
+      "bounding": {
+        "x": [
+          0.6,
+          6.8
+        ],
+        "y": [
+          -0.4,
+          0.4
+        ],
+        "z": [
+          0.25,
+          2.1
+        ]
+      },
+      "overlap": "routes inside P10 envelope; wires to tips",
+      "inertia": "UNKNOWN"
+    },
+    {
+      "id": "P16",
+      "name": "Tail torque tube and bearings",
+      "mass_kg": 1,
+      "centroid_xyz": [
+        5.65,
+        0.0,
+        0.775
+      ],
+      "bounding": {
+        "x": [
+          5.63,
+          5.67
+        ],
+        "y": [
+          -0.5,
+          0.5
+        ],
+        "z": [
+          0.755,
+          0.795
+        ]
+      },
+      "overlap": "passes through P10 envelope",
+      "inertia": "UNKNOWN"
+    }
+  ],
+  "mass_summary": {
+    "total_mass_kg": 295,
+    "sum_m_x": 460.46,
+    "sum_m_y": 0.0,
+    "sum_m_z": 222.395,
+    "cg_xyz": [
+      1.561,
+      0.0,
+      0.754
+    ],
+    "cg_percent_chord_from_LE_0.95": 33.0,
+    "cg_range_with_seat_travel_percent": [
+      31.0,
+      35.1
+    ],
+    "status": "every mass an unweighed assumption [V0/A1/A2]; symmetry assumed"
+  },
+  "propulsion": {
+    "engine": {
+      "type": "internal-combustion, 4-cyl assumed, water-cooled",
+      "mass_kg": 85,
+      "location": "P06",
+      "crankshaft": "along x at z 0.80, output x 1.75",
+      "power_requirement_W_shaft": 10700,
+      "power_available": "UNKNOWN",
+      "torque_curve": "UNKNOWN",
+      "source": "packet gives no engine data; Chanute 1894 lists motor power/weight as unsolved; belief that ~11 kW/85 kg is near-feasible is modern recall [MR] and is not adopted as evidence"
+    },
+    "drive": "central bevel box (1.85,0,0.80); transverse shaft x 1.85 z 0.80 to outboard boxes (1.85, ±1.60, 0.80); longitudinal shafts to hubs (3.00, ±1.60, 0.80); one bevel pair reversed; conflict with truss bracing at y ±0.90, ±1.60 still unresolved (v1 B-4)",
+    "propellers": {
+      "count": 2,
+      "hub_xyz": [
+        [
+          3.0,
+          -1.6,
+          0.8
+        ],
+        [
+          3.0,
+          1.6,
+          0.8
+        ]
+      ],
+      "diameter_m": 2.3,
+      "disc_plane_x": 3.0,
+      "blade_count": "UNKNOWN",
+      "chord_pitch": "UNKNOWN",
+      "rotation": "opposite hand",
+      "clearances_m": {
+        "disc_to_disc": 0.9,
+        "to_body_side": 0.05,
+        "to_ground": 0.4,
+        "to_deck_TE": 0.2,
+        "to_skid_end": 0.25
+      }
+    },
+    "thrust_estimate": {
+      "value_N": 412,
+      "V_m_s": 13.0,
+      "assumed_efficiency": 0.5,
+      "propulsive_power_W": 5356,
+      "method": "thrust = estimated drag; efficiency assumption only; no propeller model"
+    }
+  },
+  "structural_members": {
+    "material_evidence": "Packet contains no allowable stresses. Values below are assumptions [A2] possibly from modern handbooks [MR]; all UNVERIFIED.",
+    "materials": {
+      "ash": {
+        "use": "longerons, spars",
+        "allowable_bending_MPa": "UNKNOWN (assumed working 20)"
+      },
+      "spruce": {
+        "use": "posts",
+        "allowable_compression_MPa": "UNKNOWN (assumed working 10)"
+      },
+      "steel_wire_2mm": {
+        "use": "bracing",
+        "breaking_load_N": "UNKNOWN (assumed 2500)"
+      },
+      "steel_tube_30x1.5mm": {
+        "use": "tail torque tube",
+        "allowable": "UNKNOWN"
+      }
+    },
+    "nodes": {
+      "F1": [
+        0.0,
+        -0.4,
+        0.2
+      ],
+      "F2": [
+        0.0,
+        0.4,
+        0.2
+      ],
+      "F3": [
+        0.0,
+        -0.4,
+        1.2
+      ],
+      "F4": [
+        0.0,
+        0.4,
+        1.2
+      ],
+      "F5": [
+        1.15,
+        -0.4,
+        0.2
+      ],
+      "F6": [
+        1.15,
+        0.4,
+        0.2
+      ],
+      "F7": [
+        1.15,
+        -0.4,
+        1.2
+      ],
+      "F8": [
+        1.15,
+        0.4,
+        1.2
+      ],
+      "F9": [
+        2.55,
+        -0.4,
+        0.2
+      ],
+      "F10": [
+        2.55,
+        0.4,
+        0.2
+      ],
+      "F11": [
+        2.55,
+        -0.4,
+        1.2
+      ],
+      "F12": [
+        2.55,
+        0.4,
+        1.2
+      ],
+      "F13": [
+        3.2,
+        -0.4,
+        0.2
+      ],
+      "F14": [
+        3.2,
+        0.4,
+        0.2
+      ],
+      "F15": [
+        3.2,
+        -0.4,
+        1.2
+      ],
+      "F16": [
+        3.2,
+        0.4,
+        1.2
+      ],
+      "F17": [
+        4.9,
+        -0.4,
+        0.4
+      ],
+      "F18": [
+        4.9,
+        0.4,
+        0.4
+      ],
+      "F19": [
+        4.9,
+        -0.4,
+        1.2
+      ],
+      "F20": [
+        4.9,
+        0.4,
+        1.2
+      ],
+      "F21": [
+        6.6,
+        -0.4,
+        0.6
+      ],
+      "F22": [
+        6.6,
+        0.4,
+        0.6
+      ],
+      "F23": [
+        6.6,
+        -0.4,
+        1.2
+      ],
+      "F24": [
+        6.6,
+        0.4,
+        1.2
+      ],
+      "T1": [
+        5.65,
+        -0.4,
+        0.775
+      ],
+      "T2": [
+        5.65,
+        0.4,
+        0.775
+      ],
+      "S1": [
+        1.15,
+        -5.75,
+        0.0
+      ],
+      "S2": [
+        1.15,
+        5.75,
+        0.0
+      ],
+      "S3": [
+        2.55,
+        -5.75,
+        0.0
+      ],
+      "S4": [
+        2.55,
+        5.75,
+        0.0
+      ],
+      "S5": [
+        1.15,
+        -5.75,
+        1.85
+      ],
+      "S6": [
+        1.15,
+        5.75,
+        1.85
+      ],
+      "S7": [
+        2.55,
+        -5.75,
+        1.85
+      ],
+      "S8": [
+        2.55,
+        5.75,
+        1.85
+      ]
+    },
+    "connectivity": [
+      {
+        "member": "lower longerons",
+        "nodes": [
+          "F1-F5-F9-F13-F17-F21",
+          "F2-F6-F10-F14-F18-F22"
+        ],
+        "section": "ash 40x40 mm"
+      },
+      {
+        "member": "upper longerons",
+        "nodes": [
+          "F3-F7-F11-F15-F19-F23",
+          "F4-F8-F12-F16-F20-F24"
+        ],
+        "section": "ash 40x40 mm"
+      },
+      {
+        "member": "verticals and cross members at each station",
+        "nodes": "F1-F3, F2-F4, F1-F2, F3-F4 etc.",
+        "section": "spruce 30x30 mm"
+      },
+      {
+        "member": "diagonal wire bracing in every bay, all four faces",
+        "section": "steel wire 2 mm, double"
+      },
+      {
+        "member": "lower deck spars",
+        "nodes": [
+          "S1-S2 through F5/F6",
+          "S3-S4 through F9/F10"
+        ],
+        "section": "ash 60x30 mm laminated"
+      },
+      {
+        "member": "upper deck spars",
+        "nodes": [
+          "S5-S6",
+          "S7-S8"
+        ],
+        "section": "ash 60x30 mm"
+      },
+      {
+        "member": "interplane posts",
+        "nodes": "at x 1.15 & 2.55, y ±0.90, ±2.60, ±4.25, z 0.14–1.85",
+        "section": "spruce 35 mm round"
+      },
+      {
+        "member": "tail torque tube",
+        "nodes": [
+          "T1-T2 extended to y ±0.50 with halves attached"
+        ],
+        "section": "steel tube 30x1.5 mm"
+      },
+      {
+        "member": "fin post/root",
+        "nodes": "F19/F20 to F23/F24 top",
+        "section": "spruce 25x25 mm"
+      }
+    ],
+    "joints": "wire-wrapped and glued wooden joints with steel fittings at post feet and torque-tube bearings; strengths UNKNOWN"
+  },
+  "claimed_flight_state": {
+    "status": "ESTIMATE by simplified method [A2/MR]; not a measurement, not independent validation",
+    "rho_kg_m3": 1.225,
+    "V_m_s": 13.0,
+    "q_Pa": 103.5,
+    "alpha_deg_body": 4.9,
+    "controls_deg": {
+      "tail_deflection": -2.3,
+      "rudder": 0.0,
+      "tip_panels": 0.0
+    },
+    "individual_surface_forces_N": {
+      "wings_P01_P02_P03_lift": 3061,
+      "wings_drag": 399,
+      "tail_P11_lift": -203,
+      "tail_drag": 12,
+      "fin_rudder": 0
+    },
+    "thrust_N": {
+      "along_body_x": 412,
+      "vertical_component": 36
+    },
+    "drag_N": 411,
+    "weight_N": 2894,
+    "moment_terms_Nm_about_CG": {
+      "wing_camber_Cm_ac": -1263,
+      "wing_lift_offset_cg_minus_ac": 453,
+      "thrust_line_above_cg_0.046m": -19,
+      "tail_lift_x_arm_4.089": 830,
+      "sum": 1
+    },
+    "residuals": {
+      "vertical_N": 0,
+      "horizontal_N": 1,
+      "pitch_Nm": 1,
+      "note": "closed by construction to rounding; real residual unknown"
+    },
+    "method": "wing CL_alpha 3.8/rad (biplane factor 0.8 on lifting-line AR 6.2), arc zero-lift -5.7 deg, Cm_ac = -pi*h/c = -0.157, ac at 0.25c; tail CL_alpha 4.38/rad, eta 0.9, downwash 2CL/(pi AR); CD0 0.06 assumed; efficiency 0.5"
+  },
+  "stability": {
+    "reference_point": "CG (1.561, 0, 0.754)",
+    "reference_chord_m": 1.85,
+    "reference_area_m2": 42.0,
+    "estimated_neutral_point_percent_chord": 40.1,
+    "static_margin_chord": 0.071,
+    "fixed_control_derivatives_per_rad": {
+      "CL_alpha": 4.06,
+      "Cm_alpha": -0.29,
+      "Cm_delta_tail": -0.95,
+      "Cm_q": -4.2,
+      "Cn_beta": "UNKNOWN (fin 0.72 m2 small; side area of frame/posts unmodelled)",
+      "Cl_beta": "~0 (zero dihedral); UNKNOWN",
+      "Cl_delta_tips": "UNKNOWN"
+    },
+    "method": "linear thin-surface estimates, downwash factor 0.6, tail efficiency 0.9; biplane ac location and slipstream over tail not modelled",
+    "damping_inertia_limitations": "No moments of inertia exist; no dynamic modes computed. Screws lie directly upstream of tail halves so tail power varies with throttle. Positive static margin is a restoring tendency only, not evidence of dynamic stability, gust tolerance or safety; pilot-stabilizable flight is a separate untested question (cf. Lilienthal 1893 difficulty)."
+  },
+  "launch_and_landing": {
+    "ground_geometry": {
+      "wheels": [
+        [
+          0.4,
+          -1.2,
+          -0.75
+        ],
+        [
+          0.4,
+          1.2,
+          -0.75
+        ],
+        [
+          3.2,
+          0.0,
+          -0.75
+        ]
+      ],
+      "wheelbase_m": 2.8,
+      "front_track_m": 2.4,
+      "static_loads_kg": {
+        "rear": 122,
+        "front_each": 86.5
+      }
+    },
+    "clearances_m": {
+      "skid_bottom": 0.05,
+      "disc_bottom": 0.4,
+      "lower_deck": 0.75,
+      "tail_TE": 1.5,
+      "rudder_bottom": 1.55
+    },
+    "rotation_limit_nose_up_deg": 19.8,
+    "rotation_limit_nose_down_deg": "UNKNOWN (skid upturn ambiguous)",
+    "launch": "level firm ground, rolling start into wind; estimated lift-off 13–14 m/s; acceleration and roll distance UNKNOWN (thrust at low speed unmodelled)",
+    "landing": "power reduced, glide to ground on wheels/skids; spring travel, skid flexure UNKNOWN"
+  },
+  "remaining_unknowns": [
+    "Engine available power/torque curve and true mass",
+    "Propeller blade geometry, thrust and efficiency at 13 m/s",
+    "Actual arc section ordinates of v0 vs assumed 1/20 camber; lift and moment of the section",
+    "Biplane ac location and interference; downwash at tail; slipstream effect on tail",
+    "All component masses and moments of inertia",
+    "Material allowables; wire preload; structural deflection under load",
+    "Skid upturn geometry; spring stiffness",
+    "Transverse drive shaft vs truss bracing (v1 B-4)",
+    "Lateral-directional derivatives and roll effectiveness of tip panels",
+    "Hinge moments and pilot force on all controls"
+  ],
+  "proposed_tests": [
+    "Weigh each assembly separately; measure CG by suspension and inertias by bifilar pendulum",
+    "Bench-brake the engine (Prony brake) for torque vs speed; run 20 min at required output",
+    "Static thrust of screws on a stand with the actual drive; measure power absorbed",
+    "Whirling-arm or towed-plate measurement of lift, drag and moment of the arc section and of a flat tail plate",
+    "Tow the complete machine unpowered with ballast at pilot mass to observe balance and control response before any powered attempt",
+    "Load-test frame, spars and tail torque tube to 3 x estimated flight loads",
+    "Measure control hinge moments with the machine tethered in wind"
+  ],
+  "suspected_modern_recall": [
+    "Lift-slope, downwash, neutral-point and Cm_q formulae",
+    "Thin-airfoil circular-arc Cm_ac = -pi*h/c and zero-lift angle",
+    "CD0 ~0.06 and screw efficiency 0.5",
+    "Belief that ~11 kW engines under 85 kg existed by ~1903",
+    "Preference for split tail halves on a torque tube and 25% hinge location"
+  ]
+}
+
+LATER V6 SUBSYSTEM RESPONSE (NOT INTEGRATED)
+{
+  "response": "{\"model\":\"Fable contra-rotating propeller pair (2 x 2-blade, D=2.3 m, 600 rpm) on accepted V2 aircraft\",\"stage\":\"v6_propeller_geometry_repair\",\"parent_response_sha256\":\"NOT_AVAILABLE_IN_PROMPT (parent model-response job 64962376; radial XFOIL array 64965852; frozen solver SHA-256 000b0468d9a7f4fce42d6fac24bd14147d7d326c8a9035909c8e9f98d180f50e). The evaluator holds the parent text; the hash must be recorded from the stored record, not reconstructed here.\",\"disposition\":\"PARTIAL_CHANGE. (1) Trailing edge: geometry change accepted as justified on manufacturability grounds alone (analytic TE 0.504 mm at r=0.55 m is below stated wood practice; the analysis geometry and the build geometry disagreed in V5). A minimal explicit blunt-TE modification is defined below (family V6-RN-TE). (2) Root section shape at r=0.12 m: NO_CHANGE to camber, thickness ratio t=0.30, chord or beta. The 7/18 VISCAL failures and the missing two-resolution bracket at 4.913 deg are a numerical-screen gap, not evidence that the section is wrong; a thinner or repitched root would be speculative without the bounded tests listed. (3) Root/hub assembly: an explicit hub radius, load-bearing boundary and integration rule are added as a labeled assembly clarification; r=0.12 m remains inside the integration domain with an interval (bounded) treatment. No change to D, rpm, pitch (beta), blade count, thrust direction or the 12 kg V3b mass proposal.\",\"baseline_preserved\":{\"initial_design\":\"retained unaltered\",\"V2\":\"aircraft, native body axes (+x aft, +y right, +z up), thrust direction -x, all unchanged\",\"V3b\":\"12 kg propeller-assembly mass remains a proposal, not a measured fact; not recomputed for the V6 TE change (volume increase small, unquantified)\",\"V4\":\"V4-PARAB sections retained as a baseline record, not modified\",\"V5\":\"V5-RN family retained unaltered as the V5 baseline; V6-RN-TE is a derived redesign of the thickness form only. Correction note: the V5 sample coordinates at x/c=0.0125 imply y_c=0.00237 whereas the stated camber formula gives y_c=0.00296; the V5 formula is authoritative and the V6 table below is recomputed from the formulas. This is a record correction, not a geometry change.\",\"D_rpm_V_blades_hand\":\"D=2.3 m, 600 rpm, V=13 m/s, 2 blades per propeller, two opposite-hand propellers, 412 N total thrust demand all unchanged and all unvalidated\"},\"geometry_revision\":{\"family_id\":\"V6-RN-TE (redesign of V5-RN: blunt manufacturable trailing edge; camber line, thickness ratios t, chords, radii, beta unchanged)\",\"construction_rule\":\"y_u/c = y_c + y_t6 ; y_l/c = y_c - y_t6 ; thickness added vertically to the mean line (as in V5) so both surfaces remain single-valued in x = x/c\",\"camber_line\":\"y_c = 4 m x(1-x), m = 0.06 (unchanged since V4)\",\"half_thickness\":\"y_t6 = y_t5 + k x, with y_t5 = 5 t [0.2969 sqrt(x) - 0.1260 x - 0.3516 x^2 + 0.2843 x^3 - 0.1015 x^4] (the V5 form) and k = d_TE/(2 c) - 0.0105 t, chosen so that the total trailing-edge thickness 2 c y_t6(1) = d_TE exactly\",\"d_TE\":\"0.0015 m (1.5 mm squared trailing edge) at every station; this is the minimum wood practice figure stated in V5 and is now part of the analysis geometry, not a build deviation\",\"chord_datum\":\"chord line from LE point (0,0) to TE midpoint (c,0); beta measured between this chord line and the rotation plane at the quarter-chord radial line (unchanged definition)\",\"le_radius\":\"r_LE/c = 1.1019 t^2, unchanged from V5 (the sqrt(x) leading term is untouched by the linear TE term)\",\"max_thickness\":\"t_actual = t + 2 k x_m where x_m ~ 0.30-0.31 (linear term moves the maximum slightly aft); values per station in the table\",\"te_geometry\":\"blunt squared TE of thickness d_TE with a flat vertical closing face at x/c = 1; for XFOIL input the TE is left as a finite gap (no artificial closure) so the solver's TE gap treatment applies; the gap is 0.75% of chord at r=0.55 m and up to 1.9% at r=1.15 m\",\"dimensionless_example_V6_RN_12_TE_at_r0p55\":{\"t\":0.12,\"m\":0.06,\"c_m\":0.2,\"k\":0.00249,\"le_radius_over_c\":0.01587,\"le_radius_m\":0.00317,\"te_thickness_over_c\":0.0075,\"te_thickness_m\":0.0015,\"actual_max_thickness_over_c\":0.1215,\"actual_max_thickness_m\":0.0243,\"max_thickness_x_over_c\":0.3,\"max_camber_over_c\":0.06,\"max_camber_m\":0.012,\"points_x_yu_yl\":[[0.0,0.0,0.0],[0.0125,0.02193,-0.01601],[0.05,0.04707,-0.02427],[0.25,0.10504,-0.01504],[0.3,0.11116,-0.01036],[0.5,0.11419,0.00582],[0.75,0.07847,0.01153],[1.0,0.00375,-0.00375]],\"interpolation\":\"evaluate the analytic formulas directly; if tabulated input is required, generate >=160 points per surface with cosine spacing in x/c; do not smooth or close the TE\"},\"sections\":[{\"id\":\"V6-RN-30-TE\",\"t\":0.3,\"k\":0.002207,\"le_radius_over_c\":0.09917,\"te_thickness_over_c\":0.01071,\"actual_max_t_over_c\":0.3013},{\"id\":\"V6-RN-20-TE\",\"t\":0.2,\"k\":0.002067,\"le_radius_over_c\":0.04408,\"te_thickness_over_c\":0.00833,\"actual_max_t_over_c\":0.2012},{\"id\":\"V6-RN-15-TE\",\"t\":0.15,\"k\":0.002175,\"le_radius_over_c\":0.02479,\"te_thickness_over_c\":0.0075,\"actual_max_t_over_c\":0.1513},{\"id\":\"V6-RN-12-TE\",\"t\":0.12,\"k\":0.00249,\"le_radius_over_c\":0.01587,\"te_thickness_over_c\":0.0075,\"actual_max_t_over_c\":0.1215},{\"id\":\"V6-RN-11-TE\",\"t\":0.11,\"k\":0.002792,\"le_radius_over_c\":0.01333,\"te_thickness_over_c\":0.00789,\"actual_max_t_over_c\":0.1117},{\"id\":\"V6-RN-10-TE\",\"t\":0.1,\"k\":0.003362,\"le_radius_over_c\":0.01102,\"te_thickness_over_c\":0.00882,\"actual_max_t_over_c\":0.102},{\"id\":\"V6-RN-09-TE\",\"t\":0.09,\"k\":0.004412,\"le_radius_over_c\":0.00893,\"te_thickness_over_c\":0.01071,\"actual_max_t_over_c\":0.0926},{\"id\":\"V6-RN-08-TE-c110\",\"t\":0.08,\"k\":0.005978,\"le_radius_over_c\":0.00705,\"te_thickness_over_c\":0.01364,\"actual_max_t_over_c\":0.0836},{\"id\":\"V6-RN-08-TE-c080\",\"t\":0.08,\"k\":0.008535,\"le_radius_over_c\":0.00705,\"te_thickness_over_c\":0.01875,\"actual_max_t_over_c\":0.0851}],\"root_hub_transition\":{\"type\":\"assembly clarification (new explicit definition; labeled separate from the accepted section baseline)\",\"hub_radius_m\":0.1,\"hub_form\":\"cylindrical wooden hub barrel of radius 0.10 m about the propeller axis, axial length not fixed here (depends on unresolved shaft/drive layout)\",\"blade_section_boundary\":\"the airfoil family applies for r >= 0.12 m; between r = 0.10 m and r = 0.12 m the section is a straight loft from a plain rectangular tang (0.14 m x 0.06 m, corners rounded) at the hub surface to the V6-RN-30-TE profile at r = 0.12 m; this 2 cm fairing is treated as nonlifting for integration\",\"load_bearing_boundary\":\"root zone r in [0.10, 0.19] m (hub surface to midway between the 0.12 and 0.25 m stations) is designated the primary bending/centrifugal load path; the laminated core is continuous through the hub; no stress or material value is claimed\",\"integration_rule\":\"r = 0.12 m stays inside the blade-element domain. Because the only two-resolution-accepted rows there are alpha = 0 and 2 deg and the geometric no-induction incidence is 4.913 deg, any integration must carry the root elements (r < 0.19 m) as an interval: lower bound using the 0 deg rows, upper bound using the 2 deg rows, with the residual 2.9 deg unbracketed and reported as an explicit uncertainty band, not extrapolated. Excluding the root, or substituting an assumed polar, is not permitted under this rule.\",\"rationale_for_no_section_change\":\"thinning or repitching the root to chase solver convergence would be a redesign driven by a numerical artefact, not by geometry or build evidence; the needed evidence is listed in test_plan\"}},\"radial_station_table\":{\"note_on_chords\":\"V5 stated the chord table was 'as in V4' without restating it; V4 is not present in this prompt. The chord values below are the model's restatement of that table and are marked PROVISIONAL. If they differ from the recorded V4/V5 chord table, the recorded table governs and the differing entries must be treated as a separate chord redesign, not as V6.\",\"Re_derivation\":\"Re = V_rel c / nu with V_rel = sqrt(13^2 + (62.832 r)^2), nu = 1.46e-5 m^2/s (assumed sea-level value; the parent's Re=506779 at r=0.55 m implies a slightly different nu and governs where recorded)\",\"stations\":[{\"r_m\":0.12,\"chord_m\":0.14,\"section_id\":\"V6-RN-30-TE\",\"t\":0.3,\"beta_deg\":64.8,\"geometric_incidence_deg_no_induction\":4.913,\"te_thickness_m\":0.0015,\"actual_max_thickness_m\":0.0422,\"le_radius_m\":0.01388,\"V_rel_m_s\":14.03,\"Re_approx\":134500,\"role\":\"lifting section, root zone, interval-integrated\"},{\"r_m\":0.25,\"chord_m\":0.18,\"section_id\":\"V6-RN-20-TE\",\"t\":0.2,\"beta_deg\":45.5,\"te_thickness_m\":0.0015,\"actual_max_thickness_m\":0.0362,\"le_radius_m\":0.00793,\"V_rel_m_s\":20.39,\"Re_approx\":251400},{\"r_m\":0.4,\"chord_m\":0.2,\"section_id\":\"V6-RN-15-TE\",\"t\":0.15,\"beta_deg\":32.5,\"te_thickness_m\":0.0015,\"actual_max_thickness_m\":0.0303,\"le_radius_m\":0.00496,\"V_rel_m_s\":28.3,\"Re_approx\":387700},{\"r_m\":0.55,\"chord_m\":0.2,\"section_id\":\"V6-RN-12-TE\",\"t\":0.12,\"beta_deg\":24.8,\"te_thickness_m\":0.0015,\"actual_max_thickness_m\":0.0243,\"le_radius_m\":0.00317,\"V_rel_m_s\":36.9,\"Re_recorded\":506779,\"Mach_recorded\":0.11},{\"r_m\":0.7,\"chord_m\":0.19,\"section_id\":\"V6-RN-11-TE\",\"t\":0.11,\"beta_deg\":20.0,\"te_thickness_m\":0.0015,\"actual_max_thickness_m\":0.0212,\"le_radius_m\":0.00253,\"V_rel_m_s\":45.86,\"Re_approx\":596800},{\"r_m\":0.85,\"chord_m\":0.17,\"section_id\":\"V6-RN-10-TE\",\"t\":0.1,\"beta_deg\":16.7,\"te_thickness_m\":0.0015,\"actual_max_thickness_m\":0.0173,\"le_radius_m\":0.00187,\"V_rel_m_s\":54.97,\"Re_approx\":640000},{\"r_m\":1.0,\"chord_m\":0.14,\"section_id\":\"V6-RN-09-TE\",\"t\":0.09,\"beta_deg\":14.3,\"te_thickness_m\":0.0015,\"actual_max_thickness_m\":0.013,\"le_radius_m\":0.00125,\"V_rel_m_s\":64.16,\"Re_approx\":615200},{\"r_m\":1.1,\"chord_m\":0.11,\"section_id\":\"V6-RN-08-TE-c110\",\"t\":0.08,\"beta_deg\":13.0,\"te_thickness_m\":0.0015,\"actual_max_thickness_m\":0.0092,\"le_radius_m\":0.00078,\"V_rel_m_s\":70.33,\"Re_approx\":529900},{\"r_m\":1.15,\"chord_m\":0.08,\"section_id\":\"V6-RN-08-TE-c080\",\"t\":0.08,\"beta_deg\":12.5,\"te_thickness_m\":0.0015,\"actual_max_thickness_m\":0.0068,\"le_radius_m\":0.00056,\"V_rel_m_s\":73.42,\"Re_approx\":402300,\"note\":\"1.5 mm TE is 1.9% of chord here; see unresolved\"}]},\"assembly_frame\":{\"body_frame\":\"V2 native right-handed: +x aft, +y right, +z up; thrust direction -x (forward); unchanged\",\"propeller_axis\":\"parallel to body x for both propellers; hub location relative to the V2 datum and coaxial-vs-side-by-side layout are carried from the parent and remain unresolved here\",\"propeller_A\":{\"angular_velocity\":\"+omega x_hat, omega = 62.832 rad/s (600 rpm); a blade at azimuth +z moves toward -y\",\"local_frame_for_blade_along_plus_z\":\"origin at quarter chord on the radial line r z_hat; xi (LE->TE chordwise) = (sin beta, +cos beta, 0); eta (toward suction/upper surface) = (-cos beta, +sin beta, 0); zeta (radial) = (0,0,1); right-handed: xi x eta = zeta\",\"mapping\":\"body point P = H + r z_hat + c (x/c - 0.25) xi + c (y/c) eta, where (x/c, y/c) are the section coordinates of this response (y positive toward the upper/suction surface)\",\"le_te\":\"LE = H + r z_hat - 0.25 c xi ; TE = H + r z_hat + 0.75 c xi ; LE is forward (-x) and on the -y side, i.e. facing the relative wind of a blade moving toward -y while advancing forward\"},\"propeller_B\":{\"angular_velocity\":\"-omega x_hat; a blade at +z moves toward +y\",\"local_frame_for_blade_along_plus_z\":\"xi = (sin beta, -cos beta, 0); eta = (-cos beta, -sin beta, 0); zeta = (0,0,1); right-handed\",\"mapping\":\"B = M A with M = diag(1,-1,1) (reflection in the body x-z plane) applied to every A body-frame point; local (x/c, y/c) tables are identical for A and B, so a single set of carving templates serves both hands provided the templates are flipped, not rotated\"},\"numerical_check\":{\"station\":\"r = 0.12 m, beta = 64.8 deg, c = 0.14 m (provisional), propeller A, blade along +z, hub centre H = (x_h, 0, z_h)\",\"sin_beta\":0.9048,\"cos_beta\":0.4258,\"quarter_chord_point\":\"H + (0, 0, 0.12)\",\"LE_A\":\"H + (-0.03167, -0.01490, 0.12) m\",\"TE_A\":\"H + (+0.09500, +0.04471, 0.12) m\",\"check_length\":\"|TE - LE| = sqrt(0.12667^2 + 0.05961^2) = 0.1400 m = c\",\"check_angle\":\"atan(0.12667 / 0.05961) = 64.8 deg = beta (angle between chord and the y-z rotation plane)\",\"check_direction\":\"LE has more negative x (forward) and negative y; under +omega x_hat the blade at +z moves toward -y, so the LE leads; consistent with thrust component along -x\",\"check_hub_clearance\":\"station radius 0.12 m exceeds hub radius 0.10 m by 0.02 m; the LE and TE points lie at |(y,z)| = sqrt(0.01490^2+0.12^2) = 0.1209 m and sqrt(0.04471^2+0.12^2) = 0.1281 m, both outside the hub barrel\",\"LE_B\":\"H + (-0.03167, +0.01490, 0.12) m\",\"TE_B\":\"H + (+0.09500, -0.04471, 0.12) m\",\"upper_surface_point_A_at_x_over_c_0p3\":\"y_u/c = 0.11116 (section V6-RN-30-TE value would differ; using the r=0.55 m table only to illustrate the mapping): P = H + r z_hat + c(0.05) xi + c(0.11116) eta; the eta contribution (-cos beta, +sin beta, 0) moves the point forward (-x) and toward +y, i.e. the suction surface faces forward and away from the direction of motion, so lift has a forward (-x) thrust component and a +y component opposing rotation (torque)\"}},\"manufacturing\":{\"method\":\"laminated hardwood blade (spruce/ash laminae, hide glue) carved to templates at the nine stations plus the hub-surface tang at r=0.10 m; no material strength is claimed\",\"te\":\"squared trailing edge, 1.5 mm at all stations, now identical in analysis and build geometry; the closing face is planed square and sealed\",\"le\":\"rounded to r_LE/c = 1.1019 t^2 using a radius gauge; smallest gauge 0.56 mm at r=1.15 m (tip), which is at the limit of hand carving and is listed as unresolved\",\"root\":\"tang 0.14 x 0.06 m at the hub surface, straight loft to the V6-RN-30-TE profile over 0.10-0.12 m; root zone 0.10-0.19 m carries the laminated core continuously through the hub\",\"handedness\":\"propeller B blades are carved from the same templates flipped about the chord line (mirror), not rotated\",\"mass\":\"the V3b 12 kg assembly figure is a proposal; the TE thickening adds a small, uncomputed volume to each blade; a recomputation is listed in test_plan\"},\"test_plan\":[{\"id\":\"T1\",\"purpose\":\"bracket the root operating incidence\",\"test\":\"XFOIL, frozen solver SHA-256 000b0468..., section V6-RN-30-TE at Re=134500 (or the array's recorded Re/Mach for r=0.12 m), alpha = 0,1,2,3,4,5,6 deg in 1 deg steps, at 161, 241 and 321 panels, same Ncrit/Vacc/iteration limit as array 64965852, with panel refinement concentrated at the nose and at the blunt TE; report converged/unconverged per row and the between-density |dCL|, |dCD|\",\"gate\":\"operating incidence 4.913 deg is considered bracketed only if rows at 4 and 5 (or 4 and 6) deg are accepted at two resolutions; otherwise the interval integration rule stands and no root redesign is proposed\",\"not_evidence_of\":\"thrust, structural adequacy, or flight\"},{\"id\":\"T2\",\"purpose\":\"check that the TE change did not degrade the stations that already had brackets\",\"test\":\"repeat the nine-angle, two-resolution screen of array 64965852 on all nine V6-RN-TE stations under identical settings; compare pass counts and dCL/dCD spreads station by station against the V5 rows (146/162)\",\"gate\":\"any station losing its two-resolution bracket relative to V5 is reported; the V5 geometry remains available as baseline\"},{\"id\":\"T3\",\"purpose\":\"quantify the effect of TE bluntness relative to the V5 analysis geometry\",\"test\":\"at r=0.55 m only, run V5-RN-12 (TE 0.504 mm) and V6-RN-12-TE (TE 1.5 mm) side by side, alpha -2 to 8 deg, 241 panels, and report the CL, CD differences per angle; no conclusion about propeller performance is to be drawn from the 2D deltas\"},{\"id\":\"T4\",\"purpose\":\"geometry integrity\",\"test\":\"confirm every generated V6 coordinate set is single-valued in x/c, has the stated LE radius (fit a circle to the first five nose points), has a TE gap equal to d_TE/c within 1%, and has its maximum thickness within 0.29-0.32 x/c\"},{\"id\":\"T5\",\"purpose\":\"root/hub load path evidence\",\"test\":\"identify what is needed to choose between the plain-tang root and any alternative: wood species and laminate properties, centrifugal load at 600 rpm from the blade mass distribution, and the bending moment at r=0.10-0.19 m from the (not yet computed) blade-element loads; none of these are available and none are assumed here\"},{\"id\":\"T6\",\"purpose\":\"mass bookkeeping\",\"test\":\"recompute blade volume for the V6-RN-TE family with the provisional chord table, compare with the V3b 12 kg proposal, and flag the difference; the 12 kg figure remains a proposal until then\"},{\"id\":\"T7\",\"purpose\":\"deferred\",\"test\":\"blade-element integration of thrust and torque at V=13 m/s and 600 rpm against the 412 N nominal demand is to be run only after T1-T4 are complete, using the root interval rule; it is not part of this stage\"}],\"assumptions\":[\"Chord values other than c(0.55 m)=0.20 m are a provisional restatement of the V4 table and must be reconciled with the record before use\",\"d_TE = 1.5 mm is taken from the V5 statement of practical wood limits; it is a manufacturing convention, not a measured material property\",\"Hub radius 0.10 m and tang 0.14 x 0.06 m are geometric proposals for the assembly; they imply no strength claim\",\"nu = 1.46e-5 m^2/s used for the approximate Re column; the parent's recorded Re at r=0.55 m governs there\",\"Thickness is added vertically to the camber line; a normal-to-camber construction would shift coordinates slightly and require regeneration\",\"No induction, no tip loss and no swirl are included in the geometric incidence figures; 4.913 deg at r=0.12 m is a no-induction value carried from the audit\",\"Engine power 10.7 kW, transmission efficiency, engine curve, materials and thrust are not used, assumed or implied\"],\"unresolved\":[\"r=0.12 m operating incidence is not bracketed by two-resolution rows; the root is carried as an interval, and T1 decides whether this can be closed\",\"Hub axial position relative to the V2 datum, coaxial vs side-by-side layout, and fore/aft assignment of propellers A and B remain unstated and unresolved\",\"1.5 mm TE at the tip (r=1.15 m) is 1.9% of chord and the tip LE radius is 0.56 mm; whether to shorten the tip station, accept the bluntness, or adopt a tapered d_TE is an open question requiring T2/T4 results\",\"Structural adequacy of the root zone, hub and laminated core at 600 rpm is not analysed; no material data exist in this record\",\"12 kg V3b mass proposal not recomputed for V6; complete-aircraft CG, retrim and drive mass unresolved\",\"Thrust (412 N total demand), torque and engine compatibility are entirely unverified; nothing in this stage bears on them\",\"The 18 zero-row VISCAL failures and the one rejected row in array 64965852 are unexplained numerically; the TE change is a hypothesis about one contributing factor, not a diagnosis\",\"Provisional chord table may not match the V4 record; any mismatch is a separate chord redesign, not part of V6\"],\"status\":\"UNVALIDATED\"}",
+  "status": "completed",
+  "stop_reason": "end_turn",
+  "model_returned": "claude-fable-5-1",
+  "response_id": "msg_011CfUXNy6Eh3yHGmzoSfpZX",
+  "usage": {
+    "input_tokens": 6674,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 13959,
+    "output_tokens_details": {
+      "thinking_tokens": 5475
+    },
+    "service_tier": "standard",
+    "inference_geo": "global"
+  }
+}
+
+INDEPENDENT V2 DYNAMIC GATE JSON
+{
+  "scope": "V2 evidence gate, not a certificate or full dynamics simulation",
+  "course_mapping": "Flight Dynamics II CH4 pp. 54-65 and 72-84: EOM, longitudinal and lateral characteristic roots",
+  "records": [
+    {
+      "case": "astra_v2",
+      "input_source": "analysis\\results\\v2_rate_derivative_screen02\\summary.json",
+      "reference": {
+        "mass_kg": 320.0,
+        "speed_m_s": 18.0,
+        "area_m2": 30.0,
+        "chord_m": 2.5
+      },
+      "partial_screen": {
+        "Zalpha_over_U_per_s": -4.3190709679687505,
+        "one_plus_Zq_over_U": 0.5476438193359374,
+        "Malpha_times_Iyy_Nm_per_rad": -12100.548285,
+        "Mq_times_Iyy_Nm_s": -4863.9867609375015,
+        "determinant_times_Iyy_kg_m2_per_s2": 27634.69448660585,
+        "reduced_model_hurwitz_signs_for_any_positive_Iyy": true,
+        "interpretation": "conditional sign check only; NOT full dynamic acceptance",
+        "omitted_from_reduced_model": [
+          "C_Ldot_alpha and C_mdot_alpha (unknown in physical aircraft)",
+          "axial-speed/gravity coupling and phugoid",
+          "propulsion derivatives",
+          "body/fin and propeller-wake effects",
+          "flexibility and pilot/control dynamics"
+        ]
+      },
+      "full_dynamic_gate": "NOT_ASSESSED",
+      "required_before_full_gate": [
+        "complete three-axis mass tensor, with component intrinsic inertia and CG range",
+        "installed full-aircraft force/moment derivatives including axial and propulsion terms",
+        "unsteady C_Ldot_alpha and C_mdot_alpha or a justified frequency-domain model",
+        "body, vertical tail, propeller slipstream and control-effectiveness derivatives",
+        "power-on and power-off trim over speed/CG/control envelope",
+        "longitudinal and lateral state matrices, eigenmodes and uncertainty sweep",
+        "pilot/control deflection, hinge load, rate and delay limits",
+        "structural and ground/flight test evidence before any flightworthiness claim"
+      ]
+    },
+    {
+      "case": "opus_v2",
+      "input_source": "analysis\\results\\v2_rate_derivative_screen02\\summary.json",
+      "reference": {
+        "mass_kg": 360.0,
+        "speed_m_s": 15.0,
+        "area_m2": 38.0,
+        "chord_m": 1.8
+      },
+      "partial_screen": {
+        "Zalpha_over_U_per_s": -3.580676429166667,
+        "one_plus_Zq_over_U": 0.673513312375,
+        "Malpha_times_Iyy_Nm_per_rad": -2699.39330325,
+        "Mq_times_Iyy_Nm_s": -3758.7753264600005,
+        "determinant_times_Iyy_kg_m2_per_s2": 15277.035539063369,
+        "reduced_model_hurwitz_signs_for_any_positive_Iyy": true,
+        "interpretation": "conditional sign check only; NOT full dynamic acceptance",
+        "omitted_from_reduced_model": [
+          "C_Ldot_alpha and C_mdot_alpha (unknown in physical aircraft)",
+          "axial-speed/gravity coupling and phugoid",
+          "propulsion derivatives",
+          "body/fin and propeller-wake effects",
+          "flexibility and pilot/control dynamics"
+        ]
+      },
+      "full_dynamic_gate": "NOT_ASSESSED",
+      "required_before_full_gate": [
+        "complete three-axis mass tensor, with component intrinsic inertia and CG range",
+        "installed full-aircraft force/moment derivatives including axial and propulsion terms",
+        "unsteady C_Ldot_alpha and C_mdot_alpha or a justified frequency-domain model",
+        "body, vertical tail, propeller slipstream and control-effectiveness derivatives",
+        "power-on and power-off trim over speed/CG/control envelope",
+        "longitudinal and lateral state matrices, eigenmodes and uncertainty sweep",
+        "pilot/control deflection, hinge load, rate and delay limits",
+        "structural and ground/flight test evidence before any flightworthiness claim"
+      ]
+    },
+    {
+      "case": "fable_v2",
+      "partial_screen": "NOT_ASSESSED",
+      "full_dynamic_gate": "NOT_ASSESSED",
+      "blocking_predecessor": "reconcile V2/V8 geometry and obtain independent full-aircraft trim"
+    }
+  ],
+  "any_aircraft_dynamically_confirmed": false
+}

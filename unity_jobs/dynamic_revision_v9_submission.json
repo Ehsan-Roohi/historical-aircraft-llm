@@ -1,0 +1,15 @@
+{
+  "stage": "v9_integrated_dynamics",
+  "submitted_utc_date": "2026-09-28",
+  "slurm_array_job_id": "65007436",
+  "array_indices": [0, 1, 2],
+  "models": ["gpt-6-astra", "claude-fable-5-1", "claude-opus-5-5"],
+  "initial_queue_state": "PENDING (MaxCpuPerAccount)",
+  "model_transport_status": "not yet run at initial observation",
+  "engineering_validation": "not established",
+  "input_zip": "output/delivery/dynamic_revision_v9_attempt01.zip",
+  "input_zip_sha256": "b636676c80e92335e9148d36ef8d91b770dedae026078ce27ebdf15f8824231c",
+  "prompt_manifest_sha256": "74797cd74cc3817b1bf94b71259932984b8e1712760a352b52f8b47125cb32ba",
+  "remote_project": "/work/pi_roohie_umass_edu/wright1900-benchmark/wright1900",
+  "note": "Queued execution is not receipt of model answers. No V9 design is evaluated or accepted."
+}

@@ -1,7 +1,7 @@
 # Data and code availability for the aircraft-LLM study
 
-Author: Ehsan Roohi. Public research snapshot: `aircraft-sr-2026-09-28-r2` in
-[`Ehsan-Roohi/historical-aircraft-llm`](https://github.com/Ehsan-Roohi/historical-aircraft-llm/tree/aircraft-sr-2026-09-28-r2).
+Author: Ehsan Roohi. Public research snapshot: `aircraft-sr-2026-09-28-r3` in
+[`Ehsan-Roohi/historical-aircraft-llm`](https://github.com/Ehsan-Roohi/historical-aircraft-llm/tree/aircraft-sr-2026-09-28-r3).
 The exact included paths, byte counts and SHA-256 digests are recorded in
 `MANIFEST.json`; `research_evidence.zip` is the consolidated downloadable
 snapshot. The Git tag identifies a fixed repository commit. No DOI is claimed.
@@ -15,9 +15,10 @@ snapshot. The Git tag identifies a fixed repository commit. No DOI is claimed.
 | Clarification prompts and V1 returns | `analysis/prompts_v1/`, `analysis/raw_v1/`, `analysis/results/` | Complete recovered attempts and separate truncation/failure records where retained. |
 | Revision prompts and V2 returns | `analysis/prompts_v2/`, `analysis/prompts_v2_retrim/`, `received_v2_64942345/prompts/`, `received_v2_64942345/responses/`, `analysis/results/received_v2_audit01/` | Model-authored revisions, not automatically verified designs. |
 | Later model feedback exchanges | `received_v5_64962376/responses/`, `design_revision_v6_attempt01/responses/`, `unity_jobs/`, `analysis/results/` | Archived subsystem/revision attempts; do not silently treat them as a new integrated flightworthy aircraft. |
+| Integrated dynamic redesign feedback | `analysis/prompts_v9_integrated_dynamics/`, `dynamic_revision_v9_attempt01/responses/` when available | Versioned, case-specific modern feedback. Its presence records a model proposal, not independent acceptance of a new aircraft. |
 | Geometry and figure source/output | `output/stage_threeviews/`, `output/figures_v2/`, `output/overleaf/scientific_reports_aircraft_2026_09_28_release03/figures/`, `analysis/` | Original and evaluator drawings have distinct provenance. Figure 7 uses the archived numerical results; Fable's values are model claims. |
-| Numerical inputs and outputs | `analysis/results/`, `output/overleaf/scientific_reports_aircraft_2026_09_28_release04/audit_data/` | Includes accepted and failed cases, mesh checks, residuals, and both failed and completed rate-derivative runs. |
-| Analysis and manuscript source | `analysis/`, `paper/`, `output/overleaf/scientific_reports_aircraft_2026_09_28_release04/` | Human-auditable code, TeX, supplement, references, and selected source records. |
+| Numerical inputs and outputs | `analysis/results/`, `output/overleaf/scientific_reports_aircraft_2026_09_28_release05/audit_data/` | Includes accepted and failed cases, mesh checks, residuals, both failed and completed rate-derivative runs, and the reduced dynamic gate. |
+| Analysis and manuscript source | `analysis/`, `paper/`, `output/overleaf/scientific_reports_aircraft_2026_09_28_release05/` | Human-auditable code, TeX, supplement, references, and selected source records; the full-mode assembler is not run on incomplete V2 data. |
 
 ## Scientific Reports policy mapping
 
@@ -53,6 +54,12 @@ archived raw outputs from evaluator reconstructions and unvalidated claims.
   reported with their restricted model scope. No $C_{m_{\dot\alpha}}$ value is
   available without a downwash-delay/unsteady model; missing derivatives are
   not set to zero.
+- The reduced two-state dynamic sign screen and strict matrix-assembly code are
+  shared in `analysis/flight_dynamics_gate_v2.py` and
+  `analysis/linear_mode_solver.py`. The latter has only synthetic unit tests;
+  it has not produced V2 eigenvalues because complete physical inputs are
+  unavailable. The private Flight Dynamics II scans were used as an evaluator
+  checklist and are not redistributable study data.
 - No wind-tunnel, structure-load, engine-propeller-map or crewed-flight data
   were generated. The archive does not certify construction or flight safety.
 - A Git tag is a fixed source identifier, but a DOI-backed repository deposit
