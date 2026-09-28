@@ -1,0 +1,27 @@
+{
+  "stage": "v10_geometry_power_feedback",
+  "status": "FINISHED_PARTIALLY_AUDITED",
+  "submitted_utc": "2026-09-28T22:26:22Z",
+  "slurm_array_job_id": "65011353",
+  "array_indices": [0, 1, 2],
+  "models": ["gpt-6-astra", "claude-fable-5-1", "claude-opus-5-5"],
+  "partition": "cpu-preempt",
+  "concurrency_limit": 2,
+  "maximum_calls_per_model": 1,
+  "maximum_output_tokens": 32000,
+  "reasoning_effort": "low",
+  "time_limit": "02:00:00",
+  "remote_project": "/work/pi_roohie_umass_edu/wright1900-benchmark/wright1900",
+  "remote_attempt_directory": "v10_geometry_power_attempt01",
+  "local_prompt_manifest_sha256": "12ac6718849ec380de4136ce7db65ff0caef780ada0bc7de81f80fd2aaf7772a",
+  "remote_dry_run": "claude-fable-5-1 hash verification completed before submission; all three local dry-runs completed",
+  "initial_queue_state": "PENDING immediately after sbatch; subsequent snapshot showed Fable and Opus RUNNING",
+  "outcomes": {
+    "gpt-6-astra": "error_or_uncertain RuntimeError; no response body; separately reviewed retry job 65011846",
+    "claude-fable-5-1": "completed end_turn; SHA-256 bcd804a80087d451c8c9dac07d2f8a1118ba1487826ed32ec4a6420e49ea3324",
+    "claude-opus-5-5": "completed end_turn; SHA-256 100027bc62931728bbcc8b041caff043d6031938ebd388c329e0129f896ce04e"
+  },
+  "engineering_validation": "none; limited arithmetic/provenance audit in analysis/results/v10_response_audit01.json",
+  "automatic_retry": false,
+  "monitor": "Existing same-thread heartbeat automation-3 reactivated; stay quiet while state is unchanged"
+}

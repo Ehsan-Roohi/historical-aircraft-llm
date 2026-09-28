@@ -1,0 +1,18 @@
+{
+  "stage": "v10_astra_transport_retry01",
+  "status": "FROZEN_UNSENT",
+  "model": "gpt-6-astra",
+  "prior_array_job_id": "65011353_0",
+  "prior_maximum_output_tokens": 32000,
+  "prior_status": "error_or_uncertain RuntimeError; exact HTTP detail was not retained by the first runner",
+  "retry_rationale": "The source/prompt hashes passed and the previous successful Astra V9 call used a 20000-token cap. A single isolated retry at that previously working cap is diagnostic; the 32000-token limit is a plausible but unconfirmed cause.",
+  "maximum_output_tokens": 20000,
+  "reasoning_effort": "low",
+  "maximum_calls": 1,
+  "automatic_retry": false,
+  "prompt_sha256": "5caeaa69d1d1f8df155d1bf02eadc905e9a9859ac8ca101894f776229bba25f1",
+  "instructions_sha256": "21d3763f20fff67482c3fb90d0ab2b31e0590b6388bf56446944d5fc2334f591",
+  "parent_response_sha256": "1fe79cf004bc2f3943d330fff4afd4f69acb4f354c36c65ef119cc0808993f40",
+  "prior_outcome_sha256": "db845e533c6040542f6eaca7be5707046beb8cee03cb2231c10596637d3aa347",
+  "engineering_validation": "none"
+}

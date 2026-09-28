@@ -1,0 +1,39 @@
+{
+  "stage": "v10_geometry_power_feedback",
+  "status": "FROZEN_UNSENT",
+  "maximum_output_tokens": 32000,
+  "reasoning_effort": "low",
+  "maximum_calls_per_model": 1,
+  "instructions_sha256": "21d3763f20fff67482c3fb90d0ab2b31e0590b6388bf56446944d5fc2334f591",
+  "evaluator_geometry_audit_sha256": "56aedfa6a25e6113089f5ad46d8255fd803bdb04912fdfd6a09f1557d65c4da7",
+  "evaluator_power_audit_sha256": "bbc3d43cedc7c1a6a65bfe8a1706ead355300942678c01c835bde0d17a672cea",
+  "records": [
+    {
+      "case": "astra",
+      "model_requested": "gpt-6-astra",
+      "parent_response_sha256": "1fe79cf004bc2f3943d330fff4afd4f69acb4f354c36c65ef119cc0808993f40",
+      "prompt_file": "gpt-6-astra.prompt.txt",
+      "prompt_sha256": "5caeaa69d1d1f8df155d1bf02eadc905e9a9859ac8ca101894f776229bba25f1",
+      "prompt_bytes": 19789,
+      "sent": false
+    },
+    {
+      "case": "fable",
+      "model_requested": "claude-fable-5-1",
+      "parent_response_sha256": "236f33562cbc093729beb70ca3501dcc4453cc4ead75eec56cc169d0adff1f93",
+      "prompt_file": "claude-fable-5-1.prompt.txt",
+      "prompt_sha256": "63c71ac881a61405d1e80094cf48583f53a7f966b9f426c9dc15987903fdc767",
+      "prompt_bytes": 21770,
+      "sent": false
+    },
+    {
+      "case": "opus",
+      "model_requested": "claude-opus-5-5",
+      "parent_response_sha256": "51e34fbee9444e30c743b0312ff7802ba1d1ae2bf8b965c3d3b481a8444b5b9c",
+      "prompt_file": "claude-opus-5-5.prompt.txt",
+      "prompt_sha256": "d929cd80547c1b4e7324e4a4d336c10e636a0115ada9848bc10830874d2da040",
+      "prompt_bytes": 9640,
+      "sent": false
+    }
+  ]
+}

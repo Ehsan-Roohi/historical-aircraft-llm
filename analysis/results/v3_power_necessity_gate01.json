@@ -1,0 +1,89 @@
+{
+  "scope": "arithmetic of model-assumed drag, efficiency and unverified power targets only",
+  "source_sha256": {
+    "astra": "1fe79cf004bc2f3943d330fff4afd4f69acb4f354c36c65ef119cc0808993f40",
+    "fable": "236f33562cbc093729beb70ca3501dcc4453cc4ead75eec56cc169d0adff1f93",
+    "opus": "51e34fbee9444e30c743b0312ff7802ba1d1ae2bf8b965c3d3b481a8444b5b9c"
+  },
+  "rho_or_drag_validation": "NONE",
+  "measured_installed_engine_curve": false,
+  "measured_installed_propeller_map": false,
+  "cases": {
+    "astra": {
+      "speed_m_s": 18,
+      "propeller_efficiency_assumed": 0.55,
+      "drive_efficiency_assumed": 0.95,
+      "engine_target_W_unverified": 18000,
+      "drag_scenarios": [
+        {
+          "assumed_drag_N": 320,
+          "computed_useful_power_W": 5760,
+          "computed_engine_power_W": 11023.923,
+          "reported_engine_power_W": 11023.9,
+          "arithmetic_difference_W": 0.023,
+          "margin_to_unverified_target_W": 6976.077,
+          "minimum_prop_efficiency_at_target_and_assumed_drive": 0.336842
+        },
+        {
+          "assumed_drag_N": 400,
+          "computed_useful_power_W": 7200,
+          "computed_engine_power_W": 13779.904,
+          "reported_engine_power_W": 13779.9,
+          "arithmetic_difference_W": 0.004,
+          "margin_to_unverified_target_W": 4220.096,
+          "minimum_prop_efficiency_at_target_and_assumed_drive": 0.421053
+        },
+        {
+          "assumed_drag_N": 520,
+          "computed_useful_power_W": 9360,
+          "computed_engine_power_W": 17913.876,
+          "reported_engine_power_W": 17913.9,
+          "arithmetic_difference_W": -0.024,
+          "margin_to_unverified_target_W": 86.124,
+          "minimum_prop_efficiency_at_target_and_assumed_drive": 0.547368
+        }
+      ],
+      "verdict": "NOT_VALIDATED: even the highest assumed drag has only a small conditional target margin; actual drag, engine map and installed propeller efficiency are unknown"
+    },
+    "fable": {
+      "speed_m_s": 13,
+      "assumed_drag_N": 426,
+      "assumed_efficiency": 0.5,
+      "computed_useful_power_W": 5538,
+      "computed_shaft_power_W": 11076.0,
+      "reported_drag_scenario_shaft_W": 11080,
+      "other_reported_shaft_requirement_W": 10700,
+      "difference_between_computed_and_other_requirement_W": 376.0,
+      "minimum_efficiency_if_10700_W_is_a_cap": 0.51757,
+      "available_engine_power": "UNKNOWN",
+      "verdict": "INTERNAL_REQUIREMENT_CONFLICT: 10.7 kW and approximately 11.08 kW do not describe the same drag/speed/efficiency case; engine availability remains unknown"
+    },
+    "opus": {
+      "speed_m_s": 15,
+      "unverified_engine_target_W": 13000.0,
+      "assumed_overall_efficiency": 0.576,
+      "shaft_demand_W_from_model_scenarios": {
+        "low": 9600,
+        "nom": 11670,
+        "high": 13700
+      },
+      "high_drag_shortfall_to_target_W": 700.0,
+      "minimum_efficiency_at_target_if_high_case_useful_power_fixed": 0.607015,
+      "engine_curve": "UNKNOWN",
+      "propeller_efficiency_map": "UNKNOWN",
+      "verdict": "CONDITIONAL_HIGH_DRAG_TARGET_FAIL: high-drag assumed demand exceeds unverified 13 kW target; actual installed capability remains unknown"
+    }
+  },
+  "gate": {
+    "whole_aircraft_powered_trim": "NOT_ASSESSED",
+    "power_off_trim": "NOT_ASSESSED",
+    "installed_propulsion": "NOT_VALIDATED",
+    "required_next_inputs": [
+      "installed drag versus airspeed, incidence and control deflection, with uncertainty",
+      "engine brake power and torque versus rpm",
+      "propeller thrust, torque and efficiency versus airspeed, rpm and installation",
+      "gearbox/shaft losses, thrust-axis moment and slipstream increments",
+      "stall and full-aircraft lift/pitch-moment maps for trim"
+    ]
+  }
+}

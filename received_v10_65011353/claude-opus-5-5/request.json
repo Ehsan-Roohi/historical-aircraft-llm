@@ -1,0 +1,16 @@
+{
+  "stage": "v10_geometry_power_feedback",
+  "model_requested": "claude-opus-5-5",
+  "parent_response_sha256": "51e34fbee9444e30c743b0312ff7802ba1d1ae2bf8b965c3d3b481a8444b5b9c",
+  "prompt_sha256": "d929cd80547c1b4e7324e4a4d336c10e636a0115ada9848bc10830874d2da040",
+  "instructions_sha256": "21d3763f20fff67482c3fb90d0ab2b31e0590b6388bf56446944d5fc2334f591",
+  "manifest_sha256": "12ac6718849ec380de4136ce7db65ff0caef780ada0bc7de81f80fd2aaf7772a",
+  "maximum_output_tokens": 32000,
+  "reasoning_effort": "low",
+  "maximum_calls": 1,
+  "timeout_seconds": 5400,
+  "engineering_validation": "not_evaluated",
+  "transport_sha256": "df2a2a49dd6f41d60df38822364b25e1f91824d8b8e2369b3e7dd509746973c3",
+  "started_utc": "2026-09-28T22:27:43.344530+00:00",
+  "slurm_job_id": "65011353"
+}

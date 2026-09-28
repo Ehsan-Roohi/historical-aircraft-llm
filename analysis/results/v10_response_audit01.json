@@ -1,0 +1,175 @@
+{
+  "stage": "v10_geometry_power_feedback",
+  "array_job_id": "65011353",
+  "scope": "provenance, response parse and selected ledger/power/clearance arithmetic; no flight or installed trim validation",
+  "prompt_manifest_sha256": "12ac6718849ec380de4136ce7db65ff0caef780ada0bc7de81f80fd2aaf7772a",
+  "cases": {
+    "gpt-6-astra": {
+      "model": "gpt-6-astra",
+      "request_sha256": "4c3b4112869d35fcc3f6f7985fdbac572b7adeda158e5e39f93f818d597f3737",
+      "outcome_sha256": "db845e533c6040542f6eaca7be5707046beb8cee03cb2231c10596637d3aa347",
+      "prompt_hash_matches_manifest": true,
+      "instructions_hash_matches_manifest": true,
+      "parent_hash_matches_manifest": true,
+      "manifest_hash_matches_request": true,
+      "transport_status": "error_or_uncertain",
+      "error_type_if_any": "RuntimeError",
+      "response_present": false,
+      "diagnostic": "RuntimeError recorded, but original runner retained no HTTP/error detail; no automatic retry or engineering result"
+    },
+    "claude-fable-5-1": {
+      "model": "claude-fable-5-1",
+      "request_sha256": "2ae35df6ebc0e853201649d15cba06054b3409c8e85645a806065174ab7ffb28",
+      "outcome_sha256": "e3bd09d9e078b7080c43589b049a57386f556b40f48d8dbc3da9a53105d3773f",
+      "prompt_hash_matches_manifest": true,
+      "instructions_hash_matches_manifest": true,
+      "parent_hash_matches_manifest": true,
+      "manifest_hash_matches_request": true,
+      "transport_status": "completed",
+      "error_type_if_any": null,
+      "response_sha256": "bcd804a80087d451c8c9dac07d2f8a1118ba1487826ed32ec4a6420e49ea3324",
+      "response_hash_matches_outcome": true,
+      "model_id_matches": true,
+      "response_complete": true,
+      "parent_sha256_matches_patch": true,
+      "required_patch_fields_present": true,
+      "loading_checks": [
+        {
+          "state_selector": "65kg aft 0.50 full",
+          "independent_mass_kg": 299.5,
+          "model_mass_kg": 299.5,
+          "independent_xcg_m": 1.629499,
+          "model_xcg_m": 1.6295,
+          "mass_difference_kg": 0.0,
+          "xcg_difference_m": 1e-06,
+          "arithmetic_matches_rounding": true,
+          "independent_percent_chord": 36.73,
+          "model_percent_chord": 36.73,
+          "percent_chord_difference": 0.0
+        },
+        {
+          "state_selector": "65kg aft 0.50 empty",
+          "independent_mass_kg": 283.5,
+          "model_mass_kg": 283.5,
+          "independent_xcg_m": 1.632575,
+          "model_xcg_m": 1.6326,
+          "mass_difference_kg": 0.0,
+          "xcg_difference_m": 2.5e-05,
+          "arithmetic_matches_rounding": true,
+          "independent_percent_chord": 36.896,
+          "model_percent_chord": 36.9,
+          "percent_chord_difference": 0.004
+        },
+        {
+          "state_selector": "85kg fwd 0.20 full",
+          "independent_mass_kg": 319.5,
+          "model_mass_kg": 319.5,
+          "independent_xcg_m": 1.478983,
+          "model_xcg_m": 1.479,
+          "mass_difference_kg": 0.0,
+          "xcg_difference_m": 1.7e-05,
+          "arithmetic_matches_rounding": true,
+          "independent_percent_chord": 28.594,
+          "model_percent_chord": 28.59,
+          "percent_chord_difference": -0.004
+        },
+        {
+          "state_selector": "85kg fwd 0.20 empty",
+          "independent_mass_kg": 303.5,
+          "model_mass_kg": 303.5,
+          "independent_xcg_m": 1.473921,
+          "model_xcg_m": 1.474,
+          "mass_difference_kg": 0.0,
+          "xcg_difference_m": 7.9e-05,
+          "arithmetic_matches_rounding": true,
+          "independent_percent_chord": 28.32,
+          "model_percent_chord": 28.32,
+          "percent_chord_difference": -0.0
+        }
+      ],
+      "power": {
+        "model_required_shaft_W": 11076,
+        "independent_assumed_shaft_W": 11076.0,
+        "arithmetic_match": true,
+        "new_target_W_is_assumption": 12200,
+        "measured_available_W": "UNKNOWN"
+      },
+      "engineering_verdict": "MODEL_PATCH_NOT_INDEPENDENTLY_VALIDATED"
+    },
+    "claude-opus-5-5": {
+      "model": "claude-opus-5-5",
+      "request_sha256": "4463b4c1acdfb2f01b8f3122f2b9fcff428590ea30bb573670beca55d5593288",
+      "outcome_sha256": "6328ec5f6760762f2bab80d202fee9b73aa507124adac454ee6da2d86a6dc8d0",
+      "prompt_hash_matches_manifest": true,
+      "instructions_hash_matches_manifest": true,
+      "parent_hash_matches_manifest": true,
+      "manifest_hash_matches_request": true,
+      "transport_status": "completed",
+      "error_type_if_any": null,
+      "response_sha256": "100027bc62931728bbcc8b041caff043d6031938ebd388c329e0129f896ce04e",
+      "response_hash_matches_outcome": true,
+      "model_id_matches": true,
+      "response_complete": true,
+      "parent_sha256_matches_patch": true,
+      "required_patch_fields_present": true,
+      "loading_checks": [
+        {
+          "state_selector": "70kg pilot, 0 fuel",
+          "independent_mass_kg": 349.3,
+          "model_mass_kg": 349.3,
+          "independent_xcg_m": 0.626891,
+          "model_xcg_m": 0.6269,
+          "mass_difference_kg": 0.0,
+          "xcg_difference_m": 9e-06,
+          "arithmetic_matches_rounding": true
+        },
+        {
+          "state_selector": "90kg pilot, 12kg fuel",
+          "independent_mass_kg": 381.3,
+          "model_mass_kg": 381.3,
+          "independent_xcg_m": 0.542809,
+          "model_xcg_m": 0.5428,
+          "mass_difference_kg": 0.0,
+          "xcg_difference_m": -9e-06,
+          "arithmetic_matches_rounding": true
+        },
+        {
+          "state_selector": "90kg pilot, 0 fuel",
+          "independent_mass_kg": 369.3,
+          "model_mass_kg": 369.3,
+          "independent_xcg_m": 0.5442,
+          "model_xcg_m": 0.5442,
+          "mass_difference_kg": 0.0,
+          "xcg_difference_m": 0.0,
+          "arithmetic_matches_rounding": true
+        }
+      ],
+      "contact_and_power": {
+        "independent_tail_skid_contact_deg": 12.994617,
+        "independent_ventral_gap_at_contact_m": 0.221112,
+        "model_ventral_gap_m_in_text": 0.22111,
+        "model_high_case_margin_W": -700,
+        "independent_high_case_margin_W": -700,
+        "high_case_arithmetic_match": true
+      },
+      "engineering_verdict": "MODEL_PATCH_NOT_INDEPENDENTLY_VALIDATED"
+    }
+  },
+  "all_completed_responses_provenance_pass": true,
+  "astra_retry": {
+    "job_id": "65011846",
+    "retry_manifest_sha256": "1bc6f2514a79d45e373f722d846c8761794f1e3bbce5aab9790717ff558939d8",
+    "retry_manifest_hash_matches_request": true,
+    "prompt_hash_matches_original_and_retry": true,
+    "instructions_hash_matches": true,
+    "prior_failed_outcome_hash_matches": true,
+    "maximum_output_tokens": 20000,
+    "transport_status": "error_or_uncertain",
+    "error_type": "RuntimeError",
+    "diagnostic_redacted": "gpt-6-astra: HTTP 429 (credit_balance_exhausted, insufficient_quota)",
+    "response_present": false,
+    "outcome_sha256": "7e1b9ab5dce52f90ecd4222ef71c4832dd8826345019be53a7bf994c8518982f",
+    "further_automatic_retry": false,
+    "engineering_verdict": "NO_V10_ASTRA_DESIGN_RESPONSE"
+  }
+}

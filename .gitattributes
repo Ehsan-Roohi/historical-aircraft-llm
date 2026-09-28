@@ -3,3 +3,5 @@
 # provenance checks on a Git checkout.
 /received_v9_65007436/** -text
 /received_v9_retry_65009709/** -text
+/received_v10_65011353/** -text
+/received_v10_astra_retry_65011846/** -text

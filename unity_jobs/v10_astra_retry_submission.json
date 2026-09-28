@@ -1,0 +1,17 @@
+{
+  "stage": "v10_astra_transport_retry01",
+  "status": "FAILED_QUOTA_AUDITED",
+  "slurm_job_id": "65011846",
+  "model": "gpt-6-astra",
+  "remote_attempt_directory": "/work/pi_roohie_umass_edu/wright1900-benchmark/wright1900/v10_astra_retry01",
+  "prior_array_task": "65011353_0",
+  "prior_status": "FAILED 2:0; outcome error_or_uncertain RuntimeError, no response.json, no retained HTTP detail",
+  "retry_maximum_output_tokens": 20000,
+  "retry_rationale": "Single reviewed call at the previously successful Astra V9 cap; the 32k cap is only a plausible, unconfirmed failure cause",
+  "retry_manifest_sha256": "1bc6f2514a79d45e373f722d846c8761794f1e3bbce5aab9790717ff558939d8",
+  "remote_dry_run": "all prompt/instruction/parent/prior-outcome SHA-256 values passed before sbatch",
+  "final_outcome": "error_or_uncertain RuntimeError; HTTP 429 (credit_balance_exhausted, insufficient_quota); no response body",
+  "outcome_sha256": "7e1b9ab5dce52f90ecd4222ef71c4832dd8826345019be53a7bf994c8518982f",
+  "automatic_retry": false,
+  "engineering_validation": "not established"
+}

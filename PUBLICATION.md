@@ -1,5 +1,22 @@
 # Public research snapshot
 
+## 28 September 2026 V3 power gate and V10 correction returns
+
+The source-hashed power screen and its tests are published as
+`paper/v3_power_necessity_gate01.md` and
+`analysis/audit_v3_power_necessity.py`. Three case-specific V10 feedback
+requests, frozen instructions/manifest, one-call Slurm runner, raw
+request/response/outcome records and a separate one-time Astra retry
+are included as individual repository paths. Fable and Opus completed;
+their parent hashes and selected mass/power/ground-contact arithmetic
+were independently checked in `analysis/results/v10_response_audit01.json`.
+Astra returned no design: the first call recorded only `RuntimeError`,
+and the reviewed lower-cap retry identified API HTTP 429 insufficient
+quota. No further call was made. Model-authored corrections do not
+establish measured engine capability, installed trim, stability modes
+or flight clearance. The fixed `research_evidence.zip` remains the
+prior r5 snapshot; these newer direct files are not claimed to be in it.
+
 ## 28 September 2026 V3 geometry/loading gate 01
 
 The directly browsable `paper/v3_geometry_loading_gate01.md`,

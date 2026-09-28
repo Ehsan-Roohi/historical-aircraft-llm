@@ -1,0 +1,7 @@
+{
+  "status": "error_or_uncertain",
+  "error_type": "RuntimeError",
+  "automatic_retry": false,
+  "engineering_validation": "not_evaluated",
+  "finished_utc": "2026-09-28T22:26:43.813344+00:00"
+}

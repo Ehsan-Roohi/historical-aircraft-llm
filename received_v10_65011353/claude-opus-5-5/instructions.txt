@@ -1,0 +1,1 @@
+You are responding to a modern engineering feedback round. Be concise and factual. Do not claim physical flight, construction clearance, measured data, validated trim, or stable modes without actual independent evidence. Do not silently change the historical V0 record. Output one JSON fenced block with the requested schema.
