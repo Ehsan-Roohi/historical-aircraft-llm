@@ -4,7 +4,13 @@
 
 Versioned research on three aircraft proposals produced under a documentary cutoff of **31 December 1898**, followed by clarification, independent evaluation and model revision. The model identifiers in the archived runs are `gpt-6-astra`, `claude-fable-5-1` and `claude-opus-5-5`.
 
-The cutoff constrains supplied documents, not the models' training knowledge. Modern evaluator feedback is distinguished from the historical input packet. This repository is a work-in-progress research record, not a final journal submission or a build/flight authorization.
+The cutoff constrains supplied documents, not the models' training knowledge. Modern evaluator feedback is distinguished from the historical input packet. This repository is a work-in-progress research record, not a journal acceptance or a build/flight authorization.
+
+## 28 September 2026 manuscript and fixed research snapshot
+
+The [revised Scientific Reports-targeted source](paper/article_scientific_reports.tex), [supplement](paper/supplementary_scientific_reports.tex), [Data Availability inventory](paper/DATA_AVAILABILITY.md), and [Overleaf ZIP](scientific_reports_aircraft_overleaf_release03.zip) accompany the fixed tag `aircraft-sr-2026-09-28`. The paper distinguishes Astra/Opus independent V2 force and moment balances from Fable's unverified model claim in a [three-case force plate](figures/v2_force_moment_comparison.png). Table 2 is explicitly V1; a supplementary table identifies which flight-dynamics derivatives remain uncomputed. The attempted V2 AVL rate-derivative run failed before producing values; it is preserved as a failure, not replaced by an assumed zero.
+
+The `research_evidence.zip` snapshot contains **all locally recovered** prompts, responses, model attempts, code, figures, and selected numerical records in the stated project scope. Its 2,746 paths have per-file SHA-256 hashes in [MANIFEST.json](MANIFEST.json); the ZIP checksum is in [research_evidence.zip.sha256](research_evidence.zip.sha256). The archive does not claim recovery of unrecorded service-side transport or include third-party lecture/book PDFs. No DOI has been assigned.
 
 ## Current result
 

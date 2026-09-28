@@ -1,0 +1,166 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage[margin=22mm]{geometry}
+\usepackage{amsmath,amssymb,graphicx,booktabs,tabularx,array,float,pdflscape}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage{url}
+\usepackage[font=small,labelfont=bf]{caption}
+\newcommand{\figdir}{figures}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\thetable}{S\arabic{table}}
+\title{Supplementary Information: Historically Constrained Aircraft Design with Language Models}
+\author{Ehsan Roohi}
+\date{}
+\begin{document}
+\maketitle
+\noindent These source-backed figures and detailed computational tables accompany the main article. Model-authored V0 plates are proposals, not fabricated aircraft; the Wright three-view is a researcher lifting-surface reconstruction. Numerical digits support reproducibility, not measurement precision.
+\section*{Supplementary figures}
+
+\begin{landscape}
+\begin{figure}[H]\centering
+\includegraphics[width=.96\linewidth,height=.75\textheight,keepaspectratio]{\figdir/wright_threeview_reconstruction.png}
+\caption{Researcher reconstruction of the 1903 Flyer's lifting surfaces only. Plan, side and front views describe the geometry admitted to the aerodynamic calculation, not the complete historical machine. The moment reference is assumed; the pilot, drive, propellers, rudders, truss and wing-warping deformation are omitted.}\label{fig:wrightthree}
+\end{figure}
+\end{landscape}
+
+\begin{landscape}
+\begin{figure}[H]\centering
+\includegraphics[width=.96\linewidth,height=.74\textheight,keepaspectratio]{\figdir/astra_oblique_v0.png}
+\caption{Astra's model-authored V0 proposal, shown as an oblique component map. The two supporting surfaces, seated operator, long shaft, aft pusher, rudder and ground gear are proposed features; dashed envelopes and linkages are schematic. The oblique projection does not indicate an off-centre pilot. This is not the V1 analyzed geometry.}\label{fig:astra}
+\end{figure}
+\end{landscape}
+
+\begin{landscape}
+\begin{figure}[H]\centering
+\includegraphics[width=.96\linewidth,height=.80\textheight,keepaspectratio]{\figdir/fable_oblique_v0.png}
+\caption{Fable's model-authored V0 biplane proposal. The plate proposes a seated operator, braced upper and lower wings, a rotating horizontal tail, tip roll controls, two counter-rotating pushers and skids. It also retains unresolved mass-centre and tail--fin interference issues; proposed paths are not verified mechanisms.}\label{fig:fable}
+\end{figure}
+\end{landscape}
+
+\begin{landscape}
+\begin{figure}[H]\centering
+\includegraphics[width=.96\linewidth,height=.80\textheight,keepaspectratio]{\figdir/opus_oblique_v0.png}
+\caption{Opus's model-authored V0 biplane proposal. Two wing decks, roll flaps, seated cockpit, pusher drive, twin booms, aft elevator and rudder, and ground gear are indicated. Control runs and bracing are schematic, and several joint, clearance and ground-contact dimensions are unresolved.}\label{fig:opus}
+\end{figure}
+\end{landscape}
+
+\begin{figure}[H]\centering
+\includegraphics[width=\linewidth]{\figdir/wright_response_v1.png}
+\caption{Wright reconstruction sensitivity.}\label{fig:wright}
+\end{figure}
+
+\begin{figure}[H]\centering
+\includegraphics[width=\linewidth]{\figdir/fixed_control_response_v1.png}
+\caption{Fixed-control pitch response.}\label{fig:pitch}
+\end{figure}
+
+\section*{Supplementary tables}
+
+\begin{table}[H]\centering\small
+\caption{Representative interpolated balances, not direct trim validation.}\label{tab:interpolated}
+\begin{tabular}{lrrr}\toprule
+Quantity & Astra & Fable & Opus\\\midrule
+$\delta$, deg &0.0503&-11.2744&-1.8886\\
+$V$, m/s &15.438&12.827&16.853\\
+$L$, N &3205.180&2836.259&3477.407\\
+$T\sin\alpha$, N &31.015&27.283&33.374\\
+$W$, N &3236.194&2863.542&3510.781\\
+$D=T\cos\alpha$, N &443.534&390.161&477.268\\
+$M_{aero}$, N m &-316.128&18.658&207.155\\
+$M_T$, N m &316.128&-18.658&-207.155\\
+$P_{shaft}$, kW &12.450&10.009&13.406\\
+Engine target, kW &18 (unverified)&unknown&13 (unverified)\\\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]\centering\small
+\caption{Direct fine-grid lifting-surface loads.}\label{tab:loads}
+\begin{tabular}{lrr}\toprule
+Surface & Lift, N & Pitch moment about CG, N m\\\midrule
+Astra forward &2394.207&1911.535\\
+Astra rear &802.779&-2223.350\\
+Opus lower deck &1694.552&-107.805\\
+Opus upper deck &1901.859&-223.225\\
+Opus horizontal tail &-120.841&534.266\\\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]\centering\small
+\caption{Direct fine-grid balance at the archived candidate settings.}\label{tab:residual}
+\begin{tabular}{lrr}\toprule
+Quantity & Astra & Opus\\\midrule
+$L+T\sin\alpha$, N &3228.001&3508.944\\
+$W$, N &3236.194&3510.781\\
+$R_z$, N &-8.194&-1.837\\
+$D$, N &442.947&474.920\\
+$T\cos\alpha$, N &443.534&477.268\\
+$R_x$, N &0.588&2.348\\
+$M_{aero}$, N m &-312.049&203.116\\
+$M_T$, N m &316.128&-207.155\\
+$R_m$, N m &4.079&-4.039\\\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]\centering\small
+\caption{Fixed-control pitch diagnostics at the archived candidate settings.}\label{tab:stability}
+\begin{tabular}{llrrr}\toprule
+Design & Mesh & $C_{L_\alpha}$/deg & $C_{m_\alpha}$/deg & $SM_{L,eff}$, \% $c_{ref}$\\\midrule
+Astra &8/40&0.061280&0.005980&-9.758\\
+Astra &12/80&0.061180&0.006080&-9.938\\
+Opus &8/40&0.065380&-0.003280&5.017\\
+Opus &12/80&0.065440&-0.003360&5.134\\\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]\centering\footnotesize
+\caption{V1 architectural comparison and remaining evidence.}\label{tab:architecture}
+\begin{tabularx}{\linewidth}{l*{4}{>{\raggedright\arraybackslash}X}}\toprule
+System & Wright 1903 & Astra & Fable & Opus\\\midrule
+Lifting layout & Main biplane, forward elevator & Tandem lifting surfaces & Biplane, aft tail & Biplane, aft tail\\
+Pilot/control & Prone; mechanical pitch, warping and yaw controls & Seated; collective/differential forward incidence & Seated; movable tips and rotating tail & Seated; flaps, elevator and rudder\\
+Propulsion & Twin counter-rotating pushers; historical operation & Pusher with long shaft; installation unverified & Twin counter-rotating pushers; available power unresolved & Pusher; conditional power margin inadequate at selected efficiency\\
+Structure & Historical built artifact; later replicas require separate identity & Truss/wing-root and bearing paths incomplete & Lattice/member and joint definition incomplete & Spar/strut/wire definition incomplete\\
+Evidence & Documented flights, later tests and reconstructions & Numerical conditions only & Mechanical conflict in sampled trims & Numerical conditions only\\\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]\centering\small
+\caption{Selected V2 longitudinal screening states. Astra and Opus use different model-proposed operating points; Fable remains blocked before independent trim. Engine demands use assumed propeller and drive efficiencies and do not establish installed propulsion or flight.}\label{tab:v2}
+\begin{tabular}{lrrl}\toprule
+Quantity & Astra V2 & Opus V2 & Fable V2\\\midrule
+Mass, kg & 320 & 360 & 295 (ledger)\\
+Speed, m/s & 18.0 & 15.0 & --\\
+$\alpha$, deg & $-0.103$ & 6.347 & --\\
+Pitch control, deg & $-0.330$ & $-3.168$ & --\\
+$R_z$, N & $-0.063$ & $-0.025$ & --\\
+$R_m$, N m & $+0.065$ & $+0.0003$ & --\\
+$SM_{L,eff}$, \% $c_{ref}$ & 19.47 & 7.76 & --\\
+Useful power, kW & 4.42 & 6.65 & --\\
+Engine demand, kW, assumed & 8.46 & 11.67 & --\\\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]\centering\footnotesize
+\caption{Version inheritance and evaluation status. V0 is the initial concept; V1 is the frozen clarification used for the main screen; V2 received modern case-specific feedback. All stated improvements are hypotheses until independently checked.}\label{tab:stage}
+\begin{tabularx}{\linewidth}{lXXX}\toprule
+Case & V0 concept & V1 inherited or clarified & V2 changed; independent status\\\midrule
+Astra & Tandem lift, seated pilot, long aft-pusher shaft & Surface envelopes retained; 330 kg leaf ledger and analysis CG replace pictorial ballast position & Fixed wing/aft tail, tractor and short shaft; conditional longitudinal retrim only\\
+Fable & Biplane, twin pushers, continuous aft tail; contradictory CG & 292 kg leaf ledger, shifted deck stations, continuous tail; tail/fin collision at sampled trim & Split tail, relocated fin and revised drive; geometry and propulsion gates still open\\
+Opus & Biplane, single pusher, aft controls & 358 kg leaf ledger and defined 38 m$^2$ reference; conditional V1 trim & 360 kg ledger, longer skids, outboard booms, revised rudder and slower proposed state; conditional longitudinal retrim only\\\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]\centering\footnotesize
+\caption{Availability of flight-dynamics derivatives for the latest V2 proposals. Available angle slopes are local fixed-control attached-flow calculations, not installed-aircraft measurements. Missing derivatives must not be assigned zero.}\label{tab:derivativegate}
+\begin{tabularx}{\linewidth}{lXXX}\toprule
+Quantity & Astra V2 & Fable V2 & Opus V2\\\midrule
+$C_{L_\alpha},C_{m_\alpha}$ & 0.07292, $-0.01420$ per degree & No independent retrim & 0.06444, $-0.00500$ per degree\\
+$C_{m_q},C_{L_q}$ & Rate run failed before output & Geometry gate open & Rate run failed before output\\
+$C_{m_{\dot\alpha}},C_{L_{\dot\alpha}}$ & Downwash-delay model absent & Downwash-delay model absent & Downwash-delay model absent\\
+Lateral/directional and control derivatives & Body/fin and full control model absent & Geometry gate open & Body/fin and full control model absent\\
+Full inertia and dynamic eigenmodes & Intrinsic component inertia absent & Intrinsic component inertia absent & Intrinsic component inertia absent\\\bottomrule
+\end{tabularx}
+\end{table}
+\end{document}
