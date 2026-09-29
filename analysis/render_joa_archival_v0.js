@@ -6,7 +6,8 @@ const crypto = require('crypto');
 const sharp = require('sharp');
 
 const repository = path.resolve(__dirname, '..');
-const sourceDir = path.join(repository, 'figures', 'source_svg');
+const publicSources = path.join(repository, 'figures', 'source_svg');
+const sourceDir = fs.existsSync(publicSources) ? publicSources : __dirname;
 const outputDir = process.env.JOA_OUTPUT_DIR || path.join(repository, 'figures', 'generated', 'v0');
 const names = ['astra_oblique_v0','fable_oblique_v0','opus_oblique_v0'];
 const digest = bytes => crypto.createHash('sha256').update(bytes).digest('hex');

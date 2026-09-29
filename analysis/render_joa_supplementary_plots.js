@@ -5,7 +5,8 @@ const crypto = require('crypto');
 const sharp = require('sharp');
 
 const repository = path.resolve(__dirname, '..');
-const sourceDir = path.join(repository, 'figures', 'source_svg');
+const publicSources = path.join(repository, 'figures', 'source_svg');
+const sourceDir = fs.existsSync(publicSources) ? publicSources : __dirname;
 const outputDir = process.env.JOA_OUTPUT_DIR || path.join(repository, 'figures', 'generated', 'responses');
 const names = ['wright_response_v1', 'fixed_control_response_v1'];
 const digest = bytes => crypto.createHash('sha256').update(bytes).digest('hex');

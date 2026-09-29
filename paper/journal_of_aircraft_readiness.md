@@ -115,7 +115,7 @@ there have been partially repaired, not comprehensively cleared.
   data, first-source status and reliable archiving. Some inherited entries are
   collection/catalog or website records rather than archival research items.
 - Reduce the working main text: the editorial source screen finds about 12,637
-  English/alphanumeric words in the six named main sections (13,208 including
+  English/alphanumeric words in the six named main sections (13,212 including
   other article text), before equivalent space for seven figures and three
   tables, above AIAA's roughly 10,000--12,000-word regular-paper guideline.
   Preserve detailed mechanisms and audit tables in a self-contained
@@ -123,19 +123,22 @@ there have been partially repaired, not comprehensively cleared.
 - Check every raster line-art figure at its final placed width. All six main
   line-art figures now pass a conservative 600-ppi source screen at the stated
   widths; the redrawn V2 force/moment plate is about 923 ppi with body text
-  approximately 8.2 pt. All six supplementary line-art PNGs now also pass
+  approximately 8.2 pt. All nine supplementary line-art PNGs now also pass
   the pixel-density screen after source-SVG re-rasterization, but the dense V0
   oblique plates have some explicit labels capped at 6.31 pt (Astra), 6.88 pt
   (Fable) and 6.02 pt (Opus) even at maximum A4 landscape width, before the
-  height cap. Adjacent readable component keys now reproduce the mechanisms
-  and unknowns, but the plates themselves still need a less dense layout.
+  height cap. The immutable full plates retain these labels; three additional
+  researcher-created, numbered detail crops with adjacent readable keys make
+  the mechanisms and unknowns inspectable at print size without silently
+  revising V0 geometry. Their marker-size screen is only an upper bound.
   See `paper/joa_figure_gate01.md`. All figures require actual
   PDF-page inspection.
 - Verify permission and attribution for the Wright photograph and any reused
   source artwork. Verify all funding, conflict and author-affiliation fields;
   the draft deliberately does not invent them.
-- The draft data statement points to the G7 research tag, which contains the
-  new audited calculations and clearly marks V14 `FROZEN_UNSENT`. This fixed
+- The draft data statement points to the G8 research tag, which contains the
+  audited calculations and numbered V0 detail assets and clearly marks V14
+  `FROZEN_UNSENT`. This fixed
   draft tag is not the final submission deposit; update the statement again
   after the remaining scientific and journal gates are cleared.
 - The AIAA policy requires disclosure of research AI and AI-assisted writing

@@ -7,8 +7,13 @@ const sharp = require('sharp');
 
 const repository = path.resolve(__dirname, '..');
 const out = process.env.JOA_OUTPUT_DIR || path.join(repository, 'figures', 'generated', 'v2forces');
-const legacy = path.join(repository, 'figures', 'source_svg', 'draw_v2_force_moment.py');
-const compact = path.join(repository, 'figures', 'source_svg', 'v2_compact_report.json');
+const publicSources = path.join(repository, 'figures', 'source_svg');
+const legacy = fs.existsSync(publicSources)
+  ? path.join(publicSources, 'draw_v2_force_moment.py')
+  : path.join(__dirname, 'archived_draw_v2_force_moment.py');
+const compact = fs.existsSync(publicSources)
+  ? path.join(publicSources, 'v2_compact_report.json')
+  : path.join(__dirname, 'archived_v2_compact_report.json');
 const blue = '#0e7198';
 const amber = '#a9650e';
 const ink = '#203746';

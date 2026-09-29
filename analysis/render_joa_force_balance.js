@@ -7,7 +7,9 @@ const sharp = require('sharp');
 
 const repository = path.resolve(__dirname, '..');
 const out = process.env.JOA_OUTPUT_DIR || path.join(repository, 'figures', 'generated', 'balance');
-const comparisonSource = path.join(__dirname, '..', 'figures', 'source_svg', 'configuration_comparison_v3.svg');
+const publicComparison = path.join(repository, 'figures', 'source_svg', 'configuration_comparison_v3.svg');
+const comparisonSource = fs.existsSync(publicComparison)
+  ? publicComparison : path.join(__dirname, 'archived_configuration_comparison_v3.svg');
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560">
 <defs>
   <marker id="blueArrow" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M1 1 L10 6 L1 11Z" fill="#12698b"/></marker>

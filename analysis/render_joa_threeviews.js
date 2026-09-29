@@ -6,7 +6,8 @@ const crypto = require('crypto');
 const sharp = require('sharp');
 
 const root = path.resolve(__dirname, '..');
-const sourceRoot = path.join(root, 'output', 'stage_threeviews');
+const publicSources = path.join(root, 'output', 'stage_threeviews');
+const sourceRoot = fs.existsSync(publicSources) ? publicSources : path.join(__dirname, 'source_threeviews');
 const targetRoot = process.env.JOA_OUTPUT_DIR || path.join(root, 'figures', 'generated', 'threeviews');
 const plates = [
   ['V2', 'gpt-6-astra', 'astra_v2_threeview'],

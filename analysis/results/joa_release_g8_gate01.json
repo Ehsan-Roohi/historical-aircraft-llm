@@ -1,0 +1,96 @@
+{
+  "status": "DRAFT_RESEARCH_RELEASE_ONLY",
+  "intended_tag": "aircraft-joa-2026-09-29-g8-draft",
+  "scientific_claim_scope": "Source-hashed evaluator screens only; no flight, full dynamics or journal acceptance",
+  "v14_status": "FROZEN_UNSENT",
+  "v14_model_count": 3,
+  "public_figure_source_assets": [
+    {
+      "path": "figures/source_svg/configuration_comparison_v3.svg",
+      "sha256": "15ec64bd5467f4b41ef5c717185d3423f7fb8512b2a4831c7f56c74de9f83074",
+      "bytes": 15868
+    },
+    {
+      "path": "figures/source_svg/configuration_comparison_v3.json",
+      "sha256": "ac40be0e546af65b758481aa6c8f862ee792aee8006d61461f319063b19a089c",
+      "bytes": 1168
+    },
+    {
+      "path": "figures/source_svg/draw_v2_force_moment.py",
+      "sha256": "f59b0bedabb181f7bd8baf0c4b99f227460b5a790cc3bd1b8f678db38f93caa6",
+      "bytes": 5330
+    },
+    {
+      "path": "figures/source_svg/v2_compact_report.json",
+      "sha256": "7e41d5ad4ece49ff55d77a963e982c4628fb8ff39125ac4d2d49f7c9d2ea6108",
+      "bytes": 6762
+    },
+    {
+      "path": "figures/source_svg/astra_oblique_v0.svg",
+      "sha256": "02fb21556bc46082b8b8675ec7ee356681f2934ed2a59e30639780f32b55b376",
+      "bytes": 14218
+    },
+    {
+      "path": "figures/source_svg/fable_oblique_v0.svg",
+      "sha256": "9bfee46a42554728e7d47f32f6afea8b9876fd5ff1bda7bda644e181d626997f",
+      "bytes": 5622
+    },
+    {
+      "path": "figures/source_svg/opus_oblique_v0.svg",
+      "sha256": "a568d80e925d02425bb61d9bda1f0879627053256674e62573983cad2363e651",
+      "bytes": 10315
+    },
+    {
+      "path": "figures/source_svg/wright_response_v1.svg",
+      "sha256": "1711de1b9723d50d32414526558b4c54ef155c1fae536638e2c3969e82b8fd06",
+      "bytes": 12371
+    },
+    {
+      "path": "figures/source_svg/fixed_control_response_v1.svg",
+      "sha256": "b8228d49f8dab36c12cd48150151de00d4cfc75cee61e1aa5b30feb858cdd05d",
+      "bytes": 10289
+    },
+    {
+      "path": "figures/source_svg/v0_details/astra_oblique_v0_detail.svg",
+      "sha256": "150cb0681eaca8059b34b942fe5d72672b97f1f6fad370faffd4f671db0f5e57",
+      "bytes": 11014
+    },
+    {
+      "path": "figures/source_svg/v0_details/fable_oblique_v0_detail.svg",
+      "sha256": "1eac602effbafb38924c8bcd842410777bd5209adcac0e54ed0493c6a1147683",
+      "bytes": 5299
+    },
+    {
+      "path": "figures/source_svg/v0_details/opus_oblique_v0_detail.svg",
+      "sha256": "da3b2d0c0725479cedcabdb5d169cbd1d48edebb032e603b7fc13e66a8ad1e20",
+      "bytes": 8119
+    },
+    {
+      "path": "figures/source_svg/v0_details/MANIFEST.json",
+      "sha256": "476de53925f92aadd4d473901ba1362850a9fb32648e7fd891cd44fa4584a2eb",
+      "bytes": 2569
+    }
+  ],
+  "source_and_v14_git_index_bytes_match_worktree": true,
+  "text_files_screened_for_known_secret_signatures": 169,
+  "restricted_binary_or_private_file_types_found_in_new_scope": false,
+  "overleaf_zip_sha256": "fdfc8d9167b3541165f06470efe04683871cd73eff3913a1851a0fae2fa03539",
+  "overleaf_zip_bytes": 12693641,
+  "journal_submission_ready": false,
+  "flight_capability_validated": false,
+  "remaining_gates": [
+    "TeX compilation and page-by-page PDF inspection, including original V0 type",
+    "all-reference and image-rights review",
+    "installed power and six-component trim",
+    "physical intrinsic inertia and full dynamic modes"
+  ],
+  "limitations": "Automated file/credential patterns and known records only; not a legal clearance or independent full-data review",
+  "v0_researcher_display_details": {
+    "count": 3,
+    "markers_each": 8,
+    "original_svg_hashes_match": true,
+    "detail_svg_and_png_hashes_match_overleaf_zip": true,
+    "original_v0_plates_altered": false,
+    "compiled_page_readability_validated": false
+  }
+}

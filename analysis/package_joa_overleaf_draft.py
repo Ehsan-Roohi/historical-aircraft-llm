@@ -18,8 +18,9 @@ DISPLAY2 = PROJECT / "output/figures_joa_draft02"
 DISPLAY3 = PROJECT / "output/figures_joa_draft03"
 DISPLAY4 = PROJECT / "output/figures_joa_draft04"
 DISPLAY5 = PROJECT / "output/figures_joa_draft05"
-DEST = PROJECT / "output/overleaf/aircraft_joa_2026_09_29_draft15"
-ARCHIVE = PROJECT / "output/delivery/aircraft_joa_overleaf_draft15.zip"
+DISPLAY6 = PROJECT / "output/figures_joa_draft06"
+DEST = PROJECT / "output/overleaf/aircraft_joa_2026_09_29_draft17"
+ARCHIVE = PROJECT / "output/delivery/aircraft_joa_overleaf_draft17.zip"
 
 
 def digest(path):
@@ -42,7 +43,7 @@ def main():
         shutil.copy2(file, figures / file.name)
     for file in DISPLAY3.glob("*.png"):
         shutil.copy2(file, figures / file.name)
-    for folder in (DISPLAY4, DISPLAY5):
+    for folder in (DISPLAY4, DISPLAY5, DISPLAY6):
         for file in folder.glob("*.png"):
             shutil.copy2(file, figures / file.name)
     sources = DEST / "figure_sources"
@@ -53,14 +54,21 @@ def main():
         shutil.copy2(file, sources / file.name)
     for file in DISPLAY3.glob("*.svg"):
         shutil.copy2(file, sources / file.name)
-    for folder in (DISPLAY4, DISPLAY5):
+    for folder in (DISPLAY4, DISPLAY5, DISPLAY6):
         for file in folder.glob("*.svg"):
             shutil.copy2(file, sources / file.name)
+    raw_threeviews = PUBLIC / "output/stage_threeviews"
+    for stage, model in (("V2", "gpt-6-astra"), ("V2", "claude-fable-5-1"),
+                         ("V2", "claude-opus-5-5"), ("Wright", "wright-flyer-1903")):
+        target = sources / "source_threeviews" / stage
+        target.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(raw_threeviews / stage / (model + ".svg"), target / (model + ".svg"))
     shutil.copy2(DISPLAY / "manifest.json", sources / "threeview_display_manifest.json")
     shutil.copy2(DISPLAY2 / "MANIFEST.json", sources / "display_derivatives_manifest.json")
     shutil.copy2(DISPLAY3 / "MANIFEST.json", sources / "v2_force_display_manifest.json")
     shutil.copy2(DISPLAY4 / "MANIFEST.json", sources / "response_plots_display_manifest.json")
     shutil.copy2(DISPLAY5 / "MANIFEST.json", sources / "v0_obliques_display_manifest.json")
+    shutil.copy2(DISPLAY6 / "MANIFEST.json", sources / "v0_details_display_manifest.json")
     shutil.copy2(PUBLIC / "analysis/render_joa_v2_force_moment.js",
                  sources / "render_joa_v2_force_moment.js")
     shutil.copy2(PUBLIC / "analysis/render_joa_threeviews.js",
@@ -69,10 +77,16 @@ def main():
                  sources / "render_joa_supplementary_plots.js")
     shutil.copy2(PUBLIC / "analysis/render_joa_archival_v0.js",
                  sources / "render_joa_archival_v0.js")
+    shutil.copy2(PUBLIC / "analysis/render_joa_v0_details.js",
+                 sources / "render_joa_v0_details.js")
+    shutil.copy2(PUBLIC / "analysis/render_joa_force_balance.js",
+                 sources / "render_joa_force_balance.js")
     shutil.copy2(PROJECT / "analysis/draw_v2_force_moment.py",
                  sources / "archived_draw_v2_force_moment.py")
     shutil.copy2(PROJECT / "analysis/results/v2_trim_solve01/compact_report.json",
                  sources / "archived_v2_compact_report.json")
+    shutil.copy2(PUBLIC / "figures/source_svg/configuration_comparison_v3.svg",
+                 sources / "archived_configuration_comparison_v3.svg")
     shutil.copy2(PUBLIC / "paper/article_journal_of_aircraft.tex", DEST / "main.tex")
     shutil.copy2(PUBLIC / "paper/references_journal_of_aircraft.tex",
                  DEST / "references_journal_of_aircraft.tex")
@@ -125,9 +139,13 @@ def main():
         "redrawn for print legibility, preserving the frozen V2 values and "
         "the model-claim distinction; its renderer and archived numerical "
         "inputs are in `figure_sources`. The supplementary response plots "
-        "and V0 obliques were re-rasterized from unchanged SVG sources; "
-        "the dense V0 text is still too small for print and needs re-layout; "
-        "adjacent readable component keys are now included in the supplement. "
+        "and V0 obliques were re-rasterized from unchanged SVG sources. "
+        "The unmodified V0 plates retain text too small for print; the "
+        "supplement now also includes source-hashed, enlarged researcher "
+        "display crops with numbered markers and adjacent readable keys. "
+        "The figure renderers and raw three-view SVGs in `figure_sources` "
+        "can be rerun with Node.js and Sharp; set `JOA_OUTPUT_DIR` to select "
+        "a writable output directory. "
         "The ground, clearance, Fable power–mass and centroid-only inertia "
         "audits are included here and in the intended G7 draft research tag; "
         "V14 prompts remain FROZEN_UNSENT.\n",
@@ -139,8 +157,8 @@ def main():
                             "sha256": digest(file), "bytes": file.stat().st_size})
     (DEST / "MANIFEST.json").write_text(json.dumps({
         "status": "DRAFT_NOT_SUBMISSION_READY",
-        "source_parent_commit": "7d85e762bd2fa051521d007388149c09ba98913d",
-        "intended_release_tag": "aircraft-joa-2026-09-29-g7-draft",
+        "source_parent_commit": "5c35583d2f90062797091456a894980418068551",
+        "intended_release_tag": "aircraft-joa-2026-09-29-g8-draft",
         "files": records}, indent=2) + "\n", encoding="utf-8")
     ARCHIVE.parent.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(ARCHIVE, "x", zipfile.ZIP_DEFLATED) as handle:

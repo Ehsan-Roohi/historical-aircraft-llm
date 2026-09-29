@@ -1,5 +1,17 @@
 # Public research snapshot
 
+## 29 September 2026 G8 readable V0 detail archive
+
+The immutable draft tag is `aircraft-joa-2026-09-29-g8-draft`. Three
+researcher-created numbered mechanism crops, their immutable source-SVG
+hashes, rendering code, readable supplement keys and Overleaf draft17 are
+added to the G7 record. They hide dense source prose for print inspection
+without relocating model-authored components. The originals remain archived.
+All nine supplementary line-art PNGs meet the numerical 600-ppi source
+screen at their placed-width caps; this is not a compiled-page inspection.
+The original V0 annotations remain under 8 pt at maximum width, and V14
+remains `FROZEN_UNSENT`. No new flight or stability acceptance is claimed.
+
 ## 29 September 2026 G7 Journal of Aircraft draft archive
 
 The immutable draft tag is `aircraft-joa-2026-09-29-g7-draft`. It adds the

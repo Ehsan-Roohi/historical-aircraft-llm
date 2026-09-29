@@ -115,6 +115,39 @@
       "meets_600_ppi_line_art_screen": true
     },
     {
+      "name": "astra_oblique_v0_detail.png",
+      "placement": "supplement landscape detail",
+      "pixels": [
+        6000,
+        4133
+      ],
+      "maximum_placed_width_in": 9.56220472440945,
+      "minimum_effective_horizontal_ppi": 627.5,
+      "meets_600_ppi_line_art_screen": true
+    },
+    {
+      "name": "fable_oblique_v0_detail.png",
+      "placement": "supplement landscape detail",
+      "pixels": [
+        6000,
+        4080
+      ],
+      "maximum_placed_width_in": 9.56220472440945,
+      "minimum_effective_horizontal_ppi": 627.5,
+      "meets_600_ppi_line_art_screen": true
+    },
+    {
+      "name": "opus_oblique_v0_detail.png",
+      "placement": "supplement landscape detail",
+      "pixels": [
+        6000,
+        3600
+      ],
+      "maximum_placed_width_in": 9.56220472440945,
+      "minimum_effective_horizontal_ppi": 627.5,
+      "meets_600_ppi_line_art_screen": true
+    },
+    {
       "name": "wright_response_v1.png",
       "placement": "supplement portrait",
       "pixels": [
@@ -156,6 +189,26 @@
       "minimum_explicit_source_font_units": 10.5,
       "maximum_possible_point_size_at_width_cap": 6.02,
       "below_8pt_even_without_height_cap": true
+    }
+  ],
+  "v0_numbered_detail_marker_upper_bounds": [
+    {
+      "name": "astra_oblique_v0",
+      "marker_count": 8,
+      "maximum_possible_point_size_at_width_cap": 13.77,
+      "caveat": "PDF height cap and rendered placement still require visual inspection"
+    },
+    {
+      "name": "fable_oblique_v0",
+      "marker_count": 8,
+      "maximum_possible_point_size_at_width_cap": 12.39,
+      "caveat": "PDF height cap and rendered placement still require visual inspection"
+    },
+    {
+      "name": "opus_oblique_v0",
+      "marker_count": 8,
+      "maximum_possible_point_size_at_width_cap": 12.39,
+      "caveat": "PDF height cap and rendered placement still require visual inspection"
     }
   ],
   "not_screened": [

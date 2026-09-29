@@ -6,7 +6,18 @@ Versioned research on three aircraft proposals produced under a documentary cuto
 
 The cutoff constrains supplied documents, not the models' training knowledge. Modern evaluator feedback is distinguished from the historical input packet. This repository is a work-in-progress research record, not a journal acceptance or a build/flight authorization.
 
-## 29 September 2026 G7 Journal of Aircraft research draft
+## 29 September 2026 G8 figure-readability draft
+
+The fixed tag `aircraft-joa-2026-09-29-g8-draft` adds three numbered,
+enlarged V0 mechanism details and [Overleaf draft 17](aircraft_joa_overleaf_draft17.zip).
+These are researcher-created display crops of the unchanged model-authored
+SVGs, not design revisions. Eight markers per aircraft have readable keys in
+the supplement, while the complete original V0 plates remain available.
+The G8 manuscript and ZIP remain **research drafts**: no TeX/PDF proof,
+verified installed propulsion, full trim, dynamic modes or flight claim.
+V14 remains `FROZEN_UNSENT`. The G7 archive below remains immutable.
+
+## 29 September 2026 earlier G7 Journal of Aircraft research draft
 
 The fixed draft tag `aircraft-joa-2026-09-29-g7-draft` contains the
 [Journal of Aircraft manuscript](paper/article_journal_of_aircraft.tex),

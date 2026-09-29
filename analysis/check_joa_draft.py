@@ -10,8 +10,8 @@ import zipfile
 
 PUBLIC = Path(__file__).resolve().parents[1]
 PROJECT = Path(__file__).resolve().parents[3]
-PACKAGE = PROJECT / "output/overleaf/aircraft_joa_2026_09_29_draft15"
-ZIP = PROJECT / "output/delivery/aircraft_joa_overleaf_draft15.zip"
+PACKAGE = PROJECT / "output/overleaf/aircraft_joa_2026_09_29_draft17"
+ZIP = PROJECT / "output/delivery/aircraft_joa_overleaf_draft17.zip"
 
 
 def extract_braced(text, marker, start=0):
@@ -34,6 +34,7 @@ def main():
     supplement = (PACKAGE / "supplementary.tex").read_text(encoding="utf-8")
     for model in ("Astra", "Fable", "Opus"):
         assert supplement.count(r"\paragraph{Readable key to the " + model + " V0 plate.}") == 1
+        assert supplement.count(r"\paragraph{" + model + " detail key.}") == 1
     refs = (PACKAGE / "references_journal_of_aircraft.tex").read_text(encoding="utf-8")
     title, _ = extract_braced(main_tex, r"\title{")
     assert len(title.split()) <= 12
@@ -46,7 +47,7 @@ def main():
     assert "ScholarOne" in main_tex
     assert r"\label{eq:groundreactions}" in main_tex
     assert r"\label{eq:parallelaxis}" in main_tex
-    assert "aircraft-joa-2026-09-29-g7-draft" in main_tex
+    assert "aircraft-joa-2026-09-29-g8-draft" in main_tex
     assert "no V14 model response exists" in main_tex
     assert main_tex.count(r"\begin{landscape}") == main_tex.count(r"\end{landscape}")
     captions = []
@@ -81,6 +82,8 @@ def main():
     figure_gate = json.loads((PACKAGE / "audit_data" / "joa_figure_display_gate01.json").read_text(encoding="utf-8"))
     assert figure_gate["remaining_main_below_600"] == []
     assert figure_gate["remaining_supplementary_below_600"] == []
+    assert len(figure_gate["v0_numbered_detail_marker_upper_bounds"]) == 3
+    assert all(row["marker_count"] == 8 for row in figure_gate["v0_numbered_detail_marker_upper_bounds"])
     assert all(row["below_8pt_even_without_height_cap"] for row in figure_gate["v0_lettering_upper_bounds"])
     for name, expected in (("configuration_comparison_v3.png", 6000),
                            ("force_moment_balance.png", 4800),
@@ -94,11 +97,21 @@ def main():
     assert hashlib.sha256(source_svg.read_bytes()).hexdigest() == display_manifest["source_svg_sha256"]
     assert hashlib.sha256((PACKAGE / "figure_sources/archived_draw_v2_force_moment.py").read_bytes()).hexdigest() == display_manifest["frozen_v2_python_source_sha256"]
     assert hashlib.sha256((PACKAGE / "figure_sources/archived_v2_compact_report.json").read_bytes()).hexdigest() == display_manifest["frozen_v2_compact_report_sha256"]
+    assert hashlib.sha256((PACKAGE / "figure_sources/archived_configuration_comparison_v3.svg").read_bytes()).hexdigest() == hashlib.sha256((PUBLIC / "figures/source_svg/configuration_comparison_v3.svg").read_bytes()).hexdigest()
+    for stage, model in (("V2", "gpt-6-astra"), ("V2", "claude-fable-5-1"),
+                         ("V2", "claude-opus-5-5"), ("Wright", "wright-flyer-1903")):
+        assert (PACKAGE / "figure_sources/source_threeviews" / stage / (model + ".svg")).is_file()
     for manifest_name, hash_key in (("response_plots_display_manifest.json", "source_svg_sha256"),
                                     ("v0_obliques_display_manifest.json", "original_svg_sha256")):
         derivative_manifest = json.loads((PACKAGE / "figure_sources" / manifest_name).read_text(encoding="utf-8"))
         for row in derivative_manifest["rows"]:
             assert hashlib.sha256((PACKAGE / "figure_sources" / (row["name"] + ".svg")).read_bytes()).hexdigest() == row[hash_key]
+    detail_manifest = json.loads((PACKAGE / "figure_sources/v0_details_display_manifest.json").read_text(encoding="utf-8"))
+    assert len(detail_manifest["rows"]) == 3
+    for row in detail_manifest["rows"]:
+        name = row["name"] + "_detail"
+        assert hashlib.sha256((PACKAGE / "figure_sources" / (name + ".svg")).read_bytes()).hexdigest() == row["detail_svg_sha256"]
+        assert hashlib.sha256((PACKAGE / "figures" / (name + ".png")).read_bytes()).hexdigest() == row["detail_png_sha256"]
     editorial = json.loads((PACKAGE / "audit_data" / "joa_editorial_gate01.json").read_text(encoding="utf-8"))
     assert editorial["reference_count"] == 40
     assert editorial["source_reference_order_matches_citation_order"]

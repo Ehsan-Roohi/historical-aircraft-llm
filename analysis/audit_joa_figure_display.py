@@ -18,6 +18,7 @@ DISPLAY2 = PROJECT / "output/figures_joa_draft02"
 DISPLAY3 = PROJECT / "output/figures_joa_draft03"
 DISPLAY4 = PROJECT / "output/figures_joa_draft04"
 DISPLAY5 = PROJECT / "output/figures_joa_draft05"
+DISPLAY6 = PROJECT / "output/figures_joa_draft06"
 OUT = PUBLIC / "analysis/results/joa_figure_display_gate01.json"
 
 # Main text: US letter, 1-inch margins, hence 6.5-in portrait and
@@ -36,6 +37,9 @@ SUPPLEMENTARY_FIGURES = [
     ("astra_oblique_v0.png", 0.96 * (297-44)/25.4, DISPLAY5, "supplement landscape"),
     ("fable_oblique_v0.png", 0.96 * (297-44)/25.4, DISPLAY5, "supplement landscape"),
     ("opus_oblique_v0.png", 0.96 * (297-44)/25.4, DISPLAY5, "supplement landscape"),
+    ("astra_oblique_v0_detail.png", 0.96 * (297-44)/25.4, DISPLAY6, "supplement landscape detail"),
+    ("fable_oblique_v0_detail.png", 0.96 * (297-44)/25.4, DISPLAY6, "supplement landscape detail"),
+    ("opus_oblique_v0_detail.png", 0.96 * (297-44)/25.4, DISPLAY6, "supplement landscape detail"),
     ("wright_response_v1.png", 166/25.4, DISPLAY4, "supplement portrait"),
     ("fixed_control_response_v1.png", 166/25.4, DISPLAY4, "supplement portrait"),
 ]
@@ -64,6 +68,7 @@ def main():
     rows = audit_list(FIGURES)
     supplementary_rows = audit_list(SUPPLEMENTARY_FIGURES)
     v0_lettering = []
+    detail_markers = []
     max_supplement_landscape_width_in = 0.96 * (297-44)/25.4
     for name in ("astra_oblique_v0", "fable_oblique_v0", "opus_oblique_v0"):
         svg = (DISPLAY5 / (name + ".svg")).read_text(encoding="utf-8")
@@ -76,6 +81,15 @@ def main():
         v0_lettering.append({"name": name, "minimum_explicit_source_font_units": min_size,
                              "maximum_possible_point_size_at_width_cap": round(upper_pt, 2),
                              "below_8pt_even_without_height_cap": upper_pt < 8})
+        detail = (DISPLAY6 / (name + "_detail.svg")).read_text(encoding="utf-8")
+        detail_box = re.search(r'viewBox="([0-9.]+) ([0-9.]+) ([0-9.]+) ([0-9.]+)"', detail)
+        marker_count = detail.count('aria-label="component ')
+        if not detail_box or marker_count != 8 or 'font-size="18"' not in detail:
+            raise ValueError(f"Cannot screen V0 detail markers: {name}")
+        marker_upper_pt = 18 / float(detail_box.group(3)) * max_supplement_landscape_width_in * 72
+        detail_markers.append({"name": name, "marker_count": marker_count,
+                               "maximum_possible_point_size_at_width_cap": round(marker_upper_pt, 2),
+                               "caveat": "PDF height cap and rendered placement still require visual inspection"})
     OUT.write_text(json.dumps({
         "scope": "PNG line-art pixel-density and limited V0 source-lettering screen; not final PDF proof",
         "rows": rows,
@@ -83,6 +97,7 @@ def main():
         "supplementary_rows": supplementary_rows,
         "remaining_supplementary_below_600": [r["name"] for r in supplementary_rows if not r["meets_600_ppi_line_art_screen"]],
         "v0_lettering_upper_bounds": v0_lettering,
+        "v0_numbered_detail_marker_upper_bounds": detail_markers,
         "not_screened": ["Wright photographic raster (300-ppi class)", "actual compiled placement, transformed lettering, and line weights"]
     }, indent=2) + "\n", encoding="utf-8")
     print(OUT.name)
