@@ -1,0 +1,40 @@
+{
+  "stage": "v12_installation_candidate",
+  "status": "FROZEN_UNSENT",
+  "instructions_sha256": "f7137d148b937a11182ab903ce12c7b542e7f6b91cf5ea5b804556be4e31d779",
+  "runner_sha256": "0c195ac6e2e878488ceaff435aec6fa1591bd571eb309d01624915e070d62c5f",
+  "maximum_output_tokens": 32000,
+  "reasoning_effort": "low",
+  "records": [
+    {
+      "model": "gpt-6-astra",
+      "prompt_file": "gpt-6-astra.prompt.txt",
+      "prompt_sha256": "0826dac80df390b8228365ffb24e7e7a0e336d4c2ddcff1f723177ded9e84ef8",
+      "parent_file": "gpt-6-astra.response.json",
+      "parent_sha256": "7995e6d569ace168e720e81711d59a800a6d0c56e8a8664031a18abdffec741c",
+      "baseline_sha256": "1fe79cf004bc2f3943d330fff4afd4f69acb4f354c36c65ef119cc0808993f40",
+      "v10_sha256": "4bf91701328a2c9a86e39ddb479f2b6d9abfec0f7ba3bc5872a9559eab872387",
+      "maximum_calls": 1
+    },
+    {
+      "model": "claude-fable-5-1",
+      "prompt_file": "claude-fable-5-1.prompt.txt",
+      "prompt_sha256": "125c59b0e295a195d37221d9a33c80f514e440ace78931411544016286d0b34e",
+      "parent_file": "claude-fable-5-1.response.json",
+      "parent_sha256": "a399174b7830e628549fd3750c48ae2ddb52b68a7e21847605632238c9fcd759",
+      "baseline_sha256": "236f33562cbc093729beb70ca3501dcc4453cc4ead75eec56cc169d0adff1f93",
+      "v10_sha256": "bcd804a80087d451c8c9dac07d2f8a1118ba1487826ed32ec4a6420e49ea3324",
+      "maximum_calls": 1
+    },
+    {
+      "model": "claude-opus-5-5",
+      "prompt_file": "claude-opus-5-5.prompt.txt",
+      "prompt_sha256": "d4456f44891f8234a6e3e52e88a7cc934979d941128effac56385aa746cbf478",
+      "parent_file": "claude-opus-5-5.response.json",
+      "parent_sha256": "06e136c75c92bbfabbd6fa58cbf9eef23a1d95bee576fd79c0f38ecd288c228f",
+      "baseline_sha256": "51e34fbee9444e30c743b0312ff7802ba1d1ae2bf8b965c3d3b481a8444b5b9c",
+      "v10_sha256": "100027bc62931728bbcc8b041caff043d6031938ebd388c329e0129f896ce04e",
+      "maximum_calls": 1
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "stage": "v12_installation_candidate",
+  "runner_template_sha256": "503cb7c1e438c0b9b3a1cd4f096e167944a7c5287cd54e919efdb185363b66f1",
+  "records": [
+    {
+      "model": "gpt-6-astra",
+      "base_prompt_sha256": "fa0f95ce107720041529d47681399201b6ea4838a0f4777f4267d305cb2915fb",
+      "sources": [
+        {
+          "label": "V3 baseline",
+          "path": "received_v9_65007436/gpt-6-astra/response.json",
+          "wrapper_sha256": "1fe79cf004bc2f3943d330fff4afd4f69acb4f354c36c65ef119cc0808993f40",
+          "response_text_sha256": "ad89e62f2c764aa866f42314dbacd85f15799504b4affbc3508ecf9a0057ff76"
+        },
+        {
+          "label": "V10 correction",
+          "path": "received_v10_astra_postbilling_65012338/response.json",
+          "wrapper_sha256": "4bf91701328a2c9a86e39ddb479f2b6d9abfec0f7ba3bc5872a9559eab872387",
+          "response_text_sha256": "96ad36181a1fe2fc16f55ec50b26554cdbe8e1bd1c6d3e02b389e5fb67362be9"
+        },
+        {
+          "label": "V11b immediate parent",
+          "path": "v11b_design_candidate_attempt01/responses/gpt-6-astra/response.json",
+          "wrapper_sha256": "7995e6d569ace168e720e81711d59a800a6d0c56e8a8664031a18abdffec741c",
+          "response_text_sha256": "1cea0f0f3825bc573c5afd767cb8e613d39bf15e599707dc1e4cf89a66ce31b7"
+        }
+      ],
+      "composed_prompt_sha256": "0826dac80df390b8228365ffb24e7e7a0e336d4c2ddcff1f723177ded9e84ef8",
+      "composed_prompt_bytes": 76700
+    },
+    {
+      "model": "claude-fable-5-1",
+      "base_prompt_sha256": "a7cc55a7b32a5f95860c1ba68cdb0e5c57c1b89adaae3e38e931fba7c7fda886",
+      "sources": [
+        {
+          "label": "V3 baseline",
+          "path": "received_v9_retry_65009709/claude-fable-5-1/response.json",
+          "wrapper_sha256": "236f33562cbc093729beb70ca3501dcc4453cc4ead75eec56cc169d0adff1f93",
+          "response_text_sha256": "d3aa2f2e744958d6fe90cde471d617fb65420458045b777815b5899583107cb0"
+        },
+        {
+          "label": "V10 correction",
+          "path": "received_v10_65011353/claude-fable-5-1/response.json",
+          "wrapper_sha256": "bcd804a80087d451c8c9dac07d2f8a1118ba1487826ed32ec4a6420e49ea3324",
+          "response_text_sha256": "ce7d3d52393bff9cc827652c02e00cf6763d3e075328ee2be7965c5f44e3c07c"
+        },
+        {
+          "label": "V11b immediate parent",
+          "path": "v11b_design_candidate_attempt01/responses/claude-fable-5-1/response.json",
+          "wrapper_sha256": "a399174b7830e628549fd3750c48ae2ddb52b68a7e21847605632238c9fcd759",
+          "response_text_sha256": "1becbaf5c55932e3956b7059769bac799730104674f63b1f5558844010cfda29"
+        }
+      ],
+      "composed_prompt_sha256": "125c59b0e295a195d37221d9a33c80f514e440ace78931411544016286d0b34e",
+      "composed_prompt_bytes": 50936
+    },
+    {
+      "model": "claude-opus-5-5",
+      "base_prompt_sha256": "7bc4afd9c481c7046a2fc39928f682e95d0bf9da00b0b9f1745c88d96b9e41e0",
+      "sources": [
+        {
+          "label": "V3 baseline",
+          "path": "received_v9_retry_65009709/claude-opus-5-5/response.json",
+          "wrapper_sha256": "51e34fbee9444e30c743b0312ff7802ba1d1ae2bf8b965c3d3b481a8444b5b9c",
+          "response_text_sha256": "0ed82633a6be7b349589547569a366b23dc6934f7e2149b1eaba1327378e1551"
+        },
+        {
+          "label": "V10 correction",
+          "path": "received_v10_65011353/claude-opus-5-5/response.json",
+          "wrapper_sha256": "100027bc62931728bbcc8b041caff043d6031938ebd388c329e0129f896ce04e",
+          "response_text_sha256": "1c805dc181f965a6de6878fba651330e846a8af4ea8b613028ec880a96d92745"
+        },
+        {
+          "label": "V11b immediate parent",
+          "path": "v11b_design_candidate_attempt01/responses/claude-opus-5-5/response.json",
+          "wrapper_sha256": "06e136c75c92bbfabbd6fa58cbf9eef23a1d95bee576fd79c0f38ecd288c228f",
+          "response_text_sha256": "d4923402a4e74ea98ba34375d39af553b8df124eac8ba76540a3f6720f51e863"
+        }
+      ],
+      "composed_prompt_sha256": "d4456f44891f8234a6e3e52e88a7cc934979d941128effac56385aa746cbf478",
+      "composed_prompt_bytes": 35807
+    }
+  ]
+}

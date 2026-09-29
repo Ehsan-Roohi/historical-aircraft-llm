@@ -1,0 +1,21 @@
+{
+  "stage": "v13_fable_arithmetic_power_chain",
+  "status": "FROZEN_UNSENT",
+  "reason": "independent 0.5kg ledger and 0.502kW drive-chain deficits",
+  "instructions_sha256": "7c475fbe0896c126ff901ace1ee5448f745a59b01f04428ccfda131d30347ac8",
+  "runner_sha256": "2615ab1fa284056f8a35678cc52c00859e339b9ccf9fe765898cd125acf858d8",
+  "parent_text_sha256": "5f2ab457f4f84628cfca292b02e786c704564f038d7d99394229aae420643c3b",
+  "maximum_output_tokens": 24000,
+  "reasoning_effort": "low",
+  "records": [
+    {
+      "model": "claude-fable-5-1",
+      "prompt_file": "claude-fable-5-1.prompt.txt",
+      "prompt_sha256": "a3a2b7ceea9d0fb070f0839967ca57db20c71bfe7d4c15a45c225c4392fcde3a",
+      "parent_file": "claude-fable-5-1.response.json",
+      "parent_sha256": "ccf6e3fe07a480682e4d3abe573fdc2c8b397bae1a46a8a30adfd0582a83b6ca",
+      "baseline_sha256": "236f33562cbc093729beb70ca3501dcc4453cc4ead75eec56cc169d0adff1f93",
+      "maximum_calls": 1
+    }
+  ]
+}

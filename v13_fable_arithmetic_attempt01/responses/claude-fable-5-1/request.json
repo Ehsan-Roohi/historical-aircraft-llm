@@ -1,0 +1,19 @@
+{
+  "stage": "v13_fable_arithmetic_power_chain",
+  "model_requested": "claude-fable-5-1",
+  "prompt_sha256": "a3a2b7ceea9d0fb070f0839967ca57db20c71bfe7d4c15a45c225c4392fcde3a",
+  "parent_response_sha256": "ccf6e3fe07a480682e4d3abe573fdc2c8b397bae1a46a8a30adfd0582a83b6ca",
+  "baseline_response_sha256": "236f33562cbc093729beb70ca3501dcc4453cc4ead75eec56cc169d0adff1f93",
+  "instructions_sha256": "7c475fbe0896c126ff901ace1ee5448f745a59b01f04428ccfda131d30347ac8",
+  "manifest_sha256": "9888bd63a66167a5874db0426b033c8611bf8c8046ffeb73112770808ae21825",
+  "runner_sha256": "2615ab1fa284056f8a35678cc52c00859e339b9ccf9fe765898cd125acf858d8",
+  "transport_sha256": "df2a2a49dd6f41d60df38822364b25e1f91824d8b8e2369b3e7dd509746973c3",
+  "maximum_output_tokens": 24000,
+  "reasoning_effort": "low",
+  "maximum_calls": 1,
+  "automatic_retry": false,
+  "timeout_seconds": 5400,
+  "engineering_validation": "not_evaluated",
+  "started_utc": "2026-09-29T00:39:49.490906+00:00",
+  "slurm_job_id": "65013542"
+}

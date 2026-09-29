@@ -1,0 +1,172 @@
+{
+  "scope": "provenance, ledger arithmetic and assumed drive-chain necessity; no measured engine, flight or stability",
+  "manifest_sha256": "9888bd63a66167a5874db0426b033c8611bf8c8046ffeb73112770808ae21825",
+  "response_sha256": "dae66235761235d241c8773d9af9c9700187d9920db638a17ce6dcda9bc4b379",
+  "source_checks": {
+    "prompt_hash": true,
+    "parent_hash": true,
+    "baseline_hash": true,
+    "instructions_hash": true,
+    "parent_text_in_prompt": true,
+    "request_prompt_hash": true,
+    "request_parent_hash": true,
+    "request_manifest_hash": true,
+    "response_hash": true,
+    "completed": true,
+    "same_component_ids": true,
+    "unchanged_masses_centroids": true
+  },
+  "source_pass": true,
+  "disposition": "MASS LEDGER: RECONCILED by arithmetic (all 26 parent masses and centroids preserved; SUM, formulas and 8 cases corrected). POWER CHAIN: HOLD. With the retained parent engine target (19.5 kW at 1200 rpm, eta_gear 0.95) the paper reserve at the propeller shafts is 11.9%, below the parent's own 15% criterion; closing it requires a higher engine target (~20.05 kW engine-side before mass growth, ~20.2 kW after one spiral iteration at the unverified 5.1 kg/kW) which would change P06A mass and re-open the ledger. No engine exists; a retarget is not offered as closure. Every value below is tagged [D] arithmetic derivation, [RA] retained parent assumption, or [NA] new assumption. Nothing is measured.",
+  "row_count_excluding_SUM": 26,
+  "mass_kg": 354.3,
+  "first_moment_kg_m": [
+    542.341,
+    0.0,
+    280.688
+  ],
+  "cg_xyz_m": [
+    1.530739,
+    0.0,
+    0.792233
+  ],
+  "loading_cases": [
+    {
+      "state": "75 kg, seat 0.30, full (nominal)",
+      "mass_kg": 354.3,
+      "reported_mass_kg": 354.3,
+      "cg_xyz_m": [
+        1.530739,
+        0.0,
+        0.792233
+      ],
+      "reported_cg_xyz_m": [
+        1.53074,
+        0,
+        0.79223
+      ],
+      "rounded_pass": true
+    },
+    {
+      "state": "75 kg, seat 0.35 (aft stop), full",
+      "mass_kg": 354.3,
+      "reported_mass_kg": 354.3,
+      "cg_xyz_m": [
+        1.541324,
+        0.0,
+        0.792233
+      ],
+      "reported_cg_xyz_m": [
+        1.54132,
+        0,
+        0.79223
+      ],
+      "rounded_pass": true
+    },
+    {
+      "state": "75 kg, seat 0.25 (fwd stop), full",
+      "mass_kg": 354.3,
+      "reported_mass_kg": 354.3,
+      "cg_xyz_m": [
+        1.520155,
+        0.0,
+        0.792233
+      ],
+      "reported_cg_xyz_m": [
+        1.52016,
+        0,
+        0.79223
+      ],
+      "rounded_pass": true
+    },
+    {
+      "state": "75 kg, seat 0.30, empty",
+      "mass_kg": 334.3,
+      "reported_mass_kg": 334.3,
+      "cg_xyz_m": [
+        1.526596,
+        0.0,
+        0.771726
+      ],
+      "reported_cg_xyz_m": [
+        1.5266,
+        0,
+        0.77173
+      ],
+      "rounded_pass": true
+    },
+    {
+      "state": "65 kg, seat 0.35, full (aft extreme)",
+      "mass_kg": 344.3,
+      "reported_mass_kg": 344.3,
+      "cg_xyz_m": [
+        1.575925,
+        0.0,
+        0.793459
+      ],
+      "reported_cg_xyz_m": [
+        1.57593,
+        0,
+        0.79346
+      ],
+      "rounded_pass": true
+    },
+    {
+      "state": "65 kg, seat 0.35, empty (aft extreme)",
+      "mass_kg": 324.3,
+      "reported_mass_kg": 324.3,
+      "cg_xyz_m": [
+        1.57444,
+        0.0,
+        0.772396
+      ],
+      "reported_cg_xyz_m": [
+        1.57444,
+        0,
+        0.7724
+      ],
+      "rounded_pass": true
+    },
+    {
+      "state": "85 kg, seat 0.25, full (fwd extreme)",
+      "mass_kg": 364.3,
+      "reported_mass_kg": 364.3,
+      "cg_xyz_m": [
+        1.48529,
+        0.0,
+        0.791073
+      ],
+      "reported_cg_xyz_m": [
+        1.48529,
+        0,
+        0.79107
+      ],
+      "rounded_pass": true
+    },
+    {
+      "state": "85 kg, seat 0.25, empty (fwd extreme)",
+      "mass_kg": 344.3,
+      "reported_mass_kg": 344.3,
+      "cg_xyz_m": [
+        1.478626,
+        0.0,
+        0.771095
+      ],
+      "reported_cg_xyz_m": [
+        1.47863,
+        0,
+        0.7711
+      ],
+      "rounded_pass": true
+    }
+  ],
+  "all_loading_arithmetic_pass": true,
+  "retained_target_engine_W": 19500.0,
+  "assumed_drive_efficiency": 0.95,
+  "prop_shaft_target_after_loss_W": 18525.0,
+  "high_case_15pct_requirement_W": 19045.0,
+  "shortfall_W": 520.0,
+  "minimum_engine_side_target_W": 20047.368,
+  "measured_available_engine_power": "UNKNOWN",
+  "measured_propeller_map": "UNKNOWN"
+}

@@ -1,0 +1,19 @@
+{
+  "stage": "v12_installation_candidate",
+  "model_requested": "claude-fable-5-1",
+  "prompt_sha256": "125c59b0e295a195d37221d9a33c80f514e440ace78931411544016286d0b34e",
+  "parent_response_sha256": "a399174b7830e628549fd3750c48ae2ddb52b68a7e21847605632238c9fcd759",
+  "baseline_response_sha256": "236f33562cbc093729beb70ca3501dcc4453cc4ead75eec56cc169d0adff1f93",
+  "instructions_sha256": "f7137d148b937a11182ab903ce12c7b542e7f6b91cf5ea5b804556be4e31d779",
+  "manifest_sha256": "3c9c31ed983609778bf79f64f41ce3415e9b95455626569145a81c6cdecc1204",
+  "runner_sha256": "0c195ac6e2e878488ceaff435aec6fa1591bd571eb309d01624915e070d62c5f",
+  "transport_sha256": "df2a2a49dd6f41d60df38822364b25e1f91824d8b8e2369b3e7dd509746973c3",
+  "maximum_output_tokens": 32000,
+  "reasoning_effort": "low",
+  "maximum_calls": 1,
+  "automatic_retry": false,
+  "timeout_seconds": 5400,
+  "engineering_validation": "not_evaluated",
+  "started_utc": "2026-09-29T00:23:49.536261+00:00",
+  "slurm_job_id": "65013307"
+}

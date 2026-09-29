@@ -1,5 +1,27 @@
 # Public research snapshot
 
+## 28 September 2026 G6 installation and power-chain audit
+
+V12 full-context, non-minimal feedback ran as Unity array `65013298`.
+Astra completed with HOLD and no new installed geometry. Fable completed a
+larger installation proposal, but its 26 component rows totalled 354.3 kg,
+0.5 kg above its headline, and its paper engine target omitted assumed drive
+loss. Opus stopped at its 32,000-token output limit; this partial response is
+preserved separately. One reviewed 48,000-token replay, job `65013467`,
+completed with a new 340.3 kg geometry candidate. A targeted Fable V13
+answer, job `65013542`, retained all physical rows and corrected its SUM and
+eight loading cases, while explicitly leaving power on HOLD: 19.5 kW at the
+engine side times assumed 0.95 drive efficiency supplies only 18.525 kW,
+0.520 kW below the revised worst-case requirement with 15% reserve.
+Independent source/ledger/power and selected rigid-contact calculations are
+in `analysis/results/v12_installation_gate01.json` and
+`analysis/results/v13_fable_gate01.json`. The updated manuscript and Overleaf
+ZIP (`aircraft_ast_overleaf_release09.zip`) distinguish these arithmetic
+candidates from physical validation. No measured engine/propeller map,
+loaded clearance, whole-aircraft trim, dynamic modes or flight result exists.
+The immutable tag is `aircraft-ast-2026-09-28-g6`; the earlier R5 evidence ZIP
+remains unchanged.
+
 ## 28 September 2026 G5 source-restored design-candidate release
 
 Unity arrays `65012607` and `65012688` retained two distinct V11 attempts.

@@ -6,10 +6,28 @@ Versioned research on three aircraft proposals produced under a documentary cuto
 
 The cutoff constrains supplied documents, not the models' training knowledge. Modern evaluator feedback is distinguished from the historical input packet. This repository is a work-in-progress research record, not a journal acceptance or a build/flight authorization.
 
-## 28 September 2026 current G5 research record
+## 28 September 2026 current G6 research record
 
-The current manuscript and [V11 design-candidate gate](paper/v11_design_candidate_gate01.md)
-are at fixed tag `aircraft-ast-2026-09-28-g5`. The updated
+The current [V12/V13 installation gate](paper/v12_v13_installation_gate01.md)
+and [updated manuscript](paper/article_scientific_reports.tex) are frozen at
+tag `aircraft-ast-2026-09-28-g6`. The [Overleaf review package](aircraft_ast_overleaf_release09.zip)
+contains the main text, supplement, figures and selected audits. Astra V12
+remains HOLD without a member-resolved installation. Fable V13 closes its
+354.3 kg mass ledger and eight loading states, but its retained 19.5 kW
+engine-side target is 0.520 kW below its own worst-case 15% reserve once
+assumed drive loss is included. Opus's first V12 answer was truncated; its
+separate complete replay gives a 340.3 kg analytical installation whose
+selected rigid-contact arithmetic closes. Neither engine target has been
+measured; matched propeller maps, loaded clearances, powered/glide trim,
+dynamic modes and structural limits are missing. **No design is yet shown to
+fly.** Full prompts, raw responses (including the truncation), hashes,
+analysis code and gate JSON are directly browsable at G6. The earlier R5
+evidence ZIP is unchanged and does not contain these newer files.
+
+## Earlier G5 research record
+
+The V11 manuscript and [V11 design-candidate gate](paper/v11_design_candidate_gate01.md)
+are at fixed tag `aircraft-ast-2026-09-28-g5`. The earlier
 [Overleaf package](aircraft_ast_overleaf_release08.zip) includes the main
 article, supplement, figures, and selected audit data. The paper is a
 research draft, **not a demonstrated flight-capable design or a submitted

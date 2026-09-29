@@ -13,3 +13,10 @@
 /analysis/prompts_v11b_context_restored/** -text
 /analysis/results/v11_feedback_audit01.json -text
 /analysis/results/v11b_engineering_gate01.json -text
+/v12_installation_attempt01/** -text
+/v12_opus_retry_attempt01/** -text
+/v13_fable_arithmetic_attempt01/** -text
+/analysis/prompts_v12_installation/** -text
+/analysis/prompts_v13_fable_arithmetic/** -text
+/analysis/results/v12_installation_gate01.json -text
+/analysis/results/v13_fable_gate01.json -text

@@ -1,0 +1,23 @@
+{
+  "stage": "v12_opus_reviewed_completion_attempt01",
+  "status": "FROZEN_UNSENT",
+  "reason": "prior model output stopped at 32000 max_tokens",
+  "instructions_sha256": "f7137d148b937a11182ab903ce12c7b542e7f6b91cf5ea5b804556be4e31d779",
+  "runner_sha256": "0c195ac6e2e878488ceaff435aec6fa1591bd571eb309d01624915e070d62c5f",
+  "retry_wrapper_sha256": "ba1fb595a7296f52932913035d24847ee1e5802dada920557c23f3c8b3d6be94",
+  "prior_response_sha256": "ef05a34210283b9691ed87f97d4cb8fe06bfa59b303fd56507990b552374aef2",
+  "prior_outcome_sha256": "530d6a5d5b608566ed30712657d9dead405e6b2e8c69c965d451c67a6005b88e",
+  "maximum_output_tokens": 48000,
+  "reasoning_effort": "low",
+  "records": [
+    {
+      "model": "claude-opus-5-5",
+      "prompt_file": "claude-opus-5-5.prompt.txt",
+      "prompt_sha256": "d4456f44891f8234a6e3e52e88a7cc934979d941128effac56385aa746cbf478",
+      "parent_file": "claude-opus-5-5.response.json",
+      "parent_sha256": "06e136c75c92bbfabbd6fa58cbf9eef23a1d95bee576fd79c0f38ecd288c228f",
+      "baseline_sha256": "51e34fbee9444e30c743b0312ff7802ba1d1ae2bf8b965c3d3b481a8444b5b9c",
+      "maximum_calls": 1
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 # Data and code availability for the aircraft-LLM study
 
-Author: Ehsan Roohi. Current public research tag: `aircraft-ast-2026-09-28-g5`
-in [`Ehsan-Roohi/historical-aircraft-llm`](https://github.com/Ehsan-Roohi/historical-aircraft-llm/tree/aircraft-ast-2026-09-28-g5).
+Author: Ehsan Roohi. Current public research tag: `aircraft-ast-2026-09-28-g6`
+in [`Ehsan-Roohi/historical-aircraft-llm`](https://github.com/Ehsan-Roohi/historical-aircraft-llm/tree/aircraft-ast-2026-09-28-g6).
 The earlier R5 snapshot is preserved in `research_evidence.zip` and
 `MANIFEST.json`; those two files **do not** purport to index all later V10--V11b
 additions. Later paths have their own frozen manifests, source indexes and
@@ -19,6 +19,7 @@ response hashes. A Git tag identifies a fixed commit. No DOI is claimed.
 | Integrated dynamic redesign feedback | `analysis/prompts_v9_integrated_dynamics/`, `received_v9_65007436/`, `received_v9_retry_65009709/`, `unity_jobs/`, `analysis/results/v9_integrated_response_audit.json` | Three complete V3 returns with the original token-truncated Fable/Opus attempts retained separately. The audit verifies response/prompt hashes and mass arithmetic, not flight dynamics or flightworthiness. |
 | V10 corrected geometry/power responses | `received_v10_65011353/`, `received_v10_astra_retry_65011846/`, `received_v10_astra_postbilling_65012338/`, `analysis/prompts_v10_geometry_power/`, `paper/v10_response_gate01.md`, `paper/v10_astra_postbilling_gate01.md` | Direct post-R5 paths. They retain quota failure and later completed Astra response separately; no V10 output validates flight. |
 | V11a/V11b design-candidate cycle | `v11_design_candidate_attempt01/`, `v11b_design_candidate_attempt01/`, `analysis/prompts_v11_design_candidate/`, `analysis/prompts_v11b_context_restored/`, `analysis/results/v11_feedback_audit01.json`, `analysis/results/v11b_engineering_gate01.json`, `paper/v11_design_candidate_gate01.md` | Direct post-R5 paths. V11a's omitted source texts and all three HOLD responses are retained. V11b restores full sources; Fable's conditional seat/gear candidate and both remaining HOLDs are independently screened. |
+| V12 installation and V13 Fable correction | `v12_installation_attempt01/`, `v12_opus_retry_attempt01/`, `v13_fable_arithmetic_attempt01/`, `analysis/prompts_v12_installation/`, `analysis/prompts_v13_fable_arithmetic/`, `analysis/results/v12_installation_gate01.json`, `analysis/results/v13_fable_gate01.json`, `paper/v12_v13_installation_gate01.md` | Direct post-R5 paths. The first V12 Opus output is preserved as truncated; a separate reviewed retry completed. Fable's V12 mass/power failure and V13 arithmetic repair are both retained. Neither candidate has measured installed propulsion, trim or stability. |
 | Geometry and figure source/output | `output/stage_threeviews/`, `output/figures_v2/`, `output/overleaf/scientific_reports_aircraft_2026_09_28_release03/figures/`, `analysis/` | Original and evaluator drawings have distinct provenance. Figure 7 uses the archived numerical results; Fable's values are model claims. |
 | Numerical inputs and outputs | `analysis/results/`, `output/overleaf/scientific_reports_aircraft_2026_09_28_release07/audit_data/` | Includes accepted and failed cases, mesh checks, residuals, both failed and completed rate-derivative runs, the reduced dynamic gate, and the limited V3 mass/force arithmetic audit. |
 | Analysis and manuscript source | `analysis/`, `paper/`, `output/overleaf/scientific_reports_aircraft_2026_09_28_release07/` | Human-auditable code, TeX, supplement, references, and selected source records; the full-mode assembler is not run on incomplete V2/V3 data. |
@@ -71,13 +72,20 @@ archived raw outputs from evaluator reconstructions and unvalidated claims.
 - The integrated V3 calls and separate high-token retries are recorded in
   `received_v9_65007436/` and `received_v9_retry_65009709/`. The final
   Fable and Opus responses ended normally; their earlier 20,000-token
-  attempts did not. The three mass ledgers close arithmetically, and Fable's
+  attempts did not. The three V3 mass ledgers close arithmetically, and Fable's
   stated nominal lift and moment sums close only for its assumed forces.
   No V3 model supplies independently verified trim, installed unsteady
   derivatives or full dynamic modes. Source and interpretation are detailed
   in `paper/v9_integrated_response_gate.md`.
 - No wind-tunnel, structure-load, engine-propeller-map or crewed-flight data
   were generated. The archive does not certify construction or flight safety.
+- V12 added a separate 32,000-token Opus truncation, whose partial text is not
+  spliced with the completed 48,000-token replay. V12 Fable's row sum differs
+  from its headline mass by 0.5 kg; the V13 response corrects the ledger and
+  eight loading cases but retains a 0.520 kW deficit to its own high-case
+  reserve target after assumed drive loss. Opus's new rigid contact and mass
+  arithmetic close, but its engine and propeller performance are targets and
+  missing maps, respectively. See `paper/v12_v13_installation_gate01.md`.
 - A Git tag is a fixed source identifier, but a DOI-backed repository deposit
   would improve long-term preservation. No DOI or journal acceptance is implied.
 

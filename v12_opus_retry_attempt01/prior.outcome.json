@@ -1,0 +1,9 @@
+{
+  "status": "incomplete",
+  "stop_reason": "max_tokens",
+  "model_returned": "claude-opus-5-5",
+  "response_sha256": "ef05a34210283b9691ed87f97d4cb8fe06bfa59b303fd56507990b552374aef2",
+  "finished_utc": "2026-09-29T00:30:45.610417+00:00",
+  "automatic_retry": false,
+  "engineering_validation": "not_evaluated"
+}

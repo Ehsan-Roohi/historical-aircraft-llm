@@ -1,0 +1,440 @@
+{
+  "scope": "V12 provenance and selected arithmetic; no flight validation",
+  "provenance": {
+    "manifest_sha256": "3c9c31ed983609778bf79f64f41ce3415e9b95455626569145a81c6cdecc1204",
+    "models": {
+      "gpt-6-astra": {
+        "source_checks": {
+          "prompt_hash": true,
+          "parent_hash": true,
+          "baseline_hash": true,
+          "instruction_hash": true,
+          "source_index_prompt_hash": true,
+          "v3_baseline_wrapper_hash": true,
+          "v3_baseline_text_hash": true,
+          "v3_baseline_text_in_prompt": true,
+          "v10_correction_wrapper_hash": true,
+          "v10_correction_text_hash": true,
+          "v10_correction_text_in_prompt": true,
+          "v11b_immediate_parent_wrapper_hash": true,
+          "v11b_immediate_parent_text_hash": true,
+          "v11b_immediate_parent_text_in_prompt": true,
+          "request_prompt_hash": true,
+          "request_parent_hash": true,
+          "request_manifest_hash": true,
+          "outcome_response_hash": true
+        },
+        "source_pass": true,
+        "outcome": "completed",
+        "stop_reason": null,
+        "response_sha256": "89bce11966d0c8b1b2d5059613c878573a34beaf9e213dd8f712dcdf6582de8a",
+        "model_returned": "gpt-6-astra",
+        "wrapper_status": "completed",
+        "json_complete": true,
+        "disposition": {
+          "status": "HOLD",
+          "candidate_proposed": false,
+          "reason": "No complete replacement installation is adopted in this response. A member-resolved supporting structure, its propulsion and gear attachments, and manufactured control interfaces have not been synthesized and checked together. Presenting a partially dimensioned replacement as an internally consistent installation would leave the requested interference and mass-ownership closure unsupported.",
+          "scope": "This is a design-completion HOLD, not a finding that a replacement installation is impossible.",
+          "authorization_acknowledged": "Multiple component replacements and relocations are permitted. Missing measured hardware is not itself a reason to prohibit assumption-based design. The unresolved task is completing that design and its geometric audit without claiming unspecified hardware occupies no space.",
+          "parent_status": "The parent adopted no physical patch. No V12 physical patch is adopted here."
+        },
+        "ledger_row_count": 16
+      },
+      "claude-fable-5-1": {
+        "source_checks": {
+          "prompt_hash": true,
+          "parent_hash": true,
+          "baseline_hash": true,
+          "instruction_hash": true,
+          "source_index_prompt_hash": true,
+          "v3_baseline_wrapper_hash": true,
+          "v3_baseline_text_hash": true,
+          "v3_baseline_text_in_prompt": true,
+          "v10_correction_wrapper_hash": true,
+          "v10_correction_text_hash": true,
+          "v10_correction_text_in_prompt": true,
+          "v11b_immediate_parent_wrapper_hash": true,
+          "v11b_immediate_parent_text_hash": true,
+          "v11b_immediate_parent_text_in_prompt": true,
+          "request_prompt_hash": true,
+          "request_parent_hash": true,
+          "request_manifest_hash": true,
+          "outcome_response_hash": true
+        },
+        "source_pass": true,
+        "outcome": "completed",
+        "stop_reason": "end_turn",
+        "response_sha256": "ccf6e3fe07a480682e4d3abe573fdc2c8b397bae1a46a8a30adfd0582a83b6ca",
+        "model_returned": "claude-fable-5-1",
+        "wrapper_status": "completed",
+        "json_complete": true,
+        "disposition": "CANDIDATE (not HOLD). Decision on V11b seat/gear candidate: REVISE. Hard-stop principle ADOPTED; stop positions moved from x 0.20/0.30 to x 0.25/0.35 (seat datum 0.30) to re-close CG after the heavier powerplant; V11b wheel radius 0.25 m, axle z -0.50 and P14 sub-items ADOPTED as design assumptions; V11b 12.8 kW target REJECTED as insufficient (own worst case 14.82 kW x1.15 = 17.04 kW). Non-minimal changes: engine P06 replaced by P06A (100 kg) + P06B cooling (14 kg) + P20 bearers (4 kg), 2:1 reduction in central bevel box, heavier shaft set P09, fuel 16->20 kg, tank relocated above engine, foot-bar moved aft-to-forward from x 0.45 to x 0.80 with rudder wires re-routed under the engine. Every number is a design assumption [A] or arithmetic from assumptions [D]; nothing is measured [M].",
+        "ledger_row_count": 27
+      },
+      "claude-opus-5-5": {
+        "source_checks": {
+          "prompt_hash": true,
+          "parent_hash": true,
+          "baseline_hash": true,
+          "instruction_hash": true,
+          "source_index_prompt_hash": true,
+          "v3_baseline_wrapper_hash": true,
+          "v3_baseline_text_hash": true,
+          "v3_baseline_text_in_prompt": true,
+          "v10_correction_wrapper_hash": true,
+          "v10_correction_text_hash": true,
+          "v10_correction_text_in_prompt": true,
+          "v11b_immediate_parent_wrapper_hash": true,
+          "v11b_immediate_parent_text_hash": true,
+          "v11b_immediate_parent_text_in_prompt": true,
+          "request_prompt_hash": true,
+          "request_parent_hash": true,
+          "request_manifest_hash": true,
+          "outcome_response_hash": true
+        },
+        "source_pass": true,
+        "outcome": "incomplete",
+        "stop_reason": "max_tokens",
+        "response_sha256": "ef05a34210283b9691ed87f97d4cb8fe06bfa59b303fd56507990b552374aef2",
+        "model_returned": "claude-opus-5-5",
+        "wrapper_status": "incomplete",
+        "json_complete": false
+      }
+    }
+  },
+  "fable_screen": {
+    "ledger_row_count_excluding_SUM": 26,
+    "mass_kg": 354.3,
+    "first_moment_kg_m": [
+      542.341,
+      0.0,
+      280.688
+    ],
+    "cg_xyz_m": [
+      1.530739,
+      0.0,
+      0.792233
+    ],
+    "loading_cases": [
+      {
+        "case": "75 kg, seat 0.30, full (nominal)",
+        "mass_recomputed_kg": 354.3,
+        "reported_mass_kg": 353.8,
+        "cg_recomputed_m": [
+          1.530739,
+          0.0,
+          0.792233
+        ],
+        "reported_cg_m": [
+          1.5287,
+          0,
+          0.7931
+        ],
+        "rounding_pass": false
+      },
+      {
+        "case": "75 kg, seat 0.35 (aft stop), full",
+        "mass_recomputed_kg": 354.3,
+        "reported_mass_kg": 353.8,
+        "cg_recomputed_m": [
+          1.541324,
+          0.0,
+          0.792233
+        ],
+        "reported_cg_m": [
+          1.5393,
+          0,
+          0.7931
+        ],
+        "rounding_pass": false
+      },
+      {
+        "case": "75 kg, seat 0.25 (fwd stop), full",
+        "mass_recomputed_kg": 354.3,
+        "reported_mass_kg": 353.8,
+        "cg_recomputed_m": [
+          1.520155,
+          0.0,
+          0.792233
+        ],
+        "reported_cg_m": [
+          1.5181,
+          0,
+          0.7931
+        ],
+        "rounding_pass": false
+      },
+      {
+        "case": "75 kg, seat 0.30, empty",
+        "mass_recomputed_kg": 334.3,
+        "reported_mass_kg": 333.8,
+        "cg_recomputed_m": [
+          1.526596,
+          0.0,
+          0.771726
+        ],
+        "reported_cg_m": [
+          1.5244,
+          0,
+          0.7727
+        ],
+        "rounding_pass": false
+      },
+      {
+        "case": "65 kg, seat 0.35, full (aft extreme)",
+        "mass_recomputed_kg": 344.3,
+        "reported_mass_kg": 343.8,
+        "cg_recomputed_m": [
+          1.575925,
+          0.0,
+          0.793459
+        ],
+        "reported_cg_m": [
+          1.5739,
+          0,
+          0.7944
+        ],
+        "rounding_pass": false
+      },
+      {
+        "case": "65 kg, seat 0.35, empty (aft extreme)",
+        "mass_recomputed_kg": 324.3,
+        "reported_mass_kg": 323.8,
+        "cg_recomputed_m": [
+          1.57444,
+          0.0,
+          0.772396
+        ],
+        "reported_cg_m": [
+          1.5723,
+          0,
+          0.7734
+        ],
+        "rounding_pass": false
+      },
+      {
+        "case": "85 kg, seat 0.25, full (fwd extreme)",
+        "mass_recomputed_kg": 364.3,
+        "reported_mass_kg": 363.8,
+        "cg_recomputed_m": [
+          1.48529,
+          0.0,
+          0.791073
+        ],
+        "reported_cg_m": [
+          1.4833,
+          0,
+          0.792
+        ],
+        "rounding_pass": false
+      },
+      {
+        "case": "85 kg, seat 0.25, empty (fwd extreme)",
+        "mass_recomputed_kg": 344.3,
+        "reported_mass_kg": 343.8,
+        "cg_recomputed_m": [
+          1.478626,
+          0.0,
+          0.771095
+        ],
+        "reported_cg_m": [
+          1.4765,
+          0,
+          0.772
+        ],
+        "rounding_pass": false
+      }
+    ],
+    "all_loading_arithmetic_pass": false,
+    "power_cases": [
+      {
+        "case": "nominal 353.8 kg, V13, CD0 0.06, η 0.50",
+        "reported_W": 12327,
+        "from_rounded_drag_W": 12326.6,
+        "difference_W": 0.4
+      },
+      {
+        "case": "heaviest 363.8 kg, V13, nominal constants",
+        "reported_W": 12628,
+        "from_rounded_drag_W": 12628.2,
+        "difference_W": -0.2
+      },
+      {
+        "case": "nominal mass, V13, worst CD0 0.08 η 0.45",
+        "reported_W": 16209,
+        "from_rounded_drag_W": 16209.556,
+        "difference_W": -0.556
+      },
+      {
+        "case": "heaviest mass, V13, worst CD0 0.08 η 0.45",
+        "reported_W": 16545,
+        "from_rounded_drag_W": 16544.667,
+        "difference_W": 0.333
+      },
+      {
+        "case": "nominal mass, V12, nominal constants",
+        "reported_W": 11299,
+        "from_rounded_drag_W": 11299.2,
+        "difference_W": -0.2
+      },
+      {
+        "case": "nominal mass, V16, nominal constants",
+        "reported_W": 17258,
+        "from_rounded_drag_W": 17257.6,
+        "difference_W": 0.4
+      },
+      {
+        "case": "nominal mass, V13, optimistic CD0 0.05 η 0.55",
+        "reported_W": 10178,
+        "from_rounded_drag_W": 10177.818,
+        "difference_W": 0.182
+      }
+    ],
+    "drive_chain": {
+      "target_at_engine_side_W": 19500.0,
+      "assumed_drive_efficiency": 0.95,
+      "delivered_prop_shafts_W": 18525.0,
+      "high_case_with_15pct_reserve_W": 19027.0,
+      "shortfall_W": 502.0,
+      "minimum_engine_side_W_at_assumed_efficiency": 20028.421,
+      "paper_target_meets_reserve_after_drive": false,
+      "measured_engine_and_propeller_maps": "NONE"
+    },
+    "not_validated": [
+      "occupied-solid clearance under load",
+      "engine output",
+      "propeller Cp/Ct matching",
+      "whole-aircraft trim",
+      "neutral point and dynamic modes",
+      "strength"
+    ]
+  },
+  "opus_retry_screen": {
+    "source_checks": {
+      "retry_manifest_stage": true,
+      "retry_prompt_hash": true,
+      "retry_parent_hash": true,
+      "retry_baseline_hash": true,
+      "prior_response_hash": true,
+      "prior_outcome_hash": true,
+      "prior_max_tokens": true,
+      "retry_response_hash": true,
+      "completed": true
+    },
+    "source_pass": true,
+    "response_sha256": "96e534daf71329dbfadec507a84ad98ac34a0dc2d156de33b4a5e2f137ee25db",
+    "disposition": {
+      "status": "GEOMETRY_CANDIDATE_FOR_INDEPENDENT_AUDIT, with HOLD retained on all flight, power, loads and stability gates",
+      "topology": "At the declared design-assumption level the occupied solids are internally consistent. Every declared solid envelope pair is either separated by a stated positive gap or is a stated, justified nesting.",
+      "hold_reasons_retained": [
+        "No measured engine exists. The 18 kW figure is a target, not a measurement.",
+        "The nominal CG moves aft by 0.0809 m, from 0.6227 to 0.7035. Longitudinal stability is unassessed and could be worse.",
+        "Loaded gaps, structural allowables, propeller blade geometry, drag, trim and modes are all UNKNOWN."
+      ],
+      "audit_acknowledgement": "V11b error confirmed. The old E1 x range was -0.025 to 0.525 m. The old E1-E3a proxy overlap was 0.125 x 0.3 x 0.01 = 0.000375 m3. The old E1-E2 overlap of 0.2 x 0.6 x 0.23 = 0.0276 m3 still stands. Both were mass-proxy overlaps, not proof of solid collision. All three rows are removed and replaced below."
+    },
+    "row_count_excluding_audit": 30,
+    "mass_kg": 340.3,
+    "first_moment_kg_m": [
+      239.41875,
+      0.0,
+      170.5674
+    ],
+    "cg_xyz_m": [
+      0.703552,
+      0.0,
+      0.501227
+    ],
+    "loading_cases": [
+      {
+        "case": "nominal: 70 kg pilot, 12 kg fuel",
+        "mass_recomputed_kg": 340.3,
+        "reported_mass_kg": 340.3,
+        "cg_recomputed_m": [
+          0.703552,
+          0.0,
+          0.501227
+        ],
+        "reported_cg_m": [
+          0.7035,
+          0,
+          0.5012
+        ],
+        "rounding_pass": true
+      },
+      {
+        "case": "aft: 70 kg pilot, 0 fuel",
+        "mass_recomputed_kg": 328.3,
+        "reported_mass_kg": 328.3,
+        "cg_recomputed_m": [
+          0.712454,
+          0.0,
+          0.491424
+        ],
+        "reported_cg_m": [
+          0.7125,
+          0,
+          0.4914
+        ],
+        "rounding_pass": true
+      },
+      {
+        "case": "forward: 90 kg pilot, 12 kg fuel",
+        "mass_recomputed_kg": 360.3,
+        "reported_mass_kg": 360.3,
+        "cg_recomputed_m": [
+          0.61454,
+          0.0,
+          0.490057
+        ],
+        "reported_cg_m": [
+          0.6145,
+          0,
+          0.4901
+        ],
+        "rounding_pass": true
+      },
+      {
+        "case": "90 kg pilot, 0 fuel",
+        "mass_recomputed_kg": 348.3,
+        "reported_mass_kg": 348.3,
+        "cg_recomputed_m": [
+          0.619864,
+          0.0,
+          0.480432
+        ],
+        "reported_cg_m": [
+          0.6199,
+          0,
+          0.4804
+        ],
+        "rounding_pass": true
+      }
+    ],
+    "all_loading_arithmetic_pass": true,
+    "power_chain": {
+      "assumed_engine_target_W": 18000,
+      "assumed_drive_efficiency": 0.97,
+      "assumed_prop_shaft_target_W": 17460.0,
+      "high_case_15pct_requirement_W": 15754.999999999998,
+      "paper_target_margin_W": 1705.0,
+      "measured_available_power": "UNKNOWN"
+    },
+    "selected_rigid_ground_arithmetic": {
+      "tail_skid_stop_deg": 12.994617,
+      "ventral_T5_gap_m": 0.221112,
+      "prop_aft_bottom_gap_m": 0.460962,
+      "wheel_bottom_gap_m": 0.28782,
+      "loaded_gap": "UNKNOWN",
+      "nose_down_contact": "NOT EVALUATED IN MODEL RESPONSE"
+    },
+    "not_validated": [
+      "occupied-solid CAD and loaded clearances",
+      "engine/propeller maps",
+      "whole-aircraft aerodynamics and trim",
+      "neutral point and modes",
+      "structure and cooling"
+    ]
+  }
+}
