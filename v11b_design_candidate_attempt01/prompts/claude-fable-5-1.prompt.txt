@@ -1,0 +1,259 @@
+FABLE V11 design-candidate request. Immutable parent is your completed V10 response with SHA-256 bcd804a80087d451c8c9dac07d2f8a1118ba1487826ed32ec4a6420e49ea3324; V3 baseline remains separate. This is not a new historical-cutoff trial.
+
+Evaluator findings: corrected pilot CG extremes are 65 kg aft/full 36.73% chord (empty 36.90%) and 85 kg forward/full 28.59% (empty 28.32%). A seat restriction alone is not a validated static-margin solution. Wheel coordinates were relabeled ground-contact points, but axle position and wheel radius remain undefined. Prop/body nominal gap is 0.050 m and horn/longeron nominal gap is about 0.037 m; loaded deformation/runout is unknown. At assumed D=426 N, V=13 m/s and eta=0.50, shaft requirement is 11.076 kW; the new 12.2 kW target is unverified and your worse sensitivity requires about 14.8 kW. Whole-aircraft trim, neutral point, engine/propeller maps and modes are unavailable.
+
+Do not send another wording-only correction. Propose ONE minimal mechanically explicit V3R2 candidate patch, or return HOLD with reason. Preserve parent coordinate convention and unchanged items by ID. Any proposed seat/wing/tail/engine/gear/control revision must list old/new component IDs, coordinates, dimensions, masses, closed nominal and extreme mass/CG ledger, wheel/axle/ground-contact geometry, rigid contact sequence and all relevant rigid swept gaps. Loaded gaps remain UNKNOWN until measured, with measurement budget terms. Distinguish required, target, and measured available engine/shaft power. Include bounded drag/efficiency/speed cases, including your previous 14.8 kW sensitivity, and evaluate a 15% reserve criterion; do not assert a new engine without mass, mount, cooling and torque integration. Explain how the candidate could be tested for fixed-control neutral point, pitch/roll/yaw control authority, powered and power-off six-component trim and dynamic derivatives/modes without CFD. No fabricated measured coefficients.
+
+Return JSON keys: model, revision_id, parent_response_sha256, disposition, coordinate_frame, changed_components, unchanged_component_ids, mass_ledger, cg_cases, geometry_and_contact, control_and_loaded_gap_status, propulsion_cases, independent_measurements_needed, six_component_trim_inputs_needed, derivative_and_mode_inputs_needed, rejected_alternatives, remaining_gates, flight_claim. A candidate is not a validated aircraft; if essential component geometry cannot be made internally consistent, choose HOLD.
+
+
+CONTEXT RESTORATION: The first V11 request provided hashes and summaries but not the source component records. All three models correctly returned HOLD. The complete V3 baseline response and V10 correction response now follow. They are prior model claims, not measurements; retain provenance labels.
+
+--- BEGIN V3 baseline; wrapper SHA-256 236f33562cbc093729beb70ca3501dcc4453cc4ead75eec56cc169d0adff1f93 ---
+# Fable V3 — integrated revision of V2 (parent), Flight-Dynamics-II-ready evidence package
+
+**Status:** design revision only. No wind-tunnel, whirling-arm, bench or flight measurement exists for this aircraft. Every number below is either a design assumption [A], an external hand/AVL-class calculation from assumptions [C], or UNKNOWN. Nothing is a measured result [M]. No construction or crewed-flight clearance is proposed or implied. This is a modern researcher-assisted round; the analysis methods named here were not in the 1898 packet.
+
+## 1. What changed from V2 and why
+
+The evaluator found three unresolved interfaces in V2 (tail sweep/clearance, fuel centroid outside its box, transverse shaft vs bracing) and no reconciled whole aircraft including the V6/V8 propeller work. V3 resolves each by geometry, then re-closes the mass ledger, computes a shape-model inertia tensor, recomputes trim by the same method as V2 (so the evaluator can reproduce it), and specifies the analysis/test matrix needed for eight roots.
+
+- **Tail clearance (C3-01/02):** inboard edge of each all-moving half moved from |y| 0.45 to 0.55 (tip 2.75→2.85, area 4.60 m² unchanged), giving a 0.15 m gap to the frame side. A new frame station at x 5.65 (nodes F25–F28) carries the torque-tube bearings so that no diagonal wire crosses the tube. Horn radius reduced 0.30→0.25 m because the V2 lower horn tip (z 0.475) sat below the lower longeron (z 0.488 at x 5.65) — a collision V2 did not catch. Full-travel sweep envelope is tabulated in the JSON: x 5.41–6.37, z 0.67–0.98 at −16°/+8° absolute; fin (z ≥ 1.20, y = 0) and rudder (x ≥ 6.60) are not reached.
+- **Fuel (C3-03):** tank centroid corrected to (1.575, 0, 1.05), inside the box z 0.95–1.15; tank structure 4 kg and fuel 16 kg split; full/empty CG extremes given.
+- **Transmission/brace (C3-04):** new frame verticals at x 1.85 (F29–F32) so the side-face diagonals of bay 1.15–2.55 terminate at a post, and the transverse shaft passes through a bearing in that post at z 0.80. At the interplane post lines y ±0.90 a spruce cross-member at (1.85, ±0.90, 0.80) splits the fore-aft diagonals into two half-bays and carries the shaft clamp. Outboard bevel boxes and hubs at y ±1.60 are now carried by explicit outrigger struts (new item P17) from the rear spar nodes (2.55, ±1.60, 0 / 1.85) to the hub bearing (3.00, ±1.60, 0.80). V1 blocker B-4 is therefore closed geometrically; strength remains UNKNOWN.
+- **V6 propeller adoption (C3-05):** 2-blade, D 2.30 m, 600 rpm, hub radius 0.10 m, V6-RN-TE section family, assembly mass 12 kg (V3b proposal) are adopted because they are mechanically compatible with the V2 side-by-side hubs at (3.00, ±1.60, 0.80). Propeller A (+ω x̂) is assigned to the left hub, B to the right ("tops move outboard"). Not adopted: coaxial layout (not compatible), any thrust claim (V6 T7 not run), reduction ratio (engine speed UNKNOWN). The V6 provisional chord table is carried with its provisional flag.
+- **CG recovery (C3-06):** the +7 kg propeller mass and +5.5 kg of new structure at x 1.85–3.0 moved the CG aft to 36% chord; the pilot seat datum was moved forward 0.15 m and the engine 0.10 m to return to 32.8% chord. This is a bookkeeping consequence, not a static-margin target chosen in isolation; the neutral point remains an estimate to be replaced by AVL and by test.
+- **Mass (C3-07):** all-up 295 → 309.5 kg. Every mass is still an unweighed assumption.
+
+## 2. Trim recompute (same method as V2, [C], not validation)
+
+At 13 m/s, ρ 1.225, W 3036 N, S 42 m², CG (1.557, 0, 0.766): required CL 0.698; wing α ≈ 5.4° body (arc zero-lift −5.7°, CLα 3.8/rad biplane-corrected); wing Cm_ac −0.157 → −1329 N·m; lift offset (0.328−0.25)·1.85 = 0.144 m → +436 N·m; thrust 420 N at 0.034 m above CG → −14 N·m; tail must supply +907 N·m at arm 4.34 m → tail lift −209 N, CL_t −0.44, tail deflection ≈ −3.0° from rigging (absolute −7.0°), within the −16/+8 absolute travel. Static margin by the V2 estimator ≈ 7% chord at mid-CG, 5% at aft seat stop, before slipstream and body effects, which are not modelled and could be of either sign. These numbers exist only so the evaluator can reproduce them; they are not a trim verdict.
+
+## 3. Inertia and sign convention
+
+Body frame B: x aft, y right, z up, origin at front cross-member centre. Moments: L, M, N positive right-hand about +x, +y, +z, so **positive M is nose-up when x is aft and z is up? No —** with x aft and z up, a right-hand rotation about +y (from z toward x) drops the nose; therefore in this frame positive M is **nose-down**. To keep the V2 statement "pitching moment positive nose-up", V3 reports aerodynamic pitching moment as M_aero = −M_B and states this explicitly; the state-matrix work in §6 must be done in a standard flight frame (x forward, z down) obtained by the rotation R = diag(−1, 1, −1), under which Ixz changes sign. Inertia convention: I_xx = Σm(y²+z²) etc.; products reported as P_xz = Σm·x·z (positive-definite convention), so the tensor off-diagonal is −P_xz. Intrinsic inertias come from named shape models (plate, rod, box, rotation-averaged 2-blade rod); they are not measured and are not inferred from centroids alone. Uncertainty ±30% on each diagonal, ±100% on P_xz, until the bifilar/compound-pendulum test T-M2 is run.
+
+## 4. Analysis and test matrix, roots, and the unstable-mode contingency
+
+States: V ∈ {12, 13, 16} m/s × CG ∈ {30.7, 32.8, 34.6 %c} × power {on at 10.7 kW-equivalent thrust, off/windmilling}. Steady derivatives by AVL (or equivalent vortex-lattice) with the coordinates in the JSON; body/post/skid side-force by component build-up flagged as [A]; C_Lα̇ and C_mα̇ can **not** come from steady AVL — they are carried as an interval from a lag-of-downwash model [A] and are settled only by forced-oscillation of a scale model (T-A3). Propulsion derivatives (C_Tu, C_mT, slipstream ΔC_Lt) from the V6 T7 blade-element run plus tethered thrust/hinge-moment test (T-P2). Eight roots are to be computed as eigenvalues of the 4×4 longitudinal and lateral A matrices built from those dimensional derivatives and the tensor in §3; mode labelling by eigenvector content. Preliminary pre-screen values (labelled [C], from V2 derivatives, useful only to size the test bandwidth): short-period ω_n ≈ 4.5 rad/s, ζ ≈ 0.9; phugoid period ≈ 6 s, ζ ≈ 0.1 (from the L/D ≈ 7 assumption); roll time constant ≈ 0.07 s; Dutch-roll ω_n ≈ 1.0 rad/s with damping UNKNOWN (C_nr not estimated); spiral UNKNOWN (C_lβ ≈ 0 with no dihedral, sign then set by C_lr/C_lp and body contributions). None of these is a stability verdict.
+
+Contingency if the lateral screen shows a divergent spiral or under-damped Dutch roll: fin extended from z 1.80 to 2.20 (+0.48 m², +1.3 kg at (6.0, 0, 1.7)), which moves the CG aft 0.019 m; compensated by 0.08 m forward seat travel, no power change, trim tail deflection changes by ≈ −0.3°. Second candidate held in reserve: 2° dihedral on P01 only (mass-neutral, changes spar geometry and the ground-clearance schedule). If the aft-CG short period or phugoid fails, the seat aft stop is limited to 32.8% and the retest repeated; no other longitudinal change is proposed until the C_mα̇ interval is narrowed.
+
+```json
+{
+  "schema_version": "3.0",
+  "model": "Fable V3 integrated aircraft",
+  "parent": "Fable V2 integrated (immutable); V1/V0 underlying; V6 propeller subsystem adopted in part (see change_log C3-05)",
+  "evidence_labels": {"A": "design assumption", "C": "external calculation from assumptions", "M": "measured result (none exist)", "UNKNOWN": "no admissible value; test named"},
+  "coordinate_convention": {
+    "frame_B": "right-handed; origin front cross-member centreline; x aft, y operator's right, z up; ground plane at level rest z=-0.75",
+    "aero_moment_reporting": "M_aero positive nose-up = -M_B (right-hand about +y in this frame is nose-down); L_aero positive right-wing-down = +L_B; N_aero positive nose-right = +N_B. State-matrix work to be done in standard flight frame F = R*B, R=diag(-1,1,-1); P_xz changes sign under R",
+    "inertia_convention": "I_xx=Σm(y²+z²), I_yy=Σm(x²+z²), I_zz=Σm(x²+y²); products P_xz=Σm·x·z (tensor off-diagonal = -P_xz); P_xy=P_yz=0 by assumed symmetry",
+    "control_signs": "tail: positive = TE down (nose-down); rudder: positive = TE to operator's left (nose right); tip panels: positive = left TE down/right TE up (roll right, i.e. right wing down); angles deg"
+  },
+  "change_log_v3": [
+    {"id": "C3-01", "type": "A", "change": "Tail halves inboard edge |y| 0.45->0.55, tip 2.75->2.85 (span 2.30 each, area 4.60 unchanged); centroid y ±1.70", "reason": "0.15 m gap to frame side y ±0.40 through full sweep"},
+    {"id": "C3-02", "type": "A", "change": "New frame station x 5.65 (F25-F28) carrying torque-tube bearings; bay 4.9-6.6 split; horn radius 0.30->0.25 m (tips z 0.525/1.025); lower push-pull wire routed 0.06 above lower longeron with fairleads", "reason": "V2 diagonals crossed the tube; V2 lower horn tip z 0.475 was below longeron z 0.488 (collision)"},
+    {"id": "C3-03", "type": "D", "change": "P07 split: tank 4 kg + fuel 16 kg, centroid (1.575,0,1.05) inside box x 1.40-1.75 z 0.95-1.15", "reason": "V2 centroid z 0.90 outside box"},
+    {"id": "C3-04", "type": "A", "change": "Frame verticals at x 1.85 (F29-F32) with shaft bearing at z 0.80; spruce cross-members (1.85, ±0.90, 0.80) between interplane posts with shaft clamps (new P18, 1.5 kg); fore-aft diagonals at y ±0.90 split into half-bays; outrigger struts P17 (2x2 kg) from rear-spar nodes (2.55,±1.60,0/1.85) to hub bearings (3.00,±1.60,0.80)", "reason": "V1 B-4 shaft/brace conflict; V2 side-face diagonals crossed at (1.85,±0.4,0.70) within 0.1 m of shaft"},
+    {"id": "C3-05", "type": "A", "change": "Adopt V6 propellers: 2 blades each, D 2.30, 600 rpm, hub r 0.10, V6-RN-TE sections, provisional chord table, assembly mass 12 kg total (6 each, replaces V2 2x2.5). Propeller A (+ω x̂) on left hub y=-1.60, B (-ω x̂) on right y=+1.60. Not adopted: coaxial option, thrust values, reduction ratio", "reason": "mechanically compatible with side-by-side hubs; thrust/torque still pending V6 T7"},
+    {"id": "C3-06", "type": "A", "change": "Pilot seat datum x 0.50->0.35 (bounding 0.00-0.70, travel ±0.15); engine x 1.30->1.20 (bounding 0.85-1.55), 0.30 m coupling shaft to central bevel box at 1.85", "reason": "restore CG to 32.8%c after +12.5 kg aft mass; not a margin target — NP remains an estimate"},
+    {"id": "C3-07", "type": "D", "change": "Mass ledger re-closed: 295 -> 309.5 kg; CG (1.557, 0, 0.766); P10 frame 18->20 kg for two added stations", "reason": "consequence of C3-02/04/05"},
+    {"id": "C3-08", "type": "D", "change": "Shape-model intrinsic inertias assigned to every item; whole-aircraft tensor computed [C]", "reason": "evaluator gate requires three-axis tensor with component intrinsic inertia"},
+    {"id": "C3-09", "type": "D", "change": "Tail travel restated as absolute -16/+8 deg relative to deck chord (rigging -4 ± 12)", "reason": "clearance envelope must use absolute angles"}
+  ],
+  "retained_v2_change_log": "C2-01..C2-09 stand except where superseded above",
+  "rejected_options": [
+    {"option": "V1 continuous horizontal tail", "reason": "collided with fixed fin (V1 finding)"},
+    {"option": "1/12 arc camber", "reason": "needs CL_t < -0.7 (V2 finding)"},
+    {"option": "Coaxial propeller layout (V6 open item)", "reason": "incompatible with transverse-shaft drive and disc-to-body clearances"},
+    {"option": "Transverse shaft on rear spar line x 2.55", "reason": "spar/post interference; deck TE-to-disc gap would shrink below 0.20"},
+    {"option": "Tail area 4.60->5.20 m² now", "reason": "no derivative evidence that NP is deficient; held for §7 contingency"},
+    {"option": "2 deg dihedral now", "reason": "held as reserve lateral fix; changes ground clearance schedule"},
+    {"option": "Restoring CG by ballast at nose", "reason": "adds dead mass; seat/engine relocation preferred"}
+  ],
+  "three_view_coordinate_schedule": {
+    "lower_deck_P01": {"LE_root": [0.95,0,0], "TE_root": [2.80,0,0], "tips_y": "±5.75", "spars_x": [1.15,2.55], "camber": "arc 1/20 [A]"},
+    "upper_deck_P02_P03": {"LE_root": [0.95,0,1.85], "TE_root": [2.80,0,1.85], "fixed_to_y": "±4.25", "tip_panels_y": "±4.25 to ±5.75", "tip_pivot": [1.505,"±4.25..±5.75",1.95]},
+    "tail_P11": {"hinge_line": [[5.65,-2.85,0.775],[5.65,2.85,0.775]], "LE_x": 5.40, "TE_x": 6.40, "inboard_edge_y": "±0.55", "rigging_deg": -4.0},
+    "fin_P12": {"LE": [5.40,0,1.20], "TE": [6.60,0,1.20], "top_z": 1.80},
+    "rudder_P13": {"hinge": [[6.60,0,0.80],[6.60,0,1.80]], "TE_x": 7.50},
+    "propellers": {"hubs": [[3.00,-1.60,0.80],[3.00,1.60,0.80]], "disc_plane_x": 3.00, "radius": 1.15},
+    "engine_P06_box": {"x": [0.85,1.55], "y": [-0.35,0.35], "z": [0.45,1.15]},
+    "pilot_P05_box": {"x": [0.00,0.70], "y": [-0.30,0.30], "z": [0.30,1.40]},
+    "wheels": [[0.40,-1.20,-0.75],[0.40,1.20,-0.75],[3.20,0,-0.75]],
+    "frame_extent": {"x": [0.0,6.6], "y": "±0.40", "z_lower_longeron": "0.20 (x≤3.2) rising to 0.40 (x 4.9), 0.488 (x 5.65), 0.60 (x 6.6)", "z_upper_longeron": 1.20}
+  },
+  "mass_ledger": {
+    "note": "non-overlapping by item; envelopes may nest (P05-P07, P16, P18 inside P10 envelope) but mass is counted once. Inertia = intrinsic about own centroid, body axes, from shape model [C]. All masses [A].",
+    "items": [
+      {"id": "P01", "name": "lower deck", "mass": 21, "centroid": [1.78,0,0.06], "shape": "thin plate 1.85x11.5", "I_intr": [231.4,5.99,237.4]},
+      {"id": "P02", "name": "upper deck fixed", "mass": 15, "centroid": [1.78,0,1.91], "shape": "plate 1.85x8.5", "I_intr": [90.3,4.28,94.6]},
+      {"id": "P03L", "name": "left tip panel", "mass": 3, "centroid": [1.78,-5.0,1.91], "shape": "plate 1.85x1.5", "I_intr": [0.56,0.86,1.42]},
+      {"id": "P03R", "name": "right tip panel", "mass": 3, "centroid": [1.78,5.0,1.91], "shape": "plate 1.85x1.5", "I_intr": [0.56,0.86,1.42]},
+      {"id": "P04", "name": "12 interplane posts + wires", "mass": 13, "centroid": [1.85,0,1.00], "shape": "12 rods L1.71 at x 1.15/2.55, y ±0.90/±2.60/±4.25", "I_intr": [114.2,9.54,117.5]},
+      {"id": "P05", "name": "operator", "mass": 75, "centroid": [0.35,0,0.75], "range": "65-85 kg; seat travel x ±0.15", "shape": "box 0.7x0.6x1.1", "I_intr": [9.81,10.6,5.31]},
+      {"id": "P06", "name": "engine + cooling", "mass": 85, "centroid": [1.20,0,0.72], "shape": "box 0.7x0.7x0.7 (mass); crank at z 0.80, output x 1.55", "I_intr": [6.94,8.0,8.0]},
+      {"id": "P07a", "name": "fuel tank structure", "mass": 4, "centroid": [1.575,0,1.05], "box": {"x":[1.40,1.75],"y":[-0.30,0.30],"z":[0.95,1.15]}, "I_intr": [0.13,0.05,0.16]},
+      {"id": "P07b", "name": "fuel (20 min)", "mass": 16, "centroid": [1.575,0,1.05], "extremes": "16 (full) / 0 (empty)", "I_intr": [0.53,0.22,0.64]},
+      {"id": "P08L", "name": "propeller A assembly (left)", "mass": 6, "centroid": [3.00,-1.60,0.80], "shape": "2-blade rod L2.3 rotation-averaged", "I_intr": [2.65,1.32,1.32], "note": "V3b 12 kg total proposal, not recomputed for V6 TE"},
+      {"id": "P08R", "name": "propeller B assembly (right)", "mass": 6, "centroid": [3.00,1.60,0.80], "shape": "same", "I_intr": [2.65,1.32,1.32]},
+      {"id": "P09", "name": "shafts + 3 bevel boxes", "mass": 10, "centroid": [2.08,0,0.80], "shape": "transverse rod 3.2 m (6 kg incl. central box) + 2 longitudinal rods 1.15 m (2 kg each)", "I_intr": [15.4,1.23,16.6]},
+      {"id": "P10", "name": "body frame incl. seat, stations x 1.85 & 5.65", "mass": 20, "centroid": [2.535,0,0.709], "shape": "box girder 0.8x1.0, L 6.6, mass biased forward", "I_intr": [7.4,74.9,74.9]},
+      {"id": "P11L", "name": "left tail half", "mass": 4, "centroid": [5.90,-1.70,0.775], "shape": "plate 1.0x2.3", "I_intr": [1.76,0.33,2.10]},
+      {"id": "P11R", "name": "right tail half", "mass": 4, "centroid": [5.90,1.70,0.775], "shape": "plate 1.0x2.3", "I_intr": [1.76,0.33,2.10]},
+      {"id": "P12", "name": "fin", "mass": 2, "centroid": [6.00,0,1.50], "shape": "plate 1.2(x)x0.6(z)", "I_intr": [0.06,0.30,0.24]},
+      {"id": "P13", "name": "rudder", "mass": 2, "centroid": [6.95,0,1.30], "shape": "plate 0.9(x)x1.0(z)", "I_intr": [0.17,0.30,0.14]},
+      {"id": "P14", "name": "skids, 3 wheels, rear post", "mass": 12, "centroid": [1.50,0,-0.50], "shape": "wheels 2 kg each as points; skids 2x2.5 kg rods y ±1.2; post 1 kg", "I_intr": [13.3,18.1,30.8]},
+      {"id": "P15", "name": "controls", "mass": 2, "centroid": [2.50,0,0.70], "shape": "rod along x L6.2", "I_intr": [0.1,6.4,6.4]},
+      {"id": "P16", "name": "tail torque tube + bearings", "mass": 1, "centroid": [5.65,0,0.775], "shape": "rod along y L1.0", "I_intr": [0.08,0.0,0.08]},
+      {"id": "P17L", "name": "left outrigger struts + hub bearing", "mass": 2, "centroid": [2.80,-1.60,0.80], "shape": "two rods to (2.55,-1.6,0)/(2.55,-1.6,1.85)", "I_intr": [0.57,0.57,0.05]},
+      {"id": "P17R", "name": "right outrigger", "mass": 2, "centroid": [2.80,1.60,0.80], "I_intr": [0.57,0.57,0.05]},
+      {"id": "P18", "name": "shaft cross-members + clamps at y ±0.90", "mass": 1.5, "centroid": [1.85,0,0.80], "shape": "rods along y", "I_intr": [0.4,0.01,0.4]}
+    ],
+    "summary": {
+      "total_mass_kg": 309.5,
+      "sum_mx": 481.8, "sum_my": 0.0, "sum_mz": 237.0,
+      "cg_xyz": [1.557,0,0.766], "cg_percent_chord": 32.8,
+      "cg_extremes": {"seat_fwd_75kg_full": "30.7 %c (x 1.520)", "seat_aft_75kg_full": "34.6 %c (x 1.593)", "fuel_empty_mid": "32.7 %c (x 1.555), z 0.751", "pilot_65kg_aft": "35.4 %c [C]", "pilot_85kg_fwd": "30.2 %c [C]"},
+      "inertia_about_cg_kg_m2_C": {"I_xx": 777, "I_yy": 652, "I_zz": 1261, "P_xz": 19, "P_xy": 0, "P_yz": 0, "uncertainty": "±30% diagonals, ±100% P_xz; shape models, unweighed masses", "status": "[C] not [M]; replace by test T-M2"},
+      "rotor_angular_momentum": "each propeller I_p·Ω ≈ 2.65·62.8 = 166 N·m·s [C], opposite hands → net ≈ 0 if rpm matched; asymmetric-thrust/one-prop-stopped case is UNKNOWN and must be in the lateral matrix"
+    }
+  },
+  "controls": [
+    {"surface": "P11 tail (both halves)", "hinge": {"point":[5.65,0,0.775],"dir":[0,1,0],"chord_fraction":0.25}, "travel_abs_deg": [-16,8], "travel_rel_rigging_deg": [-12,12], "rate_limit": "UNKNOWN; lever geometry gives ≤40 deg/s at full-arm speed [A]", "hinge_moment": "UNKNOWN (test T-C1)", "linkage": "hand lever pivot (0.45,0.30,0.90) fore-aft, lever forward = TE down; wires along upper longeron z 1.15 and 0.06 above lower longeron; horn radius 0.25 at torque tube", "sweep_envelope": {"x":[5.41,6.37],"z":[0.67,0.98],"y":"±0.55..±2.85"}, "clearances_m": {"frame_side":0.15,"fin":"not in y range","rudder_LE":0.23,"lower_horn_tip_to_longeron":0.04}},
+    {"surface": "P13 rudder", "hinge": {"point":[6.60,0,0.80],"dir":[0,0,1]}, "travel_deg": [-20,20], "rate_limit": "UNKNOWN", "linkage": "foot-bar pivot (0.45,0,0.30); wires along y ±0.38 z 0.70 to horn (6.80,±0.20,1.30)", "envelope": "x 6.60-7.45, |y|≤0.31; clears tail TE x 6.37 by 0.23"},
+    {"surface": "P03 tip panels", "hinge": {"point":[1.505,0,1.95],"dir":[0,1,0]}, "travel_deg": [-8,8], "mixing": "equal and opposite", "rate_limit": "UNKNOWN", "linkage": "same lever, lateral; rocker on upper front spar (1.15,0,1.99); wires to horns (1.80,±4.40,2.10)", "envelope": "TE ±0.18 m at x 2.80; disc plane x 3.00 not reached; panels outboard of discs (|y|>2.75)"}
+  ],
+  "propulsion": {
+    "engine": {"mass_kg": 85, "shaft_power_required_W": 10700, "power_available": "UNKNOWN", "rpm": "UNKNOWN", "torque_curve": "UNKNOWN", "reduction_to_600rpm": "UNKNOWN ratio; bevel boxes assumed 1:1 [A]"},
+    "propellers": {"count":2,"blades":2,"D_m":2.30,"rpm":600,"omega_rad_s":62.83,"hub_r_m":0.10,"sections":"V6-RN-TE family, d_TE 1.5 mm","chords":"V6 provisional table (0.14@0.12 ... 0.08@1.15) — PROVISIONAL","A_left_hub":[3.00,-1.60,0.80],"B_right_hub":[3.00,1.60,0.80],"hand":"A +ω x̂ (top blade moves -y), B -ω x̂; tops outboard","J_at_13ms": 0.565,"thrust_torque": "UNKNOWN until V6 T7 blade-element run with root interval rule","clearances_m":{"disc_to_disc":0.90,"to_body":0.05,"ground":0.40,"deck_TE":0.20,"outrigger_to_blade":"0.20 (strut ends at hub bearing)"}},
+    "drag_scenario_C": {"V":13,"q_Pa":103.5,"CL":0.698,"CD0_assumed":0.06,"D0_N":261,"e_assumed":0.70,"AR_eff":6.2,"CDi":0.0357,"Di_N":155,"tail_and_misc_N":10,"D_total_N":426,"thrust_required_N":426,"eta_assumed":0.50,"shaft_W":11080,"note":"CD0 and e are assumptions; slipstream drag on tail excluded"},
+    "trim_strategy": {"thrust_line_z":0.80,"cg_z":0.766,"power_on_moment_Nm":"-14 (nose-down) at 426 N [C]","power_off":"tail sees no slipstream; downwash factor and tail η change; magnitude UNKNOWN (tail halves |y| 0.55-2.85 lie directly behind discs |y| 0.45-2.75)","procedure":"trim tail for level flight power-on; on power cut expect pitch change of unknown sign; pilot retrims within -16/+8; the sign and size are to be measured in T-P2 before any towed test"}
+  },
+  "trim_estimate_C": {"method": "V2 estimator unchanged", "V": 13, "alpha_body_deg": 5.4, "tail_deflection_rel_rigging_deg": -3.0, "tail_lift_N": -209, "wing_lift_N": 3245, "weight_N": 3036, "moments_Nm_about_CG": {"wing_Cmac": -1329, "lift_offset": 436, "thrust": -14, "tail": 907, "sum": 0}, "static_margin_estimate": {"mid_cg": 0.07, "aft_cg": 0.05, "fwd_cg": 0.09, "caveat": "excludes slipstream, body, propeller normal force; not a verdict"}},
+  "analysis_test_matrix": {
+    "states": {"V_m_s":[12,13,16],"cg_percent":[30.7,32.8,34.6],"power":["on","off"],"total_cases":18},
+    "steady_derivatives_by_AVL": ["CL_alpha","CD_alpha","Cm_alpha","CL_q","Cm_q","CY_beta","Cl_beta","Cn_beta","Cl_p","Cn_p","CY_p","Cl_r","Cn_r","CY_r","Cm_delta_tail","CL_delta_tail","Cl_delta_tips","Cn_delta_tips","Cn_delta_rudder","CY_delta_rudder","Cl_delta_rudder"],
+    "component_buildup_A": ["body/frame/post/skid side force and yaw (CY_beta, Cn_beta body)","propeller normal-force derivative at x 3.0 (destabilising in yaw and pitch)","CD_u, CL_u (low Mach, near zero except propulsion)"],
+    "unsteady": {"C_L_alphadot": "UNKNOWN; carried as interval [0, 2×lag-of-downwash estimate] [A]; settle by T-A3 forced oscillation", "C_m_alphadot": "same treatment; must not be set to zero"},
+    "propulsion_derivatives": {"C_T_u": "from V6 T7 BEM at fixed rpm; UNKNOWN now", "C_m_T": "thrust arm 0.034 m [C] plus slipstream-on-tail UNKNOWN", "delta_CL_tail_power": "UNKNOWN; T-P2", "one_engine/one_prop_stopped": "asymmetric case UNKNOWN"},
+    "tests": [
+      {"id":"T-M1","test":"weigh every item; suspension CG","resolves":"masses, CG"},
+      {"id":"T-M2","test":"bifilar (I_zz) and compound pendulum (I_xx, I_yy), tilted-axis for P_xz, complete airframe with ballast pilot","resolves":"inertia tensor"},
+      {"id":"T-A1","test":"whirling-arm/wind-tunnel lift, drag, moment of arc section and flat tail plate; biplane pair","resolves":"CL_alpha, Cm_ac, stall, tail CL_alpha"},
+      {"id":"T-A2","test":"1/6 scale complete model, static force/moment vs alpha, beta, controls, power-simulated","resolves":"all steady derivatives incl. body and control"},
+      {"id":"T-A3","test":"forced pitch oscillation of the same model, 2 frequencies","resolves":"Cm_q+Cm_alphadot and CL_q+CL_alphadot, then separate by plunge"},
+      {"id":"T-P1","test":"Prony brake engine torque vs rpm, 20 min at 11 kW","resolves":"power available, ratio"},
+      {"id":"T-P2","test":"complete aircraft tethered in wind 13 m/s, throttle steps; measure thrust, tail hinge moment, required tail angle","resolves":"slipstream trim change, C_m_T, hinge moments"},
+      {"id":"T-C1","test":"control hinge moments and rates with pilot on tethered aircraft","resolves":"rate limits, forces"},
+      {"id":"T-S1","test":"load frame, spars, tube, outriggers to 3x flight loads","resolves":"structure go/no-go for tow test only"}
+    ]
+  },
+  "roots_calculation_path": {
+    "longitudinal": "states [u, w(or alpha), q, theta] in frame F; dimensional X_u,X_w,Z_u,Z_w,Z_wdot,Z_q,M_u,M_w,M_wdot,M_q,X_T,Z_T,M_T from coefficients × q S (× c or c/2U); A_long 4x4 incl. gravity column; eig → 2 complex pairs expected (short period, phugoid); report ω_n, ζ, T_1/2 or T_2, uncertainty by Monte-Carlo over ±30% inertia, C_alphadot interval, CD0 0.04-0.08, tail η 0.7-1.0",
+    "lateral": "states [v(or beta), p, r, phi]; Y_v,Y_p,Y_r,L_v,L_p,L_r,N_v,N_p,N_r with P_xz coupling; eig → roll real, spiral real, Dutch-roll pair; same uncertainty sweep; also run one-propeller-stopped case",
+    "pre_screen_values_C_not_verdict": {"short_period": "ω_n≈4.5 rad/s, ζ≈0.9 (V2 Cm_alpha -0.29, Cm_q -4.2, I_yy 652; C_m_alphadot omitted)", "phugoid": "period≈6 s, ζ≈0.1 (L/D≈7 assumed)", "roll": "τ≈0.07 s (Cl_p≈-0.5 assumed)", "dutch_roll": "ω_n≈1.0 rad/s from fin-only Cn_beta≈0.026 before destabilising body/propeller terms; damping UNKNOWN", "spiral": "UNKNOWN (Cl_beta≈0, sign depends on Cl_r/Cl_p and body Cn_beta)"},
+    "gate_statement": "no mode is declared stable or unstable; the reduced two-state screen cannot settle these modes; a numerical pass would still not prove flightworthiness"
+  },
+  "contingency_if_unstable": {
+    "lateral": {"change": "fin z 1.80->2.20 (+0.48 m², +1.3 kg at (6.0,0,1.7))", "mass": "310.8 kg", "cg_shift": "+0.019 m aft, offset by 0.08 m forward seat", "trim": "tail deflection ≈ -0.3 deg change", "power": "none", "reserve": "2 deg dihedral on P01 (mass neutral; ground clearance schedule changes)"},
+    "longitudinal": {"change": "restrict seat aft stop to 32.8 %c; if still failing, tail area 4.60->5.20 m² by tip extension to |y| 3.15 (+1.0 kg at x 5.9)", "consequence": "cg +0.014 m aft → seat 0.06 m forward; Iyy +19"}
+  },
+  "unresolved_items": [
+    "engine power, rpm, reduction ratio, true mass",
+    "propeller thrust/torque (V6 T7), blade mass recompute (V6 T6), root incidence bracket (V6 T1)",
+    "actual arc section ordinates and stall; biplane interference; downwash",
+    "slipstream on tail (trim change sign, C_m_T)",
+    "C_L_alphadot, C_m_alphadot",
+    "all lateral derivatives; tip-panel effectiveness; body/prop normal-force contributions",
+    "hinge moments, control rates, pilot force",
+    "all masses and inertias (shape-model only)",
+    "material allowables, wire preload, deflections; outrigger and shaft-bearing strength",
+    "skid upturn, spring stiffness, nose-down rotation limit"
+  ],
+  "stop_go_criteria": {
+    "GO_to_next_analysis_round": "AVL model built from this JSON reproduces trim within ±1 deg tail and ±0.05 CL; T-M1/T-M2 replace shape-model inertia; eight roots computed with uncertainty sweep",
+    "STOP": "any of: static margin at aft CG < 0.03 by AVL; Dutch-roll or spiral divergent across the uncertainty sweep without the §7 fix closing it; power-off trim change exceeding available tail travel in T-P2; C_m_alphadot interval flipping short-period sign; structural test T-S1 failure; engine T-P1 below 10.7 kW",
+    "not_authorised": "construction release, crewed flight, or any claim of flightworthiness"
+  },
+  "suspected_modern_recall": ["lifting-line/biplane factors, thin-airfoil Cm_ac", "AVL, forced-oscillation and bifilar-pendulum methods", "short-period/phugoid/spiral approximations", "CD0, Oswald e, propeller efficiency assumptions", "NACA-type thickness form in V6 sections"],
+  "status": "UNVALIDATED DESIGN REVISION V3"
+}
+```
+--- END V3 baseline ---
+
+--- BEGIN V10 correction; wrapper SHA-256 bcd804a80087d451c8c9dac07d2f8a1118ba1487826ed32ec4a6420e49ea3324 ---
+Brief notes: the evaluator's recomputation is reproduced exactly from the parent 23-row ledger; the parent's 35.4%/30.2% figures were wrong, and the 75 kg aft figure (34.6%) is also slightly off (correct 34.8%). No coordinate change is required for internal consistency; the patch corrects arithmetic, redefines the wheel points, replaces unsupported clearance claims with budgets containing UNKNOWN terms, and reconciles the power fields. The aft-margin case at the corrected extreme falls below the parent's own STOP threshold by its own (unvalidated) estimator, so a loading restriction is proposed as an assumption, not a fix.
+
+```json
+{
+  "version": "V3R correction patch (parent V3 unchanged; V0 record untouched)",
+  "parent_sha256": "236f33562cbc093729beb70ca3501dcc4453cc4ead75eec56cc169d0adff1f93",
+  "coordinate_frame": "frame_B as parent: origin front cross-member centreline, x aft, y right, z up, ground plane z=-0.75; %c=(xCG-0.95)/1.85 on lower-deck chord",
+  "disputed_claims": [
+    {"claim": "pilot_65kg_aft = 35.4 %c", "recomputed": "sum_mx=481.8-75*0.35+65*0.50=488.05; m=299.5; x=1.629499; 36.73 %c full; empty: 462.85/283.5=1.632628 -> 36.90 %c", "status": "parent wrong"},
+    {"claim": "pilot_85kg_fwd = 30.2 %c", "recomputed": "sum_mx=481.8-26.25+85*0.20=472.55; m=319.5; x=1.478983; 28.59 %c full; empty: 447.35/303.5=1.473970 -> 28.32 %c", "status": "parent wrong"},
+    {"claim": "seat_aft_75kg_full = 34.6 %c", "recomputed": "493.05/309.5=1.59305 -> 34.76 %c (x correct, % wrong)", "status": "minor error"},
+    {"claim": "seat_fwd_75kg_full = 30.7 %c", "recomputed": "470.55/309.5=1.52036 -> 30.83 %c", "status": "minor error"},
+    {"claim": "shaft_power_required_W = 10700", "recomputed": "P=D*V/eta=426*13/0.50=11076 W", "status": "inconsistent with drag table 11080; 10700 withdrawn"},
+    {"claim": "wheels at z=-0.75 (undefined centre/contact)", "recomputed": "z equals ground plane, so points can only be contact points", "status": "redefined below"},
+    {"claim": "prop-to-body clearance 0.05 m and horn-to-longeron 0.04 m are adequate", "recomputed": "nominal gaps confirmed (1.60-1.15=0.45 vs frame 0.40; 0.775-0.25=0.525 vs longeron 0.488 -> 0.037); adequacy unsupported", "status": "claim withdrawn; budget UNKNOWN"},
+    {"claim": "static margin aft_cg 0.05", "recomputed": "parent estimator NP~39.6 %c implies ~0.029 at 36.7 %c and ~0.027 at 36.9 %c; below parent STOP threshold 0.03; estimator itself unvalidated", "status": "not asserted"}
+  ],
+  "correction_patch": {
+    "geometry_changes": "none",
+    "mass_changes": "none",
+    "field_corrections": [
+      {"path": "mass_ledger.summary.cg_extremes", "new": {"seat_fwd_75kg_full": "30.83 %c (x 1.5204)", "seat_aft_75kg_full": "34.76 %c (x 1.5931)", "fuel_empty_mid": "32.74 %c (x 1.5557)", "pilot_65kg_aft_full": "36.73 %c (x 1.6295)", "pilot_65kg_aft_empty": "36.90 %c (x 1.6326)", "pilot_85kg_fwd_full": "28.59 %c (x 1.4790)", "pilot_85kg_fwd_empty": "28.32 %c (x 1.4740)"}},
+      {"path": "propulsion.engine.shaft_power_required_W", "new": 11076},
+      {"path": "propulsion.drag_scenario_C.shaft_W", "new": 11076},
+      {"path": "stop_go_criteria.STOP.engine", "new": "T-P1 below target 12.2 kW continuous (see propulsion_requirement)"},
+      {"path": "three_view_coordinate_schedule.wheels", "new": "ground-contact points; see contact_and_clearance"},
+      {"path": "trim_estimate_C.static_margin_estimate.aft_cg", "new": "UNKNOWN; estimator value 0.027 at 36.9 %c, below STOP threshold"},
+      {"path": "controls[0].clearances_m.lower_horn_tip_to_longeron", "new": "0.037 nominal; swept budget UNKNOWN"},
+      {"path": "propulsion.propellers.clearances_m.to_body", "new": "0.050 nominal; swept budget UNKNOWN"}
+    ],
+    "proposed_loading_restriction_A": {"rule": "seat position limited so xCG_full <= 1.593 (34.76 %c) until NP is measured", "seat_x_max_m_by_pilot_mass": {"65": 0.33, "75": 0.50, "85": 0.50}, "equation": "x_seat_max=(1.593*(234.5+m_p)-455.55)/m_p", "status": "assumption, not a validated margin"}
+  },
+  "unchanged_item_ids": ["P01","P02","P03L","P03R","P04","P05","P06","P07a","P07b","P08L","P08R","P09","P10","P11L","P11R","P12","P13","P14","P15","P16","P17L","P17R","P18","C3-01..C3-09 geometry"],
+  "mass_loading_states": [
+    {"state": "nominal 75kg seat 0.35 full", "mass_kg": 309.5, "cg_xyz_m": [1.5567, 0, 0.7658], "pct_chord": 32.8},
+    {"state": "75kg fwd 0.20 full", "mass_kg": 309.5, "cg_xyz_m": [1.5204, 0, 0.7658], "pct_chord": 30.83},
+    {"state": "75kg aft 0.50 full", "mass_kg": 309.5, "cg_xyz_m": [1.5931, 0, 0.7658], "pct_chord": 34.76},
+    {"state": "75kg mid empty", "mass_kg": 293.5, "cg_xyz_m": [1.5557, 0, 0.7503], "pct_chord": 32.74},
+    {"state": "65kg aft 0.50 full", "mass_kg": 299.5, "cg_xyz_m": [1.6295, 0, 0.7663], "pct_chord": 36.73},
+    {"state": "65kg aft 0.50 empty", "mass_kg": 283.5, "cg_xyz_m": [1.6326, 0, 0.7503], "pct_chord": 36.90},
+    {"state": "85kg fwd 0.20 full", "mass_kg": 319.5, "cg_xyz_m": [1.4790, 0, 0.7653], "pct_chord": 28.59},
+    {"state": "85kg fwd 0.20 empty", "mass_kg": 303.5, "cg_xyz_m": [1.4740, 0, 0.7502], "pct_chord": 28.32},
+    {"inertia_note": "tensor for extremes not recomputed; nominal [C] values retained with ±30% caveat"}
+  ],
+  "contact_and_clearance": {
+    "wheels": {"definition": "points given are ground-contact points at rest", "contacts_xyz_m": [[0.4,-1.2,-0.75],[0.4,1.2,-0.75],[3.2,0,-0.75]], "radius_m": "UNKNOWN", "axle_centre_eq": "c_i = p_i + [0,0,r_w]; P14 centroid to be re-derived when r_w known", "rest_equilibrium_eq": "sum F_i = m g, sum (p_i - CG) x F_i = 0; F_nose=(mg)*(3.2-xCG)/2.8; nominal 3036*(1.643)/2.8=1781 N total on x=0.4 pair, 1255 N on x=3.2", "test": "measure r_w, tyre/spring deflection under 309.5 kg"},
+    "prop_to_body": {"nominal_gap_m": 0.05, "eq": "g = (|y_hub| - R) - y_frame - (d_hub_play + d_strut_lateral + d_frame_lateral_at_x3.0 + d_blade_radial_growth + d_track_runout + t_fabric)", "terms": "all UNKNOWN", "test": "dial-gauge static pull test on hub and frame; blade tip track at 600 rpm on stand (V6 T6/T7)"},
+    "horn_to_longeron": {"nominal_gap_m": 0.037, "eq": "g(delta) = 0.775 - 0.25*cos(delta) - z_long(5.65 + 0.25*sin(delta)) - (h_longeron_half_depth + d_frame_deflection + d_horn_play); z_long slope 0.118/m aft of 5.65", "sweep_min_nominal": 0.036, "terms": "section depth/deflection UNKNOWN", "test": "CAD/mock-up full-travel sweep under 3x hinge load"},
+    "other_nominal": {"deck_TE_to_disc_m": 0.2, "tail_to_frame_side_m": 0.15, "tail_TE_to_rudder_LE_m": 0.23, "disc_to_disc_m": 0.9, "ground_m": "0.40 nominal at rest attitude only"}
+  },
+  "propulsion_requirement": {
+    "required_shaft_W_C": 11076,
+    "required_eq": "P=D*V/eta=426*13/0.50",
+    "target_shaft_W_A": 12200,
+    "target_basis": "required x1.10 for CD0/e/eta assumption spread; assumption",
+    "measured_available_W": "UNKNOWN",
+    "worst_case_pass": "cannot be stated; worst-case required (CD0 0.08, eta 0.45) = 26.4 %? no: D=513 N -> 14.8 kW exceeds target; assumed nominal case passes target only on paper",
+    "evidence_needed": "T-P1 Prony brake torque-rpm curve, 20 min continuous, with actual reduction ratio and bevel losses"
+  },
+  "trim_input_status": "estimator [C] only; aft extreme 36.9 %c yields ~0.027 estimated margin below STOP 0.03; slipstream, body, prop normal force excluded; no trim validated",
+  "dynamics_input_status": "no modes stable or unstable; pre-screen values non-verdict; inertia shape-model only",
+  "unresolved": ["wheel radius and P14 sub-centroids", "all clearance budget terms", "engine power/rpm/ratio", "NP and static margin", "slipstream trim change sign", "prop thrust/torque", "extreme-state inertia tensors"],
+  "tests_next": [
+    {"stage": 1, "test": "T-M1 weigh + suspension CG at all 8 loading states"},
+    {"stage": 2, "test": "T-P1 brake, T-S1 static load, clearance sweep mock-up"},
+    {"stage": 3, "test": "T-A1/T-A2 tunnel derivatives, T-A3 forced oscillation"},
+    {"stage": 4, "test": "T-P2 tethered power-on/off trim and hinge moment; T-C1"},
+    {"stage": 5, "test": "power-off tow at incremental speed, then powered taxi/hop, only after GO criteria"}
+  ],
+  "flight_verdict": "NOT FLIGHTWORTHY; no construction release; unvalidated design revision"
+}
+```
+--- END V10 correction ---

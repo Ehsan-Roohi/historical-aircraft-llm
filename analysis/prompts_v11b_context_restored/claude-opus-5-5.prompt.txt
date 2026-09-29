@@ -1,0 +1,409 @@
+OPUS V11 design-candidate request. Immutable parent is your completed V10 response with SHA-256 100027bc62931728bbcc8b041caff043d6031938ebd388c329e0129f896ce04e; V3 baseline remains separate. This is not a new historical-cutoff trial.
+
+Evaluator findings: under your declared rigid aft-skid pivot the tail-skid touches ground at 12.994617 degrees; ventral gap there is about 0.22111 m, but loaded deflection/contact sequence is unknown. The assumed high-drag shaft demand of 13.7 kW exceeds your UNVERIFIED 13 kW target by 0.7 kW; a 15% reserve would require 15.755 kW available at the required shaft speed under that assumed case. Your heavier engine was hypothetical and not adopted. Installed power/thrust map, aerodynamic forces/moments, six-component trim, derivatives and modes remain unavailable.
+
+Do not send another wording-only correction. Propose ONE minimal mechanically explicit V3R2 candidate patch, or return HOLD with reason. Preserve your coordinate frame and unchanged V3 items by ID. Any proposed engine, propeller, gear, skid, tail or control revision must list old/new component IDs, coordinates, dimensions and masses, and a closed nominal and extreme mass/CG ledger. Specify the ground contact/pitch pivot sequence, rigid swept clearances at rest and at rotation stop, and symbolic loaded deformation margins without treating unknown deflections as zero. Present bounded speed/drag/efficiency cases including the 13.7 kW high case; distinguish required, target and measured available power, and test a 15% reserve. A stronger assumed engine must include its mass, mounting envelope, cooling, drive ratio, torque and propeller matching requirements, and remain explicitly unverified. State the input data needed to calculate six-component powered and glide trim, neutral point/static margin, control reserve and all relevant dynamic modes without CFD. Do not invent aerodynamic or structural test results.
+
+Return JSON keys: model, revision_id, parent_response_sha256, disposition, coordinate_frame, changed_components, unchanged_component_ids, mass_ledger, cg_cases, geometry_and_contact, control_and_loaded_gap_status, propulsion_cases, independent_measurements_needed, six_component_trim_inputs_needed, derivative_and_mode_inputs_needed, rejected_alternatives, remaining_gates, flight_claim. A candidate is not a validated aircraft; if essential component geometry cannot be made internally consistent, choose HOLD.
+
+
+CONTEXT RESTORATION: The first V11 request provided hashes and summaries but not the source component records. All three models correctly returned HOLD. The complete V3 baseline response and V10 correction response now follow. They are prior model claims, not measurements; retain provenance labels.
+
+--- BEGIN V3 baseline; wrapper SHA-256 51e34fbee9444e30c743b0312ff7802ba1d1ae2bf8b965c3d3b481a8444b5b9c ---
+# Opus V3 Integrated Revision (Parent V2): Researcher-Assisted Modern Feedback Round
+
+## Status and provenance
+
+This is a modern, researcher-assisted revision. It is not part of the original 1898 concept, and none of the course material or later theory below was in the original packet. Every value carries one of three labels:
+
+- **ASSUMPTION**: a design choice or assumed value.
+- **EXT-CALC**: an independent evaluator calculation that was supplied to me.
+- **DESIGN-EST**: my own arithmetic on assumed shapes and masses.
+
+**No measured results exist.** Nothing here gives construction or crewed-flight clearance.
+
+## 1. Changes from V2 and three-view schedule
+
+**Changes from V2**
+
+| ID | Item | V2 | V3 | Reason |
+|---|---|---|---|---|
+| D1 | Propeller data (adopted from V6) | radius 1.2 m, rpm UNKNOWN, ratio UNKNOWN | D 2.4 m, 2 blades, 400 rpm, 2.5:1 chain (engine 1000 rpm), rotation +x̂ (anticlockwise viewed from behind) | Mechanically compatible: same disc at x=2.1, same hub. Blade chords S1–S3 and S5–S8 are still missing, so there is no thrust claim. |
+| D2 | V6 blade sections V4/V5A | not present | Recorded only; not adopted as performance | V5A is unscreened. V4 has a sharp trailing edge that cannot be built. |
+| D3 | Ventral fin T5 | none | 0.8 × 0.35 m (0.28 m²), x 4.8–5.6, z 0.25–0.60, 0.8 kg | Fin volume rises from ~0.020 to ~0.023. Clearance at 13° rotation is 0.221 m. |
+| D4 | Pitch-trim bungee K3 | none | Adjustable spring on the column, 0.5 kg | Lets the pilot relieve stick force when the thrust moment changes between power-on and power-off. |
+| D5 | Fuel split | E3 15 kg, one item | E3a tank 3 kg + E3b fuel 12 kg (~16 L) | Allows the empty-fuel CG extreme to be computed. |
+| D6 | Pilot envelope | 70 kg fixed | 70–90 kg; seat ballast brings any lighter pilot up to 70 kg | Bounds the aft CG. |
+| D7 | Intrinsic inertia | UNKNOWN | Shape and dimension for every item | Evaluator request. |
+| D8 | Mass and CG | 360 kg, (0.6148, 0, 0.4609) | 361.3 kg, (0.6227, 0, 0.4601) | Result of D3 and D4. |
+
+**Rejected options (retained for the record)**
+
+- V5A blade sections adopted as a performance basis.
+- Choosing a static-margin target on its own.
+- Raising dihedral now. This is held as a contingency in Section 7.
+- A ventral fin down to z 0.10. Rejected because it leaves only 0.074 m clearance at 13° rotation.
+
+**Three-view coordinates**
+
+Origin is the lower-wing leading edge on the centreline. Axes: x aft, y starboard, z up.
+
+- **Lower wing:** leading edge x 0, chord 1.8, span ±5.5. Flat to |y| 1.6, then 1° dihedral to a tip z of 0.0681.
+- **Upper wing:** z 1.8 at root, tip z 1.8681.
+- **Tailplane:** leading edge x 4.5, z 0.6, span ±2.2.
+- **Elevator hinge:** x 5.6, TE at x 6.1.
+- **Fin:** leading edge x 4.8, z 0.6–2.0.
+- **Rudder hinge:** x 5.6, z 0.68–2.0.
+- **Ventral fin:** x 4.8–5.6, z 0.25–0.60.
+- **Propeller disc:** x 2.1, centre (2.1, 0, 0.9), radius 1.2.
+- **Nacelle:** x −1.6 to 0.2.
+- **Skids:** tips at (−1.9, ±0.95, −0.55), flat run x −1.5 to 1.6 at z −0.9.
+- **Tail skid tip:** (5.5, 0, 0.0).
+- **Ground:** z −0.9 at rest.
+
+## 2. Mass ledger, extremes and inertia
+
+**Conventions**
+
+- Inertia: Ixx=∫(y²+z²)dm, Iyy=∫(x²+z²)dm, Izz=∫(x²+y²)dm.
+- Product: Ixz=∫xz dm. The tensor off-diagonal entry is −Ixz.
+- Moments L, M, N follow the right-hand rule about +x (aft), +y (starboard) and +z (up).
+  - Positive q is nose-up.
+  - Positive p (about the aft axis) raises the starboard wing, i.e. a left roll.
+  - Positive r turns the nose to port.
+- Mapping to standard stability axes (x forward, y starboard, z down) uses T=diag(−1, 1, −1): p_s=−p, q_s=q, r_s=−r. Ixz is unchanged by this mapping.
+
+**Items and properties**
+
+The full ledger is in the JSON. All masses are ASSUMPTIONS, and none has been weighed. Intrinsic inertias are DESIGN-EST for uniform idealised shapes. The seated human modelled as a uniform box is a crude approximation, and its true inertia is UNKNOWN.
+
+**Totals (nominal state: 70 kg pilot, full fuel)**
+
+- Mass 361.3 kg.
+- Σx = 224.975 kg·m, Σz = 166.223 kg·m.
+- CG = (0.6227, 0, 0.4601).
+
+**Extremes**
+
+| State | Mass (kg) | CG (x, z) |
+|---|---|---|
+| 70 kg pilot, empty fuel (aft limit) | 349.3 | (0.6269, 0.4553) |
+| 90 kg pilot, full fuel (forward limit) | 381.3 | (0.5428, 0.4517) |
+| 90 kg pilot, empty fuel | 369.3 | (0.5442, 0.4469) |
+
+**Whole-aircraft inertia (DESIGN-EST, not measured)**
+
+The whole-aircraft values below come from a parallel-axis sum plus the intrinsic terms. The evaluator must recompute them from the ledger.
+
+| Quantity | Value (kg·m²) | Uncertainty |
+|---|---|---|
+| Iyy | ≈1030 | ±25% |
+| Ixx | ≈1100 | ±30% |
+| Izz | ≈1800 | ±30% |
+| Ixz | ≈+80 | ±60% |
+
+- Ixy and Iyz are zero by assumed symmetry.
+- **Propeller angular momentum:** h = Ip·ω = 4.43 × 41.89 ≈ 186 kg·m²/s along +x.
+- **Resolving test:** weigh each component. Suspend the whole aircraft at two or more points to find the CG. Swing it as a bifilar or compound pendulum about three axes plus one skewed axis to obtain Ixz.
+
+## 3. Installed surfaces and controls
+
+**Elevator**
+
+- Hinge from (5.6, −2.2, 0.6) to (5.6, 2.2, 0.6).
+- Travel −15° to +20°, positive = TE up = nose-up.
+- Linkage sense: column aft gives TE up.
+- TE vertical sweep z 0.471–0.771.
+
+**Balancing flaps**
+
+- Hinges run from (1.35, ±3.5, 1.884) to (1.35, ±5.5, 1.919). Travel ±15°, opposed.
+- Linkage sense: wheel right gives starboard TE up and port TE down, which rolls right.
+- Adverse yaw is UNKNOWN.
+
+**Rudder**
+
+- Hinge from (5.6, 0, 0.68) to (5.6, 0, 2.0). Travel ±25°.
+- Positive = TE to port = nose right. Linkage sense: right pedal forward.
+- Rudder bottom is 0.06 m above the torque tube.
+
+**Ventral fin**
+
+- Fixed surface.
+- Clearance to the tail skid braces (G4) must be checked on a mock-up.
+
+**Rate limits**
+
+Rate limits are an ASSUMPTION of manual-cable capability: 60°/s for elevator and rudder, 45°/s for the flaps. They are UNKNOWN. The resolving test is a bench cable rig with measured stretch, friction, backlash and deflection versus time under a simulated hinge load.
+
+**Hinge moments**
+
+Hinge moments are UNKNOWN. The resolving test is a tow or wind-tunnel measurement with a hinge balance.
+
+**Body and propeller as installed**
+
+- Nacelle: box 1.8 × 0.7 × 0.75 m.
+- Propeller: pusher disc at x 2.1. It lies 0.22 m behind the wing TE and 0.383 m from the upper boom spar.
+- Tail surfaces lie partly in the slipstream. The size of that effect is UNKNOWN.
+
+## 4. Propulsion, drag and trim
+
+**Operating point (15 m/s)**
+
+The EXT-CALC demand of 11.67 kW against an unverified 13 kW target implies a required installed efficiency of 0.576. DESIGN-EST values at T = 448 N:
+
+- Advance ratio J = V/(nD) = 0.9375.
+- Thrust coefficient CT = 0.248.
+- Power coefficient CP at 13 kW = 0.450.
+- Momentum-ideal efficiency ≈ 0.86.
+- Tip helical speed ≈ 52 m/s.
+
+Engine power and propeller efficiency are both UNKNOWN. This requires an engine brake test and a propeller stand-plus-tow test.
+
+**Drag scenarios**
+
+Nominal CD0 = 0.050 on Sref, i.e. 261 N parasite drag plus 185 N induced drag.
+
+| Scenario | Parasite drag | Shaft power at η 0.576 |
+|---|---|---|
+| Low | −30% | ≈9.6 kW |
+| Nominal | nominal | ≈11.67 kW |
+| High | +30% | ≈13.7 kW |
+
+The high case exceeds the unverified 13 kW target.
+
+**Trim strategy**
+
+- The thrust line (z 0.9) is about 0.44 m above the CG, so thrust produces a moment of ≈ −0.44·T N·m (nose-down).
+- At power-off this nose-down moment is removed. The change is ≈ +197 N·m nose-up at 15 m/s.
+- Holding the same speed therefore needs ≈1.9° more TE-down elevator, assuming Cmδ ≈ 0.011/deg ±50%.
+- The bungee is preset to the power-off glide. Power-on stick force is then held manually. Magnitudes are UNKNOWN.
+- Power-on and power-off trim must be solved by the evaluator at each state listed in Section 5.
+
+## 5. Derivative analysis and test matrix
+
+**Test states**
+
+- Speeds 13, 15 and 18 m/s. The 13 m/s case applies only if a stall estimate shows margin.
+- CG positions: forward 0.5428, nominal 0.6227, aft 0.6269.
+- Power: on (T = D) and off (windmill or idle).
+- This gives 18 cases.
+
+**Derivatives required**
+
+- **Longitudinal:** CX_u, CX_α, CZ_u, CZ_α, CZ_q, CZ_α̇, Cm_u, Cm_α, Cm_q, Cm_α̇.
+- **Lateral:** CY_β, CY_p, CY_r, Cl_β, Cl_p, Cl_r, Cn_β, Cn_p, Cn_r.
+- **Control:** CZ, Cm and CX with respect to δe; Cl, Cn and CY with respect to δf and δr.
+- **Propulsion:** T_u, T_δthrottle, the thrust moment arm, propeller normal force versus α and β (P-factor), slipstream increments on the tail, and the gyroscopic h.
+
+**Methods**
+
+1. **Steady derivatives:** AVL or VLM on the V3 geometry with the biplane cellule, nacelle and boom bodies (slender body), plus fin and ventral fin. The evaluator runs this.
+2. **Unsteady CL_α̇ and Cm_α̇:** these must NOT be taken from steady AVL.
+   - First estimate: the tail downwash-lag formula, Cm_α̇ ≈ −2·a_t·η_t·V_H·(l_t/c)·dε/dα. The inputs dε/dα and a_t come from VLM. The result is an ESTIMATE only.
+   - Resolution: a captive-model forced-oscillation test (pitch and plunge separation), or an unsteady panel or frequency-domain model.
+3. **Control and slipstream effects:** tow or wind-tunnel tests of a model with the propeller running.
+4. **Uncertainty:** each derivative gets a ± band. Absent values stay UNKNOWN and are never set to zero.
+
+## 6. Longitudinal and lateral roots
+
+**Calculation path**
+
+- Longitudinal state [u, w, q, θ]; lateral state [v, p, r, φ].
+- Dimensional derivatives use the ledger mass and the Section 2 inertias, with Ixz retained.
+- Gyroscopic coupling from h adds a moment of (0, −r·h, +q·h) in the body frame. It couples the two 4×4 blocks, so an 8×8 coupled solution must also be run.
+- Run a Monte Carlo sweep over the derivative and inertia bands and report root clouds.
+
+**Mode labels**
+
+- Longitudinal: phugoid (2 roots) and short period (2 roots).
+- Lateral: roll subsidence, spiral, and Dutch roll (2 roots).
+
+**Screening estimates (DESIGN-EST, not verdicts)**
+
+- **Lanchester phugoid:** ω ≈ √2·g/V = 0.92 rad/s (period ≈ 6.8 s), ζ ≈ 0.09.
+  - This ignores Cm_u and thrust effects, so its stability is UNKNOWN.
+- **Reduced short period:** uses the EXT-CALC determinant with Iyy ≈ 1030 kg·m². Result: ω ≈ 3.8 rad/s, ζ ≈ 0.9.
+  - This excludes Mα̇, u-coupling and propulsion, and the value may change substantially.
+- **Lateral roots:** all UNKNOWN.
+
+## 7. Contingency if a mode is unstable
+
+The ventral fin raises Cn_β, which may worsen the spiral mode.
+
+**If the spiral mode diverges with a doubling time under 10 s, or the Dutch roll has ζ < 0.05, increase outer-panel dihedral from 1° to 2.5°.**
+
+- **Geometry:** tip rise changes from 0.068 m to 0.170 m. Outer strut and wire lengths are recut.
+- **Mass:** about +0.3 kg; CG change is negligible.
+- **Aerodynamics:** lift loss about 0.1%. Cl_β becomes more negative, which may reduce Dutch-roll damping, so the roots must be re-solved.
+- **Trim and power:** trim is essentially unchanged; power rises by less than 1%.
+- **Ground clearance:** wingtip roll contact improves from 11.9° to about 12.8°.
+
+**If the aft-CG phugoid or short period is unstable:** limit the aft CG with 5 kg of fixed ballast at x = −1.4.
+
+- CG shifts forward by ≈0.03 m.
+- Elevator trim moves TE-up by ≈0.5°.
+- Required power rises by ≈1.5%.
+
+## 8. Unresolved items and stop/go criteria
+
+**Unresolved**
+
+- Engine existence and power curve.
+- Propeller chords, stacking axis and polars, including confirmation of the V6 rotation hand.
+- Section stall.
+- Parasite drag.
+- All installed derivatives.
+- α̇ and slipstream terms.
+- Measured inertias.
+- Hinge moments and cable dynamics.
+- Structural allowables.
+- Flexibility.
+- The evaluator elevator-sign mapping.
+
+**Stop/go gates**
+
+These are gates for the next analysis step only, not for flight.
+
+1. The mass and inertia ledger is recomputed independently and agrees within 5%.
+2. Every state in the matrix trims power-on and power-off within control limits, keeping at least 25% of control travel in reserve.
+3. All eight roots across the uncertainty sweep meet all of these conditions:
+   - Real parts ≤ 0.
+   - Spiral doubling time ≥ 10 s, if it is divergent.
+   - Short-period and Dutch-roll ζ ≥ 0.1.
+4. Measured engine power is at least the high-drag requirement plus 15%.
+5. A proof load and ground/tow test plan is reviewed.
+
+**If any gate fails, stop and revise.**
+
+```json
+{"schema_version":"aircraft-revision-3.0","model_id":"V3","parent":"V2_immutable","modern_round":true,
+"coordinates":{"origin":"lower-wing LE centreline","x":"aft","y":"starboard","z":"up","ground_z_rest":-0.9,
+"moments":"right-hand about +x,+y,+z; +q nose-up; +p raises starboard wing (left roll); +r nose to port","to_stability_axes":"diag(-1,1,-1): p_s=-p,q_s=q,r_s=-r; Ixz unchanged",
+"inertia":"Ixx=∫(y2+z2)dm, Ixz=∫xz dm, tensor offdiag=-Ixz",
+"controls_sign":"elev + TE up nose-up; flap + TE up opposed, wheel right = stbd TE up = roll right; rudder + TE port nose right"},
+"changes":[{"id":"D1","from":"rpm/ratio UNKNOWN","to":"D2.4,2 blades,400rpm,2.5:1,omega +x","src":"V6 adopted"},
+{"id":"D2","item":"V4/V5A sections","status":"recorded, not adopted"},
+{"id":"D3","item":"ventral fin T5","to":"x4.8-5.6,z0.25-0.60,0.28m2,0.8kg"},
+{"id":"D4","item":"trim bungee K3","to":"0.5kg (-1.0,0,-0.1)"},
+{"id":"D5","item":"E3 split","to":"tank 3 + fuel 12"},
+{"id":"D6","item":"pilot range","to":"70-90kg, ballast to 70"},
+{"id":"D8","from":"360,(0.6148,0,0.4609)","to":"361.3,(0.6227,0,0.4601)"}],
+"rejected":["V5A as performance basis","isolated static-margin target","ventral to z0.10 (0.074m clearance)","dihedral now (contingency)"],
+"mass_items":[
+{"id":"O1","m":70,"c":[-0.9,0,0.3],"shape":"box 0.6x0.45x0.9","I":[5.91,6.83,3.28],"range_kg":[70,90]},
+{"id":"N1","m":10,"c":[-0.7,0,0.0],"shape":"shell box 1.8x0.7x0.75","I":"thin-shell: evaluator"},
+{"id":"N2","m":2,"c":[-0.75,0,-0.15],"shape":"box 0.4x0.44x0.2"},
+{"id":"K1","m":3,"c":[-1.2,0,0.0],"shape":"box 0.6x0.6x0.75"},
+{"id":"K2","m":3,"c":[2.5,0,0.5],"shape":"distributed along cable routes"},
+{"id":"K3","m":0.5,"c":[-1.0,0,-0.1],"shape":"point"},
+{"id":"E1","m":75,"c":[0.25,0,0.28],"shape":"box 0.55x0.6x0.5","I":[3.81,3.45,4.14]},
+{"id":"E2","m":20,"c":[0.3,0,0.45],"shape":"box 0.2x0.7x0.3"},
+{"id":"E3a","m":3,"c":[0.5,0,0.6],"shape":"shell 0.2x0.3x0.16"},
+{"id":"E3b","m":12,"c":[0.5,0,0.6],"shape":"fluid, range 0-12kg"},
+{"id":"S1","m":8,"c":[1.256,0,0.9],"shape":"shaft rod x0.3-2.0 + brackets"},
+{"id":"P1","m":12,"c":[2.1,0,0.9],"shape":"hub 4kg disc r0.15 + 2 blades 4kg rods r0.15-1.2","I":{"Ixx_polar":4.43,"diametral_mean":2.2},"h_kgm2_s":186},
+{"id":"W1","m":34,"c":[0.75,0,0.107],"shape":"plate 1.8x11","I":[342.8,9.18,351.9]},
+{"id":"W2","m":30,"c":[0.64,0,1.911],"shape":"plate 1.8x11","I":[302.5,8.1,310.6]},
+{"id":"W3","m":4,"c":[1.575,0,1.874],"shape":"2 plates 0.45x2 at y±4.5","I":[81.7,0.07,81.7]},
+{"id":"W4","m":8,"c":[0.825,0,0.984],"shape":"12 rods L1.74","I":[114.5,4.2,114.7]},
+{"id":"W5","m":4,"c":[0.83,0,0.96],"shape":"cellule sheet 11x1.8","I":[41.4,1.4,40.4]},
+{"id":"B1","m":20,"c":[3.48,0,0.61],"shape":"4 tubes L~4.3 y±1.6","I":[53,31.9,81.3]},
+{"id":"T1","m":7,"c":[5.05,0,0.6],"shape":"plate 1.1x4.4","I":[11.29,0.71,12.0]},
+{"id":"T2","m":3,"c":[5.85,0,0.6],"shape":"plate 0.5x4.4","I":[4.84,0.06,4.9]},
+{"id":"T3","m":3,"c":[5.2,0,1.3],"shape":"plate 0.8x1.4","I":[0.49,0.65,0.16]},
+{"id":"T4","m":2,"c":[5.85,0,1.34],"shape":"plate 0.5x1.32","I":[0.29,0.33,0.04]},
+{"id":"T5","m":0.8,"c":[5.2,0,0.425],"shape":"plate 0.8x0.35","I":[0.008,0.051,0.043]},
+{"id":"G1","m":13,"c":[-0.21,0,-0.82],"shape":"2 rods L3.5 y±0.95","I":[11.73,13.27,25.0]},
+{"id":"G2","m":8,"c":[0.45,0,-0.75],"shape":"2 wheels y±1.05 + axle"},
+{"id":"G3","m":4.5,"c":[0.35,0,-0.45],"shape":"struts"},
+{"id":"G4","m":1.5,"c":[5.5,0,0.3],"shape":"skid+braces"}],
+"mass_summary":{"total_kg":361.3,"sum_x":224.975,"sum_z":166.223,"cg":[0.6227,0,0.4601],
+"extremes":[{"case":"70kg empty fuel (aft)","m":349.3,"cg":[0.6269,0,0.4553]},{"case":"90kg full (fwd)","m":381.3,"cg":[0.5428,0,0.4517]},{"case":"90kg empty","m":369.3,"cg":[0.5442,0,0.4469]}],
+"inertia_DESIGN_EST":{"Ixx":1100,"Iyy":1030,"Izz":1800,"Ixz":80,"Ixy":0,"Iyz":0,"uncertainty":"Iyy ±25%, Ixx/Izz ±30%, Ixz ±60%"},
+"label":"assumed masses, none weighed","test":"component weighing, suspension CG, pendulum swings incl. skewed axis"},
+"controls":[{"id":"ELEV","hinge":[[5.6,-2.2,0.6],[5.6,2.2,0.6]],"limits_deg":[-15,20],"rate_deg_s":"60 ASSUMPTION/UNKNOWN","sense":"column aft = TE up"},
+{"id":"FLAPS","hinge_stbd":[[1.35,3.5,1.884],[1.35,5.5,1.919]],"hinge_port":[[1.35,-3.5,1.884],[1.35,-5.5,1.919]],"limits_deg":[-15,15],"rate_deg_s":"45 ASSUMPTION/UNKNOWN","sense":"wheel right = stbd TE up"},
+{"id":"RUDDER","hinge":[[5.6,0,0.68],[5.6,0,2.0]],"limits_deg":[-25,25],"rate_deg_s":"60 ASSUMPTION/UNKNOWN","sense":"right pedal = TE port = nose right","clearance_m":0.06},
+{"hinge_moments":"UNKNOWN","test":"tow/tunnel hinge balance; bench cable rig"}],
+"clearances_m":{"prop_upper_boom":0.383,"prop_wing_TE_axial":0.22,"ventral_ground_13deg":0.221,"ventral_to_G4":"UNKNOWN - mock-up check"},
+"propulsion":{"engine_rpm":1000,"prop_rpm":400,"ratio":2.5,"P_target_W":"13000 unverified","P_required_W_EXT":11670,"eta_required":0.576,"J":0.9375,"CT":0.248,"CP_at_13kW":0.45,"eta_ideal":0.86,"engine_curve":"UNKNOWN","prop_eff":"UNKNOWN",
+"drag_cases_W":{"low":9600,"nom":11670,"high":13700},"CD0_nom":0.05},
+"trim":{"thrust_moment_Nm":"-0.44*T","power_off_dM_Nm":197,"power_off_delev_deg":"-1.9 (more TE down) ±50%","bungee":"set to power-off glide","status":"to be solved by evaluator per state"},
+"test_matrix":{"V_m_s":[13,15,18],"cg_x":[0.5428,0.6227,0.6269],"power":["on T=D","off windmill"],
+"longitudinal":["CXu","CXa","CZu","CZa","CZq","CZadot","Cmu","Cma","Cmq","Cmadot"],
+"lateral":["CYb","CYp","CYr","Clb","Clp","Clr","Cnb","Cnp","Cnr"],
+"control":["CZde","Cmde","CXde","Cldf","Cndf","CYdr","Cndr","Cldr"],
+"propulsion":["Tu","Tthrottle","prop normal force vs a,b","slipstream tail increments","h=186 gyro"],
+"adot_method":"downwash-lag ESTIMATE then forced-oscillation captive test; never from steady AVL","absent":"UNKNOWN, not zero"},
+"modes":{"path":"4x4 long [u,w,q,th], 4x4 lat [v,p,r,phi] with Ixz; 8x8 with gyro (0,-r h,+q h); Monte Carlo",
+"phugoid_est":{"omega":0.92,"zeta":0.09,"label":"Lanchester DESIGN-EST"},
+"short_period_est":{"omega":3.8,"zeta":0.9,"label":"reduced, excludes Madot/u/propulsion"},
+"roll":"UNKNOWN","spiral":"UNKNOWN","dutch_roll":"UNKNOWN","verdict":"NOT_ASSESSED"},
+"contingency":[{"trigger":"spiral T2<10s or DR zeta<0.05","change":"outer dihedral 1->2.5 deg, tip rise 0.170","mass_kg":0.3,"trim":"negligible","power":"<1%"},
+{"trigger":"aft-CG longitudinal instability","change":"5kg ballast x=-1.4","dcg_x":-0.03,"delev_deg":"+0.5 TE up","power":"+1.5%"}],
+"stop_go":["ledger/inertia agree 5%","all states trim with 25% travel reserve on/off","all roots Re<=0 across sweep, spiral T2>=10s, zeta>=0.1","measured power >= high-drag need +15%","proof/tow plan reviewed"],
+"unresolved":["engine","prop chords/stacking/polars/rotation hand","stall","parasite drag","installed derivatives","adot and slipstream","measured inertia","hinge/cable dynamics","structure","flexibility","elevator sign mapping"],
+"measured_results":"none","clearance":"no construction or crewed flight"}
+```
+--- END V3 baseline ---
+
+--- BEGIN V10 correction; wrapper SHA-256 100027bc62931728bbcc8b041caff043d6031938ebd388c329e0129f896ce04e ---
+Rigid geometry confirms the evaluator's numbers, with one correction to my parent claim. The tail-skid tip touches ground at 12.994617° nose-up about the aft skid end (x=1.60 m). The parent's "13° / 0.221 m" state is therefore unreachable: the rigid tail skid would sit 0.38 mm below ground. The corrected rigid limit is 12.9946°, where the ventral gap is 0.2211 m. That limit comes from rigid geometry only. Loaded skid, brace and boom deflection is UNKNOWN.
+
+The smallest consistent patch changes no coordinates or masses. It relabels the clearance claim, defines the contact sequence (wheels and skid at rest, pivot about the aft skid end, stop at the tail-skid tip) and sets the rotation limit.
+
+For propulsion, I retain the failure. The 13 kW target is unverified and falls 0.70 kW short of my own 13.70 kW high-drag demand. It falls 2.755 kW short of the stop-go requirement of +15%. I give a mass/CG sensitivity example only; it is not an adopted engine. No engine curve, propeller map, trim solution or mode result is claimed.
+
+```json
+{
+"version":"V3R-correction-patch-1",
+"parent_sha256":"51e34fbee9444e30c743b0312ff7802ba1d1ae2bf8b965c3d3b481a8444b5b9c",
+"coordinate_frame":{"origin":"lower-wing LE centreline","x":"aft","y":"starboard","z":"up","ground_z_rest_m":-0.9,"theta":"+ nose-up (tail down)","rotation_about_pivot":"z' = zp + (x-xp)(-sinθ) + (z-zp)cosθ ; x' = xp + (x-xp)cosθ + (z-zp)sinθ","V0_record":"unchanged; source cutoff applies to V0 only"},
+"disputed_claims":[
+{"id":"C1","parent":"clearances_m.ventral_ground_13deg=0.221","check":"pivot (1.60,-0.90), corner (5.60,0.25): -4.0*sin13+1.15*cos13 = -0.899804+1.120526 = 0.220722 m","issue":"13 deg unreachable: tail-skid tip (5.50,0): -3.9*sin13+0.9*cos13 = -0.000376 m (penetration)","corrected":"rotation limit θmax=atan(0.9/3.9)=12.994617 deg; ventral rigid gap at θmax = -4.0*0.224860+1.15*0.974391 = 0.221110 m"},
+{"id":"C2","parent":"implicit wheel-pivot rotation","check":"about (0.45,-0.90), skid end (1.60,-0.90): z' = -1.15*sinθ < 0 for θ>0","corrected":"wheel-only rotation physically blocked; pivot is aft skid end"},
+{"id":"C3","parent":"P_target_W 13000 vs drag_cases high 13700","check":"13000-13700 = -700 W; ratio 0.9489","corrected":"high-drag case FAILS target; stop-go need 13700*1.15 = 15755 W, shortfall 2755 W"}
+],
+"correction_patch":{
+"geometry_changes":"none (coordinates, dimensions, masses unchanged)",
+"label_changes":[
+{"id":"CLR-VENTRAL","replace":"ventral_ground_13deg:0.221","with":{"theta_max_rigid_deg":12.994617,"ventral_gap_rigid_at_theta_max_m":0.221110,"ventral_gap_loaded_m":"UNKNOWN"}},
+{"id":"G4","add":{"role":"rotation stop / tail-down contact","tip_xyz_m":[5.5,0,0.0],"m_kg":1.5,"c_m":[5.5,0,0.3]}},
+{"id":"G1","add":{"role":"rest contact + rotation pivot","aft_end_xyz_m":[1.6,0,-0.9]}},
+{"id":"PROP-STATUS","add":"high-drag case failure retained"}
+],
+"conditional_sensitivity_NOT_ADOPTED":{"case":"if higher-power engine adds +10 kg at E1 (0.25,0,0.28)","m_kg":371.3,"cg_m":[0.6126,0,0.4552],"note":"illustrative only; real engine mass/power UNKNOWN"}
+},
+"unchanged_item_ids":["O1","N1","N2","K1","K2","K3","E1","E2","E3a","E3b","S1","P1","W1","W2","W3","W4","W5","B1","T1","T2","T3","T4","T5","G1","G2","G3","G4","ELEV","FLAPS","RUDDER","D1","D2","D3","D4","D5","D6","D8","inertia_DESIGN_EST","contingency","stop_go"],
+"mass_loading_states":[
+{"case":"nominal 70kg pilot, 12kg fuel","m_kg":361.3,"cg_m":[0.6227,0,0.4601]},
+{"case":"70kg pilot, 0 fuel (aft)","m_kg":349.3,"cg_m":[0.6269,0,0.4553]},
+{"case":"90kg pilot, 12kg fuel (fwd)","m_kg":381.3,"cg_m":[0.5428,0,0.4517]},
+{"case":"90kg pilot, 0 fuel","m_kg":369.3,"cg_m":[0.5442,0,0.4469]},
+{"status":"assumed masses, none weighed"}
+],
+"contact_and_clearance":{
+"sequence":["rest: wheels G2 (x=0.45) and skid G1 (to x=1.60) on z=-0.90; CG x 0.543-0.627 between them","tail-down: pivot at G1 aft end (1.60,-0.90); wheels lift, z'=+1.15 sinθ","stop: G4 tip contacts at θ=12.994617 deg; ventral T5 corner rigid gap 0.221110 m"],
+"equations":{"tail_skid":"z_G4(θ) = -0.90 - 3.90 sinθ + 0.90 cosθ + 0.90 ; contact when tanθ = 0.9/3.9","ventral":"gap(θ) = -4.00 sinθ + 1.15 cosθ (m above ground)","swept_check":"for θ∈[0,θmax], gap(θ) decreasing, min at θmax = 0.221110 m"},
+"load_path":"G4 skid -> braces -> lower booms B1 -> cellule; G1 -> G3 struts -> fuselage/E1 frame; stiffness UNKNOWN",
+"loaded_deflection_m":"UNKNOWN",
+"ventral_to_G4_brace_m":"UNKNOWN",
+"tests":["CAD/mock-up: G4 brace vs T5 envelope","static tail-down load test: G4 deflection vs load up to design tail load (UNKNOWN), re-measure θmax and ventral gap","hard-landing drop estimate by test"]
+},
+"propulsion_requirement":{"P_required_high_W":13700,"P_required_nom_W":11670,"P_required_low_W":9600,"P_target_W":13000,"P_target_status":"unverified","P_measured_available_W":"UNKNOWN","margin_high_W":-700,"stop_go_need_W":15755,"worst_case_passes_target":false,"evidence_needed":["engine dyno curve at 1000 rpm incl. cooling/installation","gearbox efficiency test","prop static + tow thrust/torque at J≈0.94","installed thrust = drag at 15 m/s by tow or tethered test","drag breakdown from glide/tow tests"]},
+"trim_input_status":{"powered":"UNKNOWN","power_off":"UNKNOWN","parent_estimates":"power_off_delev -1.9 deg ±50% DESIGN-EST only"},
+"dynamics_input_status":{"phugoid":"DESIGN-EST only","short_period":"reduced DESIGN-EST only","roll":"UNKNOWN","spiral":"UNKNOWN","dutch_roll":"UNKNOWN","verdict":"NOT_ASSESSED"},
+"unresolved":["installed power","engine mass if changed","loaded ground clearance","G4/T5 interface","drag","derivatives","adot/slipstream","measured inertia","structure","hinge moments"],
+"tests_next":[
+"S1 weigh components, suspension CG, pendulum inertia",
+"S2 ground geometry: tail-down static load, measure θmax, gaps",
+"S3 bench: engine dyno, gearbox, prop thrust/torque",
+"S4 captive/tow: drag, control derivatives, forced oscillation (adot), power on/off",
+"S5 unmanned scaled or tethered power-off glide trim then powered trim at 3 CGs",
+"S6 build linear models from measured data; Monte Carlo; review before any crewed step"
+],
+"flight_verdict":"NOT_CLEARED: no construction or flight clearance; high-drag power case fails; trim and modes UNKNOWN"
+}
+```
+--- END V10 correction ---

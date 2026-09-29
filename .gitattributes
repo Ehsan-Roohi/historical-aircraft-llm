@@ -7,3 +7,9 @@
 /received_v10_astra_retry_65011846/** -text
 /received_v10_astra_postbilling_65012338/** -text
 /v10_astra_postbilling_attempt01/** -text
+/v11_design_candidate_attempt01/** -text
+/v11b_design_candidate_attempt01/** -text
+/analysis/prompts_v11_design_candidate/** -text
+/analysis/prompts_v11b_context_restored/** -text
+/analysis/results/v11_feedback_audit01.json -text
+/analysis/results/v11b_engineering_gate01.json -text

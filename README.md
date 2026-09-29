@@ -6,13 +6,31 @@ Versioned research on three aircraft proposals produced under a documentary cuto
 
 The cutoff constrains supplied documents, not the models' training knowledge. Modern evaluator feedback is distinguished from the historical input packet. This repository is a work-in-progress research record, not a journal acceptance or a build/flight authorization.
 
-## 28 September 2026 manuscript and fixed research snapshot
+## 28 September 2026 current G5 research record
+
+The current manuscript and [V11 design-candidate gate](paper/v11_design_candidate_gate01.md)
+are at fixed tag `aircraft-ast-2026-09-28-g5`. The updated
+[Overleaf package](aircraft_ast_overleaf_release08.zip) includes the main
+article, supplement, figures, and selected audit data. The paper is a
+research draft, **not a demonstrated flight-capable design or a submitted
+article**. The new feedback was run with full V3/V10 context after an
+initial, retained prompt that omitted it. [The provenance audit](analysis/results/v11_feedback_audit01.json)
+checks all six outputs; [the engineering arithmetic screen](analysis/results/v11b_engineering_gate01.json)
+finds one conditional Fable seat/gear candidate and Astra/Opus HOLDs. No
+installed power, loaded clearances, whole-aircraft trim, complete dynamic
+modes, structural adequacy or flight has been validated.
+
+The `research_evidence.zip` and `MANIFEST.json` below are the older R5
+snapshot. V10--V11b additions are individually browsable at G5 and are not
+misrepresented as contained in that ZIP.
+
+## Earlier R5 manuscript and fixed research snapshot
 
 The [revised Scientific Reports-targeted source](paper/article_scientific_reports.tex), [supplement](paper/supplementary_scientific_reports.tex), [Data Availability inventory](paper/DATA_AVAILABILITY.md), and [latest Overleaf ZIP](scientific_reports_aircraft_overleaf_release07.zip) accompany the fixed tag `aircraft-sr-2026-09-28-r5`. The paper distinguishes Astra/Opus independent V2 force and moment balances from Fable's unverified model claim in a [three-case force plate](figures/v2_force_moment_comparison.png). Table 2 is explicitly V1. The two-mesh quasi-steady screen reports [fine](analysis/results/v2_rate_derivatives/fine.json) and [coarse](analysis/results/v2_rate_derivatives/coarse.json) pitch-rate derivatives for Astra and Opus; the first failed memory-allocation attempt is preserved. A [new dynamic gate](analysis/results/v2_dynamic_gate01.json) checks only the signs of a deliberately reduced two-state pitch model. Angle-of-attack-rate derivatives and installed-aircraft eigenmodes remain unresolved.
 
-The `research_evidence.zip` snapshot contains **all locally recovered** prompts, responses, model attempts, code, figures, and selected numerical records in the stated project scope. Its 2,815 paths have per-file SHA-256 hashes in [MANIFEST.json](MANIFEST.json); the ZIP checksum is in [research_evidence.zip.sha256](research_evidence.zip.sha256). The archive does not claim recovery of unrecorded service-side transport or include third-party lecture/book PDFs. No DOI has been assigned.
+The R5 `research_evidence.zip` snapshot contains **all locally recovered through R5** prompts, responses, model attempts, code, figures, and selected numerical records in its stated scope. Its 2,852 paths have per-file SHA-256 hashes in [MANIFEST.json](MANIFEST.json); the ZIP checksum is in [research_evidence.zip.sha256](research_evidence.zip.sha256). Later direct files are outside this ZIP. The archive does not claim recovery of unrecorded service-side transport or include third-party lecture/book PDFs. No DOI has been assigned.
 
-The [integrated flight-dynamics redesign plan](paper/dynamic_design_next_loop.md) specifies the missing inertia, unsteady derivatives, full longitudinal/lateral modes and control/propulsion gates. [Case-specific prompts](analysis/prompts_v9_integrated_dynamics/manifest.json) were submitted to Astra, Fable and Opus as Unity array `65007436`. At this snapshot the array was queued by `MaxCpuPerAccount`; **there are no V9 model answers or independently accepted V9 designs yet**. These later modern-feedback requests do not alter the original information-cutoff experiment.
+The [integrated flight-dynamics redesign plan](paper/dynamic_design_next_loop.md) specifies the missing inertia, unsteady derivatives, full longitudinal/lateral modes and control/propulsion gates. [Case-specific prompts](analysis/prompts_v9_integrated_dynamics/manifest.json) were submitted to Astra, Fable and Opus as Unity array `65007436`. The complete V9/V3 answers and their separate retries are now archived and audited below. These modern-feedback requests do not alter the original information-cutoff experiment.
 
 The [V1/V2 pitch comparison](analysis/results/v1_v2_pitch_gate_comparison01.json) adds the original-design rate-derivative run. Astra V1 has a destabilizing static pitch slope but passes only the simplified two-state sign test; this is not a full dynamic verdict. Opus V1 also passes that narrow sign test, and Fable has no mechanically admissible independently evaluated trim. The V1 run is single-mesh and is not a physical stability measurement.
 
@@ -47,7 +65,7 @@ These are coordinate-based engineering schematics, not photorealistic illustrati
 
 ## Evidence and reproducibility
 
-[Download the complete selected research evidence](research_evidence.zip) and verify its individual files against [MANIFEST.json](MANIFEST.json). Extract at the repository root to restore the recorded paths. The archive includes original V0 drawings, recovered prompts, V1/V2/V3 responses (including the token-truncated attempts and completed retries), local analysis code, numerical inputs/outputs, rejected/failed attempts and dated methodological notes. Key current code and reports are also directly browsable. The archived original responses remain unchanged. Earlier notes may be superseded; consult the stage register for current status.
+[Download the R5 selected research evidence](research_evidence.zip) and verify its individual files against [MANIFEST.json](MANIFEST.json). Extract at the repository root to restore the recorded paths. That fixed archive includes original V0 drawings, recovered prompts, V1/V2/V3 responses (including the token-truncated attempts and completed retries), local analysis code, numerical inputs/outputs, rejected/failed attempts and dated methodological notes. Later V10--V11b code, prompts, outputs and reports are directly browsable at G5, outside the R5 ZIP. The archived original responses remain unchanged. Earlier notes may be superseded; consult the stage register for current status.
 
 Python 3 with NumPy is required for the current calculations and vector drawings. To reproduce the drawings after extracting the evidence:
 

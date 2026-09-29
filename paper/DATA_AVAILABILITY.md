@@ -1,14 +1,15 @@
 # Data and code availability for the aircraft-LLM study
 
-Author: Ehsan Roohi. Public research snapshot: `aircraft-sr-2026-09-28-r5` in
-[`Ehsan-Roohi/historical-aircraft-llm`](https://github.com/Ehsan-Roohi/historical-aircraft-llm/tree/aircraft-sr-2026-09-28-r5).
-The exact included paths, byte counts and SHA-256 digests are recorded in
-`MANIFEST.json`; `research_evidence.zip` is the consolidated downloadable
-snapshot. The Git tag identifies a fixed repository commit. No DOI is claimed.
+Author: Ehsan Roohi. Current public research tag: `aircraft-ast-2026-09-28-g5`
+in [`Ehsan-Roohi/historical-aircraft-llm`](https://github.com/Ehsan-Roohi/historical-aircraft-llm/tree/aircraft-ast-2026-09-28-g5).
+The earlier R5 snapshot is preserved in `research_evidence.zip` and
+`MANIFEST.json`; those two files **do not** purport to index all later V10--V11b
+additions. Later paths have their own frozen manifests, source indexes and
+response hashes. A Git tag identifies a fixed commit. No DOI is claimed.
 
 ## What the public archive contains
 
-| Research material | Public path in `research_evidence.zip` | Use and interpretation |
+| Research material | Public path (R5 ZIP where applicable; later additions are direct repository paths) | Use and interpretation |
 |---|---|---|
 | Original historical packet and initial prompts | `analysis/prompts_v0/` | Actual supplied text; a source-date restriction, not a model-training cutoff. |
 | Initial V0 outputs and model-authored drawings | `received_2026-09-24/astra_fable_opus_designs/`, plus preserved raw records in `analysis/results/` | Original proposals, including inconsistencies. |
@@ -16,20 +17,22 @@ snapshot. The Git tag identifies a fixed repository commit. No DOI is claimed.
 | Revision prompts and V2 returns | `analysis/prompts_v2/`, `analysis/prompts_v2_retrim/`, `received_v2_64942345/prompts/`, `received_v2_64942345/responses/`, `analysis/results/received_v2_audit01/` | Model-authored revisions, not automatically verified designs. |
 | Later model feedback exchanges | `received_v5_64962376/responses/`, `design_revision_v6_attempt01/responses/`, `unity_jobs/`, `analysis/results/` | Archived subsystem/revision attempts; do not silently treat them as a new integrated flightworthy aircraft. |
 | Integrated dynamic redesign feedback | `analysis/prompts_v9_integrated_dynamics/`, `received_v9_65007436/`, `received_v9_retry_65009709/`, `unity_jobs/`, `analysis/results/v9_integrated_response_audit.json` | Three complete V3 returns with the original token-truncated Fable/Opus attempts retained separately. The audit verifies response/prompt hashes and mass arithmetic, not flight dynamics or flightworthiness. |
+| V10 corrected geometry/power responses | `received_v10_65011353/`, `received_v10_astra_retry_65011846/`, `received_v10_astra_postbilling_65012338/`, `analysis/prompts_v10_geometry_power/`, `paper/v10_response_gate01.md`, `paper/v10_astra_postbilling_gate01.md` | Direct post-R5 paths. They retain quota failure and later completed Astra response separately; no V10 output validates flight. |
+| V11a/V11b design-candidate cycle | `v11_design_candidate_attempt01/`, `v11b_design_candidate_attempt01/`, `analysis/prompts_v11_design_candidate/`, `analysis/prompts_v11b_context_restored/`, `analysis/results/v11_feedback_audit01.json`, `analysis/results/v11b_engineering_gate01.json`, `paper/v11_design_candidate_gate01.md` | Direct post-R5 paths. V11a's omitted source texts and all three HOLD responses are retained. V11b restores full sources; Fable's conditional seat/gear candidate and both remaining HOLDs are independently screened. |
 | Geometry and figure source/output | `output/stage_threeviews/`, `output/figures_v2/`, `output/overleaf/scientific_reports_aircraft_2026_09_28_release03/figures/`, `analysis/` | Original and evaluator drawings have distinct provenance. Figure 7 uses the archived numerical results; Fable's values are model claims. |
 | Numerical inputs and outputs | `analysis/results/`, `output/overleaf/scientific_reports_aircraft_2026_09_28_release07/audit_data/` | Includes accepted and failed cases, mesh checks, residuals, both failed and completed rate-derivative runs, the reduced dynamic gate, and the limited V3 mass/force arithmetic audit. |
 | Analysis and manuscript source | `analysis/`, `paper/`, `output/overleaf/scientific_reports_aircraft_2026_09_28_release07/` | Human-auditable code, TeX, supplement, references, and selected source records; the full-mode assembler is not run on incomplete V2/V3 data. |
 
-## Scientific Reports policy mapping
+## Journal data-statement mapping
 
-The journal requires a Data Availability section at the end of the main text,
-before references, that identifies the minimum primary and referenced data
-needed to interpret and repeat the results, with links/identifiers and any
-access restrictions. Custom code central to the conclusions must be supplied
-to editors and reviewers and described under a **Code availability** heading
-in Methods. Figure source data should be identified when provided. See the
-[journal's editorial policy](https://www.nature.com/srep/journal-policies/editorial-policies)
-and [submission guidelines](https://www.nature.com/srep/author-instructions/submission-guidelines).
+For the current Aerospace Science and Technology target, the submission must
+give a truthful research-data statement pointing to the frozen public inputs,
+raw model outputs, figure sources, code, and independent checks. Elsevier's
+[data-statement guidance](https://www.elsevier.com/researcher/author/tools-and-resources/research-data/data-statement)
+explains that availability and reasons for restrictions should be declared;
+the journal-specific Guide for Authors should be rechecked at submission.
+The earlier Scientific Reports mapping remains relevant only if that venue is
+reconsidered.
 
 For this study, the primary data are prompts, responses, model-authored
 geometry, frozen solver inputs, evaluator outputs, figure source data and
@@ -82,9 +85,10 @@ archived raw outputs from evaluator reconstructions and unvalidated claims.
 
 The recovered prompts, historical input packet, language-model outputs,
 versioned geometry, figure source data, analysis inputs and outputs, and code
-supporting this study are openly available at the fixed repository tag above;
-the consolidated archive is `research_evidence.zip` and checksums are in
-`MANIFEST.json`. Known unrecovered transport details are documented rather
-than reconstructed. Third-party publications and privately supplied teaching
-materials cannot be redistributed and are cited in the paper. No physical
-flight or wind-tunnel dataset exists for the generated aircraft.
+supporting this study are openly available at the fixed repository tag above.
+The earlier R5 consolidated archive and checksum manifest remain available;
+later V10--V11b exchanges are provided as individually hashed repository paths.
+Known unrecovered transport details are documented rather than reconstructed.
+Third-party publications and privately supplied teaching materials are cited
+but not redistributed. No physical flight, wind-tunnel or installed
+engine--propeller measurement dataset exists for the generated aircraft.

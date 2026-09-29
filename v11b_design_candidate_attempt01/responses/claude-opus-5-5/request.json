@@ -1,0 +1,19 @@
+{
+  "stage": "v11b_design_candidate_context_restored",
+  "model_requested": "claude-opus-5-5",
+  "prompt_sha256": "61f7dce70943a3673ec10cc41b674e42e56d596a2b2f8ac33841c4341e3c4eab",
+  "parent_response_sha256": "100027bc62931728bbcc8b041caff043d6031938ebd388c329e0129f896ce04e",
+  "baseline_response_sha256": "51e34fbee9444e30c743b0312ff7802ba1d1ae2bf8b965c3d3b481a8444b5b9c",
+  "instructions_sha256": "07fd7845550229e30d8760256d6fdc20f93dff64891f79f437b7529417aab12a",
+  "manifest_sha256": "52b070610b711433e6d84ad2ff45af226b4ff92f108034e7b40eab6e443d9404",
+  "runner_sha256": "503cb7c1e438c0b9b3a1cd4f096e167944a7c5287cd54e919efdb185363b66f1",
+  "transport_sha256": "df2a2a49dd6f41d60df38822364b25e1f91824d8b8e2369b3e7dd509746973c3",
+  "maximum_output_tokens": 24000,
+  "reasoning_effort": "low",
+  "maximum_calls": 1,
+  "automatic_retry": false,
+  "timeout_seconds": 5400,
+  "engineering_validation": "not_evaluated",
+  "started_utc": "2026-09-29T00:02:48.430319+00:00",
+  "slurm_job_id": "65012688"
+}

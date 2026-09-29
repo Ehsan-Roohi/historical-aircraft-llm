@@ -1,0 +1,65 @@
+{
+  "reason": "V11a omitted full source content; all three models HOLD",
+  "records": [
+    {
+      "model": "gpt-6-astra",
+      "base_prompt_sha256": "b293978a3707939e22c313dc5d9337e5e48698cc8069e55e463bd81904ab8249",
+      "sources": [
+        {
+          "label": "V3 baseline",
+          "path": "received_v9_65007436/gpt-6-astra/response.json",
+          "wrapper_sha256": "1fe79cf004bc2f3943d330fff4afd4f69acb4f354c36c65ef119cc0808993f40",
+          "response_text_sha256": "ad89e62f2c764aa866f42314dbacd85f15799504b4affbc3508ecf9a0057ff76"
+        },
+        {
+          "label": "V10 correction",
+          "path": "received_v10_astra_postbilling_65012338/response.json",
+          "wrapper_sha256": "4bf91701328a2c9a86e39ddb479f2b6d9abfec0f7ba3bc5872a9559eab872387",
+          "response_text_sha256": "96ad36181a1fe2fc16f55ec50b26554cdbe8e1bd1c6d3e02b389e5fb67362be9"
+        }
+      ],
+      "composed_prompt_sha256": "937d6fed7b0c42c93b71da7023fb6bdb4338148336de96bae015a296927feffe",
+      "composed_prompt_bytes": 68041
+    },
+    {
+      "model": "claude-fable-5-1",
+      "base_prompt_sha256": "8befcd5e7815f4954b90dc6e3b4ebc5af0a34c7343fa7a4190a0046a04273831",
+      "sources": [
+        {
+          "label": "V3 baseline",
+          "path": "received_v9_retry_65009709/claude-fable-5-1/response.json",
+          "wrapper_sha256": "236f33562cbc093729beb70ca3501dcc4453cc4ead75eec56cc169d0adff1f93",
+          "response_text_sha256": "d3aa2f2e744958d6fe90cde471d617fb65420458045b777815b5899583107cb0"
+        },
+        {
+          "label": "V10 correction",
+          "path": "received_v10_65011353/claude-fable-5-1/response.json",
+          "wrapper_sha256": "bcd804a80087d451c8c9dac07d2f8a1118ba1487826ed32ec4a6420e49ea3324",
+          "response_text_sha256": "ce7d3d52393bff9cc827652c02e00cf6763d3e075328ee2be7965c5f44e3c07c"
+        }
+      ],
+      "composed_prompt_sha256": "14eaf8f72129d75072dc412c8f0a0550bd25ddf455c52d1ca27f77ec4aacabb7",
+      "composed_prompt_bytes": 38929
+    },
+    {
+      "model": "claude-opus-5-5",
+      "base_prompt_sha256": "2a5ad6699b3edadf7267a6a4884efb28c0ae60aae4f5667739e7956c8690318b",
+      "sources": [
+        {
+          "label": "V3 baseline",
+          "path": "received_v9_retry_65009709/claude-opus-5-5/response.json",
+          "wrapper_sha256": "51e34fbee9444e30c743b0312ff7802ba1d1ae2bf8b965c3d3b481a8444b5b9c",
+          "response_text_sha256": "0ed82633a6be7b349589547569a366b23dc6934f7e2149b1eaba1327378e1551"
+        },
+        {
+          "label": "V10 correction",
+          "path": "received_v10_65011353/claude-opus-5-5/response.json",
+          "wrapper_sha256": "100027bc62931728bbcc8b041caff043d6031938ebd388c329e0129f896ce04e",
+          "response_text_sha256": "1c805dc181f965a6de6878fba651330e846a8af4ea8b613028ec880a96d92745"
+        }
+      ],
+      "composed_prompt_sha256": "61f7dce70943a3673ec10cc41b674e42e56d596a2b2f8ac33841c4341e3c4eab",
+      "composed_prompt_bytes": 28814
+    }
+  ]
+}

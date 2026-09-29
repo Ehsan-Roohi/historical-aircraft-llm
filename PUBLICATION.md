@@ -1,5 +1,21 @@
 # Public research snapshot
 
+## 28 September 2026 G5 source-restored design-candidate release
+
+Unity arrays `65012607` and `65012688` retained two distinct V11 attempts.
+The first omitted full parent records; all three models correctly returned
+HOLD for lack of context. The second included exact V3/V10 response texts and
+source hashes. Astra and Opus again returned HOLD on substantive mechanical
+installation gaps. Fable proposed a 0.3 kg seat-stop and assumed wheel/axle
+definition; eight recomputed loading states match its rounded mass/CG ledger.
+The 12.8 kW shaft target is not measured, and its own high-power sensitivity
+would require 17.043 kW for a 15% reserve. The new V11 prompts, six raw
+responses, request/outcome records, independent audits, gate report and updated
+manuscript are included as direct paths. The R5 `research_evidence.zip` remains
+unchanged and does not include these later files. The updated Overleaf ZIP is
+`aircraft_ast_overleaf_release08.zip`; no local TeX compilation or physical
+flight validation is claimed. The fixed tag is `aircraft-ast-2026-09-28-g5`.
+
 ## 28 September 2026 post-billing Astra V10 return
 
 After the earlier quota failure, a minimal Astra request using the same Unity

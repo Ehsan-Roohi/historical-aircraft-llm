@@ -1,0 +1,18 @@
+{
+  "stage": "v11_design_candidate_attempt01",
+  "model_requested": "claude-fable-5-1",
+  "prompt_sha256": "8befcd5e7815f4954b90dc6e3b4ebc5af0a34c7343fa7a4190a0046a04273831",
+  "parent_response_sha256": "bcd804a80087d451c8c9dac07d2f8a1118ba1487826ed32ec4a6420e49ea3324",
+  "instructions_sha256": "07fd7845550229e30d8760256d6fdc20f93dff64891f79f437b7529417aab12a",
+  "manifest_sha256": "62f43b4a7d946fdded2f917ee5fde062b7175afcfd6e093003c3ebc9d7ca8f57",
+  "runner_sha256": "8fa8b96ce91cae6a3399090193ce0a405c09adab97a5c4d82df6448fe7f156f6",
+  "transport_sha256": "df2a2a49dd6f41d60df38822364b25e1f91824d8b8e2369b3e7dd509746973c3",
+  "maximum_output_tokens": 24000,
+  "reasoning_effort": "low",
+  "maximum_calls": 1,
+  "automatic_retry": false,
+  "timeout_seconds": 5400,
+  "engineering_validation": "not_evaluated",
+  "started_utc": "2026-09-28T23:55:49.593894+00:00",
+  "slurm_job_id": "65012625"
+}

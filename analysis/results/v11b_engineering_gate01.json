@@ -1,0 +1,169 @@
+{
+  "scope": "selected arithmetic and source-claim screen only",
+  "astra": {
+    "disposition": {
+      "status": "HOLD",
+      "candidate_proposed": false,
+      "reason": "The restored records support analytical reconstruction, but not the complete mechanical interference and contact audit required for this minimal patch. The baseline still incorporates structural topology by reference and represents the truss, bracing, gear and remote controls by inertia-surrogate boxes rather than physical members. Their occupied geometry is unspecified. A coupling, hinge cutout and revised skid could be designed as assumptions, but their attachment and swept clearance against preserved components could not be closed from these records. Supplying a complete installation would require additional component redesign rather than a defensible minimal patch.",
+      "not_the_previous_hold_reason": "The baseline and archived correction are now available. This HOLD concerns unresolved physical interfaces within those records, not missing response text or a historical source cutoff.",
+      "provenance": "All supplied geometry and mass allocations remain parent claims, not measurements. No new physical design assumptions are adopted."
+    },
+    "no_component_revision": true
+  },
+  "fable": {
+    "disposition": "CANDIDATE (not HOLD): one minimal mechanical patch — hardware seat-rail stops limiting seat datum to x 0.20–0.30 m, plus explicit wheel/axle geometry as a labelled new assumption; no wing/tail/engine change. All flight-relevant values remain [A]/[C]/UNKNOWN; nothing is measured.",
+    "mass_cg_checks": [
+      {
+        "state": "75 kg seat 0.25 full (nominal)",
+        "mass_gap_kg": 0.0,
+        "cg_gap_m": [
+          -1.9e-05,
+          0.0,
+          -8.4e-05
+        ],
+        "pass_rounded": true
+      },
+      {
+        "state": "75 kg seat 0.30 (aft stop) full",
+        "mass_gap_kg": 0.0,
+        "cg_gap_m": [
+          -1.4e-05,
+          0.0,
+          -8.4e-05
+        ],
+        "pass_rounded": true
+      },
+      {
+        "state": "75 kg seat 0.20 (fwd stop) full",
+        "mass_gap_kg": 0.0,
+        "cg_gap_m": [
+          -2.3e-05,
+          0.0,
+          -8.4e-05
+        ],
+        "pass_rounded": true
+      },
+      {
+        "state": "75 kg seat 0.25 empty",
+        "mass_gap_kg": 0.0,
+        "cg_gap_m": [
+          -0.000105,
+          0.0,
+          -8.7e-05
+        ],
+        "pass_rounded": true
+      },
+      {
+        "state": "65 kg seat 0.30 full (aft extreme)",
+        "mass_gap_kg": 0.0,
+        "cg_gap_m": [
+          -4.3e-05,
+          0.0,
+          -7.3e-05
+        ],
+        "pass_rounded": true
+      },
+      {
+        "state": "65 kg seat 0.30 empty (aft extreme)",
+        "mass_gap_kg": 0.0,
+        "cg_gap_m": [
+          -9.3e-05,
+          0.0,
+          -9.4e-05
+        ],
+        "pass_rounded": true
+      },
+      {
+        "state": "85 kg seat 0.20 full (fwd extreme)",
+        "mass_gap_kg": 0.0,
+        "cg_gap_m": [
+          -7e-05,
+          0.0,
+          -6.3e-05
+        ],
+        "pass_rounded": true
+      },
+      {
+        "state": "85 kg seat 0.20 empty (fwd extreme)",
+        "mass_gap_kg": 0.0,
+        "cg_gap_m": [
+          -8.8e-05,
+          0.0,
+          -8.1e-05
+        ],
+        "pass_rounded": true
+      }
+    ],
+    "all_mass_cg_rounding_pass": true,
+    "P14_subitems_mass_kg": 12.0,
+    "P14_subitems_xCG_m": 1.5,
+    "power_checks": [
+      {
+        "case": "nominal V13 W3036 CD0 0.06 e 0.70 eta 0.50",
+        "reported_W": 11076,
+        "recomputed_from_rounded_D_W": 11076.0,
+        "difference_W": 0.0
+      },
+      {
+        "case": "nominal mass 319.8 kg (85 kg full) V13, W 3137 N, CL 0.721, CDi 0.0381",
+        "reported_W": 11370,
+        "recomputed_from_rounded_D_W": 11362.0,
+        "difference_W": 8.0
+      },
+      {
+        "case": "V12 W3036 (CL 0.820, CDi 0.0493, D0 222, Di 183)",
+        "reported_W": 9955,
+        "recomputed_from_rounded_D_W": 9960.0,
+        "difference_W": -5.0
+      },
+      {
+        "case": "V16 W3036 (CL 0.461, CDi 0.0156, D0 395, Di 103)",
+        "reported_W": 16250,
+        "recomputed_from_rounded_D_W": 16256.0,
+        "difference_W": -6.0
+      },
+      {
+        "case": "optimistic CD0 0.05 eta 0.55 V13",
+        "reported_W": 9031,
+        "recomputed_from_rounded_D_W": 9029.091,
+        "difference_W": 1.909
+      },
+      {
+        "case": "previous worst sensitivity CD0 0.08 eta 0.45 V13",
+        "reported_W": 14820,
+        "recomputed_from_rounded_D_W": 14820.0,
+        "difference_W": 0.0
+      }
+    ],
+    "assumed_target_shaft_W": 12800,
+    "measured_available_shaft_power": "UNKNOWN",
+    "loaded_clearance": "UNKNOWN"
+  },
+  "opus": {
+    "disposition": "HOLD",
+    "E1_bounds_x_m": [
+      -0.025,
+      0.525
+    ],
+    "E1_E2_box_proxy_overlap": {
+      "intersection_lengths_m": [
+        0.20000000000000004,
+        0.6,
+        0.22999999999999998
+      ],
+      "intersection_volume_m3": 0.027600000000000003
+    },
+    "E1_E3a_box_proxy_overlap": {
+      "intersection_lengths_m": [
+        0.125,
+        0.3,
+        0.010000000000000009
+      ],
+      "intersection_volume_m3": 0.00037500000000000033
+    },
+    "model_E1_x_bounds_0_to_0p5": "ARITHMETIC ERROR: true x -0.025..0.525",
+    "model_E1_E3a_volume_0p0003_m3": "ARITHMETIC ERROR: true 0.000375 m3 if solid box proxies",
+    "overlap_interpretation": "These are ledger inertia/shell proxies. Intersecting envelopes alone do not establish physical collision without occupied-solid definitions."
+  },
+  "flight_gate": "NONE PASSED: no measured installed thrust/drag, six-component trim, loaded swept clearances, validated derivatives/modes or structure"
+}
