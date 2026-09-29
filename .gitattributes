@@ -20,3 +20,7 @@
 /analysis/prompts_v13_fable_arithmetic/** -text
 /analysis/results/v12_installation_gate01.json -text
 /analysis/results/v13_fable_gate01.json -text
+/v14_integrated_candidate_attempt01/** -text
+/figures/source_svg/** -text
+/analysis/results/v14_* -text
+/analysis/results/joa_* -text

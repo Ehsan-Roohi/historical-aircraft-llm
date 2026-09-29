@@ -1,0 +1,30 @@
+{
+  "inputs": [
+    {
+      "label": "(a) Astra V1",
+      "input": "analysis/results/avl_fixed_control_slope04/astra_c12_s80/aircraft.avl",
+      "sha256": "e2a6f82563598428050b8bfcb3c42a09f47683577265ae3e9670def76794dfb7",
+      "cg_marker": true
+    },
+    {
+      "label": "(b) Fable V1",
+      "input": "analysis/results/avl_control_grid01/fable/aircraft.avl",
+      "sha256": "f15d441969c58ffb5797279743f3b15d81647ac178734f1c6804f02eb0ee67f2",
+      "cg_marker": true
+    },
+    {
+      "label": "(c) Opus V1",
+      "input": "analysis/results/avl_fixed_control_slope06/opus_c12_s80/aircraft.avl",
+      "sha256": "262940078d8d7f8a3c0b95e5042c4c5aec8024df365c55464feeb009fa388406",
+      "cg_marker": true
+    },
+    {
+      "label": "(d) Wright 1903",
+      "input": "analysis/results/wright_reconstruction_family01/flat_i-4_a0/wing.avl",
+      "sha256": "bcb4b9d0e95b131ed9ed54c0752a763cd2120cd46f3841cab721b442c37b2578",
+      "cg_marker": false
+    }
+  ],
+  "scale_px_per_m": 47.0,
+  "scope": "Metric plan of frozen solver lifting surfaces; no airframe or propulsion reconstruction. Wright panel has no historical CG marker."
+}

@@ -1,0 +1,38 @@
+{
+  "scope": "Editorial screen, not TeX compilation or peer-review acceptance",
+  "article_rough_word_count_excluding_reference_file": 13208,
+  "main_sections": [
+    {
+      "name": "Introduction",
+      "screening_word_count": 711
+    },
+    {
+      "name": "Methods",
+      "screening_word_count": 6158
+    },
+    {
+      "name": "Results",
+      "screening_word_count": 2331
+    },
+    {
+      "name": "Discussion: What the Wright Comparison Actually Shows",
+      "screening_word_count": 2863
+    },
+    {
+      "name": "Limitations and Reproducibility",
+      "screening_word_count": 270
+    },
+    {
+      "name": "Conclusions",
+      "screening_word_count": 304
+    }
+  ],
+  "reference_count": 40,
+  "reference_keys_with_et_al_in_list": [],
+  "source_reference_order_matches_citation_order": true,
+  "hard_gates_not_checked": [
+    "PDF compilation and page visual QA",
+    "all-reference source and metadata verification",
+    "installed-aircraft flight and stability"
+  ]
+}

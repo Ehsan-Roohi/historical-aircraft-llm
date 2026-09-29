@@ -1,0 +1,41 @@
+{
+  "stage": "v14_installed_candidate_for_independent_dynamics",
+  "status": "FROZEN_UNSENT",
+  "scope": "three complete-parent requests; no API call made by builder",
+  "instructions_sha256": "48a31860916aea8027e8035c98ae48c2fa69c4dd5113dd7eebc81914741d8fa5",
+  "runner_sha256": "464dfa97bb646d9af1ece8641905f927c9a755e80ccae5a043d9a5e9c455f38e",
+  "maximum_output_tokens": 48000,
+  "reasoning_effort": "low",
+  "records": [
+    {
+      "model": "gpt-6-astra",
+      "prompt_file": "gpt-6-astra.prompt.txt",
+      "prompt_sha256": "9679c5307564b2523b143b0dae51a177242def1cf158bd9faf3f929e88f161c2",
+      "parent_file": "gpt-6-astra.response.json",
+      "parent_sha256": "89bce11966d0c8b1b2d5059613c878573a34beaf9e213dd8f712dcdf6582de8a",
+      "baseline_sha256": "1fe79cf004bc2f3943d330fff4afd4f69acb4f354c36c65ef119cc0808993f40",
+      "v12_context_sha256": "0826dac80df390b8228365ffb24e7e7a0e336d4c2ddcff1f723177ded9e84ef8",
+      "maximum_calls": 1
+    },
+    {
+      "model": "claude-fable-5-1",
+      "prompt_file": "claude-fable-5-1.prompt.txt",
+      "prompt_sha256": "32c65cb6595e9b3bb068a2e6fb250284856ab24cd6fdf93f430d0167aa342792",
+      "parent_file": "claude-fable-5-1.response.json",
+      "parent_sha256": "dae66235761235d241c8773d9af9c9700187d9920db638a17ce6dcda9bc4b379",
+      "baseline_sha256": "236f33562cbc093729beb70ca3501dcc4453cc4ead75eec56cc169d0adff1f93",
+      "v12_context_sha256": "125c59b0e295a195d37221d9a33c80f514e440ace78931411544016286d0b34e",
+      "maximum_calls": 1
+    },
+    {
+      "model": "claude-opus-5-5",
+      "prompt_file": "claude-opus-5-5.prompt.txt",
+      "prompt_sha256": "e31064d265a90465f22914c04cdcf691951c97c92ecfffd59879d20afdd70593",
+      "parent_file": "claude-opus-5-5.response.json",
+      "parent_sha256": "96e534daf71329dbfadec507a84ad98ac34a0dc2d156de33b4a5e2f137ee25db",
+      "baseline_sha256": "51e34fbee9444e30c743b0312ff7802ba1d1ae2bf8b965c3d3b481a8444b5b9c",
+      "v12_context_sha256": "d4456f44891f8234a6e3e52e88a7cc934979d941128effac56385aa746cbf478",
+      "maximum_calls": 1
+    }
+  ]
+}

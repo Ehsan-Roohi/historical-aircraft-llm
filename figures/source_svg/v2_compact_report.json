@@ -1,0 +1,258 @@
+[
+  {
+    "model": "gpt-6-astra",
+    "mesh": [
+      10,
+      48
+    ],
+    "alpha_deg": -0.10283974255027042,
+    "elevator_TE_down_deg": -0.0945418271721637,
+    "balance": {
+      "L_N": 3138.5065950000007,
+      "W_N": 3138.1279999999997,
+      "D_N": 239.52212135000002,
+      "T_N": 239.52250717726415,
+      "Tvertical_N": -0.4299168273180385,
+      "Maero_Nm": -36.018675,
+      "Mthrust_Nm": 35.92837607658962,
+      "Rz_N": -0.05132182731722423,
+      "Rx_N": 0.0,
+      "My_Nm": -0.09029892341037993,
+      "normalized": [
+        -1.6354281060945964e-05,
+        -1.1509909527002076e-05
+      ],
+      "useful_power_W": 4311.3981843
+    },
+    "slope": {
+      "CLalpha_per_deg": 0.07269999999999999,
+      "Cmalpha_per_deg": -0.01388,
+      "effective_margin_percent": 19.09215955983494
+    },
+    "components": [
+      {
+        "surface": "main",
+        "lift_N": 1722.7047600000003,
+        "pitch_moment_Nm": -690.01065
+      },
+      {
+        "surface": "main (YDUP)",
+        "lift_N": 1722.7047600000003,
+        "pitch_moment_Nm": -690.01065
+      },
+      {
+        "surface": "tail",
+        "lift_N": -153.42169500000003,
+        "pitch_moment_Nm": 672.0013125000002
+      },
+      {
+        "surface": "tail (YDUP)",
+        "lift_N": -153.42169500000003,
+        "pitch_moment_Nm": 672.0013125000002
+      }
+    ],
+    "surface_sum_closure_within_print_precision": true
+  },
+  {
+    "model": "gpt-6-astra",
+    "mesh": [
+      14,
+      72
+    ],
+    "alpha_deg": -0.10310981565022685,
+    "elevator_TE_down_deg": -0.32972296303039506,
+    "balance": {
+      "L_N": 3138.5065950000007,
+      "W_N": 3138.1279999999997,
+      "D_N": 245.51848655,
+      "T_N": 245.5188841162823,
+      "Tvertical_N": -0.4418369630483665,
+      "Maero_Nm": -36.762862500000004,
+      "Mthrust_Nm": 36.82783261744234,
+      "Rz_N": -0.06324196304740326,
+      "Rx_N": 0.0,
+      "My_Nm": 0.0649701174423356,
+      "normalized": [
+        -2.0152767206246293e-05,
+        8.281385264378714e-06
+      ],
+      "useful_power_W": 4419.3327579
+    },
+    "slope": {
+      "CLalpha_per_deg": 0.0729200000000001,
+      "Cmalpha_per_deg": -0.0142,
+      "effective_margin_percent": 19.47339550191989
+    },
+    "components": [
+      {
+        "surface": "main",
+        "lift_N": 1722.1689450000003,
+        "pitch_moment_Nm": -692.5408875000002
+      },
+      {
+        "surface": "main (YDUP)",
+        "lift_N": 1722.1689450000003,
+        "pitch_moment_Nm": -692.5408875000002
+      },
+      {
+        "surface": "tail",
+        "lift_N": -152.88588000000004,
+        "pitch_moment_Nm": 674.0850375
+      },
+      {
+        "surface": "tail (YDUP)",
+        "lift_N": -152.88588000000004,
+        "pitch_moment_Nm": 674.0850375
+      }
+    ],
+    "surface_sum_closure_within_print_precision": true
+  },
+  {
+    "model": "claude-opus-5-5",
+    "mesh": [
+      10,
+      48
+    ],
+    "alpha_deg": 6.371089459321379,
+    "elevator_TE_down_deg": -3.371783202931238,
+    "balance": {
+      "L_N": 3480.89844375,
+      "W_N": 3530.394,
+      "D_N": 443.4674776875,
+      "T_N": 446.2233360084887,
+      "Tvertical_N": 49.51627845498159,
+      "Maero_Nm": 195.8800725,
+      "Mthrust_Nm": -195.94038536912745,
+      "Rz_N": 0.020722204981666437,
+      "Rx_N": 0.0,
+      "My_Nm": -0.06031286912744349,
+      "normalized": [
+        5.869657885682572e-06,
+        -9.491051003158964e-06
+      ],
+      "useful_power_W": 6652.0121653125
+    },
+    "slope": {
+      "CLalpha_per_deg": 0.06440000000000001,
+      "Cmalpha_per_deg": -0.004959999999999999,
+      "effective_margin_percent": 7.701863354037264
+    },
+    "components": [
+      {
+        "surface": "LW",
+        "lift_N": 832.663125,
+        "pitch_moment_Nm": 6.5984625
+      },
+      {
+        "surface": "LW (YDUP)",
+        "lift_N": 832.663125,
+        "pitch_moment_Nm": 6.5984625
+      },
+      {
+        "surface": "UW",
+        "lift_N": 948.03148125,
+        "pitch_moment_Nm": -98.0343
+      },
+      {
+        "surface": "UW (YDUP)",
+        "lift_N": 948.03148125,
+        "pitch_moment_Nm": -98.0343
+      },
+      {
+        "surface": "tail_inner",
+        "lift_N": -2.4089625,
+        "pitch_moment_Nm": 10.463276250000002
+      },
+      {
+        "surface": "tail_inner (YDUP)",
+        "lift_N": -2.4089625,
+        "pitch_moment_Nm": 10.463276250000002
+      },
+      {
+        "surface": "tail_outer",
+        "lift_N": -37.8102375,
+        "pitch_moment_Nm": 178.9125975
+      },
+      {
+        "surface": "tail_outer (YDUP)",
+        "lift_N": -37.8102375,
+        "pitch_moment_Nm": 178.9125975
+      }
+    ],
+    "surface_sum_closure_within_print_precision": true
+  },
+  {
+    "model": "claude-opus-5-5",
+    "mesh": [
+      12,
+      50
+    ],
+    "alpha_deg": 6.346800885280449,
+    "elevator_TE_down_deg": -3.168432862473998,
+    "balance": {
+      "L_N": 3481.05555,
+      "W_N": 3530.394,
+      "D_N": 443.3512190625,
+      "T_N": 446.08528036389754,
+      "Tvertical_N": 49.3130197121636,
+      "Maero_Nm": 195.8800725,
+      "Mthrust_Nm": -195.8797639851238,
+      "Rz_N": -0.025430287836115895,
+      "Rx_N": 0.0,
+      "My_Nm": 0.0003085148762238532,
+      "normalized": [
+        -7.203243557550771e-06,
+        4.854901562196634e-08
+      ],
+      "useful_power_W": 6650.2682859375
+    },
+    "slope": {
+      "CLalpha_per_deg": 0.06444000000000005,
+      "Cmalpha_per_deg": -0.0049999999999999975,
+      "effective_margin_percent": 7.7591558038485315
+    },
+    "components": [
+      {
+        "surface": "LW",
+        "lift_N": 831.98233125,
+        "pitch_moment_Nm": 9.426375
+      },
+      {
+        "surface": "LW (YDUP)",
+        "lift_N": 831.98233125,
+        "pitch_moment_Nm": 9.426375
+      },
+      {
+        "surface": "UW",
+        "lift_N": 947.40305625,
+        "pitch_moment_Nm": -93.886695
+      },
+      {
+        "surface": "UW (YDUP)",
+        "lift_N": 947.40305625,
+        "pitch_moment_Nm": -93.886695
+      },
+      {
+        "surface": "tail_inner",
+        "lift_N": -2.4613312499999997,
+        "pitch_moment_Nm": 10.55754
+      },
+      {
+        "surface": "tail_inner (YDUP)",
+        "lift_N": -2.4613312499999997,
+        "pitch_moment_Nm": 10.55754
+      },
+      {
+        "surface": "tail_outer",
+        "lift_N": -36.39628125,
+        "pitch_moment_Nm": 171.7485525
+      },
+      {
+        "surface": "tail_outer (YDUP)",
+        "lift_N": -36.39628125,
+        "pitch_moment_Nm": 171.7485525
+      }
+    ],
+    "surface_sum_closure_within_print_precision": true
+  }
+]

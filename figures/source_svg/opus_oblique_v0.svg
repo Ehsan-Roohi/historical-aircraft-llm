@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" font-family="Arial,Helvetica,sans-serif" font-size="12">
+<rect width="1200" height="900" fill="#fbfaf5"/>
+<text x="20" y="28" font-size="18" font-weight="bold">Seated-operator tail-balanced biplane, 31 Dec 1898: oblique view from forward-starboard-above</text>
+<text x="20" y="46" font-size="11">Parallel projection of the article's §4 coordinates (origin at lower-wing leading edge on the centreline; x aft, y starboard, z up; metres). Datum: wing chord horizontal.</text>
+
+<!-- axes -->
+<g stroke="#444" stroke-width="1.5">
+<line x1="1060" y1="160" x2="1015" y2="140"/><line x1="1060" y1="160" x2="1010" y2="180"/><line x1="1060" y1="160" x2="1060" y2="95"/>
+</g>
+<text x="990" y="137" font-size="11">+x aft</text><text x="968" y="194" font-size="11">+y stbd</text><text x="1066" y="100" font-size="11">+z up</text>
+
+<!-- lower wing -->
+<polygon points="875,370 325,590 244,554 794,334" fill="#e8dcc0" stroke="#6b5530" stroke-width="1.5"/>
+<text x="250" y="610" font-size="12">Lower wing, span 11.0 m, chord 1.8 m, z 0</text>
+
+<!-- tail booms, lower spars -->
+<g stroke="#5a4020" stroke-width="2">
+<line x1="449" y1="472" x2="255.5" y2="335"/><line x1="589" y1="416" x2="395.5" y2="279"/>
+</g>
+
+<!-- skids -->
+<g stroke="#7a5a20" stroke-width="3" fill="none">
+<line x1="609" y1="598" x2="483" y2="542"/><line x1="699" y1="562" x2="573" y2="506"/>
+</g>
+<g stroke="#7a5a20" stroke-width="1.5">
+<line x1="541" y1="568" x2="541" y2="492"/><line x1="631" y1="532" x2="631" y2="456"/>
+<line x1="505" y1="552" x2="505" y2="476"/><line x1="595" y1="516" x2="595" y2="440"/>
+</g>
+<g fill="#333"><circle cx="555" cy="578" r="6"/><circle cx="530" cy="566" r="6"/><circle cx="645" cy="542" r="6"/><circle cx="620" cy="530" r="6"/></g>
+
+<!-- nacelle -->
+<polygon points="689.5,471 654.5,485 654.5,549 689.5,535" fill="#d8c8a0" stroke="#5a4020"/>
+<polygon points="654.5,485 573.5,453 573.5,517 654.5,549" fill="#cbb88c" stroke="#5a4020"/>
+<polygon points="689.5,471 654.5,485 573.5,453 608.5,439" fill="none" stroke="#5a4020" stroke-width="1.5"/>
+
+<!-- operator -->
+<g stroke="#1a3a8a" stroke-width="3" fill="none">
+<line x1="640" y1="420" x2="640" y2="470"/><line x1="640" y1="440" x2="662" y2="452"/><line x1="640" y1="470" x2="668" y2="480"/><line x1="668" y1="480" x2="672" y2="505"/>
+</g>
+<circle cx="640" cy="410" r="10" fill="#9ab" stroke="#1a3a8a" stroke-width="2"/>
+<ellipse cx="666" cy="452" rx="7" ry="10" fill="none" stroke="#c00" stroke-width="2"/>
+
+<!-- engine -->
+<polygon points="617.5,413.5 582.5,427.5 553,414.5 588,400.5" fill="#888" stroke="#222"/>
+<polygon points="617.5,413.5 582.5,427.5 582.5,482.5 617.5,468.5" fill="#666" stroke="#222"/>
+<polygon points="582.5,427.5 553,414.5 553,469.5 582.5,482.5" fill="#777" stroke="#222"/>
+
+<!-- struts, drawn after the lower wing -->
+<g stroke="#5a4020" stroke-width="1.8">
+<line x1="516.5" y1="502" x2="516.5" y2="349"/><line x1="656.5" y1="446" x2="656.5" y2="293"/>
+<line x1="416.5" y1="542" x2="416.5" y2="389"/><line x1="756.5" y1="406" x2="756.5" y2="253"/>
+<line x1="321.5" y1="580" x2="321.5" y2="427"/><line x1="851.5" y1="368" x2="851.5" y2="215"/>
+<line x1="469" y1="481" x2="469" y2="328"/><line x1="609" y1="425" x2="609" y2="272"/>
+<line x1="369" y1="521" x2="369" y2="368"/><line x1="709" y1="385" x2="709" y2="232"/>
+<line x1="274" y1="559" x2="274" y2="406"/><line x1="804" y1="347" x2="804" y2="194"/>
+</g>
+<g stroke="#999" stroke-width="0.7">
+<line x1="416.5" y1="542" x2="321.5" y2="427"/><line x1="321.5" y1="580" x2="416.5" y2="389"/>
+<line x1="756.5" y1="406" x2="851.5" y2="215"/><line x1="851.5" y1="368" x2="756.5" y2="253"/>
+</g>
+
+<!-- tail booms, upper spars -->
+<g stroke="#5a4020" stroke-width="2">
+<line x1="449" y1="370" x2="255.5" y2="335"/><line x1="589" y1="314" x2="395.5" y2="279"/>
+</g>
+
+<!-- tailplane and elevator -->
+<polygon points="287.5,383 507.5,295 458,273 238,361" fill="#e8dcc0" stroke="#6b5530" stroke-width="1.5"/>
+<polygon points="238,361 458,273 435.5,263 215.5,351" fill="#f3c9a0" stroke="#b05010" stroke-width="1.5"/>
+
+<!-- fin and rudder -->
+<polygon points="384,333 384,214 348,198 348,317" fill="#e0d4b4" stroke="#6b5530" stroke-width="1.5"/>
+<polygon points="348,317 348,198 325.5,188 325.5,307" fill="#f3c9a0" stroke="#b05010" stroke-width="1.5"/>
+
+<!-- tail skid -->
+<line x1="339" y1="364" x2="339" y2="313" stroke="#7a5a20" stroke-width="3"/>
+
+<!-- shaft and screw -->
+<line x1="586.5" y1="397.5" x2="510" y2="363.5" stroke="#222" stroke-width="3"/>
+<polygon points="505.5,259.5 548,272.5 565.5,337.5 548,416.5 505.5,463.5 463,450.5 445.5,385.5 463,306.5" fill="#8ab" fill-opacity="0.18" stroke="#357" stroke-dasharray="5,3"/>
+<line x1="505.5" y1="265" x2="505.5" y2="458" stroke="#223" stroke-width="4"/>
+
+<!-- upper wing -->
+<polygon points="875,217 325,437 244,401 794,181" fill="#efe4c8" fill-opacity="0.9" stroke="#6b5530" stroke-width="1.5"/>
+<polygon points="364,370 264,410 244,401 344,361" fill="#f3c9a0" stroke="#b05010" stroke-width="1.5"/>
+<polygon points="714,230 814,190 794,181 694,221" fill="#f3c9a0" stroke="#b05010" stroke-width="1.5"/>
+
+<!-- thrust line and centre of mass -->
+<line x1="700" y1="442" x2="440" y2="326" stroke="#080" stroke-dasharray="8,4"/>
+<circle cx="570" cy="428" r="7" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<path d="M570,421 A7,7 0 0 1 577,428 L570,428Z M570,435 A7,7 0 0 1 563,428 L570,428Z" fill="#000"/>
+
+<!-- control linkages: routing SCHEMATIC -->
+<g stroke="#d00" stroke-width="1.5" stroke-dasharray="4,3" fill="none">
+<path d="M662,452 L600,430 L450,330 L330,356"/>
+<path d="M666,452 L700,300 L760,215"/>
+<path d="M666,452 L500,440 L316,408"/>
+<path d="M672,505 L560,470 L420,330 L335,245"/>
+</g>
+
+<!-- streamer rod and gauge: positions UNKNOWN -->
+<line x1="689" y1="500" x2="760" y2="520" stroke="#a0a" stroke-width="2" stroke-dasharray="2,2"/>
+<path d="M760,520 q8,4 16,-2 q8,-6 16,0" stroke="#a0a" fill="none"/>
+<text x="770" y="540" fill="#a0a" font-size="11">Streamer rod and pressure tube: position UNKNOWN (SCHEMATIC)</text>
+
+<!-- labels -->
+<g font-size="11" fill="#000">
+<text x="880" y="210">Upper wing, z 1.80</text>
+<text x="820" y="178" fill="#b05010">Port balancing flap, y −3.5 to −5.5</text>
+<text x="170" y="430" fill="#b05010">Starboard flap</text>
+<text x="690" y="570">Nacelle and seat, x −1.6 to 0.2</text>
+<text x="660" y="400" fill="#1a3a8a">Seated operator, CM (−0.9, 0.3)</text>
+<text x="600" y="396">Engine, radiator, fuel, 110 kg</text>
+<text x="520" y="252">Screw, Ø 2.4 m, disc at x 2.1 (pusher)</text>
+<text x="400" y="248">Shaft, x 0.3 to 2.0</text>
+<text x="140" y="192">Fin and rudder, z 0.6 to 2.0</text>
+<text x="120" y="378">Tailplane, x 4.5 to 5.6</text>
+<text x="120" y="345" fill="#b05010">Elevator, x 5.6 to 6.1</text>
+<text x="210" y="290">Tail booms, y ±1.4, 4 spars</text>
+<text x="300" y="382">Tail skid, x 5.8</text>
+<text x="420" y="640">Two ash skids, y ±0.9, z −0.9, with wheel pairs</text>
+<text x="580" y="444" font-weight="bold">CM (0.66, 0.46)</text>
+<text x="695" y="455" fill="#080">Thrust line, 0.44 m above CM</text>
+<text x="470" y="300" fill="#d00">Red dashed: linkages, SCHEMATIC</text>
+</g>
+<line x1="470" y1="645" x2="540" y2="580" stroke="#666" stroke-width="0.6"/>
+
+<!-- legend -->
+<rect x="15" y="668" width="1170" height="222" fill="#fff" stroke="#444"/>
+<text x="25" y="688" font-weight="bold" font-size="13">LEGEND</text>
+<rect x="25" y="698" width="18" height="10" fill="#e8dcc0" stroke="#6b5530"/><text x="50" y="707">Fixed surfaces (wings, tailplane, fin)</text>
+<rect x="25" y="716" width="18" height="10" fill="#f3c9a0" stroke="#b05010"/><text x="50" y="725">Hinged control surfaces (flaps, elevator, rudder)</text>
+<line x1="25" y1="739" x2="43" y2="739" stroke="#d00" stroke-dasharray="4,3" stroke-width="1.5"/><text x="50" y="743">Control runs: wheel to flaps, lever to elevator, foot bar to rudder. Routing SCHEMATIC</text>
+<line x1="25" y1="757" x2="43" y2="757" stroke="#357" stroke-dasharray="5,3"/><text x="50" y="761">Screw disc (swept circle)</text>
+<line x1="25" y1="775" x2="43" y2="775" stroke="#080" stroke-dasharray="8,4"/><text x="50" y="779">Thrust line</text>
+<circle cx="34" cy="793" r="5" fill="#fff" stroke="#000"/><text x="50" y="797">Whole-machine centre of mass, 340 kg (§4, [D])</text>
+<text x="25" y="815" fill="#1a3a8a">Blue figure: operator seated upright, hand on the flap wheel, feet on the foot bar.</text>
+
+<text x="560" y="688" font-weight="bold" fill="#a00">UNRESOLVED / SCHEMATIC ITEMS (not silently fixed)</text>
+<g font-size="10.5" fill="#a00">
+<text x="560" y="704">• 1° dihedral (§6) is absent from the §4 coordinates. Wings are drawn flat.</text>
+<text x="560" y="719">• The shaft ends at x 2.0 but the disc is at x 2.1. The 0.1 m join is UNKNOWN.</text>
+<text x="560" y="734">• The shaft-plus-screw mass centre (2.2, 0.9) lies aft of the disc itself.</text>
+<text x="560" y="749">• The main skids reach z −0.9 but the tail skid only reaches z 0.0.</text>
+<text x="572" y="762">Ground attitude is therefore contradictory. No ground line is drawn.</text>
+<text x="560" y="777">• The elevator lever position is not specified: SCHEMATIC.</text>
+<text x="560" y="792">• Radiator and fuel tank positions within the engine box are UNKNOWN.</text>
+<text x="560" y="807">• Positions of the streamer rod and pressure gauge are UNKNOWN.</text>
+<text x="560" y="822">• Throttle location is UNKNOWN (not shown). Wire bracing is shown only partly.</text>
+<text x="560" y="837">• Wheel positions along the skids and skid-strut stations are not given: SCHEMATIC.</text>
+<text x="560" y="852">• The disc's lower edge at z −0.3 is below the lower boom spar at z 0 (§10 flags this).</text>
+<text x="560" y="867">• The §7 wheel sense is self-corrected in the text; it is not shown here.</text>
+</g>
+<text x="25" y="840" font-size="10.5">Projection: screen x = 600 − 45x − 50y; screen y = 480 − 85z − 20x + 20y.</text>
+<text x="25" y="855" font-size="10.5">All values are from §4. Masses: operator 70, engine group 110, wings 80, tail 35, gear 25, shaft and screw 20 kg.</text>
+<text x="25" y="870" font-size="10.5">Layout is possibly recalled from later machines [R], as stated in the article.</text>
+</svg>

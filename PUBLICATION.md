@@ -1,5 +1,20 @@
 # Public research snapshot
 
+## 29 September 2026 G7 Journal of Aircraft draft archive
+
+The immutable draft tag is `aircraft-joa-2026-09-29-g7-draft`. It adds the
+JoA-formatted manuscript and Overleaf package, fixed V14 prompts and their
+complete parent records, source SVGs, rendering code, and evaluator-only
+ground, clearance, centroid-inertia and Fable power--mass audits. The V14
+manifest says `FROZEN_UNSENT`: this release does not contain V14 model
+answers. All six main and six supplementary line-art images pass a numerical
+pixel-density screen at their respective placed-width caps, but explicit
+small V0 annotations remain below 8 pt; adjacent readable component keys
+preserve their content. The paper has not been TeX-compiled or cleared for
+submission, the complete bibliographic/image-rights audit remains open, and
+no aircraft is shown flight-capable or dynamically stable. The G6, G5 and R5
+histories below remain immutable.
+
 ## 28 September 2026 G6 installation and power-chain audit
 
 V12 full-context, non-minimal feedback ran as Unity array `65013298`.

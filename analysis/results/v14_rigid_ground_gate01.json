@@ -1,0 +1,158 @@
+{
+  "scope": "independent rigid ground geometry and support arithmetic",
+  "flight_validation": false,
+  "fable_v13": {
+    "source_v12_response_sha256": "ccf6e3fe07a480682e4d3abe573fdc2c8b397bae1a46a8a30adfd0582a83b6ca",
+    "source_v13_audit_sha256": "4d2a6fd7e3f2aaa2878089df3b9a1b2dbe1cb79d54f1dba20c9605829a7abaac",
+    "support_points_x_m": [
+      0.4,
+      3.2
+    ],
+    "loading_cases": [
+      {
+        "state": "75 kg, seat 0.30, full (nominal)",
+        "mass_kg": 354.3,
+        "cg_x_m": 1.530739,
+        "cg_z_m": 0.792233,
+        "weight_N": 3475.683,
+        "front_pair_reaction_N": 2072.079,
+        "rear_reaction_N": 1403.604,
+        "all_reactions_positive": true
+      },
+      {
+        "state": "75 kg, seat 0.35 (aft stop), full",
+        "mass_kg": 354.3,
+        "cg_x_m": 1.541324,
+        "cg_z_m": 0.792233,
+        "weight_N": 3475.683,
+        "front_pair_reaction_N": 2058.94,
+        "rear_reaction_N": 1416.743,
+        "all_reactions_positive": true
+      },
+      {
+        "state": "75 kg, seat 0.25 (fwd stop), full",
+        "mass_kg": 354.3,
+        "cg_x_m": 1.520155,
+        "cg_z_m": 0.792233,
+        "weight_N": 3475.683,
+        "front_pair_reaction_N": 2085.217,
+        "rear_reaction_N": 1390.466,
+        "all_reactions_positive": true
+      },
+      {
+        "state": "75 kg, seat 0.30, empty",
+        "mass_kg": 334.3,
+        "cg_x_m": 1.526596,
+        "cg_z_m": 0.771726,
+        "weight_N": 3279.483,
+        "front_pair_reaction_N": 1959.964,
+        "rear_reaction_N": 1319.519,
+        "all_reactions_positive": true
+      },
+      {
+        "state": "65 kg, seat 0.35, full (aft extreme)",
+        "mass_kg": 344.3,
+        "cg_x_m": 1.575925,
+        "cg_z_m": 0.793459,
+        "weight_N": 3377.583,
+        "front_pair_reaction_N": 1959.089,
+        "rear_reaction_N": 1418.494,
+        "all_reactions_positive": true
+      },
+      {
+        "state": "65 kg, seat 0.35, empty (aft extreme)",
+        "mass_kg": 324.3,
+        "cg_x_m": 1.57444,
+        "cg_z_m": 0.772396,
+        "weight_N": 3181.383,
+        "front_pair_reaction_N": 1846.975,
+        "rear_reaction_N": 1334.408,
+        "all_reactions_positive": true
+      },
+      {
+        "state": "85 kg, seat 0.25, full (fwd extreme)",
+        "mass_kg": 364.3,
+        "cg_x_m": 1.48529,
+        "cg_z_m": 0.791073,
+        "weight_N": 3573.783,
+        "front_pair_reaction_N": 2188.572,
+        "rear_reaction_N": 1385.211,
+        "all_reactions_positive": true
+      },
+      {
+        "state": "85 kg, seat 0.25, empty (fwd extreme)",
+        "mass_kg": 344.3,
+        "cg_x_m": 1.478626,
+        "cg_z_m": 0.771095,
+        "weight_N": 3377.583,
+        "front_pair_reaction_N": 2076.458,
+        "rear_reaction_N": 1301.125,
+        "all_reactions_positive": true
+      }
+    ],
+    "rigid_nose_down_skid_contact_deg": 20.556045,
+    "rigid_nose_down_toe_contact_deg": 26.565051,
+    "first_of_these_two_declared_points": "skid at x=0.00 m",
+    "limitations": [
+      "three-point static reactions only",
+      "no dynamic braking",
+      "no tire compression or skid compliance",
+      "no loaded structural deflection or full occupied-solid sweep"
+    ]
+  },
+  "opus_v12": {
+    "source_v12_response_sha256": "96e534daf71329dbfadec507a84ad98ac34a0dc2d156de33b4a5e2f137ee25db",
+    "front_flat_runner_pivot_xz_m": [
+      -1.5,
+      -0.9
+    ],
+    "front_upturn_tip_xz_m": [
+      -1.9,
+      -0.55
+    ],
+    "rigid_nose_down_upturn_contact_deg": 41.185925,
+    "n1_box_front_lower_corner_contact_deg": 79.215702,
+    "first_of_these_declared_points": "G1 front runner upturn",
+    "loading_cases": [
+      {
+        "case": "nominal: 70 kg pilot, 12 kg fuel",
+        "mass_kg": 340.3,
+        "cg_x_m": 0.7035,
+        "cg_z_m": 0.5012,
+        "cg_projection_within_flat_skid_x": true,
+        "nose_down_cg_over_front_contact_deg": 57.547824
+      },
+      {
+        "case": "aft: 70 kg pilot, 0 fuel",
+        "mass_kg": 328.3,
+        "cg_x_m": 0.7125,
+        "cg_z_m": 0.4914,
+        "cg_projection_within_flat_skid_x": true,
+        "nose_down_cg_over_front_contact_deg": 57.834978
+      },
+      {
+        "case": "forward: 90 kg pilot, 12 kg fuel",
+        "mass_kg": 360.3,
+        "cg_x_m": 0.6145,
+        "cg_z_m": 0.4901,
+        "cg_projection_within_flat_skid_x": true,
+        "nose_down_cg_over_front_contact_deg": 56.678557
+      },
+      {
+        "case": "90 kg pilot, 0 fuel",
+        "mass_kg": 348.3,
+        "cg_x_m": 0.6199,
+        "cg_z_m": 0.4804,
+        "cg_projection_within_flat_skid_x": true,
+        "nose_down_cg_over_front_contact_deg": 56.929322
+      }
+    ],
+    "limitations": [
+      "only selected named rigid points screened",
+      "no complete occupied-solid nose-down sweep",
+      "runner pressure distribution and compliance unknown",
+      "no loaded structural deflection or braking dynamics"
+    ]
+  },
+  "astra_v12": "HOLD: no adopted installed geometry to sweep"
+}

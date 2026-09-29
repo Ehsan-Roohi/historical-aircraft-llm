@@ -1,0 +1,57 @@
+{
+  "scope": "Evaluator-only arithmetic under unmeasured model assumptions; not an installed power or flight acceptance",
+  "source_sha256": "dae66235761235d241c8773d9af9c9700187d9920db638a17ce6dcda9bc4b379",
+  "assumptions": {
+    "V_m_s": 13.0,
+    "q_Pa": 103.51,
+    "S_m2": 42.0,
+    "e": 0.7,
+    "AR": 6.2,
+    "CD0": 0.08,
+    "extra_drag_N": 10.0,
+    "eta_prop": 0.45,
+    "eta_drive": 0.95,
+    "reserve_factor": 1.15,
+    "incremental_engine_mass_kg_per_kW": 5.1,
+    "engine_mass_rule": "base 364.3 kg at 19.5 kW; add 5.1 kg per additional kW only"
+  },
+  "independent_uncoupled": {
+    "engine_mass_delta_kg": 0.0,
+    "mass_kg": 364.3,
+    "weight_N": 3573.7830000000004,
+    "CL": 0.8220468691775813,
+    "CDi": 0.04956254021755067,
+    "drag_N": 573.2627785925843,
+    "propeller_required_W": 16560.92471489688,
+    "propeller_required_with_reserve_W": 19045.06342213141,
+    "engine_required_W": 20047.43518119096
+  },
+  "coupled_fixed_point": {
+    "engine_target_W": 20194.71562060619,
+    "budget": {
+      "engine_mass_delta_kg": 3.543049665091578,
+      "mass_kg": 367.8430496650916,
+      "weight_N": 3608.540317214549,
+      "CL": 0.83004179886336,
+      "CDi": 0.050531282818879086,
+      "drag_N": 577.4743095524514,
+      "propeller_required_W": 16682.591164848596,
+      "propeller_required_with_reserve_W": 19184.979839575884,
+      "engine_required_W": 20194.715620606195
+    },
+    "equation_residual_W": -3.637978807091713e-12
+  },
+  "retained_19_5kW_target": {
+    "propeller_shaft_available_W": 18525,
+    "reserve_fraction": 0.11859695753199073,
+    "reserve_shortfall_W": 520.0634221314103,
+    "required_eta_drive_if_engine_target_unchanged": 0.9766699190836621
+  },
+  "fuel_sfc_arithmetic_only": {
+    "fuel_kg": 20.0,
+    "assumed_sfc_kg_per_kWh": 0.31,
+    "at_target_power_min": 198.51116625310175,
+    "note": "This contradiction does not verify actual endurance or fuel flow"
+  },
+  "disposition": "HOLD: the corrected paper target is not an available engine curve; propeller absorption, torque, thermal and mass assumptions are unmeasured"
+}

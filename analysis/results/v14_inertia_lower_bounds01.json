@@ -1,0 +1,67 @@
+{
+  "scope": "nominal centroid-only parallel-axis tensor, not physical inertia",
+  "fable_v13": {
+    "source_sha256": "dae66235761235d241c8773d9af9c9700187d9920db638a17ce6dcda9bc4b379",
+    "component_rows": 26,
+    "mass_kg": 354.3,
+    "cg_xyz_m": [
+      1.530739,
+      0.0,
+      0.792233
+    ],
+    "parallel_axis_tensor_kg_m2": [
+      [
+        282.406256,
+        0.0,
+        -16.300109
+      ],
+      [
+        0.0,
+        522.52455,
+        0.0
+      ],
+      [
+        -16.300109,
+        0.0,
+        668.278294
+      ]
+    ],
+    "Ixx_centroid_only_lower_bound_kg_m2": 282.406256,
+    "Iyy_centroid_only_lower_bound_kg_m2": 522.52455,
+    "Izz_centroid_only_lower_bound_kg_m2": 668.278294,
+    "interpretation": "Conditional on the model's point-mass/centroid ledger: J_true = J_parallel + sum(J_intrinsic_i); the missing sum is positive semidefinite. Off-diagonal elements are not individually bounded by the printed parallel-axis values. Tensor off-diagonal convention is -sum(m*d_i*d_j)."
+  },
+  "opus_v12": {
+    "source_sha256": "96e534daf71329dbfadec507a84ad98ac34a0dc2d156de33b4a5e2f137ee25db",
+    "component_rows": 30,
+    "mass_kg": 340.3,
+    "cg_xyz_m": [
+      0.703552,
+      0.0,
+      0.501227
+    ],
+    "parallel_axis_tensor_kg_m2": [
+      [
+        131.713304,
+        0.0,
+        -99.901847
+      ],
+      [
+        0.0,
+        914.29325,
+        0.0
+      ],
+      [
+        -99.901847,
+        0.0,
+        782.579947
+      ]
+    ],
+    "Ixx_centroid_only_lower_bound_kg_m2": 131.713304,
+    "Iyy_centroid_only_lower_bound_kg_m2": 914.29325,
+    "Izz_centroid_only_lower_bound_kg_m2": 782.579947,
+    "interpretation": "Conditional on the model's point-mass/centroid ledger: J_true = J_parallel + sum(J_intrinsic_i); the missing sum is positive semidefinite. Off-diagonal elements are not individually bounded by the printed parallel-axis values. Tensor off-diagonal convention is -sum(m*d_i*d_j)."
+  },
+  "astra_v12": "No adopted installed V12 aircraft ledger/tensor",
+  "modal_acceptance": "NOT ASSESSED: intrinsic tensors and installed derivatives missing"
+}

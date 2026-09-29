@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180mm" height="91.956522mm" viewBox="0 0 920 470">
+<title>Lift and pitch-moment response of a provisional Wright reconstruction</title>
+<desc>Twelve audited inviscid cases at three canard incidences, two angles of attack and two assumed canard sections. Not experimental data.</desc>
+<rect width="920" height="470" fill="white"/>
+<text x="248.5" y="28.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20">(a) Lift coefficient, CL</text>
+<line x1="76" y1="318.54545454545456" x2="421" y2="318.54545454545456" stroke="#d8dce0" stroke-width="0.6"/>
+<line x1="71" y1="318.54545454545456" x2="76" y2="318.54545454545456" stroke="#222222" stroke-width="1.2"/>
+<text x="65" y="324.94545454545454" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="18">0.55</text>
+<line x1="76" y1="276.2727272727273" x2="421" y2="276.2727272727273" stroke="#d8dce0" stroke-width="0.6"/>
+<line x1="71" y1="276.2727272727273" x2="76" y2="276.2727272727273" stroke="#222222" stroke-width="1.2"/>
+<text x="65" y="282.6727272727273" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="18">0.60</text>
+<line x1="76" y1="234.0" x2="421" y2="234.0" stroke="#d8dce0" stroke-width="0.6"/>
+<line x1="71" y1="234.0" x2="76" y2="234.0" stroke="#222222" stroke-width="1.2"/>
+<text x="65" y="240.4" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="18">0.65</text>
+<line x1="76" y1="191.72727272727278" x2="421" y2="191.72727272727278" stroke="#d8dce0" stroke-width="0.6"/>
+<line x1="71" y1="191.72727272727278" x2="76" y2="191.72727272727278" stroke="#222222" stroke-width="1.2"/>
+<text x="65" y="198.12727272727278" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="18">0.70</text>
+<line x1="76" y1="149.45454545454547" x2="421" y2="149.45454545454547" stroke="#d8dce0" stroke-width="0.6"/>
+<line x1="71" y1="149.45454545454547" x2="76" y2="149.45454545454547" stroke="#222222" stroke-width="1.2"/>
+<text x="65" y="155.85454545454547" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="18">0.75</text>
+<line x1="76" y1="107.18181818181816" x2="421" y2="107.18181818181816" stroke="#d8dce0" stroke-width="0.6"/>
+<line x1="71" y1="107.18181818181816" x2="76" y2="107.18181818181816" stroke="#222222" stroke-width="1.2"/>
+<text x="65" y="113.58181818181816" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="18">0.80</text>
+<line x1="76" y1="64.90909090909093" x2="421" y2="64.90909090909093" stroke="#d8dce0" stroke-width="0.6"/>
+<line x1="71" y1="64.90909090909093" x2="76" y2="64.90909090909093" stroke="#222222" stroke-width="1.2"/>
+<text x="65" y="71.30909090909094" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="18">0.85</text>
+<line x1="110.5" y1="327" x2="110.5" y2="332" stroke="#222222" stroke-width="1.2"/>
+<text x="110.5" y="354.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19">-4</text>
+<line x1="248.5" y1="327" x2="248.5" y2="332" stroke="#222222" stroke-width="1.2"/>
+<text x="248.5" y="354.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19">0</text>
+<line x1="386.5" y1="327" x2="386.5" y2="332" stroke="#222222" stroke-width="1.2"/>
+<text x="386.5" y="354.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19">4</text>
+<line x1="76" y1="48" x2="76" y2="327" stroke="#222222" stroke-width="1.2"/>
+<line x1="76" y1="327" x2="421" y2="327" stroke="#222222" stroke-width="1.2"/>
+<text x="248.5" y="382.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20">Canard incidence (deg)</text>
+<line x1="110.5" y1="306.12572727272726" x2="248.5" y2="299.01545454545453" stroke="#0072b2" stroke-width="1.7"/>
+<line x1="248.5" y1="299.01545454545453" x2="386.5" y2="291.90518181818186" stroke="#0072b2" stroke-width="1.7"/>
+<circle cx="110.5" cy="306.12572727272726" r="5" fill="#0072b2" stroke="#0072b2" stroke-width="1.7"/>
+<circle cx="248.5" cy="299.01545454545453" r="5" fill="#0072b2" stroke="#0072b2" stroke-width="1.7"/>
+<circle cx="386.5" cy="291.90518181818186" r="5" fill="#0072b2" stroke="#0072b2" stroke-width="1.7"/>
+<line x1="110.5" y1="96.33463636363632" x2="248.5" y2="89.35118181818183" stroke="#0072b2" stroke-width="1.7" stroke-dasharray="5 5"/>
+<line x1="248.5" y1="89.35118181818183" x2="386.5" y2="82.40999999999997" stroke="#0072b2" stroke-width="1.7" stroke-dasharray="5 5"/>
+<rect x="105.5" y="91.33463636363632" width="10" height="10" fill="#0072b2" stroke="#0072b2" stroke-width="1.7"/>
+<rect x="243.5" y="84.35118181818183" width="10" height="10" fill="#0072b2" stroke="#0072b2" stroke-width="1.7"/>
+<rect x="381.5" y="77.40999999999997" width="10" height="10" fill="#0072b2" stroke="#0072b2" stroke-width="1.7"/>
+<line x1="110.5" y1="296.1155454545455" x2="248.5" y2="288.9460909090909" stroke="#b24c00" stroke-width="1.7"/>
+<line x1="248.5" y1="288.9460909090909" x2="386.5" y2="281.7005454545455" stroke="#b24c00" stroke-width="1.7"/>
+<circle cx="110.5" cy="296.1155454545455" r="5" fill="white" stroke="#b24c00" stroke-width="1.7"/>
+<circle cx="248.5" cy="288.9460909090909" r="5" fill="white" stroke="#b24c00" stroke-width="1.7"/>
+<circle cx="386.5" cy="281.7005454545455" r="5" fill="white" stroke="#b24c00" stroke-width="1.7"/>
+<line x1="110.5" y1="86.51890909090915" x2="248.5" y2="79.52700000000002" stroke="#b24c00" stroke-width="1.7" stroke-dasharray="5 5"/>
+<line x1="248.5" y1="79.52700000000002" x2="386.5" y2="72.48436363636361" stroke="#b24c00" stroke-width="1.7" stroke-dasharray="5 5"/>
+<rect x="105.5" y="81.51890909090915" width="10" height="10" fill="white" stroke="#b24c00" stroke-width="1.7"/>
+<rect x="243.5" y="74.52700000000002" width="10" height="10" fill="white" stroke="#b24c00" stroke-width="1.7"/>
+<rect x="381.5" y="67.48436363636361" width="10" height="10" fill="white" stroke="#b24c00" stroke-width="1.7"/>
+<text x="728.5" y="28.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20">(b) Pitch-moment coefficient, Cm</text>
+<line x1="556" y1="312.3157894736842" x2="901" y2="312.3157894736842" stroke="#d8dce0" stroke-width="0.6"/>
+<line x1="551" y1="312.3157894736842" x2="556" y2="312.3157894736842" stroke="#222222" stroke-width="1.2"/>
+<text x="545" y="318.7157894736842" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="18">-0.08</text>
+<line x1="556" y1="253.57894736842104" x2="901" y2="253.57894736842104" stroke="#d8dce0" stroke-width="0.6"/>
+<line x1="551" y1="253.57894736842104" x2="556" y2="253.57894736842104" stroke="#222222" stroke-width="1.2"/>
+<text x="545" y="259.978947368421" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="18">-0.04</text>
+<line x1="556" y1="194.8421052631579" x2="901" y2="194.8421052631579" stroke="#d8dce0" stroke-width="0.6"/>
+<line x1="551" y1="194.8421052631579" x2="556" y2="194.8421052631579" stroke="#222222" stroke-width="1.2"/>
+<text x="545" y="201.2421052631579" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="18">0</text>
+<line x1="556" y1="136.10526315789474" x2="901" y2="136.10526315789474" stroke="#d8dce0" stroke-width="0.6"/>
+<line x1="551" y1="136.10526315789474" x2="556" y2="136.10526315789474" stroke="#222222" stroke-width="1.2"/>
+<text x="545" y="142.50526315789475" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="18">0.04</text>
+<line x1="556" y1="77.36842105263162" x2="901" y2="77.36842105263162" stroke="#d8dce0" stroke-width="0.6"/>
+<line x1="551" y1="77.36842105263162" x2="556" y2="77.36842105263162" stroke="#222222" stroke-width="1.2"/>
+<text x="545" y="83.76842105263162" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="18">0.08</text>
+<line x1="590.5" y1="327" x2="590.5" y2="332" stroke="#222222" stroke-width="1.2"/>
+<text x="590.5" y="354.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19">-4</text>
+<line x1="728.5" y1="327" x2="728.5" y2="332" stroke="#222222" stroke-width="1.2"/>
+<text x="728.5" y="354.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19">0</text>
+<line x1="866.5" y1="327" x2="866.5" y2="332" stroke="#222222" stroke-width="1.2"/>
+<text x="866.5" y="354.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19">4</text>
+<line x1="556" y1="48" x2="556" y2="327" stroke="#222222" stroke-width="1.2"/>
+<line x1="556" y1="327" x2="901" y2="327" stroke="#222222" stroke-width="1.2"/>
+<text x="728.5" y="382.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20">Canard incidence (deg)</text>
+<line x1="590.5" y1="304.9736842105263" x2="728.5" y2="258.95336842105263" stroke="#0072b2" stroke-width="1.7"/>
+<line x1="728.5" y1="258.95336842105263" x2="866.5" y2="212.91836842105263" stroke="#0072b2" stroke-width="1.7"/>
+<circle cx="590.5" cy="304.9736842105263" r="5" fill="#0072b2" stroke="#0072b2" stroke-width="1.7"/>
+<circle cx="728.5" cy="258.95336842105263" r="5" fill="#0072b2" stroke="#0072b2" stroke-width="1.7"/>
+<circle cx="866.5" cy="212.91836842105263" r="5" fill="#0072b2" stroke="#0072b2" stroke-width="1.7"/>
+<line x1="590.5" y1="224.91536842105262" x2="728.5" y2="178.98315789473682" stroke="#0072b2" stroke-width="1.7" stroke-dasharray="5 5"/>
+<line x1="728.5" y1="178.98315789473682" x2="866.5" y2="133.05094736842105" stroke="#0072b2" stroke-width="1.7" stroke-dasharray="5 5"/>
+<rect x="585.5" y="219.91536842105262" width="10" height="10" fill="#0072b2" stroke="#0072b2" stroke-width="1.7"/>
+<rect x="723.5" y="173.98315789473682" width="10" height="10" fill="#0072b2" stroke="#0072b2" stroke-width="1.7"/>
+<rect x="861.5" y="128.05094736842105" width="10" height="10" fill="#0072b2" stroke="#0072b2" stroke-width="1.7"/>
+<line x1="590.5" y1="243.82863157894738" x2="728.5" y2="197.3384210526316" stroke="#b24c00" stroke-width="1.7"/>
+<line x1="728.5" y1="197.3384210526316" x2="866.5" y2="150.27552631578948" stroke="#b24c00" stroke-width="1.7"/>
+<circle cx="590.5" cy="243.82863157894738" r="5" fill="white" stroke="#b24c00" stroke-width="1.7"/>
+<circle cx="728.5" cy="197.3384210526316" r="5" fill="white" stroke="#b24c00" stroke-width="1.7"/>
+<circle cx="866.5" cy="150.27552631578948" r="5" fill="white" stroke="#b24c00" stroke-width="1.7"/>
+<line x1="590.5" y1="163.8731052631579" x2="728.5" y2="117.51505263157893" stroke="#b24c00" stroke-width="1.7" stroke-dasharray="5 5"/>
+<line x1="728.5" y1="117.51505263157893" x2="866.5" y2="70.61368421052634" stroke="#b24c00" stroke-width="1.7" stroke-dasharray="5 5"/>
+<rect x="585.5" y="158.8731052631579" width="10" height="10" fill="white" stroke="#b24c00" stroke-width="1.7"/>
+<rect x="723.5" y="112.51505263157893" width="10" height="10" fill="white" stroke="#b24c00" stroke-width="1.7"/>
+<rect x="861.5" y="65.61368421052634" width="10" height="10" fill="white" stroke="#b24c00" stroke-width="1.7"/>
+<line x1="92" y1="416" x2="127" y2="416" stroke="#0072b2" stroke-width="1.7"/>
+<circle cx="109" cy="416" r="5" fill="#0072b2" stroke="#0072b2" stroke-width="1.7"/>
+<text x="140" y="422.2" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="19">Flat, α = 0°</text>
+<line x1="92" y1="447" x2="127" y2="447" stroke="#0072b2" stroke-width="1.7" stroke-dasharray="5 5"/>
+<rect x="104" y="442" width="10" height="10" fill="#0072b2" stroke="#0072b2" stroke-width="1.7"/>
+<text x="140" y="453.2" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="19">Flat, α = 4°</text>
+<line x1="510" y1="416" x2="545" y2="416" stroke="#b24c00" stroke-width="1.7"/>
+<circle cx="527" cy="416" r="5" fill="white" stroke="#b24c00" stroke-width="1.7"/>
+<text x="558" y="422.2" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="19">Eiffel 10 proxy, α = 0°</text>
+<line x1="510" y1="447" x2="545" y2="447" stroke="#b24c00" stroke-width="1.7" stroke-dasharray="5 5"/>
+<rect x="522" y="442" width="10" height="10" fill="white" stroke="#b24c00" stroke-width="1.7"/>
+<text x="558" y="453.2" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="19">Eiffel 10 proxy, α = 4°</text>
+</svg>

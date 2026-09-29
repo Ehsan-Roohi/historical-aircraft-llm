@@ -6,7 +6,26 @@ Versioned research on three aircraft proposals produced under a documentary cuto
 
 The cutoff constrains supplied documents, not the models' training knowledge. Modern evaluator feedback is distinguished from the historical input packet. This repository is a work-in-progress research record, not a journal acceptance or a build/flight authorization.
 
-## 28 September 2026 current G6 research record
+## 29 September 2026 G7 Journal of Aircraft research draft
+
+The fixed draft tag `aircraft-joa-2026-09-29-g7-draft` contains the
+[Journal of Aircraft manuscript](paper/article_journal_of_aircraft.tex),
+[Overleaf ZIP](aircraft_joa_overleaf_draft15.zip), all three frozen
+[V14 feedback prompts](v14_integrated_candidate_attempt01/manifest.json),
+their complete V12/V13 parents, and independent [ground](analysis/results/v14_rigid_ground_gate01.json),
+[clearance](analysis/results/v14_static_clearance_budget01.json),
+[centroid-inertia](analysis/results/v14_inertia_lower_bounds01.json) and
+[Fable power--mass](analysis/results/v14_fable_power_fixed_point01.json)
+screens. V14 is **FROZEN_UNSENT**, not a completed model run. Figure-source
+SVGs and renderers are directly available, and the supplement provides
+readable component keys for the dense original V0 plates. The 40-reference
+manuscript and ZIP are review drafts: neither TeX compilation nor full
+reference/image-rights verification, installed propulsion, complete trim,
+dynamic modes or flight has been established. This tag is a research archive,
+**not** a submission-ready or flight-approved release. The older G6 and R5
+records remain unchanged.
+
+## 28 September 2026 earlier G6 research record
 
 The current [V12/V13 installation gate](paper/v12_v13_installation_gate01.md)
 and [updated manuscript](paper/article_scientific_reports.tex) are frozen at
