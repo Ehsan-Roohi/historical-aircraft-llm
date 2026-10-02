@@ -1,0 +1,58 @@
+{
+  "scope": "Mass-feedback surface re-trim for one explicitly assumed beam candidate, not aircraft acceptance",
+  "selected_deflection_parameter_mm": 20,
+  "section": {
+    "b_m": 0.16,
+    "h_m": 0.16,
+    "t_m": 0.003,
+    "area_m2": 0.0018840000000000003,
+    "I_bending_m4": 7.74261200000001e-06,
+    "I_other_m4": 7.74261200000001e-06,
+    "one_half_added_mass_kg": 3.3972288000000006,
+    "EI_Nm2": 83620.20960000012,
+    "tip_deflection_m": 0.017291314159756127,
+    "root_bending_Nm": 360.93523049424454,
+    "bending_stress_Pa": 3729338.166440411
+  },
+  "retrim": {
+    "phase": "added_box20mm",
+    "scale": 1.75,
+    "tail_area_m2": 8.049999999999999,
+    "tail_outer_y_m": 4.574999999999999,
+    "pilot_kg": 65,
+    "seat_x_m": 0.35,
+    "fuel_kg": 0,
+    "mesh": "coarse",
+    "mass_kg": 347.9944576,
+    "cg_m": [
+      1.7211040933543882,
+      0.0,
+      0.7752974185299208
+    ],
+    "assumed_inertia_diagonal_kgm2": [
+      929.3971538277656,
+      872.2946149356426,
+      1623.7137087505432
+    ],
+    "centroid_only_Pxz_kgm2": 15.368579726337828,
+    "trim": {
+      "Alpha": 4.92101,
+      "pitch": 5.5323,
+      "CLtot": 0.78497,
+      "Cmtot": -0.0,
+      "CDind": 0.0491447
+    },
+    "absolute_tail_deg": 1.5323000000000002,
+    "within_declared_tail_travel": true,
+    "surface_SM": -0.00220917946515607,
+    "Cma": 0.008102,
+    "CLa": 3.667425,
+    "Cmq": -6.755061,
+    "input_sha256": "023452f541e7fa56caf5f29cd4861dbdfab884100b52a3047e125a344ad37e04",
+    "forces_sha256": "c829880e37adffd31b01bb682c527301fa21571d6b592c9201fd1fe5c361dd40",
+    "stability_sha256": "8413d782093fd94023d8983cc042c4d7e368a44cef29e47c1ccaa8afa9407599"
+  },
+  "total_added_beam_mass_kg": 6.794457600000001,
+  "next": "Recompute loads for this new trim; joint/fit/strength and actual deflection limit remain open",
+  "accepted_aircraft_modes": false
+}

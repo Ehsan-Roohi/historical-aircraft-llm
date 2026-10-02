@@ -1,0 +1,19 @@
+{
+  "stage": "v14_installed_candidate_for_independent_dynamics",
+  "model_requested": "claude-opus-5-5",
+  "prompt_sha256": "e31064d265a90465f22914c04cdcf691951c97c92ecfffd59879d20afdd70593",
+  "parent_response_sha256": "96e534daf71329dbfadec507a84ad98ac34a0dc2d156de33b4a5e2f137ee25db",
+  "baseline_response_sha256": "51e34fbee9444e30c743b0312ff7802ba1d1ae2bf8b965c3d3b481a8444b5b9c",
+  "instructions_sha256": "48a31860916aea8027e8035c98ae48c2fa69c4dd5113dd7eebc81914741d8fa5",
+  "manifest_sha256": "c6de5bd68ab05528de39d94e36d339d7a365a30d8658a8f99e73401b5da769e9",
+  "runner_sha256": "464dfa97bb646d9af1ece8641905f927c9a755e80ccae5a043d9a5e9c455f38e",
+  "transport_sha256": "df2a2a49dd6f41d60df38822364b25e1f91824d8b8e2369b3e7dd509746973c3",
+  "maximum_output_tokens": 48000,
+  "reasoning_effort": "low",
+  "maximum_calls": 1,
+  "automatic_retry": false,
+  "timeout_seconds": 5400,
+  "engineering_validation": "not_evaluated",
+  "started_utc": "2026-09-29T10:55:18.907326+00:00",
+  "slurm_job_id": "65021957"
+}

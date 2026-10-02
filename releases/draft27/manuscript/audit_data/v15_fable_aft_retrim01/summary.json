@@ -1,0 +1,112 @@
+{
+  "scope": "Re-trimmed rigid unpowered surface-model prediction only; no installed-aircraft stability or modes",
+  "loading_gate_sha256": "67ecc5d1746e4a4c7c042659ec9ce77764b5ca0ff3c0a3552e4553779cab8fee",
+  "cases": [
+    {
+      "mesh": "coarse",
+      "pilot_kg": 65,
+      "fuel_kg": 8,
+      "mass_kg": 343.2,
+      "cg_m": [
+        1.5674417249417252,
+        0.0,
+        0.7855579836829837
+      ],
+      "target_CL": 0.7741513343799056,
+      "trim": {
+        "Alpha": 5.31957,
+        "pitch": -2.46695,
+        "CLtot": 0.77415,
+        "Cmtot": -0.0
+      },
+      "absolute_tail_deg": -6.466950000000001,
+      "Cma": 0.054392,
+      "CLa": 3.473607,
+      "surface_SM": -0.015658651079411116,
+      "geometry_sha256": "f59648da2b813d205452f3c0f80d42e5f6ef876f37fb4de054161a22b513dc56",
+      "forces_sha256": "96bc8bd8dab0120ff5b8bf6c159cc4c277ed8dc34e08cb87e9a8b113c0dc1238",
+      "stability_sha256": "3f2b5c83027f64d726ed11f2be0bcf4d3428f1ffcf98ff8c9963275e5628d962"
+    },
+    {
+      "mesh": "fine",
+      "pilot_kg": 65,
+      "fuel_kg": 8,
+      "mass_kg": 343.2,
+      "cg_m": [
+        1.5674417249417252,
+        0.0,
+        0.7855579836829837
+      ],
+      "target_CL": 0.7741513343799056,
+      "trim": {
+        "Alpha": 5.31818,
+        "pitch": -2.4179,
+        "CLtot": 0.77415,
+        "Cmtot": 0.0
+      },
+      "absolute_tail_deg": -6.4178999999999995,
+      "Cma": 0.057983,
+      "CLa": 3.471377,
+      "surface_SM": -0.016703169952442504,
+      "geometry_sha256": "71778f1d7afe0f57a5e9d496ba901f2bb261dc6fb7095e1715f7734d0fb376b2",
+      "forces_sha256": "3cd372b7fe00496ee98673d64174084745284ad025ca98eef31d442c03de56bc",
+      "stability_sha256": "6d651b65e0f23ecce42473f95d5cb59b46ba296431e55dcf7cd3d7000a8e005c"
+    },
+    {
+      "mesh": "coarse",
+      "pilot_kg": 65,
+      "fuel_kg": 0,
+      "mass_kg": 335.2,
+      "cg_m": [
+        1.5666646778042959,
+        0.0,
+        0.7753087708830548
+      ],
+      "target_CL": 0.7561058487300244,
+      "trim": {
+        "Alpha": 5.02848,
+        "pitch": -2.52768,
+        "CLtot": 0.75611,
+        "Cmtot": -0.0
+      },
+      "absolute_tail_deg": -6.52768,
+      "Cma": 0.051568,
+      "CLa": 3.482619,
+      "surface_SM": -0.014807247074687183,
+      "geometry_sha256": "7a052412e82b50368497ed6819015d463ecab10d8bdcf86ba7b350f758c98a97",
+      "forces_sha256": "3e05d4398adcffa83d72f91df5b9e5971d6ce3afab32fd9724d07a4387005072",
+      "stability_sha256": "1f224ca66c157bc1c3c0a003c7527bfc6816cd8755c4cdf42815452eb5c2c485"
+    },
+    {
+      "mesh": "fine",
+      "pilot_kg": 65,
+      "fuel_kg": 0,
+      "mass_kg": 335.2,
+      "cg_m": [
+        1.5666646778042959,
+        0.0,
+        0.7753087708830548
+      ],
+      "target_CL": 0.7561058487300244,
+      "trim": {
+        "Alpha": 5.02707,
+        "pitch": -2.48022,
+        "CLtot": 0.75611,
+        "Cmtot": -0.0
+      },
+      "absolute_tail_deg": -6.48022,
+      "Cma": 0.055162,
+      "CLa": 3.480389,
+      "surface_SM": -0.015849377756337008,
+      "geometry_sha256": "b973556ad45a3178956ab26e4939895695ea80654a3c1bed84657f43cc33cc50",
+      "forces_sha256": "f78b716f32cccc6efab316cb3c1ed8226a20b5ae958880bca710d37644afaea3",
+      "stability_sha256": "ecf7932cc472b7987cc9037a88e1550cdd86d47cd3f0d8b41d8a550c80249aeb"
+    }
+  ],
+  "limitations": [
+    "Only mass/CG and operating trim changed; pilot/body geometry omitted",
+    "No propulsion, viscous drag, flexibility or unsteady derivatives",
+    "Intrinsic inertia remains assumed; no eigenvalues calculated"
+  ],
+  "accepted_aircraft_modes": false
+}

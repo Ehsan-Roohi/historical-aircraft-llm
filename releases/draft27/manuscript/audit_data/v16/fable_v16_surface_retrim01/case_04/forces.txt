@@ -1,0 +1,34 @@
+ ---------------------------------------------------------------
+ Vortex Lattice Output -- Total Forces
+
+ Configuration: Fable V15 power-off lateral surface screen; no body/propelle
+     # Surfaces =  11
+     # Strips   = 384
+     # Vortices =4608
+
+  Sref =  42.000       Cref =  1.8500       Bref =  11.500    
+  Xref =  1.6419       Yref =  0.0000       Zref = 0.78488    
+
+ Standard axis orientation,  X fwd, Z down         
+
+ Run case:  -unnamed-                              
+
+  Alpha =   5.46528     pb/2V =  -0.00000     p'b/2V =  -0.00000
+  Beta  =   0.00000     qc/2V =  -0.00000
+  Mach  =     0.000     rb/2V =  -0.00000     r'b/2V =  -0.00000
+
+  CXtot =   0.02500     Cltot =  -0.00000     Cl'tot =  -0.00000
+  CYtot =   0.00000     Cmtot =  -0.00000
+  CZtot =  -0.80227     Cntot =  -0.00000     Cn'tot =  -0.00000
+
+  CLtot =   0.80101
+  CDtot =   0.05152
+  CDvis =   0.00000     CDind = 0.0515213
+  CLff  =   0.80594     CDff  = 0.0517558    | Trefftz
+  CYff  =   0.00000         e =    1.2687    | Plane  
+
+   roll            =   0.00000
+   pitch           =   4.26239
+   yaw             =   0.00000
+
+ ---------------------------------------------------------------

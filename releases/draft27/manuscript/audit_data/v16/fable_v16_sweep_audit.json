@@ -1,0 +1,88 @@
+{
+  "source_sha256": "6dae3f48195d8b446f517fac08936fb69d87a8b59a44f618bdc8faccc198dbc1",
+  "author": "independent evaluator",
+  "method": "Exact endpoint/zero evaluation of rigid chord lines and mast endpoint centres over absolute tail travel -16 to +8 deg. Both rotation signs reported. Finite thickness, fittings, elastic deflection and body collision are excluded.",
+  "reported_surface": {
+    "x": [
+      5.41,
+      6.371
+    ],
+    "z": [
+      0.671,
+      0.982
+    ]
+  },
+  "recomputed": {
+    "1": {
+      "surface": {
+        "x": [
+          5.4,
+          6.4
+        ],
+        "z": [
+          0.6706201742799509,
+          0.9817280168627494
+        ]
+      },
+      "mast_top": {
+        "x": [
+          5.553526925464051,
+          5.698710585336023
+        ],
+        "z": [
+          1.1114415935784117,
+          1.125
+        ]
+      },
+      "mast_bottom": {
+        "x": [
+          5.601289414663977,
+          5.74647307453595
+        ],
+        "z": [
+          0.42500000000000004,
+          0.43855840642158844
+        ]
+      }
+    },
+    "-1": {
+      "surface": {
+        "x": [
+          5.4,
+          6.4
+        ],
+        "z": [
+          0.5682719831372507,
+          0.8793798257200491
+        ]
+      },
+      "mast_top": {
+        "x": [
+          5.601289414663977,
+          5.74647307453595
+        ],
+        "z": [
+          1.1114415935784117,
+          1.125
+        ]
+      },
+      "mast_bottom": {
+        "x": [
+          5.553526925464051,
+          5.698710585336023
+        ],
+        "z": [
+          0.42500000000000004,
+          0.43855840642158844
+        ]
+      }
+    }
+  },
+  "findings": [
+    "Reported surface x [5.410,6.371] excludes zero-angle LE 5.400 and TE 6.400, although zero lies inside travel.",
+    "Reported surface z agrees with sign +1 to 0.001 m rounding; it does not establish clearance allowance. Sign -1 gives a different range, so sign +1 is inferred from the reported geometry, not explicitly specified.",
+    "Reported identical mast-top and mast-bottom x ranges cannot represent opposite endpoints under the same rotation. Their x displacements are opposite.",
+    "These are envelope errors, not proof of collision. The occupied solids and sign convention must be reconciled before a clearance verdict."
+  ],
+  "engineering_acceptance": false
+}

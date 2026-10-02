@@ -1,0 +1,62 @@
+\subsection{V15 Fable: a two-axis surface balance is not six-component trim}
+\label{sec:v15-fable-gate}
+
+The complete Fable V15 response was retrieved from Unity job 65023104 and
+its assumed 28-row mass ledger independently sums to 353.2 kg. The revised
+engine, firewall and tank boxes have nominal rigid gaps, but their loaded
+deflections, temperature limits and material allowables remain unmeasured.
+The response proposes a 21-kW engine target, not an identified engine and
+measured propeller map. The other two V15 responses remain on hold: Astra's
+modelled propeller absorption exceeds its assumed shaft target by 5.4 kW,
+and Opus's selected propeller misses its assumed nominal drag by 125.3 N
+and labels the advance ratio inconsistently. These are screens of the
+models' own assumptions, not experimental performance data.
+
+For Fable alone, we independently evaluated a power-off, rigid,
+lifting-surface-only model with its two wing decks and split horizontal
+tail. At $V=13$ m/s, $\rho=1.225$ kg/m$^3$, $S_{\rm ref}=42$ m$^2$ and
+$\bar c=1.85$ m, direct AVL evaluation at $\alpha=5.851^\circ$ and tail
+setting $-4.199^\circ$ gives $C_L=0.79677$ and $C_m=0.00002$ about the
+nominal assumed center of gravity. With $qS=4347.525$ N and
+$W=353.2(9.80665)=3463.709$ N, the \emph{modelled} lifting-surface force is
+3463.977 N, or 0.269 N above that assumed weight. The rounded AVL output
+corresponds to a 0.161-N\,m surface pitching moment. Separate surface
+output gives 1679.9 N lower-wing lift, 2024.2 N upper-wing lift and
+239.98 N tail downforce; their pitching-moment contributions are
+$-382.8$, $-609.7$ and $+992.5$ N\,m. These large opposing terms make
+the near-zero sum sensitive to geometry, section and center-of-gravity
+errors. The predicted induced drag alone is 237.8 N; it is not total drag.
+
+\begin{table}[p]
+\centering\small
+\caption{Evidence status of the six Fable V15 whole-aircraft trim residuals at the reported power-off surface-model point. ``Unknown'' never means zero.}
+\label{tab:v15-fable-six-axis}
+\begin{tabularx}{\linewidth}{@{}p{.16\linewidth}p{.24\linewidth}X@{}}
+\toprule
+Residual about CG & Available result & Missing terms that block acceptance\\
+\midrule
+$F_x$ & Unknown & Profile, body, gear and windmilling drag; installed thrust.\\
+$F_y$ & Unknown & Fin, rudder, body, sideslip and asymmetric propulsion map.\\
+$F_z$ & Partial: $L-W=+0.269$ N & Body/gear/propeller loads, stall and flexible-shape effects.\\
+$M_x$ & Unknown & Tip-control effectiveness, linkage, body and propeller roll moments.\\
+$M_y$ & Partial: wing--tail $+0.161$ N\,m & Installed thrust-line, slipstream, body and elastic moments.\\
+$M_z$ & Unknown & Fin/rudder and differential-propeller yaw moments.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The fine-mesh fixed-control slope has an \emph{apparent}, power-off
+lifting-surface margin of only 0.53--1.23\% of the reference chord as the
+fitting window changes. It is not an installed-aircraft neutral point.
+The Fable response's H13W power case needs 16.524 kW at the shafts versus
+an assumed 19.950 kW available, a paper reserve of 20.7\%; H16W instead
+has a 4.164-kW deficit on the same assumptions. No actual engine torque
+curve, propeller $C_T(J)$/$C_P(J)$ map, loaded clearances, full inertia
+measurement, $C_{m_{\dot\alpha}}$, $C_{Z_{\dot\alpha}}$ or validated
+lateral--directional derivative set exists. Consequently none of the six
+installed-aircraft equilibrium equations has been demonstrated as a
+complete residual, and no credible longitudinal or lateral mode set can
+yet be accepted. The reproducible, input-hashed arithmetic and explicit
+unknown fields are in the local
+\texttt{v15\_fable\_six\_axis\_acceptance\_gate01.json} file; this
+post-G8 file must be included in a new public data release before submission.

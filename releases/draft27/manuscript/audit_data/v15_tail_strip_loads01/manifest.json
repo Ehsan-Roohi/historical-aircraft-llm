@@ -1,0 +1,29 @@
+{
+  "scope": "Rigid unpowered surface loads only, not design envelope or measurements",
+  "cases": [
+    {
+      "case": "original",
+      "alpha_deg": 5.02707,
+      "pitch_command_deg": -2.48022,
+      "source_geometry_sha256": "b973556ad45a3178956ab26e4939895695ea80654a3c1bed84657f43cc33cc50",
+      "surface_sha256": "0cfe472e8d704f36caae0e9dde1d90f118fd2877b56db218c3bef74e191db293",
+      "strip_sha256": "209199040548d04ed9e4989f42be221d7c4df911a812906da1962c7126f5453a"
+    },
+    {
+      "case": "enlarged",
+      "alpha_deg": 4.96037,
+      "pitch_command_deg": 4.32297,
+      "source_geometry_sha256": "314b19f024f6747e68e06d8d13221f56e317e98d7ef60a932f0a13250bee64fc",
+      "surface_sha256": "863bdf84d3d19ab27cacc23a8f0a6b1476759aacf544868ad957aa13687f12d5",
+      "strip_sha256": "0266300cd5e515b62dbf7871929245c548e1ee22c8eba55ef92da4d894335573"
+    },
+    {
+      "case": "plus2kg",
+      "alpha_deg": 4.94835,
+      "pitch_command_deg": 4.69591,
+      "source_geometry_sha256": "ba28311a18329bce1738595d9afa0fd394e6586f1c7a603ffd3bbe6ab9c30172",
+      "surface_sha256": "dc24dc246f95f2be8bf69fd033cfb3ba4245fc95ba7b8df5a313e2abd29da9bc",
+      "strip_sha256": "351f974d16e5ef2b43028f74a678e4a9654583640942c5f125b94a12f34de636"
+    }
+  ]
+}

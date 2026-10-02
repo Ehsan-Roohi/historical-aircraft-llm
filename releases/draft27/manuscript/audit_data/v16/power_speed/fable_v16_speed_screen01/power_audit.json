@@ -1,0 +1,55 @@
+{
+  "status": "AUDITED_CONDITIONAL_SENSITIVITY",
+  "cases": [
+    {
+      "speed_mps": 12,
+      "mass_kg": 375.106,
+      "surface_lift_residual_N": 0.010033100000782724,
+      "alpha_deg": 9.09449,
+      "surface_CL": 0.99302,
+      "surface_SM_percent": 10.850074477704142,
+      "printed_CDi": 0.07238,
+      "AVL_CDi": 0.0795773,
+      "inferred_efficiency": 0.4499904159478627,
+      "hybrid_drag_N": 613.56167812,
+      "hybrid_shaft_power_W": 16361.993225858103,
+      "assumed_available_W": 20045,
+      "reserve_fraction": 0.22509523890532845,
+      "absolute_power_headroom_W": 3683.006774141897,
+      "margin_above_1p15_required_W": 1228.7077902631827,
+      "minimum_efficiency_for_1p15_reserve": 0.4224071418336742
+    },
+    {
+      "speed_mps": 16,
+      "mass_kg": 375.106,
+      "surface_lift_residual_N": -0.014662899999166257,
+      "alpha_deg": 1.90229,
+      "surface_CL": 0.55857,
+      "surface_SM_percent": 8.712875511872236,
+      "printed_CDi": 0.0229,
+      "AVL_CDi": 0.0263289,
+      "inferred_efficiency": 0.44999603709281133,
+      "hybrid_drag_N": 732.28136384,
+      "hybrid_shaft_power_W": 26036.900007240467,
+      "assumed_available_W": 20045,
+      "reserve_fraction": -0.2301310834075566,
+      "absolute_power_headroom_W": -5991.900007240467,
+      "margin_above_1p15_required_W": -9897.435008326534,
+      "minimum_efficiency_for_1p15_reserve": 0.6721864352534797
+    }
+  ],
+  "raw_response_sha256": "6dae3f48195d8b446f517fac08936fb69d87a8b59a44f618bdc8faccc198dbc1",
+  "summary_sha256": "9ce27511980fb17e79160ed84dd52d493fda3a016540fdea031624294e5d0585",
+  "script_sha256": "2baef8ff5d7f0a4a2ca03d338abf34f5b0eb9a899780934bd41ed458ba1590a8",
+  "validation": "Six raw file hashes, parent and script hashes, matched mass, two lift/moment residuals, tail limits and SM formulas passed.",
+  "method": "Replace only printed induced drag coefficient with same-speed, same-mass AVL surface coefficient; retain printed drag baseline and infer its efficiency from D,V,P. No double counting of induced drag.",
+  "limitations": [
+    "Rigid surface-only quasi-steady AVL, unvalidated section; no installed propulsion or body interaction.",
+    "12 m/s CL near 0.993 and alpha near 9.09 deg do not establish attached flow or stall margin.",
+    "Engine availability, other drag and propeller efficiency remain unmeasured assumptions.",
+    "No Reynolds-dependent section data; speed changes target lift, not viscous validity.",
+    "15 percent reserve is exploratory, not an airworthiness standard.",
+    "Not a coupled six-component trim, dynamic-mode or flight acceptance."
+  ],
+  "flight_acceptance": false
+}

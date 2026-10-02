@@ -1,0 +1,49 @@
+{
+  "scope": "Journal display derivatives; geometry unchanged",
+  "records": [
+    {
+      "name": "astra_v2_threeview",
+      "stage": "V2",
+      "source": "output/stage_threeviews/V2/gpt-6-astra.svg",
+      "source_sha256": "f971b4a182a81954e769337b6cbfc9885a26d22f01b55452457692758e3b1e7f",
+      "svg_sha256": "211b8545f237f8b8271abbed83accbfdde953676de7ff8ac2b25ae4b38ab982e",
+      "png_sha256": "dee75692512caacaa3e843b1259445b0aefbdcb9eb2875f81f5d40430453b863",
+      "width_px": 5400,
+      "height_px": 2340,
+      "caveat": "V2/reconstruction typography only; not a later V12/V13 installed design"
+    },
+    {
+      "name": "fable_v2_threeview",
+      "stage": "V2",
+      "source": "output/stage_threeviews/V2/claude-fable-5-1.svg",
+      "source_sha256": "6f03b45fe58a37c8785c389c3bb92dc68e892ad0f4504d26345eb7288a808561",
+      "svg_sha256": "07adadb96f387dd48cdaf443e45a5f6737f19a5f389bb42e1382c9918f2032a1",
+      "png_sha256": "d1a31576006073f5f3fda042118b7a16cf380c025cb964af72e41674f41dc5f6",
+      "width_px": 5400,
+      "height_px": 2340,
+      "caveat": "V2/reconstruction typography only; not a later V12/V13 installed design"
+    },
+    {
+      "name": "opus_v2_threeview",
+      "stage": "V2",
+      "source": "output/stage_threeviews/V2/claude-opus-5-5.svg",
+      "source_sha256": "63efbf59b1bcf349a6ec4f04580bea781ead3ffd540628bd849dcefc8631016d",
+      "svg_sha256": "f9557f59971cbef7eaeb665b10620094b543418267aa4e31a1788189e3073dca",
+      "png_sha256": "6a9bc0ce459cf6659e3794d8082042224cfc136eb41b96dcdaa2a2649a1b20bd",
+      "width_px": 5400,
+      "height_px": 2340,
+      "caveat": "V2/reconstruction typography only; not a later V12/V13 installed design"
+    },
+    {
+      "name": "wright_threeview_reconstruction",
+      "stage": "Wright",
+      "source": "output/stage_threeviews/Wright/wright-flyer-1903.svg",
+      "source_sha256": "43947b854e4436b0ab9a4e335b4b2664f4d17a093f44641c5e852cbf16b19dc7",
+      "svg_sha256": "468a4bd0150fc31e25065ae85347a5d5fe6cf81fd7ea9036ff886ac98dbac144",
+      "png_sha256": "dd78adfad38c375bb57caf585ea0189cfd573b2c9f05daf692529aaa2704e9e5",
+      "width_px": 6000,
+      "height_px": 2600,
+      "caveat": "V2/reconstruction typography only; not a later V12/V13 installed design"
+    }
+  ]
+}

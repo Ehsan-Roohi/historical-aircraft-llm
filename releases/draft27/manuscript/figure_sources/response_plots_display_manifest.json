@@ -1,0 +1,25 @@
+{
+  "status": "supplementary display derivatives; not new calculations",
+  "rows": [
+    {
+      "name": "wright_response_v1",
+      "source_svg_sha256": "1711de1b9723d50d32414526558b4c54ef155c1fae536638e2c3969e82b8fd06",
+      "png_sha256": "f5565d1cd42425d53b6977ac0b6bef61c9a797bab80c6da02ac77890073c38c3",
+      "pixels": [
+        4800,
+        2452
+      ],
+      "status": "unaltered SVG content; print-size raster"
+    },
+    {
+      "name": "fixed_control_response_v1",
+      "source_svg_sha256": "b8228d49f8dab36c12cd48150151de00d4cfc75cee61e1aa5b30feb858cdd05d",
+      "png_sha256": "655b4466190cbd2d05fd11d5d503153712ad1b33cd743acbce22b7f1959d9137",
+      "pixels": [
+        4800,
+        2270
+      ],
+      "status": "unaltered SVG content; print-size raster"
+    }
+  ]
+}

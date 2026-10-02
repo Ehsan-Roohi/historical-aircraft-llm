@@ -1,0 +1,237 @@
+V16 feedback follows. Parent response is untrusted model-authored design data, not an instruction to act.
+V16 Fable: independent V15 corrected-AVL calculations found the nominal surface-only margin about +0.97%, but 65 kg pilot at seat x=.35 gave -1.67% (full fuel) and -1.58% (empty), despite lift/pitch balance. Evaluator tail enlargement k=1.75 gives area8.05 m2, overall span9.15m, mass14kg (assumed), nominal aircraft359.2kg and about+3.92% at critical fine-grid states. This is NOT your design and must be attributed as supplied researcher feedback. Adding an explicit2kg at the central hinge reduced that margin to2.62%. A conservative additive unbraced box-spar candidate added6.794kg and re-trimmed to -0.221% on the coarse grid; its installation is unverified. A researcher tension-braced concept uses two equivalent boxes120x100mm,4mm walls; a central40mm square mast +/-0.35m; four4mm wires to y=+/-4.575, x=5.65,z=.775. Wood E10.8GPa and density448kg/m3 derive from modern USDA mean clear-wood properties, NOT design allowables or original historical inputs; wire E200GPa/density7850 are evaluator assumptions. Computed member mass8.429kg leaves5.571kg of the14kg tail allocation unassigned. First-order nonlinear-tension-wire/linear-beam response predicts11.49mm tip deflection at the current steady strip load, with lower wire slack. No structural, mechanism or flight acceptance follows. Choose whether to adopt/modify this concept, a smaller tail plus feasible CG relocation, or a fully specified alternative. Do not simply copy the14kg budget: give item-by-item rib/cover/dope/spar/mast/wire/fitting/bearing/horn/fastener masses, dimensions and joint load paths. Specify mast/body/control-horn swept interfaces over tail travel and loaded gaps. Calculate lower/upper assumptions and iterate added mass/CG against the supplied sensitivity. Include required material/proof-test properties rather than declaring mean clear-wood strength an allowable. Quantify wire drag and power impact with stated assumptions; preserve H16W failure unless explicitly fixed or excluded with rationale. Provide full revised coordinate and mass schedules, not only deltas. Report limits of quasi-steady predictions and every remaining acceptance gate.
+
+EVALUATOR REPORT v15_fable_tail_trade01/audit.json SHA256 5c832a5f1abd8096fb2460d524a33700d1060254657c100dd65fac9f29d309ed
+{
+  "status": "CONDITIONAL_SURFACE_MODEL_CANDIDATE_ONLY",
+  "scale": 1.75,
+  "tail_area_m2": 8.049999999999999,
+  "span_including_center_gap_m": 9.149999999999999,
+  "assumed_tail_mass_kg": 14.0,
+  "added_tail_mass_kg": 6.0,
+  "assumed_nominal_mass_kg": 359.2,
+  "coarse_loading_states": 8,
+  "fine_loading_states": 2,
+  "coarse_SM_range_percent": [
+    4.114921728513496,
+    9.712506999771005
+  ],
+  "fine_results": [
+    {
+      "fuel_kg": 8,
+      "fine_SM": 0.039462824782037914,
+      "coarse_SM": 0.04145024347779518,
+      "absolute_mesh_difference": -0.001987418695757269
+    },
+    {
+      "fuel_kg": 0,
+      "fine_SM": 0.03916599476393363,
+      "coarse_SM": 0.04114921728513496,
+      "absolute_mesh_difference": -0.001983222521201332
+    }
+  ],
+  "structural_scaling_warning": {
+    "assumption": "Identical uniform load per unit span and unchanged EI; illustrative cantilever scaling, NOT a structural result",
+    "root_bending_ratio": 3.0625,
+    "tip_deflection_ratio": 9.37890625
+  },
+  "remaining": [
+    "Full eight-state fine-grid envelope",
+    "Tail spar/root/hinge sizing and added reinforcement mass",
+    "Deflected geometry, control actuation and clearance",
+    "Installed propulsion and power after drag/mass changes",
+    "Unsteady derivatives, physical inertia, coupled dynamic modes",
+    "Robustness to airfoil/body/propeller model errors"
+  ],
+  "accepted_aircraft_modes": false,
+  "flightworthiness": false
+}
+
+
+EVALUATOR REPORT v15_tail_reinforcement_sensitivity01/summary.json SHA256 0df100c4247e4448944191d47fa5e939745c70a6942849861381bf97d983e0f5
+{
+  "scope": "Conditional two-kilogram point-mass sensitivity; no structural design or modes",
+  "assumed_added_mass_kg": 2.0,
+  "assumed_location_m": [
+    5.65,
+    0,
+    0.775
+  ],
+  "inertia_note": "Zero intrinsic inertia is an explicit mathematical point-mass approximation, not a claim about actual reinforcement.",
+  "frozen_NP_budget_screen": [
+    {
+      "fuel_kg": 8,
+      "frozen_NP_x_m": 1.71489053283417,
+      "added_point_mass_budget_kg": {
+        "0": 6.4785425357057225,
+        "0.03": 1.5318898318641314
+      }
+    },
+    {
+      "fuel_kg": 0,
+      "frozen_NP_x_m": 1.7153234443578262,
+      "added_point_mass_budget_kg": {
+        "0": 6.283199867963557,
+        "0.03": 1.45000080427745
+      }
+    }
+  ],
+  "retrimmed_case": {
+    "phase": "plus2kg",
+    "scale": 1.75,
+    "tail_area_m2": 8.049999999999999,
+    "tail_outer_y_m": 4.574999999999999,
+    "pilot_kg": 65,
+    "seat_x_m": 0.35,
+    "fuel_kg": 0,
+    "mesh": "fine",
+    "mass_kg": 343.2,
+    "cg_m": [
+      1.6662179487179487,
+      0.0,
+      0.7753015734265735
+    ],
+    "assumed_inertia_diagonal_kgm2": [
+      875.5811899538169,
+      797.1965655179197,
+      1494.8555422307693
+    ],
+    "centroid_only_Pxz_kgm2": 15.374260442307698,
+    "trim": {
+      "Alpha": 4.94835,
+      "pitch": 4.69591,
+      "CLtot": 0.77415,
+      "Cmtot": -0.0,
+      "CDind": 0.0480626
+    },
+    "absolute_tail_deg": 0.6959099999999996,
+    "within_declared_tail_travel": true,
+    "surface_SM": 0.026229468828422878,
+    "Cma": -0.096116,
+    "CLa": 3.664428,
+    "Cmq": -6.92096,
+    "input_sha256": "ba28311a18329bce1738595d9afa0fd394e6586f1c7a603ffd3bbe6ab9c30172",
+    "forces_sha256": "e212a20b750f7fea5ba730a9090f91d807b9dc380fde26d49b194c8ed606a23e",
+    "stability_sha256": "9014ee546764426d2f12c4d7f6428a2667cd8901dda82fd582c3060cd568a1b9"
+  },
+  "limitations": [
+    "Real reinforcement mass/distribution and stiffness unknown",
+    "Frozen-NP budgets are screens, not allowable installed masses",
+    "Single loading state re-trimmed; other states require verification"
+  ],
+  "accepted_aircraft_modes": false
+}
+
+
+EVALUATOR REPORT v15_braced_tail_candidate01.json SHA256 f86b72c4e45e234305a48454b88699b09b57773ee3047e47dc4e0d0783245c76
+{
+  "status": "RESEARCHER_CONCEPT_NOT_ACCEPTED_STRUCTURE",
+  "material_source": "https://research.fs.usda.gov/download/treesearch/62244.pdf",
+  "material_scope": "Modern clear-wood average values used only by evaluator, not supplied as pre-1899 knowledge or design allowables",
+  "cases": [
+    {
+      "load_multiplier": 1,
+      "geometry": {
+        "half_span_m": 4.025,
+        "wire_horizontal_span_m": 4.575,
+        "mast_half_height_m": 0.35,
+        "box_b_m": 0.12,
+        "box_h_m": 0.1,
+        "wall_m": 0.004,
+        "wire_diameter_m": 0.004
+      },
+      "assumptions": {
+        "wood_E_Pa": 10800000000.0,
+        "wood_density_kg_m3": 448.0,
+        "wire_E_Pa": 200000000000.0,
+        "wire_density_kg_m3": 7850.0,
+        "prestress_N": 0,
+        "uniform_half_panel_mass_budget_kg": 7
+      },
+      "one_half_support_up_N": 38.430348841583566,
+      "one_half_root_vertical_reaction_N": 105.68203766247078,
+      "root_bending_Nm": 139.20576586118653,
+      "max_abs_bending_Nm": 139.20576586118653,
+      "unbraced_tip_deflection_m": 0.03979738704819559,
+      "braced_tip_deflection_m": 0.01148951149325897,
+      "max_abs_deflection_m": 0.011489511493266507,
+      "upper_wire_tension_N": 487.8892055187576,
+      "lower_wire_tension_N": 0.0,
+      "wire_required_stress_Pa": 38824989.36974395,
+      "spar_compression_N": 486.37329814622717,
+      "spar_max_linear_combined_stress_Pa": 2834237.659022321,
+      "ideal_Euler_Pcr_N_by_effective_length_factor": {
+        "1": 17976.760163302566,
+        "2": 4494.1900408256415
+      },
+      "mass": {
+        "two_box_spars_kg": 6.116454400000006,
+        "four_wires_kg": 1.810496946162062,
+        "solid_square_40mm_mast_kg": 0.50176
+      },
+      "EI_Nm2": 29508.24960000004
+    },
+    {
+      "load_multiplier": 3,
+      "geometry": {
+        "half_span_m": 4.025,
+        "wire_horizontal_span_m": 4.575,
+        "mast_half_height_m": 0.35,
+        "box_b_m": 0.12,
+        "box_h_m": 0.1,
+        "wall_m": 0.004,
+        "wire_diameter_m": 0.004
+      },
+      "assumptions": {
+        "wood_E_Pa": 10800000000.0,
+        "wood_density_kg_m3": 448.0,
+        "wire_E_Pa": 200000000000.0,
+        "wire_density_kg_m3": 7850.0,
+        "prestress_N": 0,
+        "uniform_half_panel_mass_budget_kg": 7
+      },
+      "one_half_support_up_N": 118.06091886417964,
+      "one_half_root_vertical_reaction_N": 314.27624064798334,
+      "root_bending_Nm": 406.46856141735816,
+      "max_abs_bending_Nm": 406.46856141735816,
+      "unbraced_tip_deflection_m": 0.11939216114458678,
+      "braced_tip_deflection_m": 0.03242824070542963,
+      "max_abs_deflection_m": 0.03242824070544918,
+      "upper_wire_tension_N": 1417.2919726454716,
+      "lower_wire_tension_N": 0.0,
+      "wire_required_stress_Pa": 112784511.62549506,
+      "spar_compression_N": 1412.366154777945,
+      "spar_max_linear_combined_stress_Pa": 8271124.407352809,
+      "ideal_Euler_Pcr_N_by_effective_length_factor": {
+        "1": 17976.760163302566,
+        "2": 4494.1900408256415
+      },
+      "mass": {
+        "two_box_spars_kg": 6.116454400000006,
+        "four_wires_kg": 1.810496946162062,
+        "solid_square_40mm_mast_kg": 0.50176
+      },
+      "EI_Nm2": 29508.24960000004
+    }
+  ],
+  "calculated_member_mass_kg": 8.428711346162068,
+  "remaining_of_14kg_tail_budget_kg": 5.571288653837932,
+  "remaining_mass_note": "Unallocated ceiling for ribs, fabric, fittings, bearings, horns and fasteners; not a verified bill of materials. Original 14kg must not be overwritten as closed.",
+  "limitations": [
+    "3x means scaled current static strip loads and weight, NOT a derived maneuver/gust load case",
+    "No prestress; lower wire slack under downward load. Load reversal, backlash and flutter unresolved",
+    "First-order beam response; axial beam-column effects and local wall/joint buckling not solved",
+    "Euler effective-length values are idealized bounds for diagnostic comparison, not acceptance",
+    "Mast, attachment stress, bearing/crush/shear, fabric/ribs, fatigue and wood/wire allowables unresolved",
+    "Wire drag, tail thickness/shape changes and occupied-volume swept clearance not integrated",
+    "Mast intended to rotate with all-moving tail; compatibility with fuselage/control mechanism unverified"
+  ],
+  "accepted_aircraft_modes": false,
+  "structural_acceptance": false
+}
+
+
+PARENT SHA256 1fd2ad7a4dc22da874fbd3ba6d3e73567058b8162573a8bb24c42c166522f56f
+BEGIN RAW V15 RESPONSE
+{"section_1_identity":{"model":"Fable V15 whole-aircraft integrated candidate (engine/fuel-tank/firewall interface closure)","revision_id":"V15-V3R4-C4","parent":"V14 (V14-V3R4-C3), model-authored, not independently validated; independent V15 feedback takes precedence","parent_sha256_wrapper":"39b210bdc5ab48ab09b9b2c2a9348708010942f1a8e45d1694483b6f3e49cb9f","lineage":"V15 <- V14 <- V13 <- V12 <- V11b <- V10 <- V3","disposition":"CANDIDATE for independent screening. The V14 engine-tank face contact (shared face at z 1.06, x 1.45-1.62, y +-0.25) is removed by raising the tank 0.08 m, inserting a horizontal firewall P21 and a tank support P22, and re-closing the now 28-row ledger, 8 loading CGs, inertia, ground loads, power cases and mass-power iteration. Nominal engine-top to tank-bottom budget is 0.080 m; loaded minimum engine-top to firewall gap is 0.020 m under stated deflection assumptions [NA]. NOT closed: engine torque curve, propeller map, aerodynamic derivatives, trim, static margin, modes, structural and thermal allowables, measured loaded gaps. Nothing is measured. H16W remains outside the defensible level-flight envelope (see section 5). Acceptance is the evaluator's decision.","tag_definitions":{"[RA]":"retained assumption from parent chain","[NA]":"new assumption introduced in V15","[AR]":"arithmetic derived from tagged inputs","[IC]":"independently calculated (none in this document; no independent inputs supplied)","[M]":"measured with cited source (none exists in this document)","UNKNOWN":"no admissible value; test or design choice named"},"change_log_exhaustive":[{"id":"C15-01","item":"P07a tank / P07b fuel envelope","from":"box x 1.45-1.75, y +-0.25, z 1.06-1.21, centroid (1.60,0,1.135)","to":"box x 1.45-1.75, y +-0.25, z 1.14-1.29, centroid (1.60,0,1.215); masses 4 + 8 kg unchanged","reason":"remove shared face with engine top z 1.06; create 0.080 m nominal vertical budget","tag":"[NA]"},{"id":"C15-02","item":"P21 firewall (new row)","from":"absent (V14 flagged UNKNOWN)","to":"horizontal sheet x 1.40-1.80, y +-0.37, z 1.090-1.100: 0.5 mm steel sheet (lower face) + 6 mm mineral insulation board (upper face); 4 steel hanger straps to P22 rails; mass 2.1 kg at (1.60,0,1.095)","mass_derivation":"steel 0.40 x 0.74 x 0.0005 x 7850 = 1.16 kg; board 0.296 m2 x 0.006 x 300 kg/m3 = 0.53 kg; straps/fasteners 0.4 kg; total 2.09 -> 2.1 [AR from NA densities]","tag":"[NA]"},{"id":"C15-03","item":"P22 tank support (new row)","from":"absent","to":"2 ash cross-rails 0.04(x) x 0.04(z) at x 1.45 and 1.75, z 1.100-1.140, spanning y +-0.37 between upper-longeron INNER faces (inner face y +-0.37 assumed [NA]); 2 tank straps; mass 0.8 kg at (1.60,0,1.12)","reason":"carry tank and firewall; keep clear of pitch wire run on outer side faces","tag":"[NA]"},{"id":"C15-04","item":"fuel line routing","from":"UNKNOWN","to":"gravity feed: tank outlet (1.75,-0.20,1.14) -> grommet through P21 at (1.70,-0.30,1.095) -> vertical run at x 1.70, y -0.30 from z 1.14 to 0.85 -> carburettor inlet assumed at (1.62,-0.30,0.85) [NA]; static head at level rest 0.29 m; shut-off cock at (1.70,-0.30,1.05)","tag":"[NA]"},{"id":"C15-05","item":"SUM / loading cases","from":"350.3 kg nominal, CG (1.52171,0,0.77918), 30.90 %c","to":"353.2 kg nominal, CG (1.52236,0,0.78455), 30.94 %c; 8 cases recomputed; inertia recomputed by delta method","tag":"[AR]"},{"id":"C15-06","item":"power cases","from":"H13W 16424 W req, 21.5% reserve; H16W 24036 W req (excluded)","to":"H13W 16524 W req, 19950 W available, 20.7% paper reserve; H16W 24114 W req vs 19950 W, FAIL, explicitly retained as outside envelope","tag":"[AR]"},{"id":"C15-07","item":"ground rest loads","from":"nominal front pair 2059.7 / rear 1376.7 N","to":"nominal front pair 2076.0 / rear 1388.9 N; extremes recomputed","tag":"[AR]"},{"id":"C15-08","item":"structural load cases","to":"S8 added: tank+fuel+support+firewall 3 g on P22 rails and longeron attachments","tag":"[NA]"},{"id":"C15-09","item":"all other rows and geometry","decision":"unchanged: P01-P06B, P08-P20; engine envelope x 0.88-1.62, y +-0.36, z 0.38-1.06, centroid (1.25,0,0.72); radiator box x 0.85-1.35, z 1.22-1.48; frame, gear, tail, controls, propellers","tag":"[RA]"}],"not_changed_and_why":["engine envelope and bearers: lowering the engine would close the 0.18 m gap to the lower longeron z 0.20 and disturb the crank/output flange at z 0.80; the tank was moved instead","engine 21.0 kW target, eta_g 0.95, eta_p 0.50/0.45, sfc 0.31, CD0 0.06/0.08, e 0.70: all remain assumed targets, not measured available output; retained because no independent input exists to replace them","propeller D 2.30 / 600 rpm: unchanged (gap constraints as V14)"]},"section_2_three_view_coordinate_schedule":{"axes":{"frame_B":"origin at front cross-member centreline at lower-deck chord plane; x positive AFT, y positive operator's RIGHT, z positive UP; ground plane at level rest z -0.75 [RA]","moment_signs":"right-handed about +x,+y,+z; +M_B is nose-down because x is aft; M_aero = -M_B [RA]; flight frame F = R*B, R = diag(-1,1,-1) [RA]","percent_chord":"%c = (x_cg - 0.95)/1.85 [RA]","units":"m, kg, N, N m, W, deg; rho 1.225 kg/m3, g 9.81 m/s2 [RA]"},"lifting_surfaces":{"P01_lower_deck":{"LE_root":[0.95,0,0],"TE_root":[2.80,0,0],"span_y":[-5.75,5.75],"chord":1.85,"spars_x":[1.15,2.55],"occupied_box":{"x":[0.95,2.80],"y":[-5.75,5.75],"z":[-0.02,0.10]},"section":"circular arc camber 1/20, thickness UNKNOWN","tag":"[RA]"},"P02_upper_deck_fixed":{"LE_root":[0.95,0,1.85],"TE_root":[2.80,0,1.85],"span_y":[-4.25,4.25],"occupied_box":{"x":[0.95,2.80],"y":[-4.25,4.25],"z":[1.83,1.95]},"tag":"[RA]"},"P03L_P03R_tip_panels":{"span_y":"+-4.25 to +-5.75","hinge_line_x":1.505,"hinge_z":1.95,"travel_deg":[-8,8],"swept_TE_z_at_x2.80":"1.95 +- 0.180","horns":[[1.80,-4.40,2.10],[1.80,4.40,2.10]],"tag":"[RA]"},"P04_interplane_posts":{"count":12,"positions":"x in {1.15,2.55} x y in {+-0.90,+-2.60,+-4.25}, z 0-1.85","tag":"[RA]"}},"tail_group":{"P11_all_moving_tail":{"hinge_line":[[5.65,-2.85,0.775],[5.65,2.85,0.775]],"halves_y":"+-0.55..+-2.85","chord":1.00,"LE_x":5.40,"TE_x":6.40,"area_m2":4.60,"rigging_deg":-4.0,"travel_abs_deg":[-16,8],"swept_envelope":{"x":[5.410,6.371],"z":[0.671,0.982]},"tag":"[RA]"},"P16_torque_tube":{"axis":"x 5.65, z 0.775, y -0.55..0.55; bearings y +-0.40; horn radius 0.25 at y 0","lower_horn_min_gap_to_lower_longeron_centreline":"0.036 m rigid [AR]; longeron half-depth UNKNOWN","tag":"[RA]"},"P12_fin":{"LE":[5.40,0,1.20],"TE":[6.60,0,1.20],"top_z":1.80,"area_m2":0.72,"tag":"[RA]"},"P13_rudder":{"hinge_x":6.60,"z":[0.80,1.80],"TE_x":7.50,"travel_deg":[-20,20],"swept_envelope":{"x":[6.60,7.446],"y":[-0.308,0.308]},"tag":"[RA]"}},"pilot_and_seat":{"P05_operator":{"seat_datum_x":0.30,"stops_x":[0.25,0.35],"centroid_at_datum":[0.30,0,0.75],"occupied_box_at_datum":{"x":[-0.05,0.65],"y":[-0.30,0.30],"z":[0.30,1.40]},"box_at_aft_stop_x":[0.00,0.70],"mass_range_kg":[65,85],"tag":"[RA]"},"P19_stops":"2 ash blocks per rail at x 0.20 and 0.40, rails y +-0.25, z 0.40 [RA]","reach":"UNKNOWN until mock-up"},"engine_cooling_fuel_firewall":{"P06A_engine":{"envelope":{"x":[0.88,1.62],"y":[-0.36,0.36],"z":[0.38,1.06]},"centroid":[1.25,0,0.72],"crank_axis":"x-direction, y 0, z 0.80","output_flange":[1.65,0,0.80],"coupling_shaft":"x 1.65-1.85, z 0.80","carburettor_inlet_assumed":[1.62,-0.30,0.85],"exhaust":"exit assumed on left side below z 0.80 at x 1.55-1.62, discharging aft-down outside the firewall footprint [NA]; pipe route and surface temperature UNKNOWN","clearances_rigid":{"to_pilot_box_at_aft_stop_x":0.18,"to_frame_side_faces_y":0.04,"to_lower_longeron_z0.20":0.18,"to_upper_longeron_z1.20":0.14,"to_firewall_lower_face_z1.090":0.030,"to_tank_bottom_z1.14":0.080},"tag":"[RA envelope][NA clearances]"},"P21_firewall":{"envelope":{"x":[1.40,1.80],"y":[-0.37,0.37],"z":[1.090,1.100]},"layers":"steel 0.5 mm at z 1.090-1.0905 facing engine; mineral insulation board 6 mm at z 1.0905-1.0965; air/strap allowance to 1.100 [NA]","support":"4 steel straps from firewall corners (1.42/1.78, +-0.33) up to P22 rails; straps inside y +-0.37, never crossing frame side faces y +-0.40 [NA]","footprint_vs_engine_top":"covers engine top plan x 1.40-1.62 (engine ends 1.62) and full tank plan x 1.45-1.75, y +-0.25 with >=0.12 m overhang in y and >=0.05 m in x","openings":"1 grommet for fuel line at (1.70,-0.30); 1 grommet for throttle/vent lines if required [NA]","ventilation":"gap z 1.06-1.09 open to both sides y +-0.36 to +-0.40 and forward; airflow UNKNOWN","tag":"[NA]"},"P22_tank_support":{"rails":"2 ash rails 0.04 x 0.04 section at x 1.45 and 1.75, z 1.100-1.140, y -0.37..0.37, bolted to upper-longeron inner faces [NA]","tank_straps":"2 steel straps over tank at x 1.50 and 1.70 [NA]","tag":"[NA]"},"P07_tank":{"envelope":{"x":[1.45,1.75],"y":[-0.25,0.25],"z":[1.14,1.29]},"centroid":[1.60,0,1.215],"volume_m3":0.0225,"fuel_8kg_volume_m3":"~0.011 (rho ~0.73 [RA])","vent":"top at (1.50,0,1.29) routed up and aft, UNKNOWN detail","clearances_rigid":{"to_upper_longerons_y":0.15,"to_upper_cross_member_x1.85":0.10,"to_upper_cross_member_x1.15":0.30,"to_radiator_box_x1.35":0.10,"to_upper_deck_z1.83":0.54,"to_upper_deck_spar_struts_x1.15_x2.55":">=0.30","to_firewall_top_z1.100":0.040,"to_engine_top_z1.06":0.080},"tag":"[NA]"},"engine_tank_vertical_budget_AR":{"nominal_stack":"engine top 1.060 | air 0.030 | firewall 1.090-1.100 | air 0.040 | tank bottom 1.140","loaded_assumptions_NA":"engine vertical excursion on P20 bearers under 3 g <= 0.005 m; P22 rail/tank sag under 3 g <= 0.005 m; firewall strap stretch <= 0.002 m; thermal growth of engine top < 0.001 m","loaded_minimum_gaps_AR":"engine-firewall 0.030 - 0.005 - 0.002 = 0.023 -> stated 0.020 m; firewall-tank 0.040 - 0.005 - 0.002 = 0.033 m; engine-tank 0.080 - 0.010 = 0.070 m","status":"positive nominal and loaded budget by declared assumptions; all deflection inputs UNKNOWN until static pull (T-S1) and engine run (T-P1)"},"P06B_radiator":{"envelope":{"x":[0.85,1.35],"y":[-0.36,0.36],"z":[1.22,1.48]},"centroid":[1.10,0,1.35],"clearance_to_engine_top":0.16,"clearance_to_tank_x":0.10,"tag":"[RA]"},"fuel_line":{"path":[[1.75,-0.20,1.14],[1.70,-0.30,1.14],[1.70,-0.30,1.095],[1.70,-0.30,0.85],[1.62,-0.30,0.85]],"clearances":{"to_coupling_shaft_x1.65-1.85_z0.80_y0":"0.30 in y","to_transverse_shaft_x1.85":"0.15 in x","to_rudder_wire_y-0.38_z0.70":"0.15 in z at x 1.70","to_engine_envelope":"line at x 1.70 is 0.08 aft of engine aft face"},"head_at_level_rest_m":0.29,"head_in_climb_attitude":"UNKNOWN (attitude UNKNOWN)","tag":"[NA]"}},"transmission_and_propellers":{"P09R":{"central_bevel_box":[1.85,0,0.80],"transverse_shaft_y":[-1.60,1.60],"longitudinal_shafts":"x 1.85-3.00 at y +-1.60 z 0.80","tag":"[RA]"},"P17_outriggers":"L (2.55,-1.60,0)->(3.00,-1.60,0.80) and (2.55,-1.60,1.85)->(3.00,-1.60,0.80); R mirror [RA]","P08_propellers":{"hubs":[[3.00,-1.60,0.80],[3.00,1.60,0.80]],"D":2.30,"hub_r":0.10,"rigid_gaps":{"disc_to_frame_side":0.050,"disc_to_disc":0.90,"deck_TE_to_disc":0.20,"ground_at_rest":0.40,"strut_to_blade":0.20},"tag":"[RA]"},"drive_alignment":"crank axis, coupling shaft, central bevel box input all at y 0, z 0.80; tank/firewall change does not touch any drive element (lowest new element z 1.090 vs shaft z 0.80) [AR]"},"frame_truss":{"description":"Warren box girder, side faces y +-0.40, upper longerons z 1.20 x 0-6.60, lower longerons z 0.20 (x<=3.20) rising to 0.60 at x 6.60; stations x 0.00,1.15,1.85,2.55,3.20,4.90,5.65,6.60 [RA]","added_attachments_V15":"4 bolted pads on upper-longeron inner faces at x 1.45 and 1.75, y +-0.37, z 1.10-1.14 for P22 rails [NA]","member_sections_and_allowables":"UNKNOWN (T-S1)"},"gear_and_ground":{"axle_centres":[[0.40,-1.20,-0.50],[0.40,1.20,-0.50],[3.20,0,-0.50]],"wheel_radius":0.25,"contacts_at_rest":[[0.40,-1.20,-0.75],[0.40,1.20,-0.75],[3.20,0,-0.75]],"rest_loads_N_rigid_level_AR":{"formula":"F_front_pair = W (3.20 - x_cg)/2.80; F_rear = W - F_front_pair","nominal_353.2kg":"W 3464.9; front pair 2076.0 (1038.0 each); rear 1388.9","heaviest_85kg_fwd_full_363.2kg":"W 3563.0; front pair 2192.5; rear 1370.5","lightest_65kg_aft_empty_335.2kg":"W 3288.3; front pair 1918.2; rear 1370.1"},"contact_sequence_rigid":{"nose_up_about_rear_contact":"rear post (4.00,0,-0.50) touches at ~17 deg; tail low point z 0.671 at ~30 deg [RA AR]","nose_down":"skid toe UNKNOWN; nose-over limit UNKNOWN","roll_about_front_and_rear_contact":"lower-deck tip touches at ~9.4 deg before propeller tip ~14.5 deg [RA AR]","tank_and_firewall":"highest new element z 1.29 is inboard (|y|<=0.37) and does not enter any ground sweep [AR]"},"tyre_spring_deflection":"UNKNOWN","tag":"[RA]"}},"section_3_mass_ledger":{"rules":"each physical object counted once; 28 rows; intrinsic inertias from named shape models about own centroid in body axes; no measured mass exists","rows":[{"ID":"P01","name":"lower deck","mass_kg":21,"centroid":[1.78,0,0.06],"I_intr":[231.4,5.99,237.4],"tag":"[RA]"},{"ID":"P02","name":"upper deck fixed","mass_kg":15,"centroid":[1.78,0,1.91],"I_intr":[90.3,4.28,94.6],"tag":"[RA]"},{"ID":"P03L","name":"left tip panel","mass_kg":3,"centroid":[1.78,-5.0,1.91],"I_intr":[0.56,0.86,1.42],"tag":"[RA]"},{"ID":"P03R","name":"right tip panel","mass_kg":3,"centroid":[1.78,5.0,1.91],"I_intr":[0.56,0.86,1.42],"tag":"[RA]"},{"ID":"P04","name":"12 posts + wires","mass_kg":13,"centroid":[1.85,0,1.00],"I_intr":[114.2,9.54,117.5],"tag":"[RA]"},{"ID":"P05","name":"operator (nominal)","mass_kg":75,"centroid":[0.30,0,0.75],"I_intr":[9.81,10.6,5.31],"tag":"[RA]"},{"ID":"P06A","name":"engine incl. flywheel, carburation, exhaust, mounts","mass_kg":107,"centroid":[1.25,0,0.72],"I_intr":[8.75,9.01,9.51],"tag":"[RA]"},{"ID":"P06B","name":"radiator, piping, coolant","mass_kg":15,"centroid":[1.10,0,1.35],"I_intr":[0.91,0.43,1.11],"tag":"[RA]"},{"ID":"P07a","name":"fuel tank structure","mass_kg":4,"centroid":[1.60,0,1.215],"shape":"box 0.30 x 0.50 x 0.15","I_intr":[0.091,0.038,0.113],"tag":"[NA centroid][RA mass]"},{"ID":"P07b","name":"fuel 8 kg","mass_kg":8,"centroid":[1.60,0,1.215],"I_intr":[0.182,0.075,0.227],"tag":"[NA centroid][RA mass]"},{"ID":"P08L","name":"propeller A (left)","mass_kg":6,"centroid":[3.00,-1.60,0.80],"I_intr":[2.65,1.32,1.32],"tag":"[RA]"},{"ID":"P08R","name":"propeller B (right)","mass_kg":6,"centroid":[3.00,1.60,0.80],"I_intr":[2.65,1.32,1.32],"tag":"[RA]"},{"ID":"P09R","name":"shafts + 3 bevel boxes","mass_kg":14.5,"centroid":[2.08,0,0.80],"I_intr":[22.61,1.75,24.36],"tag":"[RA]"},{"ID":"P10R","name":"body frame incl. seat, rails, brackets, hangers","mass_kg":22,"centroid":[2.418,0,0.709],"I_intr":[8.14,82.39,82.39],"tag":"[RA]"},{"ID":"P11L","name":"left tail half","mass_kg":4,"centroid":[5.90,-1.70,0.775],"I_intr":[1.76,0.33,2.10],"tag":"[RA]"},{"ID":"P11R","name":"right tail half","mass_kg":4,"centroid":[5.90,1.70,0.775],"I_intr":[1.76,0.33,2.10],"tag":"[RA]"},{"ID":"P12","name":"fin","mass_kg":2,"centroid":[6.00,0,1.50],"I_intr":[0.06,0.30,0.24],"tag":"[RA]"},{"ID":"P13","name":"rudder","mass_kg":2,"centroid":[6.95,0,1.30],"I_intr":[0.17,0.30,0.14],"tag":"[RA]"},{"ID":"P14","name":"skids, 3 wheels, rear post","mass_kg":12,"centroid":[1.50,0,-0.50],"I_intr":[13.3,18.1,30.8],"tag":"[RA]"},{"ID":"P15","name":"controls","mass_kg":2.5,"centroid":[2.60,0,0.60],"I_intr":[0.10,8.01,8.01],"tag":"[RA]"},{"ID":"P16","name":"tail torque tube + bearings","mass_kg":1,"centroid":[5.65,0,0.775],"I_intr":[0.08,0.0,0.08],"tag":"[RA]"},{"ID":"P17L","name":"left outriggers + hub bearing","mass_kg":2,"centroid":[2.80,-1.60,0.80],"I_intr":[0.57,0.57,0.05],"tag":"[RA]"},{"ID":"P17R","name":"right outriggers + hub bearing","mass_kg":2,"centroid":[2.80,1.60,0.80],"I_intr":[0.57,0.57,0.05],"tag":"[RA]"},{"ID":"P18","name":"shaft cross-members + clamps","mass_kg":1.5,"centroid":[1.85,0,0.80],"I_intr":[0.40,0.01,0.40],"tag":"[RA]"},{"ID":"P19","name":"seat rail stops","mass_kg":0.3,"centroid":[0.30,0,0.40],"I_intr":[0,0,0],"tag":"[RA]"},{"ID":"P20","name":"engine bearers","mass_kg":4.5,"centroid":[1.25,0,0.45],"I_intr":[0.41,0.24,0.65],"tag":"[RA]"},{"ID":"P21","name":"firewall (steel + insulation board + straps)","mass_kg":2.1,"centroid":[1.60,0,1.095],"shape":"plate 0.40(x) x 0.74(y)","I_intr":[0.096,0.028,0.124],"tag":"[NA]"},{"ID":"P22","name":"tank support rails + tank straps + longeron pads","mass_kg":0.8,"centroid":[1.60,0,1.12],"shape":"2 rods along y L 0.74 at x 1.45, 1.75","I_intr":[0.037,0.018,0.055],"tag":"[NA]"}],"sums_nominal_AR":{"non_pilot_incl_fuel":{"mass_kg":278.2,"sum_mx":515.196,"sum_mz":220.8535,"derivation":"V14 275.3 / 510.556 / 216.698 + P07a dz +0.08 (mz +0.32) + P07b dz +0.08 (mz +0.64) + P21 2.1 kg (mx +3.36, mz +2.2995) + P22 0.8 kg (mx +1.28, mz +0.896) => dm +2.9, dmx +4.64, dmz +4.1555"},"all_up_75kg_seat0.30_full":{"mass_kg":353.2,"sum_mx":537.696,"sum_my":0.0,"sum_mz":277.1035,"cg_xyz":[1.52236,0,0.78455],"pct_c":30.94}},"case_formulas_AR":"m = 278.2 + m_p (full), -8.0 empty; sum_mx = 515.196 + m_p x_s (full), -12.8 empty; sum_mz = 220.8535 + 0.75 m_p (full), -9.72 empty","loading_cases_AR":[{"case":"75 kg, seat 0.30, full (nominal)","mass_kg":353.2,"W_N":3464.9,"cg":[1.52236,0,0.78455],"pct_c":30.94},{"case":"75 kg, seat 0.35, full","mass_kg":353.2,"cg":[1.53297,0,0.78455],"pct_c":31.51},{"case":"75 kg, seat 0.25, full","mass_kg":353.2,"cg":[1.51174,0,0.78455],"pct_c":30.36},{"case":"75 kg, seat 0.30, empty","mass_kg":345.2,"W_N":3386.4,"cg":[1.52056,0,0.77458],"pct_c":30.84},{"case":"65 kg, seat 0.35, full","mass_kg":343.2,"W_N":3366.8,"cg":[1.56744,0,0.78556],"pct_c":33.38},{"case":"65 kg, seat 0.35, empty (aft extreme)","mass_kg":335.2,"W_N":3288.3,"cg":[1.56666,0,0.77531],"pct_c":33.33},{"case":"85 kg, seat 0.25, full (heaviest, fwd)","mass_kg":363.2,"W_N":3563.0,"cg":[1.47700,0,0.78360],"pct_c":28.49},{"case":"85 kg, seat 0.25, empty (fwd extreme)","mass_kg":355.2,"W_N":3484.5,"cg":[1.47423,0,0.77388],"pct_c":28.34}],"cg_range":"x 1.4742-1.5674 m; 28.34-33.38 %c; z 0.7739-0.7856 [AR]","inertia_tensor_nominal_AR":{"about":"CG (1.52236,0,0.78455), body axes B","method":"V14 tensor + parallel-axis deltas for P21, P22 and the 0.08 m tank/fuel rise, minus M(CG shift)^2 (0.01, negligible); delta: I_xx +1.2, I_yy +1.1, I_zz +0.2, P_xz +0.15","I_xx":794.4,"I_yy":680.5,"I_zz":1291.9,"P_xz":16.0,"uncertainty":"+-30% diagonals, +-100% P_xz; replace by T-M2"},"inertia_tensor_extremes_AR_approx":{"85kg_seat0.25_full_363.2kg":{"I_xx":795.7,"I_yy":706.7,"I_zz":1317.4,"P_xz":"~17"},"65kg_seat0.35_empty_335.2kg":{"I_xx":791.9,"I_yy":655.7,"I_zz":1267.8,"P_xz":"~15"},"method":"V14 delta method + V15 deltas; error ~+-3% relative to full recompute"},"rotor_angular_momentum":"each propeller 2.65 x 62.83 = 166.5 N m s, opposite hands, net ~0 if rpm matched [RA]; one-propeller-stopped UNKNOWN"},"section_4_control_topology":{"pitch":{"surface":"P11L+P11R via P16","input":"hand lever pivot (0.45,0.30,0.90), fore-aft; forward = TE down = nose-down","load_path":"lever -> push-pull wires along frame side faces (upper wire z 1.15 on outer face y +-0.40; lower wire 0.06 above lower longeron) -> horn r 0.25 -> torque tube","V15_interference_check":"P22 rails and P21 straps terminate at longeron inner faces y +-0.37 and do not cross the outer side faces where the z 1.15 wire runs; no new crossing [AR from NA inner-face assumption]; longeron actual width UNKNOWN","travel":"-16/+8 deg abs; rigging -4","hinge_moment_rate":"UNKNOWN"},"roll":{"surface":"P03 tips +-8 deg via rocker (1.15,0,1.99); no interaction with tank (tank top z 1.29, rocker z 1.99, radiator top 1.48)","rate":"UNKNOWN"},"yaw":{"surface":"P13 rudder +-20 deg via foot-bar (0.45,0,0.30) and wires at y +-0.38 z 0.70; fuel line lowest point z 0.85 at x 1.70, y -0.30: 0.15 above wire, 0.08 inboard [AR]","rate":"UNKNOWN"},"throttle":{"input":"hand lever (0.55,-0.30,0.90), rod along left frame side to carburettor at (1.62,-0.30,0.85) [NA]; rod passes below firewall (z <= 0.90 vs firewall 1.09) [AR]","authority":"engine torque curve UNKNOWN; rpm floats with fixed-pitch propellers"},"fuel_cock":"at (1.70,-0.30,1.05), operable from seat: reach UNKNOWN (pilot box ends x 0.70; cock at x 1.70 is 1.0 m aft) -> remote lever or relocation required; design choice open [NA]","seat_stop_load":"85 x 9.81 x 3 = 2.50 kN on P19; strength UNKNOWN [RA]"},"section_5_propulsion":{"engine_side_target":{"P_e_W":21000,"rpm":1200,"Q_e_Nm":167.1,"mass_kg":107,"specific_mass_kg_per_kW":5.1,"status":"ASSUMED TARGET [RA], NOT matched measured available output; no engine identified; T-P1 required"},"drive":{"ratio":"2:1 central bevel, 1:1 outboard [RA]","eta_g":0.95,"eta_g_status":"[RA] unverified","P_out_W":19950,"P_out_status":"assumed available at propeller shafts = 0.95 x 21000 target; not measured","Q_branch_Nm":158.8,"gearbox_heat_W":1050},"propeller_requirement":{"D":2.30,"rpm":600,"J_at_13ms":0.565,"Cp_available_each":0.1265,"Cp_required_H13W_each_AR":"16524/2/78845 = 0.1048","Ct_required_H13W_each_AR":"T = 572.0/2 = 286.0 N -> 286.0/3428 = 0.0834","Cp_required_nominal_AR":"12308/2/78845 = 0.0781","map_status":"UNKNOWN (V6 T7 not run; whirl stand not done)"},"fuel_and_cooling":{"fuel_kg":8,"sfc":"0.31 kg/kWh [RA] unverified","endurance_nominal_min_AR":"8/(0.31 x 12.956) x 60 = 119.5","endurance_full_power_min":74,"design_endurance_min":60,"radiator_load_W":25200,"firewall_thermal":"engine top surface temperature UNKNOWN; steel sheet and mineral board service temperatures UNKNOWN (assumed adequate for < 200 C surface, unverified [NA]); tank skin temperature limit UNKNOWN; T-P1 with thermocouples on engine top, firewall both faces, tank bottom"},"drag_and_power_cases_AR":{"formula":"P_req = D V / eta_p; D = (CD0 + CL^2/(pi e AR)) q S + 10 N; S 42, AR 6.2, e 0.70; pi e AR = 13.634; q(12,13,16) = 88.2, 103.51, 156.8 Pa; qS = 3704.4, 4347.4, 6585.6 N [RA]","cases":[{"id":"N13","desc":"nominal 353.2 kg, V13, CD0 0.06, eta_p 0.50","CL":0.7970,"CDi":0.04659,"D_N":473.4,"P_req_W":12308,"P_x1.15_W":14155,"P_e_equiv_W":12956},{"id":"H13","desc":"heaviest 363.2 kg, V13, nominal constants","CL":0.8196,"CDi":0.04927,"D_N":485.0,"P_req_W":12610,"P_x1.15_W":14502},{"id":"N13W","desc":"nominal, V13, CD0 0.08, eta_p 0.45","D_N":560.3,"P_req_W":16187,"P_x1.15_W":18615},{"id":"H13W","desc":"heaviest, V13, worst constants (governing)","CL":0.8196,"D_N":572.0,"P_req_W":16524,"P_x1.15_W":19003,"P_e_min_W":20003},{"id":"N12","desc":"nominal, V12, nominal constants","CL":0.9354,"CDi":0.06417,"D_N":470.0,"P_req_W":11280,"P_x1.15_W":12972},{"id":"H12W","desc":"heaviest, V12, worst constants","CL":0.9618,"CDi":0.06785,"D_N":557.7,"P_req_W":14872,"P_x1.15_W":17103},{"id":"N16","desc":"nominal, V16, nominal constants","CL":0.5261,"CDi":0.02030,"D_N":538.8,"P_req_W":17242,"note":"reserve 19950/17242 = 1.157; below 1.15? no: 15.7%, marginal PASS; informational only"},{"id":"H16W","desc":"heaviest, V16, worst constants","CL":0.5410,"CDi":0.02147,"D_N":678.2,"P_req_W":24114,"P_available_W":19950,"deficit_W":4164,"statement":"EXPLICIT: the V14 H16W case needed 24.036 kW shaft against 19.950 kW assumed available; V15 H16W needs 24.114 kW against the same 19.950 kW. This case is OUTSIDE any defensible level-flight envelope. It is retained, not deleted. Closing it would require either a design change (about +4.4 kW at propeller shafts, i.e. P_e target ~25.4 kW with attendant mass growth, or drag reduction with no measured basis) or a stated envelope restriction; V15 adopts the envelope restriction: 16 m/s is NOT a design steady-level case at heaviest mass under worst constants."}],"stall_flag":"CL 0.94-0.96 at V12 exceeds any measured arc-section data; stall UNKNOWN (T-A1)"},"reserve_criterion":{"rule":"[RA] P_out >= 1.15 x P_req at propeller shafts for {N13,H13,N13W,H13W,N12,H12W}; V16 informational","paper_result":{"H13W":"19950/16524 = 1.207 -> 20.7% paper PASS on assumed power","H12W":"19950/14872 = 1.341 PASS","N16":"1.157 marginal (informational)","H16W":"FAIL (0.827); outside envelope, retained"},"margin_AR":"19950 - 19003 = 947 W; at 38.9 W/kg (1.15 x dP_req/dm at H13W) allowable further all-up growth ~24 kg before the paper criterion fails","evaluability":"NOT EVALUABLE against measurement: P_e, eta_g, eta_p, CD0, e all unmeasured"},"mass_power_iteration_AR":[{"iter":0,"state":"V13: P_e 19.5 kW, m 354.3, H13W 16561 W, P_out 18525, shortfall 520 W"},{"iter":1,"state":"V14: engine 21.0 kW; m 350.3 (heaviest 360.3); H13W 16424; P_out 19950; surplus 1062 W"},{"iter":2,"state":"V15: +2.9 kg (P21 2.1, P22 0.8, tank raised); m 353.2 (heaviest 363.2); H13W 16524, x1.15 = 19003; P_out 19950 (target held); surplus 947 W"},{"iter":3,"state":"engine target held at 21.0 kW (min required 20.003 kW); no further mass change induced; converged on paper. Re-opens if measured engine mass exceeds ~131 kg or measured eta_g x P_e < 19.0 kW"}]},"section_6_evaluator_inputs":{"reference":{"S_ref_m2":42,"c_ref_m":1.85,"b_ref_m":11.5,"moment_reference":"CG of case under evaluation, or 25% c at x 1.4125","tag":"[RA]"},"trim_envelope":{"V_m_s":[12,13],"V16_status":"nominal-mass/nominal-constants informational only; heaviest/worst excluded","cg_x_m":[1.4742,1.5674],"cg_pct_c":[28.34,33.38],"cg_z_m":[0.7739,0.7856],"mass_kg":[335.2,363.2],"power":["on (P_out 12.3-19.95 kW assumed)","off/windmilling","one propeller stopped"],"tail_travel_abs_deg":[-16,8],"rudder_deg":[-20,20],"tips_deg":[-8,8]},"geometry_for_quasi_steady_model":{"wing":"2 decks chord 1.85, spans 11.5 / 8.5 + 2x1.5 tips, gap 1.85, stagger 0, decalage 0, dihedral 0, arc camber 1/20 [RA]","tail":"all-moving S 4.60, hinge x 5.65 z 0.775, AC x 5.90; arm to nominal CG 4.377 m; V_H = 0.219 x 4.377/1.85 = 0.518 [AR]","fin_rudder":"S 0.72 + 0.90, AC ~(6.85,0,1.35); arm ~5.33; V_V ~0.0179 [AR]","thrust_line":"z 0.80, 0.0155 above nominal CG z 0.7846 -> nose-down T x 0.0155 = -7.3 N m at 473 N [AR]","body":"box girder plus pilot, engine, radiator, tank+firewall now protruding to z 1.29 inside y +-0.37 (side-area change negligible)"},"structural_load_cases":[{"id":"S1","case":"+3 g pull-up at 363.2 kg: lift 10.7 kN","status":"allowables UNKNOWN"},{"id":"S2","case":"engine torque 167 N m + 3 g engine inertia 3.15 kN on P20 and frame nodes","status":"UNKNOWN"},{"id":"S3","case":"branch torque 158.8 N m + thrust 286 N + gyroscopic 166.5 N m s x rate on P17/hubs/shafts","status":"UNKNOWN"},{"id":"S4","case":"landing 3 x rest loads: front pair 6.6 kN, rear 4.1 kN","status":"UNKNOWN"},{"id":"S5","case":"tail full deflection at q 156.8 (if V16 ever flown)","status":"hinge moment UNKNOWN"},{"id":"S6","case":"seat stop 2.50 kN","status":"UNKNOWN"},{"id":"S7","case":"one propeller stopped: 286 N at y 1.60 -> yaw 458 N m","status":"rudder authority UNKNOWN"},{"id":"S8","case":"tank+fuel+support+firewall (14.9 kg) at 3 g = 438 N on 2 ash rails 0.04 x 0.04 span 0.74 (bending each ~ 219 x 0.74/4 = 40.5 N m) and 4 longeron pads","status":"ash allowable UNKNOWN; pad shear UNKNOWN; deflection assumed <= 0.005 m unverified [NA]"}],"derivative_table":{"note":"[RA estimator] values are unvalidated; no unsteady term set to zero; nothing here is an accepted derivative","longitudinal":[{"deriv":"C_L_alpha","status":"[RA estimator] 3.8 /rad; UNKNOWN measured"},{"deriv":"C_m_alpha","status":"[RA estimator] from unvalidated NP ~39.6 %c: -0.33 at 30.9 %c; UNKNOWN"},{"deriv":"C_m_q","status":"[RA estimator] -4.2; UNKNOWN"},{"deriv":"C_m_alpha_dot, C_L_alpha_dot, C_L_q, C_*_u, C_T_u, C_m_T, C_m_delta_tail","status":"UNKNOWN"}],"lateral":[{"deriv":"C_n_beta","status":"[RA estimator] fin-only +0.026; net UNKNOWN"},{"deriv":"all others incl. C_Y_beta, C_l_beta, C_l_p, C_n_r, C_n_beta_dot, control derivatives","status":"UNKNOWN"}],"stability_statement":"No neutral point, static margin, trim or dynamic mode is asserted."}},"section_7_uncertainty_verification_table":[{"quantity":"engine P_e(n), Q_e(n), mass, sfc, heat","value":"21.0 kW target, 107 kg","tag":"[RA]","uncertainty":"engine does not exist","next_test":"T-P1 dynamometer 900-1400 rpm, 74 min; weigh; thermocouples engine top / firewall / tank"},{"quantity":"eta_g","value":0.95,"tag":"[RA]","uncertainty":"0.85-0.97","next_test":"T-P1b"},{"quantity":"propeller Cp(J), Ct(J)","value":"UNKNOWN; requirement Cp 0.105-0.127, Ct >= 0.083 at J 0.565","tag":"UNKNOWN","next_test":"V6 T7; whirl stand"},{"quantity":"CD0, e, eta_p","value":"0.06/0.08, 0.70, 0.50/0.45","tag":"[RA]","next_test":"T-A2; T-P2"},{"quantity":"arc section CL_max, Cm_ac","value":"UNKNOWN (required CL up to 0.96)","tag":"UNKNOWN","next_test":"T-A1"},{"quantity":"all 28 masses and 8 CG states","value":"353.2 kg nominal","tag":"[RA]/[NA]/[AR]","uncertainty":"+-15% per row","next_test":"T-M1"},{"quantity":"inertia tensor","value":"794/681/1292/16.0","tag":"[AR]","uncertainty":"+-30%/+-100%","next_test":"T-M2"},{"quantity":"engine-firewall-tank gaps","value":"nominal 0.030/0.040 (total 0.080); loaded min 0.020/0.033 by assumption","tag":"[NA]/[AR]","uncertainty":"deflection inputs unmeasured","next_test":"dial gauge on engine top and tank bottom at 3 x static load; engine run vibration amplitude"},{"quantity":"firewall/tank thermal allowables","value":"steel 0.5 mm + mineral board 6 mm; material limits UNKNOWN","tag":"[NA]/UNKNOWN","next_test":"T-P1 temperature survey; material data sheet"},{"quantity":"P22 rail / longeron pad strength (S8)","value":"UNKNOWN","tag":"UNKNOWN","next_test":"T-S1 3 x 438 N static"},{"quantity":"fuel head in climb / fuel cock reach","value":"0.29 m level; climb UNKNOWN; cock reach UNKNOWN","tag":"[NA]/UNKNOWN","next_test":"mock-up; attitude survey"},{"quantity":"neutral point / C_m_alpha, unsteady derivatives, lateral and control derivatives, slipstream effects","value":"UNKNOWN","tag":"UNKNOWN","next_test":"T-A2, T-A3, T-P2"},{"quantity":"hinge moments, rates, pilot force, reach","value":"UNKNOWN","tag":"UNKNOWN","next_test":"T-C1"},{"quantity":"loaded gaps: disc-frame 0.050, horn-longeron 0.036, rudder-wire/tube 0.075, strut-blade 0.20","value":"rigid nominal","tag":"[RA]","next_test":"static pull; tip-track"},{"quantity":"structural allowables S1-S8","value":"UNKNOWN","tag":"UNKNOWN","next_test":"T-S1"},{"quantity":"tyre/spring deflection, skid upturn, nose-over","value":"UNKNOWN","tag":"UNKNOWN","next_test":"T-M1; skid CAD"},{"quantity":"radiator core, airflow, coolant flow for 25.2 kW","value":"UNKNOWN","tag":"UNKNOWN","next_test":"radiator bench"},{"quantity":"one-propeller-stopped controllability","value":"yaw 458 N m; rudder UNKNOWN","tag":"[AR]/UNKNOWN","next_test":"T-A2; T-P2"}],"flight_claim":"NONE. V15 is an unvalidated analytical installation candidate. The engine-tank contact is removed by geometry with a positive nominal and assumption-based loaded clearance budget. Installed power is an assumed target, not measured; H16W exceeds assumed available power and is outside the stated envelope. Propeller absorption, trim, static margin, dynamic modes, structural and thermal adequacy and flightworthiness are NOT claimed. Acceptance is reserved to the independent evaluator."}
+END RAW V15 RESPONSE

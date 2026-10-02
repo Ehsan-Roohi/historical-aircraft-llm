@@ -1,0 +1,13 @@
+load aircraft.avl
+oper
+a a 5.8
+d2 d2 -4
+a c 0.776858157227
+d2 pm 0
+x
+ft
+forces.txt
+st
+stability.txt
+
+quit

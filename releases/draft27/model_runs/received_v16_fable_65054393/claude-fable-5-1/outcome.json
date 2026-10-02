@@ -1,0 +1,8 @@
+{
+  "status": "error_or_uncertain",
+  "error_type": "TimeoutError",
+  "diagnostic_redacted": "The read operation timed out",
+  "finished_utc": "2026-09-30T01:35:43.928764+00:00",
+  "automatic_retry": false,
+  "engineering_validation": "not_evaluated"
+}

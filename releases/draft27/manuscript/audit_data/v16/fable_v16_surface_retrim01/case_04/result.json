@@ -1,0 +1,35 @@
+{
+  "case": {
+    "pilot_kg": 65,
+    "seat_x_m": 0.15,
+    "fuel_kg": 8,
+    "mass_kg": 355.106,
+    "cg_m": [
+      1.641852094867448,
+      0.0,
+      0.7848805990324016
+    ],
+    "fixed_NP_screen_percent": 3.9725894666244272,
+    "reported_cg_x_m": 1.64198,
+    "cg_x_difference_m": -0.00012790513255200864,
+    "reported_screen_percent": 3.97
+  },
+  "target_CL": 0.8010075283983414,
+  "trim": {
+    "Alpha": 5.46528,
+    "pitch": 4.26239,
+    "CLtot": 0.80101,
+    "Cmtot": -0.0,
+    "CYtot": 0.0,
+    "Cltot": -0.0,
+    "Cntot": -0.0,
+    "CDind": 0.0515213
+  },
+  "absolute_tail_deg": 0.2623899999999999,
+  "Cma": -0.146175,
+  "CLa": 3.648496,
+  "surface_SM_percent": 4.00644539558218,
+  "input_sha256": "b771a39112dbcc8fc88755befea4c838b7bcac98e283b718570748cd948ba1e0",
+  "forces_sha256": "988e915464c5590fdf61bd2467ac4a171587dd3791fb97e1a22e9a6980ed8b96",
+  "stability_sha256": "08706fafa5f18690e4189c2e7af16affc545f94053ef67da06984ff4a95a4491"
+}

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="800" viewBox="0 0 1500 800" font-family="Arial,Helvetica,sans-serif"><rect width="1500" height="800" fill="white"/><text x="25" y="39" font-size="29" font-weight="bold" fill="#15364b">Fable V0: component identification</text><g transform="translate(-95 -78)"><g stroke="#333" stroke-width="1.5" fill="none">
+<!-- tail plane, fin, rudder -->
+<polygon points="812,642 902,677 1090,575 1000,540" fill="#d9e6f2"/>
+<line x1="812" y1="642" x2="1000" y2="540" stroke-dasharray="4 3"/>
+<polygon points="906,589 987,620 987,520 906,489" fill="#e8e8e8"/>
+<polygon points="987,620 1068,652 1068,552 987,520" fill="#d9e6f2"/>
+<!-- body frame lattice -->
+<polygon points="442,448 1036,679 1036,579 442,348" stroke="#777"/>
+<polygon points="398,472 992,703 992,603 398,372" stroke="#777"/>
+<!-- right skid, wheels -->
+<polyline points="459,468 495,522 864,666" stroke="#6b4a2b" stroke-width="3"/>
+<circle cx="522" cy="518" r="14"/><circle cx="774" cy="616" r="14"/>
+<line x1="522" y1="518" x2="554" y2="470" stroke="#777"/>
+<!-- lower deck (shifted +0.55 m, §9) -->
+<polygon points="154,671 320,736 952,392 786,327" fill="#e6c98a" fill-opacity="0.45"/>
+<!-- posts -->
+<line x1="174" y1="663" x2="174" y2="492"/><line x1="300" y1="712" x2="300" y2="541"/>
+<line x1="278" y1="606" x2="278" y2="435"/><line x1="404" y1="655" x2="404" y2="484"/>
+<line x1="383" y1="549" x2="383" y2="378"/><line x1="509" y1="598" x2="509" y2="427"/>
+<line x1="592" y1="435" x2="592" y2="264"/><line x1="718" y1="484" x2="718" y2="313"/>
+<line x1="696" y1="378" x2="696" y2="207"/><line x1="822" y1="427" x2="822" y2="256"/>
+<line x1="801" y1="321" x2="801" y2="150"/><line x1="927" y1="370" x2="927" y2="199"/>
+<!-- engine -->
+<polygon points="486,408 525,388 597,416 597,486 558,506 486,478" fill="#8a8a8a"/>
+<polyline points="486,408 558,436 597,416 M558,436 558,506" stroke="#222"/>
+<!-- operator -->
+<circle cx="452" cy="362" r="9" fill="#f2d2b0"/>
+<polyline points="460,376 474,441 438,447" stroke="#a33" stroke-width="3"/>
+<!-- shafts and screws -->
+<line x1="578" y1="461" x2="566" y2="539"/><line x1="578" y1="461" x2="742" y2="443"/>
+<ellipse cx="566" cy="539" rx="63" ry="118" transform="rotate(-12 566 539)" stroke="#1a5"/>
+<ellipse cx="742" cy="443" rx="63" ry="118" transform="rotate(-12 742 443)" stroke="#1a5"/>
+<!-- control run, schematic -->
+<polyline points="285,461 483,404 906,591" stroke="#c60" stroke-dasharray="6 4"/>
+<line x1="483" y1="404" x2="753" y2="206" stroke="#c60" stroke-dasharray="6 4"/>
+<!-- upper deck and tip panels -->
+<polygon points="154,486 320,551 952,207 786,142" fill="#e6c98a" fill-opacity="0.45"/>
+<polygon points="154,486 320,551 402,506 236,441" fill="#c77" fill-opacity="0.5"/>
+<polygon points="704,187 870,252 952,207 786,142" fill="#c77" fill-opacity="0.5"/>
+<!-- left skid, wheels, strut -->
+<polyline points="327,540 363,594 732,738" stroke="#6b4a2b" stroke-width="3"/>
+<circle cx="390" cy="590" r="14"/><circle cx="642" cy="688" r="14"/>
+<line x1="390" y1="590" x2="422" y2="542" stroke="#777"/>
+<!-- centre of mass -->
+<circle cx="519" cy="447" r="7" fill="#fff" stroke="#000"/>
+<path d="M512,447h14M519,440v14" stroke="#000"/>
+<!-- axis triad -->
+
+</g>
+<g><circle cx="785" cy="192" r="17" fill="white" fill-opacity=".95" stroke="#15364b" stroke-width="2"/><text x="785" y="199" font-size="23" font-weight="bold" text-anchor="middle" fill="#15364b">1</text></g><g><circle cx="822" cy="405" r="17" fill="white" fill-opacity=".95" stroke="#15364b" stroke-width="2"/><text x="822" y="412" font-size="23" font-weight="bold" text-anchor="middle" fill="#15364b">2</text></g><g><circle cx="263" cy="493" r="17" fill="white" fill-opacity=".95" stroke="#15364b" stroke-width="2"/><text x="263" y="500" font-size="23" font-weight="bold" text-anchor="middle" fill="#15364b">3</text></g><g><circle cx="454" cy="364" r="17" fill="white" fill-opacity=".95" stroke="#15364b" stroke-width="2"/><text x="454" y="371" font-size="23" font-weight="bold" text-anchor="middle" fill="#15364b">4</text></g><g><circle cx="556" cy="458" r="17" fill="white" fill-opacity=".95" stroke="#15364b" stroke-width="2"/><text x="556" y="465" font-size="23" font-weight="bold" text-anchor="middle" fill="#15364b">5</text></g><g><circle cx="740" cy="447" r="17" fill="white" fill-opacity=".95" stroke="#15364b" stroke-width="2"/><text x="740" y="454" font-size="23" font-weight="bold" text-anchor="middle" fill="#15364b">6</text></g><g><circle cx="1005" cy="598" r="17" fill="white" fill-opacity=".95" stroke="#15364b" stroke-width="2"/><text x="1005" y="605" font-size="23" font-weight="bold" text-anchor="middle" fill="#15364b">7</text></g><g><circle cx="645" cy="686" r="17" fill="white" fill-opacity=".95" stroke="#15364b" stroke-width="2"/><text x="645" y="693" font-size="23" font-weight="bold" text-anchor="middle" fill="#15364b">8</text></g></g><rect x="1046" y="68" width="444" height="610" rx="10" fill="#f3f6f8" stroke="#b8c6ce"/><text x="1064" y="95" font-size="23" fill="#455b66">NUMBERED COMPONENT KEY</text><circle cx="1081" cy="122" r="17" fill="#15364b"/><text x="1081" y="130" font-size="23" text-anchor="middle" fill="white" font-weight="bold">1</text><text x="1111" y="128" font-size="25" fill="#15364b" font-weight="bold">Upper tip panel</text><text x="1111" y="153" font-size="22" fill="#455b66">roll control</text><circle cx="1081" cy="187" r="17" fill="#15364b"/><text x="1081" y="195" font-size="23" text-anchor="middle" fill="white" font-weight="bold">2</text><text x="1111" y="193" font-size="25" fill="#15364b" font-weight="bold">Lower wing deck</text><circle cx="1081" cy="252" r="17" fill="#15364b"/><text x="1081" y="260" font-size="23" text-anchor="middle" fill="white" font-weight="bold">3</text><text x="1111" y="258" font-size="25" fill="#15364b" font-weight="bold">Upper tip panel</text><text x="1111" y="283" font-size="22" fill="#455b66">opposite side</text><circle cx="1081" cy="317" r="17" fill="#15364b"/><text x="1081" y="325" font-size="23" text-anchor="middle" fill="white" font-weight="bold">4</text><text x="1111" y="323" font-size="25" fill="#15364b" font-weight="bold">Seated operator</text><circle cx="1081" cy="382" r="17" fill="#15364b"/><text x="1081" y="390" font-size="23" text-anchor="middle" fill="white" font-weight="bold">5</text><text x="1111" y="388" font-size="25" fill="#15364b" font-weight="bold">Engine group</text><circle cx="1081" cy="447" r="17" fill="#15364b"/><text x="1081" y="455" font-size="23" text-anchor="middle" fill="white" font-weight="bold">6</text><text x="1111" y="453" font-size="25" fill="#15364b" font-weight="bold">Propeller swept disc</text><text x="1111" y="478" font-size="22" fill="#455b66">one of two proposed</text><circle cx="1081" cy="512" r="17" fill="#15364b"/><text x="1081" y="520" font-size="23" text-anchor="middle" fill="white" font-weight="bold">7</text><text x="1111" y="518" font-size="25" fill="#15364b" font-weight="bold">Tailplane + fin/rudder</text><text x="1111" y="543" font-size="22" fill="#455b66">unresolved interface</text><circle cx="1081" cy="577" r="17" fill="#15364b"/><text x="1081" y="585" font-size="23" text-anchor="middle" fill="white" font-weight="bold">8</text><text x="1111" y="583" font-size="25" fill="#15364b" font-weight="bold">Skids and wheels</text><text x="1111" y="608" font-size="22" fill="#455b66">ground-gear proposal</text><path d="M25 710H1475" stroke="#bac5cb"/><text x="25" y="744" font-size="24" fill="#15364b">Source geometry preserved. Labels identify proposed assemblies, not validated installations.</text><text x="25" y="777" font-size="23" fill="#455b66">V0 concept only: schematic drive and control paths; unresolved clearances and ground geometry.</text></svg>

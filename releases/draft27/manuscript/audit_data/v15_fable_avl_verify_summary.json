@@ -1,0 +1,26 @@
+{
+  "scope": "Direct numerical check of one power-off lifting-surface candidate; not full-aircraft or physical trim",
+  "input_geometry_sha256": "e0d9ad4a83cad536aa73c162d04d24985e69dc1846953aca65935d42a1f5a34b",
+  "input_section_sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33",
+  "solver_sha256": "443520d255408491222a8df9060bd000f78da95a68845a2f6efdbc67e203f07a",
+  "alpha_deg": 5.850731893286282,
+  "tail_delta_deg": -4.199097194840035,
+  "CL_target_from_assumed_mass_and_density": 0.7967081914422571,
+  "CL_model": 0.79677,
+  "CL_minus_target": 6.180855774284844e-05,
+  "Cm_model": 2e-05,
+  "CDind_model": 0.0546892,
+  "modelled": "Two wings and tail at nominal CG, inherited unvalidated V0 camber, idealized tail-normal rotation",
+  "omitted": [
+    "body",
+    "fin and rudder",
+    "gear",
+    "engine and propeller",
+    "slipstream",
+    "profile/parasite drag",
+    "stall",
+    "unsteady derivatives",
+    "structural elasticity"
+  ],
+  "flightworthiness": "NOT_ASSESSED"
+}

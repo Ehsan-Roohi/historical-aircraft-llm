@@ -1,0 +1,58 @@
+{
+  "source": "astra_oblique_v0.svg",
+  "source_sha256": "02fb21556bc46082b8b8675ec7ee356681f2934ed2a59e30639780f32b55b376",
+  "geometry_block_sha256": "3a4f48ed62b19af8bfc5885de4a4e65f730d702a996a3e189c40e8a0285d867e",
+  "geometry_copied_verbatim": true,
+  "annotations_only": true,
+  "removed": "All legacy external leaders and cropped coordinate triad; no aircraft geometry removed",
+  "mapping": [
+    {
+      "n": 1,
+      "source_letter": "A",
+      "name": "Rear supporting surface"
+    },
+    {
+      "n": 2,
+      "source_letter": "F",
+      "name": "Forward surface"
+    },
+    {
+      "n": 3,
+      "source_letter": "R",
+      "name": "Vertical rudder"
+    },
+    {
+      "n": 4,
+      "source_letter": "Q",
+      "name": "Propeller swept disk"
+    },
+    {
+      "n": 5,
+      "source_letter": "S",
+      "name": "Drive shaft and guard"
+    },
+    {
+      "n": 6,
+      "source_letter": "O",
+      "name": "Operator and seat"
+    },
+    {
+      "n": 7,
+      "source_letter": "M",
+      "name": "Motor and cooling"
+    },
+    {
+      "n": 8,
+      "source_letter": "W",
+      "name": "Wheels"
+    }
+  ],
+  "source_evidence": "Source SVG named external labels and manuscript Readable key to Astra V0",
+  "svg_sha256": "1495f4addc00e8fdaa71af3fa8f21f3592302bbd7a15719688825b325c27993d",
+  "png_sha256": "bbf27d1f2d1f11c9256209189e483fead721b8a4ee6cedb2c70a6ddb2f8ef681",
+  "pixels": [
+    6000,
+    3500
+  ],
+  "limitations": "Only eight principal components are numbered; smaller schematic equipment remains described in the adjacent manuscript key. This is display relabeling, not revised engineering."
+}

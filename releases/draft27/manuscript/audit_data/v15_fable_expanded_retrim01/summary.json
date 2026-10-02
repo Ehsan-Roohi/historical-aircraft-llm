@@ -1,0 +1,29 @@
+{
+  "scope": "Power-off, rigid, inviscid wing/tail/fin/rudder and split-tip surface model; not installed-aircraft six-component trim",
+  "geometry_sha256": "1464a8bc3b3155aafe8f053739e0bb752ae83be89cd3b1b2bb781d93f227d572",
+  "section_sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33",
+  "solver_sha256": "443520d255408491222a8df9060bd000f78da95a68845a2f6efdbc67e203f07a",
+  "CL_target_assumed_mass_density": 0.7967081914422571,
+  "alpha_deg": 6.66238,
+  "beta_deg": 0.0,
+  "roll_tip_command_deg": 0.0,
+  "tail_command_deg": -3.5075,
+  "rudder_command_deg": 0.0,
+  "CL_model": 0.79671,
+  "Cm_model": -0.0,
+  "CY_model": 0.0,
+  "Cl_model": -0.0,
+  "Cn_model": 0.0,
+  "CDind_model": 0.0602896,
+  "missing": [
+    "engine and propeller",
+    "body",
+    "gear",
+    "viscous/profile drag",
+    "slipstream",
+    "flexible aeroelastic shape",
+    "measured section polar",
+    "loaded control clearance"
+  ],
+  "flightworthiness": "NOT_ASSESSED"
+}

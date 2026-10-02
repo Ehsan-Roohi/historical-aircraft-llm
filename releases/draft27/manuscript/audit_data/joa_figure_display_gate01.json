@@ -1,0 +1,218 @@
+{
+  "scope": "PNG line-art pixel-density and limited V0 source-lettering screen; not final PDF proof",
+  "rows": [
+    {
+      "name": "configuration_comparison_v3.png",
+      "placement": "main landscape",
+      "pixels": [
+        6000,
+        3950
+      ],
+      "maximum_placed_width_in": 8.64,
+      "minimum_effective_horizontal_ppi": 694.4,
+      "meets_600_ppi_line_art_screen": true
+    },
+    {
+      "name": "astra_v2_threeview.png",
+      "placement": "main landscape",
+      "pixels": [
+        5400,
+        2340
+      ],
+      "maximum_placed_width_in": 8.64,
+      "minimum_effective_horizontal_ppi": 625.0,
+      "meets_600_ppi_line_art_screen": true
+    },
+    {
+      "name": "fable_v2_threeview.png",
+      "placement": "main landscape",
+      "pixels": [
+        5400,
+        2340
+      ],
+      "maximum_placed_width_in": 8.64,
+      "minimum_effective_horizontal_ppi": 625.0,
+      "meets_600_ppi_line_art_screen": true
+    },
+    {
+      "name": "opus_v2_threeview.png",
+      "placement": "main landscape",
+      "pixels": [
+        5400,
+        2340
+      ],
+      "maximum_placed_width_in": 8.64,
+      "minimum_effective_horizontal_ppi": 625.0,
+      "meets_600_ppi_line_art_screen": true
+    },
+    {
+      "name": "force_moment_balance.png",
+      "placement": "main portrait",
+      "pixels": [
+        4800,
+        2240
+      ],
+      "maximum_placed_width_in": 6.5,
+      "minimum_effective_horizontal_ppi": 738.5,
+      "meets_600_ppi_line_art_screen": true
+    },
+    {
+      "name": "v2_force_moment_comparison.png",
+      "placement": "main portrait",
+      "pixels": [
+        6000,
+        6700
+      ],
+      "maximum_placed_width_in": 6.5,
+      "minimum_effective_horizontal_ppi": 923.1,
+      "meets_600_ppi_line_art_screen": true
+    }
+  ],
+  "remaining_main_below_600": [],
+  "supplementary_rows": [
+    {
+      "name": "wright_threeview_reconstruction.png",
+      "placement": "supplement landscape",
+      "pixels": [
+        6000,
+        2600
+      ],
+      "maximum_placed_width_in": 9.56220472440945,
+      "minimum_effective_horizontal_ppi": 627.5,
+      "meets_600_ppi_line_art_screen": true
+    },
+    {
+      "name": "astra_oblique_v0.png",
+      "placement": "supplement landscape",
+      "pixels": [
+        6000,
+        4500
+      ],
+      "maximum_placed_width_in": 9.56220472440945,
+      "minimum_effective_horizontal_ppi": 627.5,
+      "meets_600_ppi_line_art_screen": true
+    },
+    {
+      "name": "fable_oblique_v0.png",
+      "placement": "supplement landscape",
+      "pixels": [
+        6000,
+        4500
+      ],
+      "maximum_placed_width_in": 9.56220472440945,
+      "minimum_effective_horizontal_ppi": 627.5,
+      "meets_600_ppi_line_art_screen": true
+    },
+    {
+      "name": "opus_oblique_v0.png",
+      "placement": "supplement landscape",
+      "pixels": [
+        6000,
+        4500
+      ],
+      "maximum_placed_width_in": 9.56220472440945,
+      "minimum_effective_horizontal_ppi": 627.5,
+      "meets_600_ppi_line_art_screen": true
+    },
+    {
+      "name": "astra_oblique_v0_detail.png",
+      "placement": "supplement landscape detail",
+      "pixels": [
+        6000,
+        4133
+      ],
+      "maximum_placed_width_in": 9.56220472440945,
+      "minimum_effective_horizontal_ppi": 627.5,
+      "meets_600_ppi_line_art_screen": true
+    },
+    {
+      "name": "fable_oblique_v0_detail.png",
+      "placement": "supplement landscape detail",
+      "pixels": [
+        6000,
+        4080
+      ],
+      "maximum_placed_width_in": 9.56220472440945,
+      "minimum_effective_horizontal_ppi": 627.5,
+      "meets_600_ppi_line_art_screen": true
+    },
+    {
+      "name": "opus_oblique_v0_detail.png",
+      "placement": "supplement landscape detail",
+      "pixels": [
+        6000,
+        3600
+      ],
+      "maximum_placed_width_in": 9.56220472440945,
+      "minimum_effective_horizontal_ppi": 627.5,
+      "meets_600_ppi_line_art_screen": true
+    },
+    {
+      "name": "wright_response_v1.png",
+      "placement": "supplement portrait",
+      "pixels": [
+        4800,
+        2452
+      ],
+      "maximum_placed_width_in": 6.535433070866142,
+      "minimum_effective_horizontal_ppi": 734.5,
+      "meets_600_ppi_line_art_screen": true
+    },
+    {
+      "name": "fixed_control_response_v1.png",
+      "placement": "supplement portrait",
+      "pixels": [
+        4800,
+        2270
+      ],
+      "maximum_placed_width_in": 6.535433070866142,
+      "minimum_effective_horizontal_ppi": 734.5,
+      "meets_600_ppi_line_art_screen": true
+    }
+  ],
+  "remaining_supplementary_below_600": [],
+  "v0_lettering_upper_bounds": [
+    {
+      "name": "astra_oblique_v0",
+      "minimum_explicit_source_font_units": 11.0,
+      "maximum_possible_point_size_at_width_cap": 6.31,
+      "below_8pt_even_without_height_cap": true
+    },
+    {
+      "name": "fable_oblique_v0",
+      "minimum_explicit_source_font_units": 12.0,
+      "maximum_possible_point_size_at_width_cap": 6.88,
+      "below_8pt_even_without_height_cap": true
+    },
+    {
+      "name": "opus_oblique_v0",
+      "minimum_explicit_source_font_units": 10.5,
+      "maximum_possible_point_size_at_width_cap": 6.02,
+      "below_8pt_even_without_height_cap": true
+    }
+  ],
+  "v0_numbered_detail_marker_upper_bounds": [
+    {
+      "name": "astra_oblique_v0",
+      "marker_count": 8,
+      "maximum_possible_point_size_at_width_cap": 13.77,
+      "caveat": "PDF height cap and rendered placement still require visual inspection"
+    },
+    {
+      "name": "fable_oblique_v0",
+      "marker_count": 8,
+      "maximum_possible_point_size_at_width_cap": 12.39,
+      "caveat": "PDF height cap and rendered placement still require visual inspection"
+    },
+    {
+      "name": "opus_oblique_v0",
+      "marker_count": 8,
+      "maximum_possible_point_size_at_width_cap": 12.39,
+      "caveat": "PDF height cap and rendered placement still require visual inspection"
+    }
+  ],
+  "not_screened": [
+    "Wright photographic raster (300-ppi class)",
+    "actual compiled placement, transformed lettering, and line weights"
+  ]
+}

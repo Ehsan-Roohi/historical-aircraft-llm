@@ -1,0 +1,26 @@
+{
+  "scope": "Power-off AVL geometry decomposition at old wing/tail candidate; neither case is the installed aircraft nor a retrim",
+  "old_point": {
+    "alpha_deg": 5.850731893286282,
+    "tail_delta_deg": -4.199097194840035,
+    "CL_model": 0.79677,
+    "Cm_model": 2e-05
+  },
+  "split_tip_only": {
+    "CLtot": 0.747,
+    "Cmtot": 0.00762,
+    "CDind": 0.0541419,
+    "geometry_sha256": "91e0ecc2192ae17b7d2c0c03b94f25baec20fe7feece8cead47f74b1b19f189c"
+  },
+  "original_wing_plus_vertical": {
+    "CLtot": 0.79677,
+    "Cmtot": 2e-05,
+    "CDind": 0.0546892,
+    "geometry_sha256": "c8e573fe6a468918b6b8709757ec5a3e3a0f406361fb713035c27a5a1e5a6424"
+  },
+  "expanded_tip_and_vertical": {
+    "CLtot": 0.747,
+    "Cmtot": 0.00762,
+    "CDind": 0.0541419
+  }
+}

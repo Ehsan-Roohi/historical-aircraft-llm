@@ -1,0 +1,104 @@
+{
+  "status": "researcher-created display crops of immutable V0 model figures",
+  "rows": [
+    {
+      "name": "astra_oblique_v0",
+      "original_svg_sha256": "02fb21556bc46082b8b8675ec7ee356681f2934ed2a59e30639780f32b55b376",
+      "detail_svg_sha256": "150cb0681eaca8059b34b942fe5d72672b97f1f6fad370faffd4f671db0f5e57",
+      "detail_png_sha256": "81669e43bbb29d518d0a06f9f2810d1b1862f52b64f83ddd345ebad625d4ea68",
+      "source_viewbox": [
+        0,
+        0,
+        1200,
+        900
+      ],
+      "detail_viewbox": [
+        160,
+        70,
+        900,
+        620
+      ],
+      "numbered_components": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "pixels": [
+        6000,
+        4133
+      ],
+      "interpretation": "Researcher display crop with source prose hidden and numbered overlay; no component relocation or new design data"
+    },
+    {
+      "name": "fable_oblique_v0",
+      "original_svg_sha256": "9bfee46a42554728e7d47f32f6afea8b9876fd5ff1bda7bda644e181d626997f",
+      "detail_svg_sha256": "1eac602effbafb38924c8bcd842410777bd5209adcac0e54ed0493c6a1147683",
+      "detail_png_sha256": "310a8d879125653c4095069698a9638c101a30ec1c8732649db1e63afb9f14ea",
+      "source_viewbox": [
+        0,
+        0,
+        1200,
+        900
+      ],
+      "detail_viewbox": [
+        140,
+        100,
+        1000,
+        680
+      ],
+      "numbered_components": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "pixels": [
+        6000,
+        4080
+      ],
+      "interpretation": "Researcher display crop with source prose hidden and numbered overlay; no component relocation or new design data"
+    },
+    {
+      "name": "opus_oblique_v0",
+      "original_svg_sha256": "a568d80e925d02425bb61d9bda1f0879627053256674e62573983cad2363e651",
+      "detail_svg_sha256": "da3b2d0c0725479cedcabdb5d169cbd1d48edebb032e603b7fc13e66a8ad1e20",
+      "detail_png_sha256": "ca858fa13d583160a028ce3ad5b6d735185fca876faff79b8c004ff4c11cfc1f",
+      "source_viewbox": [
+        0,
+        0,
+        1200,
+        900
+      ],
+      "detail_viewbox": [
+        150,
+        100,
+        1000,
+        600
+      ],
+      "numbered_components": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "pixels": [
+        6000,
+        3600
+      ],
+      "interpretation": "Researcher display crop with source prose hidden and numbered overlay; no component relocation or new design data"
+    }
+  ]
+}

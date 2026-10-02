@@ -1,0 +1,640 @@
+V15 interface-closure feedback. The following parent is model-authored, not independently validated. Independent feedback takes precedence over a conflicting parent claim.
+
+V15 feedback to Astra. Your V14 transport completed, but the inner response text lacked exactly one closing root brace; raw V14 is preserved below and must not be silently changed. Your own disposition was HOLD and listed five unfinished design decisions D01-D05. This is a DESIGN-COMPLETION request, not a request to invent measured tests. Choose explicit plausible spar and root fittings; thrust-bearing/coupling and support; hinge, horn, bellcrank, rod-end and stop geometry; package mounting, seat/restraint and wheel-contact structure; and a specified assumed blade and thermal-sizing path. Quantify occupied solids, designed gaps and load-path geometry, then rebuild a mutually exclusive mass/CG/inertia ledger. Supply a minimal low-order blade/drive and cooling requirement calculation with assumptions and uncertainty, but do not present engine/propeller capability as measured. If any D01-D05 remains a design choice you cannot specify, return HOLD and do not claim a complete installation. Never use 'missing measurements' alone as a reason to refuse to choose design geometry. Explicitly separate completed paper design from tests needed for flight acceptance. Do not omit the closing brace.
+
+Parent wrapper SHA-256: 332e43cb396d084e6b3e7eb21426d1f14c219b9f5f2ab94bbee3612dc5fda1a5
+BEGIN EXACT V14 MODEL RESPONSE TEXT
+{
+  "version": "ASTRA_V14_INSTALLATION_SEED_HOLD",
+  "parent_sha256": "89bce11966d0c8b1b2d5059613c878573a34beaf9e213dd8f712dcdf6582de8a",
+  "disposition": {
+    "status": "HOLD",
+    "configuration_proposed": true,
+    "fully_specified_candidate": false,
+    "reason": "A concrete replacement installation layout is proposed below, but its wing-to-frame fittings, manufactured control mechanisms and propulsion thrust-bearing assembly are not closed. Consequently it is not yet the requested independently screenable, complete installation.",
+    "scope": "Design-completion HOLD, not a claim that an assumption-based replacement is impossible. Missing measurements do not prevent choosing geometry. The blocking items are specific unfinished design decisions identified below.",
+    "acceptance_authority": "The independent evaluator, not this response, decides trim, flight and dynamic acceptance."
+  },
+  "provenance": {
+    "default_for_proposed_geometry_and_targets": "[new assumption]",
+    "default_source": "This response's preliminary installation choices; not a catalog product, historical result or independently validated design.",
+    "retained_source": "Supplied V3 geometry and V12 requirement calculations, themselves model-authored.",
+    "arithmetic_source": "Equations explicitly provided in this response.",
+    "measured_data": "NONE",
+    "uncertainty_convention": "Exact nominal coordinates specify design intent, not zero manufacturing uncertainty. Physical geometry, mass and performance uncertainty are UNKNOWN unless a sensitivity interval is explicitly stated.",
+    "numeric_schema": "Units are SI. Identifiers, array indices and version numbers are not physical quantities."
+  },
+  "axes": {
+    "origin": "New installation datum: center of the proposed front lower fuselage cross-frame; not the inherited V2 datum.",
+    "assembly_axes": {
+      "x": "forward",
+      "y": "right",
+      "z": "up"
+    },
+    "assembly_handedness": "left-handed",
+    "dynamics_axes": {
+      "X": "forward",
+      "Y": "right",
+      "Z": "down"
+    },
+    "dynamics_origin": "Current loading CG, presently unresolved",
+    "assembly_to_dynamics": "r_body=diag(1,1,-1)*(r_assembly-CG_assembly)",
+    "positive_moments": {
+      "L": "right wing down",
+      "M": "nose up",
+      "N": "nose right"
+    },
+    "units": {
+      "length": "m",
+      "mass": "kg",
+      "first_moment": "kg m",
+      "inertia": "kg m^2",
+      "force": "N",
+      "torque": "N m",
+      "power": "W",
+      "angle": "rad",
+      "angular_speed": "rad/s",
+      "density": "kg/m^3"
+    }
+  },
+  "change_log": {
+    "exhaustive_for_this_response": true,
+    "physical_baseline_status": "V12 adopted no installed replacement. Changes below define a new installation seed, not a mass-conserving patch to an existing manufactured aircraft.",
+    "changes": [
+      {
+        "id": "C01",
+        "change": "Replace the inherited datum with the explicitly defined installation datum."
+      },
+      {
+        "id": "C02",
+        "change": "Replace the undefined fuselage truss by the node and tube graph below."
+      },
+      {
+        "id": "C03",
+        "change": "Retain parent wing planform, section and dihedral rule as aerodynamic starting assumptions, but relocate its quarter-chord vertically. Do not retain parent wing-support geometry."
+      },
+      {
+        "id": "C04",
+        "change": "Relocate horizontal and vertical tails and retain parent section shapes and nominal control travels."
+      },
+      {
+        "id": "C05",
+        "change": "Replace the inherited engine and remote shaft by a forward direct-drive package with a specified output axis and reserved thrust-bearing assembly space."
+      },
+      {
+        "id": "C06",
+        "change": "Raise the continuous engine design target to 30000 W; this is not available measured power."
+      },
+      {
+        "id": "C07",
+        "change": "Retain the parent propeller blade geometry only as a first propeller test article, not as a matched propeller."
+      },
+      {
+        "id": "C08",
+        "change": "Replace the two lateral tanks by one centerline tank behind the pilot."
+      },
+      {
+        "id": "C09",
+        "change": "Replace the skid gear by main wheels and a smaller tailwheel with a declared rigid contact construction."
+      },
+      {
+        "id": "C10",
+        "change": "Replace remote-control proxy boxes by a proposed mechanical push-pull architecture; detailed bellcrank and bearing geometry remains unfinished."
+      },
+      {
+        "id": "C11",
+        "change": "Withdraw all inherited complete-aircraft mass, CG and inertia values from application to this replacement. No residual parent mass is carried as an allowance."
+      },
+      {
+        "id": "C12",
+        "change": "Do not adopt any parent conditional stability correction, aerodynamic derivative, static margin or modal threshold as a result for this layout."
+      }
+    ],
+    "retained_assumptions": [
+      "Wing reference area 30 m^2, projected span 12 m and chord 2.5 m.",
+      "Parent W2 wing and T2 tail piecewise-linear section definitions.",
+      "Pilot sensitivity masses 60, 75 and 90 kg.",
+      "Analysis speeds 15, 18 and 21 m/s.",
+      "Necessary 15 percent continuous-power reserve requirement."
+    ],
+    "removed_parent_ledger_ownership": "M01 through M16 are not the replacement ledger. No parent mass is silently retained."
+  },
+  "coordinate_schedule": {
+    "status": "INSTALLATION_LAYOUT_NOT_COMPLETE_OCCUPIED_SOLIDS",
+    "tag": "[new assumption]",
+    "three_view_rule": "Top, side and front projections are respectively (x,y), (x,z) and (y,z) of this single schedule.",
+    "lifting_surfaces": [
+      {
+        "id": "WING",
+        "geometry": "p=(-0.2,y,1.5+0.05*abs(y))+(0.25-u)*2.5*(cos(i),0,sin(i))+2.5*v*(-sin(i),0,cos(i)); i=0.08747917654",
+        "domain": "y in [-6,6], u in [0,1], v between parent W2 lower and upper piecewise-linear ordinates",
+        "control_regions": "Ailerons: u>=0.75 and abs(y) in [3,6]",
+        "section_source": "Supplied V3 W2",
+        "section_tag": "[retained assumption]",
+        "missing_solids": "Spars, ribs, skin thickness, root fittings, manufactured aileron edges and hardware"
+      },
+      {
+        "id": "HT",
+        "leading_edge_rule_m": "(-4.4,y,1.2)",
+        "span_y_m": [-2, 2],
+        "chord_m": 1.5,
+        "section": "Parent T2",
+        "elevator_hinge_endpoints_m": [[-5.45, -2, 1.2], [-5.45, 2, 1.2]],
+        "missing_solids": "Internal structure, attachment fittings and manufactured elevator hinge interface"
+      },
+      {
+        "id": "VT",
+        "leading_edge_rule_m": "(-4.5,0,z)",
+        "span_z_m": [1.6, 3.0],
+        "chord_m": 1.0,
+        "section": "Parent T2",
+        "rudder_hinge_endpoints_m": [[-5.2, 0, 1.6], [-5.2, 0, 3.0]],
+        "missing_solids": "Internal structure, attachment fittings and manufactured rudder hinge interface"
+      }
+    ],
+    "packages": [
+      {
+        "id": "PILOT",
+        "type": "Reserved seated occupant envelope, not an intrinsic inertia distribution",
+        "center_xyz_m": [-0.5, 0, 0.65],
+        "full_dimensions_xyz_m": [0.7, 0.55, 1.2]
+      },
+      {
+        "id": "ENGINE",
+        "type": "Proposed liquid-cooled direct-drive engine package allocation",
+        "center_xyz_m": [0.9, 0, 0.65],
+        "full_dimensions_xyz_m": [0.8, 0.7, 0.8],
+        "excluded": ["Radiator", "Coolant", "Exhaust", "External mounts", "Output coupling"],
+        "output_flange_center_xyz_m": [1.3, 0, 0.65],
+        "output_axis": "+x"
+      },
+      {
+        "id": "RADIATOR",
+        "type": "Reserved core envelope, not a heat-rejection prediction",
+        "center_xyz_m": [0.65, 0, -0.25],
+        "full_dimensions_xyz_m": [0.15, 0.65, 0.35],
+        "coolant_route": "UNSPECIFIED"
+      },
+      {
+        "id": "FUEL",
+        "type": "Reserved tank outer envelope",
+        "center_xyz_m": [-1.3, 0, 0.45],
+        "full_dimensions_xyz_m": [0.4, 0.5, 0.35],
+        "usable_fuel_target_kg": 8,
+        "missing": "Wall thickness, internal usable volume, sump, vent, pickup, straps and supply route"
+      },
+      {
+        "id": "DRIVE",
+        "axis_endpoints_m": [[1.3, 0, 0.65], [1.8, 0, 0.65]],
+        "reserved_cylindrical_radius_m": 0.18,
+        "nominal_shaft_OD_ID_m": [0.04, 0.025],
+        "proposed_bearing_centers_m": [[1.45, 0, 0.65], [1.68, 0, 0.65]],
+        "missing": "Bearing selection, housing solids, flange bolt pattern, coupling and thrust load ownership"
+      },
+      {
+        "id": "PROPELLER",
+        "hub_xyz_m": [1.8, 0, 0.65],
+        "blade_definition": "Parent V3 propeller contour, radial stations, chords, twist and stacking mapping translated to this hub",
+        "geometry_tag": "[retained assumption]",
+        "rotation": "Blade pointing toward +y moves toward +z; angular momentum is along negative body X.",
+        "conservative_rotating_keepout": {
+          "axis": "x",
+          "x_interval_m": [1.6656, 1.9344],
+          "radius_m": 1.206,
+          "tag": "[arithmetic]",
+          "source": "Parent bound |axial offset|<=0.1344 and rotational radius<1.206"
+        },
+        "status": "Test-article choice only; matching is UNKNOWN"
+      }
+    ],
+    "occupied_solid_warning": "The package envelopes reserve space but do not specify the actual occupied solids within them. They are explicitly insufficient for a complete interference pass."
+  },
+  "frame_members": {
+    "tag": "[new assumption]",
+    "nodes_xyz_m": {
+      "A": [0, -0.4, 0],
+      "B": [0, 0.4, 0],
+      "C": [0, -0.4, 1.1],
+      "D": [0, 0.4, 1.1],
+      "E": [-1.6, -0.4, 0],
+      "F": [-1.6, 0.4, 0],
+      "G": [-1.6, -0.4, 1.1],
+      "H": [-1.6, 0.4, 1.1],
+      "J": [-4.6, -0.15, 0.45],
+      "K": [-4.6, 0.15, 0.45],
+      "L": [-4.6, -0.15, 1.2],
+      "M": [-4.6, 0.15, 1.2],
+      "N": [0.55, -0.32, 0.3],
+      "P": [0.55, 0.32, 0.3],
+      "Q": [0.55, -0.32, 1.0],
+      "R": [0.55, 0.32, 1.0],
+      "WL": [0.1, -1.25, -0.85],
+      "WR": [0.1, 1.25, -0.85],
+      "TW": [-4.6, 0, -1.0]
+    },
+    "member_generator": {
+      "interpretation": "Each listed pair is one distinct straight tube with centerline between the named nodes. This graph replaces the fuselage and gear proxy boxes only; it is not the complete airframe structure.",
+      "pairs": [
+        ["A", "B"], ["A", "C"], ["B", "D"], ["C", "D"],
+        ["E", "F"], ["E", "G"], ["F", "H"], ["G", "H"],
+        ["A", "E"], ["B", "F"], ["C", "G"], ["D", "H"],
+        ["A", "G"], ["B", "H"], ["A", "F"], ["C", "H"],
+        ["J", "K"], ["J", "L"], ["K", "M"], ["L", "M"],
+        ["E", "J"], ["F", "K"], ["G", "L"], ["H", "M"],
+        ["E", "L"], ["F", "M"], ["E", "K"], ["G", "M"],
+        ["A", "N"], ["B", "P"], ["C", "Q"], ["D", "R"],
+        ["N", "P"], ["N", "Q"], ["P", "R"], ["Q", "R"],
+        ["A", "WL"], ["E", "WL"], ["B", "WR"], ["F", "WR"],
+        ["J", "TW"], ["K", "TW"]
+      ],
+      "section": "Circular hollow tube",
+      "OD_m": 0.03,
+      "ID_m": 0.027,
+      "density_kg_m3": 2700,
+      "density_status": "Assumed aluminum-family density; no alloy, temper or strength is claimed.",
+      "each_member_ID_rule": "T_firstnode_secondnode",
+      "each_member_mass_kg_rule": "2700*pi*(0.03^2-0.027^2)*norm(node2-node1)/4",
+      "each_member_centroid_xyz_m_rule": "(node1+node2)/2",
+      "each_member_intrinsic_distribution": "Uniform annular cylinder along the endpoint axis",
+      "mass_and_centroid_tag": "[arithmetic]",
+      "joint_status": "Tube ends are untrimmed layout cylinders. Joint solids and end cuts are not defined and their intersections are not accepted as manufactured joints."
+    },
+    "missing_support_interfaces": [
+      "Wing spar-root attachment nodes and carry-through fittings",
+      "Tail spar-to-L/M/J/K fittings",
+      "Engine isolator and thrust-bearing support brackets",
+      "Gear axle and tailwheel fork fittings",
+      "Seat and restraint anchor brackets"
+    ]
+  },
+  "mass_ledger": {
+    "status": "NOT_CLOSED",
+    "exclusive_complete_part_ledger": null,
+    "available_partial_definition": "frame_members.member_generator defines tube-only assumed distributions. It excludes all joints, fittings, wing and tail structure, controls, packages, wheels and fluids.",
+    "package_mass_targets": [
+      {
+        "id": "ENGINE_CORE_TARGET",
+        "mass_kg": 85,
+        "centroid_xyz_m": [0.9, 0, 0.65],
+        "tag": "[new assumption]",
+        "uncertainty": "UNKNOWN; a procurement/design budget, not a mass prediction",
+        "exclusions": "All items excluded in the ENGINE geometry row"
+      }
+    ],
+    "nominal": {
+      "total_mass_kg": null,
+      "first_moments_kg_m": null,
+      "CG_xyz_m": null,
+      "inertia_tensor_kg_m2": null
+    },
+    "extreme_pilot_fuel_states": {
+      "pilot_masses_kg": [60, 75, 90],
+      "pilot_mass_tag": "[retained assumption]",
+      "pilot_centroid_position_domain": "Not finalized; the occupant envelope is not a seated body mass model",
+      "fuel_mass_kg": [0, 8],
+      "CG_endpoints": "UNKNOWN",
+      "inertia_tensors": "UNKNOWN"
+    },
+    "tensor_convention": "I=integral(((r dot r)*Identity-r*r_transpose) dm), transformed into body axes at each loading CG. Ixz is the negative product integral.",
+    "blocking_design_decisions": "Finalize the fittings and moving mechanisms listed in minimal_design_decisions, then allocate every physical part once. No total or extreme tensor is reported by substituting package envelopes for unknown mass distributions."
+  },
+  "control_topology": {
+    "tag": "[new assumption]",
+    "architecture": "Mechanical push-pull control rods; no electrical actuation or stabilization.",
+    "pitch": {
+      "path": "Pilot stick pivot to lower-left fuselage longitudinal rod, aft bellcrank at J/L frame, then elevator horn",
+      "command_sign": "Stick aft commands elevator trailing edge up",
+      "surface_positive": "Trailing edge down",
+      "travel_rad": [-0.349066, 0.349066],
+      "required_loaded_rate_rad_s": 0.35
+    },
+    "roll": {
+      "path": "Stick lateral pivot to center differential bellcrank, then separate rods along aft wing spars to aileron horns",
+      "command_sign": "Stick right commands left aileron down and right aileron up",
+      "travel_each_rad": [-0.261799, 0.261799],
+      "required_loaded_rate_rad_s": 0.5
+    },
+    "yaw": {
+      "path": "Pedal torque tube to lower-right fuselage rod, aft bellcrank, then rudder horn",
+      "command_sign": "Right pedal commands rudder trailing edge right",
+      "travel_rad": [-0.349066, 0.349066],
+      "required_loaded_rate_rad_s": 0.35
+    },
+    "throttle": {
+      "path": "Cockpit lever to flexible push-pull cable to engine throttle",
+      "normalized_travel": [0, 1],
+      "required_command_slew_per_s": 0.2,
+      "engine_response": "UNKNOWN"
+    },
+    "travel_and_rate_source": "Parent control requirements",
+    "travel_and_rate_tag": "[retained assumption]",
+    "load_path": "Surface horn loads must pass through rod ends, bellcrank bearings and local brackets into spars and fuselage nodes; no skin-only attachment is permitted by this proposal.",
+    "stops": "Positive cockpit and local surface stops required; dimensions and adjustment order are not selected.",
+    "hinge_gap_target_m": 0.01,
+    "unrelated_hardware_loaded_clearance_target_m": 0.02,
+    "gap_target_tag": "[retained assumption]",
+    "manufactured_hinge_gap": "NOT_DEFINED",
+    "combined_extreme_interference_test": {
+      "status": "NOT_EXECUTABLE_YET",
+      "reason": "Horn radii, rod endpoints, bellcrank axes, stop bodies and cutout solids have not been chosen.",
+      "required_test": "CAD continuous sweeps over simultaneous full pitch/roll/yaw travel, throttle travel and seated occupant motion; include intermediate configurations and tolerances rather than endpoint checks alone."
+    }
+  },
+  "gear_and_ground": {
+    "tag": "[new assumption]",
+    "main_wheels": {
+      "centers_xyz_m": [[0.1, -1.25, -0.85], [0.1, 1.25, -0.85]],
+      "radius_m": 0.3,
+      "width_m": 0.12,
+      "axle_direction": "y"
+    },
+    "tailwheel": {
+      "center_xyz_m": [-4.6, 0, -1.0],
+      "radius_m": 0.15,
+      "width_m": 0.08,
+      "fork_and_steering": "Not selected; proposed unsteered free-caster installation"
+    },
+    "level_ground_z_m": -1.15,
+    "level_contacts_xyz_m": [[0.1, -1.25, -1.15], [0.1, 1.25, -1.15], [-4.6, 0, -1.15]],
+    "rigid_pitch_rotation": {
+      "positive_theta": "Nose up",
+      "main_axle_pivot_point_xyz_m": [0.1, 0, -0.85],
+      "point_height_above_ground_m": "0.3+(x-0.1)*sin(theta)+(z+0.85)*cos(theta)",
+      "tailwheel_bottom_gap_m": "0.3-4.7*sin(theta)-0.15*cos(theta)-0.15",
+      "contact_sequence": "At level all three wheels contact. Nose-down rotation about the main axle initially lifts the tailwheel. Nose-up rotation cannot continue about a fixed main axle without tailwheel penetration; it requires a different pivot or compliant gear/contact solution."
+    },
+    "propeller_level_clearance_lower_bound_m": 0.594,
+    "clearance_tag": "[arithmetic]",
+    "clearance_source": "0.65-1.206-(-1.15), using the conservative propeller keep-out",
+    "complete_pitch_contact_sweep": "UNKNOWN because fork, fittings and other occupied hardware remain undefined",
+    "loaded_clearance": "UNKNOWN"
+  },
+  "bounded_propulsion": {
+    "engine_target": {
+      "continuous_power_W": 30000,
+      "speed_rad_s": 104.719755,
+      "required_torque_N_m": 286.479,
+      "power_and_speed_tag": "[new assumption]",
+      "torque_tag": "[arithmetic]",
+      "source": "Torque=power/angular speed",
+      "displacement_target_m3": 0.003,
+      "displacement_tag": "[new assumption]",
+      "package_mass_target_kg": 85,
+      "interpretation": "Proposed low-speed engine development/procurement requirement, not an assertion that a suitable engine exists at this mass and envelope.",
+      "torque_speed_map": "UNKNOWN",
+      "continuous_thermal_capability": "UNKNOWN"
+    },
+    "drive": {
+      "engine_to_propeller_speed_ratio": 1,
+      "assumed_efficiency": 0.95,
+      "ratio_tag": "[new assumption]",
+      "efficiency_tag": "[retained assumption]",
+      "target_output_power_W": 28500,
+      "target_output_torque_N_m": 272.155,
+      "target_loss_W": 1500,
+      "calculated_values_tag": "[arithmetic]",
+      "thrust_load_path_choice": "Separate forward thrust-bearing housing attached to the engine-support frame; engine crankshaft not intentionally used as the propeller thrust bearing.",
+      "unclosed_interface": "Bearing type, housing attachment geometry and axially compliant coupling remain unselected."
+    },
+    "propeller": {
+      "radius_m": 1.2,
+      "radial_stations_m": [0.15, 0.45, 0.8, 1.2],
+      "chord_m": [0.16, 0.24, 0.2, 0.08],
+      "blade_angle_rad": [0.9, 0.65, 0.48, 0.35],
+      "tag": "[retained assumption]",
+      "target_speed_rad_s": 104.719755,
+      "required_absorbed_torque_at_full_target_N_m": 272.155,
+      "torque_tag": "[arithmetic]",
+      "matched_operating_point": "UNKNOWN",
+      "thrust_and_torque_map": "UNKNOWN",
+      "static_thrust": "UNKNOWN",
+      "warning": "This retained blade is not asserted to absorb the target torque or provide the required thrust."
+    },
+    "cooling_and_fuel": {
+      "cooling_heat_rejection": "UNKNOWN",
+      "fuel_flow": "UNKNOWN",
+      "endurance": "UNKNOWN",
+      "design_choice_needed": "Select engine heat-rejection and fuel-consumption requirements, then size radiator, coolant inventory, hoses, pump, exhaust and usable tank volume. The reserved radiator envelope alone does not close this interface."
+    },
+    "reserve_criterion": {
+      "definition": "Continuous matched engine output must be at least 1.15*D*V/(eta_prop*eta_drive) at each required powered trim.",
+      "tag": "[retained assumption]",
+      "comparison_status": "Requirement arithmetic only"
+    },
+    "requirement_cases": [
+      {
+        "id": "PARENT_HIGH",
+        "speed_m_s": 18,
+        "drag_N": 520,
+        "eta_prop": 0.55,
+        "eta_drive": 0.95,
+        "inputs_tag": "[retained assumption]",
+        "engine_requirement_W": 17913.876,
+        "with_reserve_W": 20600.957,
+        "outputs_tag": "[arithmetic]"
+      },
+      {
+        "id": "HEAVY_HIGH_DRAG_SENSITIVITY",
+        "speed_m_s": 18,
+        "drag_N": 650,
+        "eta_prop": 0.5,
+        "eta_drive": 0.95,
+        "inputs_tag": "[new assumption]",
+        "engine_requirement_W": 24631.579,
+        "with_reserve_W": 28326.316,
+        "outputs_tag": "[arithmetic]",
+        "qualification": "650 N is a screening scenario, not a drag prediction or a certified upper bound."
+      },
+      {
+        "id": "LOW_SPEED_SENSITIVITY",
+        "speed_m_s": 15,
+        "drag_N": 650,
+        "eta_prop": 0.4,
+        "eta_drive": 0.95,
+        "inputs_tag": "[new assumption]",
+        "engine_requirement_W": 25657.895,
+        "with_reserve_W": 29506.579,
+        "outputs_tag": "[arithmetic]",
+        "qualification": "Neither attached flow nor this efficiency is established."
+      }
+    ],
+    "mass_power_iteration": {
+      "status": "NOT_CLOSED",
+      "completed_step": "Selected a larger engine target and explicit engine-core mass allocation in response to reserve scenarios.",
+      "missing_step": "Reconcile the complete installation mass, compute loading-dependent lift and drag requirements, then repeat propulsion matching and package sizing.",
+      "no_convergence_claim": true,
+      "static_case_rule": "Do not use eta*P/V at zero speed; require a thrust/torque map."
+    }
+  },
+  "independent_evaluator_inputs": {
+    "trim_envelope": {
+      "speeds_m_s": [15, 18, 21],
+      "density_kg_m3": 1.225,
+      "tag": "[retained assumption]",
+      "power_states": ["Powered", "Idle", "Windmilling", "Stopped-propeller aerodynamic bound"],
+      "loadings": "Every finalized pilot/fuel corner, nominal loading and intermediate cases governing CG, inertia or slosh",
+      "CG_endpoints": "UNKNOWN",
+      "reference_area_m2": 30,
+      "reference_chord_m": 2.5,
+      "reference_span_m": 12,
+      "control_reserve_requirement_fraction": 0.25,
+      "solution": "Six-component equilibrium with actual matched propulsion; glide flight-path angle is an unknown rather than imposed level flight."
+    },
+    "quasi_steady_geometry_status": "Wing and tail outer analytical section geometry is reconstructable. Full-aircraft geometry is incomplete until fittings, internal-to-external transitions, occupant shape, exhaust, radiator ducts and control hardware are defined.",
+    "structural_load_cases": [
+      {
+        "case": "Symmetric maneuver",
+        "requirement": "Select positive and negative limit load factors and spanwise load distributions before sizing members; not selected here."
+      },
+      {
+        "case": "Asymmetric roll and yaw",
+        "requirement": "Combine aileron/rudder hinge loads, differential lift and fuselage torsion."
+      },
+      {
+        "case": "Propulsion",
+        "requirement": "Combine thrust, continuous and transient torque, rotor gyroscopic loads and imbalance at engine-support and bearing interfaces."
+      },
+      {
+        "case": "Ground",
+        "requirement": "Select landing sink speed, tire stiffness and friction; examine symmetric, one-wheel and tailwheel loads."
+      },
+      {
+        "case": "Control stop and jam",
+        "requirement": "Select pilot-force limits; load each stop and attachment with the other controls at their extremes."
+      }
+    ],
+    "derivatives": {
+      "normalization": "Rates p*b/(2V), q*c/(2V), r*b/(2V); alpha_dot*c/(2V). Coefficients referenced to body-axis forces and moments about loading CG.",
+      "calculated": [],
+      "UNKNOWN": [
+        "C_m_alpha",
+        "C_m_q",
+        "C_m_alpha_dot",
+        "C_Z_alpha_dot",
+        "C_Y_beta",
+        "C_l_beta",
+        "C_n_beta",
+        "C_X_alpha",
+        "C_Z_alpha",
+        "C_l_p",
+        "C_l_r",
+        "C_n_p",
+        "C_n_r",
+        "C_Y_p",
+        "C_Y_r",
+        "C_X_delta_e",
+        "C_Z_delta_e",
+        "C_m_delta_e",
+        "C_Y_delta_a",
+        "C_l_delta_a",
+        "C_n_delta_a",
+        "C_Y_delta_r",
+        "C_l_delta_r",
+        "C_n_delta_r",
+        "All other control, speed, propulsion and acceleration cross derivatives"
+      ],
+      "missing_unsteady_terms": "Remain UNKNOWN, never zero by omission.",
+      "static_margin": "UNKNOWN",
+      "modes": "UNKNOWN"
+    }
+  },
+  "minimal_design_decisions": [
+    {
+      "id": "D01",
+      "interface": "Primary lifting surfaces to frame",
+      "exact_missing_choice": "Choose wing spar sections, root carry-through location and bolt/lug geometry; choose tail spars and their fittings to J/K/L/M. These choices determine the currently absent load path, occupied joint solids and structural mass.",
+      "next_action": "Produce joint-level CAD and a beam/truss load-path calculation with explicitly selected maneuver and landing load requirements."
+    },
+    {
+      "id": "D02",
+      "interface": "Engine output to propeller and frame",
+      "exact_missing_choice": "Choose the separate thrust-bearing pair, axial retention, housing lugs and coupling that transmits torque while releasing axial load at the engine flange; specify the engine flange bolt circle and crankshaft interface.",
+      "next_action": "Dimension one cross-sectional assembly and bearing-support bracket set, then check alignment, shaft bending and torsion using requirements rather than invented allowables."
+    },
+    {
+      "id": "D03",
+      "interface": "Moving controls",
+      "exact_missing_choice": "Choose hinge barrel/pin dimensions, fixed-edge cutbacks, horn radii, bellcrank axes, rod endpoints, rod-end articulation and positive-stop bodies for each circuit.",
+      "next_action": "Generate continuous combined-control CAD sweeps and a linkage Jacobian to verify sign, travel, rate ratio, singularities and stop sequencing."
+    },
+    {
+      "id": "D04",
+      "interface": "Package mounting and ground contacts",
+      "exact_missing_choice": "Choose tube end-joint construction, engine isolator brackets, radiator and tank mounts, wheel axles, tailwheel fork, seat supports and restraint anchors.",
+      "next_action": "Resolve intended contacts and tube end cuts, assign exclusive part IDs and calculate the resulting complete mass distributions."
+    },
+    {
+      "id": "D05",
+      "interface": "Thermal and propeller sizing",
+      "exact_missing_choice": "Specify the engine thermal/fuel requirements and select whether the retained blade is to be repitched or replaced after low-order propeller matching. No matched radius/pitch/torque combination has yet been selected.",
+      "next_action": "Perform bounded blade-element and cooling-network screening without calling predicted coefficients measured; update package envelopes and mass, then repeat mass-power sizing."
+    }
+  ],
+  "uncertainty_verification_table": [
+    {
+      "quantity": "Complete occupied geometry and rigid clearances",
+      "status": "INCOMPLETE_DESIGN",
+      "uncertainty": "UNKNOWN",
+      "provenance": "[new assumption]",
+      "next_test": "Complete D01-D04, then independent CAD intersection, continuous sweep and ground-contact audit."
+    },
+    {
+      "quantity": "Mass, first moments, CG and intrinsic/assembled inertia",
+      "status": "UNKNOWN",
+      "uncertainty": "UNKNOWN",
+      "provenance": "[new assumption]",
+      "next_test": "Exclusive CAD/BOM integration first; component weighing, balance and multi-axis inertia testing subsequently."
+    },
+    {
+      "quantity": "Engine output, losses, cooling and fuel flow",
+      "status": "TARGETS_ONLY",
+      "uncertainty": "UNKNOWN",
+      "provenance": "[new assumption]",
+      "next_test": "Complete D02/D05, then installed continuous dynamometer and thermal-endurance testing."
+    },
+    {
+      "quantity": "Propeller coefficients and matched thrust/torque",
+      "status": "UNKNOWN",
+      "uncertainty": "UNKNOWN",
+      "provenance": "[retained assumption]",
+      "next_test": "Blade-element screening followed by guarded thrust/torque mapping across advance speed and angular speed."
+    },
+    {
+      "quantity": "Material strength, joints, stiffness and loaded clearance",
+      "status": "UNKNOWN",
+      "uncertainty": "UNKNOWN",
+      "provenance": "[new assumption]",
+      "next_test": "Select materials and joints; coupon/joint tests, static load tests and loaded photogrammetry."
+    },
+    {
+      "quantity": "Control operating force, rate, friction, free play and interference",
+      "status": "REQUIREMENTS_ONLY",
+      "uncertainty": "UNKNOWN",
+      "provenance": "[retained assumption]",
+      "next_test": "Complete D03 and conduct instrumented full-travel linkage tests under hinge-load surrogates."
+    },
+    {
+      "quantity": "Installed drag, trim and quasi-steady derivatives",
+      "status": "UNKNOWN",
+      "uncertainty": "UNKNOWN",
+      "provenance": "[new assumption]",
+      "next_test": "Complete full-aircraft geometry; independent low-order screening followed by installed six-component balance testing."
+    },
+    {
+      "quantity": "Acceleration derivatives, dynamic modes, slosh, wake and elastic coupling",
+      "status": "UNKNOWN",
+      "uncertainty": "UNKNOWN",
+      "provenance": "[new assumption]",
+      "next_test": "Independent heave/pitch and sway/yaw identification, ground-vibration testing and uncertainty-aware coupled descriptor analysis around independently established trims."
+    }
+  ],
+  "flight_claim": {
+    "flightworthy": "NOT_ASSESSED",
+    "dynamically_stable": "NOT_ASSESSED",
+    "flight_tests": "NONE_SUPPLIED",
+    "construction_clearance": false,
+    "occupied_operation_clearance": false,
+    "supported_conclusion": "A concrete replacement layout has been selected, but the required complete integrated candidate has not been closed. HOLD on the five explicit design interfaces above, not on an unspecified demand for measurements."
+  }
+
+END EXACT V14 MODEL RESPONSE TEXT

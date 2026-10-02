@@ -1,0 +1,38 @@
+{
+  "phase": "fine",
+  "scale": 1.75,
+  "tail_area_m2": 8.049999999999999,
+  "tail_outer_y_m": 4.574999999999999,
+  "pilot_kg": 65,
+  "seat_x_m": 0.35,
+  "fuel_kg": 8,
+  "mesh": "fine",
+  "mass_kg": 349.2,
+  "cg_m": [
+    1.6418843069873998,
+    0.0,
+    0.7853765750286368
+  ],
+  "assumed_inertia_diagonal_kgm2": [
+    877.2744216470504,
+    766.8700664397195,
+    1463.1698114593355
+  ],
+  "centroid_only_Pxz_kgm2": 15.22934621363116,
+  "trim": {
+    "Alpha": 5.25153,
+    "pitch": 4.28375,
+    "CLtot": 0.78769,
+    "Cmtot": 0.0,
+    "CDind": 0.0498559
+  },
+  "absolute_tail_deg": 0.2837500000000004,
+  "within_declared_tail_travel": true,
+  "surface_SM": 0.039462824782037914,
+  "Cma": -0.144259,
+  "CLa": 3.655567,
+  "Cmq": -6.997728,
+  "input_sha256": "76a99fc480b9f54d14d86a1c5d287a52c6ad691d65b13414c316beebabd40c81",
+  "forces_sha256": "ea6233715de1758007a8fd2a3a5be6ca3f474233d74077f7d700c484794ea7ef",
+  "stability_sha256": "93be8e34941222cfde1f1e5fc8bba6fc0fb87f7d54e49212f7a28a71083c8ef1"
+}

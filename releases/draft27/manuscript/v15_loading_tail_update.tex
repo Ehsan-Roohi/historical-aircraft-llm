@@ -1,0 +1,131 @@
+\subsection{Loading-dependent pitch stability and a researcher-generated tail revision}
+\label{sec:tail-loading-revision}
+
+The small positive nominal margin is not representative of the entire declared
+loading envelope. We independently re-summed all eight V15 loading cases,
+including pilot masses of 65, 75 and 85 kg, the specified seat positions, and
+full or empty fuel. The fuel tank structure remains present when its fuel is
+removed. The mass ledger is still assumed rather than measured. Pilot intrinsic
+inertia was scaled with mass at unchanged assumed body shape; changes in human
+body proportions are not represented. Intrinsic products of inertia were not
+provided for the components. Consequently, a sum of centroid parallel-axis
+products must not be presented as a complete physical inertia tensor.
+
+A first screen held the nominal neutral point fixed while moving the loading
+CG. The two aft-CG cases were then independently re-trimmed, rather than accepting
+that extrapolation as a stability result. Both use the 65 kg pilot at seat
+coordinate $x=0.35$ m, with 8 kg or zero fuel. The original V15 fine-grid results
+in Table~\ref{tab:tail-loading} have positive $C_{m_\alpha}$ and negative
+$SM=-C_{m_\alpha}/C_{L_\alpha}$, although their lift and pitch moment satisfy
+the surface-model balance. This provides a direct example of why equilibrium
+and stability are distinct: the controls can establish a stationary operating
+point while a small angle-of-attack disturbance produces a destabilizing
+pitching-moment increment. Both mesh levels predict the same sign. The result
+does not establish the behavior of the installed aircraft, because the body,
+propulsion and other omitted effects remain unresolved.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Fine-grid loading comparison at 13 m/s. The revised geometry is researcher-generated, not a new Fable response. All margins are surface-model predictions.}
+\label{tab:tail-loading}
+\begin{tabular}{llrrrr}
+\toprule
+Geometry & Fuel (kg) & Mass (kg) & $\alpha$ (deg) & $C_{m_\alpha}$ (rad$^{-1}$) & $SM$ (\%)\\
+\midrule
+Original V15 & 8 & 343.2 & 5.31818 & +0.057983 & -1.6703\\
+Original V15 & 0 & 335.2 & 5.02707 & +0.055162 & -1.5849\\
+Enlarged tail & 8 & 349.2 & 5.25153 & -0.14426 & +3.9463\\
+Enlarged tail & 0 & 341.2 & 4.96037 & -0.14354 & +3.9166\\
+Tail plus test mass & 0 & 343.2 & 4.94835 & -0.09612 & 2.62295\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+We next made an explicitly researcher-generated design experiment. This step
+must not be attributed to the language model or counted as a successful new
+model response. The root station, chord and hinge location were retained,
+while the exposed span length of each horizontal-tail half was multiplied by
+$k$. With the original root at $|y|=0.55$ m and half-panel length 2.30 m, the
+new outer station is $|y|=0.55+2.30k$. Thus $S_t=4.60k$ m$^2$; the overall
+span including the center gap is $1.10+4.60k$ m, not $5.70k$. A constant
+assumed areal mass gives $m_t=8k$ kg. Each half-panel centroid and thin-plate
+intrinsic inertia were recomputed before recalculating aircraft mass and CG.
+The added tail mass moves the CG aft and therefore partly offsets the
+aerodynamic gain. No additional reinforcement or actuator mass is claimed to
+be zero: those unresolved contributions are excluded from this conditional
+trade and tested separately below.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Tail-span trade for the light-pilot, full-fuel case on the coarse mesh.}
+\label{tab:tail-span-trade}
+\begin{tabular}{rrrrr}
+\toprule
+$k$ & Tail area (m$^2$) & Aircraft mass (kg) & Absolute tail angle (deg) & $SM$ (\%)\\
+\midrule
+1.15 & 5.29 & 344.4 & -4.1456 & -0.4558\\
+1.30 & 5.98 & 345.6 & -2.5306 & +0.6693\\
+1.50 & 6.90 & 347.2 & -1.0228 & +2.1721\\
+1.75 & 8.05 & 349.2 & +0.2244 & +4.1450\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+An exploratory 3\% margin was used to select a candidate for further study;
+it is an evaluator choice, not an airworthiness standard, handling-quality
+requirement or validated uncertainty allowance. The first three candidates
+did not meet this screen. The $k=1.75$ candidate has area 8.05 m$^2$, overall
+span 9.15 m and assumed tail mass 14 kg. Its nominal all-up mass is 359.2 kg.
+All eight coarse-grid loading states were re-trimmed, yielding positive
+margins from 4.115\% to 9.713\%. The two critical fine-grid margins are
+3.946\% and 3.917\%; their absolute tail angles are $+0.28375^\circ$ and
+$+0.32297^\circ$. The coarse--fine difference is approximately 0.20 percentage
+points in these cases. This is a limited mesh comparison, not a complete
+convergence demonstration. The remaining six fine-grid loading cases and
+model-form uncertainty still require evaluation. A positive margin alone
+does not establish acceptable phugoid, short-period, Dutch-roll, roll or spiral
+behavior, nor does it prove usable control forces or recovery capability.
+
+\paragraph{Structural mass feedback rather than a free aerodynamic improvement.}
+Enlarging the tail increases its structural demands. For a simple cantilever
+of length $l$ under unchanged uniform line load $w$, the root moment is
+$wl^2/2$ and the tip deflection is $wl^4/(8EI)$, where $E$ is Young's modulus
+and $I$ is the second moment of area. Holding $w$ and $EI$ fixed gives scaling
+factors $k^2=3.0625$ and $k^4=9.3789$ at $k=1.75$. These are illustrative
+beam scalings, not computed loads or deflections for this aircraft: the actual
+span loading, spar section, joint stiffness and maneuver conditions have not
+been established. Root fittings, bearings, torque transmission, control
+actuation, swept clearance and failure loads must be sized before accepting
+the revision. Its drag and mass changes also invalidate any automatic reuse
+of the original power margin.
+
+To quantify one consequence of that open structural loop, an explicit
+2 kg point mass was added at the central tail hinge, $(5.65,0,0.775)$ m,
+and the light-pilot, empty-fuel case was re-trimmed on the fine mesh. This is
+a sensitivity experiment, not an estimate of sufficient reinforcement.
+Zero intrinsic inertia is used only for this mathematical point mass; real
+hardware inertia is unknown. The resulting margin is 2.62295\%, compared
+with 3.9166\% before the added mass. A complementary fixed-neutral-point
+screen estimates the mass increment that consumes a chosen margin:
+\begin{equation}
+ \Delta m = \frac{M(x_{\mathrm{lim}}-x_{\mathrm{CG}})}
+ {x_r-x_{\mathrm{lim}}},\qquad
+ x_{\mathrm{lim}}=x_{\mathrm{NP}}-\bar c\,SM_{\mathrm{target}}.
+\label{eq:tail-mass-budget}
+\end{equation}
+Here $M$ and $x_{\mathrm{CG}}$ are the pre-increment mass and CG, $x_r$ is the
+added-mass station, $x_{\mathrm{NP}}$ is the frozen model neutral point and
+$\bar c=1.85$ m is the reference chord. For the empty-fuel case the screen
+gives approximately 1.45000 kg before reaching the exploratory 3\% margin.
+Because re-trim changes aerodynamic derivatives, this is a screening budget,
+not an allowable installed mass. The next design iteration should compare
+structurally sized tail variants and feasible forward mass redistribution,
+then repeat geometry, mass, power, trim and derivative checks. The current
+candidate closes neither the structural nor the dynamic-mode acceptance gate.
+
+All original model responses and superseded evaluator results are retained.
+The loading audit, tail trade and reinforcement sensitivity have separate
+scripts, raw solver inputs/outputs and checksums in the local review package.
+They are not yet part of the immutable public release identified in the
+data-availability statement.
+

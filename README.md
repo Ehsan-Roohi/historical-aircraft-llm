@@ -1,5 +1,25 @@
 # Historical aircraft design with language models
 
+## Latest public update: 2 October 2026, draft27 / V16
+
+Start with the [current manuscript and evidence guide](releases/draft27/README.md),
+[67-page reading PDF](releases/draft27/manuscript/main.pdf), or
+[83-page review PDF](releases/draft27/manuscript/main_joa_review.pdf).
+The [curated source/evidence ZIP](aircraft_complete_labeled_draft27_public.zip)
+has a [SHA-256 checksum](aircraft_complete_labeled_draft27_public.zip.sha256).
+
+This additive update includes complete received V14/V15 responses, all three
+completed V16 responses, selected incomplete attempts, eight-case Fable surface
+trim, speed/power sensitivity, propeller audits and readable component labels.
+See the guide for exact scope and reproduction limitations. **No design has
+demonstrated flight capability.** Engine targets, installed trim, structural
+adequacy and full dynamic modes remain unverified. Publication/submission status
+is not asserted here.
+
+The dated sections below are historical snapshots. Their `FROZEN_UNSENT` V14
+status and statements about missing PDF proof apply to those older releases,
+not the new draft27 package. The old `research_evidence.zip` is still R5.
+
 **Author: Ehsan Roohi**
 
 Versioned research on three aircraft proposals produced under a documentary cutoff of **31 December 1898**, followed by clarification, independent evaluation and model revision. The model identifiers in the archived runs are `gpt-6-astra`, `claude-fable-5-1` and `claude-opus-5-5`.

@@ -1,0 +1,55 @@
+{
+  "status": "PASS_WITHIN_SURFACE_MODEL_ONLY",
+  "cases": [
+    {
+      "case": 0,
+      "lift_minus_weight_N_from_printed_output": -0.01906589999953212,
+      "Cm_from_printed_output": -0.0
+    },
+    {
+      "case": 1,
+      "lift_minus_weight_N_from_printed_output": -0.01906589999953212,
+      "Cm_from_printed_output": -0.0
+    },
+    {
+      "case": 2,
+      "lift_minus_weight_N_from_printed_output": -0.01906589999953212,
+      "Cm_from_printed_output": 0.0
+    },
+    {
+      "case": 3,
+      "lift_minus_weight_N_from_printed_output": 0.004783100000622653,
+      "Cm_from_printed_output": 0.0
+    },
+    {
+      "case": 4,
+      "lift_minus_weight_N_from_printed_output": 0.01074535000088872,
+      "Cm_from_printed_output": -0.0
+    },
+    {
+      "case": 5,
+      "lift_minus_weight_N_from_printed_output": -0.008880899999439862,
+      "Cm_from_printed_output": -0.0
+    },
+    {
+      "case": 6,
+      "lift_minus_weight_N_from_printed_output": -0.005401899999014859,
+      "Cm_from_printed_output": 0.0
+    },
+    {
+      "case": 7,
+      "lift_minus_weight_N_from_printed_output": 0.018447100001139916,
+      "Cm_from_printed_output": 0.0
+    }
+  ],
+  "SM_percent_range": [
+    3.9783351302647723,
+    10.12164400370317
+  ],
+  "max_abs_lift_residual_N": 0.01906589999953212,
+  "target_note": "3 percent is exploratory, not a safety standard.",
+  "limitations": "13 m/s, fine-grid rigid wing/tail/fin model; new V16 mass and CG and 8.05 m2 tail. No body, mast/wire/fairing forces or propulsion; inherited unvalidated section; tail normals rotate, not vertices. Not installed six-component trim or flight acceptance.",
+  "six_component_installed_trim": false,
+  "dynamic_modes": false,
+  "flight_proven": false
+}

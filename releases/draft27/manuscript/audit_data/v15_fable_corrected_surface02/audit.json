@@ -1,0 +1,168 @@
+{
+  "scope": "Numerical corrected-model audit only; no experimental or installed-aircraft validation",
+  "source_hashes": {
+    "coarse": "383fb155f202baa1a18b2830917358c9fd935d991a7b4f72fb7e0b31acb1c6d2",
+    "fine": "307e263bdb5d7c12c2de1b8bf336b980e9e0d75ec284411e9548ef7a957ac31d"
+  },
+  "checks_passed": [
+    "13 cases per mesh",
+    "conditional CL and Cm residuals",
+    "body/stability-axis finite-difference consistency"
+  ],
+  "frame_consistency": {
+    "coarse": {
+      "body_to_stability_axis_beta_slopes": {
+        "CYb": -0.03514141143469049,
+        "Clb": 0.0007223268421172391,
+        "Cnb": 0.014517061354470756
+      },
+      "max_absolute_difference_from_ST_per_rad": 3.9061354470756524e-05
+    },
+    "fine": {
+      "body_to_stability_axis_beta_slopes": {
+        "CYb": -0.03514141143469049,
+        "Clb": 0.0007219822580088294,
+        "Cnb": 0.014517078495876221
+      },
+      "max_absolute_difference_from_ST_per_rad": 4.0078495876220976e-05
+    }
+  },
+  "derivative_sensitivity": {
+    "beta": {
+      "CYtot": {
+        "coarse_small_step": -0.03514141143469049,
+        "fine_small_step": -0.03514141143469049,
+        "mesh_absolute_difference": 0.0,
+        "fine_step_absolute_difference": 0.0
+      },
+      "Cltot": {
+        "coarse_small_step": -0.0007639437268410976,
+        "fine_small_step": -0.0007639437268410976,
+        "mesh_absolute_difference": 0.0,
+        "fine_step_absolute_difference": 0.0
+      },
+      "Cntot": {
+        "coarse_small_step": 0.014514930809980855,
+        "fine_small_step": 0.014514930809980855,
+        "mesh_absolute_difference": 0.0,
+        "fine_step_absolute_difference": 0.0
+      }
+    },
+    "tip": {
+      "CYtot": {
+        "coarse_small_step": -0.0020053522829578813,
+        "fine_small_step": -0.002291831180523293,
+        "mesh_absolute_difference": 0.0002864788975654119,
+        "fine_step_absolute_difference": 0.0
+      },
+      "Cltot": {
+        "coarse_small_step": -0.103705360918679,
+        "fine_small_step": -0.10341888202111359,
+        "mesh_absolute_difference": 0.00028647889756541756,
+        "fine_step_absolute_difference": 0.0
+      },
+      "Cntot": {
+        "coarse_small_step": 0.015469860468532227,
+        "fine_small_step": 0.01575633936609764,
+        "mesh_absolute_difference": 0.00028647889756541235,
+        "fine_step_absolute_difference": 0.00014323944878270704
+      }
+    },
+    "rudder": {
+      "CYtot": {
+        "coarse_small_step": 0.034148284589797066,
+        "fine_small_step": 0.034148284589797066,
+        "mesh_absolute_difference": 0.0,
+        "fine_step_absolute_difference": 0.0
+      },
+      "Cltot": {
+        "coarse_small_step": 0.0011459155902616466,
+        "fine_small_step": 0.0011459155902616466,
+        "mesh_absolute_difference": 0.0,
+        "fine_step_absolute_difference": 0.0001145915590261646
+      },
+      "Cntot": {
+        "coarse_small_step": -0.015355268909506063,
+        "fine_small_step": -0.015355268909506063,
+        "mesh_absolute_difference": 0.0,
+        "fine_step_absolute_difference": 0.0001145915590261646
+      }
+    }
+  },
+  "stability_axis_derivatives": {
+    "CLa": {
+      "coarse": 3.457555,
+      "fine": 3.455338
+    },
+    "Cma": {
+      "coarse": -0.037195,
+      "fine": -0.03355
+    },
+    "Cmq": {
+      "coarse": -3.417865,
+      "fine": -3.414564
+    },
+    "CLq": {
+      "coarse": 4.576653,
+      "fine": 4.574527
+    },
+    "CYp": {
+      "coarse": -0.000226,
+      "fine": -0.000862
+    },
+    "CYr": {
+      "coarse": 0.036361,
+      "fine": 0.036526
+    },
+    "Clp": {
+      "coarse": -0.36399,
+      "fine": -0.363872
+    },
+    "Clr": {
+      "coarse": 0.210586,
+      "fine": 0.210633
+    },
+    "Cnp": {
+      "coarse": -0.039944,
+      "fine": -0.039699
+    },
+    "Cnr": {
+      "coarse": -0.035442,
+      "fine": -0.035511
+    }
+  },
+  "trim": {
+    "coarse": {
+      "Alpha": 5.86131,
+      "pitch": -4.12009,
+      "CLtot": 0.79671,
+      "Cmtot": -0.0,
+      "CYtot": 0.0,
+      "Cltot": -0.0,
+      "Cntot": -0.0,
+      "CDind": 0.0547885,
+      "tail_absolute_incidence_deg": -8.120090000000001
+    },
+    "fine": {
+      "Alpha": 5.85995,
+      "pitch": -4.06808,
+      "CLtot": 0.79671,
+      "Cmtot": -0.0,
+      "CYtot": 0.0,
+      "Cltot": -0.0,
+      "Cntot": 0.0,
+      "CDind": 0.0547408,
+      "tail_absolute_incidence_deg": -8.06808
+    }
+  },
+  "apparent_surface_only_margin_percent": {
+    "coarse": 1.0757601831351924,
+    "fine": 0.9709614515280417
+  },
+  "acceptance": {
+    "installed_six_component_trim": false,
+    "validated_unsteady_derivatives": false,
+    "aircraft_eigenmodes": false
+  },
+  "supersedes": "Numerical conclusions of the old split-tip/vertical input in v15_fable_lateral_derivative_gate01.json; earlier files are retained."
+}

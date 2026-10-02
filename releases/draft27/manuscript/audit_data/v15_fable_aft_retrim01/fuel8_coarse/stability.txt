@@ -1,0 +1,71 @@
+ ---------------------------------------------------------------
+ Vortex Lattice Output -- Total Forces
+
+ Configuration: Fable V15 power-off lateral surface screen; no body/propelle
+     # Surfaces =  11
+     # Strips   = 192
+     # Vortices =1536
+
+  Sref =  42.000       Cref =  1.8500       Bref =  11.500    
+  Xref =  1.5674       Yref =  0.0000       Zref = 0.78556    
+
+ Standard axis orientation,  X fwd, Z down         
+
+ Run case:  -unnamed-                              
+
+  Alpha =   5.31957     pb/2V =  -0.00000     p'b/2V =  -0.00000
+  Beta  =   0.00000     qc/2V =   0.00000
+  Mach  =     0.000     rb/2V =  -0.00000     r'b/2V =  -0.00000
+
+  CXtot =   0.02106     Cltot =   0.00000     Cl'tot =   0.00000
+  CYtot =   0.00000     Cmtot =  -0.00000
+  CZtot =  -0.77554     Cntot =   0.00000     Cn'tot =   0.00000
+
+  CLtot =   0.77415
+  CDtot =   0.05093
+  CDvis =   0.00000     CDind = 0.0509344
+  CLff  =   0.77890     CDff  = 0.0511247    | Trefftz
+  CYff  =   0.00000         e =    1.1996    | Plane  
+
+   roll            =   0.00000
+   pitch           =  -2.46695
+   yaw             =   0.00000
+
+ ---------------------------------------------------------------
+
+ Stability-axis derivatives...
+
+                             alpha                beta
+                  ----------------    ----------------
+ z' force CL |    CLa =   3.473607    CLb =   0.000000
+ y  force CY |    CYa =   0.000000    CYb =  -0.035245
+ x  force CD |    CDa =   0.414659    CDb =   0.000000
+ x' mom.  Cl'|    Cla =   0.000000    Clb =   0.000558
+ y  mom.  Cm |    Cma =   0.054392    Cmb =   0.000000
+ z' mom.  Cn'|    Cna =  -0.000000    Cnb =   0.014372
+
+                     roll rate  p'      pitch rate  q'        yaw rate  r'
+                  ----------------    ----------------    ----------------
+ z' force CL |    CLp =  -0.000000    CLq =   4.416285    CLr =   0.000000
+ y  force CY |    CYp =  -0.000593    CYq =  -0.000000    CYr =   0.036096
+ x  force CD |    CDp =  -0.000000    CDq =   0.386566    CDr =  -0.000000
+ x' mom.  Cl'|    Clp =  -0.365819    Clq =   0.000000    Clr =   0.204018
+ y  mom.  Cm |    Cmp =   0.000000    Cmq =  -3.319358    Cmr =  -0.000000
+ z' mom.  Cn'|    Cnp =  -0.038094    Cnq =   0.000000    Cnr =  -0.033806
+
+                  roll         d01     pitch        d02     yaw          d03 
+                  ----------------    ----------------    ----------------
+ z' force CL |   CLd01 =  -0.000000   CLd02 =   0.006175   CLd03 =  -0.000000
+ y  force CY |   CYd01 =  -0.000037   CYd02 =  -0.000000   CYd03 =   0.000598
+ x  force CD |   CDd01 =  -0.000000   CDd02 =   0.000099   CDd03 =  -0.000000
+ x' mom.  Cl'|   Cld01 =  -0.001782   Cld02 =   0.000000   Cld03 =  -0.000007
+ y  mom.  Cm |   Cmd01 =   0.000000   Cmd02 =  -0.011489   Cmd03 =   0.000000
+ z' mom.  Cn'|   Cnd01 =   0.000440   Cnd02 =  -0.000000   Cnd03 =  -0.000265
+ Trefftz drag| CDffd01 =  -0.000000 CDffd02 =   0.000103 CDffd03 =  -0.000000
+ span eff.   |    ed01 =   0.000000    ed02 =   0.016629    ed03 =   0.000000
+
+
+
+ Neutral point  Xnp =   1.538473
+
+ Clb Cnr / Clr Cnb  =  -0.006435    (  > 1 if spirally stable )

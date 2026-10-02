@@ -1,0 +1,200 @@
+{
+  "status": "source-derived display annotations",
+  "mapping_provenance": "main.tex Fable detail key and Opus detail key, checked against original V0 SVG component comments and labels",
+  "rows": [
+    {
+      "name": "fable",
+      "source_sha256": "9bfee46a42554728e7d47f32f6afea8b9876fd5ff1bda7bda644e181d626997f",
+      "svg_sha256": "e73e1df0d1f16847e2efb006c3d6eb28905736800388d899253f8b6fee8bd2b8",
+      "png_sha256": "326764bc5c7fcc45144810269bb6f63ea19db5b75475a253dfadc1a736ed73ab",
+      "retained_primitive_count": 42,
+      "retained_primitive_sha256": "453ecc1518dd1eff51f5b6aaf93fe24634f90721bbaa2badd66668d1abc5b41d",
+      "source_geometry_attributes_unchanged": true,
+      "display_translation": [
+        -95,
+        -78
+      ],
+      "omitted_annotations": [
+        "Original title and text labels",
+        "Original legend panel outside aircraft group",
+        "Unlabelled annotation axis triad"
+      ],
+      "component_key": [
+        {
+          "number": 1,
+          "label": "Upper tip panel; roll control",
+          "source_point": [
+            785,
+            192
+          ]
+        },
+        {
+          "number": 2,
+          "label": "Lower wing deck",
+          "source_point": [
+            822,
+            405
+          ]
+        },
+        {
+          "number": 3,
+          "label": "Upper tip panel; opposite side",
+          "source_point": [
+            263,
+            493
+          ]
+        },
+        {
+          "number": 4,
+          "label": "Seated operator",
+          "source_point": [
+            454,
+            364
+          ]
+        },
+        {
+          "number": 5,
+          "label": "Engine group",
+          "source_point": [
+            556,
+            458
+          ]
+        },
+        {
+          "number": 6,
+          "label": "Propeller swept disc; one of two proposed",
+          "source_point": [
+            740,
+            447
+          ]
+        },
+        {
+          "number": 7,
+          "label": "Tailplane + fin/rudder; unresolved interface",
+          "source_point": [
+            1005,
+            598
+          ]
+        },
+        {
+          "number": 8,
+          "label": "Skids and wheels; ground-gear proposal",
+          "source_point": [
+            645,
+            686
+          ]
+        }
+      ],
+      "pixels": [
+        6000,
+        3200
+      ],
+      "viewbox": [
+        0,
+        0,
+        1500,
+        800
+      ],
+      "minimum_key_font_svg_units": 22,
+      "minimum_key_font_pt_at_240mm": 9.977952755905513,
+      "scientific_claim": "Identification only; no geometry repair, dimensions, motion validation, or flight certification added."
+    },
+    {
+      "name": "opus",
+      "source_sha256": "a568d80e925d02425bb61d9bda1f0879627053256674e62573983cad2363e651",
+      "svg_sha256": "e640027be548f229343acd5ad56aa466cc80d5efb321d9e15c7f744a55c6c856",
+      "png_sha256": "eb363d6c657db18eb2cf8280a5cb8aaec37108211232f9ea95ae2bf8024a1c77",
+      "retained_primitive_count": 63,
+      "retained_primitive_sha256": "28d9bec345bd280fb4c615ce8da681bca848642a1d81a615267006025e652242",
+      "source_geometry_attributes_unchanged": true,
+      "display_translation": [
+        12,
+        20
+      ],
+      "omitted_annotations": [
+        "Original title and text labels",
+        "Original annotation axes",
+        "Original legend panel and gear-label leader (470,645)-(540,580)"
+      ],
+      "component_key": [
+        {
+          "number": 1,
+          "label": "Upper-wing roll flap",
+          "source_point": [
+            770,
+            209
+          ]
+        },
+        {
+          "number": 2,
+          "label": "Cockpit / nacelle",
+          "source_point": [
+            662,
+            509
+          ]
+        },
+        {
+          "number": 3,
+          "label": "Wing decks + struts",
+          "source_point": [
+            808,
+            300
+          ]
+        },
+        {
+          "number": 4,
+          "label": "Engine group",
+          "source_point": [
+            588,
+            449
+          ]
+        },
+        {
+          "number": 5,
+          "label": "Pusher swept disc",
+          "source_point": [
+            489,
+            331
+          ]
+        },
+        {
+          "number": 6,
+          "label": "Tailplane + elevator; and fin / rudder",
+          "source_point": [
+            348,
+            274
+          ]
+        },
+        {
+          "number": 7,
+          "label": "Twin booms + controls; schematic routing",
+          "source_point": [
+            455,
+            398
+          ]
+        },
+        {
+          "number": 8,
+          "label": "Skids and wheels; ground-gear proposal",
+          "source_point": [
+            561,
+            580
+          ]
+        }
+      ],
+      "pixels": [
+        6000,
+        3200
+      ],
+      "viewbox": [
+        0,
+        0,
+        1500,
+        800
+      ],
+      "minimum_key_font_svg_units": 22,
+      "minimum_key_font_pt_at_240mm": 9.977952755905513,
+      "scientific_claim": "Identification only; no geometry repair, dimensions, motion validation, or flight certification added."
+    }
+  ]
+}

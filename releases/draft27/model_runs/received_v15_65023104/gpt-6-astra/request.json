@@ -1,0 +1,18 @@
+{
+  "stage": "v15_interface_closure_feedback",
+  "model_requested": "gpt-6-astra",
+  "prompt_sha256": "979b1c91a90af696f06b00364a45a1058d4063104e865bd89670f27c863efb82",
+  "parent_response_sha256": "332e43cb396d084e6b3e7eb21426d1f14c219b9f5f2ab94bbee3612dc5fda1a5",
+  "feedback_sha256": "7dfcee0db3c1bc6ea30a0607372905ec010b8ea51495fdb72a42c75d526b5f45",
+  "instructions_sha256": "b7aa5761acfc390323c5386b5569b39ad45c9612561cae03b2c2bdab08417643",
+  "manifest_sha256": "2bc473bb6a8abdba66c3e7251c20c29f45126859f2603db6e8bc88caab5f8160",
+  "runner_sha256": "15aaaffd5d2929e5544f924cb7a60e7fc16a3531e81a41644b85b45b1df05339",
+  "transport_sha256": "df2a2a49dd6f41d60df38822364b25e1f91824d8b8e2369b3e7dd509746973c3",
+  "maximum_output_tokens": 48000,
+  "maximum_calls": 1,
+  "automatic_retry": false,
+  "reasoning_effort": "low",
+  "engineering_validation": "not_evaluated",
+  "slurm_job_id": "65023105",
+  "started_utc": "2026-09-29T13:23:30.319916+00:00"
+}

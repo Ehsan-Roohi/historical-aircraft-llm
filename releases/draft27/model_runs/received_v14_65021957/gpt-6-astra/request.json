@@ -1,0 +1,19 @@
+{
+  "stage": "v14_installed_candidate_for_independent_dynamics",
+  "model_requested": "gpt-6-astra",
+  "prompt_sha256": "9679c5307564b2523b143b0dae51a177242def1cf158bd9faf3f929e88f161c2",
+  "parent_response_sha256": "89bce11966d0c8b1b2d5059613c878573a34beaf9e213dd8f712dcdf6582de8a",
+  "baseline_response_sha256": "1fe79cf004bc2f3943d330fff4afd4f69acb4f354c36c65ef119cc0808993f40",
+  "instructions_sha256": "48a31860916aea8027e8035c98ae48c2fa69c4dd5113dd7eebc81914741d8fa5",
+  "manifest_sha256": "c6de5bd68ab05528de39d94e36d339d7a365a30d8658a8f99e73401b5da769e9",
+  "runner_sha256": "464dfa97bb646d9af1ece8641905f927c9a755e80ccae5a043d9a5e9c455f38e",
+  "transport_sha256": "df2a2a49dd6f41d60df38822364b25e1f91824d8b8e2369b3e7dd509746973c3",
+  "maximum_output_tokens": 48000,
+  "reasoning_effort": "low",
+  "maximum_calls": 1,
+  "automatic_retry": false,
+  "timeout_seconds": 5400,
+  "engineering_validation": "not_evaluated",
+  "started_utc": "2026-09-29T10:52:29.374639+00:00",
+  "slurm_job_id": "65021959"
+}

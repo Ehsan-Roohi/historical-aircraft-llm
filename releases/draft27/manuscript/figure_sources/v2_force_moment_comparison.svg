@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1340" viewBox="0 0 1200 1340">
+<defs>
+<marker id="arrowBlue" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8Z" fill="#0e7198"/></marker>
+<marker id="arrowAmber" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8Z" fill="#a9650e"/></marker>
+<marker id="arrowGrey" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8Z" fill="#667b88"/></marker>
+</defs><rect width="1200" height="1340" fill="white"/>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#203746}
+.title{font-size:29px;font-weight:700}.status{font-size:20px;font-weight:700}
+.small{font-size:21px}.force{font-size:23px;font-weight:700}.value{font-size:21px}
+.cardhead{font-size:21px;font-weight:700}.wing{stroke:#203746;stroke-width:9}
+.airframe{stroke:#203746;stroke-width:6}.tail{stroke:#203746;stroke-width:8}
+.strut{stroke:#667b88;stroke-width:3}</style>
+<g>
+    <text class="title" x="38" y="41">Astra V2  |  tractor, main wing, aft tail</text>
+    <text class="status" style="fill:#0e7198" x="38" y="73">INDEPENDENT CONDITIONAL RETRIM</text>
+    <line class="wing" x1="230" y1="177" x2="430" y2="177"/>
+    <line class="airframe" x1="74" y1="223" x2="552" y2="223"/>
+    <line class="tail" x1="458" y1="185" x2="550" y2="185"/>
+    <circle cx="327" cy="223" r="9" fill="#fff" stroke="#bd4141" stroke-width="4"/>
+    <text class="small" style="fill:#bd4141" x="337" y="247">CG</text>
+    <path d="M329 173 V114" stroke="#0e7198" stroke-width="5" fill="none"  marker-end="url(#arrowBlue)"/>
+    <text class="force" style="fill:#0e7198" x="278" y="108">Lw</text>
+    <path d="M494 193 V270" stroke="#0e7198" stroke-width="5" fill="none"  marker-end="url(#arrowBlue)"/>
+    <text class="force" style="fill:#0e7198" x="500" y="280">Lt</text>
+    <path d="M330 236 V301" stroke="#667b88" stroke-width="4" fill="none"  marker-end="url(#arrowGrey)"/>
+    <text class="force" style="fill:#667b88" x="337" y="309">W</text>
+    <path d="M151 285 H76" stroke="#0e7198" stroke-width="5" fill="none"  marker-end="url(#arrowBlue)"/>
+    <text class="force" style="fill:#0e7198" x="159" y="292">T</text>
+    <path d="M202 322 H266" stroke="#667b88" stroke-width="4" fill="none"  marker-end="url(#arrowGrey)"/>
+    <text class="force" style="fill:#667b88" x="164" y="329">D</text>
+    <text class="small" x="38" y="359">Nose / forward ←</text>
+    <rect x="600" y="102" width="559" height="261" rx="13" fill="#f5f8f9" stroke="#c0d0d7" stroke-width="2"/>
+    <text class="cardhead" x="624" y="137">Applied forces (N)</text>
+    <text class="value" x="624" y="173">Wing +3444    Tail −306    Weight 3138</text>
+    <text class="value" x="624" y="208">Thrust 246    Drag 246    Tz −0.44</text>
+    <line x1="624" y1="224" x2="1132" y2="224" stroke="#c4d1d5" stroke-width="2"/>
+    <text class="cardhead" x="624" y="253">Pitch about CG (N m; nose-up +)</text>
+    <text class="value" x="624" y="287">Maero −36.76    MT +36.83</text>
+    <text class="value" x="624" y="320">Rz −0.063 N    Rm +0.065 N m</text>
+    <text class="value" x="624" y="350">Fixed-control SM: +19.47%</text>
+    <line x1="38" y1="386" x2="1160" y2="386" stroke="#cfdbdf" stroke-width="2"/>
+  </g><g>
+    <text class="title" x="38" y="451">Opus V2  |  biplane, aft tail, pusher</text>
+    <text class="status" style="fill:#0e7198" x="38" y="483">INDEPENDENT CONDITIONAL RETRIM</text>
+    <line class="wing" x1="230" y1="587" x2="430" y2="587"/><line x1="230" y1="552" x2="430" y2="552" class="wing"/><line x1="245" y1="552" x2="245" y2="587" class="strut"/><line x1="415" y1="552" x2="415" y2="587" class="strut"/>
+    <line class="airframe" x1="74" y1="633" x2="552" y2="633"/>
+    <line class="tail" x1="458" y1="595" x2="550" y2="595"/>
+    <circle cx="327" cy="633" r="9" fill="#fff" stroke="#bd4141" stroke-width="4"/>
+    <text class="small" style="fill:#bd4141" x="337" y="657">CG</text>
+    <path d="M329 583 V524" stroke="#0e7198" stroke-width="5" fill="none"  marker-end="url(#arrowBlue)"/>
+    <text class="force" style="fill:#0e7198" x="278" y="518">Lw</text>
+    <path d="M494 603 V680" stroke="#0e7198" stroke-width="5" fill="none"  marker-end="url(#arrowBlue)"/>
+    <text class="force" style="fill:#0e7198" x="500" y="690">Lt</text>
+    <path d="M330 646 V711" stroke="#667b88" stroke-width="4" fill="none"  marker-end="url(#arrowGrey)"/>
+    <text class="force" style="fill:#667b88" x="337" y="719">W</text>
+    <path d="M151 695 H76" stroke="#0e7198" stroke-width="5" fill="none"  marker-end="url(#arrowBlue)"/>
+    <text class="force" style="fill:#0e7198" x="159" y="702">T</text>
+    <path d="M202 732 H266" stroke="#667b88" stroke-width="4" fill="none"  marker-end="url(#arrowGrey)"/>
+    <text class="force" style="fill:#667b88" x="164" y="739">D</text>
+    <text class="small" x="38" y="769">Nose / forward ←</text>
+    <rect x="600" y="512" width="559" height="261" rx="13" fill="#f5f8f9" stroke="#c0d0d7" stroke-width="2"/>
+    <text class="cardhead" x="624" y="547">Applied forces (N)</text>
+    <text class="value" x="624" y="583">Wing +3559    Tail −78    Weight 3530</text>
+    <text class="value" x="624" y="618">Thrust 446    Drag 443    Tz +49.31</text>
+    <line x1="624" y1="634" x2="1132" y2="634" stroke="#c4d1d5" stroke-width="2"/>
+    <text class="cardhead" x="624" y="663">Pitch about CG (N m; nose-up +)</text>
+    <text class="value" x="624" y="697">Maero +195.88    MT −195.88</text>
+    <text class="value" x="624" y="730">Rz −0.025 N    Rm +0.0003 N m</text>
+    <text class="value" x="624" y="760">Fixed-control SM: +7.76%</text>
+    <line x1="38" y1="796" x2="1160" y2="796" stroke="#cfdbdf" stroke-width="2"/>
+  </g><g>
+    <text class="title" x="38" y="861">Fable V2  |  biplane, split tail, twin pushers</text>
+    <text class="status" style="fill:#a9650e" x="38" y="893">MODEL CLAIM ONLY — NO INDEPENDENT RETRIM</text>
+    <line class="wing" x1="230" y1="997" x2="430" y2="997"/><line x1="230" y1="962" x2="430" y2="962" class="wing"/><line x1="245" y1="962" x2="245" y2="997" class="strut"/><line x1="415" y1="962" x2="415" y2="997" class="strut"/>
+    <line class="airframe" x1="74" y1="1043" x2="552" y2="1043"/>
+    <line class="tail" x1="458" y1="1005" x2="550" y2="1005"/>
+    <circle cx="327" cy="1043" r="9" fill="#fff" stroke="#bd4141" stroke-width="4"/>
+    <text class="small" style="fill:#bd4141" x="337" y="1067">CG</text>
+    <path d="M329 993 V934" stroke="#a9650e" stroke-width="5" fill="none" stroke-dasharray="10 7" marker-end="url(#arrowAmber)"/>
+    <text class="force" style="fill:#a9650e" x="278" y="928">Lw</text>
+    <path d="M494 1013 V1090" stroke="#a9650e" stroke-width="5" fill="none" stroke-dasharray="10 7" marker-end="url(#arrowAmber)"/>
+    <text class="force" style="fill:#a9650e" x="500" y="1100">Lt</text>
+    <path d="M330 1056 V1121" stroke="#667b88" stroke-width="4" fill="none" stroke-dasharray="10 7" marker-end="url(#arrowGrey)"/>
+    <text class="force" style="fill:#667b88" x="337" y="1129">W</text>
+    <path d="M151 1105 H76" stroke="#a9650e" stroke-width="5" fill="none" stroke-dasharray="10 7" marker-end="url(#arrowAmber)"/>
+    <text class="force" style="fill:#a9650e" x="159" y="1112">T</text>
+    <path d="M202 1142 H266" stroke="#667b88" stroke-width="4" fill="none" stroke-dasharray="10 7" marker-end="url(#arrowGrey)"/>
+    <text class="force" style="fill:#667b88" x="164" y="1149">D</text>
+    <text class="small" x="38" y="1179">Nose / forward ←</text>
+    <rect x="600" y="922" width="559" height="261" rx="13" fill="#f5f8f9" stroke="#c0d0d7" stroke-width="2"/>
+    <text class="cardhead" x="624" y="957">Applied forces (N)</text>
+    <text class="value" x="624" y="993">Wing ~+3061    Tail ~−203    Weight ~2894</text>
+    <text class="value" x="624" y="1028">Thrust ~412    Drag ~411    Tz unknown</text>
+    <line x1="624" y1="1044" x2="1132" y2="1044" stroke="#c4d1d5" stroke-width="2"/>
+    <text class="cardhead" x="624" y="1073">Pitch about CG (N m; nose-up +)</text>
+    <text class="value" x="624" y="1107">Maero ~+20*    MT ~−19</text>
+    <text class="value" x="624" y="1140">Rz not verified    Rm not verified</text>
+    <text class="value" x="624" y="1170">Fixed-control SM: not available</text>
+    <line x1="38" y1="1206" x2="1160" y2="1206" stroke="#cfdbdf" stroke-width="2"/>
+  </g>
+<text class="small" x="38" y="1244">*Fable's ~+20 N m is its −810 + 830 N m claim; residual and margin unverified.</text>
+<text class="small" x="38" y="1276">Arrows are schematic, not pressure-centre locations. Values are V2, not V12/V13.</text>
+<text class="small" x="38" y="1308">Positive lift points upward; negative tail lift points downward. “~” marks claims.</text>
+</svg>

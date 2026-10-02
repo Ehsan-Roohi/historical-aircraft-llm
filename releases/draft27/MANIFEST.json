@@ -1,0 +1,3302 @@
+{
+  "scope": "Draft27 manuscript and packaged audits, plus locally received V14-V16 runs. Not all service-side records or all project files. Originals unchanged.",
+  "excluded_host_specific_scripts": [
+    "manuscript\\audit_data\\v16\\build_draft24.py",
+    "manuscript\\audit_data\\v16\\fable_v16_loading_audit.py",
+    "manuscript\\audit_data\\v16\\fable_v16_surface_retrim.py",
+    "manuscript\\audit_data\\v16\\fable_v16_sweep_audit.py",
+    "manuscript\\audit_data\\v16\\finalize_draft24.py"
+  ],
+  "files": [
+    {
+      "path": "manuscript/audit_data/audit_v14_fable_power_fixed_point.py",
+      "bytes": 6510,
+      "sha256": "213994fc52976f1740dcaf55518dc31886c1dc6fd4c5567a86618881ae0d45db"
+    },
+    {
+      "path": "manuscript/audit_data/audit_v14_inertia_lower_bounds.py",
+      "bytes": 3743,
+      "sha256": "419430fd479c39680ffa8d785c20733602919c93aee11e4e2df8d28d6ba0a986"
+    },
+    {
+      "path": "manuscript/audit_data/audit_v14_rigid_ground.py",
+      "bytes": 5289,
+      "sha256": "55e3ffa0fdbe3ea5a4d63f20e8d2c5a4dbfa6636f36475a3eea55d7d068a80b7"
+    },
+    {
+      "path": "manuscript/audit_data/audit_v14_static_clearance_budget.py",
+      "bytes": 4245,
+      "sha256": "03650307756248bcd1ca8d02cab4f165964e99500ab36c4389c4ad2c02d24228"
+    },
+    {
+      "path": "manuscript/audit_data/audit_v15_corrected_surface.py",
+      "bytes": 2889,
+      "sha256": "b87fcf5615d556f25064545140287f2b8b087424037d80fa050cc2dde470a5c3"
+    },
+    {
+      "path": "manuscript/audit_data/audit_v15_tail_beam_demands.py",
+      "bytes": 5593,
+      "sha256": "8dd84f4ed935b58a43b23d3501311060c520bfe0b5a22af3f477f6906dcca952"
+    },
+    {
+      "path": "manuscript/audit_data/audit_v15_tail_trade.py",
+      "bytes": 6196,
+      "sha256": "163b6aa124a691bf46fa3dc756414fed46c1ca9cac7cf6945766908cf701deaa"
+    },
+    {
+      "path": "manuscript/audit_data/build_complete_draft22.py",
+      "bytes": 5110,
+      "sha256": "5d354d905b20436140fc78ab429ea4e7e6fd7711911cc4f357329ccbd5312b00"
+    },
+    {
+      "path": "manuscript/audit_data/build_complete_draft23.py",
+      "bytes": 3066,
+      "sha256": "4cf2663884736aea6bfe4edec00c2b5dc4f81b2472aa96497f4c357f2f11c245"
+    },
+    {
+      "path": "manuscript/audit_data/build_corrected_complete_draft21.py",
+      "bytes": 11011,
+      "sha256": "fb709036fa96b0f2ee2b382f23a412916af654ff1dbb1132776f618deaa073eb"
+    },
+    {
+      "path": "manuscript/audit_data/editorial/build_draft26.py",
+      "bytes": 9096,
+      "sha256": "edf1e6a732d25657d2a2b957087d4d72d5077869ae89e5aace5f37882911c57e"
+    },
+    {
+      "path": "manuscript/audit_data/editorial/finalize_draft26.py",
+      "bytes": 3093,
+      "sha256": "9ee139bffdab108e64a51a0bffea5c71a94f09133807ea93e72e1d5810c87e1c"
+    },
+    {
+      "path": "manuscript/audit_data/editorial/public_release_screen.json",
+      "bytes": 2549,
+      "sha256": "9b8b3ca0023416943c49d3f022255f8d91a74691b9d2b75c9b05f9d05bdbb87b"
+    },
+    {
+      "path": "manuscript/audit_data/editorial/qa_draft26.py",
+      "bytes": 1795,
+      "sha256": "1fe5d2be95ab38237811b7aafbebb88ecfec730681e6eddd3a92e1d7b11d5f85"
+    },
+    {
+      "path": "manuscript/audit_data/editorial/reference_changes.json",
+      "bytes": 2018,
+      "sha256": "6f3fca579de2e9577e38f163905a9777e60e99d08bff109113978779104b4957"
+    },
+    {
+      "path": "manuscript/audit_data/figure_braced_tail.py",
+      "bytes": 2776,
+      "sha256": "8030221a2e970e8e37a3a747f4a5daf1ffc57fff9f34afacf4f44376d1731918"
+    },
+    {
+      "path": "manuscript/audit_data/figure_labels27/caption_changes.json",
+      "bytes": 1919,
+      "sha256": "6ce690217302086f308c3aa69f8ef3187c4fcf7499618d57b069076b8a446170"
+    },
+    {
+      "path": "manuscript/audit_data/figure_labels27/finalize_draft27.py",
+      "bytes": 3240,
+      "sha256": "aae120829e20df57f6a7a786196de65364afd740c74b5a226107875117533151"
+    },
+    {
+      "path": "manuscript/audit_data/figure_labels27/integrate_draft27.py",
+      "bytes": 2957,
+      "sha256": "99b0cd4451146630788f965eaaa4081cc727660b8a946f2441e910df602e8fb6"
+    },
+    {
+      "path": "manuscript/audit_data/figure_labels27/qa_draft27.py",
+      "bytes": 1612,
+      "sha256": "402bfd537e72cb4b9269aab2a0105a290e4c98319f808ad23df5cac736375650"
+    },
+    {
+      "path": "manuscript/audit_data/finalize_complete_draft22.py",
+      "bytes": 3424,
+      "sha256": "d96d780cbc101fb01fe2b7bc6822347a18313becfcf74b4b1984d830ca229b11"
+    },
+    {
+      "path": "manuscript/audit_data/finalize_complete_draft23.py",
+      "bytes": 3001,
+      "sha256": "1e34f212068dd33ea4116a2684a7a746dbd8510e4a4d517b5ab0073127a6f62c"
+    },
+    {
+      "path": "manuscript/audit_data/finalize_corrected_draft21.py",
+      "bytes": 3697,
+      "sha256": "571668ce0fec67a7f848a7156bf56e89388fca320fab315111422436c5640c41"
+    },
+    {
+      "path": "manuscript/audit_data/finalize_restored_article.py",
+      "bytes": 3483,
+      "sha256": "7f39aea21a34018cced9867dc5f71612ee7b6e85700acf83956eed320910dc3b"
+    },
+    {
+      "path": "manuscript/audit_data/joa_editorial_gate01.json",
+      "bytes": 1022,
+      "sha256": "0150e416449adeb223ead1f06e7853e26779bb7c110d8775fd084d24b7f01958"
+    },
+    {
+      "path": "manuscript/audit_data/joa_figure_display_gate01.json",
+      "bytes": 6296,
+      "sha256": "f5cb094a5e4e6ec001588175c1e296aa776074d7d93be7166738c9a34659396d"
+    },
+    {
+      "path": "manuscript/audit_data/qa_restored_article.py",
+      "bytes": 1473,
+      "sha256": "7a04af16b323bbb45753f3a524435ac29121c10a7054d3d2f850a717c95acdbc"
+    },
+    {
+      "path": "manuscript/audit_data/restore_complete_manuscript.py",
+      "bytes": 10132,
+      "sha256": "d15b9841aa130d93c48ef9a9ce0466278c1a14550792b923c9dcce198077ff25"
+    },
+    {
+      "path": "manuscript/audit_data/test_v14_inertia_lower_bounds.py",
+      "bytes": 1345,
+      "sha256": "a9271941ab766ffe6669a6ade1716aab33a3de9107300e472cd55b7421ec4895"
+    },
+    {
+      "path": "manuscript/audit_data/test_v15_fable_acceptance_gate.py",
+      "bytes": 1607,
+      "sha256": "b0c27a65d5bc17abe49c995cf76338e36ac1df87dc5a6850ef08690cd73e0eb0"
+    },
+    {
+      "path": "manuscript/audit_data/test_v15_fable_lateral_derivative_gate.py",
+      "bytes": 1140,
+      "sha256": "48affd39f909e1a3875437bede1728f23048f24d2c56827bb4ac0e1efd4d5f4f"
+    },
+    {
+      "path": "manuscript/audit_data/test_v15_loading_gate.py",
+      "bytes": 933,
+      "sha256": "fb4d3a685bc0873de680bb90a710fb0b220ed357807059c98899c31ecc8a738d"
+    },
+    {
+      "path": "manuscript/audit_data/test_v15_tail_trade.py",
+      "bytes": 1054,
+      "sha256": "cced743e55fd9892fb0cf4f1030ec41cb972b6535c1b94ac4cd3e52963e44e57"
+    },
+    {
+      "path": "manuscript/audit_data/v14_fable_power_fixed_point01.json",
+      "bytes": 2144,
+      "sha256": "d201084aace66eff8424559daa5055e5385529ecb153ed9cc066fdc6af1d4bca"
+    },
+    {
+      "path": "manuscript/audit_data/v14_inertia_lower_bounds01.json",
+      "bytes": 2171,
+      "sha256": "3b2dd9f929f5604b7342e1587b21579f6877003a83f317aca0788cfe93b65729"
+    },
+    {
+      "path": "manuscript/audit_data/v14_rigid_ground_gate01.json",
+      "bytes": 5128,
+      "sha256": "9ba98700a2db1258e59d390dddc3b43850a1a5365c68ac15fdef42149d17ccbf"
+    },
+    {
+      "path": "manuscript/audit_data/v14_static_clearance_budget01.json",
+      "bytes": 1641,
+      "sha256": "bcc1e916e47e9604c0cc2ff141c21a9a51da7778392c15726541b8948d45cd10"
+    },
+    {
+      "path": "manuscript/audit_data/v15_braced_tail_candidate.py",
+      "bytes": 4891,
+      "sha256": "892664aab6531b1d411e0a486f0470f519d7fa56727461e7f507f2ab859ef92c"
+    },
+    {
+      "path": "manuscript/audit_data/v15_braced_tail_candidate01.json",
+      "bytes": 4472,
+      "sha256": "f86b72c4e45e234305a48454b88699b09b57773ee3047e47dc4e0d0783245c76"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_acceptance_gate.py",
+      "bytes": 5992,
+      "sha256": "40f42e6213a6beffe6a28b16a0a4e668367720a4a5501a4f4daccca67b4614a1"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_aft_retrim.py",
+      "bytes": 2610,
+      "sha256": "551f5fbfb7dd95bfd74e5c9adc0bff2caca16c48b737ae10b13fceed5d2bdf7e"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_aft_retrim01/fuel0_coarse/aircraft.avl",
+      "bytes": 1652,
+      "sha256": "7a052412e82b50368497ed6819015d463ecab10d8bdcf86ba7b350f758c98a97"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_aft_retrim01/fuel0_coarse/commands.txt",
+      "bytes": 120,
+      "sha256": "84199052d0c9c5f3d633a4358114ae65747695fee88b785e19b59f5c403f3b55"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_aft_retrim01/fuel0_coarse/forces.txt",
+      "bytes": 1214,
+      "sha256": "3e05d4398adcffa83d72f91df5b9e5971d6ce3afab32fd9724d07a4387005072"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_aft_retrim01/fuel0_coarse/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_aft_retrim01/fuel0_coarse/stability.txt",
+      "bytes": 3204,
+      "sha256": "1f224ca66c157bc1c3c0a003c7527bfc6816cd8755c4cdf42815452eb5c2c485"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_aft_retrim01/fuel0_coarse/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_aft_retrim01/fuel0_coarse/stdout.txt",
+      "bytes": 18142,
+      "sha256": "653ddf19e567738fe852bd2cb12ef5ddc7a1950f7e14e80dd2947b1bcf07d124"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_aft_retrim01/fuel0_fine/aircraft.avl",
+      "bytes": 1661,
+      "sha256": "b973556ad45a3178956ab26e4939895695ea80654a3c1bed84657f43cc33cc50"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_aft_retrim01/fuel0_fine/commands.txt",
+      "bytes": 120,
+      "sha256": "84199052d0c9c5f3d633a4358114ae65747695fee88b785e19b59f5c403f3b55"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_aft_retrim01/fuel0_fine/forces.txt",
+      "bytes": 1214,
+      "sha256": "f78b716f32cccc6efab316cb3c1ed8226a20b5ae958880bca710d37644afaea3"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_aft_retrim01/fuel0_fine/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_aft_retrim01/fuel0_fine/stability.txt",
+      "bytes": 3204,
+      "sha256": "ecf7932cc472b7987cc9037a88e1550cdd86d47cd3f0d8b41d8a550c80249aeb"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_aft_retrim01/fuel0_fine/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_aft_retrim01/fuel0_fine/stdout.txt",
+      "bytes": 18142,
+      "sha256": "ef786a613737e50002d8a24adca08fe4d0d023e7af02d445cbed1f5048263ef5"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_aft_retrim01/fuel8_coarse/aircraft.avl",
+      "bytes": 1652,
+      "sha256": "f59648da2b813d205452f3c0f80d42e5f6ef876f37fb4de054161a22b513dc56"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_aft_retrim01/fuel8_coarse/commands.txt",
+      "bytes": 120,
+      "sha256": "5253daffe5b650e6cc0694d9eaaa030ec59e06076db831750ae88c724ea60d9f"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_aft_retrim01/fuel8_coarse/forces.txt",
+      "bytes": 1214,
+      "sha256": "96bc8bd8dab0120ff5b8bf6c159cc4c277ed8dc34e08cb87e9a8b113c0dc1238"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_aft_retrim01/fuel8_coarse/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_aft_retrim01/fuel8_coarse/stability.txt",
+      "bytes": 3204,
+      "sha256": "3f2b5c83027f64d726ed11f2be0bcf4d3428f1ffcf98ff8c9963275e5628d962"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_aft_retrim01/fuel8_coarse/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_aft_retrim01/fuel8_coarse/stdout.txt",
+      "bytes": 18142,
+      "sha256": "ae87429cab9f8b4d2fe6a744661966c3b49862e380f41ab337dce6daa86342a2"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_aft_retrim01/fuel8_fine/aircraft.avl",
+      "bytes": 1661,
+      "sha256": "71778f1d7afe0f57a5e9d496ba901f2bb261dc6fb7095e1715f7734d0fb376b2"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_aft_retrim01/fuel8_fine/commands.txt",
+      "bytes": 120,
+      "sha256": "5253daffe5b650e6cc0694d9eaaa030ec59e06076db831750ae88c724ea60d9f"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_aft_retrim01/fuel8_fine/forces.txt",
+      "bytes": 1214,
+      "sha256": "3cd372b7fe00496ee98673d64174084745284ad025ca98eef31d442c03de56bc"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_aft_retrim01/fuel8_fine/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_aft_retrim01/fuel8_fine/stability.txt",
+      "bytes": 3204,
+      "sha256": "6d651b65e0f23ecce42473f95d5cb59b46ba296431e55dcf7cd3d7000a8e005c"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_aft_retrim01/fuel8_fine/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_aft_retrim01/fuel8_fine/stdout.txt",
+      "bytes": 18142,
+      "sha256": "c2a27591f89cd43150e9f14d4a0d54187f32bb749b1bfe55c4a81f2d5ad8f6fc"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_aft_retrim01/summary.json",
+      "bytes": 3684,
+      "sha256": "e859478b078c4e9cfffa3a3bb0dbdafeea5c68d7e6977710ecdeabd7bd4e7120"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_avl_force_split_summary.json",
+      "bytes": 1162,
+      "sha256": "3800d5b1fb9f1edbb81a7774602263172aae584004ac272750ad2ca8c8d59214"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_avl_verify_summary.json",
+      "bytes": 1039,
+      "sha256": "70df961bff1760ba5c9c25b700b7af00f4ae60199cd5e5f50905b7814999889a"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/audit.json",
+      "bytes": 4947,
+      "sha256": "f098cd268d48d413844827058cc3ca9943ca0d3f767a9b77a19b86c6c212e19f"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/coarse/aircraft.avl",
+      "bytes": 1631,
+      "sha256": "d3e93d9a18062c34c79af32c86cc9d7d15b596799f715088815a4d39b1689f6e"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/coarse/beta_1.5_-1.txt",
+      "bytes": 1214,
+      "sha256": "d1053cd85e43465323e1a343cc7e826b1fdf175a099e393149fa56adbd2cf1f8"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/coarse/beta_1.5_1.txt",
+      "bytes": 1214,
+      "sha256": "525be7bec33f2b5e054c6dd2d6bc92671694ca6a1524ee9328450e5efa856789"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/coarse/beta_3.0_-1.txt",
+      "bytes": 1214,
+      "sha256": "e436562a285e97f863e889389f585a38611c082561490c75bb67692c4dffb61a"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/coarse/beta_3.0_1.txt",
+      "bytes": 1214,
+      "sha256": "c6a31cf7eeb408fe7b004fbb4db05de3c0d52e18f20999b17d49989ecb52a17f"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/coarse/commands.txt",
+      "bytes": 1144,
+      "sha256": "65fbfb9d7202f0dc5bedaa0ec9cd1ae80b2138b68c599475e0235b68fb39ddd9"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/coarse/neutral.txt",
+      "bytes": 1214,
+      "sha256": "0c26f94996a9b1b460080556fbc0ea77b6f34cbe72b609d5adc3f409e1af452c"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/coarse/rudder_2.5_-1.txt",
+      "bytes": 1214,
+      "sha256": "af4807ab6b481915144f84a17d9fb2a08f8cd19ba1b6adf15dad29625781b0e2"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/coarse/rudder_2.5_1.txt",
+      "bytes": 1214,
+      "sha256": "6513bd214637f3e65bce104812fbe1d336db570948d996e7adf01953df3d1a67"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/coarse/rudder_5.0_-1.txt",
+      "bytes": 1214,
+      "sha256": "22789a0569903ed5a2647c7e92bf31912b86696bd185a27f5252372f2ee473c9"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/coarse/rudder_5.0_1.txt",
+      "bytes": 1214,
+      "sha256": "8d072c19f44b8acf1c48bcc28e33f2876a2f01bc19540f9e04995ee443889328"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/coarse/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/coarse/stability.txt",
+      "bytes": 3204,
+      "sha256": "59defa2de7e1c397f5ef99fd506405a7e0d65bce4d65abefe337d10c82fe66ea"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/coarse/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/coarse/stdout.txt",
+      "bytes": 183531,
+      "sha256": "7f19b8fc2f88ce5d9f10f8e05a1c77120cc11df1ea20c2715f2f04a4d7dff197"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/coarse/summary.json",
+      "bytes": 8161,
+      "sha256": "383fb155f202baa1a18b2830917358c9fd935d991a7b4f72fb7e0b31acb1c6d2"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/coarse/summary_before_parser_fix.json",
+      "bytes": 8049,
+      "sha256": "779c8b62ffca2b83e1ac9a8a6eb4e385076b87a3035086d74ae84aa9f0812a71"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/coarse/tip_2.0_-1.txt",
+      "bytes": 1214,
+      "sha256": "08161dc4904f88cb258994335fa8b70ab0077938dccb947af05739ceefc9849f"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/coarse/tip_2.0_1.txt",
+      "bytes": 1214,
+      "sha256": "7803b6acc7b60b546e01a7dae8261902261080a9a506be3b2a51b4adadbb46c8"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/coarse/tip_4.0_-1.txt",
+      "bytes": 1214,
+      "sha256": "3245be49c649d8938df16f91d15a5036095a9bf71567bfcadf420c5d5fba7ade"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/coarse/tip_4.0_1.txt",
+      "bytes": 1214,
+      "sha256": "6bec3a8fd7a679156911f560633a15f1e4128171d1fac1e7bfbf761e73b0c53c"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/coarse/trim/aircraft.avl",
+      "bytes": 1631,
+      "sha256": "d3e93d9a18062c34c79af32c86cc9d7d15b596799f715088815a4d39b1689f6e"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/coarse/trim/commands.txt",
+      "bytes": 101,
+      "sha256": "d1166ee8591845c7442f82727c319fbb6895d58ebdb7ca0c19897515ff25c781"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/coarse/trim/forces.txt",
+      "bytes": 1214,
+      "sha256": "2375b34bacfc8fa5b644030398f8ae5ecf97aa97b4510e58f28244e84f691a8f"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/coarse/trim/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/coarse/trim/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/coarse/trim/stdout.txt",
+      "bytes": 16355,
+      "sha256": "2e9130820f268fa00e86c34f1cce0f831993de2464fdfa980aa2e191c18eb60c"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/fine/aircraft.avl",
+      "bytes": 1640,
+      "sha256": "fba5001e957be3f9445e161b6a43adcda90546f3eba058434cd1e37321b2ca4f"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/fine/beta_1.5_-1.txt",
+      "bytes": 1214,
+      "sha256": "5ff610a2d5e23d213dfdefd39c8ef237b7e3d92e0bef7a2b7c070848feb77e21"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/fine/beta_1.5_1.txt",
+      "bytes": 1214,
+      "sha256": "c781df9be271990e430c635a613c75efe815b3234e2f4b4b76fc41ffd44871cb"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/fine/beta_3.0_-1.txt",
+      "bytes": 1214,
+      "sha256": "59c41782cbd07d27c79679964bad365fa69c18d6298f6bcc6f8118646a73259c"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/fine/beta_3.0_1.txt",
+      "bytes": 1214,
+      "sha256": "bcd40bb5ded78e9580aab0a58a269c5336028f3bdd501519a74139c9712a3e07"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/fine/commands.txt",
+      "bytes": 1144,
+      "sha256": "4fd1133a5ee6265409f950249c405ddab36a15fa1ec1da29f66939654ba7b468"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/fine/neutral.txt",
+      "bytes": 1214,
+      "sha256": "8718ad0d903de41b0b8bb95c5e09b6e56c21a696bac37524d90abf37f1eb215f"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/fine/rudder_2.5_-1.txt",
+      "bytes": 1214,
+      "sha256": "9fcd1a92ac89a8185a466a4716d0ed118b3185d9d99fae8582c9a639ac177982"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/fine/rudder_2.5_1.txt",
+      "bytes": 1214,
+      "sha256": "67ef6c6f7e0d6ef6ea825776065374b4bcdf6e6d97460c14bffca031fe1c3214"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/fine/rudder_5.0_-1.txt",
+      "bytes": 1214,
+      "sha256": "d85ecbc30cd856ad4da6901e26801353d72792fd77ef7bc98fc854e719c55917"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/fine/rudder_5.0_1.txt",
+      "bytes": 1214,
+      "sha256": "53e9867648891e5acd3cf217f11c16f2021128fd61dde6beb9d24984f5cef1a0"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/fine/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/fine/stability.txt",
+      "bytes": 3204,
+      "sha256": "ef2b86cc7ad92cc0f520c405d072328b69ee9a4bb98ed38f4eb7cc10058b897c"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/fine/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/fine/stdout.txt",
+      "bytes": 183531,
+      "sha256": "1badb4c1ba1674e1c0aaa903acfbc93f89868dd4763bf835d2f8ebee54ced126"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/fine/summary.json",
+      "bytes": 8155,
+      "sha256": "307e263bdb5d7c12c2de1b8bf336b980e9e0d75ec284411e9548ef7a957ac31d"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/fine/summary_before_parser_fix.json",
+      "bytes": 8043,
+      "sha256": "a45f620174d985c3359d82e5f3bc94e3037d77585afb6f64ae501838dd41a0d0"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/fine/tip_2.0_-1.txt",
+      "bytes": 1214,
+      "sha256": "9f4474ffcb4e6655e90e07985032f19588e0cb0842ecba23ba1df5d503bd7074"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/fine/tip_2.0_1.txt",
+      "bytes": 1214,
+      "sha256": "af7979370206b50c3c7afd6417c20148fac6dd158ac727dc6993a58f0cfd9a9c"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/fine/tip_4.0_-1.txt",
+      "bytes": 1214,
+      "sha256": "301be3dca48d24cb0aea68b9bebf7feb93e5ed2e856637a68420a455bb132b6a"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/fine/tip_4.0_1.txt",
+      "bytes": 1214,
+      "sha256": "9a2ed36138b43394ae4240dcd3a45c18033b6da9a0201b8802ca18edb5948a7e"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/fine/trim/aircraft.avl",
+      "bytes": 1640,
+      "sha256": "fba5001e957be3f9445e161b6a43adcda90546f3eba058434cd1e37321b2ca4f"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/fine/trim/commands.txt",
+      "bytes": 101,
+      "sha256": "d1166ee8591845c7442f82727c319fbb6895d58ebdb7ca0c19897515ff25c781"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/fine/trim/forces.txt",
+      "bytes": 1214,
+      "sha256": "5d25eac50e998fbbc6172cec422fabb2f1b2586f5c250e53ffe011e8ddade7c8"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/fine/trim/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/fine/trim/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface02/fine/trim/stdout.txt",
+      "bytes": 16355,
+      "sha256": "b852d792ada62d7822ee64b127cd6078f386b5152600c0cc2fc6a4aa77a4fe37"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_corrected_surface_screen.py",
+      "bytes": 6439,
+      "sha256": "dec888f97409386ed5b17cb0556f346ca8155a3cb3ad6ffe4e608c133607af11"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_expanded_retrim.py",
+      "bytes": 2993,
+      "sha256": "14710645fe40e1b16d36d8220b6a6987603450beb97fe86ae28b8e595c67a007"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_expanded_retrim01/aircraft.avl",
+      "bytes": 1427,
+      "sha256": "1464a8bc3b3155aafe8f053739e0bb752ae83be89cd3b1b2bb781d93f227d572"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_expanded_retrim01/commands.txt",
+      "bytes": 118,
+      "sha256": "84cb4724c474aacd78256d383988be8b714a284f7ece1ed99e985dc5f57f7482"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_expanded_retrim01/forces.txt",
+      "bytes": 1214,
+      "sha256": "4820f5b2b5f31a4b060143ebb48f752d5ce1d52d9589d06bda6b343f9a9f000e"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_expanded_retrim01/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_expanded_retrim01/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_expanded_retrim01/stdout.txt",
+      "bytes": 16290,
+      "sha256": "0cc3bb423d2825070717d58f707ece85fd41b8d809bbbf7cc32a8550eb9632b4"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_expanded_retrim01/summary.json",
+      "bytes": 999,
+      "sha256": "92d1e4d3e82352fd2f724ca6bc33237e641b6adc1f066eadfb480e7e5cb78060"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_derivative_gate.py",
+      "bytes": 5089,
+      "sha256": "6145fb0d2ac189bf815b3c8863bfca3f1ee721340883373c128e3b462969ccc8"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_derivative_gate01.json",
+      "bytes": 5765,
+      "sha256": "736869ce303e62615fcbb0daac8c45f8d50cf11b35acc4507e6fcc2a24641492"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_geometry_probe.py",
+      "bytes": 3030,
+      "sha256": "efd0da63b4c6cd65713443e088b4ac08f9a82298d89c7aa661ba1ff65c892701"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_geometry_probe01/original_wing_plus_vertical/aircraft.avl",
+      "bytes": 1129,
+      "sha256": "82b18ee7b6b926d69afb23b3fce13ce548a1b03322e2924f60f17a8923e171f6"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_geometry_probe01/original_wing_plus_vertical/commands.txt",
+      "bytes": 91,
+      "sha256": "c41623b762de2179eac37dc96bbc5b69a213868c192a5c717b96744b5f70ad47"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_geometry_probe01/original_wing_plus_vertical/forces.txt",
+      "bytes": 1182,
+      "sha256": "047ddadbb7875fd454ff95d1d4cd641b37d67782d196e09315bc86b9ad18d4ea"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_geometry_probe01/original_wing_plus_vertical/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_geometry_probe01/original_wing_plus_vertical/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_geometry_probe01/original_wing_plus_vertical/stdout.txt",
+      "bytes": 12073,
+      "sha256": "070d58ee499c3a713ef3eb0758cb7e224e491aabbbd1ba1ec84e102cbd86e5f2"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_geometry_probe01/split_tip_only/aircraft.avl",
+      "bytes": 1047,
+      "sha256": "8fb68b82f3fa173d491884d5f7e8aeced5a31f1a95706e4e3cfbf48c4c555b79"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_geometry_probe01/split_tip_only/commands.txt",
+      "bytes": 91,
+      "sha256": "1323ee881b9cec238252667ffcd91aee50aa45d63aaae324559f808735b56da1"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_geometry_probe01/split_tip_only/forces.txt",
+      "bytes": 1182,
+      "sha256": "9c059598358ddba5e66839b6556bb78343cb38aaa208a9041cc9d20edf4c5ded"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_geometry_probe01/split_tip_only/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_geometry_probe01/split_tip_only/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_geometry_probe01/split_tip_only/stdout.txt",
+      "bytes": 12181,
+      "sha256": "731fd4ad18ec84d6c1a035b28728d6fecf2d13ae6251187f3b31217961a2a368"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_geometry_probe01/summary.json",
+      "bytes": 789,
+      "sha256": "c3e3a9afe0cc08c5cc2ff2dda461073f98c833124d5081bcbf8a68ebe7988704"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen.py",
+      "bytes": 8119,
+      "sha256": "fd22e8966df7477e5350c51196e3f2a5da227132655a781f9273c857c18b8c51"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/coarse/aircraft.avl",
+      "bytes": 1418,
+      "sha256": "09588d2fed9867b0cb88270f36f240b1209766bff58a2e42b5f3b208da963468"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/coarse/beta_minus.txt",
+      "bytes": 1214,
+      "sha256": "456e678b2f39b869f84c1cc1a67d76a3382778c880711a3207c8a1bc00c60e18"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/coarse/beta_plus.txt",
+      "bytes": 1214,
+      "sha256": "94de24624a3ec2161798a1592e52474e7205c49aae9b00e584787d33fa607c8c"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/coarse/commands.txt",
+      "bytes": 874,
+      "sha256": "f9d90e2d92ecb783ab9b3481c9fbd44d6d5d6ea1cbe760f194395667ba879ab4"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/coarse/neutral.txt",
+      "bytes": 1214,
+      "sha256": "2555d0983bee3f91c88f9e8e83e1c5093465fdd078fc24769c88e250182d726a"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/coarse/roll_minus.txt",
+      "bytes": 1214,
+      "sha256": "2765f0cdffcdc346bb92cc6e21be97f241dc9ab4fe4eca6cc2a23bc6d3cf181b"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/coarse/roll_plus.txt",
+      "bytes": 1214,
+      "sha256": "49fb76300c8ca16fde13382c269895ad708eac2f4f170a89b828f21bb3d6c6e4"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/coarse/rudder_minus.txt",
+      "bytes": 1214,
+      "sha256": "1613ed56ff6938c7dd694d8df8d6b26ea4ee595f91a0ede4b36d685cfa26a7d1"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/coarse/rudder_plus.txt",
+      "bytes": 1214,
+      "sha256": "8596ac9c10b2979c63efb6d32e01376de7e10ec66ae6a8e49a824ac3214a58e0"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/coarse/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/coarse/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/coarse/stdout.txt",
+      "bytes": 99757,
+      "sha256": "5627ff1bfbcee6f6ecc0072243b8a90157046ffd8f74d959990443b68aa19413"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/coarse_retrim/aircraft.avl",
+      "bytes": 1418,
+      "sha256": "09588d2fed9867b0cb88270f36f240b1209766bff58a2e42b5f3b208da963468"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/coarse_retrim/beta_minus.txt",
+      "bytes": 1214,
+      "sha256": "5a4b00ccedf9335dc7da9cdf9619e03edc35af5b75695624675c7adbd0aec553"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/coarse_retrim/beta_plus.txt",
+      "bytes": 1214,
+      "sha256": "9ff14f358b916596ec7591292e5aace10583218715dbf70e6c5d56f12dc4c2c7"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/coarse_retrim/commands.txt",
+      "bytes": 874,
+      "sha256": "dd5b7c16a012d68a40ff91dd1b6439da4dc3c8746430f302c39ee561a92ee44a"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/coarse_retrim/neutral.txt",
+      "bytes": 1214,
+      "sha256": "0a8475f21a0570cd5b45ea1f6c1640e0e6b8a22bbe9a9087dfaaba11de9656dd"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/coarse_retrim/roll_minus.txt",
+      "bytes": 1214,
+      "sha256": "f6b33b62d8ac75bd0dfe482b0cd24e600deb75fb723cee4b2ca6cd6e8d5eceb8"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/coarse_retrim/roll_plus.txt",
+      "bytes": 1214,
+      "sha256": "fa5da9bd6aabdb145260f28c065e6b978c91b5498e4df8d55b82c5ecce79cff0"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/coarse_retrim/rudder_minus.txt",
+      "bytes": 1214,
+      "sha256": "0017e2fd1c275f7a7661eb5d039f1ffa41dbaf55f09adddf042548a9cf234c29"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/coarse_retrim/rudder_plus.txt",
+      "bytes": 1214,
+      "sha256": "68adf754a25f8217b28950c7359b88f175aa78b12d4344d4f82d24d504490ac1"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/coarse_retrim/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/coarse_retrim/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/coarse_retrim/stdout.txt",
+      "bytes": 99757,
+      "sha256": "cd401d60ed10a42532e71d8f0d53b8ae2b613f813a547b04e103997e3fa71694"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/coarse_retrim_summary.json",
+      "bytes": 4475,
+      "sha256": "72cb6886bb091a68e16f74636f8c9052f0a9ad2ca43ecc69c167863548998692"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/coarse_summary.json",
+      "bytes": 4390,
+      "sha256": "7e42ba8500fc14dad593ad809febb1a30a0a28ff6fe789d17c9e341e2c1aab8b"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/fine/aircraft.avl",
+      "bytes": 1427,
+      "sha256": "1464a8bc3b3155aafe8f053739e0bb752ae83be89cd3b1b2bb781d93f227d572"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/fine/beta_minus.txt",
+      "bytes": 1214,
+      "sha256": "991d092608d803790cd1a622c2a57fde8baaba302c78c483bbd82e0193a4079e"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/fine/beta_plus.txt",
+      "bytes": 1214,
+      "sha256": "5429c469e644fa214bf1d2b20ebe5186a0ae220df8038246750781da1e6ffa21"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/fine/commands.txt",
+      "bytes": 874,
+      "sha256": "f9d90e2d92ecb783ab9b3481c9fbd44d6d5d6ea1cbe760f194395667ba879ab4"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/fine/neutral.txt",
+      "bytes": 1214,
+      "sha256": "b42912d1467ea0e1f3ebed825303452c93f5b0ee5a02dc4341d674daff5320ce"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/fine/roll_minus.txt",
+      "bytes": 1214,
+      "sha256": "46e606437e05acf48adedf8efa670062eb7d2237d7cf9e32bc9c9dbb5d0e37dd"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/fine/roll_plus.txt",
+      "bytes": 1214,
+      "sha256": "a2456e940064547f9199f5187eef7be0221bc5c4fd739e91dc507afd26119fe5"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/fine/rudder_minus.txt",
+      "bytes": 1214,
+      "sha256": "37b5aece75d7c1eb2b35dabaedb0e65cca1544efdaad4d60fd1b76ec33f9fca3"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/fine/rudder_plus.txt",
+      "bytes": 1214,
+      "sha256": "9882e42df254fc5eda7b88986541f08cdfa53b0b52580c969cb4a48fc98799f3"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/fine/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/fine/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/fine/stdout.txt",
+      "bytes": 99757,
+      "sha256": "326a4571260cc4f90a1c085321fcb5faf6175ad3123b7270a737ad50d7a395d1"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/fine_retrim/aircraft.avl",
+      "bytes": 1427,
+      "sha256": "1464a8bc3b3155aafe8f053739e0bb752ae83be89cd3b1b2bb781d93f227d572"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/fine_retrim/beta_minus.txt",
+      "bytes": 1214,
+      "sha256": "a220fff44a269961a28eb5d86b928aba7826e2acbaf869c703a69119f8270578"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/fine_retrim/beta_plus.txt",
+      "bytes": 1214,
+      "sha256": "9c0ec0f951ca81d345ad1eb2c33abcbfdf08189e6abb339da5dc82263f6ca68a"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/fine_retrim/commands.txt",
+      "bytes": 874,
+      "sha256": "dd5b7c16a012d68a40ff91dd1b6439da4dc3c8746430f302c39ee561a92ee44a"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/fine_retrim/neutral.txt",
+      "bytes": 1214,
+      "sha256": "4820f5b2b5f31a4b060143ebb48f752d5ce1d52d9589d06bda6b343f9a9f000e"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/fine_retrim/roll_minus.txt",
+      "bytes": 1214,
+      "sha256": "01471af1d60e2e37c011f9f3af74040f30052c5ea30af9f9b4d42e3f31e17003"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/fine_retrim/roll_plus.txt",
+      "bytes": 1214,
+      "sha256": "03850353cf6524a2b133e3005aeefd1db37a32ea9fc397a317ab435722cb2daa"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/fine_retrim/rudder_minus.txt",
+      "bytes": 1214,
+      "sha256": "c953c95e1b6bd368fcd362c87faad7728600b3490ae438b485e7e1bbd4da629a"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/fine_retrim/rudder_plus.txt",
+      "bytes": 1214,
+      "sha256": "aa2179ff641a371ac2b291b473020c1192724ccc867c11e08b677f533b454a4a"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/fine_retrim/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/fine_retrim/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/fine_retrim/stdout.txt",
+      "bytes": 99757,
+      "sha256": "a09d09f282d8ed328fb7188c991926c21ce60e6013bf9c4ee49c31ff874d08eb"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/fine_retrim_summary.json",
+      "bytes": 4462,
+      "sha256": "8fa92b2234ce47e7d95372a1fa5e93a4d5b8cf5eb816e2604915ad6182cce6ca"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_lateral_screen01/fine_summary.json",
+      "bytes": 4376,
+      "sha256": "648cadb1f744205da4b106860e6fa3b53bd16711900098936935a6ddb8d0fc88"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_loading_gate.py",
+      "bytes": 4101,
+      "sha256": "c86b6f6e891abb7dbaf75c2f37595345cc8cc442dd200deb23fd846201f97b31"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_loading_gate01.json",
+      "bytes": 6107,
+      "sha256": "67ecc5d1746e4a4c7c042659ec9ce77764b5ca0ff3c0a3552e4553779cab8fee"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_six_axis_acceptance_gate01.json",
+      "bytes": 3611,
+      "sha256": "82da8ba65612bc1c728a496cce02c115814b9eb71b41e1a8e23a5e0d31a920d3"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_static_margin_screen01.json",
+      "bytes": 2469,
+      "sha256": "55591864b8072b508cf36d955b0e5c6b3a529c5fb62f018ccdd3884dbc6a00d5"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade.py",
+      "bytes": 5826,
+      "sha256": "d9a68ab7b6592c667f66f80070103185f6ac10f90945e1a185d35c8428876879"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/audit.json",
+      "bytes": 1489,
+      "sha256": "5c832a5f1abd8096fb2460d524a33700d1060254657c100dd65fac9f29d309ed"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope.json",
+      "bytes": 10412,
+      "sha256": "4701f4ca99286a0a14145123f07a2e9e1390eb5d7b01a1d0fa772035c0c89606"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p65_x0.35_f0_coarse/aircraft.avl",
+      "bytes": 1652,
+      "sha256": "4a1fc5e79c79963147ed3cda790d94d326043e2afeeb575167447ca2aa4a4557"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p65_x0.35_f0_coarse/assumed_mass_ledger.json",
+      "bytes": 6803,
+      "sha256": "a656f5274ff371d77c7c8b41d477b37a4dd00395418f34f5e7b330d19625e34f"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p65_x0.35_f0_coarse/commands.txt",
+      "bytes": 119,
+      "sha256": "7721dd534280f6e25c4d8260a9c105c983ff76f5fb62a842b17efa805fa99ac9"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p65_x0.35_f0_coarse/forces.txt",
+      "bytes": 1214,
+      "sha256": "9fc63613418c3e92981aec8aa65773e02b3d46923b48a4dfba8cf37f2a7fce9f"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p65_x0.35_f0_coarse/result.json",
+      "bytes": 1044,
+      "sha256": "0e1f0d151db775b1dd23a0cef8457a900e13554c250838aac252798b0c398108"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p65_x0.35_f0_coarse/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p65_x0.35_f0_coarse/stability.txt",
+      "bytes": 3204,
+      "sha256": "4a6fa67078597cd8cba77b08f9bcf78ab7b773ec9e11b0d1a6e9f4863aaf3b3d"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p65_x0.35_f0_coarse/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p65_x0.35_f0_coarse/stdout.txt",
+      "bytes": 18142,
+      "sha256": "6cd1a0c8a36a74d3c92e73c6dc70ca8364caa9fff8d9bd7a2bdc66060959300b"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p65_x0.35_f8_coarse/aircraft.avl",
+      "bytes": 1652,
+      "sha256": "958083ab6ceb8c29e846e62aff2b925d0942e3e5d44670c33c47d3b67dc81bb4"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p65_x0.35_f8_coarse/assumed_mass_ledger.json",
+      "bytes": 6809,
+      "sha256": "97f8eb53c9ba8316f79c61e6dc9864155588aba875e09dae93baea86d9c96117"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p65_x0.35_f8_coarse/commands.txt",
+      "bytes": 119,
+      "sha256": "03c79a9e7c7ff0b23e4e88a823ab1183877cdd5ae72032391a641ff56f24a264"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p65_x0.35_f8_coarse/forces.txt",
+      "bytes": 1214,
+      "sha256": "8b0097a4695bb898be6bd97655d93c481409e74057273b9df2b9a17991c22556"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p65_x0.35_f8_coarse/result.json",
+      "bytes": 1047,
+      "sha256": "1ac9226593b1aa528cc2b5b06b19733936298e38b2136c05f9191fdf06ae8d5e"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p65_x0.35_f8_coarse/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p65_x0.35_f8_coarse/stability.txt",
+      "bytes": 3204,
+      "sha256": "2dabf1d934106904c92e85102ce9794da454ea12315297100d326bcc8ffae70c"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p65_x0.35_f8_coarse/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p65_x0.35_f8_coarse/stdout.txt",
+      "bytes": 18142,
+      "sha256": "66a1765380367c7abc61343463c5069d1bc808efd127d2ccb601e9ccc85c0dbf"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p75_x0.25_f8_coarse/aircraft.avl",
+      "bytes": 1652,
+      "sha256": "016f2e100acac1a4433f0713ecc98494287cabf5e91dea56887cf5aca2bd56aa"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p75_x0.25_f8_coarse/assumed_mass_ledger.json",
+      "bytes": 6770,
+      "sha256": "72bf51ac1437b7a4421e19f6603db1b1caae858520f17fd2789bcd4f326be1bc"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p75_x0.25_f8_coarse/commands.txt",
+      "bytes": 119,
+      "sha256": "48d96a61c95a2c2554a5d90820a6de8bfd6467696cb322d952cb71a27b32d811"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p75_x0.25_f8_coarse/forces.txt",
+      "bytes": 1214,
+      "sha256": "ba40731a3fde3884f92be4ef6b66a6d46ee31c562d87cd19362055c1aa437bab"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p75_x0.25_f8_coarse/result.json",
+      "bytes": 1035,
+      "sha256": "45eb36c5a020c02192bd029e6336c1b9515716a6d0de86cd0792ef34c38d5630"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p75_x0.25_f8_coarse/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p75_x0.25_f8_coarse/stability.txt",
+      "bytes": 3204,
+      "sha256": "a4433d95f67a025b87aab22165b094d0f5f48b2b82cac1b2431ba20f7cab0b3a"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p75_x0.25_f8_coarse/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p75_x0.25_f8_coarse/stdout.txt",
+      "bytes": 18142,
+      "sha256": "ca79e685e248217b6260f588f13ec2a458def8e6ba75c71c9c4c17437529735c"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p75_x0.30_f0_coarse/aircraft.avl",
+      "bytes": 1652,
+      "sha256": "8283554e19260b85921f7fabe157cb9308cb67aeb5b461a285e43a6b7f80940d"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p75_x0.30_f0_coarse/assumed_mass_ledger.json",
+      "bytes": 6763,
+      "sha256": "e054f26a0340b70611334c3f0c3e0729561733bec355ffd57d22d78e240fb083"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p75_x0.30_f0_coarse/commands.txt",
+      "bytes": 119,
+      "sha256": "3e3d08f5f754dc3110eedf83954ea59ed7c8f201fb1f1fa3eb81efa4118e158f"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p75_x0.30_f0_coarse/forces.txt",
+      "bytes": 1214,
+      "sha256": "2690d9bd9a31ca5ab0e8d5daa12bd82937b2438a75bc3281a0fd4e87cb6aa971"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p75_x0.30_f0_coarse/result.json",
+      "bytes": 1033,
+      "sha256": "0359b9f45beb449fcb2f61731d76eb5db68d00ef7ed1e67b0d322e541d047dc2"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p75_x0.30_f0_coarse/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p75_x0.30_f0_coarse/stability.txt",
+      "bytes": 3204,
+      "sha256": "a55ba3a85187d27505bcfdb974ba66289eb3b5d334a97a1ae7d3876cf8057c3d"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p75_x0.30_f0_coarse/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p75_x0.30_f0_coarse/stdout.txt",
+      "bytes": 18142,
+      "sha256": "bb8e0c621ab916943306e57ef71146281f759e79c544720103f622ecaa58d4c3"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p75_x0.30_f8_coarse/aircraft.avl",
+      "bytes": 1652,
+      "sha256": "cb39c9ad413da36557d54c0b2d7a34cc0bcb9fedde6021214688b9958ef342a6"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p75_x0.30_f8_coarse/assumed_mass_ledger.json",
+      "bytes": 6769,
+      "sha256": "4545d6f4c3f1d4191ff631a072dd710920d4717a9365a062be3f54f1f5e85bfb"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p75_x0.30_f8_coarse/commands.txt",
+      "bytes": 119,
+      "sha256": "48d96a61c95a2c2554a5d90820a6de8bfd6467696cb322d952cb71a27b32d811"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p75_x0.30_f8_coarse/forces.txt",
+      "bytes": 1214,
+      "sha256": "1634b963d5b868b60510745dd7c048bdc9a54153544b02629f602097fec28d7f"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p75_x0.30_f8_coarse/result.json",
+      "bytes": 1045,
+      "sha256": "6262d020f85995775f057b0c7a2eaeda994caa0fc7da697048e650c7d4168d1e"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p75_x0.30_f8_coarse/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p75_x0.30_f8_coarse/stability.txt",
+      "bytes": 3204,
+      "sha256": "636980cc8ab53373ff4ebe281cce9f64e9a3bbb0d7043f322551e8841fbcac86"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p75_x0.30_f8_coarse/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p75_x0.30_f8_coarse/stdout.txt",
+      "bytes": 18142,
+      "sha256": "9325243856d2294b25043e51c6c8551f7f69541cfb285b66abe47676821ae3e3"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p75_x0.35_f8_coarse/aircraft.avl",
+      "bytes": 1652,
+      "sha256": "3c39d59d8990e9c68db63e8f2c5ec759c192221868ff1ad10bbbcc8a51e48e8e"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p75_x0.35_f8_coarse/assumed_mass_ledger.json",
+      "bytes": 6770,
+      "sha256": "0052f467097f91127d26a259d6ea68574a72c73a52e3f98cb8309afa22a3d9d2"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p75_x0.35_f8_coarse/commands.txt",
+      "bytes": 119,
+      "sha256": "48d96a61c95a2c2554a5d90820a6de8bfd6467696cb322d952cb71a27b32d811"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p75_x0.35_f8_coarse/forces.txt",
+      "bytes": 1214,
+      "sha256": "802efca3be44d04b2771af576acd55d8c4573bd0df974138f2e3b50fe8d66604"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p75_x0.35_f8_coarse/result.json",
+      "bytes": 1048,
+      "sha256": "c010e7a4b6a14873cf84807aae4a0a216c2ff07108daf96d76994d76dcb5e449"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p75_x0.35_f8_coarse/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p75_x0.35_f8_coarse/stability.txt",
+      "bytes": 3204,
+      "sha256": "e1050f5cda9ac9d66e6d1a0d7f09c1c8895c0e25fc53446cdd449200aa048da2"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p75_x0.35_f8_coarse/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p75_x0.35_f8_coarse/stdout.txt",
+      "bytes": 18142,
+      "sha256": "129ba340f910cde5317935a2f917063338ab78bdb03848a6f8f7c86c796ffcd8"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p85_x0.25_f0_coarse/aircraft.avl",
+      "bytes": 1652,
+      "sha256": "507f7118a9ea1278b13fea1d4e3ac1ac59c41af6cfd6887d4247bb850f552e56"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p85_x0.25_f0_coarse/assumed_mass_ledger.json",
+      "bytes": 6781,
+      "sha256": "5048c400249f6748368b8a0cdb453cb4731fe466ba09649d6128a698bdf4e2fc"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p85_x0.25_f0_coarse/commands.txt",
+      "bytes": 119,
+      "sha256": "7b8fc2f3988e5956a0b5d0ff549f18271cd6cb19a5be7452f3899fe6ca9d6f8c"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p85_x0.25_f0_coarse/forces.txt",
+      "bytes": 1214,
+      "sha256": "619e24a0c032087a389797ce5fc8e4547632e0d05ffbd78f0c5b7391e791b096"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p85_x0.25_f0_coarse/result.json",
+      "bytes": 1048,
+      "sha256": "c464f4d2d105c116e303ab5edaa58914d88751dfb944e9e65d146d1f9c14d946"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p85_x0.25_f0_coarse/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p85_x0.25_f0_coarse/stability.txt",
+      "bytes": 3204,
+      "sha256": "8b9d6ab1ad2184eab18acd970dc3d17b41973c4d6e2bbe9a4cade33c90876d21"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p85_x0.25_f0_coarse/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p85_x0.25_f0_coarse/stdout.txt",
+      "bytes": 18142,
+      "sha256": "ad6f1c9d481689f04d4034edcd1702160bcb3151348668bf5b5b07942156403f"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p85_x0.25_f8_coarse/aircraft.avl",
+      "bytes": 1652,
+      "sha256": "84f8e88f98c3ebf708c5b8d8a588776aa44a13952a0b23cc89054ecc9639887e"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p85_x0.25_f8_coarse/assumed_mass_ledger.json",
+      "bytes": 6787,
+      "sha256": "51276fbf66b71fe2e631efedcbdce63ea6d34b290604fce3c748b934ead7bc62"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p85_x0.25_f8_coarse/commands.txt",
+      "bytes": 119,
+      "sha256": "34b38e41fc22514446c93de1c157b3db8be4e190aa505470d867c3048d82439e"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p85_x0.25_f8_coarse/forces.txt",
+      "bytes": 1214,
+      "sha256": "71aa9fa04d3cf595ef57bd0ee46f347b8ff05dacedbd08540d2b34b5d1e8e4e3"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p85_x0.25_f8_coarse/result.json",
+      "bytes": 1043,
+      "sha256": "25a8a86ef7bca469e4160baf5cbfbcbf14d6354e2018624a1d96f6444a509749"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p85_x0.25_f8_coarse/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p85_x0.25_f8_coarse/stability.txt",
+      "bytes": 3204,
+      "sha256": "6670a1bc6e45e77528202ab3293b5d37604e690fd4ecde8df42aefc19edccaf7"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p85_x0.25_f8_coarse/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/envelope_s1.75_p85_x0.25_f8_coarse/stdout.txt",
+      "bytes": 18142,
+      "sha256": "d4a5ef9496d63efdaf9edf398fd40eb537e478c69ed1ac6760e7e0a9a53d6fb6"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/fine.json",
+      "bytes": 3232,
+      "sha256": "d568a25a4c8676c73a869bca35b3f3ba38574f2b9fdde86ff103a66e162043f2"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/fine_s1.75_p65_x0.35_f0_fine/aircraft.avl",
+      "bytes": 1661,
+      "sha256": "314b19f024f6747e68e06d8d13221f56e317e98d7ef60a932f0a13250bee64fc"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/fine_s1.75_p65_x0.35_f0_fine/assumed_mass_ledger.json",
+      "bytes": 6803,
+      "sha256": "a656f5274ff371d77c7c8b41d477b37a4dd00395418f34f5e7b330d19625e34f"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/fine_s1.75_p65_x0.35_f0_fine/commands.txt",
+      "bytes": 119,
+      "sha256": "7721dd534280f6e25c4d8260a9c105c983ff76f5fb62a842b17efa805fa99ac9"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/fine_s1.75_p65_x0.35_f0_fine/forces.txt",
+      "bytes": 1214,
+      "sha256": "bc367617fa4c7ce094606dd8a3391f314a95b19e1569b47eb8d5b7c1d6fcdb4b"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/fine_s1.75_p65_x0.35_f0_fine/result.json",
+      "bytes": 1039,
+      "sha256": "720d76aca94f449f4827bb56476654b5e6a0fe55a7826a834a71ac2b624c87fd"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/fine_s1.75_p65_x0.35_f0_fine/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/fine_s1.75_p65_x0.35_f0_fine/stability.txt",
+      "bytes": 3204,
+      "sha256": "a6bb277aa1b882d2e4113faa7220901e32a18a3c1f038624f8253674b0d51e56"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/fine_s1.75_p65_x0.35_f0_fine/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/fine_s1.75_p65_x0.35_f0_fine/stdout.txt",
+      "bytes": 18142,
+      "sha256": "4f8eeade10b7063e5f71d2aa5baee84f49554cca214ab3cb8319134bdfb17de9"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/fine_s1.75_p65_x0.35_f8_fine/aircraft.avl",
+      "bytes": 1661,
+      "sha256": "76a99fc480b9f54d14d86a1c5d287a52c6ad691d65b13414c316beebabd40c81"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/fine_s1.75_p65_x0.35_f8_fine/assumed_mass_ledger.json",
+      "bytes": 6809,
+      "sha256": "97f8eb53c9ba8316f79c61e6dc9864155588aba875e09dae93baea86d9c96117"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/fine_s1.75_p65_x0.35_f8_fine/commands.txt",
+      "bytes": 119,
+      "sha256": "03c79a9e7c7ff0b23e4e88a823ab1183877cdd5ae72032391a641ff56f24a264"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/fine_s1.75_p65_x0.35_f8_fine/forces.txt",
+      "bytes": 1214,
+      "sha256": "ea6233715de1758007a8fd2a3a5be6ca3f474233d74077f7d700c484794ea7ef"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/fine_s1.75_p65_x0.35_f8_fine/result.json",
+      "bytes": 1042,
+      "sha256": "e67c6fd1eae82ef61a1ec08fa7f9831a9bcdbae9c2933771f252839f0cc4f4e1"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/fine_s1.75_p65_x0.35_f8_fine/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/fine_s1.75_p65_x0.35_f8_fine/stability.txt",
+      "bytes": 3204,
+      "sha256": "93be8e34941222cfde1f1e5fc8bba6fc0fb87f7d54e49212f7a28a71083c8ef1"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/fine_s1.75_p65_x0.35_f8_fine/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/fine_s1.75_p65_x0.35_f8_fine/stdout.txt",
+      "bytes": 18142,
+      "sha256": "40d2706d6f133ce2fbdafa7df80eba20a8a125c5dd13eda1f757bbc88a1188aa"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/trade.json",
+      "bytes": 4398,
+      "sha256": "5fc694d0ecc3e2de92b20e765091594bd0e03474e5794320700d6718b5158ef6"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/trade_extended.json",
+      "bytes": 5604,
+      "sha256": "bd22402f3b9d42fbf1d21abbae7a91a05bc55541c80c1dbc569c27c939295d2d"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/trade_extended_s1.75_p65_x0.35_f8_coarse/aircraft.avl",
+      "bytes": 1652,
+      "sha256": "958083ab6ceb8c29e846e62aff2b925d0942e3e5d44670c33c47d3b67dc81bb4"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/trade_extended_s1.75_p65_x0.35_f8_coarse/assumed_mass_ledger.json",
+      "bytes": 6809,
+      "sha256": "97f8eb53c9ba8316f79c61e6dc9864155588aba875e09dae93baea86d9c96117"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/trade_extended_s1.75_p65_x0.35_f8_coarse/commands.txt",
+      "bytes": 119,
+      "sha256": "03c79a9e7c7ff0b23e4e88a823ab1183877cdd5ae72032391a641ff56f24a264"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/trade_extended_s1.75_p65_x0.35_f8_coarse/forces.txt",
+      "bytes": 1214,
+      "sha256": "8b0097a4695bb898be6bd97655d93c481409e74057273b9df2b9a17991c22556"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/trade_extended_s1.75_p65_x0.35_f8_coarse/result.json",
+      "bytes": 1053,
+      "sha256": "290d7ea648418ea58f8ecee813094208a578132c8ffbdc4e1b5474c1e891d9bc"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/trade_extended_s1.75_p65_x0.35_f8_coarse/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/trade_extended_s1.75_p65_x0.35_f8_coarse/stability.txt",
+      "bytes": 3204,
+      "sha256": "2dabf1d934106904c92e85102ce9794da454ea12315297100d326bcc8ffae70c"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/trade_extended_s1.75_p65_x0.35_f8_coarse/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/trade_extended_s1.75_p65_x0.35_f8_coarse/stdout.txt",
+      "bytes": 18142,
+      "sha256": "66a1765380367c7abc61343463c5069d1bc808efd127d2ccb601e9ccc85c0dbf"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/trade_s1.15_p65_x0.35_f8_coarse/aircraft.avl",
+      "bytes": 1652,
+      "sha256": "91e80b060e2fcab5ef807014bc308399da956373322d23276b83f4a439a59ad6"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/trade_s1.15_p65_x0.35_f8_coarse/assumed_mass_ledger.json",
+      "bytes": 6837,
+      "sha256": "1555142fcac8e9f56ba29b87ae5be01be364053258d442469d232912a5e9ca77"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/trade_s1.15_p65_x0.35_f8_coarse/commands.txt",
+      "bytes": 119,
+      "sha256": "82ec92149d9c9716a0bb3269c4d0fd17b56e4e2336eeba6298bd706d1a372291"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/trade_s1.15_p65_x0.35_f8_coarse/forces.txt",
+      "bytes": 1214,
+      "sha256": "bb05827c777646af82ecf2ddb5158b1da1e0065dad6ffd78426a8363a6e15c09"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/trade_s1.15_p65_x0.35_f8_coarse/result.json",
+      "bytes": 1039,
+      "sha256": "daf9da083e74c79814d9e41479d14c9dbb0c9079d54fe755625e6c904c2e115e"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/trade_s1.15_p65_x0.35_f8_coarse/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/trade_s1.15_p65_x0.35_f8_coarse/stability.txt",
+      "bytes": 3204,
+      "sha256": "641748ba7f0c7013e162c706594823d1ef496c01750fc0ed7c292d8054b5b2f1"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/trade_s1.15_p65_x0.35_f8_coarse/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/trade_s1.15_p65_x0.35_f8_coarse/stdout.txt",
+      "bytes": 18142,
+      "sha256": "03b48467ed3ef58f6feadd674216c79b7f3913713ed34b60df2cfd29521bb70c"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/trade_s1.30_p65_x0.35_f8_coarse/aircraft.avl",
+      "bytes": 1652,
+      "sha256": "5e1d2381b51fd40e7ba0cd59f7dfa31177145b41905be6e85d8176a872f2ad81"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/trade_s1.30_p65_x0.35_f8_coarse/assumed_mass_ledger.json",
+      "bytes": 6811,
+      "sha256": "abd404d8c0fa5bacd7b764d6b9f8da7dcee1b7233f5ad02dccd0a9f2ceb006e4"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/trade_s1.30_p65_x0.35_f8_coarse/commands.txt",
+      "bytes": 119,
+      "sha256": "b0c896bc7981bcc5dfe2441e843743e1b185c1603f149029da3347e7895f1ab3"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/trade_s1.30_p65_x0.35_f8_coarse/forces.txt",
+      "bytes": 1214,
+      "sha256": "206fd628bf7c89a21f1ea725a43ad95cad797109217718b9f0fc93e6e2fede3c"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/trade_s1.30_p65_x0.35_f8_coarse/result.json",
+      "bytes": 1023,
+      "sha256": "8cb5526955f79c3a0e1cda6bde19c373ba3cc0dedf724e79ea8bdd0a8fc4724b"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/trade_s1.30_p65_x0.35_f8_coarse/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/trade_s1.30_p65_x0.35_f8_coarse/stability.txt",
+      "bytes": 3204,
+      "sha256": "6035ea29df7330ae0b68ff327746b2de7421eeec97771b2fc8d40ba1bc2a0539"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/trade_s1.30_p65_x0.35_f8_coarse/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/trade_s1.30_p65_x0.35_f8_coarse/stdout.txt",
+      "bytes": 18142,
+      "sha256": "594960e6505fe30f23abebb4dcea975c5ee703624dad40182dcc9ca19bcb99c9"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/trade_s1.50_p65_x0.35_f8_coarse/aircraft.avl",
+      "bytes": 1652,
+      "sha256": "82413bbc3d9a7100bbd332a2eeb64e61f5d32ae33bb0cbe1c1242446724bfff1"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/trade_s1.50_p65_x0.35_f8_coarse/assumed_mass_ledger.json",
+      "bytes": 6777,
+      "sha256": "7687d1fb8193d9b8b13c31806797119cbd6fc24421fd863dc5fa126739f8f785"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/trade_s1.50_p65_x0.35_f8_coarse/commands.txt",
+      "bytes": 119,
+      "sha256": "15ec276c44e9d6cd54e245a26f3df9034e4ea77fb946d32bf0225fe42ef975d8"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/trade_s1.50_p65_x0.35_f8_coarse/forces.txt",
+      "bytes": 1214,
+      "sha256": "5e2f64364643af21adee101688636c0bf057e3309a18d299110cdd3d4c362458"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/trade_s1.50_p65_x0.35_f8_coarse/result.json",
+      "bytes": 1032,
+      "sha256": "7a07d3fb711dbc402a121a946e1124856d64b8fe76c7dbeddc5ecc96f1d9e5d8"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/trade_s1.50_p65_x0.35_f8_coarse/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/trade_s1.50_p65_x0.35_f8_coarse/stability.txt",
+      "bytes": 3204,
+      "sha256": "3904c9c9c26eb4610e85c37f86a01bad82814da45874b03074aaa746a096493b"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/trade_s1.50_p65_x0.35_f8_coarse/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v15_fable_tail_trade01/trade_s1.50_p65_x0.35_f8_coarse/stdout.txt",
+      "bytes": 18142,
+      "sha256": "d9fdf9d0572478b725726cf2ac7e934bb973d36deca3106538ec49de13df7918"
+    },
+    {
+      "path": "manuscript/audit_data/v15_first_pass_65023104.json",
+      "bytes": 3011,
+      "sha256": "56180bc00b9833d0d06f48fd1d505053d9e3c7a2b5c533db58174e56f85218fc"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_reinforcement_sensitivity.py",
+      "bytes": 2029,
+      "sha256": "689d82e70ad7ded25fcac09b023ad5699c5515f06411d879705e785c6f76974e"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_reinforcement_sensitivity01/plus2kg_s1.75_p65_x0.35_f0_fine/aircraft.avl",
+      "bytes": 1661,
+      "sha256": "ba28311a18329bce1738595d9afa0fd394e6586f1c7a603ffd3bbe6ab9c30172"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_reinforcement_sensitivity01/plus2kg_s1.75_p65_x0.35_f0_fine/assumed_mass_ledger.json",
+      "bytes": 7120,
+      "sha256": "33e1e77caf931514e010c5e3113889ec236ede10455a4f37cc32417e20cdc1db"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_reinforcement_sensitivity01/plus2kg_s1.75_p65_x0.35_f0_fine/commands.txt",
+      "bytes": 119,
+      "sha256": "052b26e12dfb372e804581b607019151509532a73097ca937cc2e63eeece9673"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_reinforcement_sensitivity01/plus2kg_s1.75_p65_x0.35_f0_fine/forces.txt",
+      "bytes": 1214,
+      "sha256": "e212a20b750f7fea5ba730a9090f91d807b9dc380fde26d49b194c8ed606a23e"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_reinforcement_sensitivity01/plus2kg_s1.75_p65_x0.35_f0_fine/result.json",
+      "bytes": 1046,
+      "sha256": "4de3305fb965ac7fe9cc0ac83ac294a36ccbd9dc6839a0a5eaeca41fdda1d78f"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_reinforcement_sensitivity01/plus2kg_s1.75_p65_x0.35_f0_fine/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_reinforcement_sensitivity01/plus2kg_s1.75_p65_x0.35_f0_fine/stability.txt",
+      "bytes": 3204,
+      "sha256": "9014ee546764426d2f12c4d7f6428a2667cd8901dda82fd582c3060cd568a1b9"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_reinforcement_sensitivity01/plus2kg_s1.75_p65_x0.35_f0_fine/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_reinforcement_sensitivity01/plus2kg_s1.75_p65_x0.35_f0_fine/stdout.txt",
+      "bytes": 18142,
+      "sha256": "20885982d106ef532b1882389952a532b0192278af9aa679770cb8b57935f942"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_reinforcement_sensitivity01/summary.json",
+      "bytes": 2177,
+      "sha256": "0df100c4247e4448944191d47fa5e939745c70a6942849861381bf97d983e0f5"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_spar_mass_loop.py",
+      "bytes": 4237,
+      "sha256": "32d10f8d81a60e77cd0d152492ae121b8dd8b012e72b7f9027b099351199e7d0"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_spar_mass_loop01/added_box20mm_s1.75_p65_x0.35_f0_coarse/aircraft.avl",
+      "bytes": 1652,
+      "sha256": "023452f541e7fa56caf5f29cd4861dbdfab884100b52a3047e125a344ad37e04"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_spar_mass_loop01/added_box20mm_s1.75_p65_x0.35_f0_coarse/assumed_mass_ledger.json",
+      "bytes": 7425,
+      "sha256": "4fc23be4cc379fd6b0bf4f8af2cc477b5f2c3e7d4cb3f4d7d92c0ffc128fcc88"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_spar_mass_loop01/added_box20mm_s1.75_p65_x0.35_f0_coarse/commands.txt",
+      "bytes": 119,
+      "sha256": "bec3abb58c4bdabe3ea66ffc357052e276d590100cec1557272ae74c52f307bf"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_spar_mass_loop01/added_box20mm_s1.75_p65_x0.35_f0_coarse/forces.txt",
+      "bytes": 1214,
+      "sha256": "c829880e37adffd31b01bb682c527301fa21571d6b592c9201fd1fe5c361dd40"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_spar_mass_loop01/added_box20mm_s1.75_p65_x0.35_f0_coarse/result.json",
+      "bytes": 1059,
+      "sha256": "fccd13f2130460c70a54b131f196887f5846f99405658beff4884a349fe12ddc"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_spar_mass_loop01/added_box20mm_s1.75_p65_x0.35_f0_coarse/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_spar_mass_loop01/added_box20mm_s1.75_p65_x0.35_f0_coarse/stability.txt",
+      "bytes": 3204,
+      "sha256": "8413d782093fd94023d8983cc042c4d7e368a44cef29e47c1ccaa8afa9407599"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_spar_mass_loop01/added_box20mm_s1.75_p65_x0.35_f0_coarse/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_spar_mass_loop01/added_box20mm_s1.75_p65_x0.35_f0_coarse/stdout.txt",
+      "bytes": 18142,
+      "sha256": "9e9fbdedcf8c491175b217e2673c7bc604c3cb05fd03cea4bb957513cf934322"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_spar_mass_loop01/mass_feedback.json",
+      "bytes": 1921,
+      "sha256": "2c19dba51e2d9a183f8b63fbd37dc45ae584b42d8a88505ef2c3c8cdca6a0a0d"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_spar_mass_loop01/section_trade.json",
+      "bytes": 92657,
+      "sha256": "07c25162ec171388e016bdd76b2880ea046cf262911a722e5f3dbeb0e041b45e"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_strip_loads.py",
+      "bytes": 1693,
+      "sha256": "7c8c677d3136d05ea0892fd06212bf517833832be892af4130727e6583551dc0"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_strip_loads01/beam_demands.json",
+      "bytes": 7053,
+      "sha256": "0122ace1189f60c26574f6296c55228f700063e60f802e4c5d190d862c351d22"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_strip_loads01/enlarged/aircraft.avl",
+      "bytes": 1661,
+      "sha256": "314b19f024f6747e68e06d8d13221f56e317e98d7ef60a932f0a13250bee64fc"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_strip_loads01/enlarged/commands.txt",
+      "bytes": 114,
+      "sha256": "3a76621dcb76b312d4e5c29bbbbc33636b887fb9b4f0a865d2e20d1231003660"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_strip_loads01/enlarged/forces.txt",
+      "bytes": 1214,
+      "sha256": "679a419322006dc36d41c92c91ccf94c010ec810706c269b26e10f6b20cf6774"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_strip_loads01/enlarged/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_strip_loads01/enlarged/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_strip_loads01/enlarged/stdout.txt",
+      "bytes": 16275,
+      "sha256": "0190f7a351278f3ea13ef0d62ddeec9f31a78a1936db9261c8c2a17e68e8f039"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_strip_loads01/enlarged/strips.txt",
+      "bytes": 60347,
+      "sha256": "0266300cd5e515b62dbf7871929245c548e1ee22c8eba55ef92da4d894335573"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_strip_loads01/enlarged/surfaces.txt",
+      "bytes": 2374,
+      "sha256": "863bdf84d3d19ab27cacc23a8f0a6b1476759aacf544868ad957aa13687f12d5"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_strip_loads01/manifest.json",
+      "bytes": 1287,
+      "sha256": "7fa7e771fdc70031768a5da177a3ed1785aa1de0cc2bbdf8e662dbde18bff802"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_strip_loads01/original/aircraft.avl",
+      "bytes": 1661,
+      "sha256": "b973556ad45a3178956ab26e4939895695ea80654a3c1bed84657f43cc33cc50"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_strip_loads01/original/commands.txt",
+      "bytes": 115,
+      "sha256": "9f4ab9ccdd7edc48bde79b439ac931eb7a849e4a0721747459b5dbc200e34b13"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_strip_loads01/original/forces.txt",
+      "bytes": 1214,
+      "sha256": "f4b66c67a67fb5c06ba8cfb61177247900066c3c50ecaf90e62ea8ca1ad86aff"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_strip_loads01/original/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_strip_loads01/original/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_strip_loads01/original/stdout.txt",
+      "bytes": 16275,
+      "sha256": "7941f74ab22d0ae785d9eaeb66b9cd51fa0231cad57364aad52f3349cf0b9f50"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_strip_loads01/original/strips.txt",
+      "bytes": 60347,
+      "sha256": "209199040548d04ed9e4989f42be221d7c4df911a812906da1962c7126f5453a"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_strip_loads01/original/surfaces.txt",
+      "bytes": 2374,
+      "sha256": "0cfe472e8d704f36caae0e9dde1d90f118fd2877b56db218c3bef74e191db293"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_strip_loads01/plus2kg/aircraft.avl",
+      "bytes": 1661,
+      "sha256": "ba28311a18329bce1738595d9afa0fd394e6586f1c7a603ffd3bbe6ab9c30172"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_strip_loads01/plus2kg/commands.txt",
+      "bytes": 114,
+      "sha256": "8d4bc37e12730a4d6bc9b2bb5f43ee7fcd9b0fdf5fb35accb2836a723ebf4f7a"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_strip_loads01/plus2kg/forces.txt",
+      "bytes": 1214,
+      "sha256": "c3ca1641bf5297b2eaaf8bffe0ca99cf03b1754c7f8027624bf0b0b882863773"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_strip_loads01/plus2kg/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_strip_loads01/plus2kg/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_strip_loads01/plus2kg/stdout.txt",
+      "bytes": 16275,
+      "sha256": "afbe051dabeaee0a0dc7872e735bf11c084351c17766cd3534fa0c7eb6bb5090"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_strip_loads01/plus2kg/strips.txt",
+      "bytes": 60347,
+      "sha256": "351f974d16e5ef2b43028f74a678e4a9654583640942c5f125b94a12f34de636"
+    },
+    {
+      "path": "manuscript/audit_data/v15_tail_strip_loads01/plus2kg/surfaces.txt",
+      "bytes": 2374,
+      "sha256": "dc24dc246f95f2be8bf69fd033cfb3ba4245fc95ba7b8df5a313e2abd29da9bc"
+    },
+    {
+      "path": "manuscript/audit_data/v16/audit_fable_v16_retrim.py",
+      "bytes": 1446,
+      "sha256": "ad0e88ddcfa298cb34d70aaea66c4eb67de3112fe87355a55542494c93453566"
+    },
+    {
+      "path": "manuscript/audit_data/v16/claude-fable-5-1/instructions.txt",
+      "bytes": 1443,
+      "sha256": "8e6e6239318dc390710a50c3c57a7223f68ed87618f57efb80876e422e9e80de"
+    },
+    {
+      "path": "manuscript/audit_data/v16/claude-fable-5-1/outcome.json",
+      "bytes": 312,
+      "sha256": "5148d8703925227ef44c6e0b45bda47e1e6ca73c21d7935073bb8632c8993a10"
+    },
+    {
+      "path": "manuscript/audit_data/v16/claude-fable-5-1/prompt.txt",
+      "bytes": 41766,
+      "sha256": "feb63b6109daf3e002483230c64f8e6ae214128dd78c6a77b75f6a9ce6625cba"
+    },
+    {
+      "path": "manuscript/audit_data/v16/claude-fable-5-1/request.json",
+      "bytes": 965,
+      "sha256": "4b053a7f62c6b3988d9606bb2678652a0fe9c9e8ff263b0d7297d94518a60036"
+    },
+    {
+      "path": "manuscript/audit_data/v16/claude-fable-5-1/response.json",
+      "bytes": 24456,
+      "sha256": "6dae3f48195d8b446f517fac08936fb69d87a8b59a44f618bdc8faccc198dbc1"
+    },
+    {
+      "path": "manuscript/audit_data/v16/claude-opus-5-5/instructions.txt",
+      "bytes": 899,
+      "sha256": "669d55f8341d3dbd337851f89ff251c071c5af15a296ef39ec3a2e3abd8df8c6"
+    },
+    {
+      "path": "manuscript/audit_data/v16/claude-opus-5-5/outcome.json",
+      "bytes": 311,
+      "sha256": "db82b8ef48193a41e1900959ca885f8b94b17a6b30ed6267f2519f947544fe07"
+    },
+    {
+      "path": "manuscript/audit_data/v16/claude-opus-5-5/prompt.txt",
+      "bytes": 14853,
+      "sha256": "f4564680b3c3b9fdb000370714f3645c4fd8f65dc087322d4956876cf690b5a3"
+    },
+    {
+      "path": "manuscript/audit_data/v16/claude-opus-5-5/request.json",
+      "bytes": 964,
+      "sha256": "79501def4b3a47eb9675b4f782560183be083c7bb6ab6f5d02e43a717fa2c8d8"
+    },
+    {
+      "path": "manuscript/audit_data/v16/claude-opus-5-5/response.json",
+      "bytes": 18589,
+      "sha256": "8922f548944669fa89344121c32887659d5537d0b958033a8b1cc2cc29662fe9"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_loading_audit.json",
+      "bytes": 3821,
+      "sha256": "21b9116724f03b8c05f31448b90c1143131d7de46d2ecb84ddc6a610f5df5d06"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/audit.json",
+      "bytes": 1782,
+      "sha256": "3d84310b201cd9edb185f09f1c27bcfcffc0d16dfade5c9d2571c1180abb49ff"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_00/aircraft.avl",
+      "bytes": 1667,
+      "sha256": "b0f99b1e2cc2b63285771ee7ad0fefb27c78cc9bb5e1e7d334a8077e45a240fc"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_00/commands.txt",
+      "bytes": 118,
+      "sha256": "7cc8ae6607391bbeaab631c02b08ddf16594ab576b0e827783fe4d28a364f904"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_00/forces.txt",
+      "bytes": 1214,
+      "sha256": "d04e358a5888b768134f014052880440b46f4ccc8734767218e228d827ed2f84"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_00/result.json",
+      "bytes": 990,
+      "sha256": "54910b5b5fc5abb2f510815d550ad3c94ae8244b1d5cbc40c703b984bb6fb481"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_00/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_00/stability.txt",
+      "bytes": 3204,
+      "sha256": "5c34ebf67b80050180db0ad4aa418949de44647b83dcad1cfb3e3b27344dac52"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_00/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_00/stdout.txt",
+      "bytes": 18142,
+      "sha256": "966aac53b798df3c3535330a900dcbe66b0db3661b51d3b3d6219b6de3c52b82"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_01/aircraft.avl",
+      "bytes": 1667,
+      "sha256": "ab6fba53670339b48a5e73d419ef53664534a114551712f6bee5de9e030c9e50"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_01/commands.txt",
+      "bytes": 118,
+      "sha256": "7cc8ae6607391bbeaab631c02b08ddf16594ab576b0e827783fe4d28a364f904"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_01/forces.txt",
+      "bytes": 1214,
+      "sha256": "8c5f8574237cda87aa9a2762d6709a8b1cb75fae8634a350cc90e16c8a9b565d"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_01/result.json",
+      "bytes": 995,
+      "sha256": "0c0d141915d0cf556974fd957af9c9cd4d59abcf45f082570a656cac9b918f7a"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_01/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_01/stability.txt",
+      "bytes": 3204,
+      "sha256": "d36fa70e8684ef9591de09e341e210617a14e7958edbf1c9b0064aa0c609f0bc"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_01/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_01/stdout.txt",
+      "bytes": 18142,
+      "sha256": "6316708fd9d0608042f8f1fc8921d1502f15a6f34261964f7e1c94313d2a1f35"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_02/aircraft.avl",
+      "bytes": 1667,
+      "sha256": "2ea54163edb2bcd303fd8d81604d7b62b240a7cdc754fb08544bcbfb38f528e4"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_02/commands.txt",
+      "bytes": 118,
+      "sha256": "7cc8ae6607391bbeaab631c02b08ddf16594ab576b0e827783fe4d28a364f904"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_02/forces.txt",
+      "bytes": 1214,
+      "sha256": "2372764d53c666e94ae8ce0053e4363617c2df6389e97384a35c32c4f1d614f9"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_02/result.json",
+      "bytes": 990,
+      "sha256": "1137376b61506334c3c169d059c5c5611f23444842564298b8ebb2c2f214dd15"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_02/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_02/stability.txt",
+      "bytes": 3204,
+      "sha256": "8c06b2b2a73b005a391b6d1f2223b6ba8ec53fe99fb17161a1c754313e66b864"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_02/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_02/stdout.txt",
+      "bytes": 18142,
+      "sha256": "a27ec211eda9fcbb18aeae8a202e9e8136fe8e02e9169ffd1ee5c37c379c6196"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_03/aircraft.avl",
+      "bytes": 1667,
+      "sha256": "ac2d12f69cba8fea70f953d2cb4ecb75294209f5a41c35cdc658b2acbd58b32b"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_03/commands.txt",
+      "bytes": 118,
+      "sha256": "d9969d5783322884edfe5e8b6230dbb2d94d1eb71a42a572b20a41ba11503349"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_03/forces.txt",
+      "bytes": 1214,
+      "sha256": "fcc4084b5d04cdddc387b4c7eefc1866430ad785b3aa0fa75e753ecd212c8ede"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_03/result.json",
+      "bytes": 988,
+      "sha256": "93b30bb2ce7ecacaeaa58518fdca4d71535dc1da3768a60ef6a81d33f963ed5f"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_03/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_03/stability.txt",
+      "bytes": 3204,
+      "sha256": "6e48a33279b5d285a3d8484ddefca746203e0eae6d862c6072cd486169cae3b1"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_03/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_03/stdout.txt",
+      "bytes": 18142,
+      "sha256": "2b30660d5c9cefbe047a06560a5146d809d52b481039465d5f0a1c0a94d33b89"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_04/aircraft.avl",
+      "bytes": 1667,
+      "sha256": "b771a39112dbcc8fc88755befea4c838b7bcac98e283b718570748cd948ba1e0"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_04/commands.txt",
+      "bytes": 118,
+      "sha256": "ddada332a2fe0f0cce773ba1154ce5439df18ba06e500a9af2d2a4f5fec3b697"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_04/forces.txt",
+      "bytes": 1214,
+      "sha256": "988e915464c5590fdf61bd2467ac4a171587dd3791fb97e1a22e9a6980ed8b96"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_04/result.json",
+      "bytes": 993,
+      "sha256": "97d6c40baedd57ae3cc3b62a740afa8394062396529f02c273e4a218ccb470b7"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_04/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_04/stability.txt",
+      "bytes": 3204,
+      "sha256": "08706fafa5f18690e4189c2e7af16affc545f94053ef67da06984ff4a95a4491"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_04/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_04/stdout.txt",
+      "bytes": 18142,
+      "sha256": "f425e94df476ca2595a955b2f1c6812344aa84bc61b9b91cfd39946dc9320ba0"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_05/aircraft.avl",
+      "bytes": 1667,
+      "sha256": "e0f21250f9a0faca15074e427efdf8a306a09b9fdfde89b786dd4e3642784a10"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_05/commands.txt",
+      "bytes": 118,
+      "sha256": "837e2dd49e6d505657bd05a2576be96ac7f8ba5cb7ac9aecab3b7cd3ff206d76"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_05/forces.txt",
+      "bytes": 1214,
+      "sha256": "4b59f9f625cf3a28e84e8b13198be7ef8ec2d3e88776186bb2e3dec67b9cdc14"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_05/result.json",
+      "bytes": 996,
+      "sha256": "44aed1ed733e28d7dd62dfa220c3878e87db52862171889ffab5da41e731f799"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_05/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_05/stability.txt",
+      "bytes": 3204,
+      "sha256": "d789312988aa947036f14f564227c3ac578f095353f381cabb69abc53a932afc"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_05/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_05/stdout.txt",
+      "bytes": 18142,
+      "sha256": "68b6323fff3965fef5a8b5c2c6d7eee197c7742c11dc56e986c25bd812f915a0"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_06/aircraft.avl",
+      "bytes": 1667,
+      "sha256": "2f0f5123cd16c9f5abdc186494204ec4a54e3a5151a5885ea983e06b49a910ac"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_06/commands.txt",
+      "bytes": 118,
+      "sha256": "747251727ad7e645f0e40a27b144294e9f65b7b7930fb16054196a393515ed8e"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_06/forces.txt",
+      "bytes": 1214,
+      "sha256": "dd91be69e3bf538420982c735fab334be193dd6e389085381a2bad2da4c9fda4"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_06/result.json",
+      "bytes": 983,
+      "sha256": "cfaeb6cbb6d2a9fe56b32314ec6f8332ec794005498d7647f755ec8f029db471"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_06/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_06/stability.txt",
+      "bytes": 3204,
+      "sha256": "3a254eaea2ce57d5a0700e220a579f36033a792d802e67075a33ba4fae2a6ff5"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_06/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_06/stdout.txt",
+      "bytes": 18142,
+      "sha256": "721172066ad427910a83e6ef31ae2427f2be598e3abeb4d558e6c3bf35076832"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_07/aircraft.avl",
+      "bytes": 1667,
+      "sha256": "704f209d4acd9a2ba18c2f660d59875c4a1d929fbdfa808ada8123f334178515"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_07/commands.txt",
+      "bytes": 118,
+      "sha256": "f2cd399fc89136e5aebd020069217e7e96d354b0b8f92fa1b16f7fe7b5abb2e5"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_07/forces.txt",
+      "bytes": 1214,
+      "sha256": "f6a39168af4f03d9d489fc1fbc3c9fc090055d3f04409863ccdc2346dfc29e00"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_07/result.json",
+      "bytes": 981,
+      "sha256": "3f9a8c41ac803d0012a16a619595480cb893a1261c659c588c856b682502c597"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_07/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_07/stability.txt",
+      "bytes": 3204,
+      "sha256": "879c33edbc7e2f97270833e5d4b382c2f91bd671478f20604674eb2da4e993d1"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_07/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/case_07/stdout.txt",
+      "bytes": 18142,
+      "sha256": "f6124e03f67005d69f7c012bb2657f9eaed89ab40f73f47c30a761c42dc56d01"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_surface_retrim01/summary.json",
+      "bytes": 9549,
+      "sha256": "47a2788674275ad24049b0906663075484ce8906a623f0fe6d59ff867f27df24"
+    },
+    {
+      "path": "manuscript/audit_data/v16/fable_v16_sweep_audit.json",
+      "bytes": 2423,
+      "sha256": "9c84cd08959ac06a21bcc1020b52597344bed9ba3047ec63530c1ef8f34ccd06"
+    },
+    {
+      "path": "manuscript/audit_data/v16/gpt-6-astra/instructions.txt",
+      "bytes": 899,
+      "sha256": "669d55f8341d3dbd337851f89ff251c071c5af15a296ef39ec3a2e3abd8df8c6"
+    },
+    {
+      "path": "manuscript/audit_data/v16/gpt-6-astra/outcome.json",
+      "bytes": 301,
+      "sha256": "ea00d9a4b56b1da12518effcd4027cf0711740cfc7e4923ef132279234964bbe"
+    },
+    {
+      "path": "manuscript/audit_data/v16/gpt-6-astra/prompt.txt",
+      "bytes": 40718,
+      "sha256": "103c75588eaa4410566dab876fcd5908b0ae35a602ab8a7262955127aed18dda"
+    },
+    {
+      "path": "manuscript/audit_data/v16/gpt-6-astra/request.json",
+      "bytes": 960,
+      "sha256": "89ed5dbbbd25a266e743d5398584d09e0521a457e516da22f535138c7e5df78a"
+    },
+    {
+      "path": "manuscript/audit_data/v16/gpt-6-astra/response.json",
+      "bytes": 43753,
+      "sha256": "b233083c1d89194db59c747cf6375fb207446b89e6bdefe34f34382467255d5f"
+    },
+    {
+      "path": "manuscript/audit_data/v16/power_speed/audit_fable_v16_speed_power.py",
+      "bytes": 4319,
+      "sha256": "2baef8ff5d7f0a4a2ca03d338abf34f5b0eb9a899780934bd41ed458ba1590a8"
+    },
+    {
+      "path": "manuscript/audit_data/v16/power_speed/build_draft25.py",
+      "bytes": 10224,
+      "sha256": "fc4c69c0585df22dc68f197cfc769b3c4e2a63cf5a7d3f901ea313777b282f68"
+    },
+    {
+      "path": "manuscript/audit_data/v16/power_speed/fable_v16_power_sensitivity.py",
+      "bytes": 3774,
+      "sha256": "4339094a198c903615d01d10ab78f7c5bb968c19f9ddcd7e56d2e8f7439ef3c6"
+    },
+    {
+      "path": "manuscript/audit_data/v16/power_speed/fable_v16_power_sensitivity01.json",
+      "bytes": 2740,
+      "sha256": "280b6ea4474ca8098f5fcadc342a6121aafbd93b289ae1eda7679724d32f13de"
+    },
+    {
+      "path": "manuscript/audit_data/v16/power_speed/fable_v16_speed_screen.py",
+      "bytes": 2860,
+      "sha256": "ac3c3539d1ab6e8845484f4d16a33a028c98dccc5653ac0da3d9cc3888a44394"
+    },
+    {
+      "path": "manuscript/audit_data/v16/power_speed/fable_v16_speed_screen01/power_audit.json",
+      "bytes": 2698,
+      "sha256": "f5fc5784118facd69f6ade057136fa3021c4471062f7fb4c0729473fb9dac2ca"
+    },
+    {
+      "path": "manuscript/audit_data/v16/power_speed/fable_v16_speed_screen01/summary.json",
+      "bytes": 2048,
+      "sha256": "9ce27511980fb17e79160ed84dd52d493fda3a016540fdea031624294e5d0585"
+    },
+    {
+      "path": "manuscript/audit_data/v16/power_speed/fable_v16_speed_screen01/V12/aircraft.avl",
+      "bytes": 1667,
+      "sha256": "2f0f5123cd16c9f5abdc186494204ec4a54e3a5151a5885ea983e06b49a910ac"
+    },
+    {
+      "path": "manuscript/audit_data/v16/power_speed/fable_v16_speed_screen01/V12/commands.txt",
+      "bytes": 128,
+      "sha256": "b6f13c9b1bbe6464b48f5865927bb4d55f65bd28e550c98befb28eb28bfaedf2"
+    },
+    {
+      "path": "manuscript/audit_data/v16/power_speed/fable_v16_speed_screen01/V12/forces.txt",
+      "bytes": 1214,
+      "sha256": "3593c52af6ae3f6a2c72bcb0604341bf9f8aaf27c5b42e404ec226b0eebb7bd8"
+    },
+    {
+      "path": "manuscript/audit_data/v16/power_speed/fable_v16_speed_screen01/V12/result.json",
+      "bytes": 674,
+      "sha256": "21e065f8b20f4cc940bcd96c095d74e2b54556d9082fb414d4c37bc1761cff84"
+    },
+    {
+      "path": "manuscript/audit_data/v16/power_speed/fable_v16_speed_screen01/V12/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v16/power_speed/fable_v16_speed_screen01/V12/stability.txt",
+      "bytes": 3204,
+      "sha256": "d9dd671b35b725f87cfe11f16573a9a21ddc960d875c963e0695df04bd5cb806"
+    },
+    {
+      "path": "manuscript/audit_data/v16/power_speed/fable_v16_speed_screen01/V12/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v16/power_speed/fable_v16_speed_screen01/V12/stdout.txt",
+      "bytes": 18142,
+      "sha256": "6856d5b96391a10de4aaecdb713cb7b47371ed38f3c90e67ea67bcaff8f9f6d9"
+    },
+    {
+      "path": "manuscript/audit_data/v16/power_speed/fable_v16_speed_screen01/V16/aircraft.avl",
+      "bytes": 1667,
+      "sha256": "2f0f5123cd16c9f5abdc186494204ec4a54e3a5151a5885ea983e06b49a910ac"
+    },
+    {
+      "path": "manuscript/audit_data/v16/power_speed/fable_v16_speed_screen01/V16/commands.txt",
+      "bytes": 128,
+      "sha256": "561fa026d93c862dd44d7a41695c5f1fc1e56703a722dea6bc8467f6108a7816"
+    },
+    {
+      "path": "manuscript/audit_data/v16/power_speed/fable_v16_speed_screen01/V16/forces.txt",
+      "bytes": 1214,
+      "sha256": "4aae16cdbe605f16d83a25ca4042bb0fee45e47f27d7868108e3faca76cbfed8"
+    },
+    {
+      "path": "manuscript/audit_data/v16/power_speed/fable_v16_speed_screen01/V16/result.json",
+      "bytes": 660,
+      "sha256": "f75b0f44ef469d6356bf63d106d626b8efd1214b3994780185c052ba8b38c084"
+    },
+    {
+      "path": "manuscript/audit_data/v16/power_speed/fable_v16_speed_screen01/V16/section.dat",
+      "bytes": 294,
+      "sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33"
+    },
+    {
+      "path": "manuscript/audit_data/v16/power_speed/fable_v16_speed_screen01/V16/stability.txt",
+      "bytes": 3204,
+      "sha256": "f5f2bb88462c198d4b4340dd437054529c4a6e9f2de017b5f21393d1b5904687"
+    },
+    {
+      "path": "manuscript/audit_data/v16/power_speed/fable_v16_speed_screen01/V16/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/audit_data/v16/power_speed/fable_v16_speed_screen01/V16/stdout.txt",
+      "bytes": 18048,
+      "sha256": "1dc7eb019da3c23995a2365995d134380e0a9b3f1661c0b0f25af8835cbcca39"
+    },
+    {
+      "path": "manuscript/audit_data/v16/power_speed/finalize_draft25.py",
+      "bytes": 4510,
+      "sha256": "130fea679c6b87b67f78bf57f6fb6ba4732d8a6654021aa0a0440c1b184c7f50"
+    },
+    {
+      "path": "manuscript/audit_data/v16/power_speed/qa_draft25.py",
+      "bytes": 1700,
+      "sha256": "f3c5e74e45b6a5c602692b9c82b64e199d57d36b7e3623bfb090a02b6060372e"
+    },
+    {
+      "path": "manuscript/audit_data/v16/v16_astra_propeller_quadrature.py",
+      "bytes": 1896,
+      "sha256": "8cccbfc198919e93cfe89a270ab5e60c6a20caee412875452338d73ba87fe559"
+    },
+    {
+      "path": "manuscript/audit_data/v16/v16_astra_propeller_quadrature01.json",
+      "bytes": 3939,
+      "sha256": "3c4c4c4412d531063fd94357f6b8cd3af7a9575f190a606c8c491e2bc0867749"
+    },
+    {
+      "path": "manuscript/audit_data/v16/v16_opus_rpm_closure.py",
+      "bytes": 2609,
+      "sha256": "763220ae0af9868499aa15d662f9f4785ffb8a5407b3aff551bec3634977ac4b"
+    },
+    {
+      "path": "manuscript/audit_data/v16/v16_opus_rpm_closure01.json",
+      "bytes": 5572,
+      "sha256": "6759292a9e084da56da7211dbfb1bae19314b2eca18ec98717695210e18a490b"
+    },
+    {
+      "path": "manuscript/CONTENT_RECOVERY_AUDIT.json",
+      "bytes": 523,
+      "sha256": "4f573698d937dea96a2e3aea19c70dbde947acc95572339654eeb67dc4f72364"
+    },
+    {
+      "path": "manuscript/DRAFT20_AVL_COMPONENT_CORRECTION.txt",
+      "bytes": 2403,
+      "sha256": "409b388679355a2f500d589082037efbf64bfa3d7b7585a7255815b0a395a441"
+    },
+    {
+      "path": "manuscript/figure_sources/archived_configuration_comparison_v3.svg",
+      "bytes": 15868,
+      "sha256": "15ec64bd5467f4b41ef5c717185d3423f7fb8512b2a4831c7f56c74de9f83074"
+    },
+    {
+      "path": "manuscript/figure_sources/archived_draw_v2_force_moment.py",
+      "bytes": 5330,
+      "sha256": "f59b0bedabb181f7bd8baf0c4b99f227460b5a790cc3bd1b8f678db38f93caa6"
+    },
+    {
+      "path": "manuscript/figure_sources/archived_v2_compact_report.json",
+      "bytes": 6762,
+      "sha256": "7e41d5ad4ece49ff55d77a963e982c4628fb8ff39125ac4d2d49f7c9d2ea6108"
+    },
+    {
+      "path": "manuscript/figure_sources/astra_oblique_v0.svg",
+      "bytes": 14218,
+      "sha256": "02fb21556bc46082b8b8675ec7ee356681f2934ed2a59e30639780f32b55b376"
+    },
+    {
+      "path": "manuscript/figure_sources/astra_oblique_v0_detail.svg",
+      "bytes": 11081,
+      "sha256": "1495f4addc00e8fdaa71af3fa8f21f3592302bbd7a15719688825b325c27993d"
+    },
+    {
+      "path": "manuscript/figure_sources/astra_v2_threeview.svg",
+      "bytes": 35660,
+      "sha256": "211b8545f237f8b8271abbed83accbfdde953676de7ff8ac2b25ae4b38ab982e"
+    },
+    {
+      "path": "manuscript/figure_sources/configuration_comparison_v3.svg",
+      "bytes": 15836,
+      "sha256": "c7b542535153caee4f06bcc230af5bb47f1150f7b4f4727a7ff0c4fe4d8b87f5"
+    },
+    {
+      "path": "manuscript/figure_sources/display_derivatives_manifest.json",
+      "bytes": 578,
+      "sha256": "9f4106267c7daca2b85ad0ffa3156491afb6fdf7035e87079e4267efe568623d"
+    },
+    {
+      "path": "manuscript/figure_sources/fable_detail27_preview.png",
+      "bytes": 204342,
+      "sha256": "50792cefadad7f4aad90e3f31be37b46a45d451975d182ee4326c119a7bcc27a"
+    },
+    {
+      "path": "manuscript/figure_sources/fable_oblique_v0.svg",
+      "bytes": 5622,
+      "sha256": "9bfee46a42554728e7d47f32f6afea8b9876fd5ff1bda7bda644e181d626997f"
+    },
+    {
+      "path": "manuscript/figure_sources/fable_oblique_v0_detail.svg",
+      "bytes": 7754,
+      "sha256": "e73e1df0d1f16847e2efb006c3d6eb28905736800388d899253f8b6fee8bd2b8"
+    },
+    {
+      "path": "manuscript/figure_sources/fable_opus_label_audit27.json",
+      "bytes": 5145,
+      "sha256": "47b337b8d1b67c765b7d06e3d3efd756d2929549f41a8b00c7f7c370fc3db801"
+    },
+    {
+      "path": "manuscript/figure_sources/fable_v2_threeview.svg",
+      "bytes": 30410,
+      "sha256": "07adadb96f387dd48cdaf443e45a5f6737f19a5f389bb42e1382c9918f2032a1"
+    },
+    {
+      "path": "manuscript/figure_sources/fixed_control_response_v1.svg",
+      "bytes": 10289,
+      "sha256": "b8228d49f8dab36c12cd48150151de00d4cfc75cee61e1aa5b30feb858cdd05d"
+    },
+    {
+      "path": "manuscript/figure_sources/force_moment_balance.svg",
+      "bytes": 2830,
+      "sha256": "c64e4841a1d1e8712328d909e10830d108e2d7a5a9d94a3b3c8c41fa7f633e8f"
+    },
+    {
+      "path": "manuscript/figure_sources/label_astra27.js",
+      "bytes": 3598,
+      "sha256": "8819b56924ecdf55d8db6ba09556b370f7d7f2d8153f278e4977b89a77138943"
+    },
+    {
+      "path": "manuscript/figure_sources/label_astra27_audit.json",
+      "bytes": 1616,
+      "sha256": "a77b0a28a550382b7756e82665cce17b7f979fed3fbd6981f7abfe7f059fbba4"
+    },
+    {
+      "path": "manuscript/figure_sources/label_astra27_preview.png",
+      "bytes": 200876,
+      "sha256": "255045ddd1217b4aa51aa6cae15523fe6c21e07f3c87e21158288cdc80f6dcd2"
+    },
+    {
+      "path": "manuscript/figure_sources/label_fable_opus27.js",
+      "bytes": 5959,
+      "sha256": "cc8273cbd42ef2b971a05cd8087338597abf706c5bafb63bb303a08a1f6c0b57"
+    },
+    {
+      "path": "manuscript/figure_sources/LABEL_REVISION_README.txt",
+      "bytes": 645,
+      "sha256": "fd1161a902e281c979fe3b987dc0b1f821c3977e4254bccef221d0da338f4520"
+    },
+    {
+      "path": "manuscript/figure_sources/opus_detail27_preview.png",
+      "bytes": 151131,
+      "sha256": "5f21c37d42ca9472d4e937d9e6ac2e030a407b1f28a8167d58f4450a6de5eb68"
+    },
+    {
+      "path": "manuscript/figure_sources/opus_oblique_v0.svg",
+      "bytes": 10315,
+      "sha256": "a568d80e925d02425bb61d9bda1f0879627053256674e62573983cad2363e651"
+    },
+    {
+      "path": "manuscript/figure_sources/opus_oblique_v0_detail.svg",
+      "bytes": 9678,
+      "sha256": "e640027be548f229343acd5ad56aa466cc80d5efb321d9e15c7f744a55c6c856"
+    },
+    {
+      "path": "manuscript/figure_sources/opus_v2_threeview.svg",
+      "bytes": 24597,
+      "sha256": "f9557f59971cbef7eaeb665b10620094b543418267aa4e31a1788189e3073dca"
+    },
+    {
+      "path": "manuscript/figure_sources/render_joa_archival_v0.js",
+      "bytes": 1965,
+      "sha256": "758cb025b4c8270325eb0191c4a2a8eda807979d4de9c369abb49d7ff1e4dd00"
+    },
+    {
+      "path": "manuscript/figure_sources/render_joa_force_balance.js",
+      "bytes": 5576,
+      "sha256": "d321b4327a5d6df487870893dbd21c18fd69b0cbe5af6ae44eeb444871ce4051"
+    },
+    {
+      "path": "manuscript/figure_sources/render_joa_supplementary_plots.js",
+      "bytes": 1656,
+      "sha256": "24b81ec753f95f8a9f4408017f48321cce4db3ae0c7717ba9ea94e2c11d5d280"
+    },
+    {
+      "path": "manuscript/figure_sources/render_joa_threeviews.js",
+      "bytes": 2708,
+      "sha256": "9f6bc970ec02c17bdd084b9ba5524df12a4befbb1735b93e9793df462cebc58f"
+    },
+    {
+      "path": "manuscript/figure_sources/render_joa_v0_details.js",
+      "bytes": 3911,
+      "sha256": "dc3a3be8471bfd154588ae26111ee4df14935dab75c6521d4055fe100983d0ca"
+    },
+    {
+      "path": "manuscript/figure_sources/render_joa_v2_force_moment.js",
+      "bytes": 9567,
+      "sha256": "ce2f52999ccbf583acef33cca7286c2ca2bf52eb191bfcbd327cf6c7764def72"
+    },
+    {
+      "path": "manuscript/figure_sources/response_plots_display_manifest.json",
+      "bytes": 787,
+      "sha256": "492210285e0c745c077cf217eaf8fc2d6b33eef3784ba12d8aca4702a4067453"
+    },
+    {
+      "path": "manuscript/figure_sources/source_threeviews/V2/claude-fable-5-1.svg",
+      "bytes": 30410,
+      "sha256": "6f03b45fe58a37c8785c389c3bb92dc68e892ad0f4504d26345eb7288a808561"
+    },
+    {
+      "path": "manuscript/figure_sources/source_threeviews/V2/claude-opus-5-5.svg",
+      "bytes": 24597,
+      "sha256": "63efbf59b1bcf349a6ec4f04580bea781ead3ffd540628bd849dcefc8631016d"
+    },
+    {
+      "path": "manuscript/figure_sources/source_threeviews/V2/gpt-6-astra.svg",
+      "bytes": 35660,
+      "sha256": "f971b4a182a81954e769337b6cbfc9885a26d22f01b55452457692758e3b1e7f"
+    },
+    {
+      "path": "manuscript/figure_sources/source_threeviews/Wright/wright-flyer-1903.svg",
+      "bytes": 12052,
+      "sha256": "43947b854e4436b0ab9a4e335b4b2664f4d17a093f44641c5e852cbf16b19dc7"
+    },
+    {
+      "path": "manuscript/figure_sources/threeview_display_manifest.json",
+      "bytes": 2271,
+      "sha256": "684dabc3ed7c76734e76a08398be93a560f82fc3e07c1122be4063607504e2f8"
+    },
+    {
+      "path": "manuscript/figure_sources/v0_details_display_manifest.json",
+      "bytes": 2569,
+      "sha256": "476de53925f92aadd4d473901ba1362850a9fb32648e7fd891cd44fa4584a2eb"
+    },
+    {
+      "path": "manuscript/figure_sources/v0_obliques_display_manifest.json",
+      "bytes": 1221,
+      "sha256": "b6c972c9f3bb093c2c7626fbd3f84adc58dc0b1b7e371cfacdbe44ef28a00c62"
+    },
+    {
+      "path": "manuscript/figure_sources/v2_force_display_manifest.json",
+      "bytes": 661,
+      "sha256": "3d2105abc7ec2d2c10c2681f6a28b67c40e18f601fdf69d18ff296361a16d1cd"
+    },
+    {
+      "path": "manuscript/figure_sources/v2_force_moment_comparison.svg",
+      "bytes": 8818,
+      "sha256": "f62de4ddce62047878de0a581adbfdb4eb6b7cac30fcd0ad2112c54ca03dbaf0"
+    },
+    {
+      "path": "manuscript/figure_sources/wright_response_v1.svg",
+      "bytes": 12371,
+      "sha256": "1711de1b9723d50d32414526558b4c54ef155c1fae536638e2c3969e82b8fd06"
+    },
+    {
+      "path": "manuscript/figure_sources/wright_threeview_reconstruction.svg",
+      "bytes": 12052,
+      "sha256": "468a4bd0150fc31e25065ae85347a5d5fe6cf81fd7ea9036ff886ac98dbac144"
+    },
+    {
+      "path": "manuscript/figures/astra_oblique_v0.png",
+      "bytes": 2070126,
+      "sha256": "e1a8799ce07223fa03b8f33ebb0fff5a0e68bf2ab09b98a5369361c8bace7596"
+    },
+    {
+      "path": "manuscript/figures/astra_oblique_v0_detail.png",
+      "bytes": 1044147,
+      "sha256": "bbf27d1f2d1f11c9256209189e483fead721b8a4ee6cedb2c70a6ddb2f8ef681"
+    },
+    {
+      "path": "manuscript/figures/astra_preview.png",
+      "bytes": 869940,
+      "sha256": "8ade1843f4fafcc6637a93ab8691aefb71993f69c4df35bd086c3fa3ada0782b"
+    },
+    {
+      "path": "manuscript/figures/astra_v2_threeview.png",
+      "bytes": 364065,
+      "sha256": "dee75692512caacaa3e843b1259445b0aefbdcb9eb2875f81f5d40430453b863"
+    },
+    {
+      "path": "manuscript/figures/braced_tail_concept.pdf",
+      "bytes": 27816,
+      "sha256": "59a40017cbb3222382c4b80dc1eafd302a74f801d293f6eeed311fc9ae349273"
+    },
+    {
+      "path": "manuscript/figures/braced_tail_concept.png",
+      "bytes": 298209,
+      "sha256": "5b4bc89dfcd622b425a05b747c5f6b520751e4786b0cb386f3f03bff3722ca9a"
+    },
+    {
+      "path": "manuscript/figures/braced_tail_concept.svg",
+      "bytes": 89809,
+      "sha256": "db08da3981d4450b451bb4533fa87b0fa6888fa4f32d58ab1a9b58708981f345"
+    },
+    {
+      "path": "manuscript/figures/configuration_comparison_v2.png",
+      "bytes": 251852,
+      "sha256": "3d667a7c1171ae8b86fc50284079a3a47637ad094cf5f792100eaa3af699e216"
+    },
+    {
+      "path": "manuscript/figures/configuration_comparison_v3.png",
+      "bytes": 560098,
+      "sha256": "60a3c99ec0314981048b8e4dfb34eeffdad3f4c4a0f48b78388f495bb3fbd131"
+    },
+    {
+      "path": "manuscript/figures/fable_oblique_v0.png",
+      "bytes": 1595658,
+      "sha256": "9009719bae18238e4b5476d5aae7dc47f9e6ee371f04c10a99885d687fa2d7c4"
+    },
+    {
+      "path": "manuscript/figures/fable_oblique_v0_detail.png",
+      "bytes": 1176140,
+      "sha256": "326764bc5c7fcc45144810269bb6f63ea19db5b75475a253dfadc1a736ed73ab"
+    },
+    {
+      "path": "manuscript/figures/fable_v2_threeview.png",
+      "bytes": 316461,
+      "sha256": "d1a31576006073f5f3fda042118b7a16cf380c025cb964af72e41674f41dc5f6"
+    },
+    {
+      "path": "manuscript/figures/fixed_control_response_v1.png",
+      "bytes": 553765,
+      "sha256": "655b4466190cbd2d05fd11d5d503153712ad1b33cd743acbce22b7f1959d9137"
+    },
+    {
+      "path": "manuscript/figures/force_moment_balance.png",
+      "bytes": 237383,
+      "sha256": "520a86e2cbc13801d93d3da570928cd59eaf745a1916d4429ddc3339e4054f26"
+    },
+    {
+      "path": "manuscript/figures/opus_oblique_v0.png",
+      "bytes": 1845793,
+      "sha256": "b7015d4b220935f538a3450be4de2a1b1d8bc153c8eb4d27dcaa6254dc0fc40b"
+    },
+    {
+      "path": "manuscript/figures/opus_oblique_v0_detail.png",
+      "bytes": 984565,
+      "sha256": "eb363d6c657db18eb2cf8280a5cb8aaec37108211232f9ea95ae2bf8024a1c77"
+    },
+    {
+      "path": "manuscript/figures/opus_preview.png",
+      "bytes": 628973,
+      "sha256": "c84e92f1a5268a7a66e339868411dd859a0dfda5876eb21aa57967c267ebf980"
+    },
+    {
+      "path": "manuscript/figures/opus_v2_threeview.png",
+      "bytes": 290580,
+      "sha256": "6a9bc0ce459cf6659e3794d8082042224cfc136eb41b96dcdaa2a2649a1b20bd"
+    },
+    {
+      "path": "manuscript/figures/v2_force_moment_comparison.png",
+      "bytes": 1438512,
+      "sha256": "6d8ab5de04ce362ff3c8f057e884b580d879139ecafc4326c8e9a9dad6056d0e"
+    },
+    {
+      "path": "manuscript/figures/wright_first_flight_1903_loc.jpg",
+      "bytes": 357610,
+      "sha256": "888e3af5b133e657b786de93622c04388ec4da008dc9645b5a1f5f22420a7c90"
+    },
+    {
+      "path": "manuscript/figures/wright_response_v1.png",
+      "bytes": 631698,
+      "sha256": "f5565d1cd42425d53b6977ac0b6bef61c9a797bab80c6da02ac77890073c38c3"
+    },
+    {
+      "path": "manuscript/figures/wright_threeview_reconstruction.png",
+      "bytes": 376373,
+      "sha256": "dd78adfad38c375bb57caf585ea0189cfd573b2c9f05daf692529aaa2704e9e5"
+    },
+    {
+      "path": "manuscript/JOA_EDITORIAL_GATE.md",
+      "bytes": 2856,
+      "sha256": "77b376cb4e683e20bbfd8bdfb6b37f25b59c859ea477fdb0758a255834fca0f0"
+    },
+    {
+      "path": "manuscript/JOA_FIGURE_GATE.md",
+      "bytes": 3595,
+      "sha256": "4aa22869e7f4e4c73125aafac228843d3e3043b4a620b05fd40d9b17f4df3924"
+    },
+    {
+      "path": "manuscript/JOURNAL_READINESS.md",
+      "bytes": 1431,
+      "sha256": "dade942fe684a0b66b3b234aaf2973215ba081d5b5e644886dc050b8e2ddcd09"
+    },
+    {
+      "path": "manuscript/main.pdf",
+      "bytes": 15099915,
+      "sha256": "dfc13a5fd460bf1a9ef6c4ad3dd51a1c64f25c339d3724677c634de3356b530e"
+    },
+    {
+      "path": "manuscript/main.tex",
+      "bytes": 190631,
+      "sha256": "9106fe486ee29e7ecfb6422a0882a8c4eb095b0813f86cec6b1e84132c2a22f3"
+    },
+    {
+      "path": "manuscript/main.tex.previous_abstract.txt",
+      "bytes": 1985,
+      "sha256": "677e564778ced521712415919d3a68174218f014a9448d073077ec559ba8a786"
+    },
+    {
+      "path": "manuscript/main_joa_review.pdf",
+      "bytes": 15104486,
+      "sha256": "3cada7e5ad97610b668288f8f85a179498f65ee7e08ea7200628b2c45ab74d41"
+    },
+    {
+      "path": "manuscript/main_joa_review.tex",
+      "bytes": 190635,
+      "sha256": "abf493a841fe900542c4953893c9a27aabc368241131ae8c3872de283190d0fd"
+    },
+    {
+      "path": "manuscript/main_joa_review.tex.previous_abstract.txt",
+      "bytes": 1985,
+      "sha256": "677e564778ced521712415919d3a68174218f014a9448d073077ec559ba8a786"
+    },
+    {
+      "path": "manuscript/PDF_QA.json",
+      "bytes": 1154,
+      "sha256": "7538f2116c30feadf9f2e0b360684a9bb45e9da578e721d06be7184bdd145f8f"
+    },
+    {
+      "path": "manuscript/README.md",
+      "bytes": 524,
+      "sha256": "d882f8ddd98842cf60948735e2d349ff67a39bd265bca44600b5407a65700c4b"
+    },
+    {
+      "path": "manuscript/recovery_sources/draft19_main_before_integration.tex",
+      "bytes": 107096,
+      "sha256": "7317249e84d34b7c8050dbddd042f6b321d87828d26973b909f913c93842598e"
+    },
+    {
+      "path": "manuscript/recovery_sources/draft19_supplement_before_integration.tex",
+      "bytes": 20503,
+      "sha256": "7454ee827f84f1fe6d5a2bae427088299198f2bde42700e58647a53947dee477"
+    },
+    {
+      "path": "manuscript/recovery_sources/expanded_27sep_original.tex",
+      "bytes": 62516,
+      "sha256": "1ee3d6ab8a04200d5207ab8df1f57450e0366050ce951d624d0790d4551a1ab1"
+    },
+    {
+      "path": "manuscript/references_journal_of_aircraft.tex",
+      "bytes": 12893,
+      "sha256": "f51eb209d6c5257ba771c18c259ffe81ab4f3916c0cd2e2257b1828c9031bc1f"
+    },
+    {
+      "path": "manuscript/RIGHTS_AND_PROVENANCE.txt",
+      "bytes": 935,
+      "sha256": "cda14a2f293f01f0324824fd90f2f8f2915818e3bbb0bae2759eeca6c5804167"
+    },
+    {
+      "path": "manuscript/supplementary.tex",
+      "bytes": 20503,
+      "sha256": "7454ee827f84f1fe6d5a2bae427088299198f2bde42700e58647a53947dee477"
+    },
+    {
+      "path": "manuscript/V14_FABLE_POWER_FIXED_POINT.md",
+      "bytes": 2537,
+      "sha256": "65996688d9db2e168b2a2492ba1c46d382aeaa5eebb35dc68fa5feb4c385f2d0"
+    },
+    {
+      "path": "manuscript/V14_INERTIA_GATE.md",
+      "bytes": 2948,
+      "sha256": "21a557e53233917a0b61ae3d366fdbba8b12b5e839c69eadc640f729abd0c7ed"
+    },
+    {
+      "path": "manuscript/V14_RIGID_GROUND_GATE.md",
+      "bytes": 2617,
+      "sha256": "e04399bb809f7e0161f5d650763fe46610214ded5f4f4bf67e848aa7f3e85f5f"
+    },
+    {
+      "path": "manuscript/V14_STATIC_CLEARANCE_BUDGET.md",
+      "bytes": 2497,
+      "sha256": "0f6f583929cb7d19711c1af56f8bb6aa8c24d28f28c0e13dc8b7e28fa919125d"
+    },
+    {
+      "path": "manuscript/v15_fable_lateral_screen.tex",
+      "bytes": 6597,
+      "sha256": "ac3b3a3ce9682ba5e0ccc3bd42316736197e0c811a66588b6138bad52c2749f2"
+    },
+    {
+      "path": "manuscript/v15_fable_six_axis_gate.tex",
+      "bytes": 3791,
+      "sha256": "9389478e99345005308d593d44a4ced80592788ec6a364267839b8af9d0d5a06"
+    },
+    {
+      "path": "manuscript/v15_loading_tail_update.tex",
+      "bytes": 7710,
+      "sha256": "ef635ffb9f5c19df2affe68ea66f257b944db4c3dc0189a117ac32c25b48eb0d"
+    },
+    {
+      "path": "manuscript/v15_structural_loop_update.tex",
+      "bytes": 6020,
+      "sha256": "78b80ffef86da9b3cf35a2fa798dadcfdae6d30b1d68272df59ec183fbcd5695"
+    },
+    {
+      "path": "manuscript/wright_integrated_history_v16.tex",
+      "bytes": 13427,
+      "sha256": "9a69ca7f7ea0e2f1e161b1c55e9984f3e042eb69172900214a5e14dcb164c0c6"
+    },
+    {
+      "path": "model_runs/received_v14_65021957/claude-fable-5-1/instructions.txt",
+      "bytes": 965,
+      "sha256": "48a31860916aea8027e8035c98ae48c2fa69c4dd5113dd7eebc81914741d8fa5"
+    },
+    {
+      "path": "model_runs/received_v14_65021957/claude-fable-5-1/outcome.json",
+      "bytes": 312,
+      "sha256": "c2149a5cb0d63d743b3e73b87f1c0018c5218e0b520142e45b0856f1ddf3013a"
+    },
+    {
+      "path": "model_runs/received_v14_65021957/claude-fable-5-1/prompt.txt",
+      "bytes": 66112,
+      "sha256": "32c65cb6595e9b3bb068a2e6fb250284856ab24cd6fdf93f430d0167aa342792"
+    },
+    {
+      "path": "model_runs/received_v14_65021957/claude-fable-5-1/request.json",
+      "bytes": 1014,
+      "sha256": "ab8920a89979e05bd8de7f58648235e2e2fb24939fc46da4e6c384ffcf6c40c3"
+    },
+    {
+      "path": "model_runs/received_v14_65021957/claude-fable-5-1/response.json",
+      "bytes": 39430,
+      "sha256": "39b210bdc5ab48ab09b9b2c2a9348708010942f1a8e45d1694483b6f3e49cb9f"
+    },
+    {
+      "path": "model_runs/received_v14_65021957/claude-opus-5-5/instructions.txt",
+      "bytes": 965,
+      "sha256": "48a31860916aea8027e8035c98ae48c2fa69c4dd5113dd7eebc81914741d8fa5"
+    },
+    {
+      "path": "model_runs/received_v14_65021957/claude-opus-5-5/outcome.json",
+      "bytes": 311,
+      "sha256": "fb1c7a9300d6261937f27adb32e069e3f0323a3d5bc5f4c14e2b6be738d169a3"
+    },
+    {
+      "path": "model_runs/received_v14_65021957/claude-opus-5-5/prompt.txt",
+      "bytes": 57847,
+      "sha256": "e31064d265a90465f22914c04cdcf691951c97c92ecfffd59879d20afdd70593"
+    },
+    {
+      "path": "model_runs/received_v14_65021957/claude-opus-5-5/request.json",
+      "bytes": 1013,
+      "sha256": "7ff6b858ab928b48d2a1fcc817b9058420d17b2c900b3844c9e9341a9f008f18"
+    },
+    {
+      "path": "model_runs/received_v14_65021957/claude-opus-5-5/response.json",
+      "bytes": 18550,
+      "sha256": "9c45c6e6ed8d5d26ad4210d86d3e34c12eaeb348f881f919cba0cf4fda06506b"
+    },
+    {
+      "path": "model_runs/received_v14_65021957/gpt-6-astra/instructions.txt",
+      "bytes": 965,
+      "sha256": "48a31860916aea8027e8035c98ae48c2fa69c4dd5113dd7eebc81914741d8fa5"
+    },
+    {
+      "path": "model_runs/received_v14_65021957/gpt-6-astra/outcome.json",
+      "bytes": 301,
+      "sha256": "7f257704327af0db5a94195ff3ccc6afdf37ae171c7f2a479781ad43a35bc335"
+    },
+    {
+      "path": "model_runs/received_v14_65021957/gpt-6-astra/prompt.txt",
+      "bytes": 96777,
+      "sha256": "9679c5307564b2523b143b0dae51a177242def1cf158bd9faf3f929e88f161c2"
+    },
+    {
+      "path": "model_runs/received_v14_65021957/gpt-6-astra/request.json",
+      "bytes": 1009,
+      "sha256": "a3f5c6c42c5abeace37c7c4ca2b770bc974749b8d9497f720e61547be49918d2"
+    },
+    {
+      "path": "model_runs/received_v14_65021957/gpt-6-astra/response.json",
+      "bytes": 32837,
+      "sha256": "332e43cb396d084e6b3e7eb21426d1f14c219b9f5f2ab94bbee3612dc5fda1a5"
+    },
+    {
+      "path": "model_runs/received_v15_65023104/claude-fable-5-1/instructions.txt",
+      "bytes": 1199,
+      "sha256": "b7aa5761acfc390323c5386b5569b39ad45c9612561cae03b2c2bdab08417643"
+    },
+    {
+      "path": "model_runs/received_v15_65023104/claude-fable-5-1/outcome.json",
+      "bytes": 312,
+      "sha256": "590152ead35717c2326decb7bcde1ca6dea136acf9e52f7835422db0d7bbf886"
+    },
+    {
+      "path": "model_runs/received_v15_65023104/claude-fable-5-1/prompt.txt",
+      "bytes": 37713,
+      "sha256": "fe6f1854776caf68e0bcb5a666734b8fe941edcbbebdb62076b8a1ca59a434ca"
+    },
+    {
+      "path": "model_runs/received_v15_65023104/claude-fable-5-1/request.json",
+      "bytes": 960,
+      "sha256": "46835c8165769b12ecdc2e1a5d3eb6e1d74dcd57f39cd06261a70845d85448b5"
+    },
+    {
+      "path": "model_runs/received_v15_65023104/claude-fable-5-1/response.json",
+      "bytes": 34045,
+      "sha256": "1fd2ad7a4dc22da874fbd3ba6d3e73567058b8162573a8bb24c42c166522f56f"
+    },
+    {
+      "path": "model_runs/received_v15_65023104/claude-opus-5-5/instructions.txt",
+      "bytes": 1199,
+      "sha256": "b7aa5761acfc390323c5386b5569b39ad45c9612561cae03b2c2bdab08417643"
+    },
+    {
+      "path": "model_runs/received_v15_65023104/claude-opus-5-5/outcome.json",
+      "bytes": 311,
+      "sha256": "5ca1a207fac2d27cf318182fa8ba8689c796ddb8ede870c577a4538c93dae574"
+    },
+    {
+      "path": "model_runs/received_v15_65023104/claude-opus-5-5/prompt.txt",
+      "bytes": 17681,
+      "sha256": "7a4eaa32ab249b6507a22a8b2feb4c19eda1fcb7a8a79370f32b5c7fed41feb9"
+    },
+    {
+      "path": "model_runs/received_v15_65023104/claude-opus-5-5/request.json",
+      "bytes": 959,
+      "sha256": "e2ff693aa9492ed550d9e4c06bb21c63a64c492ff8ed484106147b943a6122ec"
+    },
+    {
+      "path": "model_runs/received_v15_65023104/claude-opus-5-5/response.json",
+      "bytes": 15690,
+      "sha256": "de3980391af557e20dfe8355ef2fef85b67efeb6f9e83ac9fe4b73b33baa3b55"
+    },
+    {
+      "path": "model_runs/received_v15_65023104/gpt-6-astra/instructions.txt",
+      "bytes": 1199,
+      "sha256": "b7aa5761acfc390323c5386b5569b39ad45c9612561cae03b2c2bdab08417643"
+    },
+    {
+      "path": "model_runs/received_v15_65023104/gpt-6-astra/outcome.json",
+      "bytes": 301,
+      "sha256": "057a2efcaaebe10ac4cff564243dfb82c85e1d23a1c190266c30ae1bd25bbd06"
+    },
+    {
+      "path": "model_runs/received_v15_65023104/gpt-6-astra/prompt.txt",
+      "bytes": 31588,
+      "sha256": "979b1c91a90af696f06b00364a45a1058d4063104e865bd89670f27c863efb82"
+    },
+    {
+      "path": "model_runs/received_v15_65023104/gpt-6-astra/request.json",
+      "bytes": 955,
+      "sha256": "7d62fa79872b53a160fd5a2d109e3b6f63dee9a5398035a07ac29f36f384d8c2"
+    },
+    {
+      "path": "model_runs/received_v15_65023104/gpt-6-astra/response.json",
+      "bytes": 42972,
+      "sha256": "cecfb6397b6a44337372aec2f421efd9ae7ed7067e6671cd5619ae3e57105da5"
+    },
+    {
+      "path": "model_runs/received_v16_65049531/claude-fable-5-1/instructions.txt",
+      "bytes": 899,
+      "sha256": "669d55f8341d3dbd337851f89ff251c071c5af15a296ef39ec3a2e3abd8df8c6"
+    },
+    {
+      "path": "model_runs/received_v16_65049531/claude-fable-5-1/outcome.json",
+      "bytes": 315,
+      "sha256": "b4fc61f1616c50dc4313fec3e4d8ce347e78cefe09e7bad676e0092f48f6bb21"
+    },
+    {
+      "path": "model_runs/received_v16_65049531/claude-fable-5-1/prompt.txt",
+      "bytes": 41766,
+      "sha256": "feb63b6109daf3e002483230c64f8e6ae214128dd78c6a77b75f6a9ce6625cba"
+    },
+    {
+      "path": "model_runs/received_v16_65049531/claude-fable-5-1/request.json",
+      "bytes": 965,
+      "sha256": "207afb970a469256f6828682a3d5fec04ca47c3437dc69dd6b6613b5498c7f15"
+    },
+    {
+      "path": "model_runs/received_v16_65049531/claude-fable-5-1/response.json",
+      "bytes": 21871,
+      "sha256": "5d4a38701dec94ea8bbd3bba49d167b49fba08c66d692db284d43569522d69f8"
+    },
+    {
+      "path": "model_runs/received_v16_65049531/claude-opus-5-5/instructions.txt",
+      "bytes": 899,
+      "sha256": "669d55f8341d3dbd337851f89ff251c071c5af15a296ef39ec3a2e3abd8df8c6"
+    },
+    {
+      "path": "model_runs/received_v16_65049531/claude-opus-5-5/outcome.json",
+      "bytes": 311,
+      "sha256": "db82b8ef48193a41e1900959ca885f8b94b17a6b30ed6267f2519f947544fe07"
+    },
+    {
+      "path": "model_runs/received_v16_65049531/claude-opus-5-5/prompt.txt",
+      "bytes": 14853,
+      "sha256": "f4564680b3c3b9fdb000370714f3645c4fd8f65dc087322d4956876cf690b5a3"
+    },
+    {
+      "path": "model_runs/received_v16_65049531/claude-opus-5-5/request.json",
+      "bytes": 964,
+      "sha256": "79501def4b3a47eb9675b4f782560183be083c7bb6ab6f5d02e43a717fa2c8d8"
+    },
+    {
+      "path": "model_runs/received_v16_65049531/claude-opus-5-5/response.json",
+      "bytes": 18589,
+      "sha256": "8922f548944669fa89344121c32887659d5537d0b958033a8b1cc2cc29662fe9"
+    },
+    {
+      "path": "model_runs/received_v16_65049531/gpt-6-astra/instructions.txt",
+      "bytes": 899,
+      "sha256": "669d55f8341d3dbd337851f89ff251c071c5af15a296ef39ec3a2e3abd8df8c6"
+    },
+    {
+      "path": "model_runs/received_v16_65049531/gpt-6-astra/outcome.json",
+      "bytes": 301,
+      "sha256": "ea00d9a4b56b1da12518effcd4027cf0711740cfc7e4923ef132279234964bbe"
+    },
+    {
+      "path": "model_runs/received_v16_65049531/gpt-6-astra/prompt.txt",
+      "bytes": 40718,
+      "sha256": "103c75588eaa4410566dab876fcd5908b0ae35a602ab8a7262955127aed18dda"
+    },
+    {
+      "path": "model_runs/received_v16_65049531/gpt-6-astra/request.json",
+      "bytes": 960,
+      "sha256": "89ed5dbbbd25a266e743d5398584d09e0521a457e516da22f535138c7e5df78a"
+    },
+    {
+      "path": "model_runs/received_v16_65049531/gpt-6-astra/response.json",
+      "bytes": 43753,
+      "sha256": "b233083c1d89194db59c747cf6375fb207446b89e6bdefe34f34382467255d5f"
+    },
+    {
+      "path": "model_runs/received_v16_fable_65054393/claude-fable-5-1/instructions.txt",
+      "bytes": 899,
+      "sha256": "669d55f8341d3dbd337851f89ff251c071c5af15a296ef39ec3a2e3abd8df8c6"
+    },
+    {
+      "path": "model_runs/received_v16_fable_65054393/claude-fable-5-1/outcome.json",
+      "bytes": 252,
+      "sha256": "aebc5583228b9040479c1341db1bf31aecd740428263ca204ff24116430bed25"
+    },
+    {
+      "path": "model_runs/received_v16_fable_65054393/claude-fable-5-1/prompt.txt",
+      "bytes": 41766,
+      "sha256": "feb63b6109daf3e002483230c64f8e6ae214128dd78c6a77b75f6a9ce6625cba"
+    },
+    {
+      "path": "model_runs/received_v16_fable_65054393/claude-fable-5-1/request.json",
+      "bytes": 965,
+      "sha256": "cf76c257170d7e4e182f4c455849ec5acc8c5b239de14e009f9de6496e8cfc31"
+    },
+    {
+      "path": "model_runs/received_v16_fable_65054393/DIAGNOSIS.json",
+      "bytes": 694,
+      "sha256": "298abae5f793de16f20a4326ab589e2e473e1a9297fe934258a106cbcc61529f"
+    },
+    {
+      "path": "model_runs/received_v16_fable_65056099/claude-fable-5-1/instructions.txt",
+      "bytes": 899,
+      "sha256": "669d55f8341d3dbd337851f89ff251c071c5af15a296ef39ec3a2e3abd8df8c6"
+    },
+    {
+      "path": "model_runs/received_v16_fable_65056099/claude-fable-5-1/outcome.json",
+      "bytes": 315,
+      "sha256": "902bc6a15f3f99c258d93cdea2decc38dbe5d55271f20858259b57e344cdbc04"
+    },
+    {
+      "path": "model_runs/received_v16_fable_65056099/claude-fable-5-1/prompt.txt",
+      "bytes": 41766,
+      "sha256": "feb63b6109daf3e002483230c64f8e6ae214128dd78c6a77b75f6a9ce6625cba"
+    },
+    {
+      "path": "model_runs/received_v16_fable_65056099/claude-fable-5-1/request.json",
+      "bytes": 965,
+      "sha256": "5d2093022e71a83218005b8e6d7c11228ebb1c72d010a90d4dd67710ab0ec868"
+    },
+    {
+      "path": "model_runs/received_v16_fable_65056099/claude-fable-5-1/response.json",
+      "bytes": 43206,
+      "sha256": "ba282f61f79c76ab83c6bc00d2e862289405c68860b68b415e63421fc8ad6232"
+    },
+    {
+      "path": "model_runs/received_v16_fable_65061669/claude-fable-5-1/instructions.txt",
+      "bytes": 1443,
+      "sha256": "8e6e6239318dc390710a50c3c57a7223f68ed87618f57efb80876e422e9e80de"
+    },
+    {
+      "path": "model_runs/received_v16_fable_65061669/claude-fable-5-1/outcome.json",
+      "bytes": 312,
+      "sha256": "5148d8703925227ef44c6e0b45bda47e1e6ca73c21d7935073bb8632c8993a10"
+    },
+    {
+      "path": "model_runs/received_v16_fable_65061669/claude-fable-5-1/prompt.txt",
+      "bytes": 41766,
+      "sha256": "feb63b6109daf3e002483230c64f8e6ae214128dd78c6a77b75f6a9ce6625cba"
+    },
+    {
+      "path": "model_runs/received_v16_fable_65061669/claude-fable-5-1/request.json",
+      "bytes": 965,
+      "sha256": "4b053a7f62c6b3988d9606bb2678652a0fe9c9e8ff263b0d7297d94518a60036"
+    },
+    {
+      "path": "model_runs/received_v16_fable_65061669/claude-fable-5-1/response.json",
+      "bytes": 24456,
+      "sha256": "6dae3f48195d8b446f517fac08936fb69d87a8b59a44f618bdc8faccc198dbc1"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3846,
+      "sha256": "725c8299c95e78743d1ac6405aa85bd24c7ed4253bfd4d8a9d969f32bc6c38cc"
+    }
+  ]
+}

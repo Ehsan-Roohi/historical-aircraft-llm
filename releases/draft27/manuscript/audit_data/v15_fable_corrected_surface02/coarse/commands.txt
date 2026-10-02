@@ -1,0 +1,110 @@
+load aircraft.avl
+oper
+a a 5.86131
+b b 0.0
+d1 d1 0.0
+d2 d2 -4.12009
+d3 d3 0.0
+x
+ft
+neutral.txt
+st
+stability.txt
+a a 5.86131
+b b -3.0
+d1 d1 0.0
+d2 d2 -4.12009
+d3 d3 0.0
+x
+ft
+beta_3.0_-1.txt
+a a 5.86131
+b b 3.0
+d1 d1 0.0
+d2 d2 -4.12009
+d3 d3 0.0
+x
+ft
+beta_3.0_1.txt
+a a 5.86131
+b b -1.5
+d1 d1 0.0
+d2 d2 -4.12009
+d3 d3 0.0
+x
+ft
+beta_1.5_-1.txt
+a a 5.86131
+b b 1.5
+d1 d1 0.0
+d2 d2 -4.12009
+d3 d3 0.0
+x
+ft
+beta_1.5_1.txt
+a a 5.86131
+b b 0.0
+d1 d1 -4.0
+d2 d2 -4.12009
+d3 d3 0.0
+x
+ft
+tip_4.0_-1.txt
+a a 5.86131
+b b 0.0
+d1 d1 4.0
+d2 d2 -4.12009
+d3 d3 0.0
+x
+ft
+tip_4.0_1.txt
+a a 5.86131
+b b 0.0
+d1 d1 -2.0
+d2 d2 -4.12009
+d3 d3 0.0
+x
+ft
+tip_2.0_-1.txt
+a a 5.86131
+b b 0.0
+d1 d1 2.0
+d2 d2 -4.12009
+d3 d3 0.0
+x
+ft
+tip_2.0_1.txt
+a a 5.86131
+b b 0.0
+d1 d1 0.0
+d2 d2 -4.12009
+d3 d3 -5.0
+x
+ft
+rudder_5.0_-1.txt
+a a 5.86131
+b b 0.0
+d1 d1 0.0
+d2 d2 -4.12009
+d3 d3 5.0
+x
+ft
+rudder_5.0_1.txt
+a a 5.86131
+b b 0.0
+d1 d1 0.0
+d2 d2 -4.12009
+d3 d3 -2.5
+x
+ft
+rudder_2.5_-1.txt
+a a 5.86131
+b b 0.0
+d1 d1 0.0
+d2 d2 -4.12009
+d3 d3 2.5
+x
+ft
+rudder_2.5_1.txt
+
+quit

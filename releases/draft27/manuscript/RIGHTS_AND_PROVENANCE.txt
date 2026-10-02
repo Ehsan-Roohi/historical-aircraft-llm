@@ -1,0 +1,5 @@
+Prepublication evidence record, not legal certification.
+Historical flight photograph: Library of Congress item 00652085, rights advisory "No known restrictions on publication" (catalog search checked 2026-09-30), source https://www.loc.gov/item/00652085/. The Library does not grant a license or guarantee all uses; credit remains in caption.
+Generated design plates and evaluator drawings: retain existing source SVG, model/evaluator attribution and hashes; AI assistance disclosed. Do not represent these as measured hardware or original historical engineering drawings.
+Books, journal PDFs and private course scans: not authorized for wholesale redistribution. Curate any public export by file inventory and source rights, not by suffix alone.
+Source datasets/scripts carry provenance paths. Public release screen flags local paths separately from credential signatures. No new release or universal license has been declared.

@@ -1,0 +1,15 @@
+{
+  "job_id": "65054393",
+  "slurm_state": "FAILED",
+  "exit_code": "2:0",
+  "elapsed": "00:10:00",
+  "outcome_status": "error_or_uncertain",
+  "error_type": "TimeoutError",
+  "diagnostic": "The read operation timed out",
+  "transport_observation": "Remote frontier_wright_eval.py line 53 uses urllib.request.urlopen(request, timeout=600)",
+  "token_limit_exhaustion_observed": false,
+  "billing_error_observed": false,
+  "provider_completion_and_charge": "UNKNOWN",
+  "retry_performed": false,
+  "next_step": "Investigate provider request recovery and transport timeout/streaming before any potentially duplicate paid request. Continue independent audit of complete Astra and Opus outputs."
+}

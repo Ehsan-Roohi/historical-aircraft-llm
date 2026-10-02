@@ -1,0 +1,72 @@
+{
+  "scope": "Independent first-pass arithmetic from model-authored assumed inputs; no measured force, installed power, dynamic derivative or mode validation",
+  "job_id": "65023104",
+  "astra": {
+    "response_sha256": "cecfb6397b6a44337372aec2f421efd9ae7ed7067e6671cd5619ae3e57105da5",
+    "disposition_model": "HOLD",
+    "empty_ledger_row_count": 12,
+    "empty_mass_kg_recomputed": 304,
+    "empty_cg_m_recomputed": [
+      -0.4209210526315789,
+      -0.0059210526315789476,
+      0.8508223684210525
+    ],
+    "empty_mass_kg_claimed": 304,
+    "propeller_absorbed_power_W_model_screen": 33900,
+    "shaft_target_W_assumed": 28500,
+    "propeller_overabsorption_W_from_model_screen": 5400,
+    "paper_design_closure": "NO: control/frame-joint integration and torque matching still open"
+  },
+  "fable": {
+    "response_sha256": "1fd2ad7a4dc22da874fbd3ba6d3e73567058b8162573a8bb24c42c166522f56f",
+    "row_count": 28,
+    "mass_kg_recomputed": 353.2,
+    "cg_m_recomputed": [
+      1.5223556058890149,
+      0.0,
+      0.7845512457531144
+    ],
+    "mass_kg_claimed": 353.2,
+    "inertia_diagonal_kgm2_recomputed_from_assumed_shapes": [
+      794.4036333724517,
+      680.5191415083523,
+      1291.9315081359007
+    ],
+    "inertia_Pxz_kgm2_recomputed_from_assumed_centers": 16.049297363533416,
+    "rigid_engine_firewall_gap_m": 0.030000000000000027,
+    "rigid_firewall_tank_gap_m": 0.039999999999999813,
+    "rigid_engine_tank_gap_m": 0.07999999999999985,
+    "loaded_gaps": "ASSUMED_DEFLECTION_BUDGET_NOT_MEASURED",
+    "H13W_required_shaft_W_model": 16524,
+    "shaft_available_W_assumed": 19950,
+    "H13W_reserve_fraction_on_assumptions": 0.20733478576615827,
+    "H16W_shaft_deficit_W_on_assumptions": 4164,
+    "paper_design_closure": "CANDIDATE_ONLY: direct box contact removed; physical firewall, engine/propeller maps and loaded gaps unverified"
+  },
+  "opus": {
+    "response_sha256": "de3980391af557e20dfe8355ef2fef85b67efeb6f9e83ac9fe4b73b33baa3b55",
+    "disposition_model": "HOLD",
+    "row_count": 30,
+    "mass_kg_recomputed": 340.7205,
+    "cg_m_recomputed": [
+      0.7087145331730847,
+      0.0,
+      0.5006672838881135
+    ],
+    "mass_kg_claimed": 340.7205,
+    "propeller_speed_rpm": 400,
+    "propeller_diameter_m": 2.4,
+    "advance_ratio_J_at_15ms_recomputed": 0.9375,
+    "advance_ratio_J_at_15ms_model_label": 1.125,
+    "propeller_thrust_N_model_screen": 299.7,
+    "nominal_drag_N_model_assumption": 425,
+    "nominal_thrust_shortfall_N_on_assumptions": 125.30000000000001,
+    "propeller_absorbed_power_W_model_screen": 5303,
+    "propeller_shaft_target_W_assumed": 17460.0,
+    "paper_design_closure": "NO: selected propeller underloads target engine and misses even assumed nominal drag; actual maps and loaded clearances absent"
+  },
+  "six_component_trim_pass_count": 0,
+  "validated_dynamic_derivative_set_count": 0,
+  "accepted_mode_analysis_count": 0,
+  "flightworthiness": "NOT_ESTABLISHED"
+}

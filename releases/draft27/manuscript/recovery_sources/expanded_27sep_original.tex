@@ -1,0 +1,409 @@
+% Consolidated scientific revision. Compile with pdfLaTeX in Overleaf.
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage[margin=22mm]{geometry}
+\usepackage{amsmath,amssymb,graphicx,booktabs,tabularx,array,float,pdflscape}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage{url}
+\usepackage[font=small,labelfont=bf]{caption}
+\setlength{\emergencystretch}{3em}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.16}
+\newcommand{\figdir}{figures}
+\title{Historically Constrained Aircraft Design with Language Models:\\Trim, Stability, and Comparison with the 1903 Wright Flyer}
+\author{Ehsan Roohi\\
+\small Department of Mechanical and Industrial Engineering\\
+\small University of Massachusetts Amherst\\
+\small 160 Governors Drive, Amherst, MA 01003, USA\\
+\small\texttt{roohie@umass.edu}}
+\date{}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Can language models turn historical aeronautical evidence into aircraft concepts that satisfy the coupled requirements for flight? Three recorded model endpoints, GPT-6-Astra, Claude-Fable-5-1, and Claude-Opus-5-5, received a common packet of four paraphrased sources available by 31 December 1898. They were asked to design an original, person-carrying powered aircraft capable of directed flight and safe return. The date restriction applied to supplied documents, not pretrained knowledge. Initial proposals and geometry clarifications were preserved separately. Independent assessment combined mass and geometry audits, interacting lifting-surface calculations, whole-aircraft equilibrium, component loads, and fixed-control longitudinal derivatives. The evaluated V1 concepts comprised a pusher tandem-wing aircraft and two aft-tailed pusher biplanes; Astra's subsequent V2 revision replaces its pusher with a tractor. Direct evaluation identified conditional trim states for Astra and Opus V1, with pitch residuals of $+0.068$ and $-0.029$ N m. Their local lift-based stability diagnostics were approximately $-9.94\%$ and $+5.14\%$ of their respective reference chords. All 24 sampled Fable V1 trim candidates conflicted with its declared fin; the balanced Opus V1 state required 13.354 kW against a 13 kW target at its assumed efficiency. These conditional results identify shortcomings rather than establish design-wide impossibility. Comparison with Wright's experimental development shows why equilibrium, static stability, and pilot-controllable flight are distinct outcomes. None of the three designs is yet demonstrated to meet the combined aerodynamic, propulsion, control, structural, and dynamic requirements for flight.
+\end{abstract}
+
+\section{Introduction}
+An aircraft proposal is not a flight demonstration. A configuration can look plausible, produce sufficient nominal lift, and still fail because its pitching moments cannot be balanced, its controls cannot move through the required travel, or its installed propulsion cannot overcome total drag. This distinction becomes especially important when a language model generates a technically fluent account alongside an attractive drawing. The question examined here is not whether models can name aircraft components, but whether the components they specify form an evaluable, coupled engineering system.
+
+The Wright Flyer offers a demanding historical comparison, provided the comparison is not reduced to a contest between silhouettes. Chanute's account of nineteenth-century experiments already treated equilibrium, propulsion, materials, and practical operation as interconnected problems \cite{ref1}. Wilbur Wright's 1901 lecture describes disappointing lift predictions, experiments with the center of pressure, and changes to the apparatus \cite{ref2}. The surviving first-flight photograph documents an operating machine and pilot rather than a proposed configuration \cite{ref4}. Culick's engineering history places the Wrights' accomplishment in their combined work as designers and test pilots \cite{ref5}. The relevant comparison is therefore between evidence-producing design processes, not between the eloquence of their explanations.
+
+Studies of historical aircraft show what is needed to move beyond a plausible reconstruction. Full-scale tests of the 1901 glider examined cloth treatment and ground-effect conditions \cite{ref8}. Analyses of the 1902 glider connected aerodynamic information with flight-control development and handling qualities \cite{ref7,ref9}. Deters, Broughton, and Selig developed distinct simulation representations for the 1903 and 1905 Flyers rather than treating all Wright configurations as interchangeable \cite{ref11}. The Ames replica project and its full-scale tests provide further evidence, but that replica and its test configuration must be distinguished from the 1903 aircraft \cite{ref12,ref13}.
+
+Recent \emph{Journal of Aircraft} studies of Lilienthal's machines follow a similarly explicit chain from historical interpretation through reconstruction and measurement to constrained flight evidence. Raffel and colleagues investigated stability and controllability of the 1893 monoplane \cite{ref16}, the flying qualities of the large biplane \cite{ref17}, and individual control mechanisms of the 1895 experimental monoplane \cite{ref18}. Their results concern specified configurations and tested functions. They do not convert an untested device into a validated one merely because it is shown in a drawing. Separate wind-tunnel work also identifies fabric properties as an aerodynamic variable \cite{ref19}. These studies motivate the present separation of geometric definition, numerical prediction, and physical evidence.
+
+Language-model-assisted aircraft design is already an active research topic. Tong et al. compare prompting approaches and generated aircraft concepts with engineering designs \cite{ref25}; their publisher abstract establishes a direct conceptual-design precedent, but does not by itself support conclusions about every validation step in that study. Krus examines aircraft-system design and simulation-code assistance, including corrective interaction \cite{ref26}. The iDesignGPT study evaluates an agentic conceptual-design workflow, including an aircraft challenge \cite{ref27}. AGENT explores structured aerial-vehicle generation \cite{ref28}, while AircraftVerse links design descriptions, geometry, and simulation-related artifacts \cite{ref29}. These different representations and evaluation endpoints should not be collapsed into a single measure of ``AI aircraft design.''
+
+This study contributes an artifact-level engineering assessment of three historically prompted concepts. It asks: (1) what was actually specified, (2) which conditional force and moment balances can be supported, (3) what the available evidence says about stability and mechanical feasibility, and (4) which deficiencies must be addressed by a recorded feedback cycle. It does not claim the first use of language models in aircraft design, historically independent invention, or a controlled ranking of model capabilities. The three cases lack matched repeated trials and received unequal clarification budgets.
+
+\section{Historical Information and Design Experiment}
+\subsection{What the models were given and asked to do}
+The common design date was 31 December 1898. The actual input packet comprised four short paraphrases with bibliographic links: Cayley's 1809--1810 work on aerial navigation; Lilienthal's account of his 1893 experiments as reproduced in Chanute's 1894 volume; Chanute's concluding discussion; and a chapter originating in February 1892 on wings and uncertain power estimates. It was not a complete collection of period papers, and the models were not newly trained on that collection. The packet's exact text is retained with the prompt archive. Claims that the models possessed \emph{only} pre-1899 knowledge are therefore unwarranted.
+
+The common request asked each model for an original, engine-powered aircraft carrying a human operator, capable in principle of repeated directed flight and safe return. It requested an English engineering article of approximately 1,500--2,200 words, physical reasoning, surface geometry and section ordinates, a dimensioned component-coordinate table, force and moment considerations, disturbance response, propulsion and mass estimates, launch/landing reasoning, unknowns, and proposed experiments. Layout and control architecture were left open. The instruction expressly required disclosure of suspected recall from modern training and prohibited claims of real experiments. Thus the task was historically constrained prompting with substantial engineering scaffolding, not an unprompted discovery experiment.
+
+The recorded endpoint identifiers were \texttt{gpt-6-astra}, \texttt{claude-fable-5-1}, and \texttt{claude-opus-5-5}; the shorter names Astra, Fable, and Opus are used below. These are the identifiers stored in the experiment, not independently established product-release or capability rankings. Complete available prompts, returned identifiers, timestamps, response statuses, and hashes belong in the reproducibility record. Unrecovered transport or request details must be marked missing rather than reconstructed from memory.
+
+\subsection{Clarification is not successful optimization}
+Each initial article and its model-authored diagrams constitute V0. A later fresh request supplied the corresponding article and case-specific consistency questions. It requested non-overlapping mass rows, three-dimensional centroids, component envelopes, control axes, interfaces, and a change log. It did not supply the original SVG or the full historical packet and did not request new artwork. The first complete response was retained as V1. Truncated responses were preserved separately; they were not merged into a synthetic answer.
+
+Astra and Fable completed at an output ceiling of 32,000 tokens; Opus required a separately recorded 64,000-token attempt. These unequal opportunities and model-specific feedback prevent a fair capability leaderboard. The clarification stage improved the definition of the evaluated objects, but did not demonstrate aerodynamic improvement. The numerical analyses in this article were performed subsequently by the evaluator; the current V1 designs have not already undergone a successful simulation-feedback redesign loop.
+
+\subsection{Four configurations and their evidence status}
+Figure~\ref{fig:wrightphoto} records the actual Flyer I; it is not a drawing from which component coordinates were inferred. Figure~\ref{fig:config} compares the lifting surfaces represented in the V1 computations. Its Wright panel is a researcher reconstruction, not an as-built definition. The original model-authored oblique plates are V0; they must not be read as drawings of the later revisions. The three-view sheets below show the latest separately specified \emph{complete-aircraft} geometry, V2. Later Fable propeller-section and subsystem proposals are not an integrated final aircraft. All V1 trim and stability values in this article remain V1 results and are not retroactively assigned to V2.
+
+The drawings serve different evidentiary purposes. The period photograph establishes that the Wright machine carried a prone operator on the lower wing and actually flew; it cannot by itself supply the mass centroids, section shapes, or hinge coordinates needed by a solver. The four-panel sheet suppresses trusses, power plants, propellers, controls, and landing arrangements in all cases so that fore--aft placement of the lifting surfaces can be compared without confusing unmodeled hardware with computed geometry. Blue surfaces denote the represented main lifting panels and tan surfaces the additional fore or aft lifting panels. Its red markers indicate the model reference/CG locations where specified, not a historical Wright CG measurement. In Astra the two separated surfaces both contribute substantial supporting area; in Fable and Opus the small plane is aft of the biplane; in the Wright reconstruction the smaller plane is ahead of the biplane. This geometry is the starting point for moment-arm analysis, not a visual proof of pitch stability or balanced flight.
+
+The first-flight photograph provides a different class of evidence from the model-generated plates: it records a machine in operation, with a prone operator on the lower wing, two vertically separated main wings, and the forward horizontal control assembly visible ahead of them \cite{ref4,ref5}. The aft-mounted propulsion and steering assemblies belong to the actual Flyer, although a single oblique photograph does not yield reliable coordinates, component masses, control gearing, or aerodynamic coefficients. The Wright arrangement should therefore be read as an experimentally developed system: the pilot's position, the canard, the wing-warping structure, the coupled rudder, and the twin pusher propellers had to function together. Its observed flight is evidence that the complete system could achieve controlled motion under the recorded conditions, not evidence that every assumed geometric or stability parameter of a later computational reconstruction is correct.
+
+\begin{figure}[H]\centering
+\includegraphics[width=\linewidth,height=.39\textheight,keepaspectratio]{\figdir/wright_first_flight_1903_loc.jpg}
+\caption{Flyer I during the first flight, 17 December 1903. Photograph: J. T. Daniels; Library of Congress \cite{ref4}.}\label{fig:wrightphoto}
+\end{figure}
+
+\begin{figure}[H]\centering
+\includegraphics[width=\linewidth]{\figdir/configuration_comparison_v2.png}
+\caption{V1 lifting-surface models and Wright reconstruction.}\label{fig:config}
+\end{figure}
+
+\begin{landscape}
+\begin{figure}[H]\centering
+\includegraphics[width=.96\linewidth,height=.75\textheight,keepaspectratio]{\figdir/wright_threeview_reconstruction.png}
+\caption{Flyer I: research reconstruction, not as-built geometry.}\label{fig:wrightthree}
+\end{figure}\end{landscape}
+
+The three-view of Fig.~\ref{fig:wrightthree} isolates the surfaces admitted to the present aerodynamic model. Plan view establishes the span and fore--aft separation of the paired main decks and forward canard elements; side view exposes their height and longitudinal moment arms; front view makes the vertical separation and left--right symmetry explicit. These are geometric inputs for lift and pitching-moment calculations, not a complete rendering of the 1903 aircraft. In particular, the propellers and transmission, aft vertical rudders, pilot, engine, launch hardware, detailed truss and bracing, wing-warping deformation, and fabric shape are absent. The red cross denotes the model's moment reference and must not be interpreted as a measured historical center of gravity. Consequently this plate can clarify the lifting-surface comparison but cannot, by inspection, establish the Flyer's installed thrust, control authority, structure, or actual static margin \cite{ref11,ref12}.
+
+\begin{landscape}
+Astra uses two separated lifting surfaces rather than a small forward elevator paired with a dominant main biplane. Its forward surface has 12 m span and 2 m chord; the rear surface has 10 m span and 1.6 m chord. Collective and differential motion of the forward halves are intended to provide pitch and roll control. The concept includes a seated operator, a central truss, and an aft propeller driven through a long shaft. This couples pitch and roll travel, shaft support, ground clearance, and the transmission of wing-root torque. A nominal mechanism description does not establish bearing or linkage adequacy. Figure~\ref{fig:astra} preserves the original arrangement, while all numerical mass and CG results below refer to V1.
+
+\begin{figure}[H]\centering
+\includegraphics[width=.96\linewidth,height=.74\textheight,keepaspectratio]{\figdir/astra_oblique_v0.png}
+\caption{Astra: original V0 proposal.}\label{fig:astra}
+\end{figure}\end{landscape}
+
+The oblique Astra plate should be read as a component map, not as a photograph of a built machine. Its two fabric-covered, wood-spar-and-rib supporting surfaces are arranged in tandem: the forward $12.0\times2.0$ m surface is split at the centreline into independently pivoted halves, whereas the rear $10.0\times1.6$ m surface is fixed in flight and adjustable in incidence on the ground. The rear chord plane is 0.55 m higher. In the model's forward-positive coordinates, the forward half-surface pivots are near $x=1.10$, $z=1.20$ m and the rear surface occupies $x=-3.50$ to $-1.90$, $z=1.75$ m. These specified envelopes explain why the rear member is a second weight-supporting surface rather than merely a small elevator. Simultaneous forward-half rotation is intended to vary pitch moment; differential rotation is intended to produce roll moment. Neither the plate nor the accompanying proposal supplies measured hinge loads, actuation forces or an interference-corrected control derivative.
+
+The seated, restrained operator lies within $y=\pm0.30$ m of the centreline, even if the parallel-oblique projection makes the seat look displaced relative to the wings. The hand linkage commands the two forward halves, the pedals command the aft vertical rudder, and the ribbon and spring vane are proposed airflow cues rather than verified flight instruments. A central wooden truss and bracing wires must transmit the forward pivot reactions and rear-wing forces into the vehicle; the plate's dashed frame is an envelope, not a resolved set of joints or proof-loaded member sizes. The proposed motor sits near the operator and transmits torque along a guarded, approximately centreline shaft to a $2.40$ m aft-facing screw at $x=-4.60$, $z=-0.30$ m. This creates coupled questions of bearing support, torsional/vibration behavior, pilot guarding and propeller/ground clearance. The depicted wheels and skids serve ground support, while the movable ballast is a proposed trim adjustment; neither an aerodynamic trim setting nor a loaded CG is established by its pictorial placement. The source itself leaves blade geometry, bearing stations, control-cable route, many attachments and the lateral position of some auxiliaries unresolved. Thus the plate communicates the proposed interfaces but cannot certify that the surfaces move freely or that the shaft and structure withstand their loads.
+
+The V2 Astra revision replaces the long-shaft aft pusher with a forward tractor and short shaft. Figure~\ref{fig:astrav2} is the latest full-aircraft three-view in the archive, not the geometry used for the V1 numerical results below. It depicts declared envelopes and neutral controls, not a structurally complete airplane.
+
+\begin{landscape}
+\begin{figure}[H]\centering
+\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{\figdir/astra_v2_threeview.png}
+\caption{Astra V2: coordinate-based three-view.}\label{fig:astrav2}
+\end{figure}\end{landscape}
+
+The Astra V2 three-view documents a substantive redesign, not a second projection of the V0 machine. The revision abandons the tandem variable-incidence arrangement in favor of a fixed main wing, a smaller aft horizontal tail with separate elevator, outboard ailerons and a rudder. In the plan view, the left--right surface envelopes and centreline installation can be distinguished without the overlap of the oblique drawing; the side elevation separates the wing, tail, cockpit, gear and thrust-line stations; and the front elevation conveys span, vertical separation and wheel track. The original long aft pusher shaft is replaced by one forward tractor propeller driven through a stated $0.7$ m short shaft, removing one mechanism while creating new requirements for propeller reaction torque, engine mounting and the wake over the airframe. The V2 response proposes a two-spar wing and triangulated longeron truss and separates elevator, aileron and rudder control runs. Those named load paths and control circuits are hypotheses for design review, not validated hardware. The V2 model's stated main-wing/tail force split and nominal restoring pitch slope come from its own simplified estimate; the independently recomputed mass, trim, pitch slope and power numbers reported later in this article are for V1. They must not be transferred to the V2 silhouette. The three-view resolves layout at the declared coordinate level but still omits verified blade performance, full-span structural sizing, joint strengths, hinge moments, loaded gear compliance and six-component flight dynamics.
+
+\begin{landscape}
+Fable proposes a two-deck aircraft with aft horizontal and vertical surfaces, a seated operator, and two counter-rotating pusher propellers (Fig.~\ref{fig:fable}). Each deck has 11.5 m nominal span and 1.85 m chord, with rounded corners. The horizontal tail is a continuous rotating surface. V1 supplies a 292 kg mass ledger, but its mechanical definition contains a tail/fin interference problem at the sampled pitch-balance commands. Its similarity to Wright in propeller position and opposite rotation is as important as its difference in tail position; it is incorrect to describe all generated propulsion layouts as alternatives to pusher propulsion.
+
+\begin{figure}[H]\centering
+\includegraphics[width=.96\linewidth,height=.80\textheight,keepaspectratio]{\figdir/fable_oblique_v0.png}
+\caption{Fable: original V0 proposal.}\label{fig:fable}
+\end{figure}\end{landscape}
+
+The Fable oblique plate depicts a braced biplane, not a tandem-wing aircraft. Its upper and lower fabric-covered decks each have a nominal $11.5$ m span and $1.85$ m chord, separated by $1.85$ m; posts and crossed wires are proposed to form a single structural girder. Rounded tips account for the difference between the $42.55$ m$^2$ product of the rectangular dimensions and the proposed $42$ m$^2$ total area. The operator is seated between the decks, with an engine behind him in the original coordinate table, and the open lattice carries a cruciform tail aft. At each outer upper-deck tip, a $1.5$ m spanwise panel is intended to pivot differentially for roll; fore--aft hand-lever motion commands the all-moving horizontal tail for pitch, lateral lever motion commands the tip panels, and a foot bar actuates the rudder behind its fixed fin. More lift on one tip also changes its drag, so the depicted rudder is part of the proposed coordinated-response mechanism rather than a substitute for an independently demonstrated yaw solution.
+
+Fable's pair of $2.3$ m pusher screws is placed behind the decks at $y=\pm1.60$ m and is specified to rotate in opposite senses. The engine therefore requires gearing and transverse/longitudinal shafts to reach both hubs; the original drawing is a routing proposal, not a dimensioned clearance proof through the braced biplane. The twin ash skids and three inset wheels were meant to support a downhill ground run and absorb landing contact, but their travel and energy absorption were not established. Importantly, the original text itself finds that its stated $x\simeq0.56$ m CG is inconsistent with a direct sum of the initial mass stations, which gives approximately $1.14$ m. Its proposed relative shift of the decks addresses this arithmetic discrepancy only if the resulting geometry and moments are consistently updated. Likewise, the original continuous, leading-edge-hinged horizontal tail would sweep through the fixed fin and frame under the later sampled trim commands. The oblique plate should therefore be used to identify proposed assemblies and detect these conflicts, not to imply that the V0 mechanism can execute the required control motion.
+
+Figure~\ref{fig:fablev2} shows the V2 Fable aircraft envelope. Its plan-view wing tips are rectangular station envelopes rather than invented rounded-tip coordinates; unresolved drive layout and control interference remain unresolved. Later V3b/V5--V8-R propeller proposals are subsystem candidates, not a new complete-aircraft drawing.
+
+\begin{landscape}
+\begin{figure}[H]\centering
+\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{\figdir/fable_v2_threeview.png}
+\caption{Fable V2: unresolved coordinate geometry.}\label{fig:fablev2}
+\end{figure}\end{landscape}
+
+The Fable V2 plan, side and front views make the revision's interfaces more explicit. The biplane decks, tip-control regions, central operator/engine installation, two pusher discs, tail lattice, ground gear and symmetry plane remain recognizable. The major geometric change is at the tail: the single continuous rotating horizontal plane is replaced by two outboard halves over $|y|=0.45$--$2.75$ m, driven by a common torque tube with its hinge at $x=5.65$ m rather than at the leading edge. Their combined declared area increases from $3.40$ to $4.60$ m$^2$. The fixed fin is moved above the frame and the rudder hinge aft to $x=6.60$ m. The model reports a geometric sweep check for the specified $\pm12^\circ$ tail travel; this removes the previously identified tail--fin intersection in its envelope description, but is not a measured actuation or deflection-under-load test. The revised two-screw drive still requires a central bevel box, a transverse shaft and outboard boxes; the response explicitly leaves interference between this drive and biplane truss bracing unresolved. The apparent rectangular deck tips in the reconstructed plan are station envelopes, not evidence that the originally proposed rounded-tip coordinates have been completely specified. V2's engine output is recorded as a requirement, not a verified available motor curve. The subsequent propeller-only iterations do not replace this V2 whole-aircraft geometry, and the V1 mathematical trim candidates that violated the old fin remain historical V1 results, not demonstrated V2 performance.
+
+\begin{landscape}
+Opus uses an aft-tailed biplane, seated operator, outboard balancing flaps, and a pusher propeller (Fig.~\ref{fig:opus}). Its decks have 11 m span and 1.8 m chord. V1 distinguishes some internal masses and installation details absent from the original account. The 39.6 m$^2$ gross deck geometry is not silently reduced to its declared 38 m$^2$ aerodynamic reference area: no physically located opening was specified. A coefficient normalization is not a geometric cutout. The model's arrangement suggests conventional pitch control, but power, mechanical clearances, and structural definition still require independent checks.
+
+\begin{figure}[H]\centering
+\includegraphics[width=.96\linewidth,height=.80\textheight,keepaspectratio]{\figdir/opus_oblique_v0.png}
+\caption{Opus: original V0 proposal.}\label{fig:opus}
+\end{figure}\end{landscape}
+
+The original Opus plate is unusually explicit about the proposed mechanical chain. Two superposed, nominally equal wings are joined by interplane struts; the upper wing carries opposite-moving outboard balancing flaps for roll. A forward open nacelle places the seated operator ahead of the lower-wing leading edge, whereas the engine, radiator, and fuel group occupies the center section. A longitudinal shaft is intended to drive a single aft pusher screw. Twin longitudinal booms route around its swept disc to an aft tailplane with hinged elevator and to a fin with hinged rudder. The proposed manual paths are a hand wheel to the balancing flaps, a lever to the elevator, and a foot bar to the rudder; the control runs in the plate are schematic, not a resolved cable installation. The skids, wheel pairs, and tail skid describe a proposed ground interface, not an established takeoff attitude. This decomposition matters because nominal pitch, roll, yaw, and thrust mechanisms do not independently prove that controls clear the structure, that shaft loads reach the airframe, or that the tail remains effective in the propeller wake.
+
+The same plate preserves unresolved source conditions rather than concealing them in the drawing. Its section-coordinate table draws flat wings despite a separate claim of slight dihedral; the specified shaft endpoint and screw-disc station have a gap; the stated shaft-and-screw mass center lies aft of the disc; and the skid elevations do not define a consistent ground contact line. The radiator, tank, linkage supports, complete wire bracing, and several instrument positions are not fixed. These are specific design-interface questions, not merely drafting omissions. They would require a revised coordinate ledger and installation drawing before using the image for clearance, mass-property, launch, or structural calculations. The V1 performance results reported later in this article are therefore conditional on the separately archived evaluator geometry, not on every visible line in this V0 schematic.
+
+Figure~\ref{fig:opusv2} shows the later V2 complete-aircraft specification at neutral controls. Its explicit node chains are drawn, but unspecified cross-bracing, landing gear and internal solids are not fabricated to make a more complete-looking plate. The V1 calculations below remain tied to the earlier geometry.
+
+\begin{landscape}
+\begin{figure}[H]\centering
+\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{\figdir/opus_v2_threeview.png}
+\caption{Opus V2: coordinate-based three-view.}\label{fig:opusv2}
+\end{figure}\end{landscape}
+
+Figure~\ref{fig:opusv2} changes the evidentiary role of the picture. It is a researcher-rendered orthographic projection of Opus's later V2 coordinate response at neutral controls, not a new photograph or proof of an assembled machine. The plan view tests whether the main surfaces, aft tail and propeller disc occupy compatible longitudinal and lateral regions; the side view displays wing--tail separation and height relationships relevant to pitching moments and ground clearance; the front view displays deck gap and left--right symmetry. The common metric scale makes comparisons across these projections possible without interpreting the distortions of an oblique drawing. Only supplied node chains are connected: missing cross-bracing, landing gear, pilot and nacelle solids are deliberately not invented. The plate is therefore useful for a traceable geometry audit, but does not by itself validate hinge travel, cable routing, propeller efficiency, bearing loads, aeroelastic behavior, or V2 flight equilibrium. No V1 trim or stability result should be transferred to this revised geometry without rerunning the coupled analyses.
+
+The original plates deliberately retain source unknowns and contradictions. None of the V0 or V2 sheets are construction drawings. Their embedded 1898 dates refer to the design exercise, not historical documents. The modern lecture notes supplied during this revision were used to organize the evaluator's checklist, not retroactively added to V0 or V1. Their modern transport-aircraft correlations, systems and numerical design targets are not evidence of knowledge available to the Wrights in 1898.
+
+\section{Engineering Assessment}
+\subsection{Mass, coordinates, and physical consistency}
+All mass totals and centroids were recomputed from the same non-overlapping leaf rows:
+\begin{equation}
+m=\sum_i m_i,\qquad \boldsymbol r_G=\frac{\sum_i m_i\boldsymbol r_i}{m},\qquad W=mg.
+\label{eq:mass}
+\end{equation}
+A correct sum does not validate an assumed mass or a centroid outside its declared component. Astra's forward-positive longitudinal coordinate was reflected to form an aft-positive analysis coordinate, with right-positive lateral and upward-positive vertical axes. Each design retains its own physical origin. The numerical moment reference was set to its recomputed CG. All three masses remain design assumptions, not measurements.
+
+\begin{table}[H]\centering\small
+\caption{V1 mass and aerodynamic reference quantities.}\label{tab:refs}
+\begin{tabular}{lrrrrr}\toprule
+Design & $m$, kg & $S$, m$^2$ & $c_{ref}$, m & $x_G$, m & $z_G$, m\\\midrule
+Astra &330&40.000000&2.00&0.044121&0.411012\\
+Fable &292&42.000619&1.85&1.524692&0.752295\\
+Opus &358&38.000000&1.80&0.631964&0.467014\\\bottomrule
+\end{tabular}
+\end{table}
+
+The assumed horizontal-tail geometry and fixed-fin envelopes are tested separately from aerodynamics. The collision calculation applies the declared rigid rotation about the hinge; the aerodynamic control calculation tilts panel normals. Confusing these operations would allow an aerodynamic solution for a mechanically impossible control setting. Unspecified flexible deformation is not introduced to remove a collision.
+
+\subsection{Aerodynamic model and reference comparison}
+AVL 3.52 was used to model interacting thin lifting surfaces; the archived accompanying primer identifies itself as version 3.40 \cite{ref20}. Potential-flow methods are established tools for studying lifting interactions, but their scope is not equivalent to viscous, separated, installed-aircraft aerodynamics \cite{ref21,ref22}. Here vertical surfaces, body/pilot loads, profile drag, propeller slipstream, ground effect, and elastic deformation are omitted from the lifting-surface solution. Added drag is an explicit sensitivity input, not a measured correction.
+
+Two nominal discretizations used 8/12 chordwise and 40/80 spanwise panels per main half-surface. Airfoil ordinate files came from the retained model descriptions; the aft tails of Fable and Opus were represented as flat sections. Controls were evaluated at specified commands and interpolated only between adjacent computed values. An elliptical-wing exercise and input-ingestion checks verify selected numerical behavior. They do not experimentally validate these aircraft. This distinction follows the separation of verification and validation emphasized by Oberkampf and Trucano \cite{ref24}.
+
+The Wright calculation is an untuned four-surface reconstruction with two main decks and two forward canard surfaces. Twenty selected configuration outputs investigate canard section, incidence and discretization. The coefficient trends in Fig.~\ref{fig:wright} show sensitivity to assumptions, not agreement with a uniquely known historical configuration. The associated full-scale Ames presentation provides independent aerodynamic evidence \cite{ref13}, but its exact canard setting and normalization must be matched before a discrepancy is interpreted as prediction error. A reference point chosen at $0.3c$ is not a sourced historical CG. Neither this reconstruction nor the later reinforced replica is silently identified with the 1903 aircraft \cite{ref12}.
+
+Across four matched coarse--fine Wright reconstruction pairs, the largest changes were 1.06\% in $C_L$, 1.81\% in induced $C_D$, and 0.00108 in absolute $C_m$. These two-mesh differences are numerical sensitivity checks, not an asymptotic convergence order or experimental validation. A separate assumed main-wing-incidence change altered $C_L$ by 6.22--9.16\%, illustrating that unresolved installation geometry can dominate this mesh comparison. No viscous-flow CFD calculation is used in the present study.
+
+Figure~\ref{fig:wright} makes this installation sensitivity visible. The abscissa changes the assumed incidence of the forward canard while the two marker shapes distinguish the tested main-aircraft angles of attack, $0^\circ$ and $4^\circ$; blue and orange distinguish a flat canard from an Eiffel-10 proxy. The left panel shows that the selected canard-section change shifts predicted lift modestly compared with the difference between the two aircraft angles. The right panel is more consequential for equilibrium: changing canard incidence moves $C_m$ toward or through zero for some of these assumed cases, while the selected section also shifts the moment curve. A zero crossing is an aerodynamic moment balance about the chosen reference point at that one setting, not evidence that the historical pilot could achieve it with the actual mechanism, nor that the surrounding response was stable. Thus section, incidence, reference location, and control travel must be fixed together before the reconstructed Flyer can serve as a quantitative benchmark.
+
+\begin{figure}[H]\centering
+\includegraphics[width=\linewidth]{\figdir/wright_response_v1.png}
+\caption{Wright reconstruction sensitivity.}\label{fig:wright}
+\end{figure}
+
+\subsection{Whole-aircraft equilibrium and propulsion}
+For level flight, lift is perpendicular to velocity, drag opposes velocity, and thrust is body-forward. With $q=\rho V^2/2$ and angle of attack $\alpha$, the force residuals are
+\begin{equation}
+R_x=T\cos\alpha-D,\qquad
+R_z=\sum_j L_j+T\sin\alpha-W,
+\label{eq:forces}
+\end{equation}
+where $j$ denotes every represented lifting surface, including a tail carrying negative lift. Consequently, $L=W$ is not the complete vertical balance when thrust is inclined to the flight path. The pitch balance about the same CG is
+\begin{equation}
+R_m=\sum_j\left[M_{j,ref}+(\boldsymbol r_j-\boldsymbol r_G)\times\boldsymbol F_j\right]_{pitch}
++M_T+M_{other}.
+\label{eq:moments}
+\end{equation}
+Using AVL's already CG-referenced aerodynamic moment, this becomes
+\begin{equation}
+R_m=qSc_{ref}C_m+a_TT+a_DqS\Delta C_D,
+\qquad D=qS(C_{D,i}+\Delta C_D).
+\label{eq:solvermoment}
+\end{equation}
+No extra quarter-chord lift moment is added to the solver output. Here $a_T=z_G-z_{hub}$ for the stated thrust convention, giving $+0.711012$, $-0.047705$, and $-0.432986$ m for Astra, Fable, and Opus. Positive pitching moment is nose-up; $a_D$ is a signed hypothesized moment per unit added drag.
+
+At a prescribed $\alpha$, a control root is found from the moment equation after substituting horizontal force balance. The dynamic pressure and speed then follow from vertical balance:
+\begin{equation}
+q=\frac{W}{S[C_L+(C_{D,i}+\Delta C_D)\tan\alpha]},\quad
+V=\sqrt{\frac{2q}{\rho}},\quad
+T=\frac{qS(C_{D,i}+\Delta C_D)}{\cos\alpha}.
+\label{eq:trim}
+\end{equation}
+Roots outside the sampled controls are not extrapolated. An algebraic root must subsequently satisfy geometric constraints and be directly evaluated; vanishing interpolation residuals do not establish exact solver trim.
+
+Useful and shaft power are distinguished:
+\begin{equation}
+P_{useful}=DV=TV\cos\alpha,\qquad
+P_{shaft}=\frac{DV}{\eta}.
+\label{eq:power}
+\end{equation}
+The efficiency is useful power along the velocity divided by shaft power. Source hypotheses of 0.55, 0.50 and 0.60 are used for Astra, Fable and Opus, without an independently measured drivetrain/propeller map. An engine target below $DV$ excludes that scenario even without losses. A target above $DV$ does not establish achievable thrust, revolutions per minute, efficiency or cooling.
+
+\subsection{Static response is not dynamic stability}
+Fixed-control derivatives were calculated around $\alpha=4^\circ$, using perturbations of $\pm0.25^\circ$ and a separate $\pm0.5^\circ$ check. Controls were not retrimmed at each perturbed angle. The lift-based local diagnostic is
+\begin{equation}
+SM_{L,eff}=-\frac{C_{m_\alpha}}{C_{L_\alpha}}.
+\label{eq:sm}
+\end{equation}
+For the usual small-angle CG-referenced representation this expresses the neutral-point offset normalized by chord. Here it is reported relative to the declared $c_{ref}$, not advertised as a verified whole-configuration percent-MAC value. At finite angle, shifting the moment origin aft by $\Delta x$ at fixed height changes the moment coefficient by $(\Delta x/c_{ref})C_N$, where $C_N=-C_Z$. The corresponding constant-height aerodynamic neutral offset is
+\begin{equation}
+\Delta x_N=-c_{ref}\frac{C_{m_\alpha}}{C_{N_\alpha}}.
+\label{eq:neutral}
+\end{equation}
+A vertical shift also involves the axial force. Reference conventions, powered response and the CG envelope therefore matter. Canard geometry alone establishes neither stability nor poor handling \cite{ref15}.
+
+Dynamic behavior requires mass moments of inertia, rate derivatives, speed coupling, and a defined control/pilot model. A linear model $\dot{\boldsymbol x}=A\boldsymbol x+B\boldsymbol u$ would require those quantities before its eigenvalues could be given physical meaning. Only centroid parallel-axis inertia contributions are currently available; intrinsic component inertia is incomplete. No damping ratio, divergence time or handling-quality rating is invented from static slopes. Task-based handling assessments require additional evidence, as reflected in the Cooper--Harper framework \cite{ref23}.
+
+\section{Results}
+\subsection{Common-condition necessary screen}
+At $V=12$ m/s and $\rho=1.225$ kg/m$^3$, each V1 design retaining its own loaded mass and reference area requires $C_L=0.9173$ (Astra), 0.7730 (Fable), or 1.0475 (Opus) if vertical thrust is neglected. The provisional Wright statistical reference requires 0.7860 using its separately declared 518-ft$^2$ area; the reconstruction uses a different 510-ft$^2$ normalization. These are lift demands, not predicted stall margins or trim points. A neutral-control, $\alpha=4^\circ$ common-speed diagnostic yields $L-W$ of approximately $-1305$, $-152$, and $-1713$ N for the three V1 designs. A different, unmatched fine-mesh flat-canard Wright reconstruction gives $+65$ N. Different incidences, reference geometries and absent total drag/installed thrust prohibit a flight or superiority ranking from these single-angle values. The source-hashed reconciliation is retained with the reproducibility material.
+
+\subsection{Conditional trim and why a numerical root can be misleading}
+The wider exploratory screen considered $\alpha=0,4,8^\circ$, four added-drag coefficients ($0,0.05,0.10,0.20$), and three signed added-drag arms ($-0.5,0,0.5$ m). The resulting 108 cases contain redundant zero-drag arm settings; they are not independent trials or a probability distribution. Ninety-five mathematical candidates were found. All 24 Fable candidates conflict with the retained fin geometry. Nine Astra and seventeen Opus candidates require useful power above their unverified engine targets. These are conditional exclusions, not proofs that every possible operating state fails.
+
+Table~\ref{tab:interpolated} gives representative algebraic solutions at $\rho=1.225$ kg/m$^3$, $\alpha=4^\circ$, $\Delta C_D=0.05$, and $a_D=0$. Both force equations and the pitch equation close within the interpolant. Fable's apparent closure is particularly instructive: the required tail motion is mechanically inadmissible, so its row cannot be labelled feasible flight.
+
+\begin{table}[H]\centering\small
+\caption{Representative interpolated balances, not direct trim validation.}\label{tab:interpolated}
+\begin{tabular}{lrrr}\toprule
+Quantity & Astra & Fable & Opus\\\midrule
+$\delta$, deg &0.0503&-11.2744&-1.8886\\
+$V$, m/s &15.438&12.827&16.853\\
+$L$, N &3205.180&2836.259&3477.407\\
+$T\sin\alpha$, N &31.015&27.283&33.374\\
+$W$, N &3236.194&2863.542&3510.781\\
+$D=T\cos\alpha$, N &443.534&390.161&477.268\\
+$M_{aero}$, N m &-316.128&18.658&207.155\\
+$M_T$, N m &316.128&-18.658&-207.155\\
+$P_{shaft}$, kW &12.450&10.009&13.406\\
+Engine target, kW &18 (unverified)&unknown&13 (unverified)\\\bottomrule
+\end{tabular}
+\end{table}
+
+At the representative Opus condition, the 13.406 kW demand exceeds 13 kW when $\eta=0.60$. The useful power is about 8.043 kW: this is not a lossless-energy impossibility. An efficiency of about 0.619 would remove this particular assumed-efficiency shortfall, but no installed map establishes that value. Conversely, Astra's nominal power headroom does not remove its adverse pitch response or unresolved load paths.
+
+\subsection{Component loads and direct numerical closure}
+Two additional local runs retained the exact V1 fine-mesh geometry, controls, section files and angle. They saved both surface and strip forces; their total-force files were byte-identical to the earlier archived totals. These are diagnostic replays, not redesigned aircraft. The component loads in Table~\ref{tab:loads} are integrated solver outputs, not area-proportional estimates or forces placed at guessed centers of pressure.
+
+\begin{table}[H]\centering\small
+\caption{Direct fine-grid lifting-surface loads.}\label{tab:loads}
+\begin{tabular}{lrr}\toprule
+Surface & Lift, N & Pitch moment about CG, N m\\\midrule
+Astra forward &2394.207&1911.535\\
+Astra rear &802.779&-2223.350\\
+Opus lower deck &1694.552&-107.805\\
+Opus upper deck &1901.859&-223.225\\
+Opus horizontal tail &-120.841&534.266\\\bottomrule
+\end{tabular}
+\end{table}
+
+Astra's two lifting surfaces both support weight, but their large opposing moments nearly cancel. Opus's decks support 3596.411 N while the tail carries a 120.841 N download. This is physically different from treating the tail as an additional positive-lift surface. The tail supplies a nose-up contribution needed in the combined aerodynamic/thrust moment budget. Moment sums differ slightly from printed totals because individual coefficients are rounded; the differences are within the recorded print-precision bounds.
+
+\begin{table}[H]\centering\small
+\caption{Direct fine-grid balance at the archived candidate settings.}\label{tab:residual}
+\begin{tabular}{lrr}\toprule
+Quantity & Astra & Opus\\\midrule
+$L+T\sin\alpha$, N &3228.001&3508.944\\
+$W$, N &3236.194&3510.781\\
+$R_z$, N &-8.194&-1.837\\
+$D$, N &442.947&474.920\\
+$T\cos\alpha$, N &443.534&477.268\\
+$R_x$, N &0.588&2.348\\
+$M_{aero}$, N m &-312.049&203.116\\
+$M_T$, N m &316.128&-207.155\\
+$R_m$, N m &4.079&-4.039\\\bottomrule
+\end{tabular}
+\end{table}
+
+The archived candidate settings therefore do not close the fine-grid equations exactly (Table~\ref{tab:residual}). Reporting only the near-zero interpolation residual would hide that distinction. The separate direct-retrim record, where available, retains changed controls and force states rather than rewriting these original diagnostics. Neither smaller residuals nor a converged retrim validates total drag, engine capability or structural strength.
+
+\subsection{Direct fine-grid retrim of unchanged geometry}
+A subsequent bounded local search addressed the numerical mismatch without moving the CG, changing geometry, reducing drag or increasing engine power. Each design was evaluated at two control commands bracketing the previous setting by $0.1^\circ$, one secant-predicted command, and a separate identical-input verification. Two additional angle perturbations per accepted state held its control fixed. All twelve evaluations completed. The numerical acceptance criteria were declared before the search: $|R_x|/W,|R_z|/W\leq10^{-3}$ and $|R_m|/(Wc_{ref})\leq10^{-3}$. These are closure tolerances, not physical uncertainty or safety limits.
+
+\begin{table}[H]\centering\small
+\caption{Directly evaluated conditional trim states.}\label{tab:retrim}
+\begin{tabular}{lrr}\toprule
+Quantity & Astra & Opus\\\midrule
+$\delta$, deg &0.042327&-1.908678\\
+$V$, m/s &15.461067&16.859449\\
+$T$, N &445.221577&476.413912\\
+$L$, N &3205.137413&3477.547745\\
+$T\sin\alpha$, N &31.057087&33.232955\\
+$W$, N &3236.194500&3510.780700\\
+$D=T\cos\alpha$, N &444.137040&475.253391\\
+$M_{aero}$, N m &-316.490262&206.251362\\
+$M_T$, N m &316.557938&-206.280570\\
+$R_m$, N m &0.067676&-0.029208\\
+$|R_m|/(Wc_{ref})$ &$1.046\times10^{-5}$&$4.622\times10^{-6}$\\
+$P_{shaft}$, kW &12.485150&13.354184\\
+$SM_{L,eff}$, \% $c_{ref}$ &-9.9379&5.1360\\\bottomrule
+\end{tabular}
+\end{table}
+
+In these states, $V$ and $T$ are solved using the directly computed fine-grid coefficients, so force closure is algebraic; the nonzero moment residual is the independently evaluated root error (Table~\ref{tab:retrim}). The separate verification reproduces the total-force output byte for byte, not by an independent method. At the accepted state, Astra's forward and rear lifts are 2399.329 and 805.750 N. Opus's lower and upper decks provide 1695.739 and 1903.340 N, while its tail supplies a 121.464 N download. Rounded component sums differ from the printed totals by less than 0.07 N; they are not adjusted to hide printing precision.
+
+With the accepted controls, speed and thrust held fixed, Astra's pitch residual changes from $-18.088$ to $+17.520$ N m between $3.75^\circ$ and $4.25^\circ$. Opus's changes from $+9.855$ to $-10.151$ N m. Numerical trim therefore does not remove Astra's destabilizing tendency. Opus retains a restoring local tendency but still requires 354 W above its 13 kW target at the assumed efficiency. These results establish conditional numerical balance, not available propulsion, stall margin, structural capability or flight. The earlier candidate-state tables remain separate to preserve the analysis sequence.
+
+\subsection{Longitudinal restoring tendency}
+At the archived frozen-control settings, Astra has a positive $C_{m_\alpha}$ on both meshes, whereas Opus has a negative value (Table~\ref{tab:stability} and Fig.~\ref{fig:pitch}). Their approximate local margins are therefore opposite in sign. The fine-mesh, constant-height neutral positions are $x_N=-0.154507$ m for Astra and $x_N=0.724497$ m for Opus in their own aft-positive frames. These conditional locations are not recommendations to move the CG without rechecking trim, control travel, mass and loads.
+
+\begin{table}[H]\centering\small
+\caption{Fixed-control pitch diagnostics at the archived candidate settings.}\label{tab:stability}
+\begin{tabular}{llrrr}\toprule
+Design & Mesh & $C_{L_\alpha}$/deg & $C_{m_\alpha}$/deg & $SM_{L,eff}$, \% $c_{ref}$\\\midrule
+Astra &8/40&0.061280&0.005980&-9.758\\
+Astra &12/80&0.061180&0.006080&-9.938\\
+Opus &8/40&0.065380&-0.003280&5.017\\
+Opus &12/80&0.065440&-0.003360&5.134\\\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]\centering
+\includegraphics[width=\linewidth]{\figdir/fixed_control_response_v1.png}
+\caption{Fixed-control pitch response.}\label{fig:pitch}
+\end{figure}
+
+Figure~\ref{fig:pitch} plots a local $C_m$ response to a one-degree change in angle of attack about each retained V1 candidate setting, without moving the controls. The gray circles and blue squares are the coarse and fine panelizations, respectively. Astra's curve rises with angle of attack, so a small nose-up disturbance increases rather than opposes the modeled nose-up moment; the local fixed-control tendency is destabilizing under this sign convention. Opus's curve falls, indicating a restoring local tendency at that tested setting. The nearly parallel coarse/fine traces indicate limited numerical sensitivity of these particular slopes, but both panels remain offset from $C_m=0$: the slope test alone does not establish trim. Nor do these traces contain pitch damping, inertia, delayed pilot inputs, elevator authority, propulsion effects, or a valid operating envelope. They are diagnostic derivatives for the specific V1 representations, not flight-test trajectories or V2 outcomes.
+
+The result does not justify the statement that Opus is a stable flying aircraft. Its favorable local pitch slope coexists with the propulsion shortfall under the representative efficiency assumption, unknown dynamic response and incomplete structure. Nor does Astra's unfavorable slope prove that no pilot or control system could stabilize it. No such stabilizing system has been demonstrated. Fable receives no flight-acceptable stability score at the mechanically conflicting command.
+
+The Wright reconstruction yields a negative lift-based ratio about its chosen reference, but that point is not an independently reconstructed CG and the derivatives are wider secants over $0$--$4^\circ$. It would be incorrect to quote that ratio as the actual Flyer's static margin and then rank the three designs against it. Literature-based evidence of Wright instability and control remains distinct from this unresolved numerical comparison \cite{ref6,ref10}.
+
+\subsection{Structures, controls and launch}
+All three concepts describe materials and assemblies but leave important member sections, joints or load paths incomplete. Astra lacks a complete bearing-to-truss and wing-root torque definition; Fable lacks complete spar/rib and lattice sizing; Opus lacks sufficient spar/strut and bracing-wire definition. A finite-element model generated from bounding envelopes would introduce a new researcher-designed structure. The contrast with proof loading of a later Wright replica is a contrast in evidence, not a transferable strength result \cite{ref14}.
+
+Launch claims also use unlike assumptions. Fable proposes a downhill path, whereas Opus invokes level turf and headwind. The 80 m Fable path at slope 1:12 supplies 19.024 kJ of gravitational potential energy at its V1 mass. Astra's approximately 116 m arithmetic assumes a constant net force of 300 N. Opus's stated excess over rolling resistance does not also establish subtraction of aerodynamic drag. These numbers cannot support a takeoff-distance ranking without matched wind, slope, force histories and liftoff conditions.
+
+\section{Discussion: What the Wright Comparison Actually Shows}
+\subsection{Canard, posture and propulsion are coupled decisions}
+Wilbur's 1901 account explicitly links the prone pilot to reducing resistance and describes the forward surface in relation to the movement of pressure on the main supporting surface \cite{ref2}. The same account describes discovering errors in earlier aerodynamic expectations and revising the apparatus. This is evidence of an experimental reasoning process, not proof that a forward elevator is inherently stable. The control patent documents a later specified mechanism, with filing and publication dates after the present input cutoff \cite{ref3}; it is not evidence that the models received that mechanism.
+
+The twin counter-rotating pusher arrangement addresses several coupled issues: reaction torque, propeller diameter and clearance, transmission, pilot/engine placement and the flow encountered by the blades. Aft placement is not universally more efficient. Historical explanations and later aerodynamic interpretations must be attributed separately \cite{ref5,ref6,ref11}. Fable shares the twin, opposite-rotation pusher choice; Astra and Opus V1 also use pushers. Astra V2 instead proposes a tractor, an explicit design-cycle change, not a property of the evaluated V1. The primary divergences are therefore the distribution of lifting area, forward versus aft pitch-control surfaces, seated versus prone posture, and the mechanisms used to correct disturbances.
+
+\begin{table}[H]\centering\footnotesize
+\caption{V1 architectural comparison and remaining evidence.}\label{tab:architecture}
+\begin{tabularx}{\linewidth}{l*{4}{>{\raggedright\arraybackslash}X}}\toprule
+System & Wright 1903 & Astra & Fable & Opus\\\midrule
+Lifting layout & Main biplane, forward elevator & Tandem lifting surfaces & Biplane, aft tail & Biplane, aft tail\\
+Pilot/control & Prone; mechanical pitch, warping and yaw controls & Seated; collective/differential forward incidence & Seated; movable tips and rotating tail & Seated; flaps, elevator and rudder\\
+Propulsion & Twin counter-rotating pushers; historical operation & Pusher with long shaft; installation unverified & Twin counter-rotating pushers; available power unresolved & Pusher; conditional power margin inadequate at selected efficiency\\
+Structure & Historical built artifact; later replicas require separate identity & Truss/wing-root and bearing paths incomplete & Lattice/member and joint definition incomplete & Spar/strut/wire definition incomplete\\
+Evidence & Documented flights, later tests and reconstructions & Numerical conditions only & Mechanical conflict in sampled trims & Numerical conditions only\\\bottomrule
+\end{tabularx}
+\end{table}
+
+The models' written rationales can be compared with the engineering consequences of their choices, but they do not reveal the causal origin of those choices. Some responses acknowledge recollection of later aircraft knowledge. Without controlled changes to input information and repeated trials, an assertion that a model ``derived'' a conventional arrangement from nineteenth-century evidence would exceed the experiment. An aft tail is not automatically an anachronism either: the relevant question is the dated evidence and particular implementation, not resemblance to a modern category.
+
+\subsection{Why a good static margin is not the Wright achievement}
+Lawrence and Padfield's comparison of the 1903 and 1905 Flyers provides a particularly useful warning \cite{ref10}. Their representation of the later aircraft has a more unfavorable static measure but a slower unstable pitch response and improved control characteristics. Their reported pitch-mode doubling times are approximately 0.41 s for the 1903 representation and 2.192 s for 1905. These are properties of their models and conditions, not measured time constants of the present reconstructions. Their sign convention for the reported static measure must not be copied as the conventional positive-stable margin.
+
+Consequently, ``at least as stable as Wright'' is ambiguous. One endpoint is passive restoring tendency over a specified CG and operating envelope. Another is the ability of a specified pilot/controller to keep a dynamically unstable vehicle within acceptable limits using available controls. The latter also depends on damping, control effectiveness, time delay, actuator limits and workload. Neither endpoint follows from a drawing or a single $C_m=0$ point. The present evidence supports only conditional local pitch diagnostics and identifies the missing inputs for a stronger comparison.
+
+\subsection{What feedback has accomplished, and what it has not}
+The Wrights accumulated measurements and piloting experience; this project has so far accumulated descriptions, clarification responses and evaluator calculations. Those are not equivalent experimental resources. The appropriate analogy is the sequence of a falsifiable proposal, test, discrepancy and recorded change. It is not the claim that requesting a revised paragraph recreates the Wrights' learning process.
+
+Self-Refine formalizes iterative textual feedback \cite{ref30}, and Reflexion describes retaining feedback in agent memory \cite{ref32}. Neither constitutes evidence of aerodynamic correctness. Findings on limitations of intrinsic self-correction further motivate feedback grounded in independent calculations rather than assurances of improvement \cite{ref31}. A continuation of the present study must keep those distinctions visible.
+
+Three V2 requests formed a separate researcher-assisted treatment. They retained the original packet and each model's own V1 response, added labelled conditional numerical evidence, and required changed geometry, mass ledger, controls, propulsion and structural definition. Astra received its destabilizing slope and mechanism gaps; Fable its interference and missing power evidence; Opus its tail load, thrust-line moment and conditional power deficit. No architecture was dictated. The resulting V2 coordinate responses support the three-view reconstructions shown here. They have not been subjected to the same complete independent trim, propulsion, control and structural assessment as V1, so they are not counted as a demonstrated flight-capable improvement.
+
+\section{Limitations and Reproducibility}
+The principal limitations are physical, not typographic: total drag and installed propulsion are unvalidated; the lifting model excludes separated flow and flexibility; complete structural and inertia definitions are absent; lateral/directional response has not been established; and the Wright reference is not fully matched to a sourced CG and as-tested configuration. A positive result from the current evaluator would remain a conditional screening result.
+
+The design experiment itself is small and exploratory. Unequal budgets, model-specific clarification and incomplete historical request recovery prevent population-level conclusions about models. Supplied-source restriction is not a pretraining cutoff. The literature review is targeted rather than systematic; access levels and claim-to-source notes are retained in an annotated bibliography. References inspected only at abstract or metadata level are not used for uninspected quantitative details.
+
+The intended public release will contain all available original prompts, packet text, model responses, failures, diagrams, versioned geometry, analysis code and selected inputs/outputs, with hashes and explicit missing-history records. The GitHub release is the last project stage and has not yet occurred. Third-party papers, supplied lecture scans, credentials and unreviewed software binaries are excluded from the public payload. FAIR principles motivate identifiers, metadata and reuse conditions \cite{ref33}; reproducibility guidance motivates explicit experimental settings and code/data reporting \cite{ref34}. A repository alone, however, is neither physical validation nor a substitute for independent checking.
+
+AI systems generated the evaluated concepts and assisted in analysis and manuscript preparation. They are not authors. The human author retains responsibility for source interpretation, calculations and any submitted version. No physical construction, human flight test or journal submission is authorized by these computational results.
+
+\section{Conclusions}
+Historically constrained prompting produced three specified aircraft concepts, not three demonstrated flying aircraft. Clarification made their mass, geometry and interfaces more auditable, but it did not establish successful design optimization. Independent calculations now show the individual lifting-surface loads, opposing aerodynamic and thrust moments, and differences between interpolated balances and direct fine-grid results.
+
+Astra's local fixed-control pitch tendency is destabilizing in the retained model. Opus's tendency is restoring, but its representative power demand exceeds its assumed target at the stated efficiency. Fable's sampled trim candidates require mechanically conflicting tail motion. None of these findings alone proves design-wide impossibility; together they rule out presenting the current set as three validated, stable aircraft.
+
+The Wright comparison strengthens rather than relaxes the necessary evidence. Historical controlled flight, static restoring tendency and dynamic controllability are different outcomes. A defensible improvement claim requires frozen revised model outputs, independent re-evaluation of coupled constraints, and a matched reference. The next design-feedback stage must demonstrate those changes rather than replace missing evidence with more confident prose.
+
+\begingroup\raggedright
+\input{references_v2.tex}
+\endgroup
+\end{document}

@@ -1,0 +1,105 @@
+{
+  "status": "RESEARCHER_CONCEPT_NOT_ACCEPTED_STRUCTURE",
+  "material_source": "https://research.fs.usda.gov/download/treesearch/62244.pdf",
+  "material_scope": "Modern clear-wood average values used only by evaluator, not supplied as pre-1899 knowledge or design allowables",
+  "cases": [
+    {
+      "load_multiplier": 1,
+      "geometry": {
+        "half_span_m": 4.025,
+        "wire_horizontal_span_m": 4.575,
+        "mast_half_height_m": 0.35,
+        "box_b_m": 0.12,
+        "box_h_m": 0.1,
+        "wall_m": 0.004,
+        "wire_diameter_m": 0.004
+      },
+      "assumptions": {
+        "wood_E_Pa": 10800000000.0,
+        "wood_density_kg_m3": 448.0,
+        "wire_E_Pa": 200000000000.0,
+        "wire_density_kg_m3": 7850.0,
+        "prestress_N": 0,
+        "uniform_half_panel_mass_budget_kg": 7
+      },
+      "one_half_support_up_N": 38.430348841583566,
+      "one_half_root_vertical_reaction_N": 105.68203766247078,
+      "root_bending_Nm": 139.20576586118653,
+      "max_abs_bending_Nm": 139.20576586118653,
+      "unbraced_tip_deflection_m": 0.03979738704819559,
+      "braced_tip_deflection_m": 0.01148951149325897,
+      "max_abs_deflection_m": 0.011489511493266507,
+      "upper_wire_tension_N": 487.8892055187576,
+      "lower_wire_tension_N": 0.0,
+      "wire_required_stress_Pa": 38824989.36974395,
+      "spar_compression_N": 486.37329814622717,
+      "spar_max_linear_combined_stress_Pa": 2834237.659022321,
+      "ideal_Euler_Pcr_N_by_effective_length_factor": {
+        "1": 17976.760163302566,
+        "2": 4494.1900408256415
+      },
+      "mass": {
+        "two_box_spars_kg": 6.116454400000006,
+        "four_wires_kg": 1.810496946162062,
+        "solid_square_40mm_mast_kg": 0.50176
+      },
+      "EI_Nm2": 29508.24960000004
+    },
+    {
+      "load_multiplier": 3,
+      "geometry": {
+        "half_span_m": 4.025,
+        "wire_horizontal_span_m": 4.575,
+        "mast_half_height_m": 0.35,
+        "box_b_m": 0.12,
+        "box_h_m": 0.1,
+        "wall_m": 0.004,
+        "wire_diameter_m": 0.004
+      },
+      "assumptions": {
+        "wood_E_Pa": 10800000000.0,
+        "wood_density_kg_m3": 448.0,
+        "wire_E_Pa": 200000000000.0,
+        "wire_density_kg_m3": 7850.0,
+        "prestress_N": 0,
+        "uniform_half_panel_mass_budget_kg": 7
+      },
+      "one_half_support_up_N": 118.06091886417964,
+      "one_half_root_vertical_reaction_N": 314.27624064798334,
+      "root_bending_Nm": 406.46856141735816,
+      "max_abs_bending_Nm": 406.46856141735816,
+      "unbraced_tip_deflection_m": 0.11939216114458678,
+      "braced_tip_deflection_m": 0.03242824070542963,
+      "max_abs_deflection_m": 0.03242824070544918,
+      "upper_wire_tension_N": 1417.2919726454716,
+      "lower_wire_tension_N": 0.0,
+      "wire_required_stress_Pa": 112784511.62549506,
+      "spar_compression_N": 1412.366154777945,
+      "spar_max_linear_combined_stress_Pa": 8271124.407352809,
+      "ideal_Euler_Pcr_N_by_effective_length_factor": {
+        "1": 17976.760163302566,
+        "2": 4494.1900408256415
+      },
+      "mass": {
+        "two_box_spars_kg": 6.116454400000006,
+        "four_wires_kg": 1.810496946162062,
+        "solid_square_40mm_mast_kg": 0.50176
+      },
+      "EI_Nm2": 29508.24960000004
+    }
+  ],
+  "calculated_member_mass_kg": 8.428711346162068,
+  "remaining_of_14kg_tail_budget_kg": 5.571288653837932,
+  "remaining_mass_note": "Unallocated ceiling for ribs, fabric, fittings, bearings, horns and fasteners; not a verified bill of materials. Original 14kg must not be overwritten as closed.",
+  "limitations": [
+    "3x means scaled current static strip loads and weight, NOT a derived maneuver/gust load case",
+    "No prestress; lower wire slack under downward load. Load reversal, backlash and flutter unresolved",
+    "First-order beam response; axial beam-column effects and local wall/joint buckling not solved",
+    "Euler effective-length values are idealized bounds for diagnostic comparison, not acceptance",
+    "Mast, attachment stress, bearing/crush/shear, fabric/ribs, fatigue and wood/wire allowables unresolved",
+    "Wire drag, tail thickness/shape changes and occupied-volume swept clearance not integrated",
+    "Mast intended to rotate with all-moving tail; compatibility with fuselage/control mechanism unverified"
+  ],
+  "accepted_aircraft_modes": false,
+  "structural_acceptance": false
+}

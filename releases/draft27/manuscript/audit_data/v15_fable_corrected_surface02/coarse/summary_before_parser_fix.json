@@ -1,0 +1,307 @@
+{
+  "scope": "Corrected rigid power-off surface model, quasi-steady prediction only; no measured derivatives, installed trim or modes",
+  "mesh": [
+    8,
+    32
+  ],
+  "source_response_sha256": "1fd2ad7a4dc22da874fbd3ba6d3e73567058b8162573a8bb24c42c166522f56f",
+  "geometry_sha256": "d3e93d9a18062c34c79af32c86cc9d7d15b596799f715088815a4d39b1689f6e",
+  "solver_sha256": "443520d255408491222a8df9060bd000f78da95a68845a2f6efdbc67e203f07a",
+  "target_CL": 0.7967081914422571,
+  "trim": {
+    "Alpha": 5.86131,
+    "pitch": -4.12009,
+    "CLtot": 0.79671,
+    "Cmtot": -0.0,
+    "CYtot": 0.0,
+    "Cltot": -0.0,
+    "Cntot": -0.0,
+    "CDind": 0.0547885,
+    "tail_absolute_incidence_deg": -8.120090000000001
+  },
+  "cases": {
+    "neutral": {
+      "Alpha": 5.86131,
+      "Beta": 0.0,
+      "CLtot": 0.79671,
+      "Cmtot": 0.0,
+      "CYtot": 0.0,
+      "Cltot": 0.0,
+      "Cntot": -0.0,
+      "CDind": 0.0547885,
+      "sha256": "0c26f94996a9b1b460080556fbc0ea77b6f34cbe72b609d5adc3f409e1af452c"
+    },
+    "beta_3.0_-1": {
+      "Alpha": 5.86131,
+      "Beta": -3.0,
+      "CLtot": 0.79453,
+      "Cmtot": -1e-05,
+      "CYtot": 0.00184,
+      "Cltot": 4e-05,
+      "Cntot": -0.00076,
+      "CDind": 0.0545871,
+      "sha256": "e436562a285e97f863e889389f585a38611c082561490c75bb67692c4dffb61a"
+    },
+    "beta_3.0_1": {
+      "Alpha": 5.86131,
+      "Beta": 3.0,
+      "CLtot": 0.79453,
+      "Cmtot": -1e-05,
+      "CYtot": -0.00184,
+      "Cltot": -4e-05,
+      "Cntot": 0.00076,
+      "CDind": 0.0545871,
+      "sha256": "c6a31cf7eeb408fe7b004fbb4db05de3c0d52e18f20999b17d49989ecb52a17f"
+    },
+    "beta_1.5_-1": {
+      "Alpha": 5.86131,
+      "Beta": -1.5,
+      "CLtot": 0.79616,
+      "Cmtot": -0.0,
+      "CYtot": 0.00092,
+      "Cltot": 2e-05,
+      "Cntot": -0.00038,
+      "CDind": 0.0547381,
+      "sha256": "d1053cd85e43465323e1a343cc7e826b1fdf175a099e393149fa56adbd2cf1f8"
+    },
+    "beta_1.5_1": {
+      "Alpha": 5.86131,
+      "Beta": 1.5,
+      "CLtot": 0.79616,
+      "Cmtot": -0.0,
+      "CYtot": -0.00092,
+      "Cltot": -2e-05,
+      "Cntot": 0.00038,
+      "CDind": 0.0547381,
+      "sha256": "525be7bec33f2b5e054c6dd2d6bc92671694ca6a1524ee9328450e5efa856789"
+    },
+    "tip_4.0_-1": {
+      "Alpha": 5.86131,
+      "Beta": 0.0,
+      "CLtot": 0.79667,
+      "Cmtot": 0.00025,
+      "CYtot": 0.00015,
+      "Cltot": 0.00724,
+      "Cntot": -0.00108,
+      "CDind": 0.0552104,
+      "sha256": "3245be49c649d8938df16f91d15a5036095a9bf71567bfcadf420c5d5fba7ade"
+    },
+    "tip_4.0_1": {
+      "Alpha": 5.86131,
+      "Beta": 0.0,
+      "CLtot": 0.79667,
+      "Cmtot": 0.00025,
+      "CYtot": -0.00015,
+      "Cltot": -0.00724,
+      "Cntot": 0.00108,
+      "CDind": 0.0552104,
+      "sha256": "6bec3a8fd7a679156911f560633a15f1e4128171d1fac1e7bfbf761e73b0c53c"
+    },
+    "tip_2.0_-1": {
+      "Alpha": 5.86131,
+      "Beta": 0.0,
+      "CLtot": 0.7967,
+      "Cmtot": 6e-05,
+      "CYtot": 7e-05,
+      "Cltot": 0.00362,
+      "Cntot": -0.00054,
+      "CDind": 0.054894,
+      "sha256": "08161dc4904f88cb258994335fa8b70ab0077938dccb947af05739ceefc9849f"
+    },
+    "tip_2.0_1": {
+      "Alpha": 5.86131,
+      "Beta": 0.0,
+      "CLtot": 0.7967,
+      "Cmtot": 6e-05,
+      "CYtot": -7e-05,
+      "Cltot": -0.00362,
+      "Cntot": 0.00054,
+      "CDind": 0.054894,
+      "sha256": "7803b6acc7b60b546e01a7dae8261902261080a9a506be3b2a51b4adadbb46c8"
+    },
+    "rudder_5.0_-1": {
+      "Alpha": 5.86131,
+      "Beta": 0.0,
+      "CLtot": 0.7967,
+      "Cmtot": 3e-05,
+      "CYtot": -0.00298,
+      "Cltot": -9e-05,
+      "Cntot": 0.00133,
+      "CDind": 0.0549084,
+      "sha256": "22789a0569903ed5a2647c7e92bf31912b86696bd185a27f5252372f2ee473c9"
+    },
+    "rudder_5.0_1": {
+      "Alpha": 5.86131,
+      "Beta": 0.0,
+      "CLtot": 0.7967,
+      "Cmtot": 3e-05,
+      "CYtot": 0.00298,
+      "Cltot": 9e-05,
+      "Cntot": -0.00133,
+      "CDind": 0.0549084,
+      "sha256": "8d072c19f44b8acf1c48bcc28e33f2876a2f01bc19540f9e04995ee443889328"
+    },
+    "rudder_2.5_-1": {
+      "Alpha": 5.86131,
+      "Beta": 0.0,
+      "CLtot": 0.79671,
+      "Cmtot": 1e-05,
+      "CYtot": -0.00149,
+      "Cltot": -5e-05,
+      "Cntot": 0.00067,
+      "CDind": 0.0548185,
+      "sha256": "af4807ab6b481915144f84a17d9fb2a08f8cd19ba1b6adf15dad29625781b0e2"
+    },
+    "rudder_2.5_1": {
+      "Alpha": 5.86131,
+      "Beta": 0.0,
+      "CLtot": 0.79671,
+      "Cmtot": 1e-05,
+      "CYtot": 0.00149,
+      "Cltot": 5e-05,
+      "Cntot": -0.00067,
+      "CDind": 0.0548185,
+      "sha256": "6513bd214637f3e65bce104812fbe1d336db570948d996e7adf01953df3d1a67"
+    }
+  },
+  "slopes_per_rad": {
+    "beta": {
+      "3.0": {
+        "CYtot": -0.03514141143469049,
+        "Cltot": -0.0007639437268410976,
+        "Cntot": 0.014514930809980855
+      },
+      "1.5": {
+        "CYtot": -0.03514141143469049,
+        "Cltot": -0.0007639437268410976,
+        "Cntot": 0.014514930809980855
+      }
+    },
+    "tip": {
+      "4.0": {
+        "CYtot": -0.002148591731740587,
+        "Cltot": -0.103705360918679,
+        "Cntot": 0.015469860468532227
+      },
+      "2.0": {
+        "CYtot": -0.0020053522829578813,
+        "Cltot": -0.103705360918679,
+        "Cntot": 0.015469860468532227
+      }
+    },
+    "rudder": {
+      "5.0": {
+        "CYtot": 0.034148284589797066,
+        "Cltot": 0.001031324031235482,
+        "Cntot": -0.015240677350479898
+      },
+      "2.5": {
+        "CYtot": 0.034148284589797066,
+        "Cltot": 0.0011459155902616466,
+        "Cntot": -0.015355268909506063
+      }
+    }
+  },
+  "AVL_stability_derivatives_raw_labels": {
+    "Surfaces": 11.0,
+    "Strips": 192.0,
+    "Vortices": 1536.0,
+    "Sref": 42.0,
+    "Cref": 1.85,
+    "Bref": 11.5,
+    "Xref": 1.5224,
+    "Yref": 0.0,
+    "Zref": 0.78455,
+    "Alpha": 5.86131,
+    "Beta": 0.0,
+    "Mach": 0.0,
+    "CXtot": 0.02686,
+    "Cltot": 0.0,
+    "Cl'tot": 0.0,
+    "CYtot": 0.0,
+    "Cmtot": 0.0,
+    "CZtot": -0.79814,
+    "Cntot": -0.0,
+    "Cn'tot": -0.0,
+    "CLtot": 0.79671,
+    "CDtot": 0.05479,
+    "CDvis": 0.0,
+    "CDind": 0.0547885,
+    "CLff": 0.80234,
+    "CDff": 0.0550406,
+    "CYff": 0.0,
+    "e": 1.1823,
+    "roll": 0.0,
+    "pitch": -4.12009,
+    "yaw": 0.0,
+    "CLa": 3.457555,
+    "CLb": -0.0,
+    "CYa": 0.0,
+    "CYb": -0.035171,
+    "CDa": 0.423531,
+    "CDb": 0.0,
+    "Cla": 0.0,
+    "Clb": 0.000698,
+    "Cma": -0.037195,
+    "Cmb": -0.0,
+    "Cna": -0.0,
+    "Cnb": -0.008112,
+    "CLp": -0.0,
+    "CLq": 4.576653,
+    "CLr": -0.0,
+    "CYp": -0.000226,
+    "CYq": -0.0,
+    "CYr": 0.036361,
+    "CDp": -0.0,
+    "CDq": 0.400957,
+    "CDr": -0.0,
+    "Clp": -0.36399,
+    "Clq": 0.0,
+    "Clr": 0.210586,
+    "Cmp": 0.0,
+    "Cmq": -3.417865,
+    "Cmr": -0.0,
+    "Cnp": -0.039944,
+    "Cnq": 0.0,
+    "Cnr": -0.035442,
+    "CLd01": -0.0,
+    "CLd02": 0.006179,
+    "CLd03": 0.0,
+    "CYd01": -3.7e-05,
+    "CYd02": -0.0,
+    "CYd03": 0.000596,
+    "CDd01": -0.0,
+    "CDd02": 3.2e-05,
+    "CDd03": -0.0,
+    "Cld01": -0.001773,
+    "Cld02": 0.0,
+    "Cld03": -9e-06,
+    "Cmd01": 0.0,
+    "Cmd02": -0.011625,
+    "Cmd03": -0.0,
+    "Cnd01": 0.000454,
+    "Cnd02": 0.0,
+    "Cnd03": -0.000267,
+    "CDffd01": -0.0,
+    "CDffd02": 3.6e-05,
+    "CDffd03": -0.0,
+    "ed01": 0.0,
+    "ed02": 0.017456,
+    "ed03": 0.0,
+    "Xnp": 1.542261
+  },
+  "corrections": [
+    "upper center/tip shared COMPONENT2",
+    "fin/rudder shared COMPONENT5 and matching upper vertical mesh",
+    "whole-moving tail normal rotation over full chord; .25 physical hinge is not an aft-flap fraction"
+  ],
+  "missing": [
+    "body and gear",
+    "installed propulsion",
+    "viscous drag and stall",
+    "measured section data",
+    "unsteady derivatives",
+    "physical inertia and loaded-control proof"
+  ],
+  "accepted_aircraft_modes": false
+}

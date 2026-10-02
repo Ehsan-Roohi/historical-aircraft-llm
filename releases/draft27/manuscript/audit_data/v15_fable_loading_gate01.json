@@ -1,0 +1,212 @@
+{
+  "scope": "Evaluator-only loading arithmetic and fixed-neutral-point diagnostic; not re-trimmed stability, modes or flight approval",
+  "source_sha256": "1fd2ad7a4dc22da874fbd3ba6d3e73567058b8162573a8bb24c42c166522f56f",
+  "assumptions": [
+    "Model-authored mass/centroid/intrinsic inertia retained, not measured",
+    "Pilot intrinsic inertia scales with mass at fixed shape; body-shape variation unknown",
+    "Fuel full or empty only; tank mass retained",
+    "Intrinsic products of inertia not supplied; Pxz includes centroid terms only, not an established complete tensor",
+    "Frozen nominal neutral point and reference chord 1.85 m; height, retrim, drag, propulsion and wake changes excluded"
+  ],
+  "nominal_surfaces": {
+    "coarse": {
+      "nominal_SM": 0.010757601831351923,
+      "frozen_xNP_m": 1.542257169277016,
+      "input_sha256": "383fb155f202baa1a18b2830917358c9fd935d991a7b4f72fb7e0b31acb1c6d2"
+    },
+    "fine": {
+      "nominal_SM": 0.009709614515280417,
+      "frozen_xNP_m": 1.5403183927422837,
+      "input_sha256": "307e263bdb5d7c12c2de1b8bf336b980e9e0d75ec284411e9548ef7a957ac31d"
+    }
+  },
+  "cases": [
+    {
+      "pilot_kg": 75,
+      "seat_x_m": 0.3,
+      "fuel_kg": 8,
+      "mass_kg": 353.2,
+      "cg_m": [
+        1.5223556058890149,
+        0.0,
+        0.7845512457531144
+      ],
+      "assumed_inertia_diagonal_kgm2": [
+        794.4036333724517,
+        680.5191415083523,
+        1291.9315081359007
+      ],
+      "assumed_Pxz_kgm2": 16.049297363533416,
+      "frozen_NP_SM": {
+        "coarse": 0.010757601831351939,
+        "fine": 0.009709614515280431
+      },
+      "needs_independent_retrim": true,
+      "negative_margin_screen": false
+    },
+    {
+      "pilot_kg": 75,
+      "seat_x_m": 0.35,
+      "fuel_kg": 8,
+      "mass_kg": 353.2,
+      "cg_m": [
+        1.53297281993205,
+        0.0,
+        0.7845512457531144
+      ],
+      "assumed_inertia_diagonal_kgm2": [
+        794.4036333724517,
+        671.4991599115232,
+        1282.9115265390715
+      ],
+      "assumed_Pxz_kgm2": 15.919730191959234,
+      "frozen_NP_SM": {
+        "coarse": 0.005018567213495089,
+        "fine": 0.003970579897423581
+      },
+      "needs_independent_retrim": true,
+      "negative_margin_screen": false
+    },
+    {
+      "pilot_kg": 75,
+      "seat_x_m": 0.25,
+      "fuel_kg": 8,
+      "mass_kg": 353.2,
+      "cg_m": [
+        1.5117383918459797,
+        0.0,
+        0.7845512457531144
+      ],
+      "assumed_inertia_diagonal_kgm2": [
+        794.4036333724517,
+        689.8344939998584,
+        1301.2468606274067
+      ],
+      "assumed_Pxz_kgm2": 16.178864535107593,
+      "frozen_NP_SM": {
+        "coarse": 0.016496636449208787,
+        "fine": 0.01544864913313728
+      },
+      "needs_independent_retrim": true,
+      "negative_margin_screen": false
+    },
+    {
+      "pilot_kg": 75,
+      "seat_x_m": 0.3,
+      "fuel_kg": 0,
+      "mass_kg": 345.2,
+      "cg_m": [
+        1.5205561993047507,
+        0.0,
+        0.7745756083429896
+      ],
+      "assumed_inertia_diagonal_kgm2": [
+        792.7049923266221,
+        678.878153536356,
+        1291.6551612097335
+      ],
+      "assumed_Pxz_kgm2": 15.775725483198146,
+      "frozen_NP_SM": {
+        "coarse": 0.011730254039062284,
+        "fine": 0.010682266722990776
+      },
+      "needs_independent_retrim": true,
+      "negative_margin_screen": false
+    },
+    {
+      "pilot_kg": 65,
+      "seat_x_m": 0.35,
+      "fuel_kg": 8,
+      "mass_kg": 343.2,
+      "cg_m": [
+        1.5674417249417252,
+        0.0,
+        0.7855579836829837
+      ],
+      "assumed_inertia_diagonal_kgm2": [
+        793.0833476461247,
+        655.6715361472902,
+        1267.8015218344988
+      ],
+      "assumed_Pxz_kgm2": 15.499088909673667,
+      "frozen_NP_SM": {
+        "coarse": -0.013613273332275258,
+        "fine": -0.014661260648346766
+      },
+      "needs_independent_retrim": true,
+      "negative_margin_screen": true
+    },
+    {
+      "pilot_kg": 65,
+      "seat_x_m": 0.35,
+      "fuel_kg": 0,
+      "mass_kg": 335.2,
+      "cg_m": [
+        1.5666646778042959,
+        0.0,
+        0.7753087708830548
+      ],
+      "assumed_inertia_diagonal_kgm2": [
+        791.3907725422137,
+        654.0772783186655,
+        1267.5658391097852
+      ],
+      "assumed_Pxz_kgm2": 15.384564205847262,
+      "frozen_NP_SM": {
+        "coarse": -0.013193247852583734,
+        "fine": -0.014241235168655242
+      },
+      "needs_independent_retrim": true,
+      "negative_margin_screen": true
+    },
+    {
+      "pilot_kg": 85,
+      "seat_x_m": 0.25,
+      "fuel_kg": 8,
+      "mass_kg": 363.2,
+      "cg_m": [
+        1.4769988986784142,
+        0.0,
+        0.7835999449339207
+      ],
+      "assumed_inertia_diagonal_kgm2": [
+        795.723242571999,
+        706.7409527048917,
+        1317.436376799559
+      ],
+      "assumed_Pxz_kgm2": 16.602807939977975,
+      "frozen_NP_SM": {
+        "coarse": 0.035274740864109075,
+        "fine": 0.034226753548037565
+      },
+      "needs_independent_retrim": true,
+      "negative_margin_screen": false
+    },
+    {
+      "pilot_kg": 85,
+      "seat_x_m": 0.25,
+      "fuel_kg": 0,
+      "mass_kg": 355.2,
+      "cg_m": [
+        1.4742286036036036,
+        0.0,
+        0.7738837274774775
+      ],
+      "assumed_inertia_diagonal_kgm2": [
+        794.018861897945,
+        705.0198118686656,
+        1317.085616637387
+      ],
+      "assumed_Pxz_kgm2": 16.168745641328833,
+      "frozen_NP_SM": {
+        "coarse": 0.03677219766130395,
+        "fine": 0.03572421034523244
+      },
+      "needs_independent_retrim": true,
+      "negative_margin_screen": false
+    }
+  ],
+  "negative_screen_count": 2,
+  "accepted_aircraft_modes": false,
+  "next_action": "Re-trim aft/light-pilot cases with corrected geometry and their own weight/CG; then assess derivatives and uncertainty. Do not label the frozen-NP screen a verified static instability."
+}

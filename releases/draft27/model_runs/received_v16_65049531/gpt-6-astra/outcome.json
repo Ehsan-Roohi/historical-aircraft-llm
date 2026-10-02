@@ -1,0 +1,9 @@
+{
+  "status": "completed",
+  "stop_reason": null,
+  "model_returned": "gpt-6-astra",
+  "response_sha256": "b233083c1d89194db59c747cf6375fb207446b89e6bdefe34f34382467255d5f",
+  "finished_utc": "2026-09-30T00:35:41.271550+00:00",
+  "automatic_retry": false,
+  "engineering_validation": "not_evaluated"
+}

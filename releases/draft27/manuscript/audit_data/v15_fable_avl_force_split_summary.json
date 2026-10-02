@@ -1,0 +1,33 @@
+{
+  "scope": "Conditional Fable V15 power-off AVL surface force split; not six-component trim or measured forces",
+  "alpha_deg": 5.850731893286282,
+  "tail_delta_deg": -4.199097194840035,
+  "geometry_sha256": "e0d9ad4a83cad536aa73c162d04d24985e69dc1846953aca65935d42a1f5a34b",
+  "section_sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33",
+  "solver_sha256": "443520d255408491222a8df9060bd000f78da95a68845a2f6efdbc67e203f07a",
+  "Sref_m2": 42.0,
+  "Cref_m": 1.85,
+  "groups": {
+    "lower": {
+      "area_m2": 21.274,
+      "CL_on_Sref": 0.3864,
+      "Cm_on_Sref_Cref": -0.0476
+    },
+    "upper": {
+      "area_m2": 21.274,
+      "CL_on_Sref": 0.4656,
+      "Cm_on_Sref_Cref": -0.0758
+    },
+    "tail": {
+      "area_m2": 4.6,
+      "CL_on_Sref": -0.0552,
+      "Cm_on_Sref_Cref": 0.1234
+    }
+  },
+  "CL_surface_sum": 0.7968000000000001,
+  "CL_total": 0.79677,
+  "Cm_surface_sum": -1.3877787807814457e-17,
+  "Cm_total": 2e-05,
+  "note": "Surface coefficients are referred to the same Sref/Cref and nominal CG; summation error is rounding in AVL text output.",
+  "flightworthiness": "NOT_ASSESSED"
+}

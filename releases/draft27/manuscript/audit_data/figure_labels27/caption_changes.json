@@ -1,0 +1,20 @@
+{
+  "replacements": {
+    "Researcher-enlarged detail of the Astra V0 component geometry. Numbered markers replace small source text; no component was relocated.": "Researcher-labeled detail of the Astra V0 component geometry. Component names and matching numbered keys are included within the plate; annotation-only leaders are removed, with no component relocation.",
+    "Researcher-enlarged Fable V0 mechanism detail, retaining the original component geometry and unresolved interfaces.": "Researcher-labeled Fable V0 mechanism detail. Component names and matching numbered keys appear within the plate; original component geometry and unresolved interfaces are retained.",
+    "Researcher-enlarged Opus V0 mechanism detail. Source geometry is preserved; small archival prose is replaced by numbered markers.": "Researcher-labeled Opus V0 mechanism detail. Component names and matching numbered keys appear within the plate; source geometry is preserved.",
+    "Lines extending toward the cropped edges are preserved archival callout\nleaders, not physical cables or structural members. The numbered overlay is\nan explanatory display derivative, not another model response.": "Formerly unlabelled archival callout leaders have been replaced by readable\nin-figure identification. Physical cables and structural geometry are not\nrevised. The labeled overlay is an explanatory display derivative, not\nanother model response."
+  },
+  "files": [
+    {
+      "file": "main.tex",
+      "source_sha256": "593eede1c379ab2b0416c959728a84bd3b07b9908e49c9e68af3199c4e59d3aa",
+      "new_sha256": "2bf9be6f2825d780ed635c692cafcbd13ff928f9537c6b96fa71340e44006e64"
+    },
+    {
+      "file": "main_joa_review.tex",
+      "source_sha256": "e62c50adb2c0d52f3e17c6a1497d2a12549cbee8ce359d50ea9239b85b59cfae",
+      "new_sha256": "aeb54c2b2892beb6443e6c41173bc90d7e83b5d73acd67f6c1cebfecafd4c91f"
+    }
+  ]
+}

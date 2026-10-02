@@ -1,0 +1,181 @@
+{
+  "parent_sha256": "8922f548944669fa89344121c32887659d5537d0b958033a8b1cc2cc29662fe9",
+  "author": "evaluator",
+  "limitations": [
+    "Constant torque and constant power below rated rpm are sensitivity assumptions, not a measured engine map.",
+    "Same assumed polar; no swirl, tip loss, Reynolds correction or installation effects.",
+    "No same-speed updated aircraft drag available; thrust sufficiency is not assessed.",
+    "Negative Cl symmetric clipping is an evaluator convention; low-speed stall and flight remain unverified."
+  ],
+  "results": [
+    {
+      "radial_cells": 3,
+      "assumed_engine_envelope": "constant_crank_torque",
+      "baseline_500rpm": {
+        "rpm": 500,
+        "crank_rpm": 1600.0,
+        "vi": 4.931320330839215,
+        "T_N": 980.0628622572912,
+        "Q_Nm": 358.9140727180857,
+        "P_W": 18792.696902018848
+      },
+      "equilibrium": {
+        "rpm": 485.5410978216855,
+        "crank_rpm": 1553.7315130293937,
+        "vi": 4.611742466973729,
+        "T_N": 900.2141237172593,
+        "Q_Nm": 333.4627200000001,
+        "P_W": 16955.160382914757
+      },
+      "residual": 5.684341886080802e-14
+    },
+    {
+      "radial_cells": 3,
+      "assumed_engine_envelope": "constant_shaft_power",
+      "baseline_500rpm": {
+        "rpm": 500,
+        "crank_rpm": 1600.0,
+        "vi": 4.931320330839215,
+        "T_N": 980.0628622572912,
+        "Q_Nm": 358.9140727180857,
+        "P_W": 18792.696902018848
+      },
+      "equilibrium": {
+        "rpm": 489.6017410193514,
+        "crank_rpm": 1566.7255712619244,
+        "vi": 4.701269802418029,
+        "T_N": 922.3548729135941,
+        "Q_Nm": 340.5435569651693,
+        "P_W": 17459.999999999996
+      },
+      "residual": -3.637978807091713e-12
+    },
+    {
+      "radial_cells": 12,
+      "assumed_engine_envelope": "constant_crank_torque",
+      "baseline_500rpm": {
+        "rpm": 500,
+        "crank_rpm": 1600.0,
+        "vi": 4.954014459580547,
+        "T_N": 985.8192393136176,
+        "Q_Nm": 361.7811069860068,
+        "P_W": 18942.814465247033
+      },
+      "equilibrium": {
+        "rpm": 483.98817657594554,
+        "crank_rpm": 1548.7621650430258,
+        "vi": 4.599483938098507,
+        "T_N": 897.1963314417959,
+        "Q_Nm": 333.46271999999993,
+        "P_W": 16900.93216433205
+      },
+      "residual": -1.1368683772161603e-13
+    },
+    {
+      "radial_cells": 12,
+      "assumed_engine_envelope": "constant_shaft_power",
+      "baseline_500rpm": {
+        "rpm": 500,
+        "crank_rpm": 1600.0,
+        "vi": 4.954014459580547,
+        "T_N": 985.8192393136176,
+        "Q_Nm": 361.7811069860068,
+        "P_W": 18942.814465247033
+      },
+      "equilibrium": {
+        "rpm": 488.48048451902423,
+        "crank_rpm": 1563.1375504608777,
+        "vi": 4.698677347238684,
+        "T_N": 921.7112422899072,
+        "Q_Nm": 341.3252395277137,
+        "P_W": 17460.000000000004
+      },
+      "residual": 3.637978807091713e-12
+    },
+    {
+      "radial_cells": 48,
+      "assumed_engine_envelope": "constant_crank_torque",
+      "baseline_500rpm": {
+        "rpm": 500,
+        "crank_rpm": 1600.0,
+        "vi": 4.9554308564738765,
+        "T_N": 986.1788875946087,
+        "Q_Nm": 361.96037610762465,
+        "P_W": 18952.200974505202
+      },
+      "equilibrium": {
+        "rpm": 483.89160263569886,
+        "crank_rpm": 1548.4531284342365,
+        "vi": 4.598721748762175,
+        "T_N": 897.008806435505,
+        "Q_Nm": 333.46272000000005,
+        "P_W": 16897.559789361043
+      },
+      "residual": 0.0
+    },
+    {
+      "radial_cells": 48,
+      "assumed_engine_envelope": "constant_shaft_power",
+      "baseline_500rpm": {
+        "rpm": 500,
+        "crank_rpm": 1600.0,
+        "vi": 4.9554308564738765,
+        "T_N": 986.1788875946087,
+        "Q_Nm": 361.96037610762465,
+        "P_W": 18952.200974505202
+      },
+      "equilibrium": {
+        "rpm": 488.4107168155833,
+        "crank_rpm": 1562.9142938098666,
+        "vi": 4.698516620174612,
+        "T_N": 921.6713433761689,
+        "Q_Nm": 341.37399660299565,
+        "P_W": 17460.000000000004
+      },
+      "residual": 3.637978807091713e-12
+    },
+    {
+      "radial_cells": 192,
+      "assumed_engine_envelope": "constant_crank_torque",
+      "baseline_500rpm": {
+        "rpm": 500,
+        "crank_rpm": 1600.0,
+        "vi": 4.955519372730391,
+        "T_N": 986.2013649177766,
+        "Q_Nm": 361.9715806595227,
+        "P_W": 18952.787643470696
+      },
+      "equilibrium": {
+        "rpm": 483.8855687206874,
+        "crank_rpm": 1548.4338199061997,
+        "vi": 4.598674127656814,
+        "T_N": 896.9970904197103,
+        "Q_Nm": 333.4627200000001,
+        "P_W": 16897.34908423801
+      },
+      "residual": 5.684341886080802e-14
+    },
+    {
+      "radial_cells": 192,
+      "assumed_engine_envelope": "constant_shaft_power",
+      "baseline_500rpm": {
+        "rpm": 500,
+        "crank_rpm": 1600.0,
+        "vi": 4.955519372730391,
+        "T_N": 986.2013649177766,
+        "Q_Nm": 361.9715806595227,
+        "P_W": 18952.787643470696
+      },
+      "equilibrium": {
+        "rpm": 488.4063575906057,
+        "crank_rpm": 1562.9003442899384,
+        "vi": 4.6985065796271765,
+        "T_N": 921.6688509279686,
+        "Q_Nm": 341.37704350447353,
+        "P_W": 17460.00000000001
+      },
+      "residual": 1.0913936421275139e-11
+    }
+  ],
+  "flight_accepted": false
+}

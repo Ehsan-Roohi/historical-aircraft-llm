@@ -1,0 +1,44 @@
+{
+  "main": {
+    "pages": 67,
+    "rendered_pages": 67,
+    "blank_pages": [],
+    "unresolved_refs": [],
+    "detail_pages": [
+      1,
+      16,
+      22,
+      28
+    ],
+    "words": 25638,
+    "visual_review": "All pages inspected in contact sheets; all three relabeled figure pages inspected enlarged. Figure geometry preserved; names/keys now in-frame.",
+    "compile_exit_code": 0,
+    "pdf_sha256": "dfc13a5fd460bf1a9ef6c4ad3dd51a1c64f25c339d3724677c634de3356b530e",
+    "enlarged_pages_inspected": [
+      16,
+      22,
+      28
+    ]
+  },
+  "main_joa_review": {
+    "pages": 83,
+    "rendered_pages": 83,
+    "blank_pages": [],
+    "unresolved_refs": [],
+    "detail_pages": [
+      1,
+      19,
+      25,
+      31
+    ],
+    "words": 25623,
+    "visual_review": "All pages inspected in contact sheets; all three relabeled figure pages inspected enlarged. Figure geometry preserved; names/keys now in-frame.",
+    "compile_exit_code": 0,
+    "pdf_sha256": "3cada7e5ad97610b668288f8f85a179498f65ee7e08ea7200628b2c45ab74d41",
+    "enlarged_pages_inspected": [
+      19,
+      25,
+      31
+    ]
+  }
+}

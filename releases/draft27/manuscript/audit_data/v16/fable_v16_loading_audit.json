@@ -1,0 +1,140 @@
+{
+  "source_sha256": "6dae3f48195d8b446f517fac08936fb69d87a8b59a44f618bdc8faccc198dbc1",
+  "cases": [
+    {
+      "pilot_kg": 75,
+      "seat_x_m": 0.1,
+      "fuel_kg": 8,
+      "mass_kg": 365.106,
+      "cg_m": [
+        1.590720311361632,
+        0.0,
+        0.7839252436278779
+      ],
+      "fixed_NP_screen_percent": 6.736469656127994,
+      "reported_cg_x_m": 1.59085,
+      "cg_x_difference_m": -0.0001296886383681528,
+      "reported_screen_percent": 6.73
+    },
+    {
+      "pilot_kg": 75,
+      "seat_x_m": 0.15,
+      "fuel_kg": 8,
+      "mass_kg": 365.106,
+      "cg_m": [
+        1.6009913011563766,
+        0.0,
+        0.7839252436278779
+      ],
+      "fixed_NP_screen_percent": 6.181281018574232,
+      "reported_cg_x_m": 1.60112,
+      "cg_x_difference_m": -0.00012869884362354256,
+      "reported_screen_percent": 6.17
+    },
+    {
+      "pilot_kg": 75,
+      "seat_x_m": 0.05,
+      "fuel_kg": 8,
+      "mass_kg": 365.106,
+      "cg_m": [
+        1.5804493215668873,
+        0.0,
+        0.7839252436278779
+      ],
+      "fixed_NP_screen_percent": 7.291658293681763,
+      "reported_cg_x_m": 1.58058,
+      "cg_x_difference_m": -0.00013067843311276306,
+      "reported_screen_percent": 7.28
+    },
+    {
+      "pilot_kg": 75,
+      "seat_x_m": 0.1,
+      "fuel_kg": 0,
+      "mass_kg": 357.106,
+      "cg_m": [
+        1.590512424882248,
+        0.0,
+        0.7742681724753995
+      ],
+      "fixed_NP_screen_percent": 6.747706763121727,
+      "reported_cg_x_m": 1.59064,
+      "cg_x_difference_m": -0.00012757511775207675,
+      "reported_screen_percent": 6.74
+    },
+    {
+      "pilot_kg": 65,
+      "seat_x_m": 0.15,
+      "fuel_kg": 8,
+      "mass_kg": 355.106,
+      "cg_m": [
+        1.641852094867448,
+        0.0,
+        0.7848805990324016
+      ],
+      "fixed_NP_screen_percent": 3.9725894666244272,
+      "reported_cg_x_m": 1.64198,
+      "cg_x_difference_m": -0.00012790513255200864,
+      "reported_screen_percent": 3.97
+    },
+    {
+      "pilot_kg": 65,
+      "seat_x_m": 0.15,
+      "fuel_kg": 0,
+      "mass_kg": 347.106,
+      "cg_m": [
+        1.6428166900024777,
+        0.0,
+        0.7749673298646523
+      ],
+      "fixed_NP_screen_percent": 3.9204491890552546,
+      "reported_cg_x_m": 1.64295,
+      "cg_x_difference_m": -0.00013330999752225736,
+      "reported_screen_percent": 3.91
+    },
+    {
+      "pilot_kg": 85,
+      "seat_x_m": 0.05,
+      "fuel_kg": 8,
+      "mass_kg": 375.106,
+      "cg_m": [
+        1.5396488725853492,
+        0.0,
+        0.7830208261131519
+      ],
+      "fixed_NP_screen_percent": 9.497087968359498,
+      "reported_cg_x_m": 1.53977,
+      "cg_x_difference_m": -0.00012112741465086785,
+      "reported_screen_percent": 9.49
+    },
+    {
+      "pilot_kg": 85,
+      "seat_x_m": 0.05,
+      "fuel_kg": 0,
+      "mass_kg": 367.106,
+      "cg_m": [
+        1.538333696534516,
+        0.0,
+        0.7736071053047349
+      ],
+      "fixed_NP_screen_percent": 9.568178565701835,
+      "reported_cg_x_m": 1.53846,
+      "cg_x_difference_m": -0.00012630346548392346,
+      "reported_screen_percent": 9.56
+    }
+  ],
+  "tests": [
+    "31 unique IDs",
+    "lateral mass symmetry",
+    "nominal mass",
+    "fuel difference",
+    "seat-shift first moment"
+  ],
+  "limitations": [
+    "Only printed mass allocations and centroids are audited; physical masses and inertia are not verified.",
+    "The assumed NP of 41.37 percent chord is inherited from a different evaluator configuration; no new AVL/trim result is asserted.",
+    "Positive fixed-NP screen does not establish static or dynamic stability."
+  ],
+  "min_screen_percent": 3.9204491890552546,
+  "trim_verified": false,
+  "modes_verified": false
+}

@@ -1,0 +1,153 @@
+{
+  "scope": "Euler-Bernoulli cantilever requirements from conditional AVL lift strips; NOT a structural pass",
+  "axes": "Lift positive upward in assumed horizontal-flow equilibrium; downward tail weight subtracted",
+  "assumptions": [
+    "Root at absolute y=.55m; clamped half-panel with constant EI, not verified actual load path",
+    "Steady 13m/s aerodynamic state; no gust, maneuver, landing or control-stop envelope",
+    "Uniform assumed half-panel mass; +2kg central hinge point mass does not load the half-panel span",
+    "Only vertical bending; drag, torsion, joint compliance, hinge actuation and buckling excluded",
+    "5/10/20mm displacement values are exploratory parameters, not approved clearance limits"
+  ],
+  "tests": [
+    "Strip/surface lift normalization cross-check",
+    "Left/right symmetry",
+    "Point-load kernel",
+    "Uniform-load integration"
+  ],
+  "cases": [
+    {
+      "case": "original",
+      "length_m": 2.3,
+      "halfmass_kg": 4,
+      "source_sha256": "209199040548d04ed9e4989f42be221d7c4df911a812906da1962c7126f5453a",
+      "halves": [
+        {
+          "half": "7     tail_halves",
+          "strip_count": 32,
+          "aerodynamic_lift_N": -107.05252605775,
+          "surface_integrated_lift_N": -107.07954075,
+          "force_crosscheck_error_N": 0.027014692250006078,
+          "aerodynamic_root_bending_Nm": -123.19070226216846,
+          "assumed_weight_N": 39.2266,
+          "lift_minus_weight_root_bending_Nm": -168.2973696021685,
+          "aero_tip_deflection_times_EI_Nm3": -156.64173725457977,
+          "lift_minus_weight_tip_deflection_times_EI_Nm3": -216.30308649335745,
+          "EI_requirement_Nm2_for_exploratory_tip_displacement": {
+            "5": 43260.61729867149,
+            "10": 21630.308649335744,
+            "20": 10815.154324667872
+          },
+          "bending_stress_relation": "sigma_max = abs(root_bending)/Z; section modulus Z and material allowable UNKNOWN"
+        },
+        {
+          "half": "8     tail_halves (YDUP)",
+          "strip_count": 32,
+          "aerodynamic_lift_N": -107.05252605775,
+          "surface_integrated_lift_N": -107.07954075,
+          "force_crosscheck_error_N": 0.027014692250006078,
+          "aerodynamic_root_bending_Nm": -123.19070226216846,
+          "assumed_weight_N": 39.2266,
+          "lift_minus_weight_root_bending_Nm": -168.2973696021685,
+          "aero_tip_deflection_times_EI_Nm3": -156.64173725457977,
+          "lift_minus_weight_tip_deflection_times_EI_Nm3": -216.30308649335745,
+          "EI_requirement_Nm2_for_exploratory_tip_displacement": {
+            "5": 43260.61729867149,
+            "10": 21630.308649335744,
+            "20": 10815.154324667872
+          },
+          "bending_stress_relation": "sigma_max = abs(root_bending)/Z; section modulus Z and material allowable UNKNOWN"
+        }
+      ]
+    },
+    {
+      "case": "enlarged",
+      "length_m": 4.025,
+      "halfmass_kg": 7,
+      "source_sha256": "0266300cd5e515b62dbf7871929245c548e1ee22c8eba55ef92da4d894335573",
+      "halves": [
+        {
+          "half": "7     tail_halves",
+          "strip_count": 32,
+          "aerodynamic_lift_N": -75.46924751275,
+          "surface_integrated_lift_N": -75.473034,
+          "force_crosscheck_error_N": 0.0037864872499966395,
+          "aerodynamic_root_bending_Nm": -155.7436027285604,
+          "assumed_weight_N": 68.64654999999999,
+          "lift_minus_weight_root_bending_Nm": -293.8879199485605,
+          "aero_tip_deflection_times_EI_Nm3": -614.7811756982366,
+          "lift_minus_weight_tip_deflection_times_EI_Nm3": -1174.3512304459643,
+          "EI_requirement_Nm2_for_exploratory_tip_displacement": {
+            "5": 234870.24608919286,
+            "10": 117435.12304459643,
+            "20": 58717.561522298216
+          },
+          "bending_stress_relation": "sigma_max = abs(root_bending)/Z; section modulus Z and material allowable UNKNOWN"
+        },
+        {
+          "half": "8     tail_halves (YDUP)",
+          "strip_count": 32,
+          "aerodynamic_lift_N": -75.46924751275,
+          "surface_integrated_lift_N": -75.473034,
+          "force_crosscheck_error_N": 0.0037864872499966395,
+          "aerodynamic_root_bending_Nm": -155.7436027285604,
+          "assumed_weight_N": 68.64654999999999,
+          "lift_minus_weight_root_bending_Nm": -293.8879199485605,
+          "aero_tip_deflection_times_EI_Nm3": -614.7811756982366,
+          "lift_minus_weight_tip_deflection_times_EI_Nm3": -1174.3512304459643,
+          "EI_requirement_Nm2_for_exploratory_tip_displacement": {
+            "5": 234870.24608919286,
+            "10": 117435.12304459643,
+            "20": 58717.561522298216
+          },
+          "bending_stress_relation": "sigma_max = abs(root_bending)/Z; section modulus Z and material allowable UNKNOWN"
+        }
+      ]
+    },
+    {
+      "case": "plus2kg",
+      "length_m": 4.025,
+      "halfmass_kg": 7,
+      "source_sha256": "351f974d16e5ef2b43028f74a678e4a9654583640942c5f125b94a12f34de636",
+      "halves": [
+        {
+          "half": "7     tail_halves",
+          "strip_count": 32,
+          "aerodynamic_lift_N": -65.727403548625,
+          "surface_integrated_lift_N": -65.734578,
+          "force_crosscheck_error_N": 0.007174451374993396,
+          "aerodynamic_root_bending_Nm": -136.25795939566945,
+          "assumed_weight_N": 68.64654999999999,
+          "lift_minus_weight_root_bending_Nm": -274.40227661566945,
+          "aero_tip_deflection_times_EI_Nm3": -538.8608752262743,
+          "lift_minus_weight_tip_deflection_times_EI_Nm3": -1098.430929974002,
+          "EI_requirement_Nm2_for_exploratory_tip_displacement": {
+            "5": 219686.1859948004,
+            "10": 109843.0929974002,
+            "20": 54921.5464987001
+          },
+          "bending_stress_relation": "sigma_max = abs(root_bending)/Z; section modulus Z and material allowable UNKNOWN"
+        },
+        {
+          "half": "8     tail_halves (YDUP)",
+          "strip_count": 32,
+          "aerodynamic_lift_N": -65.727403548625,
+          "surface_integrated_lift_N": -65.734578,
+          "force_crosscheck_error_N": 0.007174451374993396,
+          "aerodynamic_root_bending_Nm": -136.25795939566945,
+          "assumed_weight_N": 68.64654999999999,
+          "lift_minus_weight_root_bending_Nm": -274.40227661566945,
+          "aero_tip_deflection_times_EI_Nm3": -538.8608752262743,
+          "lift_minus_weight_tip_deflection_times_EI_Nm3": -1098.430929974002,
+          "EI_requirement_Nm2_for_exploratory_tip_displacement": {
+            "5": 219686.1859948004,
+            "10": 109843.0929974002,
+            "20": 54921.5464987001
+          },
+          "bending_stress_relation": "sigma_max = abs(root_bending)/Z; section modulus Z and material allowable UNKNOWN"
+        }
+      ]
+    }
+  ],
+  "structural_acceptance": false,
+  "accepted_aircraft_modes": false
+}

@@ -1,0 +1,9 @@
+{
+  "status": "completed",
+  "stop_reason": "end_turn",
+  "model_returned": "claude-fable-5-1",
+  "response_sha256": "1fd2ad7a4dc22da874fbd3ba6d3e73567058b8162573a8bb24c42c166522f56f",
+  "finished_utc": "2026-09-29T13:27:54.049917+00:00",
+  "automatic_retry": false,
+  "engineering_validation": "not_evaluated"
+}

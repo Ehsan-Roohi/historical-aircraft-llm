@@ -1,0 +1,53 @@
+{
+  "cases": [
+    {
+      "speed_mps": 12,
+      "mass_kg": 375.106,
+      "target_CL": 0.9930172915721843,
+      "trim": {
+        "Alpha": 9.09449,
+        "pitch": 1.76087,
+        "CLtot": 0.99302,
+        "Cmtot": 0.0,
+        "CYtot": 0.0,
+        "Cltot": -0.0,
+        "Cntot": -0.0,
+        "CDind": 0.0795773
+      },
+      "absolute_tail_deg": -2.2391300000000003,
+      "surface_SM_percent": 10.850074477704142,
+      "Cma": -0.381833,
+      "CLa": 3.519174,
+      "geometry_sha256": "2f0f5123cd16c9f5abdc186494204ec4a54e3a5151a5885ea983e06b49a910ac",
+      "forces_sha256": "3593c52af6ae3f6a2c72bcb0604341bf9f8aaf27c5b42e404ec226b0eebb7bd8",
+      "stability_sha256": "d9dd671b35b725f87cfe11f16573a9a21ddc960d875c963e0695df04bd5cb806"
+    },
+    {
+      "speed_mps": 16,
+      "mass_kg": 375.106,
+      "target_CL": 0.5585722265093537,
+      "trim": {
+        "Alpha": 1.90229,
+        "pitch": 3.40469,
+        "CLtot": 0.55857,
+        "Cmtot": 0.0,
+        "CYtot": 0.0,
+        "Cltot": 0.0,
+        "Cntot": 0.0,
+        "CDind": 0.0263289
+      },
+      "absolute_tail_deg": -0.59531,
+      "surface_SM_percent": 8.712875511872236,
+      "Cma": -0.326708,
+      "CLa": 3.749715,
+      "geometry_sha256": "2f0f5123cd16c9f5abdc186494204ec4a54e3a5151a5885ea983e06b49a910ac",
+      "forces_sha256": "4aae16cdbe605f16d83a25ca4042bb0fee45e47f27d7868108e3faca76cbfed8",
+      "stability_sha256": "f5f2bb88462c198d4b4340dd437054529c4a6e9f2de017b5f21393d1b5904687"
+    }
+  ],
+  "source_result_sha256": "cfaeb6cbb6d2a9fe56b32314ec6f8332ec794005498d7647f755ec8f029db471",
+  "script_sha256": "ac3c3539d1ab6e8845484f4d16a33a028c98dccc5653ac0da3d9cc3888a44394",
+  "scope": "Same V16 heavy-load geometry/CG, fine rigid surface AVL. Speed enters target lift only; no Reynolds-dependent measured polar, stall, body, bracing drag, propulsion or installed six-component trim. Whole-tail normal rotation, not rotated vertices.",
+  "flight_acceptance": false,
+  "dynamic_modes_verified": false
+}

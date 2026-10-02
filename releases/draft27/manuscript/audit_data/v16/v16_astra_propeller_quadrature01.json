@@ -1,0 +1,128 @@
+{
+  "parent_sha256": "b233083c1d89194db59c747cf6375fb207446b89e6bdefe34f34382467255d5f",
+  "author": "evaluator",
+  "scope": "Same assumed clipped polar and full-disk uniform induction; only midpoint radial resolution changed. No swirl, tip losses, measured data or flight acceptance.",
+  "results": [
+    {
+      "speed_m_s": 12,
+      "radial_cells": 1,
+      "vi_m_s": 4.202886660969471,
+      "thrust_N": 754.7767640286366,
+      "torque_Nm": 146.2023398421687,
+      "shaft_power_W": 14620.23398421687,
+      "shaft_ceiling_W": 19000,
+      "power_reserve_W": 4379.766015783131
+    },
+    {
+      "speed_m_s": 12,
+      "radial_cells": 8,
+      "vi_m_s": 4.450426074343465,
+      "thrust_N": 811.4414554132502,
+      "torque_Nm": 164.95552276399206,
+      "shaft_power_W": 16495.552276399205,
+      "shaft_ceiling_W": 19000,
+      "power_reserve_W": 2504.447723600795
+    },
+    {
+      "speed_m_s": 12,
+      "radial_cells": 32,
+      "vi_m_s": 4.456488728930118,
+      "thrust_N": 812.8463095158985,
+      "torque_Nm": 165.36497986374042,
+      "shaft_power_W": 16536.49798637404,
+      "shaft_ceiling_W": 19000,
+      "power_reserve_W": 2463.502013625959
+    },
+    {
+      "speed_m_s": 12,
+      "radial_cells": 128,
+      "vi_m_s": 4.456995054773291,
+      "thrust_N": 812.9636735226504,
+      "torque_Nm": 165.3973879352766,
+      "shaft_power_W": 16539.73879352766,
+      "shaft_ceiling_W": 19000,
+      "power_reserve_W": 2460.26120647234
+    },
+    {
+      "speed_m_s": 13,
+      "radial_cells": 1,
+      "vi_m_s": 4.010671786216291,
+      "thrust_N": 756.1658105448429,
+      "torque_Nm": 152.69920036339022,
+      "shaft_power_W": 15269.920036339023,
+      "shaft_ceiling_W": 19000,
+      "power_reserve_W": 3730.0799636609772
+    },
+    {
+      "speed_m_s": 13,
+      "radial_cells": 8,
+      "vi_m_s": 4.22426621478604,
+      "thrust_N": 806.4370238097656,
+      "torque_Nm": 170.4716153464068,
+      "shaft_power_W": 17047.16153464068,
+      "shaft_ceiling_W": 19000,
+      "power_reserve_W": 1952.8384653593203
+    },
+    {
+      "speed_m_s": 13,
+      "radial_cells": 32,
+      "vi_m_s": 4.224584551310654,
+      "thrust_N": 806.5127016880007,
+      "torque_Nm": 170.58298977755544,
+      "shaft_power_W": 17058.298977755545,
+      "shaft_ceiling_W": 19000,
+      "power_reserve_W": 1941.701022244455
+    },
+    {
+      "speed_m_s": 13,
+      "radial_cells": 128,
+      "vi_m_s": 4.224994675653095,
+      "thrust_N": 806.610203519428,
+      "torque_Nm": 170.6116409940814,
+      "shaft_power_W": 17061.16409940814,
+      "shaft_ceiling_W": 19000,
+      "power_reserve_W": 1938.835900591861
+    },
+    {
+      "speed_m_s": 15,
+      "radial_cells": 1,
+      "vi_m_s": 3.6693104382776793,
+      "thrust_N": 759.261157764625,
+      "torque_Nm": 166.18131898429664,
+      "shaft_power_W": 16618.131898429663,
+      "shaft_ceiling_W": 19000,
+      "power_reserve_W": 2381.868101570337
+    },
+    {
+      "speed_m_s": 15,
+      "radial_cells": 8,
+      "vi_m_s": 3.78697630878432,
+      "thrust_N": 788.5476195836366,
+      "torque_Nm": 179.77603764856067,
+      "shaft_power_W": 17977.603764856067,
+      "shaft_ceiling_W": 19000,
+      "power_reserve_W": 1022.3962351439332
+    },
+    {
+      "speed_m_s": 15,
+      "radial_cells": 32,
+      "vi_m_s": 3.7951544558821126,
+      "thrust_N": 790.5945274021935,
+      "torque_Nm": 180.37866666798286,
+      "shaft_power_W": 18037.866666798287,
+      "shaft_ceiling_W": 19000,
+      "power_reserve_W": 962.133333201713
+    },
+    {
+      "speed_m_s": 15,
+      "radial_cells": 128,
+      "vi_m_s": 3.795395093947823,
+      "thrust_N": 790.6547791393812,
+      "torque_Nm": 180.3994761477898,
+      "shaft_power_W": 18039.947614778983,
+      "shaft_ceiling_W": 19000,
+      "power_reserve_W": 960.0523852210172
+    }
+  ],
+  "flight_proven": false
+}

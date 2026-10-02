@@ -1,0 +1,19 @@
+{
+  "force_balance": {
+    "source_svg_sha256": "c64e4841a1d1e8712328d909e10830d108e2d7a5a9d94a3b3c8c41fa7f633e8f",
+    "png_pixels": [
+      4800,
+      2240
+    ],
+    "status": "evaluator schematic, not measured aircraft"
+  },
+  "comparison": {
+    "original_svg_sha256": "15ec64bd5467f4b41ef5c717185d3423f7fb8512b2a4831c7f56c74de9f83074",
+    "display_svg_sha256": "c7b542535153caee4f06bcc230af5bb47f1150f7b4f4727a7ff0c4fe4d8b87f5",
+    "png_pixels": [
+      6000,
+      3950
+    ],
+    "status": "typography-only display derivative of frozen V1 lifting-surface plan"
+  }
+}

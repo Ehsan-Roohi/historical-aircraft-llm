@@ -1,0 +1,41 @@
+Scientific correction to restored draft20, 29 September 2026
+
+The complete 61-page master remains preserved. This correction concerns the
+V15 Fable lateral surface-model subsection and its dependent numerical results.
+
+The split upper-wing input assigned COMPONENT 2 to the center and COMPONENT 3
+to the tip panels. The local AVL manual (analysis/tools/avl/avl_doc.txt,
+lines 404-419) explains that surfaces making up one component should share an
+identifier; otherwise finite-core treatment alters the mutual influence.
+
+A paired evaluator run held all coordinates, mesh counts, camber, alpha
+5.850731893 degrees and the archived tail command fixed. Only the tip's
+COMPONENT identifier changed from 3 to 2:
+
+                           CL         Cm          CDind
+Original distinct IDs      0.74700    +0.00762     0.0541419
+Shared upper-wing ID       0.79678    printed 0    0.0546907
+Earlier continuous wing    0.79677    +0.00002     (separate archived run)
+
+This identifies component grouping as the source of the earlier apparent
+split-tip lift loss at the tested neutral condition. It does not measure a
+real hinge gap, validate the inherited section, or establish physical trim.
+
+Consequences for the paper:
+1. Withdraw the interpretation that the 0.79677-to-0.74700 shift itself
+   demonstrates a physical-feature representation sensitivity requiring a
+   different design trim. It was an evaluator input-setting artifact.
+2. Retain the previous expanded-model alpha 6.66238 / tail -3.5075 results
+   only as superseded outputs of that input. Do not use their lateral slopes
+   as the current corrected-model coefficients until recalculated.
+3. Rebuild and check fin/rudder component grouping and overlapping spanwise
+   station alignment as well (AVL manual lines 1088-1118). The present paired
+   probe changes only upper-wing grouping and does not validate that interface.
+4. Recompute trim and static/control/rate derivatives with corrected inputs,
+   inspect mesh and perturbation-step sensitivity, and then update the full
+   preserved master. No aircraft modes or flight claim follows from this probe.
+
+Raw paired inputs, commands, outputs, SHA-256 hashes and summary are retained
+in analysis/results/v15_fable_component_grouping_probe01/. Earlier archives
+must remain unchanged for provenance. The complete article must not be
+shortened or split again when integrating this correction.

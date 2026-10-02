@@ -1,0 +1,83 @@
+{
+  "scope": "Power-off lifting-surface-only AVL fixed-control pitch screen; not whole-aircraft static margin",
+  "source_geometry_sha256": "e0d9ad4a83cad536aa73c162d04d24985e69dc1846953aca65935d42a1f5a34b",
+  "nominal_trim_alpha_deg": 5.850731893286282,
+  "windows": {
+    "coarse": [
+      {
+        "alpha_window_deg": [
+          2,
+          6
+        ],
+        "tail_delta_deg_fixed": -4,
+        "CLalpha_per_deg": 0.0612675,
+        "Cmalpha_per_deg": -0.00036999999999999994,
+        "apparent_static_margin_percent_chord": 0.6039090871995755
+      },
+      {
+        "alpha_window_deg": [
+          2,
+          8
+        ],
+        "tail_delta_deg_fixed": -4,
+        "CLalpha_per_deg": 0.060730000000000006,
+        "Cmalpha_per_deg": -0.0005066666666666667,
+        "apparent_static_margin_percent_chord": 0.8342938690378175
+      },
+      {
+        "alpha_window_deg": [
+          6,
+          8
+        ],
+        "tail_delta_deg_fixed": -4,
+        "CLalpha_per_deg": 0.059655000000000014,
+        "Cmalpha_per_deg": -0.0007800000000000001,
+        "apparent_static_margin_percent_chord": 1.3075182298214734
+      }
+    ],
+    "fine": [
+      {
+        "alpha_window_deg": [
+          2,
+          6
+        ],
+        "tail_delta_deg_fixed": -4,
+        "CLalpha_per_deg": 0.0612375,
+        "Cmalpha_per_deg": -0.0003225,
+        "apparent_static_margin_percent_chord": 0.5266380894060012
+      },
+      {
+        "alpha_window_deg": [
+          2,
+          8
+        ],
+        "tail_delta_deg_fixed": -4,
+        "CLalpha_per_deg": 0.06069833333333333,
+        "Cmalpha_per_deg": -0.00045999999999999996,
+        "apparent_static_margin_percent_chord": 0.7578461791921799
+      },
+      {
+        "alpha_window_deg": [
+          6,
+          8
+        ],
+        "tail_delta_deg_fixed": -4,
+        "CLalpha_per_deg": 0.059620000000000006,
+        "Cmalpha_per_deg": -0.000735,
+        "apparent_static_margin_percent_chord": 1.2328077826232806
+      }
+    ]
+  },
+  "interpretation": "Small positive apparent margin is near-neutral and window-sensitive; no robust installed-aircraft stability conclusion, no dynamic modes.",
+  "omitted": [
+    "engine/propeller and slipstream",
+    "body",
+    "fin/rudder",
+    "gear",
+    "profile/parasite drag",
+    "stall",
+    "structural flexibility",
+    "unsteady derivatives"
+  ],
+  "flightworthiness": "NOT_ASSESSED"
+}

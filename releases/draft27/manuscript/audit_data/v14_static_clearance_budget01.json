@@ -1,0 +1,47 @@
+{
+  "scope": "Selected nominal rigid one-axis gaps only; no tolerance, elastic, tire, blade-vibration or control-sweep allowance",
+  "fable_v12_geometry_carried_to_v13": {
+    "v12_source_sha256": "ccf6e3fe07a480682e4d3abe573fdc2c8b397bae1a46a8a30adfd0582a83b6ca",
+    "v13_source_sha256": "dae66235761235d241c8773d9af9c9700187d9920db638a17ce6dcda9bc4b379",
+    "evaluator_recomputed_gaps_m": {
+      "pilot_engine_x": 0.15,
+      "engine_frame_y": 0.02,
+      "tank_longeron_z": 0.01,
+      "cooling_longeron_z": 0.02,
+      "disc_inboard_frame_y": 0.05,
+      "wing_trailing_edge_disc_x": 0.2
+    },
+    "minimum_m": 0.01
+  },
+  "opus_v12_reviewed_replay": {
+    "source_sha256": "96e534daf71329dbfadec507a84ad98ac34a0dc2d156de33b4a5e2f137ee25db",
+    "selected_model_reported_gaps_not_independently_3d_verified": [
+      {
+        "pair": "LowerWing-E4",
+        "model_reported_gap_m": 0.015,
+        "note": "Bearers bolt to spar fittings (justified nesting at fittings only)."
+      },
+      {
+        "pair": "E1-E5",
+        "model_reported_gap_m": 0.01,
+        "note": "Crank output shaft passes through (justified nesting)."
+      },
+      {
+        "pair": "E5-S2 front struts",
+        "model_reported_gap_m": 0.0275,
+        "note": ""
+      },
+      {
+        "pair": "G2 wheel-skid",
+        "model_reported_gap_m": 0.04,
+        "note": ""
+      },
+      {
+        "pair": "G4 aft node-elevator hinge",
+        "model_reported_gap_m": 0.05,
+        "note": ""
+      }
+    ]
+  },
+  "disposition": "HOLD: positive nominal gaps do not demonstrate installed or loaded clearance"
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "file": "main.tex",
+    "old_reference": "\\bibitem{ref1} Chanute, O., \\emph{Progress in Flying Machines}, 1894. Smithsonian Libraries and Archives catalog record, \\url{https://www.si.edu/object/progress-flying-machines-o-chanute-ce:siris_sil_55853}.",
+    "new_reference": "\\bibitem{ref1} Chanute, O., \\emph{Progress in Flying Machines}, American Engineer and Railroad Journal, New York, 1894. Digitized book, Library of Congress, LCCN 31015366, \\url{https://www.loc.gov/item/31015366/}.",
+    "web_entries_relocated_not_discarded": {
+      "ref14": "\\bibitem{ref14} Wright Flyer Project, ``Structural Tests of the AIAA Wright `Flyer','' first-party engineering account, accessed 26 September 2026. \\url{https://www.wrightflyerproject.org/structural-testing}.\n",
+      "ref45": "\\bibitem{ref45} The Franklin Institute, ``Exploring an Original 1911 Wright Model B Airplane,'' 2022. \\url{https://fi.edu/en/blog/exploring-original-1911-wright-model-b-airplane}.\n"
+    }
+  },
+  {
+    "file": "main_joa_review.tex",
+    "old_reference": "\\bibitem{ref1} Chanute, O., \\emph{Progress in Flying Machines}, 1894. Smithsonian Libraries and Archives catalog record, \\url{https://www.si.edu/object/progress-flying-machines-o-chanute-ce:siris_sil_55853}.",
+    "new_reference": "\\bibitem{ref1} Chanute, O., \\emph{Progress in Flying Machines}, American Engineer and Railroad Journal, New York, 1894. Digitized book, Library of Congress, LCCN 31015366, \\url{https://www.loc.gov/item/31015366/}.",
+    "web_entries_relocated_not_discarded": {
+      "ref14": "\\bibitem{ref14} Wright Flyer Project, ``Structural Tests of the AIAA Wright `Flyer','' first-party engineering account, accessed 26 September 2026. \\url{https://www.wrightflyerproject.org/structural-testing}.\n",
+      "ref45": "\\bibitem{ref45} The Franklin Institute, ``Exploring an Original 1911 Wright Model B Airplane,'' 2022. \\url{https://fi.edu/en/blog/exploring-original-1911-wright-model-b-airplane}.\n"
+    }
+  }
+]

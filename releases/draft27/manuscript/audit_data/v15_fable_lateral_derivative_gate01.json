@@ -1,0 +1,130 @@
+{
+  "scope": "Evaluator-only AVL rigid/inviscid lateral derivative screen around a conditional power-off surface retrim, not measured or installed-aircraft derivatives",
+  "input_sha256": {
+    "analysis/results/v15_fable_lateral_screen01/coarse_retrim_summary.json": "72cb6886bb091a68e16f74636f8c9052f0a9ad2ca43ecc69c167863548998692",
+    "analysis/results/v15_fable_lateral_screen01/fine_retrim_summary.json": "8fa92b2234ce47e7d95372a1fa5e93a4d5b8cf5eb816e2604915ad6182cce6ca",
+    "analysis/results/v15_fable_expanded_retrim01/summary.json": "92d1e4d3e82352fd2f724ca6bc33237e641b6adc1f066eadfb480e7e5cb78060",
+    "analysis/results/v15_fable_lateral_geometry_probe01/summary.json": "c3e3a9afe0cc08c5cc2ff2dda461073f98c833124d5081bcbf8a68ebe7988704"
+  },
+  "source_response_sha256": "1fd2ad7a4dc22da874fbd3ba6d3e73567058b8162573a8bb24c42c166522f56f",
+  "reference": {
+    "Sref_m2": 42.0,
+    "Cref_m": 1.85,
+    "Bref_m": 11.5,
+    "alpha_deg": 6.66238,
+    "tail_command_deg": -3.5075,
+    "speed_m_s": 13.0,
+    "density_kg_m3": 1.225,
+    "power_state": "power-off model; propeller omitted"
+  },
+  "geometry_sensitivity": {
+    "continuous_upper_deck_CL_at_old_point": 0.79677,
+    "split_tip_CL_at_old_point": 0.747,
+    "split_tip_CL_change": -0.04976999999999998,
+    "split_tip_Cm_change": 0.0076,
+    "adding_vertical_surfaces_at_symmetric_zero_control": "No change in CL/Cm at the printed precision in the diagnostic; split-surface representation causes the difference.",
+    "interpretation": "Numerical representation of a hinged spanwise interface, not measured effect of a physical gap or seal; actual gap/elasticity remains unspecified."
+  },
+  "retrim": {
+    "alpha_deg": 6.66238,
+    "tail_command_deg": -3.5075,
+    "CL": 0.79671,
+    "Cm": -0.0,
+    "coarse_CL_at_fine_retrim": 0.7843,
+    "coarse_Cm_at_fine_retrim": 0.00108
+  },
+  "finite_difference_derivatives": {
+    "CYtot": {
+      "beta": {
+        "coarse_per_rad": -0.03915211600060625,
+        "fine_per_rad": -0.0395340878640268,
+        "absolute_mesh_difference_per_rad": 0.0003819718634205452,
+        "relative_mesh_difference_percent_of_fine": 0.966183574879218,
+        "status": "PREDICTED_QUASI_STEADY_ONLY"
+      },
+      "roll_tip_command": {
+        "coarse_per_rad": -0.0011459155902616466,
+        "fine_per_rad": -0.001432394487827058,
+        "absolute_mesh_difference_per_rad": 0.0002864788975654115,
+        "relative_mesh_difference_percent_of_fine": 19.99999999999999,
+        "status": "PREDICTED_QUASI_STEADY_ONLY"
+      },
+      "rudder_command": {
+        "coarse_per_rad": 0.03380450991271857,
+        "fine_per_rad": 0.03426287614882323,
+        "absolute_mesh_difference_per_rad": 0.0004583662361046584,
+        "relative_mesh_difference_percent_of_fine": 1.3377926421404676,
+        "status": "PREDICTED_QUASI_STEADY_ONLY"
+      }
+    },
+    "Cltot": {
+      "beta": {
+        "coarse_per_rad": -0.0011459155902616464,
+        "fine_per_rad": -0.000954929658551372,
+        "absolute_mesh_difference_per_rad": 0.00019098593171027432,
+        "relative_mesh_difference_percent_of_fine": 19.99999999999999,
+        "status": "PREDICTED_QUASI_STEADY_ONLY"
+      },
+      "roll_tip_command": {
+        "coarse_per_rad": -0.06732254092787172,
+        "fine_per_rad": -0.07462775281578973,
+        "absolute_mesh_difference_per_rad": 0.007305211887918009,
+        "relative_mesh_difference_percent_of_fine": 9.788867562380053,
+        "status": "PREDICTED_QUASI_STEADY_ONLY"
+      },
+      "rudder_command": {
+        "coarse_per_rad": 0.001031324031235482,
+        "fine_per_rad": 0.001031324031235482,
+        "absolute_mesh_difference_per_rad": 0.0,
+        "relative_mesh_difference_percent_of_fine": 0.0,
+        "status": "PREDICTED_QUASI_STEADY_ONLY"
+      }
+    },
+    "Cntot": {
+      "beta": {
+        "coarse_per_rad": 0.016233804195373323,
+        "fine_per_rad": 0.0164247901270836,
+        "absolute_mesh_difference_per_rad": 0.00019098593171027606,
+        "relative_mesh_difference_percent_of_fine": 1.1627906976744287,
+        "status": "PREDICTED_QUASI_STEADY_ONLY"
+      },
+      "roll_tip_command": {
+        "coarse_per_rad": 0.013894226531922464,
+        "fine_per_rad": 0.014323944878270581,
+        "absolute_mesh_difference_per_rad": 0.00042971834634811766,
+        "relative_mesh_difference_percent_of_fine": 3.0000000000000018,
+        "status": "PREDICTED_QUASI_STEADY_ONLY"
+      },
+      "rudder_command": {
+        "coarse_per_rad": -0.015355268909506063,
+        "fine_per_rad": -0.015469860468532229,
+        "absolute_mesh_difference_per_rad": 0.00011459155902616633,
+        "relative_mesh_difference_percent_of_fine": 0.7407407407407516,
+        "status": "PREDICTED_QUASI_STEADY_ONLY"
+      }
+    }
+  },
+  "sign_interpretation": {
+    "C_n_beta": "Positive in AVL standard moment axes, a restoring weathercock tendency in this surface model only.",
+    "roll_tip_yaw_coupling": "The model's roll and yaw responses to the signed tip command oppose a coordinated heading response (adverse-yaw-like); physical hinge gap and control shape are unverified.",
+    "C_l_beta": "Near zero and mesh-sensitive; no robust dihedral/spiral conclusion."
+  },
+  "missing_for_modes": [
+    "C_l_p",
+    "C_l_r",
+    "C_n_p",
+    "C_n_r",
+    "C_Y_p",
+    "C_Y_r",
+    "full physical inertia",
+    "installed powered aerodynamic map",
+    "unsteady wake and slipstream",
+    "control travel/rate/hinge moments"
+  ],
+  "acceptance": {
+    "whole_aircraft_six_component_trim": false,
+    "validated_lateral_derivatives": false,
+    "accepted_lateral_modes": false,
+    "flightworthiness": "NOT_ESTABLISHED"
+  }
+}

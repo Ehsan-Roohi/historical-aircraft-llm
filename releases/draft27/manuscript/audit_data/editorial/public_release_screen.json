@@ -1,0 +1,100 @@
+{
+  "text_files_scanned": 562,
+  "known_secret_signature_files": [],
+  "local_machine_path_files": [
+    "audit_data/editorial/build_draft26.py",
+    "audit_data/v16/build_draft24.py",
+    "audit_data/v16/fable_v16_loading_audit.py",
+    "audit_data/v16/fable_v16_surface_retrim.py",
+    "audit_data/v16/fable_v16_sweep_audit.py",
+    "audit_data/v16/finalize_draft24.py"
+  ],
+  "binary_inventory": [
+    {
+      "path": "figures/astra_oblique_v0.png",
+      "bytes": 2070126
+    },
+    {
+      "path": "figures/astra_oblique_v0_detail.png",
+      "bytes": 1081697
+    },
+    {
+      "path": "figures/astra_preview.png",
+      "bytes": 869940
+    },
+    {
+      "path": "figures/astra_v2_threeview.png",
+      "bytes": 364065
+    },
+    {
+      "path": "figures/braced_tail_concept.pdf",
+      "bytes": 27816
+    },
+    {
+      "path": "figures/braced_tail_concept.png",
+      "bytes": 298209
+    },
+    {
+      "path": "figures/configuration_comparison_v2.png",
+      "bytes": 251852
+    },
+    {
+      "path": "figures/configuration_comparison_v3.png",
+      "bytes": 560098
+    },
+    {
+      "path": "figures/fable_oblique_v0.png",
+      "bytes": 1595658
+    },
+    {
+      "path": "figures/fable_oblique_v0_detail.png",
+      "bytes": 1304298
+    },
+    {
+      "path": "figures/fable_v2_threeview.png",
+      "bytes": 316461
+    },
+    {
+      "path": "figures/fixed_control_response_v1.png",
+      "bytes": 553765
+    },
+    {
+      "path": "figures/force_moment_balance.png",
+      "bytes": 237383
+    },
+    {
+      "path": "figures/opus_oblique_v0.png",
+      "bytes": 1845793
+    },
+    {
+      "path": "figures/opus_oblique_v0_detail.png",
+      "bytes": 1047850
+    },
+    {
+      "path": "figures/opus_preview.png",
+      "bytes": 628973
+    },
+    {
+      "path": "figures/opus_v2_threeview.png",
+      "bytes": 290580
+    },
+    {
+      "path": "figures/v2_force_moment_comparison.png",
+      "bytes": 1438512
+    },
+    {
+      "path": "figures/wright_first_flight_1903_loc.jpg",
+      "bytes": 357610
+    },
+    {
+      "path": "figures/wright_response_v1.png",
+      "bytes": 631698
+    },
+    {
+      "path": "figures/wright_threeview_reconstruction.png",
+      "bytes": 376373
+    }
+  ],
+  "public_release_approved": false,
+  "limitations": "Pattern screen is not exhaustive privacy or copyright clearance. Raw prompt/source rights and local machine identifiers need a curated public export; originals must remain unchanged."
+}

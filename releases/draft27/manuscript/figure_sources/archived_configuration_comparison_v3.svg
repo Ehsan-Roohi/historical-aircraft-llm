@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1580" viewBox="0 0 2400 1580">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:Arial,Helvetica,sans-serif}</style>
+<rect x="40" y="45" width="1135" height="710" fill="#FFFFFF" stroke="#AABDC8" stroke-width="3"/>
+<text x="72" y="104" font-size="37" font-weight="bold" fill="#173143">(a) Astra V1</text>
+<text x="72" y="144" font-size="27" font-weight="normal" fill="#596B78">Tandem supporting surfaces</text>
+<line x1="125.0" y1="431.0" x2="830.0" y2="431.0" stroke="#CAD5DC" stroke-width="2" stroke-dasharray="12,10"/>
+<line x1="460.0" y1="161.0" x2="460.0" y2="695.0" stroke="#E0E8EC" stroke-width="2" stroke-dasharray="10,10"/>
+<polygon points="384.8,431.0 384.8,713.0 478.8,713.0 478.8,431.0" fill="#D7E8F0" stroke="#22536B" stroke-width="4"/>
+<polygon points="384.8,431.0 384.8,149.0 478.8,149.0 478.8,431.0" fill="#D7E8F0" stroke="#22536B" stroke-width="4"/>
+<polygon points="549.3,431.0 549.3,666.0 624.5,666.0 624.5,431.0" fill="#F2DFC1" stroke="#885D26" stroke-width="4"/>
+<polygon points="549.3,431.0 549.3,196.0 624.5,196.0 624.5,431.0" fill="#F2DFC1" stroke="#885D26" stroke-width="4"/>
+<circle cx="462.1" cy="431.0" r="9" fill="#B42C37"/>
+<line x1="475.1" y1="421.0" x2="544.1" y2="376.0" stroke="#B42C37" stroke-width="3"/>
+<text x="546.073696969697" y="372.0" font-size="25" font-weight="bold" fill="#B42C37">CG</text>
+<text x="864" y="320" font-size="25" font-weight="bold" fill="#173143">Lifting surfaces</text>
+<rect x="864" y="349" width="32" height="26" fill="#D7E8F0" stroke="#22536B" stroke-width="2"/>
+<text x="907" y="365" font-size="22" font-weight="normal" fill="#173143">Main wing(s)</text>
+<rect x="864" y="396" width="32" height="26" fill="#F2DFC1" stroke="#885D26" stroke-width="2"/>
+<text x="907" y="413" font-size="22" font-weight="normal" fill="#173143">Fore/aft plane</text>
+<text x="864" y="485" font-size="22" font-weight="normal" fill="#596B78">+x aft</text>
+<line x1="959.0" y1="480.0" x2="1046.0" y2="480.0" stroke="#173143" stroke-width="3"/>
+<line x1="1046.0" y1="480.0" x2="1033.0" y2="470.0" stroke="#173143" stroke-width="3"/>
+<line x1="1046.0" y1="480.0" x2="1033.0" y2="490.0" stroke="#173143" stroke-width="3"/>
+<text x="864" y="534" font-size="22" font-weight="normal" fill="#596B78">+y right</text>
+<line x1="987.0" y1="532.0" x2="987.0" y2="586.0" stroke="#173143" stroke-width="3"/>
+<line x1="987.0" y1="586.0" x2="977.0" y2="574.0" stroke="#173143" stroke-width="3"/>
+<line x1="987.0" y1="586.0" x2="997.0" y2="574.0" stroke="#173143" stroke-width="3"/>
+<line x1="125.0" y1="704.0" x2="219.0" y2="704.0" stroke="#173143" stroke-width="4"/>
+<line x1="125.0" y1="695.0" x2="125.0" y2="713.0" stroke="#173143" stroke-width="3"/>
+<line x1="219.0" y1="695.0" x2="219.0" y2="713.0" stroke="#173143" stroke-width="3"/>
+<text x="238" y="705" font-size="22" font-weight="normal" fill="#173143">2 m</text>
+<text x="864" y="644" font-size="22" font-weight="normal" fill="#596B78">Both surfaces carry lift</text>
+<rect x="1220" y="45" width="1135" height="710" fill="#FFFFFF" stroke="#AABDC8" stroke-width="3"/>
+<text x="1252" y="104" font-size="37" font-weight="bold" fill="#173143">(b) Fable V1</text>
+<text x="1252" y="144" font-size="27" font-weight="normal" fill="#596B78">Two wing decks; aft tail</text>
+<line x1="1305.0" y1="431.0" x2="2010.0" y2="431.0" stroke="#CAD5DC" stroke-width="2" stroke-dasharray="12,10"/>
+<line x1="1640.0" y1="161.0" x2="1640.0" y2="695.0" stroke="#E0E8EC" stroke-width="2" stroke-dasharray="10,10"/>
+<polygon points="1687.0,431.0 1687.0,630.8 1687.0,663.6 1687.0,671.0 1687.0,678.0 1687.0,684.5 1687.0,690.2 1687.0,694.9 1687.0,698.4 1687.0,700.5 1687.0,701.2 1736.4,701.2 1743.7,700.5 1750.7,698.4 1757.2,694.9 1762.9,690.2 1767.6,684.5 1771.1,678.0 1773.2,671.0 1774.0,663.6 1774.0,630.8 1774.0,431.0" fill="#D7E8F0" stroke="#22536B" stroke-width="4"/>
+<polygon points="1687.0,431.0 1687.0,231.2 1687.0,198.3 1687.0,191.0 1687.0,184.0 1687.0,177.5 1687.0,171.8 1687.0,167.1 1687.0,163.6 1687.0,161.5 1687.0,160.8 1736.4,160.8 1743.7,161.5 1750.7,163.6 1757.2,167.1 1762.9,171.8 1767.6,177.5 1771.1,184.0 1773.2,191.0 1774.0,198.3 1774.0,231.2 1774.0,431.0" fill="#D7E8F0" stroke="#22536B" stroke-width="4"/>
+<polygon points="1893.8,431.0 1893.8,510.9 1940.8,510.9 1940.8,431.0" fill="#F2DFC1" stroke="#885D26" stroke-width="4"/>
+<polygon points="1893.8,431.0 1893.8,351.1 1940.8,351.1 1940.8,431.0" fill="#F2DFC1" stroke="#885D26" stroke-width="4"/>
+<polygon points="1687.0,431.0 1687.0,630.8 1687.0,663.6 1687.0,671.0 1687.0,678.0 1687.0,684.5 1687.0,690.2 1687.0,694.9 1687.0,698.4 1687.0,700.5 1687.0,701.2 1736.4,701.2 1743.7,700.5 1750.7,698.4 1757.2,694.9 1762.9,690.2 1767.6,684.5 1771.1,678.0 1773.2,671.0 1774.0,663.6 1774.0,630.8 1774.0,431.0" fill="#D7E8F0" stroke="#22536B" stroke-width="4"/>
+<polygon points="1687.0,431.0 1687.0,231.2 1687.0,198.3 1687.0,191.0 1687.0,184.0 1687.0,177.5 1687.0,171.8 1687.0,167.1 1687.0,163.6 1687.0,161.5 1687.0,160.8 1736.4,160.8 1743.7,161.5 1750.7,163.6 1757.2,167.1 1762.9,171.8 1767.6,177.5 1771.1,184.0 1773.2,191.0 1774.0,198.3 1774.0,231.2 1774.0,431.0" fill="#D7E8F0" stroke="#22536B" stroke-width="4"/>
+<circle cx="1711.7" cy="431.0" r="9" fill="#B42C37"/>
+<line x1="1724.7" y1="421.0" x2="1793.7" y2="376.0" stroke="#B42C37" stroke-width="3"/>
+<text x="1795.6605136986302" y="372.0" font-size="25" font-weight="bold" fill="#B42C37">CG</text>
+<text x="2044" y="320" font-size="25" font-weight="bold" fill="#173143">Lifting surfaces</text>
+<rect x="2044" y="349" width="32" height="26" fill="#D7E8F0" stroke="#22536B" stroke-width="2"/>
+<text x="2087" y="365" font-size="22" font-weight="normal" fill="#173143">Main wing(s)</text>
+<rect x="2044" y="396" width="32" height="26" fill="#F2DFC1" stroke="#885D26" stroke-width="2"/>
+<text x="2087" y="413" font-size="22" font-weight="normal" fill="#173143">Fore/aft plane</text>
+<text x="2044" y="485" font-size="22" font-weight="normal" fill="#596B78">+x aft</text>
+<line x1="2139.0" y1="480.0" x2="2226.0" y2="480.0" stroke="#173143" stroke-width="3"/>
+<line x1="2226.0" y1="480.0" x2="2213.0" y2="470.0" stroke="#173143" stroke-width="3"/>
+<line x1="2226.0" y1="480.0" x2="2213.0" y2="490.0" stroke="#173143" stroke-width="3"/>
+<text x="2044" y="534" font-size="22" font-weight="normal" fill="#596B78">+y right</text>
+<line x1="2167.0" y1="532.0" x2="2167.0" y2="586.0" stroke="#173143" stroke-width="3"/>
+<line x1="2167.0" y1="586.0" x2="2157.0" y2="574.0" stroke="#173143" stroke-width="3"/>
+<line x1="2167.0" y1="586.0" x2="2177.0" y2="574.0" stroke="#173143" stroke-width="3"/>
+<line x1="1305.0" y1="704.0" x2="1399.0" y2="704.0" stroke="#173143" stroke-width="4"/>
+<line x1="1305.0" y1="695.0" x2="1305.0" y2="713.0" stroke="#173143" stroke-width="3"/>
+<line x1="1399.0" y1="695.0" x2="1399.0" y2="713.0" stroke="#173143" stroke-width="3"/>
+<text x="1418" y="705" font-size="22" font-weight="normal" fill="#173143">2 m</text>
+<text x="2044" y="644" font-size="22" font-weight="normal" fill="#596B78">Two decks overlap in plan</text>
+<rect x="40" y="805" width="1135" height="710" fill="#FFFFFF" stroke="#AABDC8" stroke-width="3"/>
+<text x="72" y="864" font-size="37" font-weight="bold" fill="#173143">(c) Opus V1</text>
+<text x="72" y="904" font-size="27" font-weight="normal" fill="#596B78">Two wing decks; aft tail</text>
+<line x1="125.0" y1="1191.0" x2="830.0" y2="1191.0" stroke="#CAD5DC" stroke-width="2" stroke-dasharray="12,10"/>
+<line x1="460.0" y1="921.0" x2="460.0" y2="1455.0" stroke="#E0E8EC" stroke-width="2" stroke-dasharray="10,10"/>
+<polygon points="460.0,1191.0 460.0,1256.8 460.0,1355.5 460.0,1449.5 544.6,1449.5 544.6,1355.5 544.6,1256.8 544.6,1191.0" fill="#D7E8F0" stroke="#22536B" stroke-width="4"/>
+<polygon points="460.0,1191.0 460.0,1125.2 460.0,1026.5 460.0,932.5 544.6,932.5 544.6,1026.5 544.6,1125.2 544.6,1191.0" fill="#D7E8F0" stroke="#22536B" stroke-width="4"/>
+<polygon points="671.5,1191.0 671.5,1202.8 723.2,1202.8 723.2,1191.0" fill="#F2DFC1" stroke="#885D26" stroke-width="4"/>
+<polygon points="671.5,1191.0 671.5,1179.2 723.2,1179.2 723.2,1191.0" fill="#F2DFC1" stroke="#885D26" stroke-width="4"/>
+<polygon points="671.5,1202.8 671.5,1294.4 746.7,1294.4 746.7,1202.8" fill="#F2DFC1" stroke="#885D26" stroke-width="4"/>
+<polygon points="671.5,1179.2 671.5,1087.6 746.7,1087.6 746.7,1179.2" fill="#F2DFC1" stroke="#885D26" stroke-width="4"/>
+<polygon points="460.0,1191.0 460.0,1256.8 460.0,1355.5 460.0,1449.5 544.6,1449.5 544.6,1355.5 544.6,1256.8 544.6,1191.0" fill="#D7E8F0" stroke="#22536B" stroke-width="4"/>
+<polygon points="460.0,1191.0 460.0,1125.2 460.0,1026.5 460.0,932.5 544.6,932.5 544.6,1026.5 544.6,1125.2 544.6,1191.0" fill="#D7E8F0" stroke="#22536B" stroke-width="4"/>
+<circle cx="489.7" cy="1191.0" r="9" fill="#B42C37"/>
+<line x1="502.7" y1="1181.0" x2="571.7" y2="1136.0" stroke="#B42C37" stroke-width="3"/>
+<text x="573.7022932960895" y="1132.0" font-size="25" font-weight="bold" fill="#B42C37">CG</text>
+<text x="864" y="1080" font-size="25" font-weight="bold" fill="#173143">Lifting surfaces</text>
+<rect x="864" y="1109" width="32" height="26" fill="#D7E8F0" stroke="#22536B" stroke-width="2"/>
+<text x="907" y="1125" font-size="22" font-weight="normal" fill="#173143">Main wing(s)</text>
+<rect x="864" y="1156" width="32" height="26" fill="#F2DFC1" stroke="#885D26" stroke-width="2"/>
+<text x="907" y="1173" font-size="22" font-weight="normal" fill="#173143">Fore/aft plane</text>
+<text x="864" y="1245" font-size="22" font-weight="normal" fill="#596B78">+x aft</text>
+<line x1="959.0" y1="1240.0" x2="1046.0" y2="1240.0" stroke="#173143" stroke-width="3"/>
+<line x1="1046.0" y1="1240.0" x2="1033.0" y2="1230.0" stroke="#173143" stroke-width="3"/>
+<line x1="1046.0" y1="1240.0" x2="1033.0" y2="1250.0" stroke="#173143" stroke-width="3"/>
+<text x="864" y="1294" font-size="22" font-weight="normal" fill="#596B78">+y right</text>
+<line x1="987.0" y1="1292.0" x2="987.0" y2="1346.0" stroke="#173143" stroke-width="3"/>
+<line x1="987.0" y1="1346.0" x2="977.0" y2="1334.0" stroke="#173143" stroke-width="3"/>
+<line x1="987.0" y1="1346.0" x2="997.0" y2="1334.0" stroke="#173143" stroke-width="3"/>
+<line x1="125.0" y1="1464.0" x2="219.0" y2="1464.0" stroke="#173143" stroke-width="4"/>
+<line x1="125.0" y1="1455.0" x2="125.0" y2="1473.0" stroke="#173143" stroke-width="3"/>
+<line x1="219.0" y1="1455.0" x2="219.0" y2="1473.0" stroke="#173143" stroke-width="3"/>
+<text x="238" y="1465" font-size="22" font-weight="normal" fill="#173143">2 m</text>
+<text x="864" y="1404" font-size="22" font-weight="normal" fill="#596B78">Two decks overlap in plan</text>
+<rect x="1220" y="805" width="1135" height="710" fill="#FFFFFF" stroke="#AABDC8" stroke-width="3"/>
+<text x="1252" y="864" font-size="37" font-weight="bold" fill="#173143">(d) Wright 1903</text>
+<text x="1252" y="904" font-size="27" font-weight="normal" fill="#596B78">Reconstructed decks; canard</text>
+<line x1="1305.0" y1="1191.0" x2="2010.0" y2="1191.0" stroke="#CAD5DC" stroke-width="2" stroke-dasharray="12,10"/>
+<line x1="1640.0" y1="921.0" x2="1640.0" y2="1455.0" stroke="#E0E8EC" stroke-width="2" stroke-dasharray="10,10"/>
+<polygon points="1652.2,901.6 1645.3,903.7 1645.0,904.2 1641.1,910.6 1639.4,919.0 1638.9,921.1 1638.9,931.2 1638.9,944.4 1638.9,957.7 1638.9,989.9 1639.5,1076.7 1640.0,1159.3 1640.0,1225.4 1640.5,1307.9 1640.5,1309.0 1641.1,1410.1 1641.1,1412.2 1641.6,1424.9 1642.2,1440.2 1642.8,1454.0 1643.2,1464.6 1643.6,1465.6 1645.8,1472.0 1648.4,1475.1 1650.6,1477.8 1657.5,1479.4 1680.7,1479.4 1684.3,1477.8 1690.3,1475.1 1694.3,1472.0 1702.4,1465.6 1703.6,1464.6 1715.1,1454.0 1725.2,1440.2 1731.5,1424.9 1733.7,1412.2 1733.6,1410.1 1733.1,1309.0 1733.1,1307.9 1732.6,1225.4 1732.1,1159.3 1731.5,1076.7 1731.5,989.9 1731.0,957.7 1728.4,944.4 1721.0,931.2 1716.6,921.1 1715.7,919.0 1704.6,910.6 1693.4,904.2 1691.2,903.7 1682.3,901.6" fill="#D7E8F0" stroke="#22536B" stroke-width="4"/>
+<polygon points="1537.4,1107.9 1533.6,1112.7 1529.9,1120.1 1525.7,1131.7 1524.3,1144.4 1524.1,1146.0 1523.6,1165.1 1523.1,1190.5 1523.1,1213.8 1523.1,1214.8 1523.6,1233.3 1523.6,1234.9 1524.7,1246.0 1525.2,1250.3 1526.9,1258.7 1527.8,1263.0 1530.9,1270.4 1532.1,1273.0 1537.4,1279.4 1537.4,1279.4 1539.2,1273.0 1540.0,1270.4 1545.7,1263.0 1549.0,1258.7 1553.2,1250.3 1555.3,1246.0 1558.6,1234.9 1559.0,1233.3 1559.6,1214.8 1559.6,1213.8 1559.6,1190.5 1559.6,1165.1 1559.1,1146.0 1559.0,1144.4 1556.4,1131.7 1551.6,1120.1 1545.3,1112.7 1537.4,1107.9" fill="#F2DFC1" stroke="#885D26" stroke-width="4"/>
+<polygon points="1537.4,1107.9 1533.6,1112.7 1529.9,1120.1 1525.7,1131.7 1524.3,1144.4 1524.1,1146.0 1523.6,1165.1 1523.1,1190.5 1523.1,1213.8 1523.1,1214.8 1523.6,1233.3 1523.6,1234.9 1524.7,1246.0 1525.2,1250.3 1526.9,1258.7 1527.8,1263.0 1530.9,1270.4 1532.1,1273.0 1537.4,1279.4 1537.4,1279.4 1539.2,1273.0 1540.0,1270.4 1545.7,1263.0 1549.0,1258.7 1553.2,1250.3 1555.3,1246.0 1558.6,1234.9 1559.0,1233.3 1559.6,1214.8 1559.6,1213.8 1559.6,1190.5 1559.6,1165.1 1559.1,1146.0 1559.0,1144.4 1556.4,1131.7 1551.6,1120.1 1545.3,1112.7 1537.4,1107.9" fill="#F2DFC1" stroke="#885D26" stroke-width="4"/>
+<polygon points="1652.2,901.6 1645.3,903.7 1645.0,904.2 1641.1,910.6 1639.4,919.0 1638.9,921.1 1638.9,931.2 1638.9,944.4 1638.9,957.7 1638.9,989.9 1639.5,1076.7 1640.0,1159.3 1640.0,1225.4 1640.5,1307.9 1640.5,1309.0 1641.1,1410.1 1641.1,1412.2 1641.6,1424.9 1642.2,1440.2 1642.8,1454.0 1643.2,1464.6 1643.6,1465.6 1645.8,1472.0 1648.4,1475.1 1650.6,1477.8 1657.5,1479.4 1680.7,1479.4 1684.3,1477.8 1690.3,1475.1 1694.3,1472.0 1702.4,1465.6 1703.6,1464.6 1715.1,1454.0 1725.2,1440.2 1731.5,1424.9 1733.7,1412.2 1733.6,1410.1 1733.1,1309.0 1733.1,1307.9 1732.6,1225.4 1732.1,1159.3 1731.5,1076.7 1731.5,989.9 1731.0,957.7 1728.4,944.4 1721.0,931.2 1716.6,921.1 1715.7,919.0 1704.6,910.6 1693.4,904.2 1691.2,903.7 1682.3,901.6" fill="#D7E8F0" stroke="#22536B" stroke-width="4"/>
+<text x="2044" y="1000" font-size="22" font-weight="normal" fill="#596B78">CG not assigned</text>
+<text x="2044" y="1080" font-size="25" font-weight="bold" fill="#173143">Lifting surfaces</text>
+<rect x="2044" y="1109" width="32" height="26" fill="#D7E8F0" stroke="#22536B" stroke-width="2"/>
+<text x="2087" y="1125" font-size="22" font-weight="normal" fill="#173143">Main wing(s)</text>
+<rect x="2044" y="1156" width="32" height="26" fill="#F2DFC1" stroke="#885D26" stroke-width="2"/>
+<text x="2087" y="1173" font-size="22" font-weight="normal" fill="#173143">Fore/aft plane</text>
+<text x="2044" y="1245" font-size="22" font-weight="normal" fill="#596B78">+x aft</text>
+<line x1="2139.0" y1="1240.0" x2="2226.0" y2="1240.0" stroke="#173143" stroke-width="3"/>
+<line x1="2226.0" y1="1240.0" x2="2213.0" y2="1230.0" stroke="#173143" stroke-width="3"/>
+<line x1="2226.0" y1="1240.0" x2="2213.0" y2="1250.0" stroke="#173143" stroke-width="3"/>
+<text x="2044" y="1294" font-size="22" font-weight="normal" fill="#596B78">+y right</text>
+<line x1="2167.0" y1="1292.0" x2="2167.0" y2="1346.0" stroke="#173143" stroke-width="3"/>
+<line x1="2167.0" y1="1346.0" x2="2157.0" y2="1334.0" stroke="#173143" stroke-width="3"/>
+<line x1="2167.0" y1="1346.0" x2="2177.0" y2="1334.0" stroke="#173143" stroke-width="3"/>
+<line x1="1305.0" y1="1464.0" x2="1399.0" y2="1464.0" stroke="#173143" stroke-width="4"/>
+<line x1="1305.0" y1="1455.0" x2="1305.0" y2="1473.0" stroke="#173143" stroke-width="3"/>
+<line x1="1399.0" y1="1455.0" x2="1399.0" y2="1473.0" stroke="#173143" stroke-width="3"/>
+<text x="1418" y="1465" font-size="22" font-weight="normal" fill="#173143">2 m</text>
+<text x="2044" y="1404" font-size="22" font-weight="normal" fill="#596B78">Two decks overlap in plan</text>
+</svg>

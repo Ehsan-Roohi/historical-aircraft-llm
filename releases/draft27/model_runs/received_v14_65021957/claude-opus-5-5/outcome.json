@@ -1,0 +1,9 @@
+{
+  "status": "completed",
+  "stop_reason": "end_turn",
+  "model_returned": "claude-opus-5-5",
+  "response_sha256": "9c45c6e6ed8d5d26ad4210d86d3e34c12eaeb348f881f919cba0cf4fda06506b",
+  "finished_utc": "2026-09-29T10:57:59.277244+00:00",
+  "automatic_retry": false,
+  "engineering_validation": "not_evaluated"
+}

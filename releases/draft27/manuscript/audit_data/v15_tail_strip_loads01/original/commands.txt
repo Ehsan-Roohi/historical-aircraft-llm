@@ -1,0 +1,13 @@
+load aircraft.avl
+oper
+a a 5.02707
+d2 d2 -2.48022
+x
+ft
+forces.txt
+fn
+surfaces.txt
+fs
+strips.txt
+
+quit

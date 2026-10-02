@@ -1,0 +1,57 @@
+{
+  "status": "EVALUATOR_HYBRID_SENSITIVITY_ONLY",
+  "source_sha256": "6dae3f48195d8b446f517fac08936fb69d87a8b59a44f618bdc8faccc198dbc1",
+  "trim_summary_sha256": "47a2788674275ad24049b0906663075484ce8906a623f0fe6d59ff867f27df24",
+  "script_sha256": "4339094a198c903615d01d10ab78f7c5bb968c19f9ddcd7e56d2e8f7439ef3c6",
+  "qS_N": 4347.525000000001,
+  "method": "Anchor to printed D/P and replace only printed CDi by matching-mass fine-grid surface AVL CDind at 13 m/s. Efficiency inferred from printed values; all other drag and power assumptions held fixed.",
+  "limitations": [
+    "Not a coupled installed-aircraft six-component trim calculation.",
+    "Surface AVL excludes body, wires, masts, fairings and propulsion; sections unvalidated.",
+    "Printed baseline non-induced drag, efficiency and engine power remain model assumptions.",
+    "15 percent is an exploratory project criterion, not a safety standard.",
+    "Positive absolute headroom does not establish flight or dynamic stability.",
+    "No engine resizing or mass feedback performed; no measured data introduced."
+  ],
+  "cases": [
+    {
+      "case": "N13",
+      "trim_index": 0,
+      "mass_kg": 365.106,
+      "reported_CDi": 0.04978,
+      "surface_AVL_CDi": 0.054735,
+      "reported_drag_N": 501.8,
+      "reported_power_W": 13047,
+      "efficiency_inferred_from_printed_D_V_P": 0.4999923354027746,
+      "delta_drag_N": 21.541986375000008,
+      "hybrid_drag_N": 523.341986375,
+      "hybrid_required_shaft_power_W": 13607.100231635362,
+      "assumed_available_shaft_power_W": 20045,
+      "reserve_fraction": 0.47312797427603726,
+      "headroom_above_required_W": 6437.899768364638,
+      "margin_against_1p15_required_W": 4396.834733619335,
+      "passes_exploratory_15_percent_reserve": true,
+      "maximum_additional_drag_before_15_percent_reserve_lost_N": 168.59106108017505
+    },
+    {
+      "case": "H13W",
+      "trim_index": 6,
+      "mass_kg": 375.106,
+      "reported_CDi": 0.05255,
+      "surface_AVL_CDi": 0.0581033,
+      "reported_drag_N": 600.8,
+      "reported_power_W": 17356,
+      "efficiency_inferred_from_printed_D_V_P": 0.45001152339248673,
+      "delta_drag_N": 24.14311058249999,
+      "hybrid_drag_N": 624.9431105824999,
+      "hybrid_required_shaft_power_W": 18053.44977907768,
+      "assumed_available_shaft_power_W": 20045,
+      "reserve_fraction": 0.11031410867691038,
+      "headroom_above_required_W": 1991.5502209223196,
+      "margin_against_1p15_required_W": -716.4672459393296,
+      "passes_exploratory_15_percent_reserve": false,
+      "maximum_additional_drag_before_15_percent_reserve_lost_N": 2.5766546088559887
+    }
+  ],
+  "engineering_acceptance": false
+}

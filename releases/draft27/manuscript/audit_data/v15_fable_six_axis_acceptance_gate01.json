@@ -1,0 +1,94 @@
+{
+  "scope": "Independent arithmetic and evidence-status gate for one V15 Fable power-off wing/tail AVL point; not physical or full-aircraft trim",
+  "input_sha256": {
+    "v15_first_pass": "56180bc00b9833d0d06f48fd1d505053d9e3c7a2b5c533db58174e56f85218fc",
+    "direct_avl_candidate": "70df961bff1760ba5c9c25b700b7af00f4ae60199cd5e5f50905b7814999889a",
+    "surface_force_split": "3800d5b1fb9f1edbb81a7774602263172aae584004ac272750ad2ca8c8d59214",
+    "static_margin_screen": "55591864b8072b508cf36d955b0e5c6b3a529c5fb62f018ccdd3884dbc6a00d5"
+  },
+  "case": {
+    "speed_m_s": 13.0,
+    "density_kg_m3": 1.225,
+    "mass_kg_assumed": 353.2,
+    "Sref_m2": 42.0,
+    "Cref_m": 1.85,
+    "alpha_deg": 5.850731893286282,
+    "tail_delta_deg": -4.199097194840035,
+    "power_state": "propulsion omitted / power-off lifting surfaces"
+  },
+  "independent_arithmetic": {
+    "q_Pa": 103.5125,
+    "qS_N": 4347.525000000001,
+    "weight_N": 3463.7087799999995,
+    "wing_tail_lift_N": 3463.9774942500003,
+    "wing_tail_lift_minus_assumed_weight_N": 0.26871425000081217,
+    "wing_tail_pitch_moment_about_nominal_CG_Nm": 0.16085842500000003,
+    "wing_tail_induced_drag_N": 237.76266423000004,
+    "surface_contributions": {
+      "lower": {
+        "lift_N": 1679.8836600000002,
+        "pitch_moment_Nm": -382.84305150000006
+      },
+      "upper": {
+        "lift_N": 2024.2076400000003,
+        "pitch_moment_Nm": -609.6534307500001
+      },
+      "tail": {
+        "lift_N": -239.98338000000004,
+        "pitch_moment_Nm": 992.4964822500001
+      }
+    }
+  },
+  "six_component_residuals": {
+    "Fx": {
+      "status": "UNKNOWN",
+      "reason": "Induced drag is calculated, but profile/parasite drag, windmilling drag and installed thrust are absent."
+    },
+    "Fy": {
+      "status": "UNKNOWN",
+      "reason": "Fin, rudder, body, propulsion and sideslip force map are absent; symmetry is not a full-aircraft test."
+    },
+    "Fz": {
+      "status": "PARTIAL_PREDICTION",
+      "wing_tail_lift_minus_weight_N": 0.26871425000081217,
+      "reason": "Two wings and tail only, using unvalidated section and assumed mass/density."
+    },
+    "Mx_CG": {
+      "status": "UNKNOWN",
+      "reason": "Lateral control surfaces and full-aircraft roll moment map are absent."
+    },
+    "My_CG": {
+      "status": "PARTIAL_PREDICTION",
+      "wing_tail_pitch_moment_Nm": 0.16085842500000003,
+      "reason": "Propeller thrust-line, body, gear, flexibility and powered slipstream moments are absent."
+    },
+    "Mz_CG": {
+      "status": "UNKNOWN",
+      "reason": "Fin/rudder and differential propeller yaw moments are absent."
+    }
+  },
+  "static_and_dynamic_stability": {
+    "apparent_fixed_control_margin_percent_chord_fine_mesh": {
+      "minimum": 0.5266380894060012,
+      "maximum": 1.2328077826232806
+    },
+    "installed_static_margin": "UNKNOWN",
+    "C_m_alpha_dot": "UNKNOWN",
+    "C_Z_alpha_dot": "UNKNOWN",
+    "installed_C_m_q_and_lateral_directional_derivatives": "UNKNOWN",
+    "validated_longitudinal_and_lateral_modes": "NOT_CALCULABLE"
+  },
+  "propulsion_and_structure": {
+    "H13W_assumed_shaft_power_required_W": 16524,
+    "assumed_shaft_power_available_W": 19950,
+    "H16W_assumed_shaft_deficit_W": 4164,
+    "measured_engine_propeller_map": "ABSENT",
+    "measured_loaded_clearances_and_allowables": "ABSENT"
+  },
+  "acceptance": {
+    "full_six_component_trim": false,
+    "validated_dynamic_derivative_set": false,
+    "accepted_modes": false,
+    "flightworthiness": "NOT_ESTABLISHED"
+  }
+}

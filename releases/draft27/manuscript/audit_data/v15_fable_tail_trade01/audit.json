@@ -1,0 +1,44 @@
+{
+  "status": "CONDITIONAL_SURFACE_MODEL_CANDIDATE_ONLY",
+  "scale": 1.75,
+  "tail_area_m2": 8.049999999999999,
+  "span_including_center_gap_m": 9.149999999999999,
+  "assumed_tail_mass_kg": 14.0,
+  "added_tail_mass_kg": 6.0,
+  "assumed_nominal_mass_kg": 359.2,
+  "coarse_loading_states": 8,
+  "fine_loading_states": 2,
+  "coarse_SM_range_percent": [
+    4.114921728513496,
+    9.712506999771005
+  ],
+  "fine_results": [
+    {
+      "fuel_kg": 8,
+      "fine_SM": 0.039462824782037914,
+      "coarse_SM": 0.04145024347779518,
+      "absolute_mesh_difference": -0.001987418695757269
+    },
+    {
+      "fuel_kg": 0,
+      "fine_SM": 0.03916599476393363,
+      "coarse_SM": 0.04114921728513496,
+      "absolute_mesh_difference": -0.001983222521201332
+    }
+  ],
+  "structural_scaling_warning": {
+    "assumption": "Identical uniform load per unit span and unchanged EI; illustrative cantilever scaling, NOT a structural result",
+    "root_bending_ratio": 3.0625,
+    "tip_deflection_ratio": 9.37890625
+  },
+  "remaining": [
+    "Full eight-state fine-grid envelope",
+    "Tail spar/root/hinge sizing and added reinforcement mass",
+    "Deflected geometry, control actuation and clearance",
+    "Installed propulsion and power after drag/mass changes",
+    "Unsteady derivatives, physical inertia, coupled dynamic modes",
+    "Robustness to airfoil/body/propeller model errors"
+  ],
+  "accepted_aircraft_modes": false,
+  "flightworthiness": false
+}

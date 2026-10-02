@@ -1,0 +1,13 @@
+{
+  "status": "V2 display derivative; evaluator schematic, not final installed aircraft",
+  "source_svg_sha256": "f62de4ddce62047878de0a581adbfdb4eb6b7cac30fcd0ad2112c54ca03dbaf0",
+  "png_sha256": "6d8ab5de04ce362ff3c8f057e884b580d879139ecafc4326c8e9a9dad6056d0e",
+  "frozen_v2_python_source_sha256": "f59b0bedabb181f7bd8baf0c4b99f227460b5a790cc3bd1b8f678db38f93caa6",
+  "frozen_v2_compact_report_sha256": "7e41d5ad4ece49ff55d77a963e982c4628fb8ff39125ac4d2d49f7c9d2ea6108",
+  "png_pixels": [
+    6000,
+    6700
+  ],
+  "minimum_body_text_px": 21,
+  "note": "At 6.5 in placement, 21 px on a 1200-unit SVG corresponds to 8.19 pt; all labels use at least 21 px."
+}

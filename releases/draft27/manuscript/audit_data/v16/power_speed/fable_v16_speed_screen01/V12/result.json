@@ -1,0 +1,22 @@
+{
+  "speed_mps": 12,
+  "mass_kg": 375.106,
+  "target_CL": 0.9930172915721843,
+  "trim": {
+    "Alpha": 9.09449,
+    "pitch": 1.76087,
+    "CLtot": 0.99302,
+    "Cmtot": 0.0,
+    "CYtot": 0.0,
+    "Cltot": -0.0,
+    "Cntot": -0.0,
+    "CDind": 0.0795773
+  },
+  "absolute_tail_deg": -2.2391300000000003,
+  "surface_SM_percent": 10.850074477704142,
+  "Cma": -0.381833,
+  "CLa": 3.519174,
+  "geometry_sha256": "2f0f5123cd16c9f5abdc186494204ec4a54e3a5151a5885ea983e06b49a910ac",
+  "forces_sha256": "3593c52af6ae3f6a2c72bcb0604341bf9f8aaf27c5b42e404ec226b0eebb7bd8",
+  "stability_sha256": "d9dd671b35b725f87cfe11f16573a9a21ddc960d875c963e0695df04bd5cb806"
+}

@@ -1,0 +1,35 @@
+{
+  "status": "archival V0 display derivatives, not design revisions",
+  "rows": [
+    {
+      "name": "astra_oblique_v0",
+      "original_svg_sha256": "02fb21556bc46082b8b8675ec7ee356681f2934ed2a59e30639780f32b55b376",
+      "png_sha256": "e1a8799ce07223fa03b8f33ebb0fff5a0e68bf2ab09b98a5369361c8bace7596",
+      "pixels": [
+        6000,
+        4500
+      ],
+      "caveat": "Archival 1200x900 SVG unchanged; physical annotation size is not improved"
+    },
+    {
+      "name": "fable_oblique_v0",
+      "original_svg_sha256": "9bfee46a42554728e7d47f32f6afea8b9876fd5ff1bda7bda644e181d626997f",
+      "png_sha256": "9009719bae18238e4b5476d5aae7dc47f9e6ee371f04c10a99885d687fa2d7c4",
+      "pixels": [
+        6000,
+        4500
+      ],
+      "caveat": "Archival 1200x900 SVG unchanged; physical annotation size is not improved"
+    },
+    {
+      "name": "opus_oblique_v0",
+      "original_svg_sha256": "a568d80e925d02425bb61d9bda1f0879627053256674e62573983cad2363e651",
+      "png_sha256": "b7015d4b220935f538a3450be4de2a1b1d8bc153c8eb4d27dcaa6254dc0fc40b",
+      "pixels": [
+        6000,
+        4500
+      ],
+      "caveat": "Archival 1200x900 SVG unchanged; physical annotation size is not improved"
+    }
+  ]
+}

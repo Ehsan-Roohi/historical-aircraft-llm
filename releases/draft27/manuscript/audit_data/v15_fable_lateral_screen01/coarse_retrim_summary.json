@@ -1,0 +1,131 @@
+{
+  "geometry_sha256": "09588d2fed9867b0cb88270f36f240b1209766bff58a2e42b5f3b208da963468",
+  "section_sha256": "0e1a5e61ba13072c9b7c8d4093848307b1b63a90141c68ff3674e4154be94e33",
+  "cases": {
+    "neutral": {
+      "Alpha": 6.66238,
+      "Beta": 0.0,
+      "CLtot": 0.7843,
+      "CDind": 0.0600217,
+      "Cmtot": 0.00108,
+      "CYtot": 0.0,
+      "Cltot": -0.0,
+      "Cntot": 0.0,
+      "beta_command_deg": 0.0,
+      "roll_command_deg": 0.0,
+      "rudder_command_deg": 0.0,
+      "file_sha256": "0a8475f21a0570cd5b45ea1f6c1640e0e6b8a22bbe9a9087dfaaba11de9656dd"
+    },
+    "beta_plus": {
+      "Alpha": 6.66238,
+      "Beta": 3.0,
+      "CLtot": 0.78216,
+      "CDind": 0.0598078,
+      "Cmtot": 0.00106,
+      "CYtot": -0.00205,
+      "Cltot": -6e-05,
+      "Cntot": 0.00085,
+      "beta_command_deg": 3.0,
+      "roll_command_deg": 0.0,
+      "rudder_command_deg": 0.0,
+      "file_sha256": "9ff14f358b916596ec7591292e5aace10583218715dbf70e6c5d56f12dc4c2c7"
+    },
+    "beta_minus": {
+      "Alpha": 6.66238,
+      "Beta": -3.0,
+      "CLtot": 0.78216,
+      "CDind": 0.0598078,
+      "Cmtot": 0.00106,
+      "CYtot": 0.00205,
+      "Cltot": 6e-05,
+      "Cntot": -0.00085,
+      "beta_command_deg": -3.0,
+      "roll_command_deg": 0.0,
+      "rudder_command_deg": 0.0,
+      "file_sha256": "5a4b00ccedf9335dc7da9cdf9619e03edc35af5b75695624675c7adbd0aec553"
+    },
+    "roll_plus": {
+      "Alpha": 6.66238,
+      "Beta": 0.0,
+      "CLtot": 0.78426,
+      "CDind": 0.0603764,
+      "Cmtot": 0.00128,
+      "CYtot": -8e-05,
+      "Cltot": -0.0047,
+      "Cntot": 0.00097,
+      "beta_command_deg": 0.0,
+      "roll_command_deg": 4.0,
+      "rudder_command_deg": 0.0,
+      "file_sha256": "fa5da9bd6aabdb145260f28c065e6b978c91b5498e4df8d55b82c5ecce79cff0"
+    },
+    "roll_minus": {
+      "Alpha": 6.66238,
+      "Beta": 0.0,
+      "CLtot": 0.78426,
+      "CDind": 0.0603764,
+      "Cmtot": 0.00128,
+      "CYtot": 8e-05,
+      "Cltot": 0.0047,
+      "Cntot": -0.00097,
+      "beta_command_deg": 0.0,
+      "roll_command_deg": -4.0,
+      "rudder_command_deg": 0.0,
+      "file_sha256": "f6b33b62d8ac75bd0dfe482b0cd24e600deb75fb723cee4b2ca6cd6e8d5eceb8"
+    },
+    "rudder_plus": {
+      "Alpha": 6.66238,
+      "Beta": 0.0,
+      "CLtot": 0.78429,
+      "CDind": 0.060138,
+      "Cmtot": 0.00111,
+      "CYtot": 0.00295,
+      "Cltot": 9e-05,
+      "Cntot": -0.00134,
+      "beta_command_deg": 0.0,
+      "roll_command_deg": 0.0,
+      "rudder_command_deg": 5.0,
+      "file_sha256": "68adf754a25f8217b28950c7359b88f175aa78b12d4344d4f82d24d504490ac1"
+    },
+    "rudder_minus": {
+      "Alpha": 6.66238,
+      "Beta": 0.0,
+      "CLtot": 0.78429,
+      "CDind": 0.060138,
+      "Cmtot": 0.00111,
+      "CYtot": -0.00295,
+      "Cltot": -9e-05,
+      "Cntot": 0.00134,
+      "beta_command_deg": 0.0,
+      "roll_command_deg": 0.0,
+      "rudder_command_deg": -5.0,
+      "file_sha256": "0017e2fd1c275f7a7661eb5d039f1ffa41dbaf55f09adddf042548a9cf234c29"
+    }
+  },
+  "scope": "Power-off rigid AVL prediction only: inherited unvalidated camber, idealized whole-tip normal rotation and all-moving rudder, no body/gear/propeller/slipstream or measured polar; not an accepted installed derivative set",
+  "source_response_sha256": "1fd2ad7a4dc22da874fbd3ba6d3e73567058b8162573a8bb24c42c166522f56f",
+  "solver_sha256": "443520d255408491222a8df9060bd000f78da95a68845a2f6efdbc67e203f07a",
+  "evaluation_trim": {
+    "alpha_deg": 6.66238,
+    "tail_delta_deg": -3.5075
+  },
+  "wing_tip_hinge_note": "Declared x=1.505 hinge is not modelled as moving vertices; CONTROL rotates full-tip panel normals only.",
+  "moment_frame_note": "AVL geometry X downstream/Y right/Z up; output moments use AVL standard body X forward/Z down. Preserve this sign convention when comparing to model declarations.",
+  "slopes_per_rad_at_alpha_and_tail_candidate": {
+    "CYtot": {
+      "beta": -0.03915211600060625,
+      "roll_tip_command": -0.0011459155902616466,
+      "rudder_command": 0.03380450991271857
+    },
+    "Cltot": {
+      "beta": -0.0011459155902616464,
+      "roll_tip_command": -0.06732254092787172,
+      "rudder_command": 0.001031324031235482
+    },
+    "Cntot": {
+      "beta": 0.016233804195373323,
+      "roll_tip_command": 0.013894226531922464,
+      "rudder_command": -0.015355268909506063
+    }
+  },
+  "flightworthiness": "NOT_ASSESSED"
+}

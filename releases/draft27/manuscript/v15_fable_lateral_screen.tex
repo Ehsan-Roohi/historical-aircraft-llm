@@ -1,0 +1,95 @@
+\subsection{V15 Fable: corrected surface-model trim and derivative audit}
+\label{sec:v15-fable-lateral}
+
+An evaluator-input error was identified after the first lateral screen.
+The upper-wing center and its adjoining moving tips had different AVL
+\texttt{COMPONENT} identifiers. AVL applies different vortex-core treatment
+between components; its manual requires constituent surfaces of one component
+to share an identifier \cite{ref22}. At unchanged geometry, mesh, angle of
+attack and tail command, changing only the tip identifier from 3 to 2 restored
+$C_L$ from 0.74700 to 0.79678 and $C_m$ from 0.00762 to printed zero.
+The earlier continuous-wing result was $C_L=0.79677$. Thus the previously
+reported lift loss was an evaluator-setting artifact. The associated
+$6.662^\circ$ angle of attack, $-3.508^\circ$ tail command and lateral slopes
+are retained in the archive as superseded results, not evidence of a physical
+hinge-gap effect or a required aircraft redesign.
+
+The corrected model also places the fin and rudder in one component and
+aligns their spanwise vortex stations over the common height, $z=1.2$--1.8 m.
+The rudder's lower extension, $z=0.8$--1.2 m, is represented separately with
+the same command and component identifier. The earlier tail control used
+an AVL hinge fraction of 0.25, which denotes an aft-chord flap. The proposal
+instead specifies an all-moving horizontal plane. Its aerodynamic command
+now rotates normals over the full chord; the physical quarter-chord pivot
+is retained as mechanism metadata. This is still a small-disturbance
+normal-rotation model: it does not rotate occupied solids, calculate hinge
+loads, prove clearance or resolve a real hinge gap. No model-authored
+coordinates or mass entries were changed by these evaluator corrections.
+
+Using the assumed mass 353.2 kg, speed 13 m/s, density 1.225 kg/m$^3$ and
+reference area 42 m$^2$, the target is $C_L=0.796708$.
+The corrected fine-mesh surface balance gives $\alpha=5.85995^\circ$, tail command $-4.06808^\circ$, and absolute tail incidence $-8.06808^\circ$ after adding the $-4^\circ$ rigging. The printed coefficients are $C_L=0.79671$ and $C_m=0$. The corresponding coarse values are $\alpha=5.86131^\circ$ and tail command $-4.12009^\circ$. These are separately solved surface-model balances; body, gear, propeller, slipstream and profile drag remain outside the calculation. Lateral zero residuals at the neutral condition follow from symmetry.
+
+Thirteen states on each mesh comprise the neutral point and positive/negative
+sideslip, tip-control and rudder perturbations at two amplitudes. Sideslip
+steps are 3 and 1.5 deg; tip steps are 4 and 2 deg; rudder steps are 5 and
+2.5 deg. Each mesh uses its own corrected trim. The meshes have 8/12 chordwise
+panels and 32/64 reference wing spanwise panels, with matched vertical-tail
+stations. Therefore mesh comparisons include the small corresponding trim
+change. Printed-force finite differences also retain output-rounding error.
+
+\begin{table}[p]\centering\small
+\caption{Corrected Fable V15 body-axis finite-difference slopes at each mesh's conditional surface trim. Fine-step difference compares the smaller and larger perturbations on the fine mesh; all entries are per radian.}
+\label{tab:v15-fable-lateral}
+\begin{tabular}{lrrr}\toprule
+Slope & Coarse & Fine & Fine-step absolute difference\\\midrule
+$C_{Y_\beta}$ & $-0.035141$ & $-0.035141$ & $0.000000$\\
+$C_{l_\beta}$ & $-0.000764$ & $-0.000764$ & $0.000000$\\
+$C_{n_\beta}$ & $+0.014515$ & $+0.014515$ & $0.000000$\\
+$C_{l_{\delta_{\rm tip}}}$ & $-0.103705$ & $-0.103419$ & $0.000000$\\
+$C_{n_{\delta_{\rm tip}}}$ & $+0.015470$ & $+0.015756$ & $0.000143$\\
+$C_{n_{\delta_r}}$ & $-0.015355$ & $-0.015355$ & $0.000115$\\
+\bottomrule\end{tabular}\end{table}
+
+Body and stability axes must not be interchanged. The force-file finite
+differences in Table~\ref{tab:v15-fable-lateral} use AVL standard body axes,
+whereas its \texttt{ST} matrix reports stability-axis moments and rates.
+The conversion used for comparison is
+\begin{equation}
+\begin{bmatrix}C_{l'}\\C_{n'}\end{bmatrix}=
+\begin{bmatrix}\cos\alpha&\sin\alpha\\-\sin\alpha&\cos\alpha\end{bmatrix}
+\begin{bmatrix}C_l\\C_n\end{bmatrix}.
+\end{equation}
+The fine-mesh stability-axis sideslip slopes are $C_{l'_\beta}=+0.000698$ and $C_{n'_\beta}=+0.014477$ per radian. The rotation reconciles the finite-difference slopes with the analytic matrix to within $2\times10^{-4}$ per radian on both meshes. A small body-axis rolling slope of opposite sign cannot be used as a contradictory stability verdict.
+
+\begin{table}[p]\centering\small
+\caption{Corrected Fable V15 quasi-steady stability-axis derivative predictions. Angle slopes are per radian; rate derivatives use $p'b/(2V)$, $qc/(2V)$ and $r'b/(2V)$. They are not a measured dynamic model.}
+\label{tab:fable-corrected-rates}
+\begin{tabular}{lrr}\toprule
+Derivative & Coarse & Fine\\\midrule
+$C_{L_\alpha}$ & $+3.457555$ & $+3.455338$\\
+$C_{m_\alpha}$ & $-0.037195$ & $-0.033550$\\
+$C_{m_q}$ & $-3.417865$ & $-3.414564$\\
+$C_{L_q}$ & $+4.576653$ & $+4.574527$\\
+$C_{Y_{p\prime}}$ & $-0.000226$ & $-0.000862$\\
+$C_{Y_{r\prime}}$ & $+0.036361$ & $+0.036526$\\
+$C_{l\prime_{p\prime}}$ & $-0.363990$ & $-0.363872$\\
+$C_{l\prime_{r\prime}}$ & $+0.210586$ & $+0.210633$\\
+$C_{n\prime_{p\prime}}$ & $-0.039944$ & $-0.039699$\\
+$C_{n\prime_{r\prime}}$ & $-0.035442$ & $-0.035511$\\
+\bottomrule\end{tabular}\end{table}
+
+The negative pitch-, roll- and yaw-rate moment slopes provide predicted
+damping tendencies within this surface model. They do not determine the
+coupled aircraft modes. The positive directional restoring slope must be
+considered together with roll--yaw coupling, inertia, force derivatives,
+control authority and propulsion. Neither the sign of one derivative nor
+AVL's reduced spiral diagnostic establishes a handling-quality result.
+The apparent surface-only longitudinal margin $-C_{m_\alpha}/C_{L_\alpha}$ is 1.076\% on the coarse mesh and 0.971\% on the fine mesh; this small conditional value is not an installed neutral-point measurement.
+
+Full physical inertia, unsteady derivatives such as
+$C_{m_{\dot\alpha}}$, installed propulsion and a validated force/moment map
+remain missing. Aircraft eigenvalues are therefore not reported. The raw
+corrected cases, frame checks, perturbation comparisons and hashes are in
+\texttt{v15\_fable\_corrected\_surface02}; the old inputs and correction note
+remain available to expose rather than conceal the evaluator error.

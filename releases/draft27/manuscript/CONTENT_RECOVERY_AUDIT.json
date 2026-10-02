@@ -1,0 +1,18 @@
+{
+  "source": "draft26",
+  "figures_preserved": 18,
+  "tables_preserved": 23,
+  "numbered_references": 44,
+  "web_sources_relocated": 2,
+  "body_shortened": false,
+  "identical_layout_body": true,
+  "body_exact_except_documented_display_descriptions": true,
+  "scientific_calculations_changed": false,
+  "compile": "both exit 0",
+  "reading_pages": 67,
+  "review_pages": 83,
+  "PDF_QA": "completed",
+  "flight_proven": false,
+  "submission_approved": false,
+  "other_figure_assets_byte_identical": true
+}
