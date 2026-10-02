@@ -1,8 +1,17 @@
 # Historical aircraft design with language models
 
-## Latest public update: 2 October 2026, draft27 / V16
+## Latest manuscript: author-provided version, 2 October 2026
 
-Start with the [current manuscript and evidence guide](releases/draft27/README.md),
+Read the [24-page manuscript PDF](releases/author-final-2026-10-02/view%2812%29.pdf)
+or download the [original source ZIP with supplementary material](releases/author-final-2026-10-02/JoA_aircraft_manuscript_final.zip).
+The [delivery guide and checksums](releases/author-final-2026-10-02/README.md)
+explain the temporary arXiv submission marking and updated public-data status.
+Both files are shared unchanged with the author's approval. No journal acceptance
+or permanent arXiv identifier is asserted. Earlier versions remain preserved.
+
+## Full-length manuscript and evidence update: draft27 / V16
+
+See the [full-length manuscript and evidence guide](releases/draft27/README.md),
 [67-page reading PDF](releases/draft27/manuscript/main.pdf), or
 [83-page review PDF](releases/draft27/manuscript/main_joa_review.pdf).
 The [curated source/evidence ZIP](aircraft_complete_labeled_draft27_public.zip)

@@ -1,5 +1,6 @@
 # Keep externally returned model artifacts byte-for-byte identical to their
 /releases/draft27/** -text
+/releases/author-final-2026-10-02/** -text
 # request/outcome SHA-256 records; Windows line-ending conversion would break
 # provenance checks on a Git checkout.
 /received_v9_65007436/** -text
